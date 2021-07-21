@@ -210,6 +210,20 @@ So a 10 KB project at 100 gwei would be:
 
 Artists have recently targeted between ~5-20 KB for their code (without the library), but obviously this will vary by project scope. 
 
+## Attribution
+
+Much (generative art) source code is published under permissive copyleft licences, making it available to be used by everybody and depending on the license even for commercial purposes. In case your project's code contains any code not written by yourself, please inform the Art Blocks team about it so the appropriate considerations and attributions can be made.
+
+Common source code licenses (in creative coding):
+
+* [CC BY](https://creativecommons.org/licenses/by/4.0/): The original author and license must be clearly and appropriately stated.
+* [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/): As CC BY, but all derivates must also be licensed under CC BY-SA.
+* [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/): As CC BY-SA, but no commercial use is allowed.
+* [MIT](https://choosealicense.com/licenses/mit/): similar to CC BY
+* [GPL](https://choosealicense.com/licenses/gpl-3.0/): similar to CC BY-SA
+
+There are many other free-to-use licenses commonly used on open source software. Please carefully read the full details on any licensed code you re-use or modify, before including it in your project.
+
 ## Testing on Rinkeby
 
 Once your script is ready, you will test it out on an [Art Blocks](https://rinkeby.artblocks.io/) clone site running on one of Ethereum's test networks (Rinkeby). This will make sure there aren't any bugs or errors and that if it's working on Rinkeby, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
