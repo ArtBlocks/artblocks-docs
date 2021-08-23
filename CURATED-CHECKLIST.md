@@ -15,12 +15,8 @@
 ## Features
 - Please provide your features script at least 48 hours in advance of your scheduled release.
 
-## Limiter
-- For curated projects, the limiter will be in place for the first 30 minutes, restricting purchases to one mint per wallet.
-
 ## Unpausing
 - When it's time, you'll click the Unpause button under the Danger tab.
-- For curated projects, please use 5000 gwei for the Unpause transaction to deter bot activity.
 - Once the transaction clears, your project will be live for minting.
 
 ## Rarities
