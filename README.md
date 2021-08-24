@@ -50,7 +50,7 @@ There are two primary ways to use this hash:
 
 ### 1. Convert the hash to a large integer
 
-The first method is to convert the hash into a large integer and use this to seed a pseudo random number generator (PRNGs). You want to consider PRNGs based on arithmetic to ensure your output is determistic regardless of the JavaScript version being used in a given browser. For example, do not use this to seed the `Math.random()` function because it's hard to say how this might change in the future.
+The first method is to convert the hash into a large integer and use this to seed a pseudo random number generator (PRNGs). You want to consider PRNGs based on arithmetic to ensure your output is determistic regardless of the JavaScript version being used in a given browser.
 
 ```javascript
 let seed = parseInt(tokenData.hash.slice(0, 16), 16)
@@ -111,7 +111,7 @@ Every time one of these functions is called, `random_dec()` will also be called 
 
 #### I heard I shouldn't use `Math.random()`. Why not?
 
-When users mint each piece, they are creating a hash token on the blockchain. All the attributes of your piece should be derived from that token so that user will be able to render their piece and get the same results each time. `Math.random` is derived from the computer's clock, so even if it is seeded there is no guarantee you will get the same output on different computing environments in the future.
+When users mint each piece, they are creating a hash token on the blockchain. All the attributes of your piece should be derived from that token so that user will be able to render their piece and get the same results each time. `Math.random` is derived from the computer's clock, so there is no guarantee you will get the same output on different computing environments in the future.
 
 ### 2. Create a series of hex pairs
 
@@ -157,7 +157,7 @@ Each project can have zero or one library dependency. The approved dependencies 
 Additional libraries may be added at moderater discression, but the rule is only one external library per project.
 
 ### Deterministic
-Each output must be determistic based on a single hash. More specifically, the initial output or frame must be the same. If your piece is animated, some randomness is okay. This is so when the art is rendered as an image (e.g. for OpenSea) it is always the same.
+Each output must be deterministic based on a single hash. More specifically, the initial output or frame must be the same. If your piece is animated, some randomness is okay. This is so when the art is rendered as an image (e.g. for OpenSea) it is always the same.
 
 ### Dimensionless
 The output must be dimension agnostic. Meaning it scales seamlessly to any dimension. While you can control the dimension ratio (e.g. width/height can be 1.0, 1.5, 0.75 etc.) you have no control over the dimensions of the browser someone else might be using. The output will be rendered by the server at 2400x2400 (see below for ratios other than 1) and typically displayed in most browsers at 1000x1000 but your output should be the same at higher resolutions. Obviously, at lower resolutions, fewer pixels may limit what your output looks like, such as the smoothness of lines, which is okay. This is mainly to ensure your work can be reproduced at print quality.
