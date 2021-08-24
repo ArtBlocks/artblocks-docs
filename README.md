@@ -50,7 +50,7 @@ There are two primary ways to use this hash:
 
 ### 1. Convert the hash to a large integer
 
-The first method is to convert the hash into a large integer and use this to seed a pseudo random number generator (PRNGs). You want to consider PRNGs based on arithmetic to ensure your output is determistic regardless of the JavaScript version being used in a given browser.
+The first method is to convert the hash into a large integer and use this to seed a pseudo random number generator (PRNGs). You want to consider PRNGs based on arithmetic to ensure your output is deterministic regardless of the JavaScript version being used in a given browser.
 
 ```javascript
 let seed = parseInt(tokenData.hash.slice(0, 16), 16)
@@ -107,7 +107,7 @@ R.random_num(0, 10) // Random decimal (0-10)
 R.random_int(0, 10) // Random integer (0-10)
 ```
 
-Every time one of these functions is called, `random_dec()` will also be called somewhere in the stack. Applying the determistic arithmetic to the seed and returning a new random number.
+Every time one of these functions is called, `random_dec()` will also be called somewhere in the stack. Applying the deterministic arithmetic to the seed and returning a new random number.
 
 #### I heard I shouldn't use `Math.random()`. Why not?
 
@@ -211,7 +211,7 @@ Artists have recently targeted between ~5-20 KB for their code (without the libr
 
 ## Attribution
 
-Much (generative art) source code is published under permissive copyleft licences, making it available to be used by everybody and depending on the license even for commercial purposes. In case your project's code contains any code not written by yourself, please inform the Art Blocks team about it so the appropriate considerations and attributions can be made.
+Much (generative art) source code is published under permissive copyleft licenses, making it available to be used by everybody and depending on the license even for commercial purposes. In case your project's code contains any code not written by yourself, please inform the Art Blocks team about it so the appropriate considerations and attributions can be made.
 
 Common source code licenses (in creative coding):
 
@@ -230,10 +230,10 @@ Once your script is ready, you will test it out on an [Art Blocks](https://artis
 Note: If you don't have "Ropsten ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: [https://faucet.dimensions.network/](https://faucet.dimensions.network/).
 
 ### Interacting with your Project
-If you made it this far, we have probably requested a project name and an ethereum address from you. This is the address you will use on mainnet and on Ropsten. So at this point change your network to Ropsten in MetaMask. On Ropsten, we'll practice uploading everything so that it all goes smooth on mainnet when the ETH is real. After loading the page and connecting your wallet, you should see a button labeled "Edit Priject". A multi-tabbed form will pop up. You only need to focus on the following:
+If you made it this far, we have probably requested a project name and an ethereum address from you. This is the address you will use on mainnet and on Ropsten. So at this point change your network to Ropsten in MetaMask. On Ropsten, we'll practice uploading everything so that it all goes smooth on mainnet when the ETH is real. After loading the page and connecting your wallet, you should see a button labeled "Edit Project". A multi-tabbed form will pop up. You only need to focus on the following:
 
 #### Project
-This should all be self-explanatory. Just fill and sumbit each one separately.
+This should all be self-explanatory. Just fill and submit each one separately.
 
 #### Token
 In this tab you'll set the price and max invocations for your project. If you're accepting ETH as payment you don't need to worry about "Updated Currency Information". Although you can specify any ERC20-compliant token if you choose. Just give someone a heads up that you wish to go down this route.
@@ -276,4 +276,4 @@ Not yet. Some ideas are being worked on that will allow external assets to get p
 
 ### Can I use text? What fonts can I use?
 
-You can use text in your project! Font choice is technically at your discression but you're encouraged to use the core web fonts to ensure universal support and maintain the integrity of the piece over the longer term. (`serif`, `sans-serif`, `monospace` and less commonly `cursive` and `fantasy`)
+You can use text in your project! Font choice is technically at your discretion but you're encouraged to use the core web fonts to ensure universal support and maintain the integrity of the piece over the longer term. (`serif`, `sans-serif`, `monospace` and less commonly `cursive` and `fantasy`)
