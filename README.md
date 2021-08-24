@@ -142,14 +142,14 @@ Now you have the basics here are some general principles you need to consider wh
 Each project can have zero or one library dependency. The approved dependencies are currently the following:
 
   + No Library at all (Vanilla JS, CSS, HTML, WebGL)
-  + p5js
-  + processing
-  + a-frame
-  + threejs
+  + p5js(https://p5js.org/)
+  + processing(https://processing.org/)
+  + a-frame(https://aframe.io/)
+  + threejs(https://threejs.org/)
   + vox
   + megavox
   + js
-  + svg 
+  + svg (https://svgjs.dev/)
   + custom
   + regl
   + tonejs
