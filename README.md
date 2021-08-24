@@ -142,19 +142,18 @@ Now you have the basics here are some general principles you need to consider wh
 Each project can have zero or one library dependency. The approved dependencies are currently the following:
 
   + No Library at all (Vanilla JS, CSS, HTML, WebGL)
-  + p5js(https://p5js.org/)
-  + processing(https://processing.org/)
-  + a-frame(https://aframe.io/)
-  + threejs(https://threejs.org/)
+  + p5js (https://p5js.org/)
+  + Processing (https://processing.org/)
+  + a-frame (https://aframe.io/)
+  + threejs (https://threejs.org/)
   + vox
   + megavox
-  + js
   + svg (https://svgjs.dev/)
-  + custom
   + regl
-  + tonejs
+  + tonejs (https://tonejs.github.io/)
+  + paperjs (http://paperjs.org/)
 
-Additional libraries may be added at moderater discression, but the rule is only one external library per project.
+Additional libraries may be added at moderator discretion, but the rule is only one external library per project.
 
 ### Deterministic
 Each output must be deterministic based on a single hash. More specifically, the initial output or frame must be the same. If your piece is animated, some randomness is okay. This is so when the art is rendered as an image (e.g. for OpenSea) it is always the same.
@@ -224,14 +223,14 @@ Common source code licenses (in creative coding):
 
 There are many other free-to-use licenses commonly used on open source software. Please carefully read the full details on any licensed code you re-use or modify, before including it in your project.
 
-## Testing on Rinkeby
+## Testing on Ropsten
 
-Once your script is ready, you will test it out on an [Art Blocks](https://rinkeby.artblocks.io/) clone site running on one of Ethereum's test networks (Rinkeby). This will make sure there aren't any bugs or errors and that if it's working on Rinkeby, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
+Once your script is ready, you will test it out on an [Art Blocks](https://artist-staging.artblocks.io/) staging site running on one of Ethereum's test networks (Ropsten). This will make sure there aren't any bugs or errors and that if it's working on Ropsten, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
 
-Note: If you don't have "Rinkeby ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: [https://faucet.rinkeby.io/](https://faucet.rinkeby.io/).
+Note: If you don't have "Ropsten ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: [https://faucet.dimensions.network/](https://faucet.dimensions.network/).
 
 ### Interacting with your Project
-If you made it this far, we have probably requested a project name and an ethereum address from you. This is the address you will use on mainnet and on Rinkeby. So at this point change your network to Rinkeby in MetaMask. On Rinkeby, we'll practice uploading everything so that it all goes smooth on mainnet when the ETH is real. After loading the page and connecting your wallet, you should see a button labeled "Toggle Artist Interface". A multi-tabbed form will pop up. You only need to focused on the following:
+If you made it this far, we have probably requested a project name and an ethereum address from you. This is the address you will use on mainnet and on Ropsten. So at this point change your network to Ropsten in MetaMask. On Ropsten, we'll practice uploading everything so that it all goes smooth on mainnet when the ETH is real. After loading the page and connecting your wallet, you should see a button labeled "Edit Priject". A multi-tabbed form will pop up. You only need to focus on the following:
 
 #### Project
 This should all be self-explanatory. Just fill and sumbit each one separately.
@@ -239,23 +238,17 @@ This should all be self-explanatory. Just fill and sumbit each one separately.
 #### Token
 In this tab you'll set the price and max invocations for your project. If you're accepting ETH as payment you don't need to worry about "Updated Currency Information". Although you can specify any ERC20-compliant token if you choose. Just give someone a heads up that you wish to go down this route.
 
-#### Scripts
-Here you'll first specify the dependency of your project including the script type and the version number *of that dependency*. For most scripts, you can leave the version blank or enter 1. The aspect ratio is a single number. E.g. 1 or 0.75 etc. If your piece takes a certain amount of time to fully render you can type in the animation length to let the server know when to render the canvas.
+Set the baseURI: `https://api.artblocks.io/token/`
 
-Once you've submitted your script details add your script to the "Project Script" box. Remember, `tokenData.hash` is a global variable in the environment this script will live in, so you do not need to define `tokenData` in your script, just expect your script will have access to it.
+#### Script
+Here you'll first specify the dependency of your project including the script type and the version number *of that dependency*. For most scripts, you can leave the version blank or enter 1. The aspect ratio is a single number. E.g. 1 or 0.75 etc. If your piece takes a certain amount of time to fully render you can type in the render delay to let the server know when to render the canvas.
+
+Once you've submitted your script details add your script to the "Project Scripts" box. Remember, `tokenData.hash` is a global variable in the environment this script will live in, so you do not need to define `tokenData` in your script, just expect your script will have access to it.
 
 If your script is big, consider minifying it. If your script is so big that you cannot fit it in a single transaction (you're getting an error when you submit), you may need to split it up and submit each part subsequently.
 
-#### URI
-
-Set the baseURI depending on the network you are on. **Failure to do this will result in your images not rendering.** 
-
-Rinkeby: `https://rinkebyapi.artblocks.io/token/`  
-
-Mainnet: `https://api.artblocks.io/token/`
-
 #### Finishing Actions
-Once you're done let us know and we will activate the project. You can then click "Purchases Paused" to test out the minting. Once your test mints are working in the livescript view, mint 20-40.
+Once all of the necessary fields have been submitted, you can then click "Purchases Paused" to test out the minting. Once your test mints are working in the livescript view, mint 20-40.
 
 #### How does my project get those OpenSea attributes?
 
