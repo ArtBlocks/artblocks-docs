@@ -22,5 +22,6 @@
 ## Rarities
 - Do not discuss odds or feature rarities about your project until it is completely sold out.
 
-## Charity
-- Finally, once your project is completely sold out, please reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting.
+## Finishing Steps
+- Once your project is completely sold out, please reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting.
+- You may also remove any language from your Project Description that was specifically included to describe sales mechanics.
