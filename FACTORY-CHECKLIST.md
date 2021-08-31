@@ -29,3 +29,4 @@
 ## Finishing Steps
 - Once your project is completely sold out, please reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting.
 - You may also remove any language from your Project Description that was specifically included to describe sales mechanics.
+- We would also appreciate it if you could report back once your charity donations have been completed so that we can log the results.
