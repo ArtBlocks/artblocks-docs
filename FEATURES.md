@@ -8,7 +8,14 @@ This function should essentially encapsulate the feature-determining logic withi
 
 The function should assume that it receives the `tokenData` object as an input (containing both a `tokenId` and `hash` string), and should use these to return the correct desired feature metadata for a given mint. 
 
+Properly displaying your project features requires both a a) feature calculation script and b) setting the feature fields for your project in the Art Blocks website's artist interface.
+
+Updating the features script or features fields for a given project will recalculate features for all tokens within that project.
+
 ## Features Script Interface
+
+**Important Note:** All code required for calculating your features (including any necessary helper functions) must be defined and implemented _within_ the single top-level `calculateFeatures` function.
+
 
 ```js
 /**
@@ -29,6 +36,16 @@ function calculateFeatures(tokenData) {
   return {}
 }
 ```
+
+## Features Fields
+
+In order for filtering and rarity (% occurence of different features) to be accessible via the Art Blocks website, the feature fields must be added in the artist interface UI on the Art Blocks website.
+
+There are two types of feature fields: `enum` and `number`:
+
+- For `enum` fields, values should be outputted as strings in your features scripts.
+- For `number` fields, the step size set in the feature fields is used for the step size of the slider in the filters.
+- If there are only a few specific number values expected to be output, an artist might want to use an `enum` field and output the enumerated possible numeric values as strings (e.g. if the slider UI will be the best way to navigate these features).
 
 ## Migration From Features Array
 
