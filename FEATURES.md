@@ -44,7 +44,7 @@ In order for filtering and rarity (% occurence of different features) to be acce
 There are two types of feature fields: `enum` and `number`:
 
 - For `enum` fields, values should be outputted as strings in your features scripts.
-- For `number` fields, the step size set in the feature fields is used for the step size of the slider in the filters.
+- For `number` fields, the step size set in the feature fields is used for the step size of the slider in the filters. This step size is set in the feature fields UI, not in the script, and should be on a per field basis.
 - If there are only a few specific number values expected to be output, an artist might want to use an `enum` field and output the enumerated possible numeric values as strings (e.g. if the slider UI would *not* be the best way to navigate these features).
 
 ## Migration From Features Array
