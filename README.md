@@ -250,6 +250,8 @@ If your script is big, consider minifying it. If your script is so big that you 
 #### Finishing Actions
 Once all of the necessary fields have been submitted, you can then click "Purchases Paused" to test out the minting. Once your test mints are working in the livescript view, mint 20-40.
 
+Make sure you've tested your code on multiple browsers (Chrome / Firefox / Safari) and on multiple device types (desktop / mobile) to ensure consistent output.
+
 #### How does my project get those OpenSea attributes?
 
 Once your project is selected to be included in one of the Art Blocks collections, the onboarding team will help you with this. The one thing to keep in mind is that all of the attributes you want displayed should be directly generated from the transaction hash and should not depend on any other randomness. 
