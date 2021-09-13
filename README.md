@@ -256,11 +256,10 @@ Make sure you've tested your code on multiple browsers (Chrome / Firefox / Safar
 
 Once your project is selected to be included in one of the Art Blocks collections, the onboarding team will help you with this. The one thing to keep in mind is that all of the attributes you want displayed should be directly generated from the transaction hash and should not depend on any other randomness. 
 
-This script is essentially a copy of your rendering script but without any dependencies present (the server won't have access to them). It must define a variable called `features` in the outer most scope.
+This script is essentially a copy of your rendering script but without any dependencies present (the server won't have access to them).
 
-```
-features = ["color: red", "shape: square"]
-```
+For full details on how to structure your project features, please see [FEATURES.md](https://github.com/ArtBlocks/artblocks-docs/blob/main/FEATURES.md).
+
 
 ## Frequently Asked Questions
 
