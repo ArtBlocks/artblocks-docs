@@ -86,6 +86,12 @@ class Random {
   random_int(a, b) {
     return Math.floor(this.random_num(a, b+1))
   }
+  random_bool(p) {
+    return this.random_dec() < p
+  }
+  random_choice(list) {
+    return list[Math.floor(this.random_num(0, list.length * 0.99))]
+  }
 }
 ```
 
@@ -105,6 +111,8 @@ Now each time we need some randomness we can call various helper functions:
 R.random_dec()      // Random decimal (0-1)
 R.random_num(0, 10) // Random decimal (0-10)
 R.random_int(0, 10) // Random integer (0-10)
+R.random_bool(0.5)  // Random boolean with probability 0.5
+R.random_choice([1, 2, 3])  // Random choice from a given list. Nice for random from a discreet set like a color palette
 ```
 
 Every time one of these functions is called, `random_dec()` will also be called somewhere in the stack. Applying the deterministic arithmetic to the seed and returning a new random number.
