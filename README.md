@@ -238,7 +238,9 @@ Once your script is ready, you will test it out on an [Art Blocks](https://artis
 Note: If you don't have "Ropsten ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: [https://faucet.dimensions.network/](https://faucet.dimensions.network/).
 
 ### Interacting with your Project
-If you made it this far, we have probably requested a project name and an ethereum address from you. This is the address you will use on mainnet and on Ropsten. So at this point change your network to Ropsten in MetaMask. On Ropsten, we'll practice uploading everything so that it all goes smooth on mainnet when the ETH is real. After loading the page and connecting your wallet, you should see a button labeled "Edit Project". A multi-tabbed form will pop up. You only need to focus on the following:
+If you made it this far, we have probably requested a project name and an Ethereum address from you. If not, that probably means your an artist who is in our pipeline and pending being onboarded–once we get you processed the following instructions will make more sense! 
+
+If you have provided a project name and Ethereum address to our team, this address you provided to our team will be used on mainnet and on Ropsten. So at this point change your network to Ropsten in MetaMask. On Ropsten, we'll practice uploading everything so that it all goes smooth on mainnet when the ETH is real. After loading the page and connecting your wallet, you should see a button labeled "Edit Project". A multi-tabbed form will pop up. You only need to focus on the following:
 
 #### Project
 This should all be self-explanatory. Just fill and submit each one separately.
@@ -271,7 +273,7 @@ For full details on how to structure your project features, please see [FEATURES
 
 ## Frequently Asked Questions
 
-### Do I need to know solidity (the Ethereum scripting language)?
+### Do I need to know Solidity (to write my own smart contracts)?
 
 No. Art Blocks handles all of that for you. All you need to do is the artwork.
 
