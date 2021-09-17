@@ -13,7 +13,10 @@
 - Mint #0 should occur at least 48 hours in advance of your scheduled release.
 
 ## Features
-- Please provide your features script at least 48 hours in advance of your scheduled release.
+- Please see [FEATURES.md](https://github.com/ArtBlocks/artblocks-docs/blob/main/FEATURES.md) for full details on how you set your project features as an artist.
+- The features script for your project should first be tested on the Ropsten testnet (https://artist-staging.artblocks.io/), alongside your art script. Ensure that your features are being displayed as expected on testnet before proceeding to project deployment to mainnet.
+- When uploading your feature script to mainnet (https://beta.artblocks.io/), please ensure that you are uploading the exact same features script, taking the same care that you would with your art script itself. 
+- While the features script _is not_ stored on-chain like the art script is, bugs in your features script will cause meaningful distruptions for collectors trying to explore your work on a per-feature basis.
 
 ## Unpausing
 - When it's time, you'll click the Unpause button under the Danger tab.
