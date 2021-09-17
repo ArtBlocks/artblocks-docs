@@ -14,7 +14,10 @@
 - Once your project information has been uploaded, please confirm that you're ready for mint #0.
 
 ## Features
-- Please provide your features script in conjunction with mint #0.
+- Please see [FEATURES.md](https://github.com/ArtBlocks/artblocks-docs/blob/main/FEATURES.md) for full details on how you set your project features as an artist.
+- The features script for your project should first be tested on the Ropsten testnet (https://artist-staging.artblocks.io/), alongside your art script. Ensure that your features are being displayed as expected on testnet before proceeding to project deployment to mainnet.
+- When uploading your feature script to mainnet (https://beta.artblocks.io/), please ensure that you are uploading the exact same features script, taking the same care that you would with your art script itself. 
+- While the features script _is not_ stored on-chain like the art script is, bugs in your features script will cause meaningful distruptions for collectors trying to explore your work on a per-feature basis.
 
 ## Scheduling
 - Once mint #0 and the features script are in place, you may schedule/announce your release.
