@@ -150,16 +150,17 @@ Now you have the basics here are some general principles you need to consider wh
 Each project can have zero or one library dependency. The approved dependencies are currently the following:
 
   + No Library at all (Vanilla JS, CSS, HTML, WebGL)
-  + p5js (https://p5js.org/)
-  + Processing (https://processing.org/)
-  + a-frame (https://aframe.io/)
-  + threejs (https://threejs.org/)
-  + vox
-  + megavox
+  + p5js `v1.0.0` (https://p5js.org/)
+  + Processing `v1.4.6` (https://processing.org/)
+  + a-frame `v1.2.0` (https://aframe.io/)
+  + threejs `r24` (https://threejs.org/)
+  + vox `v1.1.0-beta`
+  + megavox `v1.1.0-beta`
   + svg (https://svgjs.dev/)
-  + regl
-  + tonejs (https://tonejs.github.io/)
-  + paperjs (http://paperjs.org/)
+  + regl `v2.1.0`
+  + tonejs `v14.8.15` (https://tonejs.github.io/)
+  + paperjs `v0.12.15` (http://paperjs.org/)
+  + Zdog `v1.1.2` (https://github.com/metafizzy/zdog)
 
 Additional libraries may be added at moderator discretion, but the rule is only one external library per project.
 
