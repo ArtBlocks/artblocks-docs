@@ -155,7 +155,7 @@ Each project can have zero or one library dependency. The approved dependencies 
   + p5js `v1.0.0` (https://p5js.org/)
   + Processing `v1.4.6` (https://processing.org/)
   + a-frame `v1.2.0` (https://aframe.io/)
-  + threejs `r24` (https://threejs.org/)
+  + threejs `r124` (https://threejs.org/)
   + vox `v1.1.0-beta`
   + megavox `v1.1.0-beta`
   + svg (https://svgjs.dev/)
