@@ -1,5 +1,7 @@
 # Art Blocks 101 for Creators
 
+**Note: the primary audience for this document is artists who have already entered the pipeline for launching a project on Art Blocks. If you are currently waiting in the applications queue for Art Blocks, this documentation will hopefully provide a helpful guide for you in terms of what to expect, but many of the steps here will not be actionable for you until you have had a project shell set up by the Art Blocks team.
+
 ## Documentation
 
 The Art Blocks platform hosts generative projects for the production of verifiably deterministic outputs. A generative script (using [p5js](https://p5js.org/) for example) is stored immutably on the Ethereum blockchain for each project. When a user wants to purchase an iteration of a project hosted on the platform, they purchase an ERC721 compliant "non-fungible" token, also stored on the Ethereum blockchain, containing a provably unique "seed" which controls variables in the generative script. These variables, in turn, control the way the output looks and operates.
