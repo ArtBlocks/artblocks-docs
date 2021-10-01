@@ -249,7 +249,9 @@ If you have provided a project name and Ethereum address to our team, this addre
 This should all be self-explanatory. Just fill and submit each one separately.
 
 #### Token
-In this tab you'll set the price and max invocations for your project. If you're accepting ETH as payment you don't need to worry about "Updated Currency Information". Although you can specify any ERC20-compliant token if you choose. Just give someone a heads up that you wish to go down this route.
+In this tab you'll set the price and max invocations for your project. If you're accepting ETH as payment you don't need to worry about "Updated Currency Information" and **should not change the currency address**. To reiterate, **do not** update the currency address to be your wallet address–this field should **only** be set if you are accepting payment for your project in some non-ETH ERC20-compliant token. 
+
+You can though specify any ERC20-compliant token if you choose, just give someone on the Art Blocks team a heads up that you wish to go down this route.
 
 Set the baseURI: `https://api.artblocks.io/token/`
 
@@ -272,7 +274,6 @@ Once your project is selected to be included in one of the Art Blocks collection
 This script is essentially a copy of your rendering script but without any dependencies present (the server won't have access to them).
 
 For full details on how to structure your project features, please see [FEATURES.md](https://github.com/ArtBlocks/artblocks-docs/blob/main/FEATURES.md).
-
 
 ## Frequently Asked Questions
 
