@@ -4,6 +4,8 @@
 - Submit one field at a time. Wait for that transaction to clear before attempting the next field.
 - When you upload your script, please copy it exactly from testnet.
 - Include the following in the Project Base URI field: `https://api.artblocks.io/token/`
+- As [noted in the main documentation overview](https://github.com/ArtBlocks/artblocks-docs/blob/main/README.md#token), please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field **should not** be set if you are accepting ETH as your payment type.
+- Please double-check, triple-check, and then check again the generated [features script](https://github.com/ArtBlocks/artblocks-docs/blob/main/FEATURES.md) results on staging to ensure they are 100% accurate. This is **extremely important** to get right, as it changes to fix any bugs you may introduce in this script may have massive impact on how the artwork is percieved by collectors and may cause confusion in the secondary market. It is **your responsibility** to gauruntee that your features script is properly verified in the artist staging environment.
 
 ## Economics
 - Consider the overall economics of your project for a successful release.
@@ -11,7 +13,9 @@
 - There is a two month cooling period between the end of one project and the start of the next.
 
 ## Mint #0
+- **Before** minting mint #0, ensure that your "additional payee wallet" has been set for the same configuration that you will use it for in your project release. E.g., if you are using the "additional payee wallet" field to donate to charity at the time of mint, you must set this before minting your #0. This is done to ensure that this full functionality is tested end-to-end as part of the mint #0 process, and that there are no issues with the wallet selected for the additional payee.
 - Once your project information has been uploaded, please confirm that you're ready for mint #0.
+- Mint #0 should occur at least 48 hours in advance of your scheduled release.
 
 ## Features
 - Please see [FEATURES.md](https://github.com/ArtBlocks/artblocks-docs/blob/main/FEATURES.md) for full details on how you set your project features as an artist.
