@@ -37,6 +37,8 @@ function calculateFeatures(tokenData) {
 }
 ```
 
+For many artists, the process for writing your features script will likely entail starting with your project script, copying it into the `calculateFeatures` interface/shell above, and then trimming it down to remove all library (e.g. p5js) references and draw functionality and instead to build the relative key-value object map for your features.
+
 ## Features Fields
 
 In order for filtering and rarity (% occurence of different features) to be accessible via the Art Blocks website, the feature fields must be added in the artist interface UI on the Art Blocks website.
