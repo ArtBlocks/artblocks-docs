@@ -32,24 +32,23 @@ If your script needs to know the mint number or project number, it can do so lik
 
 ```javascript
 let projectNumber = Math.floor(parseInt(tokenData.tokenId) / 1000000)
-let mintNumber = parseInt(tokenData.tokenId) % (projectNumber * 1000000)
+let mintNumber = parseInt(tokenData.tokenId) % 1000000
 ```
 
-When you are testing locally, this variable obviously will not be defined in your browser environment. Thus here is a simple function to generate valid hashes and tokenIds.
+When you are testing locally, this variable obviously will not be defined in your browser environment. This here is a simple function to generate valid hashes and tokenIds.
 
 ```javascript
-function random_hash() {
-  let x = "0123456789abcdef", hash = '0x'
-  for (let i = 64; i > 0; --i) {
-    hash += x[Math.floor(Math.random()*x.length)]
+function genTokenData(projectNum) {
+  let data = {};
+  let hash = "0x";
+  for (var i = 0; i < 64; i++) {
+    hash += Math.floor(Math.random() * 16).toString(16);
   }
-  return hash
+  data.hash = hash;
+  data.tokenId = (projectNum * 1000000 + Math.floor(Math.random() * 1000)).toString();
+  return data;
 }
-
-tokenData = {
-  "hash": random_hash(),
-  "tokenId": "123000456"
-}
+let tokenData = genTokenData(123);
 ```
 
 There are two primary ways to use this hash:
@@ -59,7 +58,7 @@ There are two primary ways to use this hash:
 The first method is to convert the hash into a large integer and use this to seed a pseudo random number generator \(PRNGs\). You want to consider PRNGs based on arithmetic to ensure your output is deterministic regardless of the JavaScript version being used in a given browser.
 
 ```javascript
-let seed = parseInt(tokenData.hash.slice(0, 16), 16)
+let seed = parseInt(tokenData.hash.slice(2, 10), 16)
 ```
 
 Here is an example of a PRNG for demonstration purposes - please do your own research about PRNGs and choose one suitable for your needs. Disclaimer: "Anyone who considers arithmetical methods of producing random digits is, of course, in a state of sin." - [John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann).
@@ -129,7 +128,7 @@ When users mint each piece, they are creating a hash token on the blockchain. Al
 
 ### 2. Create a series of hex pairs
 
-Alternatively, you could just extract numbers from each of the hex pairs to parameterize your algorithm. Here we extract pairs and parse them into integers from 0-256. If we want them these values to range only between 0-10 for example we can do the following:
+Alternatively, you could just extract numbers from each of the hex pairs to parameterize your algorithm. Here we extract pairs and parse them into integers from 0-255. If we want the values to range only between 0-100 for example we can do the following:
 
 ```javascript
 let seed = parseInt(tokenData.hash.slice(0, 16), 16)
@@ -137,15 +136,15 @@ let p = []
 for (let i = 0; i < 64; i+=2) {
   p.push(tokenData.hash.slice(i+2, i+4))
 }
-let rns = p.map(x => {return parseInt(x, 16) % 10})
+let rns = p.map(x => {return parseInt(x, 16) / 255 * 100})
 ```
 
 These can be used to parameterize different variables later on:
 
 ```javascript
-let border = rns[0] > 9
-let size = rns[1] > 5 ? 10 : 20
-let color = rns[2] > 7 ? "white" : "black"
+let border = rns[0] > 90
+let size = rns[1] > 50 ? 10 : 20
+let color = rns[2] > 75 ? "white" : "black"
 ```
 
 ## Guidelines and Constraints
