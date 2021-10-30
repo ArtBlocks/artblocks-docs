@@ -75,9 +75,11 @@ class Random {
         return (t >>> 0) / 4294967296;
       };
     };
+    // seed prngA with first half of tokenData.hash
     this.prngA = new sfc32(tokenData.hash.substr(2, 32));
+    // seed prngB with second half of tokenData.hash
     this.prngB = new sfc32(tokenData.hash.substr(34, 32));
-    for (let i = 0; i < 5e5; i += 2) {
+    for (let i = 0; i < 1e6; i += 2) {
       this.prngA();
       this.prngB();
     }
