@@ -51,101 +51,88 @@ function genTokenData(projectNum) {
 let tokenData = genTokenData(123);
 ```
 
-There are two primary ways to use this hash:
+### Safely deriving randomness from the token hash
 
-### 1. Convert the hash to a large integer
-
-The first method is to convert the hash into a large integer and use this to seed a pseudo random number generator (PRNGs). You want to consider PRNGs based on arithmetic to ensure your output is deterministic regardless of the JavaScript version being used in a given browser.
-
-```javascript
-let seed = parseInt(tokenData.hash.slice(2, 10), 16)
-```
-
-Here is an example of a PRNG for demonstration purposes - please do your own research about PRNGs and choose one suitable for your needs. Disclaimer: "Anyone who considers arithmetical methods of producing random digits is, of course, in a state of sin." - [John von Neumann](https://en.wikipedia.org/wiki/John\_von\_Neumann).
-
-#### Xorshift RNGs
-
-George Marsaglia discovered Xorshift RNGs, proposing certain combinations of xorshift operations can result in sufficiently random number generators. For 32-bit inputs - there are many combinations (a, b, c) or triplets that could be used, one of which is **(5,17,13)**. For more information see the original publication below.
-
-Source: Marsaglia, George. "Xorshift RNGs." Journal of Statistical Software, 8.14 (2003): 1 - 6. [10.18637/jss.v008.i14](https://www.jstatsoft.org/article/view/v008i14).\
-Paper: [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).\
-Code: GNU General Public License (at least one of [version 2](http://www.gnu.org/licenses/gpl-2.0.html) or [version 3](http://www.gnu.org/licenses/gpl-3.0.html) or a [GPL-compatible license](https://gnu.org/licenses/license-list.html#GPLCompatibleLicenses).
-
-Below is a modified shift-register generator derived from the concepts introduced by Marsaglia as well as a C-implementation of the Algorithm "xor" from p. 4 of Marsaglia, "Xorshift RNGs".
+Art Blocks strongly recommends that all artists use an instance of the following Random class to feed all of their project's randomness. 
 
 ```javascript
 class Random {
-  constructor(seed) {
-    this.seed = seed
+  constructor() {
+    this.useA = false;
+    let sfc32 = function (uint128Hex) {
+      let a = parseInt(uint128Hex.substr(0, 8, 16));
+      let b = parseInt(uint128Hex.substr(8, 8, 16));
+      let c = parseInt(uint128Hex.substr(16, 8, 16));
+      let d = parseInt(uint128Hex.substr(24, 8, 16));
+      return function () {
+        a |= 0; b |= 0; c |= 0; d |= 0;
+        var t = (((a + b) | 0) + d) | 0;
+        d = (d + 1) | 0;
+        a = b ^ (b >>> 9);
+        b = (c + (c << 3)) | 0;
+        c = (c << 21) | (c >>> 11);
+        c = (c + t) | 0;
+        return (t >>> 0) / 4294967296;
+      };
+    };
+    // seed prngA with first half of tokenData.hash
+    this.prngA = new sfc32(tokenData.hash.substr(2, 32));
+    // seed prngB with second half of tokenData.hash
+    this.prngB = new sfc32(tokenData.hash.substr(34, 32));
+    for (let i = 0; i < 1e6; i += 2) {
+      this.prngA();
+      this.prngB();
+    }
   }
+  // random number between 0 (inclusive) and 1 (exclusive)
   random_dec() {
-    /* Algorithm "xor" from p. 4 of Marsaglia, "Xorshift RNGs" */
-    this.seed ^= this.seed << 13
-    this.seed ^= this.seed >> 17
-    this.seed ^= this.seed << 5
-    return ((this.seed < 0 ? ~this.seed + 1 : this.seed) % 1000) / 1000
+    this.useA = !this.useA;
+    return this.useA ? this.prngA() : this.prngB();
   }
+  // random number between a (inclusive) and b (exclusive)
   random_num(a, b) {
-    return a+(b-a)*this.random_dec()
+    return a + (b - a) * this.random_dec();
   }
+  // random integer between a (inclusive) and b (inclusive)
+  // requires a < b for proper probability distribution
   random_int(a, b) {
-    return Math.floor(this.random_num(a, b+1))
+    return Math.floor(this.random_num(a, b + 1));
   }
+  // random boolean with p as percent liklihood of true
   random_bool(p) {
-    return this.random_dec() < p
+    return this.random_dec() < p;
   }
+  // random value in an array of items
   random_choice(list) {
-    return list[Math.floor(this.random_num(0, list.length * 0.99))]
+    return list[this.random_int(0, list.length - 1)];
   }
 }
 ```
+_Note that the class uses the prng algorithm sfc32, which was designed and coded by [Chris Doty-Humphry and is public domain](http://pracrand.sourceforge.net/license.txt). More information can be found at [http://pracrand.sourceforge.net](http://pracrand.sourceforge.net/)._
 
-Source: [https://en.wikipedia.org/wiki/Xorshift](https://en.wikipedia.org/wiki/Xorshift) licensed under [CC-BY-SA 3.0](https://en.wikipedia.org/wiki/Wikipedia:Text\_of\_Creative\_Commons\_Attribution-ShareAlike\_3.0\_Unported\_License).
+The convenience methods `random_num`, `random_int`, `random_bool`, and `random_choice` may be removed if not needed for a specific project. Artists may also add their own convenience methods, but all randomness should be originally sourced from the `random_dec()` function.
 
-_Note: The code in this repository is purely for educational and demonstration purposes, please do your own research and testing before using any existing random number generators._
-
-We can seed it with our parsed hash string like so:
+We can get an instance of the Random class like so:
 
 ```javascript
-let R = new Random(seed)
+let R = new Random()
 ```
 
 Now each time we need some randomness we can call various helper functions:
 
 ```javascript
-R.random_dec()      // Random decimal (0-1)
-R.random_num(0, 10) // Random decimal (0-10)
-R.random_int(0, 10) // Random integer (0-10)
+R.random_dec()      // Random decimal [0-1)
+R.random_num(0, 10) // Random decimal [0-10)
+R.random_int(0, 10) // Random integer [0-10]
 R.random_bool(0.5)  // Random boolean with probability 0.5
 R.random_choice([1, 2, 3])  // Random choice from a given list. Nice for random from a discreet set like a color palette
 ```
 
-Every time one of these functions is called, `random_dec()` will also be called somewhere in the stack. Applying the deterministic arithmetic to the seed and returning a new random number.
+Every time one of these functions is called, `random_dec()` will also be called somewhere in the stack, applying the deterministic arithmetic to the seed and returning a new random number.
 
 #### I heard I shouldn't use `Math.random()`. Why not?
 
 When users mint each piece, they are creating a hash token on the blockchain. All the attributes of your piece should be derived from that token so that user will be able to render their piece and get the same results each time. `Math.random` is derived from the computer's clock, so there is no guarantee you will get the same output on different computing environments in the future.
-
-### 2. Create a series of hex pairs
-
-Alternatively, you could just extract numbers from each of the hex pairs to parameterize your algorithm. Here we extract pairs and parse them into integers from 0-255. If we want the values to range only between 0-100 for example we can do the following:
-
-```javascript
-let seed = parseInt(tokenData.hash.slice(0, 16), 16)
-let p = []
-for (let i = 0; i < 64; i+=2) {
-  p.push(tokenData.hash.slice(i+2, i+4))
-}
-let rns = p.map(x => {return parseInt(x, 16) / 255 * 100})
-```
-
-These can be used to parameterize different variables later on:
-
-```javascript
-let border = rns[0] > 90
-let size = rns[1] > 50 ? 10 : 20
-let color = rns[2] > 75 ? "white" : "black"
-```
 
 ## Guidelines and Constraints
 
