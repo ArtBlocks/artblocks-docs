@@ -28,9 +28,9 @@ Updating the features script or features fields for a given project will recalcu
  * @param {string} tokenData.hash - Unique hash generated upon minting the token.
  */
 function calculateFeatures(tokenData) {
-  /** 
+  /**
    * Implement me. This function should return a set of features in the format of key-value pair notation.
-   * 
+   *
    * For example, this should return `{"Palette": "Rosy", "Scale": "Big", "Tilt": 72}` if the desired features for a mint were:
    * - Palette: Rosy
    * - Scale: Big
@@ -44,7 +44,7 @@ For many artists, the process for writing your features script will likely entai
 
 ## Features Fields
 
-In order for filtering and rarity \(% occurence of different features\) to be accessible via the Art Blocks website, the feature fields must be added in the artist interface UI on the Art Blocks website.
+In order for filtering and rarity \(% occurrence of different features\) to be accessible via the Art Blocks website, the feature fields must be added in the artist interface UI on the Art Blocks website.
 
 There are two types of feature fields: `enum` and `number`:
 
@@ -65,4 +65,3 @@ This tool is being used to assist the Art Blocks team in attempting to automatic
 ## Additional Notes
 
 For future projects \(that have not yet minted out, which is necessary for Rev Dan's automated migration approach\), it is necessary that this data be determined based on the `tokenData` itself rather than just mapping the `tokenId` to a given existing set of features as the features cannot be known until time of mint \(unless all named features are purely based on the `tokenId` and not the `hash`\).
-
