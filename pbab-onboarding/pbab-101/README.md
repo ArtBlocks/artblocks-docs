@@ -17,7 +17,7 @@ description: A high level process-map for PBAB onboarding.
         * To create a new project shell, partners should use the `addProject` method of their newly deployed PBAB Core Contract. This can be done by connecting to the contract via Etherscan.
 4.  Partner team will integrate their custom web frontend with their deployed PBAB smart contracts (e.g. implementing their own purchase + display flow) and with the Art Blocks API as needed. An example of frontend purchase flow logic is provided here as a reference for integrating partners:
 
-    ```
+    ```js
     /** CONNECTION **/
     // A Web3Provider wraps a standard Web3 provider, which is
     // what Metamask injects as window.ethereum into each page
