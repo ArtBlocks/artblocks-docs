@@ -8,11 +8,12 @@ description: A project checklist to walk through for Curated projects.
 
 ## Upload
 
-1. Submit one field at a time. Wait for that transaction to clear before attempting the next field.
-2. When you upload your script, please copy it exactly from testnet.
-3. Include the following in the Project Base URI field: `https://api.artblocks.io/token/`
-4. As [noted in the main documentation overview](../#token), please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field **should not** be set if you are accepting ETH as your payment type.
-5. Please double-check, triple-check, and then check again the generated [features script](../FEATURES.md) results on staging to ensure they are 100% accurate. This is **extremely important** to get right, as it changes to fix any bugs you may introduce in this script may have massive impact on how the artwork is perceived by collectors and may cause confusion in the secondary market. It is **your responsibility** to guarantee that your features script is properly verified in the artist staging environment.
+1. Ensure your wallet is funded with enough ETH to pay the gas fees for the upload and unpausing process. For more information on the estimated cost of these steps, [click here.](https://docs.artblocks.io/creator-docs/creator-onboarding/readme#cost)
+2. Submit one field at a time. Wait for that transaction to clear before attempting the next field.
+3. When you upload your script, please copy it exactly from testnet.
+4. Include the following in the Project Base URI field: `https://api.artblocks.io/token/`
+5. As [noted in the main documentation overview](../#token), please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field **should not** be set if you are accepting ETH as your payment type.
+6. Please double-check, triple-check, and then check again the generated [features script](../FEATURES.md) results on staging to ensure they are 100% accurate. This is **extremely important** to get right, as it changes to fix any bugs you may introduce in this script may have massive impact on how the artwork is perceived by collectors and may cause confusion in the secondary market. It is **your responsibility** to guarantee that your features script is properly verified in the artist staging environment.
 
 ## Scheduling
 
