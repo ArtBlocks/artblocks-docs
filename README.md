@@ -66,7 +66,7 @@ class Random {
       let d = parseInt(uint128Hex.substr(24, 8, 16));
       return function () {
         a |= 0; b |= 0; c |= 0; d |= 0;
-        var t = (((a + b) | 0) + d) | 0;
+        let t = (((a + b) | 0) + d) | 0;
         d = (d + 1) | 0;
         a = b ^ (b >>> 9);
         b = (c + (c << 3)) | 0;
