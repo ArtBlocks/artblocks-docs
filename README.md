@@ -229,7 +229,7 @@ There are many other free-to-use licenses commonly used on open source software.
 
 ## Testing on Ropsten
 
-Once your script is ready, you will test it out on an [Art Blocks](https://artist-staging.artblocks.io) staging site running on one of Ethereum's test networks (Ropsten). This will make sure there aren't any bugs or errors and that if it's working on Ropsten, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
+Once your application is approved and your script is ready, you will test it out on an [Art Blocks](https://artist-staging.artblocks.io) staging site running on one of Ethereum's test networks (Ropsten). This will make sure there aren't any bugs or errors and that if it's working on Ropsten, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
 
 Note: If you don't have "Ropsten ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: [https://faucet.dimensions.network/](https://faucet.dimensions.network).
 
