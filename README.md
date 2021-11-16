@@ -53,7 +53,7 @@ let tokenData = genTokenData(123);
 
 ### Safely deriving randomness from the token hash
 
-Art Blocks strongly recommends that all artists use an instance of the following Random class to feed all of their project's randomness. 
+Art Blocks strongly recommends that all artists use an instance of the following Random class to feed all of their project's randomness.
 
 ```javascript
 class Random {
@@ -108,7 +108,8 @@ class Random {
   }
 }
 ```
-_Note that the class uses the prng algorithm sfc32, which was designed and coded by [Chris Doty-Humphry and is public domain](http://pracrand.sourceforge.net/license.txt). More information can be found at [http://pracrand.sourceforge.net](http://pracrand.sourceforge.net/)._
+
+_Note that the class uses the prng algorithm sfc32, which was designed and coded by _[_Chris Doty-Humphry and is public domain_](http://pracrand.sourceforge.net/license.txt)_. More information can be found at _[_http://pracrand.sourceforge.net_](http://pracrand.sourceforge.net)_._
 
 The convenience methods `random_num`, `random_int`, `random_bool`, and `random_choice` may be removed if not needed for a specific project. Artists may also add their own convenience methods, but all randomness should be originally sourced from the `random_dec()` function.
 
@@ -228,6 +229,8 @@ Common source code licenses (in creative coding):
 There are many other free-to-use licenses commonly used on open source software. Please carefully read the full details on any licensed code you re-use or modify, before including it in your project.
 
 ## Testing on Ropsten
+
+Once your application is approved and your script is ready, you will test it out on an [Art Blocks](https://artist-staging.artblocks.io) staging site running on one of Ethereum's test networks (Ropsten). This will make sure there aren't any bugs or errors and that if it's working on Ropsten, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
 
 Once your application is approved and your script is ready, you will test it out on an [Art Blocks](https://artist-staging.artblocks.io) staging site running on one of Ethereum's test networks (Ropsten). This will make sure there aren't any bugs or errors and that if it's working on Ropsten, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
 
