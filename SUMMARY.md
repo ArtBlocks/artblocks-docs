@@ -3,8 +3,9 @@
 ## Creator Onboarding
 
 * [Art Blocks 101 for Creators](README.md)
-  * [Art Blocks Features Script](creator-onboarding/readme/features.md)
+  * [Artist Onboarding Steps](creator-onboarding/readme/artist-onboarding-steps.md)
   * [FAQs](creator-onboarding/readme/faqs.md)
+  * [Art Blocks Features Script](creator-onboarding/readme/features.md)
 * [Checklist for Curated Projects](creator-onboarding/curated-checklist.md)
 * [Checklist for Factory/Playground Projects](creator-onboarding/factory-checklist.md)
 
