@@ -20,7 +20,7 @@ Please see our Artist Onboarding Steps page for a more detailed overview of the 
 
 ## Approximately how long will each step of the process take?
 
-Once the artist onboarding process begins, it will take approximately 4-6 weeks to upload your project, finalize it on test net, submit it for curation review, finalize it on main net, schedule a launch date, and finally release the project. The length of each step differs and depends somewhat on how quickly you, the artist, finalize your scripts. Please see our artist onboarding flow for more information about the timeline of each step.
+Once the artist onboarding process begins, it will take approximately 4-6 weeks to upload your project, finalize it on testnet, submit it for curation review, finalize it on mainnet, schedule a launch date, and finally release the project. The length of each step differs and depends somewhat on how quickly you, the artist, finalize your scripts. Please see our artist onboarding flow for more information about the timeline of each step.
 
 ## What is the expected timeline for hearing back from Art Blocks throughout the application process?
 
@@ -98,7 +98,7 @@ Project name:&#x20;
 
 Artist name:&#x20;
 
-Project Link: https://www.artblocks.io/project/\[#]&#x20;
+Project Link: https://www.artblocks.io/project/[#] &#x20;
 
 Project Conversations: #factory-projects or #\[artist-name]&#x20;
 
@@ -158,9 +158,9 @@ If the charity you’d like to donate to is not crypto-friendly, we recommend ch
 
 Great question! We recommend that all users have a hardware wallet (typically Ledger or Trezor) that you use to interact with MetaMask.\
 \
-You can learn more about security in the NFT spac[e ](https://medium.com/the-link-art-blocks/how-to-secure-your-collection-3dca5c073aef)[he](https://medium.com/the-link-art-blocks/how-to-secure-your-collection-3dca5c073aef)re (how to keep your collection safe) an[d ](https://medium.com/the-link-art-blocks/avoiding-scams-and-staying-safe-9a6808a4146e)[he](https://medium.com/the-link-art-blocks/avoiding-scams-and-staying-safe-9a6808a4146e)re (how to avoid scams).\
+You can learn more about security in the NFT space [here](https://medium.com/the-link-art-blocks/how-to-secure-your-collection-3dca5c073aef) (how to keep your collection safe) and [here](https://medium.com/the-link-art-blocks/avoiding-scams-and-staying-safe-9a6808a4146e) (how to avoid scams).\
 \
-You can also check out ou[r ](https://www.youtube.com/watch?v=u8MK99grAfI)[After Dinner Mints episo](https://www.youtube.com/watch?v=u8MK99grAfI)de dedicated to security!
+You can also check out our [After Dinner Mints episode](https://www.youtube.com/watch?v=u8MK99grAfI) dedicated to security!
 
 ## Is there a place I can connect with other artists and chat?
 
