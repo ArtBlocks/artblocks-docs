@@ -1,8 +1,8 @@
 ---
 description: >-
   Below you'll find an overview of each step of our onboarding process as well
-  as an estimated time required for each step. Please note that the time
-  estimate for each step depends on successful complet
+  as an estimated time required for each step. Please note that the time estimate for each step depends on the successful completion of the step before. 
+  
 ---
 
 # Artist Onboarding Steps
@@ -11,7 +11,7 @@ description: >-
 
 During one of our open application periods, submit a sample of your project along with your information and an artist statement. Our team will review each submission and reach out to you to get an updated version of your script when it's your turn in the queue.&#x20;
 
-_Timeline: Due to the surge in Art Blocks popularity, applications may take up to several months to process. Applications will be reviewed in the order they were submitted. _
+_Timeline: Due to the surge in Art Blocks popularity, applications may take up to several months to process. Applications will be reviewed in the order they were submitted._
 
 ## 2. Script test runs and project review
 
@@ -29,7 +29,7 @@ A member of our operations team will send you a creator agreement via email to s
 
 _Timeline: 1-2 days_
 
-## 4. Upload to test net
+## 4. Upload to testnet
 
 Once the agreement is in place, you'll be asked to upload your project to the artist staging site on the Ropsten test network. Here you can mint test outputs of your project and work out any kinks in your script before review by the curation board.
 
@@ -43,9 +43,9 @@ Our curation board reviews your project and test mints and determines whether it
 
 _Timeline: 7-10 days_
 
-## 6. Finalize project for main net
+## 6. Finalize project for mainnet
 
-Whether your project is curated or factory, you'll move on to the main net finalization stage and get your project ready for launch on main net. Here you can make any final minor tweaks and ensure everything is finalized for your drop.
+Whether your project is curated or factory, you'll move on to the mainnet finalization stage and get your project ready for launch on mainnet. Here you can make any final minor tweaks and ensure everything is finalized for your drop.
 
 _Timeline_: _artist-dependent, but most artists spend about 1 week on this step_
 
