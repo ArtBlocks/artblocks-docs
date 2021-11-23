@@ -154,6 +154,10 @@ To find a list of charities, you can ask for advice in #artist-general and check
 
 If the charity you’d like to donate to is not crypto-friendly, we recommend checking out endaoment.org. They are a 501c(3) that enables on-chain donations to any US-based 501c(3) via a Donor Advised Fund (DAF). This method can also be done fully on-chain, so the donations never touch your personal wallet.
 
+## How do I remove my charitable giving information from the additional payee field mid-Dutch Auction?
+
+If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier. These fields cannot be blank once the dutch auction has begun. 
+
 ## Where can I learn more about best practices for security, including hardware wallets?
 
 Great question! We recommend that all users have a hardware wallet (typically Ledger or Trezor) that you use to interact with MetaMask.\
