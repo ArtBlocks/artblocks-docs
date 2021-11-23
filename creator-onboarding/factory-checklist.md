@@ -52,7 +52,7 @@ Description: A project checklist to walk through for Factory/Playground projects
 
 ## If Dutch Auction
 
-* Dutch auction prices will need to be manually changed by the artist every 5 minutes.
+* Dutch auction prices will need to be manually changed by the artist every 5 minutes. To change the token price during a dutch auction, you will need to adjust the 'price per token' field and click Submit.
 * If using a dutch auction drop mechanic, send in the tx 30 seconds before the 5 minute mark. You will want to use 2x or more what is suggested as high gas on https://etherscan.io/gastracker), but please keep an eye on gas as there are times when gas can spike, in which case you will need to speed up the tx.
 
 ## Rarities
