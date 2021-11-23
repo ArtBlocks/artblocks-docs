@@ -1,8 +1,9 @@
 ---
-description: Frequently asked questions.
+Description: Frequently asked questions.
 ---
 
 # FAQs
+To suggest a question to be added, fill out this form: [Creator FAQs Suggestion Box](https://forms.gle/P3TJcZ8ydqFmMyiw9)
 
 ## When can I expect to hear back after I submit an application?
 
@@ -185,4 +186,3 @@ However, we ask that you clearly communicate why you're minting more than one to
 ## How long do I need to wait before releasing a project through Art Blocks again?
 
 We require artists to take a 2 month cool off period between drops in the Playground and Factory. In addition, there is a 6 month cool-off period between considerations for Curated projects. The cool off period begins when your project sells out (i.e. when minting is 100% completed).
-
