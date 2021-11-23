@@ -12,5 +12,6 @@
 ## PBAB Onboarding
 
 * [PBAB 101](pbab-onboarding/pbab-101/README.md)
-  * [Adding New Project Shells](pbab-onboarding/pbab-101/adding-new-project-shells.md)
+  * [PBAB Project Launch](pbab-onboarding/pbab-101/pbab-project-launch.md)
+  * [Project Shell Deployment Guide](pbab-onboarding/pbab-101/adding-new-project-shells.md)
   * [FAQs](pbab-onboarding/pbab-101/faqs.md)
