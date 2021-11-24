@@ -44,6 +44,7 @@ Description: A project checklist to walk through for Curated projects.
 
 * Once mint #0 and the features script are in place, Art Blocks will work with you to schedule/announce your curated release.
 * Curated releases will include an artist feature with a Q&A to be gathered following scheduling. 
+* Curated artists will also have an artist channel created in Discord. To pin messages in your artist channel, you must enable two-factor authentication within User Settings > My Account in Discord. 
 
 ## Unpausing
 
