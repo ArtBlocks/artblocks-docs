@@ -8,12 +8,13 @@ Description: A project checklist to walk through for Curated projects.
 
 ## Upload
 
-1. Ensure your wallet is funded with enough ETH to pay the gas fees for the upload and unpausing process. For more information on the estimated cost of these steps, [click here.](https://docs.artblocks.io/creator-docs/creator-onboarding/readme#cost)
-2. Submit one field at a time. Wait for that transaction to clear before attempting the next field.
-3. When you upload your script, please copy it exactly from testnet.
-4. Include the following in the Project Base URI field: `https://api.artblocks.io/token/`
-5. As [noted in the main documentation overview](../#token), please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field **should not** be set if you are accepting ETH as your payment type.
-6. Please double-check, triple-check, and then check again the generated [features script](./readme/features.md) results on staging to ensure they are 100% accurate. This is **extremely important** to get right, as it changes to fix any bugs you may introduce in this script may have massive impact on how the artwork is perceived by collectors and may cause confusion in the secondary market. It is **your responsibility** to guarantee that your features script is properly verified in the artist staging environment.
+1. Please ensure that you have reviewed and abided by our [Documentation](https://docs.artblocks.io/creator-docs/creator-onboarding/readme#documentation) and [Guidelines & Constraints](https://docs.artblocks.io/creator-docs/creator-onboarding/readme#guidelines-and-constraints). If you are assigning rarity to different things, Art Blocks strongly recommends that you use an instance of the Random class found [here](https://docs.artblocks.io/creator-docs/creator-onboarding/readme#safely-deriving-randomness-from-the-token-hash) to feed all of your project's randomness. Prior to uploading, please verify that your script meets this requirement.
+2. Ensure your wallet is funded with enough ETH to pay the gas fees for the upload and unpausing process. For more information on the estimated cost of these steps, [click here.](https://docs.artblocks.io/creator-docs/creator-onboarding/readme#cost)
+3. Submit one field at a time. Wait for that transaction to clear before attempting the next field.
+4. When you upload your script, please copy it exactly from testnet.
+5. Include the following in the Project Base URI field: `https://api.artblocks.io/token/`
+6. As [noted in the main documentation overview](../#token), please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field **should not** be set if you are accepting ETH as your payment type.
+7. Please double-check, triple-check, and then check again the generated [features script](./readme/features.md) results on staging to ensure they are 100% accurate. This is **extremely important** to get right, as it changes to fix any bugs you may introduce in this script may have massive impact on how the artwork is perceived by collectors and may cause confusion in the secondary market. It is **your responsibility** to guarantee that your features script is properly verified in the artist staging environment.
 
 ## Features
 
