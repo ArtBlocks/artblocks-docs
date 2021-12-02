@@ -13,12 +13,13 @@ Description: A project checklist to walk through for Factory/Playground projects
 3. Submit one field at a time. Wait for that transaction to clear before attempting the next field.
 4. When you upload your script, please copy it exactly from testnet.
 5. Include the following in the Project Base URI field: `https://api.artblocks.io/token/`
+   * **Important:** If you are setting this field for a PBAB project, rather than an Art Blocks project directly, the `baseTokenURI` field should follow a slightly different structure. Please see the [PBAB documentation](../powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells.md) for more info.
 6. As [noted in the main documentation overview](../#token), please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field **should not** be set if you are accepting ETH as your payment type.
-7. Please double-check, triple-check, and then check again the generated [features script](./readme/features.md) results on staging to ensure they are 100% accurate. This is **extremely important** to get right, as it changes to fix any bugs you may introduce in this script may have massive impact on how the artwork is perceived by collectors and may cause confusion in the secondary market. It is **your responsibility** to guarantee that your features script is properly verified in the artist staging environment.
+7. Please double-check, triple-check, and then check again the generated [features script](readme/features.md) results on staging to ensure they are 100% accurate. This is **extremely important** to get right, as it changes to fix any bugs you may introduce in this script may have massive impact on how the artwork is perceived by collectors and may cause confusion in the secondary market. It is **your responsibility** to guarantee that your features script is properly verified in the artist staging environment.
 
 ## Features
 
-1. Please see [FEATURES.md](./readme/features.md) for full details on how you set your project features as an artist.
+1. Please see [FEATURES.md](readme/features.md) for full details on how you set your project features as an artist.
 2. The features script for your project should first be tested on the Ropsten testnet ([https://artist-staging.artblocks.io/](https://artist-staging.artblocks.io)), alongside your art script. Ensure that your features are being displayed as expected on testnet before proceeding to project deployment to mainnet.
 3. When uploading your feature script to mainnet ([https://beta.artblocks.io/](https://beta.artblocks.io)), please ensure that you are uploading the exact same features script, taking the same care that you would with your art script itself.
 4. While the features script _is not_ stored on-chain like the art script is, bugs in your features script will cause meaningful disruptions for collectors trying to explore your work on a per-feature basis.
