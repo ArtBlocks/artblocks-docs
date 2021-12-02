@@ -2,7 +2,7 @@
 description: An overview of how to deploy a new project on your custom PBAB contract.
 ---
 
-# Adding New Project Shells
+# Project Shell Deployment Guide
 
 1. Collect 3 pieces of information for the to-be-deployed project on your PBAB contract.
    1. The project title (e.g. "Fun Lines")
@@ -14,5 +14,5 @@ description: An overview of how to deploy a new project on your custom PBAB cont
 5. Once 4. has been completed, when connected to the Art Blocks website ([https://artist-staging.artblocks.io](https://artist-staging.artblocks.io) for Ropsten, and [https://artblocks.io](https://artblocks.io) for mainnet), **with the artist wallet** used in step 4., your artist should be able to begin entering their project details.
    * If you are having trouble finding your project on the Ropsten Art Blocks site, you should be able to navigate to it directly with by entering in your browser a URL of the format: `https://artist-staging.artblocks.io/project/{CONTRACT_ADDRESS}-{PROJECT_ID}` (e.g. for the first project shell on your PBAB core contract, the `{PROJECT_ID}` would be `0`, then `1`, then `2`, etc.).
    * If you are having trouble seeing your project on the corresponding-network's Art Blocks site, first try disconnecting and reconnecting your wallet to the site, ensuring that you are connected with the previously specified artist wallet.
-   * When asked to provide the `baseTokenURI` for your project, this should be `https://token.artblocks.io/{CONTRACT_ADDRESS}/`, where `{CONTRACT_ADDRESS}` is the address of **the core contract** for your PBAB project (e.g. `0x06710498339b30834653459Ac90F52Cbd2F1D085` for the project linked above in step 2.).
+   * When asked to provide the `baseTokenURI` for your project, this should be `https://token.artblocks.io/{CONTRACT_ADDRESS}/`, where `{CONTRACT_ADDRESS}` is the address of **the core contract** for your PBAB project (e.g. `0x06710498339b30834653459Ac90F52Cbd2F1D085` for the project linked above in step 2.). For the Ropsten testnet, this should be `https://token.staging.artblocks.io/{CONTRACT_ADDRESS}/`.
    * Generally speaking, the [Art Blocks 101 for Creators guide](../../) should be broadly applicable to this onboarding step for PBAB-partner-platform artists.
