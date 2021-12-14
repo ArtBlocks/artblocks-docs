@@ -65,7 +65,7 @@ No, the library you use is not stored on-chain with your project. A script tag l
 
 ## Are there limits on script length?
 
-Individual scripts are limited to 10 kilibytes. Larger scripts can be segmented into smaller scripts and edited individually.
+There are no limits for total script length. That said, scripts that are larger than 10 kilibytes will need to be broken up into segments of 10kb. Segments can be added using the plus symbol when uploading a script.  
 
 ## Can I load external assets into my project (textures, audio, etc)?
 
@@ -94,25 +94,15 @@ If your project is selected for a drop on Art Blocks, you'll need to have the fo
 Would you like your Ropsten testnet project made public? Y/N&#x20;
 
 \[Curated/Playground/Factory]&#x20;
-
 Project name:&#x20;
-
 Artist name:&#x20;
-
 Project Link: https://www.artblocks.io/project/[#] &#x20;
-
 Project Conversations: #factory-projects or #\[artist-name]&#x20;
-
 Start Date/Time: TBD with the AB team&#x20;
-
 Total Mints:&#x20;
-
 Drop Mechanic:&#x20;
-
 Mint Price:&#x20;
-
 Pricing Tiers (if DA):&#x20;
-
 Charity Info (for any mints sold over 0.25eth, 25% is required to be donated to charity of your choice):&#x20;
 
 ## My project is uploaded and ready to go. How do I mint my first output?
@@ -144,6 +134,10 @@ Art Blocks takes 10% of the total primary sales and 2.5% of secondary sales.
 On OpenSea, the most popular secondary marketplace, artists receive 5% of all secondary sales and Art Blocks receives 2.5% of all secondary sales.
 
 On other platforms, artists can set their own secondary percentage on their project for other markets that may recognize that field.
+
+## How does royalty distribution work?
+
+OpenSea collects royalties on the secondary sales. These royalties are then transferred to Art Blocks. Art Blocks then manually transfers those royalties to each artist. Royalty distributions will be announced in our artist channel.
 
 ## Am I required to donate 25% to charity?
 
