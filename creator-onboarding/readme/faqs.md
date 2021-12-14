@@ -180,3 +180,15 @@ However, we ask that you clearly communicate why you're minting more than one to
 ## How long do I need to wait before releasing a project through Art Blocks again?
 
 We require artists to take a 2 month cool off period between drops in the Playground and Factory. In addition, there is a 6 month cool-off period between considerations for Curated projects. The cool off period begins when your project sells out (i.e. when minting is 100% completed).
+
+## Will I have access to my testnet shell during my cooldown period?
+
+Yes you will and we encourage you to use your testnet shell during your cooldown period. We kindly ask that you wait to ask for thumbnail refreshes if needed until after your cooldown period to limit noise on our end. 
+
+## What is the process upon returning to Art Blocks as a Factory artist?
+
+As a next step in your Art Blocks journey, you will have a two month cooldown period before being eligible to submit another project. Your two month cooldown starts the day that your project sells out (i.e., when minting is 100% completed). After this period, you will be eligible to submit your next project to Art Blocks. We ask that you keep track of this timing on your end and please reach back out to us if you’d like to submit a project again after this time. You will continue to have access to your testnet shell during this time, so feel free to use that during your cooldown period. 
+
+Should you return, you'll submit a brief form with information about your proposed project. Once filled out, your project will be screened internally by our team via your testnet shell. Screenings occur weekly, so there will not be an extensive waiting period here. In our review, we will focus on overall aesthetics, variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually. Based on this review, you will either move forward from there or we will ask that you take a one month development period before returning with a new project for screening. 
+
+This will be in addition to the curation review. This screening will be done by members of Art Blocks' team. Following that screening, accepted projects will then be viewed by our Curation Board as well. Right now this screening step takes place for new artists and is part of our application onboarding process, so the big change here is just that returning Factory artists will be starting at that step rather than fast-tracking to the Curation Review. This initial screening will also be an opportunity for Art Blocks' team to provide more direct feedback on newly proposed projects. 
