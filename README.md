@@ -109,7 +109,7 @@ class Random {
 }
 ```
 
-_Note that the class uses the prng algorithm sfc32, which was designed and coded by _[_Chris Doty-Humphry and is public domain_](http://pracrand.sourceforge.net/license.txt)_. More information can be found at _[_http://pracrand.sourceforge.net_](http://pracrand.sourceforge.net)_._
+_Note that the class uses the prng algorithm sfc32, which was designed and coded by_ [_Chris Doty-Humphry and is public domain_](http://pracrand.sourceforge.net/license.txt)_. More information can be found at_ [_http://pracrand.sourceforge.net_](http://pracrand.sourceforge.net)_._
 
 The convenience methods `random_num`, `random_int`, `random_bool`, and `random_choice` may be removed if not needed for a specific project. Artists may also add their own convenience methods, but all randomness should be originally sourced from the `random_dec()` function.
 
@@ -144,13 +144,13 @@ Now you have the basics here are some general principles you need to consider wh
 Each project can have zero or one library dependency. The approved dependencies are currently the following:
 
 * No Library at all (Vanilla JS, CSS, HTML, WebGL)
+* svg
 * p5js `v1.0.0` ([https://p5js.org/](https://p5js.org))
 * Processing `v1.4.6` ([https://processing.org/](https://processing.org))
 * a-frame `v1.2.0` ([https://aframe.io/](https://aframe.io))
 * threejs `r124` ([https://threejs.org/](https://threejs.org))
 * vox `v1.1.0-beta`
 * megavox `v1.1.0-beta`
-* svg ([https://svgjs.dev/](https://svgjs.dev))
 * regl `v2.1.0`
 * tonejs `v14.8.15` ([https://tonejs.github.io/](https://tonejs.github.io))
 * paperjs `v0.12.15` ([http://paperjs.org/](http://paperjs.org))
