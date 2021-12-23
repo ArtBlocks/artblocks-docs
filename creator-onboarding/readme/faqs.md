@@ -125,7 +125,7 @@ The structure and price levels of a dutch auction are largely up to the artist, 
 
 To switch back to ETH, change the currency symbol to ETH and the contract address to 0x0000...
 
-## What percent of the drop profits does Art Blocks take?
+## What percent of project profits does Art Blocks take?
 
 Art Blocks takes 10% of the total primary sales and 2.5% of secondary sales.
 
@@ -137,7 +137,9 @@ On other platforms, artists can set their own secondary percentage on their proj
 
 ## How does royalty distribution work?
 
-OpenSea collects royalties on the secondary sales. These royalties are then transferred to Art Blocks. Art Blocks then manually transfers those royalties to each artist. Royalty distributions will be announced in our artist channel.
+Royalty distribution varies based on the secondary marketplace. Most secondary marketplaces (Rarible, etc.) will read your royalties from your contract (the secondary market royalty field) and will send the ETH accordingly directly to you. 
+
+OpenSea is the exception to this. OpenSea will collect royalties on the secondary sales directly (5%). These royalties are then transferred to Art Blocks and Art Blocks will then manually transfer those royalties to each artist. Royalty distributions will be announced in our artist channel.
 
 ## Am I required to donate 25% to charity?
 
