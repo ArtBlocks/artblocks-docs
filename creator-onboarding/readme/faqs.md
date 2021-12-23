@@ -13,7 +13,7 @@ We highly recommend you take advantage of this time and continue refining your s
 
 ## What happens after I apply?
 
-After an application period ends, our creative team will begin the process of reviewing applications in the order they were received. We'll reach out to check on the status of your project prototype when we reach your application in the queue. You can share any updates with us, or let us know if you need a bit more time to finalize a prototype. After we have your final submission, you'll hear back from us whether or not your project is selected for an Art Blocks drop. If your project is selected for a drop, you'll move into the Artist Onboarding process.
+After an application period ends, our creative team will begin the process of reviewing applications in the order they were received. We'll reach out to check on the status of your project prototype when we reach your application in the queue. You can share any updates with us, or let us know if you need a bit more time to finalize a prototype. After we have your final submission, you'll hear back from us whether or not your project is selected for an Art Blocks launch. If your project is selected, you'll move into the Artist Onboarding process.
 
 ## What are the steps in the process and how do I know when I've completed them?
 
@@ -65,7 +65,7 @@ No, the library you use is not stored on-chain with your project. A script tag l
 
 ## Are there limits on script length?
 
-There are no limits for total script length. That said, scripts that are larger than 10 kilibytes will need to be broken up into segments of 10kb. Segments can be added using the plus symbol when uploading a script.  
+If your script is big, consider minifying it. There are no limits for total script length. That said, scripts that are larger than 10 kilibytes will need to be broken up into segments of 10kb. Segments can be added using the plus symbol (+) when uploading a script. Be aware that you will have to pay in transaction gas fees proportional to the size of script upload you are performing.
 
 ## Can I load external assets into my project (textures, audio, etc)?
 
@@ -133,7 +133,7 @@ Art Blocks takes 10% of the total primary sales and 2.5% of secondary sales.
 
 On OpenSea, the most popular secondary marketplace, artists receive 5% of all secondary sales and Art Blocks receives 2.5% of all secondary sales.
 
-On other platforms, artists can set their own secondary percentage on their project for other markets that may recognize that field.
+On other platforms, artists can set their own secondary percentage on their project for other markets that may recognize that field. For consistency, we recommend setting your secondary market royalty to 5%. 
 
 ## How does royalty distribution work?
 
