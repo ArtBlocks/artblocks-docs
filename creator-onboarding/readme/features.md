@@ -6,7 +6,7 @@ description: A guide on how to structure the features script for your Art Blocks
 
 ## Features Overview
 
-All feature attributes that you want you want displayed should be directly generated from the transaction hash and should not depend on any other randomness.
+All feature attributes that you want displayed should be directly generated from the transaction hash and should not depend on any other randomness.
 
 This function should essentially encapsulate the feature-determining logic within rendering script but without any library dependencies \(e.g. p5js\) present \(the server won't have access to them\).
 
