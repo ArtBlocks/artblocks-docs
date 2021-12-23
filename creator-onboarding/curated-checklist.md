@@ -51,13 +51,13 @@ Description: A project checklist to walk through for Curated projects.
 ## Unpausing
 
 * When it's time, you'll click the Unpause button under the Danger tab.
-* When unpausing the project, please send in the tx 30 seconds prior to the top of the hour. To unpause the project, please send high gas (2-3x what is suggested as high gas on https://etherscan.io/gastracker).
+* When unpausing the project, please send in the tx 30 seconds prior to the top of the hour. To unpause the project, please send high gas (2-3x what is suggested as high gas on https://etherscan.io/gastracker). If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise. 
 * Once the transaction clears, your project will be live for minting.
 
 ## If Dutch Auction
 
 * Dutch auction prices will need to be manually changed by the artist every 5 minutes. To change the token price during a dutch auction, you will need to adjust the 'price per token' field and click Submit.
-* If using a dutch auction drop mechanic, send in the tx 30 seconds before the 5 minute mark. You will want to use 2x or more what is suggested as high gas on https://etherscan.io/gastracker), but please keep an eye on gas as there are times when gas can spike, in which case you will need to speed up the tx.
+* If using a dutch auction drop mechanic, send in the tx 30 seconds before the 5 minute mark. You will want to use 2x or more what is suggested as high gas on https://etherscan.io/gastracker), but please keep an eye on gas as there are times when gas can spike, in which case you will need to speed up the tx. If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise. 
 * If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier.
 
 ## Rarities
@@ -66,7 +66,8 @@ Description: A project checklist to walk through for Curated projects.
 
 ## Finishing Steps
 
-1. Once your project is completely sold out, please reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting.
+1. Once your project is completely sold out, you may reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting. You're also more than happy to keep them up. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0%
 2. You may also remove any language from your Project Description that was specifically included to describe sales mechanics.
-3. We would also appreciate it if you could report back once your charity donations have been completed so that we can log the results.
-4. Finally, please fill out the appropriate form to add bot-support to your Discord channel for your completed project: [https://github.com/ArtBlocks/artbot/issues/new/choose](https://github.com/ArtBlocks/artbot/issues/new/choose)
+3. Report final charity donation totals to @Druid.eth
+4. Please fill out the appropriate form to add bot-support to your Discord channel for your completed project: [https://github.com/ArtBlocks/artbot/issues/new/choose](https://github.com/ArtBlocks/artbot/issues/new/choose).
+5. Last, please feel free to hang out as much or as little as you'd like in your channel going forward. If you plan to take an extended amount of time away from the community in the next month, we'd appreciate if you would communicate that you are disconnecting to your collectors in case they have any questions in the interim.
