@@ -21,7 +21,7 @@ Description: A project checklist to walk through for Factory/Playground projects
 
 1. Please see [FEATURES.md](readme/features.md) for full details on how you set your project features as an artist.
 2. The features script for your project should first be tested on the Ropsten testnet ([https://artist-staging.artblocks.io/](https://artist-staging.artblocks.io)), alongside your art script. Ensure that your features are being displayed as expected on testnet before proceeding to project deployment to mainnet.
-3. When uploading your feature script to mainnet ([https://beta.artblocks.io/](https://beta.artblocks.io)), please ensure that you are uploading the exact same features script, taking the same care that you would with your art script itself.
+3. When uploading your feature script to mainnet (https://www.artblocks.io/](https://www.artblocks.io/)), please ensure that you are uploading the exact same features script, taking the same care that you would with your art script itself.
 4. While the features script _is not_ stored on-chain like the art script is, bugs in your features script will cause meaningful disruptions for collectors trying to explore your work on a per-feature basis.
 
 ## Economics
