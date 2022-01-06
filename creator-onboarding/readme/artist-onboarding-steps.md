@@ -39,7 +39,7 @@ _Timeline: artist-dependent, but most artists spend about 1 week on this step_
 
 ## 5. Curation review
 
-Our Curation Board reviews your project and test mints and determines whether it's approved for an Art Blocks Curated release. If not, you'll be able to launch your project as a regular deployment on Art Blocks Factory. For more information about the differences between the two, please see our FAQs.
+Our Curation Board reviews your project and test mints and determines whether it's approved for an Art Blocks Curated release. If not, you'll be able to launch your project as a regular deployment on Art Blocks Factory. For more information about the differences between the two, please see our [FAQs](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/faqs).
 
 _Timeline: 7-10 days_
 
