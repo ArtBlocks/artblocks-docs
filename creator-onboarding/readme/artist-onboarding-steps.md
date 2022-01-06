@@ -15,11 +15,11 @@ _Timeline: Due to the surge in Art Blocks popularity, applications may take up t
 
 ## 2. Script test runs and project review
 
-Our creative team will ask you for an updated version of your project if available, or test the one you submitted with your initial application. We will then decide whether to move forward with a launch on Art Blocks.&#x20;
+Our Creative Team will ask you for an updated version of your project if available and will screen your application and working prototype. Based on this, we will  decide whether to move forward with a launch on Art Blocks.&#x20;
 
-If your project is selected, you'll move into the Creator Terms step. If it isn't selected, you'll receive brief feedback and be invited to apply again during our next application cycle.
+If your project is selected, you'll move into the Creator Terms step. If it is not selected, you'll receive brief feedback and be invited to apply again during our next application cycle.
 
-Note: This stage does not determine if your project will be a curated or factory project.
+Note: This stage does not determine if your project will be a Curated or Factory release.
 
 _Timeline: 1-2 weeks_
 
