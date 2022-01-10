@@ -48,11 +48,10 @@ Description: A project checklist to walk through for Factory/Playground projects
 * After your project has been scheduled, you are free to announce and promote your project on your social media. 
 
 ## Ropsten
-Once scheduled, you will have the option to make your Ropsten shell public to collectors. Prior to making your Ropsten shell public, please do the following:
+Once scheduled, you will have the option to make your Ropsten shell public to collectors. To help collectors easily differentiate Ropsten shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Ropsten public:
 1. Add [Sample Outputs] as a prefix to your project title. The formatting of your Ropsten title will be "[Sample Outputs] Project Name"
 2. Adjust your price information in Ropsten to be the same as on mainnet
-3. Adjust your max invocations in Ropsten to be the same as on mainnet
-These adjustements help collectors easily differentiate Ropsten shells from live projects and also ensure consistency in price and series size across your shells.
+3. Adjust your max invocations in Ropsten to be the same as on mainnet 
 
 ## Unpausing
 
