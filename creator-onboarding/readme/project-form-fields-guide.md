@@ -114,6 +114,11 @@ These settings will be reflected on Art Blocks and also on OpenSea once the proj
 
 # On Tokens
 
+## Refresh Token Image
+* This button will queue your token thumbnail to be refreshed. The refresh is not instantaneous and may take time to fully process.
+* Rendering tokens does take computing power, of which we have a limited bandwidth. Please feel free to refresh tokens after making updates, but note that if our rendering pipeline starts clogging up with requests, we may have to consider rate-limiting refresh requests. In summary, use this button when testing out updates, but avoid spamming or things will get jammed up. 
+* With this button, you can refresh per token. The AB Team has the power to refresh all thumbnails in a project at once and we are happy to do so for you.
+
 ## Details
 * The details page is specific to each token. On the details page, you will find the token’s features, a link to the transaction on Etherscan, and a link to the work on OpenSea. 
 
