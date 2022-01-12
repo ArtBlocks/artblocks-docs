@@ -9,7 +9,7 @@ description: >-
 
 ## 1. Application
 
-During one of our open application periods, submit a prototype of a proposed project along with your your contact information and creative history. Our team will review each submission and reach out to you to get an updated version of your working prototype when it's your turn in the queue.&#x20;
+During one of our open application periods, submit a prototype of a proposed project along with your contact information and creative history. Our team will review each submission and reach out to you to get an updated version of your working prototype when it's your turn in the queue.&#x20;
 
 _Timeline: Due to the surge in Art Blocks popularity, applications may take up to several months to process. Applications will be reviewed in the order they were submitted._
 
