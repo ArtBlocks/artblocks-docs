@@ -4,6 +4,7 @@
 
 * [Art Blocks 101 for Creators](README.md)
   * [Artist Onboarding Steps](creator-onboarding/readme/artist-onboarding-steps.md)
+  * [Project Form Fields Guide](creator-onboarding/readme/project-form-fields-guide.md)
   * [FAQs](creator-onboarding/readme/faqs.md)
   * [Art Blocks Features Script](creator-onboarding/readme/features.md)
 * [Checklist for Curated Projects](creator-onboarding/curated-checklist.md)
