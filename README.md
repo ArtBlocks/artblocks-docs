@@ -262,6 +262,17 @@ Once you've submitted your script details add your script to the "Project Script
 
 If your script is big, consider minifying it. If your script is so big that you cannot fit it in a single transaction (you're getting an error when you submit), you may need to split it up and submit each part subsequently.
 
+### Splitting
+
+Once you have a working minified version of your project, a recommended way of splitting the file in parts for upload is to use the "split" command in Unix systems (Linux, Mac), like this: 
+
+```
+split -b 10k filename.js new_filename
+```
+That will create an evenly distributed set of files with the splitted code, automatically. The maximum size you can upload to Artblocks per transaction is around 10.5KB (you can center that as -b 10500 in the split tool, since it does not take decimals)
+ 
+if you are on Windows, you can use the same command if you have git bash, or a tool like [7-Zip](https://www.7-zip.org/), which allows you to split without compression.
+
 #### Finishing Actions
 
 Once all of the necessary fields have been submitted, you can then click "Purchases Paused" to test out the minting. Once your test mints are working in the livescript view, mint 20-40.
