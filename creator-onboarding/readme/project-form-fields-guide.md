@@ -1,6 +1,6 @@
 ---
 description: >-
-  Below you'll find a guide to all form fields within testnet and mainnet.
+  Below you'll find a guide to all form fields and buttons within testnet and mainnet.
   
 ---
 
