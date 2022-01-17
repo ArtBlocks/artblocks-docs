@@ -35,7 +35,7 @@ description: A high level process-map for PBAB onboarding.
     const genArt = new ethers.Contract('<CORE CONTRACT ADDRESS>', GEN_ART_ABI, provider)
     const { paused } = await genArt.projectScriptInfo('<PROJECT ID>')
     const { invocations, maxInvocations, pricePerTokenInWei, active, currencyAddress } = await genArt.projectTokenInfo('<PROJECT ID>')
-    if (invocations >= maxInvocations || paused || !active) {
+    if (Number(invocations) >= Number(maxInvocations) || paused || !active) {
       // Disable purchase
       return
     }
