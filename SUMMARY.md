@@ -14,6 +14,7 @@
 
 * [PBAB 101](powered-by-art-blocks-pbab-onboarding/pbab-101/README.md)
   * [PBAB Partner Onboarding Steps](powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-partner-onboarding-steps.md)
+  * [PBAB OpenSea Setup](powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-opensea-setup.md)
   * [PBAB Project Launch](powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-project-launch.md)
   * [Project Shell Deployment Guide](powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells.md)
   * [FAQs](powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md)
