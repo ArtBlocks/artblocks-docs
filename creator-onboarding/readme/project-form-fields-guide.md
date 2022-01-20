@@ -26,8 +26,8 @@ description: >-
 
 ## Project description *
 * The description should summarize your practice specific to the project displayed — including inspiration, color palette influences, themes, and techniques. Your project description should include any interactions that your project has. 
-* The bio should open with a first line that encapsulates, as much as possible, what is most significant about the project.
-* The description should be between 80 and 140 words. The ideal bio is ~120 words, though a tightly written 80-word description is preferable to a longer description that includes repetition and filler sentences.
+* The description should open with a first line that encapsulates, as much as possible, what is most significant about the project.
+* The description should be between 80 and 140 words. The ideal description is ~120 words, though a tightly written 80-word description is preferable to a longer description that includes repetition and filler sentences.
 
 ## Project license *
 * Enter the copyright license here for your art (eg. NFT License 2.0, CC BY-NC 4.0, CC BY 4.0, etc)
