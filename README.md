@@ -1,5 +1,5 @@
 ---
-icon: home
+icon: star
 description: A guide on getting started as a creator with Art Blocks.
 ---
 
