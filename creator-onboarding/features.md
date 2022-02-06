@@ -1,5 +1,6 @@
 ---
 description: A guide on how to structure the features script for your Art Blocks project.
+order: 700
 ---
 
 # Art Blocks Features Script
@@ -20,7 +21,7 @@ Updating the features script or features fields for a given project will recalcu
 
 **Important Note:** All code required for calculating your features \(including any necessary helper functions\) must be defined and implemented _within_ the single top-level `calculateFeatures` function.
 
-```javascript
+```js
 /**
  * Calculate features for the given token data.
  * @param {Object} tokenData

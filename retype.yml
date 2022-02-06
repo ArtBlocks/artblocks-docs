@@ -1,0 +1,12 @@
+input: .
+output: .retype
+url: https://geoffreymcgill.github.io/artblocks-docs/
+branding:
+  title: Art Blocks
+  label: Docs
+  logo: static/squigWhiteCircle.png
+  poweredByLogo: false
+edit:
+  repo: https://github.com/geoffreymcgill/artblocks-docs
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved."

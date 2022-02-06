@@ -1,10 +1,13 @@
 ---
+icon: home
 description: A guide on getting started as a creator with Art Blocks.
 ---
 
 # Art Blocks 101 for Creators
 
-**Please Note:** the primary audience for this document is artists who have already entered the pipeline for launching a project on Art Blocks. If you are currently waiting in the applications queue for Art Blocks, this documentation will hopefully provide a helpful guide for you in terms of what to expect, but many of the steps here will not be actionable for you until you have had a project shell set up by the Art Blocks team.
+!!!
+The primary audience for this document are artists who have already entered the pipeline for launching a project on Art Blocks. If you are currently waiting in the applications queue for Art Blocks, this documentation will hopefully provide a helpful guide for you in terms of what to expect, but many of the steps here will not be actionable for you until you have had a project shell set up by the Art Blocks team.
+!!!
 
 ## Documentation
 
@@ -14,30 +17,32 @@ Each "seed", also known as a "hash string" is a hexadecimal string generated in 
 
 For example:
 
-```javascript
+```js
 "0x11ac128f8b54949c12d04102cfc01960fc496813cbc3495bf77aeed738579738"
 ```
 
 This hash will be the source of entropy or variation use to determine the output of your algorithm. When your art is rendered on Art Blocks, your script will have access to a global variable called `tokenData`. One of the first lines in your script should be to read in the hash from this variable.
 
-```javascript
+```js
 let hash = tokenData.hash
 ```
 
 Included in the `tokenData` is also the `tokenId`. The `tokenId` encodes both the project and mint.
 
-`tokenId = (projectNumber * 1000000) + mintNumber`
+```
+tokenId = (projectNumber * 1000000) + mintNumber
+```
 
 If your script needs to know the mint number or project number, it can do so like this:
 
-```javascript
+```js
 let projectNumber = Math.floor(parseInt(tokenData.tokenId) / 1000000)
 let mintNumber = parseInt(tokenData.tokenId) % 1000000
 ```
 
 When you are testing locally, this variable obviously will not be defined in your browser environment. This here is a simple function to generate valid hashes and tokenIds.
 
-```javascript
+```js
 function genTokenData(projectNum) {
   let data = {};
   let hash = "0x";
@@ -55,7 +60,7 @@ let tokenData = genTokenData(123);
 
 Art Blocks strongly recommends that all artists use an instance of the following Random class to feed all of their project's randomness.
 
-```javascript
+```js
 class Random {
   constructor() {
     this.useA = false;
@@ -115,13 +120,13 @@ The convenience methods `random_num`, `random_int`, `random_bool`, and `random_c
 
 We can get an instance of the Random class like so:
 
-```javascript
+```js
 let R = new Random()
 ```
 
 Now each time we need some randomness we can call various helper functions:
 
-```javascript
+```js
 R.random_dec()      // Random decimal [0-1)
 R.random_num(0, 10) // Random decimal [0-10)
 R.random_int(0, 10) // Random integer [0-10]
@@ -143,18 +148,20 @@ Now you have the basics here are some general principles you need to consider wh
 
 Each project can have zero or one library dependency. The approved dependencies are currently the following:
 
-* No Library at all (Vanilla JS, CSS, HTML, WebGL)
-* svg
-* p5js `v1.0.0` ([https://p5js.org/](https://p5js.org))
-* Processing `v1.4.6` ([https://processing.org/](https://processing.org))
-* a-frame `v1.2.0` ([https://aframe.io/](https://aframe.io))
-* threejs `r124` ([https://threejs.org/](https://threejs.org))
-* vox `v1.1.0-beta`
-* megavox `v1.1.0-beta`
-* regl `v2.1.0`
-* tonejs `v14.8.15` ([https://tonejs.github.io/](https://tonejs.github.io))
-* paperjs `v0.12.15` ([http://paperjs.org/](http://paperjs.org))
-* Zdog `v1.1.2` ([https://github.com/metafizzy/zdog](https://github.com/metafizzy/zdog))
+Library | Version | Source
+--- | --- | ---
+No Library at all | | Vanilla JS, CSS, HTML, WebGL
+svg | |
+p5js | `v1.0.0` | https://p5js.org
+Processing | `v1.4.6` | https://processing.org
+a-frame | `v1.2.0` | https://aframe.io
+threejs | `r124` | https://threejs.org
+vox | `v1.1.0-beta` |
+megavox | `v1.1.0-beta` |
+regl | `v2.1.0` |
+tonejs | `v14.8.15` | https://tonejs.github.io
+paperjs | `v0.12.15` | http://paperjs.org
+Zdog | `v1.1.2` | https://github.com/metafizzy/zdog
 
 Additional libraries may be added at moderator discretion, but the rule is only one external library per project.
 
@@ -168,7 +175,7 @@ The output must be dimension agnostic. Meaning it scales seamlessly to any dimen
 
 A simple way to account for this is to define a default dimension and create a multiplier to scale coordinates or sizes relative to the canvas dimensions. Below uses p5js as an example but the same principle applies regardless of the language.
 
-```javascript
+```js
 var DEFAULT_SIZE = 1000
 var WIDTH = window.innerWidth
 var HEIGHT = window.innerHeight
@@ -185,9 +192,9 @@ Before submitting your script, it's probably a good idea to test it in different
 
 Set the hash to a constant value:
 
-```javascript
+```js
 tokenData = {
-    hash: "0x11ac16678959949c12d5410212301960fc496813cbc3495bf77aeed738579738", 
+    hash: "0x11ac16678959949c12d5410212301960fc496813cbc3495bf77aeed738579738",
     tokenId: "123000456"
 }
 ```
@@ -232,7 +239,7 @@ There are many other free-to-use licenses commonly used on open source software.
 
 Once your application is approved and your script is ready, you will test it out on an [Art Blocks](https://artist-staging.artblocks.io) staging site running on one of Ethereum's test networks (Ropsten). This will make sure there aren't any bugs or errors and that if it's working on Ropsten, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
 
-Note: If you don't have "Ropsten ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: [https://faucet.dimensions.network/](https://faucet.dimensions.network).
+Note: If you don't have "Ropsten ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: https://faucet.dimensions.network/.
 
 ### Interacting with your Project
 
@@ -262,13 +269,13 @@ If your script is big, consider minifying it. If your script is so big that you 
 
 ### Splitting
 
-Once you have a working minified version of your project, a recommended way of splitting the file in parts for upload is to use the "split" command in Unix systems (Linux, Mac), like this: 
+Once you have a working minified version of your project, a recommended way of splitting the file in parts for upload is to use the "split" command in Unix systems (Linux, Mac), like this:
 
 ```
 split -b 10k filename.js new_filename
 ```
 That will create an evenly distributed set of files with the splitted code, automatically. The maximum size you can upload to Artblocks per transaction is around 10.5KB (you can center that as -b 10500 in the split tool, since it does not take decimals)
- 
+
 if you are on Windows, you can use the same command if you have git bash, or a tool like [7-Zip](https://www.7-zip.org/), which allows you to split without compression.
 
 #### Finishing Actions

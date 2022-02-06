@@ -1,5 +1,6 @@
 ---
-Description: Frequently asked questions.
+description: Frequently asked questions.
+order: 800
 ---
 
 # FAQs
@@ -17,7 +18,7 @@ After an application period ends, our creative team will begin the process of re
 
 ## What are the steps in the process and how do I know when I've completed them?
 
-Please see our Artist Onboarding Steps page for a more detailed overview of the onboarding process.&#x20;
+Please see our Artist Onboarding Steps page for a more detailed overview of the onboarding process.
 
 ## Approximately how long will each step of the process take?
 
@@ -29,7 +30,7 @@ Once your application has been reached in the queue, communication will move qui
 
 ## Who can I reach out to if I have questions?
 
-Sarah (_Discord: sross#6444_), our Artist Liaison will be your primary point of contact, along with Jeff Davis (_Discord: jeffgdavis#0102_), our CCO. You can reach them on Discord or send them an email.
+Sarah ([!badge Discord: sross#6444]), our Artist Liaison will be your primary point of contact, along with Jeff Davis ([!badge Discord: jeffgdavis#0102]), our CCO. You can reach them on Discord or send them an email.
 
 ## What are the general standards for achieving curation status? What are the criteria that differentiate curated and factory?
 
@@ -49,7 +50,7 @@ If requested, feedback from the Curation Board can be provided. The goal of this
 
 ## Who is on the curation board?
 
-Our Curation Board is made up of a diverse group of artists and people in the art space. You can read more about the Curation Board on our Medium page: [https://medium.com/the-link-art-blocks](https://medium.com/the-link-art-blocks)
+Our Curation Board is made up of a diverse group of artists and people in the art space. You can read more about the Curation Board on our Medium page: https://medium.com/the-link-art-blocks
 
 ## Are all browsers supported for AB drops? Is mobile supported?
 
@@ -85,25 +86,25 @@ No, this is not currently possible. You'll need to be signed in with your wallet
 
 ## How much money / ETH do I need to upload my project?
 
-The cost depends on the complexity of your project and how many lines of code it requires. See here for more specific information about how to budget for a drop: [https://docs.artblocks.io/creator-docs/creator-onboarding/readme#cos](https://docs.artblocks.io/creator-docs/creator-onboarding/readme#cost)
+The cost depends on the complexity of your project and how many lines of code it requires. See [here](/readme.md#cost) for more specific information about how to budget for a drop.
 
 ## What information will I need to provide about my project?
 
 If your project is selected for a drop on Art Blocks, you'll need to have the following information ready. This is typically collected near the end of the process, so you'll have time to make these decisions as you're onboarding.
 
-Would you like your Ropsten testnet project made public? Y/N&#x20;
+Would you like your Ropsten testnet project made public? Y/N
 
-\[Curated/Playground/Factory]&#x20;
-Project name:&#x20;
-Artist name:&#x20;
-Project Link: https://www.artblocks.io/project/[#] &#x20;
-Project Conversations: #factory-projects or #\[artist-name]&#x20;
-Start Date/Time: TBD with the AB team&#x20;
-Total Mints:&#x20;
-Drop Mechanic:&#x20;
-Mint Price:&#x20;
-Pricing Tiers (if DA):&#x20;
-Charity Info (for any mints sold over 0.25eth, 25% is required to be donated to charity of your choice):&#x20;
+\[Curated/Playground/Factory]
+Project name:
+Artist name:
+Project Link: https://www.artblocks.io/project/[#]
+Project Conversations: #factory-projects or #\[artist-name]
+Start Date/Time: TBD with the AB team
+Total Mints:
+Drop Mechanic:
+Mint Price:
+Pricing Tiers (if DA):
+Charity Info (for any mints sold over 0.25eth, 25% is required to be donated to charity of your choice):
 
 ## My project is uploaded and ready to go. How do I mint my first output?
 
@@ -133,11 +134,11 @@ Art Blocks takes 10% of the total primary sales and 2.5% of secondary sales.
 
 On OpenSea, the most popular secondary marketplace, artists receive 5% of all secondary sales and Art Blocks receives 2.5% of all secondary sales.
 
-On other platforms, artists can set their own secondary percentage on their project for other markets that may recognize that field. For consistency, we recommend setting your secondary market royalty to 5%. 
+On other platforms, artists can set their own secondary percentage on their project for other markets that may recognize that field. For consistency, we recommend setting your secondary market royalty to 5%.
 
 ## How does royalty distribution work?
 
-Royalty distribution varies based on the secondary marketplace. Most secondary marketplaces (Rarible, etc.) will read your royalties from your contract (the secondary market royalty field) and will send the ETH accordingly directly to you. 
+Royalty distribution varies based on the secondary marketplace. Most secondary marketplaces (Rarible, etc.) will read your royalties from your contract (the secondary market royalty field) and will send the ETH accordingly directly to you.
 
 OpenSea is the exception to this. OpenSea will collect royalties on the secondary sales directly (5%). These royalties are then transferred to Art Blocks and Art Blocks will then manually transfer those royalties to each artist. Royalty distributions will be announced in our artist channel.
 
@@ -151,7 +152,7 @@ To find a list of charities, you can ask for advice in #artist-general and check
 
 If the charity you’d like to donate to is not crypto-friendly, we recommend checking out endaoment.org. They are a 501c(3) that enables on-chain donations to any US-based 501c(3) via a Donor Advised Fund (DAF). This method can also be done fully on-chain, so the donations never touch your personal wallet.
 
-## How should I donate to charity? 
+## How should I donate to charity?
 
 Here are a few donation options:
 
@@ -163,7 +164,7 @@ To use Endaoment, go to Endaoment.org and create a fund. Then, enter ndao.eth in
 
 **2)** Create a second wallet
 
-If you’d like to create a second wallet separate from your personal wallet, you can enter the wallet's address in the additional payee field to collect the total donation amount you intend to donate. 
+If you’d like to create a second wallet separate from your personal wallet, you can enter the wallet's address in the additional payee field to collect the total donation amount you intend to donate.
 
 **3)** Receive funds in your primary wallet
 
@@ -171,7 +172,7 @@ If you’d like to receive all funds from your project’s sale in your primary 
 
 ## How do I remove my charitable giving information from the additional payee field mid-Dutch Auction?
 
-If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier. These fields cannot be blank once the dutch auction has begun. 
+If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier. These fields cannot be blank once the dutch auction has begun.
 
 ## Where can I learn more about best practices for security, including hardware wallets?
 
@@ -203,12 +204,12 @@ We require artists to take a 2 month cool off period between drops in the Playgr
 
 ## Will I have access to my testnet shell during my cooldown period?
 
-Yes you will and we encourage you to use your testnet shell during your cooldown period. We kindly ask that you wait to ask for thumbnail refreshes if needed until after your cooldown period to limit noise on our end. 
+Yes you will and we encourage you to use your testnet shell during your cooldown period. We kindly ask that you wait to ask for thumbnail refreshes if needed until after your cooldown period to limit noise on our end.
 
 ## What is the process upon returning to Art Blocks as a Factory artist?
 
-As a next step in your Art Blocks journey, you will have a two month cooldown period before being eligible to submit another project. Your two month cooldown starts the day that your project sells out (i.e., when minting is 100% completed). After this period, you will be eligible to submit your next project to Art Blocks. We ask that you keep track of this timing on your end and please reach back out to us if you’d like to submit a project again after this time. You will continue to have access to your testnet shell during this time, so feel free to use that during your cooldown period. 
+As a next step in your Art Blocks journey, you will have a two month cooldown period before being eligible to submit another project. Your two month cooldown starts the day that your project sells out (i.e., when minting is 100% completed). After this period, you will be eligible to submit your next project to Art Blocks. We ask that you keep track of this timing on your end and please reach back out to us if you’d like to submit a project again after this time. You will continue to have access to your testnet shell during this time, so feel free to use that during your cooldown period.
 
-Should you return, you'll submit a brief form with information about your proposed project. Once filled out, your project will be screened internally by our team via your testnet shell. Screenings occur weekly, so there will not be an extensive waiting period here. In our review, we will focus on overall aesthetics, variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually. Based on this review, you will either move forward from there or we will ask that you take a one month development period before returning with a new project for screening. 
+Should you return, you'll submit a brief form with information about your proposed project. Once filled out, your project will be screened internally by our team via your testnet shell. Screenings occur weekly, so there will not be an extensive waiting period here. In our review, we will focus on overall aesthetics, variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually. Based on this review, you will either move forward from there or we will ask that you take a one month development period before returning with a new project for screening.
 
-This will be in addition to the curation review. This screening will be done by members of Art Blocks' team. Following that screening, accepted projects will then be viewed by our Curation Board as well. Right now this screening step takes place for new artists and is part of our application onboarding process, so the big change here is just that returning Factory artists will be starting at that step rather than fast-tracking to the Curation Review. This initial screening will also be an opportunity for Art Blocks' team to provide more direct feedback on newly proposed projects. 
+This will be in addition to the curation review. This screening will be done by members of Art Blocks' team. Following that screening, accepted projects will then be viewed by our Curation Board as well. Right now this screening step takes place for new artists and is part of our application onboarding process, so the big change here is just that returning Factory artists will be starting at that step rather than fast-tracking to the Curation Review. This initial screening will also be an opportunity for Art Blocks' team to provide more direct feedback on newly proposed projects.
