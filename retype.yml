@@ -1,7 +1,6 @@
 input: .
 output: .retype
-url: https://geoffreymcgill.github.io/
-base: artblocks-docs
+url: https://geoffreymcgill.github.io/artblocks-docs/
 
 branding:
   title: Art Blocks
