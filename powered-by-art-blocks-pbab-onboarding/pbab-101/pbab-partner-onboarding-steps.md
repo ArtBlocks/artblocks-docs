@@ -1,6 +1,5 @@
 ---
 order: 1000
-# route: /creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-partner-onboarding-steps/
 ---
 # PBAB Partner Onboarding Steps
 

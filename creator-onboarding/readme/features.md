@@ -1,6 +1,5 @@
 ---
 order: 700
-# route: /creator-docs/creator-onboarding/readme/features/
 ---
 # Art Blocks Features Script
 

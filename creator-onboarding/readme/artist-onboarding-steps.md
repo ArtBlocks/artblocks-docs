@@ -1,6 +1,5 @@
 ---
 order: 1000
-# route: /creator-docs/creator-onboarding/readme/artist-onboarding-steps/
 ---
 # Artist Onboarding Steps
 

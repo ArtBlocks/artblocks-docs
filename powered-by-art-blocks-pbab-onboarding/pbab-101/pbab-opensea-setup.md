@@ -1,6 +1,5 @@
 ---
 order: 900
-# route: /creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-opensea-setup/
 ---
 # PBAB OpenSea Setup
 
