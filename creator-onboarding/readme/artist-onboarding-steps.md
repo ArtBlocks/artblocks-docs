@@ -1,21 +1,18 @@
 ---
-description: >-
-  Below you'll find an overview of each step of our onboarding process as well
-  as an **estimated** time required for each step.
 order: 1000
 ---
 
 # Artist Onboarding Steps
 
-!!!info Timeline
-Due to the surge in Art Blocks popularity, applications may take up to several months to process. Applications will be reviewed in the order they were submitted.
-!!!
+Below you'll find an overview of each step of our onboarding process as well as an **estimated** time required for each step.
 
 ## 1. Application
 
 During one of our open application periods, submit a prototype of a proposed project along with your contact information and creative history. Our team will review each submission and reach out to you to get an updated version of your working prototype when it's your turn in the queue.
 
-[!badge Timeline: Up to several months]
+!!!info Timeline
+Due to the surge in Art Blocks popularity, applications may take up to several months to process. Applications will be reviewed in the order they were submitted.
+!!!
 
 ## 2. Script test runs and project review
 

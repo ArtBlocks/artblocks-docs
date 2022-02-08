@@ -1,10 +1,9 @@
 ---
-icon: check-circle
-order: 800
-description: A project checklist to walk through for Factory/Playground projects.
+order: -100
+description: A project checklist to walk through for Curated projects.
 ---
 
-# Checklist for Factory/Playground Projects
+# Checklist for Curated Projects
 
 !!!danger
 Before proceeding to mainnet upload, please verify that your script behaves as expected across all major web browsers (e.g. Chrome, Firefox, Safari, etc.)
@@ -32,13 +31,13 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 
 1. Consider the overall economics of your project for a successful release.
 2. Artists can only have one active project at a time.
-3. As a note, we require artists to take a 2 month cooldown period between Playground and Factory drops. The cooldown period begins when your project sells out (i.e. when minting is 100% complete).
+3. As a note, we require artists to take a 6 month cooldown period between considerations for Curated projects. There is also a required 2 month cooldown period between Playground and Factory drops. The cooldown period begins when your project sells out (i.e. when minting is 100% complete).
 
 ## Charity Component
 
 * To maintain our commitment to charitable giving, we ask all artists to donate 25% of all sales above 0.25 ETH to a charity of your choice. Once the price drops below 0.25 ETH, the charity component is optional. If this applies to your works, please determine your charity of choice before mint #0.
 * To whom and how you donate is up to you. If you are a single artist, you may use the additional payee field to manage on-chain donations. All revenue can also be routed to a single wallet and donated after your drop. We highly recommend consulting with a tax professional to understand your local tax liability, especially if you plan to personally receive all funds before donating.
-* To find a list of charities that accept crypto donations, you can ask for advice in [!badge #artist-general] and check the pinned messages for a charity guide.
+* To find a list of charities that accept crypto donations, you can ask for advice in [!label #artist-general] and check the pinned messages for a charity guide.
 
 ## Mint #0
 
@@ -48,7 +47,9 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 
 ## Scheduling
 
-* Once mint #0 and the features script are in place, Art Blocks will work with you to schedule/announce your release.
+* Once mint #0 and the features script are in place, Art Blocks will work with you to schedule/announce your curated release.
+* Curated releases will include an artist feature with a Q\&A to be gathered following scheduling.
+* Curated artists will also have an artist channel created in Discord. To pin messages in your artist channel, you must enable two-factor authentication within User Settings > My Account in Discord.
 * After your project has been scheduled, you are free to announce and promote your project on your social media.
 
 ## Ropsten
@@ -78,4 +79,5 @@ Once scheduled, you will have the option to make your Ropsten shell public to co
 1. Once your project is completely sold out, you may reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting. You're also more than happy to keep them up. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0%
 2. You may also remove any language from your Project Description that was specifically included to describe sales mechanics.
 3. Report final charity donation totals to @Druid.eth
-4. [For Playground projects only] Please fill out the appropriate form to add bot-support to your Discord channel for your completed project: https://github.com/ArtBlocks/artbot/issues/new/choose.
+4. Please fill out the appropriate form to add bot-support to your Discord channel for your completed project: https://github.com/ArtBlocks/artbot/issues/new/choose.
+5. Last, please feel free to hang out as much or as little as you'd like in your channel going forward. If you plan to take an extended amount of time away from the community in the next month, we'd appreciate if you would communicate that you are disconnecting to your collectors in case they have any questions in the interim.

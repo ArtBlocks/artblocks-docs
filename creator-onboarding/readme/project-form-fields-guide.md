@@ -79,7 +79,7 @@ This is your total project series size.
 
 If you are an artist, your project base uri field should be: https://api.artblocks.io/token/.
 
-If you are Powered By Art Blocks (PBAB), see step 8 [here](../powered-by-art-blocks-pbab-onboarding/adding-new-project-shells.md) for guidance.
+If you are Powered By Art Blocks (PBAB), see step 8 [here](../../powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells.md) for guidance.
 
 ---
 
