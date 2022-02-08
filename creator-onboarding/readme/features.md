@@ -1,9 +1,9 @@
 ---
-description: A guide on how to structure the features script for your Art Blocks project.
 order: 700
 ---
-
 # Art Blocks Features Script
+
+A guide on how to structure the features script for your Art Blocks project.
 
 ## Features Overview
 

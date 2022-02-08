@@ -1,7 +1,6 @@
 ---
 order: 1000
 ---
-
 # Artist Onboarding Steps
 
 Below you'll find an overview of each step of our onboarding process as well as an **estimated** time required for each step.

@@ -1,7 +1,6 @@
----
-description: A high level process-map for PBAB onboarding.
----
 # PBAB 101
+
+A high level process-map for PBAB onboarding.
 
 1. Complete and sign copies of the formal PBAB service and setup agreements, which should be provided to you by Art Blocks after a business engagement has been agreed upon.
 2. Provide the following information to Art Blocks for your PBAB project:

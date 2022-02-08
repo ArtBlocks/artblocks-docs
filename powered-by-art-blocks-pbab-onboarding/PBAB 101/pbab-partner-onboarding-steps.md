@@ -1,11 +1,9 @@
 ---
 order: 1000
-description: >-
-  A high-level overview of the steps required to onboard as a PBAB partner and
-  launch your project.
 ---
-
 # PBAB Partner Onboarding Steps
+
+A high-level overview of the steps required to onboard as a PBAB partner and launch your project.
 
 ## 1. Initial outreach
 

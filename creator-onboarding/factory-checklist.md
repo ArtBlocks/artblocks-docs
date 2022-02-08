@@ -2,7 +2,6 @@
 order: -200
 description: A project checklist to walk through for Factory/Playground projects.
 ---
-
 # Checklist for Factory/Playground Projects
 
 !!!danger

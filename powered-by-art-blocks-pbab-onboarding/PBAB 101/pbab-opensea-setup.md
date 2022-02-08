@@ -1,9 +1,9 @@
 ---
 order: 900
-description: Setting up the OpenSea storefront for your Powered by Art Blocks project.
 ---
-
 # PBAB OpenSea Setup
+
+Setting up the OpenSea storefront for your Powered by Art Blocks project.
 
 ## OpenSea Storefront Ownership Transfer
 

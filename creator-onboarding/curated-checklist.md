@@ -2,7 +2,6 @@
 order: -100
 description: A project checklist to walk through for Curated projects.
 ---
-
 # Checklist for Curated Projects
 
 !!!danger

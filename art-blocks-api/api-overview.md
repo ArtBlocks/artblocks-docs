@@ -1,8 +1,6 @@
----
-description: An overview of the current Art Blocks APIs.
----
-
 # API Overview
+
+An overview of the current Art Blocks APIs.
 
 !!!
 We are currently in the process of working on finalizing a more comprehensive project-oriented API which we plan to release in the first half of 2022. This API will encapsulate both onchain data (the information readily available via the Art Blocks public subgraph on The Graph) and additional off-chain data (e.g., all available features for a given project)

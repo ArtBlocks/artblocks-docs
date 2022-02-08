@@ -1,9 +1,11 @@
 ---
 order: 800
-description: A high level overview of launching new projects on a new PBAB contract.
 ---
-
 # PBAB Project Launch
+
+A high level overview of launching new projects on a new PBAB contract.
+
+---
 
 After having deployed a PBAB contract, you can now create projects on your contract.
 

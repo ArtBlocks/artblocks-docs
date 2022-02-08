@@ -1,9 +1,9 @@
 ---
 order: 700
-description: An overview of how to deploy a new project on your custom PBAB contract.
 ---
-
 # Project Shell Deployment Guide
+
+An overview of how to deploy a new project on your custom PBAB contract.
 
 1. Collect 3 pieces of information for the to-be-deployed project on your PBAB contract.
    1. The project title (e.g. "Fun Lines")

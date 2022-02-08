@@ -1,9 +1,9 @@
 ---
-description: >-
-  Below you'll find a guide to all form fields and buttons within testnet and mainnet.
 order: 900
 ---
 # Project Form Fields Guide
+
+Below you'll find a guide to all form fields and buttons within testnet and mainnet.
 
 ## Project Page:
 

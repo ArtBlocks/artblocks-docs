@@ -1,5 +1,6 @@
 ---
 order: 800
+description: Frequently asked questions.
 ---
 # FAQs
 
