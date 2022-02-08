@@ -152,15 +152,15 @@ Library | Version | Source
 --- | --- | ---
 No Library at all | | Vanilla JS, CSS, HTML, WebGL
 svg | |
-p5js | `v1.0.0` | https://p5js.org
-Processing | `v1.4.6` | https://processing.org
+p5.js | `v1.0.0` | https://p5js.org
+processing.js | `v1.4.6` | https://processing.org
 a-frame | `v1.2.0` | https://aframe.io
-threejs | `r124` | https://threejs.org
+three.js | `r124` | https://threejs.org
 vox | `v1.1.0-beta` |
 megavox | `v1.1.0-beta` |
 regl | `v2.1.0` |
-tonejs | `v14.8.15` | https://tonejs.github.io
-paperjs | `v0.12.15` | http://paperjs.org
+tone.js | `v14.8.15` | https://tonejs.github.io
+paper.js | `v0.12.15` | http://paperjs.org
 Zdog | `v1.1.2` | https://github.com/metafizzy/zdog
 
 Additional libraries may be added at moderator discretion, but the rule is only one external library per project.
