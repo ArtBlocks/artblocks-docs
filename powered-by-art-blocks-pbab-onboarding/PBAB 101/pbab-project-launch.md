@@ -1,5 +1,6 @@
 ---
 order: 800
+route: /creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-project-launch/
 ---
 # PBAB Project Launch
 

@@ -1,5 +1,6 @@
 ---
 order: 700
+route: /creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells/
 ---
 # Project Shell Deployment Guide
 
