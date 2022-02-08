@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="turbo-root" content="/creator-docs">
+    <meta name="turbo-cache-control" content="no-cache">
+
+    <!-- Primary Meta Tags -->
+    <title>Project Form Fields Guide</title>
+    <meta name="title" content="Project Form Fields Guide">
+    <meta name="description" content="Below you'll find a guide to all form fields and buttons within testnet and mainnet." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/">
+    <meta property="og:title" content="Project Form Fields Guide">
+    <meta property="og:description" content="Below you'll find a guide to all form fields and buttons within testnet and mainnet.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/">
+    <meta property="twitter:title" content="Project Form Fields Guide">
+    <meta property="twitter:description" content="Below you'll find a guide to all form fields and buttons within testnet and mainnet.">
+    
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("/creator-docs/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="/creator-docs/resources/css/retype.css?v=1.11.2.697604104084" rel="stylesheet" data-turbo-track="reload" />
+
+    <script type="text/javascript" src="/creator-docs/resources/js/config.js?v=1.11.2.697604104084" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/creator-docs/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
+    <script id="lunr-js" type="text/javascript" src="/creator-docs/resources/js/lunr.js?v=1.11.2.697604104084" defer></script>
+</head>
+    <body>
+        <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+    <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+
+    <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+    <div class="container relative flex items-center justify-between flex-grow pr-6 md:justify-start">
+        <!-- Mobile menu button skeleton -->
+        <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center flex-shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+        <div v-cloak id="docs-sidebar-toggle"></div>
+
+        <!-- Logo -->
+        <div class="flex items-center justify-between h-full py-2 md:w-75">
+            <div class="flex items-center px-2 md:px-6">
+                <a id="docs-site-logo" href="/creator-docs/" class="flex items-center leading-snug text-2xl">
+                    <span class="w-10 mr-2 flex-grow-0 flex-shrink-0 overflow-hidden">
+                        <img class="max-h-10 dark:hidden md:inline-block" src="/creator-docs/static/squigwhitecircle.png">
+                        <img class="max-h-10 hidden dark:inline-block" src="/creator-docs/static/squigwhitecircle.png">
+                    </span>
+                    <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Art Blocks</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
+            </div>
+
+            <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+        </div>
+
+        <div class="flex justify-between md:flex-grow">
+            <!-- Top Nav -->
+            <nav class="hidden md:flex">
+    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://artblocks.io/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <path fill-rule="evenodd" d="M11.03 2.59a1.5 1.5 0 011.94 0l7.5 6.363a1.5 1.5 0 01.53 1.144V19.5a1.5 1.5 0 01-1.5 1.5h-5.75a.75.75 0 01-.75-.75V14h-2v6.25a.75.75 0 01-.75.75H4.5A1.5 1.5 0 013 19.5v-9.403c0-.44.194-.859.53-1.144l7.5-6.363zM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v6.25h5v-9.403L12 3.734z"/>
+                    </g>
+                </svg>
+                <span>Art Blocks</span>
+            </a>
+        </li>
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/creator-docs/creator-onboarding/readme/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 2.5a.5.5 0 00-.5.5v18a.5.5 0 00.5.5h14a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5zm10 0v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5zM3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H5a2 2 0 01-2-2V3z"/>
+                    </g>
+                </svg>
+                <span>Docs</span>
+            </a>
+        </li>
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://artblocks.wiki/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <path fill-rule="evenodd" d="M0 3.75A.75.75 0 01.75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.496 4.496 0 0115.75 3h7.5a.75.75 0 01.75.75v15.063a.75.75 0 01-.755.75l-7.682-.052a3 3 0 00-2.142.878l-.89.891a.75.75 0 01-1.061 0l-.902-.901a3 3 0 00-2.121-.879H.75a.75.75 0 01-.75-.75v-15zm11.247 3.747a3 3 0 00-3-2.997H1.5V18h6.947a4.5 4.5 0 012.803.98l-.003-11.483zm1.503 11.485V7.5a3 3 0 013-3h6.75v13.558l-6.927-.047a4.5 4.5 0 00-2.823.971z"/>
+                    </g>
+                </svg>
+                <span>Wiki</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+            <!-- Header Right Skeleton -->
+            <div v-cloak class="flex justify-end flex-grow skeleton">
+
+                <!-- Search input mock -->
+                <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                    <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                    </div>
+
+                    <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
+                </div>
+
+                <!-- Mobile search button mock -->
+                <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                </div>
+
+                <!-- Dark mode switch placehokder -->
+                <div class="w-10 h-10 lg:ml-2"></div>
+
+                <!-- History button mock -->
+                <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                </div>
+            </div>
+
+            <div v-cloak class="flex items-center justify-end flex-grow">
+                <div id="docs-mobile-search-button"></div>
+                <doc-search-desktop></doc-search-desktop>
+
+                <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                <doc-history></doc-history>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+<div v-cloak class="fixed flex flex-col flex-shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+
+    <!-- Render this div, if config.showSidebarFilter is `true` -->
+    <div class="flex items-center h-16 px-6">
+        <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+    </div>
+
+    <div class="pl-6 mb-4 mt-1">
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+    </div>
+
+
+    <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
+        <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+    </div>
+</div>
+
+<!-- Sidebar component -->
+<doc-sidebar v-cloak>
+    <template #sidebar-footer>
+        <div
+            class="flex-shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650"
+        >
+
+            <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center">
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://artblocks.io/">Art Blocks</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/readme.md">Docs</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://artblocks.wiki/">Wiki</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+        </div>
+    </template>
+</doc-sidebar>
+
+
+        <div class="flex-grow min-w-0 dark:bg-dark-850">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+            <div class="flex">
+    <div class="flex-grow min-w-0 px-6 md:px-16">
+        <main class="relative pt-6 pb-16">
+            <div class="docs-markdown" id="docs-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="docs-sidebar-right-toggle"></div>
+               
+                <!-- Page content  -->
+<doc-anchor-target id="project-form-fields-guide" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-form-fields-guide">#</doc-anchor-trigger>
+        <span>Project Form Fields Guide</span>
+    </h1>
+</doc-anchor-target>
+<p>Below you&#x27;ll find a guide to all form fields and buttons within testnet and mainnet.</p>
+<doc-anchor-target id="project-page">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-page">#</doc-anchor-trigger>
+        <span>Project Page:</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="purchases-paused">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#purchases-paused">#</doc-anchor-trigger>
+        <span>Purchases Paused</span>
+    </h3>
+</doc-anchor-target>
+<p>The Purchases Paused button can be used to mint on both the artist staging platform and mainnet without unpausing your project. We suggest using this method to mint token #0 and mints on testnet to avoid any accidental early mints from other collectors.</p>
+<doc-anchor-target id="edit-project">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#edit-project">#</doc-anchor-trigger>
+        <span>Edit Project</span>
+    </h3>
+</doc-anchor-target>
+<p>The Edit Project button will lead to the back-end of your shell where you will set up your project.</p>
+<hr />
+<doc-anchor-target id="project">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project">#</doc-anchor-trigger>
+        <span>Project:</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="project-name">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-name">#</doc-anchor-trigger>
+        <span>Project name*</span>
+    </h3>
+</doc-anchor-target>
+<p>This is the public name of your project.</p>
+<doc-anchor-target id="artist-name">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#artist-name">#</doc-anchor-trigger>
+        <span>Artist name*</span>
+    </h3>
+</doc-anchor-target>
+<p>This is how your name will appear on Art Blocks. What you choose to enter here is up to your personal preference.</p>
+<doc-anchor-target id="project-website">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-website">#</doc-anchor-trigger>
+        <span>Project website</span>
+    </h3>
+</doc-anchor-target>
+<p>This field is optional. The link entered in your project website field should lead to a place that exhibits more about your presented project or your background as an artist. This can link to a page that is specific to your project, your personal website, your instagram, your twitter, your github, or something else.</p>
+<p>Make sure to enter a fully defined website link, including the <code v-pre>https://</code></p>
+<doc-anchor-target id="project-description">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-description">#</doc-anchor-trigger>
+        <span>Project description*</span>
+    </h3>
+</doc-anchor-target>
+<p>The description should summarize your practice specific to the project displayed — including inspiration, color palette influences, themes, and techniques. Your project description should include any interactions that your project has.</p>
+<p>The description should open with a first line that encapsulates, as much as possible, what is most significant about the project.</p>
+<p>The description should be between 80 and 140 words. The ideal description is ~120 words, though a tightly written 80-word description is preferable to a longer description that includes repetition and filler sentences.</p>
+<doc-anchor-target id="project-license">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-license">#</doc-anchor-trigger>
+        <span>Project license*</span>
+    </h3>
+</doc-anchor-target>
+<p>Enter the copyright license here for your art (eg. NFT License 2.0, CC BY-NC 4.0, CC BY 4.0, etc)</p>
+<p>Art Blocks recommends always selecting a license that aligns with your values as a creator.</p>
+<hr />
+<doc-anchor-target id="token">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#token">#</doc-anchor-trigger>
+        <span>Token:</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="price-per-token-in-eth-or-erc-20-equivalent">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#price-per-token-in-eth-or-erc-20-equivalent">#</doc-anchor-trigger>
+        <span>Price per token in eth or ERC-20 equivalent*</span>
+    </h3>
+</doc-anchor-target>
+<p>If you are using a dutch auction sales mechanic, this should be your resting price as you are creating your shell. If the price is fixed, this will be your project’s fixed price.</p>
+<p>In advance of your project launch, you will adjust this field to your dutch auction starting price and will submit price changes here every 5 minutes to manually adjust your project’s price.</p>
+<doc-anchor-target id="drop-mechanic-description">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#drop-mechanic-description">#</doc-anchor-trigger>
+        <span>Drop mechanic description</span>
+    </h3>
+</doc-anchor-target>
+<p>Mention if your project will be using a Dutch Auction sales mechanic or will be fixed price. If Dutch Auction, list out your price tiers. Your sales mechanic description should also include your charity choice and donation amount. For any mints sold over 0.25eth, 25% is required to be donated to a charity of your choice.</p>
+<doc-anchor-target id="currency-symbol">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#currency-symbol">#</doc-anchor-trigger>
+        <span>Currency symbol*</span>
+    </h3>
+</doc-anchor-target>
+<p>This will likely be ETH.</p>
+<p>Alternatively, you may specify any ERC20-compliant token here. If you choose to do so, please give Sarah/the Art Blocks Team a heads up. If you are using a custom currency, enter the symbol for your currency here.</p>
+<doc-anchor-target id="currency-address">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#currency-address">#</doc-anchor-trigger>
+        <span>Currency address</span>
+    </h3>
+</doc-anchor-target>
+<p>If you are accepting ETH as payment, this field should be blank. This field should only be set if you are accepting payment from your project in some non-ETH ERC20- compliant token.</p>
+<doc-anchor-target id="maximum-invocations">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#maximum-invocations">#</doc-anchor-trigger>
+        <span>Maximum invocations*</span>
+    </h3>
+</doc-anchor-target>
+<p>This is your total project series size.</p>
+<doc-anchor-target id="base-uri">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#base-uri">#</doc-anchor-trigger>
+        <span>Base uri*</span>
+    </h3>
+</doc-anchor-target>
+<p>If you are an artist, your project base uri field should be: <a href="https://api.artblocks.io/token/">https://api.artblocks.io/token/</a>.</p>
+<p>If you are Powered By Art Blocks (PBAB), see step 8 <a href="../../powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells.md">here</a> for guidance.</p>
+<hr />
+<doc-anchor-target id="script">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#script">#</doc-anchor-trigger>
+        <span>Script:</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="script-type">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#script-type">#</doc-anchor-trigger>
+        <span>Script type*</span>
+    </h3>
+</doc-anchor-target>
+<p>Select your script type and the version number of that dependency from the drop down menu provided.</p>
+<doc-anchor-target id="aspect-ratio-width--height">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#aspect-ratio-width--height">#</doc-anchor-trigger>
+        <span>Aspect ratio (width / height)*</span>
+    </h3>
+</doc-anchor-target>
+<p>Your project’s outputs must be dimension agnostic, meaning it scales seamlessly to any window size. See more on this <a href="/creator-docs/creator-onboarding/readme/">here</a>. This field is used to set the aspect ratio for image renders, but does not have any impact on an output’s live view.</p>
+<p>While you can control the aspect ratio, you will have no control over the dimensions of the browser someone else might be using.</p>
+<p>Your aspect ratio should be a single number. This will be your token’s width divided by height. For example, if your tokens are square, your aspect ratio should be 1.</p>
+<doc-anchor-target id="render-delay">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#render-delay">#</doc-anchor-trigger>
+        <span>Render delay*</span>
+    </h3>
+</doc-anchor-target>
+<p>If your piece takes a certain amount of time to fully render, you can type in the render delay to let the server know when to render your output’s thumbnails. This render time will be in milliseconds.</p>
+<doc-anchor-target id="display-static-toggle">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#display-static-toggle">#</doc-anchor-trigger>
+        <span>Display static (toggle)</span>
+    </h3>
+</doc-anchor-target>
+<p>If red, then the project’s primary view will be dynamic, if blue the project’s primary view will be static.
+These settings will be reflected on Art Blocks and also on OpenSea once the project is live.</p>
+<p>If toggled blue, Art Blocks will display status as well which will improve performance if the piece is static and takes a long time to render.</p>
+<doc-anchor-target id="project-scripts">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-scripts">#</doc-anchor-trigger>
+        <span>Project scripts*</span>
+    </h3>
+</doc-anchor-target>
+<p>Here you will upload your project’s script. Your features script should be separate from your project script.</p>
+<p>Remember, tokenData.hash is a global variable in the environment this script will live in, so you do not need to define tokenData in your script, just expect your script will have access to it.</p>
+<p>If your script is big, consider minifying it. There are no limits for total script length. That said, scripts that are larger than 10 kilobytes will need to be broken up into segments of 10kb. Segments can be added using the plus symbol (+) when uploading a script. Be aware that you will have to pay in transaction gas fees proportional to the size of script upload you are performing.</p>
+<doc-anchor-target id="features">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
+        <span>Features</span>
+    </h3>
+</doc-anchor-target>
+<p>In order for filtering and rarity (% occurrence of different features) to be accessible via the Art Blocks website, the feature fields must be added in the artist interface UI on the Art Blocks website.</p>
+<p>There are two types of feature fields: enum and number:</p>
+<p>For enum fields, values should be outputted as strings in your features scripts. These should be entered as comma delimited strings with no quotation marks.</p>
+<p>For number fields, the step size set in the feature fields is used for the step size of the slider in the filters. This step size is set in the feature fields UI, not in the script, and should be on a per field basis.</p>
+<p>If there are only a few specific number values expected to be output, an artist might want to use an enum field and output the enumerated possible numeric values as strings (e.g. if the slider UI would not be the best way to navigate these features).</p>
+<doc-anchor-target id="feature-script">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#feature-script">#</doc-anchor-trigger>
+        <span>Feature script</span>
+    </h3>
+</doc-anchor-target>
+<p>All code required for calculating your features (including any necessary helper functions) must be defined and implemented within the single top-level <code v-pre>calculateFeatures</code> function.</p>
+<p>For many artists, the process for writing your features script will likely entail starting with your project script, copying it into the <code v-pre>calculateFeatures</code> interface/shell found <a href="../features/#features-script-interface">here</a>, and then trimming it down to remove all library (e.g. p5js) references and draw functionality and instead to build the relative key-value object map for your features.</p>
+<hr />
+<doc-anchor-target id="payout">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#payout">#</doc-anchor-trigger>
+        <span>Payout:</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="additional-payee-address">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#additional-payee-address">#</doc-anchor-trigger>
+        <span>Additional payee address</span>
+    </h3>
+</doc-anchor-target>
+<p>Projects with multiple artists can use the additional payee address field to split project payments between multiple wallets. This option is limited to projects with two artists.</p>
+<p>When a project only has one artist, the additional payee field is commonly used to manage on-chain charitable donations. The charity’s wallet can be entered in the additional payee field and the percentage entered in the additional payee percentage field will then be directly transferred to the charity as sales are made.</p>
+<doc-anchor-target id="additional-payee-percentage-percentage-allocated-to-additional-payee-address">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#additional-payee-percentage-percentage-allocated-to-additional-payee-address">#</doc-anchor-trigger>
+        <span>Additional payee percentage: percentage allocated to additional payee address</span>
+    </h3>
+</doc-anchor-target>
+<p>This is the percentage that should be allocated to the additional payee address.</p>
+<doc-anchor-target id="secondary-market-royalty">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#secondary-market-royalty">#</doc-anchor-trigger>
+        <span>Secondary market royalty</span>
+    </h3>
+</doc-anchor-target>
+<p>Secondary marketplaces can choose if they’d like to honor the secondary market royalty amount. OpenSea does not honor this field. On OpenSea, artists receive 5% of all secondary sales. Because of this, for consistency, we recommend setting your secondary market royalty to 5%.</p>
+<p>The royalty field should be entered as a number and does not require a % symbol.</p>
+<p>To learn more about royalty distributions, see <a href="../faqs/#how-does-royalty-distribution-work">here</a>.</p>
+<hr />
+<doc-anchor-target id="danger">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#danger">#</doc-anchor-trigger>
+        <span>Danger:</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="artist-address">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#artist-address">#</doc-anchor-trigger>
+        <span>Artist address*</span>
+    </h3>
+</doc-anchor-target>
+<p>This will be the wallet address that you provide to us when setting up your shell. Should you need to transfer ownership, we cannot whitelist multiple wallets. Only the address entered in the artist address field will have access to the back-end of your project.</p>
+<p>This is the address that will be used for payout.</p>
+<doc-anchor-target id="unpause">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unpause">#</doc-anchor-trigger>
+        <span>Unpause</span>
+    </h3>
+</doc-anchor-target>
+<p>When it is time for your project to go live, you will press the Unpause button in your mainnet shell. Once the transaction clears, your project will be live for minting.</p>
+<hr />
+<doc-anchor-target id="on-tokens">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#on-tokens">#</doc-anchor-trigger>
+        <span>On Tokens</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="refresh-token-image">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#refresh-token-image">#</doc-anchor-trigger>
+        <span>Refresh Token Image</span>
+    </h3>
+</doc-anchor-target>
+<p>This button will queue your token thumbnail to be refreshed. The refresh is not instantaneous and may take time to fully process.</p>
+<p>Rendering tokens does take computing power, of which we have a limited bandwidth. Please feel free to refresh tokens after making updates, but note that if our rendering pipeline starts clogging up with requests, we may have to consider rate-limiting refresh requests. In summary, use this button when testing out updates, but avoid spamming or things will get jammed up.</p>
+<p>With this button, you can refresh per token. The AB Team has the power to refresh all thumbnails in a project at once and we are happy to do so for you.</p>
+<doc-anchor-target id="details">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#details">#</doc-anchor-trigger>
+        <span>Details</span>
+    </h3>
+</doc-anchor-target>
+<p>The details page is specific to each token. On the details page, you will find the token’s features, a link to the transaction on Etherscan, and a link to the work on OpenSea.</p>
+<doc-anchor-target id="image">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#image">#</doc-anchor-trigger>
+        <span>Image</span>
+    </h3>
+</doc-anchor-target>
+<p>The image button will generate a PNG of the token’s thumbnail.</p>
+<doc-anchor-target id="live">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#live">#</doc-anchor-trigger>
+        <span>Live</span>
+    </h3>
+</doc-anchor-target>
+<p>As a note, the live generator view will give a bad request error until the project is public. Once a project is public, this link will function. While a project is private, live views can be viewed on the details section of the individual token.</p>
+
+
+
+
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results />
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between mt-14">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/geoffreymcgill/artblocks-docs/blob/main/creator-onboarding/readme/project-form-fields-guide.md" target="_blank" rel="noopener">
+        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        <span>Edit this page</span>
+    </a>
+
+    <!--<p class="my-2.5 text-gray-500 dark:text-dark-350 text-sm">Last updated on <strong>2021-03-14</strong> by <strong>Geoffrey McGill</strong></p>-->
+</div>
+
+<nav class="flex mt-14">
+    <div class="w-1/2">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/creator-onboarding/readme/artist-onboarding-steps/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+            <span>
+                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                <span class="block mt-1">Artist Onboarding Steps</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="w-1/2">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/creator-onboarding/readme/faqs/">
+            <span>
+                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                <span class="block mt-1">FAQs</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        </a>
+    </div>
+</nav>
+
+
+        </main>
+
+        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between">
+    <div>
+        <ul class="flex flex-wrap items-center text-sm">
+</ul>
+
+    </div>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2022. All rights reserved.</p>
+</div>
+</footer>
+
+        </div>
+    </div>
+    
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 transform translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:flex-shrink-0 lg:pt-6 lg:transform-none lg:w-56 lg:z-0 md:w-72 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+        </div>
+    </div>
+    
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+        <div id="docs-overlay-target"></div>
+
+        <script>window.__DOCS__ = { "title": "Project Form Fields Guide", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    </body>
+</html>

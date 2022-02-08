@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="turbo-root" content="/creator-docs">
+    <meta name="turbo-cache-control" content="no-cache">
+
+    <!-- Primary Meta Tags -->
+    <title>Art Blocks 101 for Creators</title>
+    <meta name="title" content="Art Blocks 101 for Creators">
+    <meta name="description" content="A guide on getting started as a creator with Art Blocks." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/">
+    <meta property="og:title" content="Art Blocks 101 for Creators">
+    <meta property="og:description" content="A guide on getting started as a creator with Art Blocks.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/">
+    <meta property="twitter:title" content="Art Blocks 101 for Creators">
+    <meta property="twitter:description" content="A guide on getting started as a creator with Art Blocks.">
+    
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("/creator-docs/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="/creator-docs/resources/css/retype.css?v=1.11.2.697604104084" rel="stylesheet" data-turbo-track="reload" />
+
+    <script type="text/javascript" src="/creator-docs/resources/js/config.js?v=1.11.2.697604104084" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/creator-docs/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
+    <script id="lunr-js" type="text/javascript" src="/creator-docs/resources/js/lunr.js?v=1.11.2.697604104084" defer></script>
+    <script id="prism-js" type="text/javascript" src="/creator-docs/resources/js/prism.js?v=1.11.2.697604104084" defer></script>
+</head>
+    <body>
+        <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+    <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+
+    <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+    <div class="container relative flex items-center justify-between flex-grow pr-6 md:justify-start">
+        <!-- Mobile menu button skeleton -->
+        <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center flex-shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+        <div v-cloak id="docs-sidebar-toggle"></div>
+
+        <!-- Logo -->
+        <div class="flex items-center justify-between h-full py-2 md:w-75">
+            <div class="flex items-center px-2 md:px-6">
+                <a id="docs-site-logo" href="/creator-docs/" class="flex items-center leading-snug text-2xl">
+                    <span class="w-10 mr-2 flex-grow-0 flex-shrink-0 overflow-hidden">
+                        <img class="max-h-10 dark:hidden md:inline-block" src="/creator-docs/static/squigwhitecircle.png">
+                        <img class="max-h-10 hidden dark:inline-block" src="/creator-docs/static/squigwhitecircle.png">
+                    </span>
+                    <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Art Blocks</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
+            </div>
+
+            <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+        </div>
+
+        <div class="flex justify-between md:flex-grow">
+            <!-- Top Nav -->
+            <nav class="hidden md:flex">
+    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://artblocks.io/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <path fill-rule="evenodd" d="M11.03 2.59a1.5 1.5 0 011.94 0l7.5 6.363a1.5 1.5 0 01.53 1.144V19.5a1.5 1.5 0 01-1.5 1.5h-5.75a.75.75 0 01-.75-.75V14h-2v6.25a.75.75 0 01-.75.75H4.5A1.5 1.5 0 013 19.5v-9.403c0-.44.194-.859.53-1.144l7.5-6.363zM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v6.25h5v-9.403L12 3.734z"/>
+                    </g>
+                </svg>
+                <span>Art Blocks</span>
+            </a>
+        </li>
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/creator-docs/creator-onboarding/readme/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <path fill-rule="evenodd" d="M5 2.5a.5.5 0 00-.5.5v18a.5.5 0 00.5.5h14a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5zm10 0v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5zM3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H5a2 2 0 01-2-2V3z"/>
+                    </g>
+                </svg>
+                <span>Docs</span>
+            </a>
+        </li>
+        <li class="md:mr-6">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://artblocks.wiki/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                    <g fill="currentColor">
+                        <path fill-rule="evenodd" d="M0 3.75A.75.75 0 01.75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.496 4.496 0 0115.75 3h7.5a.75.75 0 01.75.75v15.063a.75.75 0 01-.755.75l-7.682-.052a3 3 0 00-2.142.878l-.89.891a.75.75 0 01-1.061 0l-.902-.901a3 3 0 00-2.121-.879H.75a.75.75 0 01-.75-.75v-15zm11.247 3.747a3 3 0 00-3-2.997H1.5V18h6.947a4.5 4.5 0 012.803.98l-.003-11.483zm1.503 11.485V7.5a3 3 0 013-3h6.75v13.558l-6.927-.047a4.5 4.5 0 00-2.823.971z"/>
+                    </g>
+                </svg>
+                <span>Wiki</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+            <!-- Header Right Skeleton -->
+            <div v-cloak class="flex justify-end flex-grow skeleton">
+
+                <!-- Search input mock -->
+                <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                    <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                    </div>
+
+                    <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
+                </div>
+
+                <!-- Mobile search button mock -->
+                <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                </div>
+
+                <!-- Dark mode switch placehokder -->
+                <div class="w-10 h-10 lg:ml-2"></div>
+
+                <!-- History button mock -->
+                <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                </div>
+            </div>
+
+            <div v-cloak class="flex items-center justify-end flex-grow">
+                <div id="docs-mobile-search-button"></div>
+                <doc-search-desktop></doc-search-desktop>
+
+                <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                <doc-history></doc-history>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+<div v-cloak class="fixed flex flex-col flex-shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+
+    <!-- Render this div, if config.showSidebarFilter is `true` -->
+    <div class="flex items-center h-16 px-6">
+        <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+    </div>
+
+    <div class="pl-6 mb-4 mt-1">
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+    </div>
+
+
+    <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
+        <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+    </div>
+</div>
+
+<!-- Sidebar component -->
+<doc-sidebar v-cloak>
+    <template #sidebar-footer>
+        <div
+            class="flex-shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650"
+        >
+
+            <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center">
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://artblocks.io/">Art Blocks</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/readme.md">Docs</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://artblocks.wiki/">Wiki</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+        </div>
+    </template>
+</doc-sidebar>
+
+
+        <div class="flex-grow min-w-0 dark:bg-dark-850">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+            <div class="flex">
+    <div class="flex-grow min-w-0 px-6 md:px-16">
+        <main class="relative pt-6 pb-16">
+            <div class="docs-markdown" id="docs-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="docs-sidebar-right-toggle"></div>
+               
+                <!-- Page content  -->
+<doc-anchor-target id="art-blocks-101-for-creators" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#art-blocks-101-for-creators">#</doc-anchor-trigger>
+        <span>Art Blocks 101 for Creators</span>
+    </h1>
+</doc-anchor-target>
+<p>A guide on getting started as a creator with Art Blocks.</p>
+<div class="flex mb-6">
+    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3">
+<p>The primary audience for this document are artists who have already entered the pipeline for launching a project on Art Blocks. If you are currently waiting in the applications queue for Art Blocks, this documentation will hopefully provide a helpful guide for you in terms of what to expect, but many of the steps here will not be actionable for you until you have had a project shell set up by the Art Blocks team.</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="documentation">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#documentation">#</doc-anchor-trigger>
+        <span>Documentation</span>
+    </h2>
+</doc-anchor-target>
+<p>The Art Blocks platform hosts generative projects for the production of verifiably deterministic outputs. A generative script (using <a href="https://p5js.org">p5js</a> for example) is stored immutably on the Ethereum blockchain for each project. When a user wants to purchase an iteration of a project hosted on the platform, they purchase an ERC721 compliant &quot;non-fungible&quot; token, also stored on the Ethereum blockchain, containing a provably unique &quot;seed&quot; which controls variables in the generative script. These variables, in turn, control the way the output looks and operates.</p>
+<p>Each &quot;seed&quot;, also known as a &quot;hash string&quot; is a hexadecimal string generated in a pseudo-random manner at the time the token is minted. Each character (0-9, a-f) represents a value from 0-15 and each pair of characters (&quot;aa&quot;, or &quot;f2&quot;) represents a value from 0-255.</p>
+<p>For example:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">&quot;0x11ac128f8b54949c12d04102cfc01960fc496813cbc3495bf77aeed738579738&quot;</code></pre>
+</doc-codeblock></div>
+<p>This hash will be the source of entropy or variation use to determine the output of your algorithm. When your art is rendered on Art Blocks, your script will have access to a global variable called <code v-pre>tokenData</code>. One of the first lines in your script should be to read in the hash from this variable.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let hash = tokenData.hash</code></pre>
+</doc-codeblock></div>
+<p>Included in the <code v-pre>tokenData</code> is also the <code v-pre>tokenId</code>. The <code v-pre>tokenId</code> encodes both the project and mint.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">tokenId = (projectNumber * 1000000) + mintNumber</code></pre>
+</doc-codeblock></div>
+<p>If your script needs to know the mint number or project number, it can do so like this:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let projectNumber = Math.floor(parseInt(tokenData.tokenId) / 1000000)
+let mintNumber = parseInt(tokenData.tokenId) % 1000000</code></pre>
+</doc-codeblock></div>
+<p>When you are testing locally, this variable obviously will not be defined in your browser environment. This here is a simple function to generate valid hashes and tokenIds.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">function genTokenData(projectNum) {
+  let data = {};
+  let hash = &quot;0x&quot;;
+  for (var i = 0; i &lt; 64; i++) {
+    hash += Math.floor(Math.random() * 16).toString(16);
+  }
+  data.hash = hash;
+  data.tokenId = (projectNum * 1000000 + Math.floor(Math.random() * 1000)).toString();
+  return data;
+}
+let tokenData = genTokenData(123);</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="safely-deriving-randomness-from-the-token-hash">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#safely-deriving-randomness-from-the-token-hash">#</doc-anchor-trigger>
+        <span>Safely deriving randomness from the token hash</span>
+    </h3>
+</doc-anchor-target>
+<p>Art Blocks strongly recommends that all artists use an instance of the following Random class to feed all of their project&#x27;s randomness.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">class Random {
+  constructor() {
+    this.useA = false;
+    let sfc32 = function (uint128Hex) {
+      let a = parseInt(uint128Hex.substr(0, 8), 16);
+      let b = parseInt(uint128Hex.substr(8, 8), 16);
+      let c = parseInt(uint128Hex.substr(16, 8), 16);
+      let d = parseInt(uint128Hex.substr(24, 8), 16);
+      return function () {
+        a |= 0; b |= 0; c |= 0; d |= 0;
+        let t = (((a + b) | 0) + d) | 0;
+        d = (d + 1) | 0;
+        a = b ^ (b &gt;&gt;&gt; 9);
+        b = (c + (c &lt;&lt; 3)) | 0;
+        c = (c &lt;&lt; 21) | (c &gt;&gt;&gt; 11);
+        c = (c + t) | 0;
+        return (t &gt;&gt;&gt; 0) / 4294967296;
+      };
+    };
+    // seed prngA with first half of tokenData.hash
+    this.prngA = new sfc32(tokenData.hash.substr(2, 32));
+    // seed prngB with second half of tokenData.hash
+    this.prngB = new sfc32(tokenData.hash.substr(34, 32));
+    for (let i = 0; i &lt; 1e6; i += 2) {
+      this.prngA();
+      this.prngB();
+    }
+  }
+  // random number between 0 (inclusive) and 1 (exclusive)
+  random_dec() {
+    this.useA = !this.useA;
+    return this.useA ? this.prngA() : this.prngB();
+  }
+  // random number between a (inclusive) and b (exclusive)
+  random_num(a, b) {
+    return a + (b - a) * this.random_dec();
+  }
+  // random integer between a (inclusive) and b (inclusive)
+  // requires a &lt; b for proper probability distribution
+  random_int(a, b) {
+    return Math.floor(this.random_num(a, b + 1));
+  }
+  // random boolean with p as percent liklihood of true
+  random_bool(p) {
+    return this.random_dec() &lt; p;
+  }
+  // random value in an array of items
+  random_choice(list) {
+    return list[this.random_int(0, list.length - 1)];
+  }
+}</code></pre>
+</doc-codeblock></div>
+<p><em>Note that the class uses the prng algorithm sfc32, which was designed and coded by</em> <a href="http://pracrand.sourceforge.net/license.txt"><em>Chris Doty-Humphry and is public domain</em></a><em>. More information can be found at</em> <a href="http://pracrand.sourceforge.net"><em>http://pracrand.sourceforge.net</em></a><em>.</em></p>
+<p>The convenience methods <code v-pre>random_num</code>, <code v-pre>random_int</code>, <code v-pre>random_bool</code>, and <code v-pre>random_choice</code> may be removed if not needed for a specific project. Artists may also add their own convenience methods, but all randomness should be originally sourced from the <code v-pre>random_dec()</code> function.</p>
+<p>We can get an instance of the Random class like so:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">let R = new Random()</code></pre>
+</doc-codeblock></div>
+<p>Now each time we need some randomness we can call various helper functions:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">R.random_dec()      // Random decimal [0-1)
+R.random_num(0, 10) // Random decimal [0-10)
+R.random_int(0, 10) // Random integer [0-10]
+R.random_bool(0.5)  // Random boolean with probability 0.5
+R.random_choice([1, 2, 3])  // Random choice from a given list. Nice for random from a discreet set like a color palette</code></pre>
+</doc-codeblock></div>
+<p>Every time one of these functions is called, <code v-pre>random_dec()</code> will also be called somewhere in the stack, applying the deterministic arithmetic to the seed and returning a new random number.</p>
+<doc-anchor-target id="i-heard-i-shouldnt-use-mathrandom-why-not">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#i-heard-i-shouldnt-use-mathrandom-why-not">#</doc-anchor-trigger>
+        <span>I heard I shouldn&#x27;t use <code v-pre>Math.random()</code>. Why not?</span>
+    </h4>
+</doc-anchor-target>
+<p>When users mint each piece, they are creating a hash token on the blockchain. All the attributes of your piece should be derived from that token so that user will be able to render their piece and get the same results each time. <code v-pre>Math.random</code> is derived from the computer&#x27;s clock, so there is no guarantee you will get the same output on different computing environments in the future.</p>
+<doc-anchor-target id="guidelines-and-constraints">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#guidelines-and-constraints">#</doc-anchor-trigger>
+        <span>Guidelines and Constraints</span>
+    </h2>
+</doc-anchor-target>
+<p>Now you have the basics here are some general principles you need to consider when making your art.</p>
+<doc-anchor-target id="limited-dependencies">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#limited-dependencies">#</doc-anchor-trigger>
+        <span>Limited Dependencies</span>
+    </h3>
+</doc-anchor-target>
+<p>Each project can have zero or one library dependency. The approved dependencies are currently the following:</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Library</th>
+<th>Version</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No Library at all</td>
+<td></td>
+<td>Vanilla JS, CSS, HTML, WebGL</td>
+</tr>
+<tr>
+<td>svg</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>p5js</td>
+<td><code v-pre>v1.0.0</code></td>
+<td><a href="https://p5js.org">https://p5js.org</a></td>
+</tr>
+<tr>
+<td>Processing</td>
+<td><code v-pre>v1.4.6</code></td>
+<td><a href="https://processing.org">https://processing.org</a></td>
+</tr>
+<tr>
+<td>a-frame</td>
+<td><code v-pre>v1.2.0</code></td>
+<td><a href="https://aframe.io">https://aframe.io</a></td>
+</tr>
+<tr>
+<td>threejs</td>
+<td><code v-pre>r124</code></td>
+<td><a href="https://threejs.org">https://threejs.org</a></td>
+</tr>
+<tr>
+<td>vox</td>
+<td><code v-pre>v1.1.0-beta</code></td>
+<td></td>
+</tr>
+<tr>
+<td>megavox</td>
+<td><code v-pre>v1.1.0-beta</code></td>
+<td></td>
+</tr>
+<tr>
+<td>regl</td>
+<td><code v-pre>v2.1.0</code></td>
+<td></td>
+</tr>
+<tr>
+<td>tonejs</td>
+<td><code v-pre>v14.8.15</code></td>
+<td><a href="https://tonejs.github.io">https://tonejs.github.io</a></td>
+</tr>
+<tr>
+<td>paperjs</td>
+<td><code v-pre>v0.12.15</code></td>
+<td><a href="http://paperjs.org">http://paperjs.org</a></td>
+</tr>
+<tr>
+<td>Zdog</td>
+<td><code v-pre>v1.1.2</code></td>
+<td><a href="https://github.com/metafizzy/zdog">https://github.com/metafizzy/zdog</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Additional libraries may be added at moderator discretion, but the rule is only one external library per project.</p>
+<doc-anchor-target id="deterministic">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#deterministic">#</doc-anchor-trigger>
+        <span>Deterministic</span>
+    </h3>
+</doc-anchor-target>
+<p>Each output must be deterministic based on a single hash. More specifically, the initial output or frame must be the same. If your piece is animated, some randomness is okay. This is so when the art is rendered as an image (e.g. for OpenSea) it is always the same.</p>
+<doc-anchor-target id="dimensionless">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dimensionless">#</doc-anchor-trigger>
+        <span>Dimensionless</span>
+    </h3>
+</doc-anchor-target>
+<p>The output must be dimension agnostic. Meaning it scales seamlessly to any dimension. While you can control the dimension ratio (e.g. width/height can be 1.0, 1.5, 0.75 etc.) you have no control over the dimensions of the browser someone else might be using. The output will be rendered by the server at 2400x2400 (see below for ratios other than 1) and typically displayed in most browsers at 1000x1000 but your output should be the same at higher resolutions. Obviously, at lower resolutions, fewer pixels may limit what your output looks like, such as the smoothness of lines, which is okay. This is mainly to ensure your work can be reproduced at print quality.</p>
+<p>A simple way to account for this is to define a default dimension and create a multiplier to scale coordinates or sizes relative to the canvas dimensions. Below uses p5js as an example but the same principle applies regardless of the language.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">var DEFAULT_SIZE = 1000
+var WIDTH = window.innerWidth
+var HEIGHT = window.innerHeight
+var DIM = Math.min(WIDTH, HEIGHT)
+var M = DIM / DEFAULT_SIZE
+
+function setup() {
+  createCanvas(WIDTH, HEIGHT)
+  rect(100*M, 500*M, 50*M, 50*M)
+}</code></pre>
+</doc-codeblock></div>
+<p>Before submitting your script, it&#x27;s probably a good idea to test it in different resolutions and aspect ratios.</p>
+<p>Set the hash to a constant value:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">tokenData = {
+    hash: &quot;0x11ac16678959949c12d5410212301960fc496813cbc3495bf77aeed738579738&quot;,
+    tokenId: &quot;123000456&quot;
+}</code></pre>
+</doc-codeblock></div>
+<p>And then play with the browser window size, and refresh to check that your art looks the same at any resolution.</p>
+<doc-anchor-target id="cost">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cost">#</doc-anchor-trigger>
+        <span>Cost</span>
+    </h3>
+</doc-anchor-target>
+<p>Storing code on Ethereum is expensive! Taking average gas prices, you can generally expect to pay ~$10 for each full line of code your script requires. With that in mind - keep things efficient, maximize code reuse with functions, remove comments, and minify your finished code.</p>
+<p>Based on previous projects, we&#x27;ve estimated the cost of uploading a script to be the following; where Bytes is the size of your project and gwei price is the price you set when submitting your transaction. It always helps to wait until non-peak hours to upload your script.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">Cost (ETH) = 675 * Bytes * Gwei Price * (1/1000000000)</code></pre>
+</doc-codeblock></div>
+<p>So a 10 KB project at 100 gwei would be:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">675 * 10000 * 100 * (1 / 1000000000)
+675000000 / 1000000000
+0.675 ETH</code></pre>
+</doc-codeblock></div>
+<p>Artists have recently targeted between ~5-20 KB for their code (without the library), but obviously this will vary by project scope.</p>
+<doc-anchor-target id="attribution">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#attribution">#</doc-anchor-trigger>
+        <span>Attribution</span>
+    </h2>
+</doc-anchor-target>
+<p>Much (generative art) source code is published under permissive copyleft licenses, making it available to be used by everybody and depending on the license even for commercial purposes. In case your project&#x27;s code contains any code not written by yourself, please inform the Art Blocks team about it so the appropriate considerations and attributions can be made.</p>
+<p>Common source code licenses (in creative coding):</p>
+<ul>
+<li><a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>: The original author and license must be clearly and appropriately stated.</li>
+<li><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>: As CC BY, but all derivates must also be licensed under CC BY-SA.</li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a>: As CC BY-SA, but no commercial use is allowed.</li>
+<li><a href="https://choosealicense.com/licenses/mit/">MIT</a>: similar to CC BY</li>
+<li><a href="https://choosealicense.com/licenses/gpl-3.0/">GPL</a>: similar to CC BY-SA</li>
+</ul>
+<p>There are many other free-to-use licenses commonly used on open source software. Please carefully read the full details on any licensed code you re-use or modify, before including it in your project.</p>
+<doc-anchor-target id="testing-on-ropsten">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#testing-on-ropsten">#</doc-anchor-trigger>
+        <span>Testing on Ropsten</span>
+    </h2>
+</doc-anchor-target>
+<p>Once your application is approved and your script is ready, you will test it out on an <a href="https://artist-staging.artblocks.io">Art Blocks</a> staging site running on one of Ethereum&#x27;s test networks (Ropsten). This will make sure there aren&#x27;t any bugs or errors and that if it&#x27;s working on Ropsten, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You&#x27;ll still be using the same wallet and address, except on the test network.</p>
+<p>Note: If you don&#x27;t have &quot;Ropsten ETH&quot; ask a mod or previous artist, we&#x27;ll send you some to play with. Or if you don&#x27;t feel like waiting, request some from the faucet: <a href="https://faucet.dimensions.network/">https://faucet.dimensions.network/</a>.</p>
+<doc-anchor-target id="interacting-with-your-project">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#interacting-with-your-project">#</doc-anchor-trigger>
+        <span>Interacting with your Project</span>
+    </h3>
+</doc-anchor-target>
+<p>If you made it this far, we have probably requested a project name and an Ethereum address from you. If not, that probably means your an artist who is in our pipeline and pending being onboarded–once we get you processed the following instructions will make more sense!</p>
+<p>If you have provided a project name and Ethereum address to our team, this address you provided to our team will be used on mainnet and on Ropsten. So at this point change your network to Ropsten in MetaMask. On Ropsten, we&#x27;ll practice uploading everything so that it all goes smooth on mainnet when the ETH is real. After loading the page and connecting your wallet, you should see a button labeled &quot;Edit Project&quot;. A multi-tabbed form will pop up. You only need to focus on the following:</p>
+<doc-anchor-target id="project">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project">#</doc-anchor-trigger>
+        <span>Project</span>
+    </h4>
+</doc-anchor-target>
+<p>This should all be self-explanatory. Just fill and submit each one separately.</p>
+<doc-anchor-target id="token">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#token">#</doc-anchor-trigger>
+        <span>Token</span>
+    </h4>
+</doc-anchor-target>
+<p>In this tab you&#x27;ll set the price and max invocations for your project. If you&#x27;re accepting ETH as payment you don&#x27;t need to worry about &quot;Updated Currency Information&quot; and <strong>should not change the currency address</strong>. To reiterate, <strong>do not</strong> update the currency address to be your wallet address–this field should <strong>only</strong> be set if you are accepting payment for your project in some non-ETH ERC20-compliant token.</p>
+<p>You can though specify any ERC20-compliant token if you choose, just give someone on the Art Blocks team a heads up that you wish to go down this route.</p>
+<p>Set the baseURI: <code v-pre>https://api.artblocks.io/token/</code></p>
+<doc-anchor-target id="script">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#script">#</doc-anchor-trigger>
+        <span>Script</span>
+    </h4>
+</doc-anchor-target>
+<p>Here you&#x27;ll first specify the dependency of your project including the script type and the version number <em>of that dependency</em>. For most scripts, you can leave the version blank or enter 1. The aspect ratio is a single number. E.g. 1 or 0.75 etc. If your piece takes a certain amount of time to fully render you can type in the render delay to let the server know when to render the canvas.</p>
+<p>Once you&#x27;ve submitted your script details add your script to the &quot;Project Scripts&quot; box. Remember, <code v-pre>tokenData.hash</code> is a global variable in the environment this script will live in, so you do not need to define <code v-pre>tokenData</code> in your script, just expect your script will have access to it.</p>
+<p>If your script is big, consider minifying it. If your script is so big that you cannot fit it in a single transaction (you&#x27;re getting an error when you submit), you may need to split it up and submit each part subsequently.</p>
+<doc-anchor-target id="splitting">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#splitting">#</doc-anchor-trigger>
+        <span>Splitting</span>
+    </h3>
+</doc-anchor-target>
+<p>Once you have a working minified version of your project, a recommended way of splitting the file in parts for upload is to use the &quot;split&quot; command in Unix systems (Linux, Mac), like this:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">split -b 10k filename.js new_filename</code></pre>
+</doc-codeblock></div>
+<p>That will create an evenly distributed set of files with the splitted code, automatically. The maximum size you can upload to Artblocks per transaction is around 10.5KB (you can center that as -b 10500 in the split tool, since it does not take decimals)</p>
+<p>if you are on Windows, you can use the same command if you have git bash, or a tool like <a href="https://www.7-zip.org/">7-Zip</a>, which allows you to split without compression.</p>
+<doc-anchor-target id="finishing-actions">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#finishing-actions">#</doc-anchor-trigger>
+        <span>Finishing Actions</span>
+    </h4>
+</doc-anchor-target>
+<p>Once all of the necessary fields have been submitted, you can then click &quot;Purchases Paused&quot; to test out the minting. Once your test mints are working in the livescript view, mint 20-40.</p>
+<p>Make sure you&#x27;ve tested your code on multiple browsers (Chrome / Firefox / Safari) and on multiple device types (desktop / mobile) to ensure consistent output.</p>
+<doc-anchor-target id="how-does-my-project-get-those-opensea-attributes">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-does-my-project-get-those-opensea-attributes">#</doc-anchor-trigger>
+        <span>How does my project get those OpenSea attributes?</span>
+    </h4>
+</doc-anchor-target>
+<p>Once your project is selected to be included in one of the Art Blocks collections, the onboarding team will help you with this. The one thing to keep in mind is that all of the attributes you want displayed should be directly generated from the transaction hash and should not depend on any other randomness.</p>
+<p>This script is essentially a copy of your rendering script but without any dependencies present (the server won&#x27;t have access to them).</p>
+<p>For full details on how to structure your project features, please see <a href="creator-onboarding/readme/features.md#features-overview">Art Blocks Features Script</a>.</p>
+
+
+
+
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results />
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between mt-14">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/geoffreymcgill/artblocks-docs/blob/main/creator-onboarding/readme/readme.md" target="_blank" rel="noopener">
+        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        <span>Edit this page</span>
+    </a>
+
+    <!--<p class="my-2.5 text-gray-500 dark:text-dark-350 text-sm">Last updated on <strong>2021-03-14</strong> by <strong>Geoffrey McGill</strong></p>-->
+</div>
+
+<nav class="flex mt-14">
+    <div class="w-1/2">
+    </div>
+
+    <div class="w-1/2">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/creator-onboarding/readme/artist-onboarding-steps/">
+            <span>
+                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                <span class="block mt-1">Artist Onboarding Steps</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        </a>
+    </div>
+</nav>
+
+
+        </main>
+
+        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between">
+    <div>
+        <ul class="flex flex-wrap items-center text-sm">
+</ul>
+
+    </div>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2022. All rights reserved.</p>
+</div>
+</footer>
+
+        </div>
+    </div>
+    
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 transform translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:flex-shrink-0 lg:pt-6 lg:transform-none lg:w-56 lg:z-0 md:w-72 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+        </div>
+    </div>
+    
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+        <div id="docs-overlay-target"></div>
+
+        <script>window.__DOCS__ = { "title": "Art Blocks 101 for Creators", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    </body>
+</html>
