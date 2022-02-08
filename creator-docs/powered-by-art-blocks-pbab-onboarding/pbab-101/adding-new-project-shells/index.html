@@ -6,29 +6,31 @@
     <meta name="turbo-cache-control" content="no-cache">
 
     <!-- Primary Meta Tags -->
-    <title>Checklist for Factory/Playground Projects</title>
-    <meta name="title" content="Checklist for Factory/Playground Projects">
-    <meta name="description" content="A project checklist to walk through for Factory/Playground projects." />
+    <title>Project Shell Deployment Guide</title>
+    <meta name="title" content="Project Shell Deployment Guide">
+    <meta name="description" content="An overview of how to deploy a new project on your custom PBAB contract." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.artblocks.io/creator-onboarding/factory-checklist/">
-    <meta property="og:title" content="Checklist for Factory/Playground Projects">
-    <meta property="og:description" content="A project checklist to walk through for Factory/Playground projects.">
+    <meta property="og:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells/">
+    <meta property="og:title" content="Project Shell Deployment Guide">
+    <meta property="og:description" content="An overview of how to deploy a new project on your custom PBAB contract.">
+    <meta property="og:image" content="https://docs.artblocks.io/static/screenshot3.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.artblocks.io/creator-onboarding/factory-checklist/">
-    <meta property="twitter:title" content="Checklist for Factory/Playground Projects">
-    <meta property="twitter:description" content="A project checklist to walk through for Factory/Playground projects.">
+    <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells/">
+    <meta property="twitter:title" content="Project Shell Deployment Guide">
+    <meta property="twitter:description" content="An overview of how to deploy a new project on your custom PBAB contract.">
+    <meta property="twitter:image" content="https://docs.artblocks.io/static/screenshot3.png">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.11.2.697653642748" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.11.2.697659301672" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697653642748" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697659301672" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697653642748" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697659301672" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -70,7 +72,7 @@
             </a>
         </li>
         <li class="md:mr-6">
-            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/creator-onboarding/readme/">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/creator-docs/creator-onboarding/readme/">
                 <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                     <g fill="currentColor">
                         <path fill-rule="evenodd" d="M5 2.5a.5.5 0 00-.5.5v18a.5.5 0 00.5.5h14a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5zm10 0v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5zM3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H5a2 2 0 01-2-2V3z"/>
@@ -213,158 +215,32 @@
                 <div id="docs-sidebar-right-toggle"></div>
                
                 <!-- Page content  -->
-<doc-anchor-target id="checklist-for-factoryplayground-projects" class="break-words">
+<doc-anchor-target id="project-shell-deployment-guide" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#checklist-for-factoryplayground-projects">#</doc-anchor-trigger>
-        <span>Checklist for Factory/Playground Projects</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-shell-deployment-guide">#</doc-anchor-trigger>
+        <span>Project Shell Deployment Guide</span>
     </h1>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-red-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M21.71 6.15L15.85.29c-.19-.18-.44-.29-.71-.29H6.86c-.27 0-.52.11-.71.29L.29 6.15c-.18.19-.29.44-.29.71v8.28c0 .27.11.52.29.71l5.86 5.86c.19.18.44.29.71.29h8.28c.27 0 .52-.11.71-.29l5.86-5.86a.99.99 0 00.29-.71V6.86c0-.27-.11-.52-.29-.71zM20 14.73L14.73 20H7.27L2 14.73V7.27L7.27 2h7.45L20 7.27v7.46z"></path>
-                    <path d="M11 12c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .55.45 1 1 1zM11.01 14c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3">
-<p>Before proceeding to mainnet upload, please verify that your script behaves as expected across all major web browsers (e.g. Chrome, Firefox, Safari, etc.)</p>
-        </div>
-    </div>
-</div>
-<doc-anchor-target id="upload">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#upload">#</doc-anchor-trigger>
-        <span>Upload</span>
-    </h2>
-</doc-anchor-target>
+<p>An overview of how to deploy a new project on your custom PBAB contract.</p>
 <ol>
-<li>Please ensure that you have reviewed and abided by our <a href="readme.md#documentation">Documentation</a> and <a href="readme.md#guidelines-and-constraints">Guidelines &amp; Constraints</a>. If you are assigning rarity to different things, Art Blocks strongly recommends that you use an instance of the Random class found <a href="readme.md#safely-deriving-randomness-from-the-token-hash">here</a> to feed all of your project&#x27;s randomness. Prior to uploading, please verify that your script meets this requirement.</li>
-<li>Ensure your wallet is funded with enough ETH to pay the gas fees for the upload and unpausing process. For more information on the estimated cost of these steps, <a href="readme.md#cost">click here.</a></li>
-<li>Submit one field at a time. Wait for that transaction to clear before attempting the next field.</li>
-<li>When you upload your script, please copy it exactly from testnet.</li>
-<li>Include the following in the Project Base URI field: <code v-pre>https://api.artblocks.io/token/</code>
+<li>Collect 3 pieces of information for the to-be-deployed project on your PBAB contract.
+<ol>
+<li>The project title (e.g. &quot;Fun Lines&quot;)</li>
+<li>The artist wallet address, this will determine which address has access to configure the project from within the Art Blocks artist interface, (e.g. <code v-pre>0x78592a6fBE68fEBf226040a5D25ad7e69F2FeAb6</code>).</li>
+<li>The price-per-mint, this will need to be specified <a href="https://eth-converter.com"><strong>in WEI</strong></a>, (e.g. <code v-pre>350000000000000000</code>, which is 0.35 in ETH).</li>
+</ol>
+</li>
+<li>Navigate to your PBAB Core Contract on Etherscan (e.g. <a href="https://ropsten.etherscan.io/address/0x06710498339b30834653459Ac90F52Cbd2F1D085#code">https://ropsten.etherscan.io/address/0x06710498339b30834653459Ac90F52Cbd2F1D085#code</a>).</li>
+<li>Navigate to the &quot;Write contract&quot; tab and connect your wallet to Etherscan.<img src="/static/screenshot3.png" alt="" /></li>
+<li>Use the <code v-pre>addProject</code> method to create a new project shell, specifying the information initially collected (as defined in 1. above).</li>
+<li>Once 4. has been completed, when connected to the Art Blocks website (<a href="https://artist-staging.artblocks.io">https://artist-staging.artblocks.io</a> for Ropsten, and <a href="https://artblocks.io">https://artblocks.io</a> for mainnet), <strong>with the artist wallet</strong> used in step 4., your artist should be able to begin entering their project details.
 <ul>
-<li><strong>Important:</strong> If you are setting this field for a PBAB project, rather than an Art Blocks project directly, the <code v-pre>baseTokenURI</code> field should follow a slightly different structure. Please see the <a href="powered-by-art-blocks-pbab-onboarding/adding-new-project-shells.md">PBAB documentation</a> for more info.</li>
+<li>If you are having trouble finding your project on the Ropsten Art Blocks site, you should be able to navigate to it directly with by entering in your browser a URL of the format: <code v-pre>https://artist-staging.artblocks.io/project/{CONTRACT_ADDRESS}-{PROJECT_ID}</code> (e.g. for the first project shell on your PBAB core contract, the <code v-pre>{PROJECT_ID}</code> would be <code v-pre>0</code>, then <code v-pre>1</code>, then <code v-pre>2</code>, etc.).</li>
+<li>If you are having trouble seeing your project on the corresponding-network&#x27;s Art Blocks site, first try disconnecting and reconnecting your wallet to the site, ensuring that you are connected with the previously specified artist wallet.</li>
+<li>When asked to provide the <code v-pre>baseTokenURI</code> for your project, this should be <code v-pre>https://token.artblocks.io/{CONTRACT_ADDRESS}/</code>, where <code v-pre>{CONTRACT_ADDRESS}</code> is the address of <strong>the core contract</strong> for your PBAB project (e.g. <code v-pre>0x06710498339b30834653459Ac90F52Cbd2F1D085</code> for the project linked above in step 2.). For the Ropsten testnet, this should be <code v-pre>https://token.staging.artblocks.io/{CONTRACT_ADDRESS}/</code>.</li>
+<li>Generally speaking, the <a href="/creator-docs/creator-onboarding/readme/">Art Blocks 101 for Creators guide</a> should be broadly applicable to this onboarding step for PBAB-partner-platform artists.</li>
 </ul>
 </li>
-<li>As <a href="readme.md">noted in the main documentation overview</a>, please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field <strong>should not</strong> be set if you are accepting ETH as your payment type.</li>
-<li>Please double-check, triple-check, and then check again the generated <a href="../readme/features/">features script</a> results on staging to ensure they are 100% accurate. This is <strong>extremely important</strong> to get right, as it changes to fix any bugs you may introduce in this script may have massive impact on how the artwork is perceived by collectors and may cause confusion in the secondary market. It is <strong>your responsibility</strong> to guarantee that your features script is properly verified in the artist staging environment.</li>
-</ol>
-<doc-anchor-target id="features">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
-        <span>Features</span>
-    </h2>
-</doc-anchor-target>
-<ol>
-<li>Please see <a href="creator-onboarding/features.md">Features</a> for full details on how you set your project features as an artist.</li>
-<li>The features script for your project should first be tested on the Ropsten testnet (<a href="https://artist-staging.artblocks.io">https://artist-staging.artblocks.io</a>), alongside your art script. Ensure that your features are being displayed as expected on testnet before proceeding to project deployment to mainnet.</li>
-<li>When uploading your feature script to mainnet (<a href="https://www.artblocks.io/">https://www.artblocks.io/</a>), please ensure that you are uploading the exact same features script, taking the same care that you would with your art script itself.</li>
-<li>While the features script <em>is not</em> stored on-chain like the art script is, bugs in your features script will cause meaningful disruptions for collectors trying to explore your work on a per-feature basis.</li>
-</ol>
-<doc-anchor-target id="economics">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#economics">#</doc-anchor-trigger>
-        <span>Economics</span>
-    </h2>
-</doc-anchor-target>
-<ol>
-<li>Consider the overall economics of your project for a successful release.</li>
-<li>Artists can only have one active project at a time.</li>
-<li>As a note, we require artists to take a 2 month cooldown period between Playground and Factory drops. The cooldown period begins when your project sells out (i.e. when minting is 100% complete).</li>
-</ol>
-<doc-anchor-target id="charity-component">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#charity-component">#</doc-anchor-trigger>
-        <span>Charity Component</span>
-    </h2>
-</doc-anchor-target>
-<ul>
-<li>To maintain our commitment to charitable giving, we ask all artists to donate 25% of all sales above 0.25 ETH to a charity of your choice. Once the price drops below 0.25 ETH, the charity component is optional. If this applies to your works, please determine your charity of choice before mint #0.</li>
-<li>To whom and how you donate is up to you. If you are a single artist, you may use the additional payee field to manage on-chain donations. All revenue can also be routed to a single wallet and donated after your drop. We highly recommend consulting with a tax professional to understand your local tax liability, especially if you plan to personally receive all funds before donating.</li>
-<li>To find a list of charities that accept crypto donations, you can ask for advice in <span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
-    <span>#artist-general</span>
-</span> and check the pinned messages for a charity guide.</li>
-</ul>
-<doc-anchor-target id="mint-0">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#mint-0">#</doc-anchor-trigger>
-        <span>Mint #0</span>
-    </h2>
-</doc-anchor-target>
-<ol>
-<li><strong>Before</strong> minting mint #0, ensure that your &quot;additional payee wallet&quot; has been set for the same configuration that you will use it for in your project release. E.g., if you are using the &quot;additional payee wallet&quot; field to donate to charity at the time of mint, you must set this before minting your #0. This is done to ensure that this full functionality is tested end-to-end as part of the mint #0 process, and that there are no issues with the wallet selected for the additional payee.</li>
-<li>Once your project information has been uploaded, please confirm that you&#x27;re ready for mint #0.</li>
-<li>Mint #0 should occur at least 48 hours in advance of your scheduled release.</li>
-</ol>
-<doc-anchor-target id="scheduling">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#scheduling">#</doc-anchor-trigger>
-        <span>Scheduling</span>
-    </h2>
-</doc-anchor-target>
-<ul>
-<li>Once mint #0 and the features script are in place, Art Blocks will work with you to schedule/announce your release.</li>
-<li>After your project has been scheduled, you are free to announce and promote your project on your social media.</li>
-</ul>
-<doc-anchor-target id="ropsten">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ropsten">#</doc-anchor-trigger>
-        <span>Ropsten</span>
-    </h2>
-</doc-anchor-target>
-<p>Once scheduled, you will have the option to make your Ropsten shell public to collectors. To help collectors easily differentiate Ropsten shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Ropsten public:</p>
-<ol>
-<li>Add [Sample Outputs] as a prefix to your project title. The formatting of your Ropsten title will be &quot;[Sample Outputs] Project Name&quot;</li>
-<li>Adjust your price information in Ropsten to be the same as on mainnet</li>
-<li>Adjust your max invocations in Ropsten to be the same as on mainnet</li>
-</ol>
-<doc-anchor-target id="unpausing">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#unpausing">#</doc-anchor-trigger>
-        <span>Unpausing</span>
-    </h2>
-</doc-anchor-target>
-<ul>
-<li>When it&#x27;s time, you&#x27;ll click the Unpause button under the Danger tab.</li>
-<li>When unpausing the project, please send in the tx 30 seconds prior to the top of the hour. To unpause the project, please send high gas (2-3x what is suggested as high gas on <a href="https://etherscan.io/gastracker">https://etherscan.io/gastracker</a>). If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.</li>
-<li>Once the transaction clears, your project will be live for minting.</li>
-</ul>
-<doc-anchor-target id="if-dutch-auction">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#if-dutch-auction">#</doc-anchor-trigger>
-        <span>If Dutch Auction</span>
-    </h2>
-</doc-anchor-target>
-<ul>
-<li>Dutch auction prices will need to be manually changed by the artist every 5 minutes. To change the token price during a dutch auction, you will need to adjust the &#x27;price per token&#x27; field and click Submit.</li>
-<li>If using a dutch auction drop mechanic, send in the tx 30 seconds before the 5 minute mark. You will want to use 2x or more what is suggested as high gas on <a href="https://etherscan.io/gastracker">https://etherscan.io/gastracker</a>), but please keep an eye on gas as there are times when gas can spike, in which case you will need to speed up the tx. If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.</li>
-<li>If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier.</li>
-</ul>
-<doc-anchor-target id="rarities">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#rarities">#</doc-anchor-trigger>
-        <span>Rarities</span>
-    </h2>
-</doc-anchor-target>
-<ul>
-<li>Do not discuss odds or feature rarities about your project until it is completely sold out.</li>
-</ul>
-<doc-anchor-target id="finishing-steps">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#finishing-steps">#</doc-anchor-trigger>
-        <span>Finishing Steps</span>
-    </h2>
-</doc-anchor-target>
-<ol>
-<li>Once your project is completely sold out, you may reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting. You&#x27;re also more than happy to keep them up. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0%</li>
-<li>You may also remove any language from your Project Description that was specifically included to describe sales mechanics.</li>
-<li>Report final charity donation totals to @Druid.eth</li>
-<li>[For Playground projects only] Please fill out the appropriate form to add bot-support to your Discord channel for your completed project: <a href="https://github.com/ArtBlocks/artbot/issues/new/choose">https://github.com/ArtBlocks/artbot/issues/new/choose</a>.</li>
 </ol>
 
 
@@ -375,7 +251,7 @@
             </div>
 
             <div class="flex flex-wrap items-center justify-between mt-14">
-    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/ArtBlocks/artblocks-docs/blob/main/creator-onboarding/factory-checklist.md" target="_blank" rel="noopener">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/ArtBlocks/artblocks-docs/blob/main/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells.md" target="_blank" rel="noopener">
         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         <span>Edit this page</span>
     </a>
@@ -385,20 +261,20 @@
 
 <nav class="flex mt-14">
     <div class="w-1/2">
-        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/creator-onboarding/curated-checklist/">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-project-launch/">
             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
             <span>
                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                <span class="block mt-1">Checklist for Curated Projects</span>
+                <span class="block mt-1">PBAB Project Launch</span>
             </span>
         </a>
     </div>
 
     <div class="w-1/2">
-        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/powered-by-art-blocks-pbab-onboarding/pbab-101/">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs/">
             <span>
                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                <span class="block mt-1">PBAB 101</span>
+                <span class="block mt-1">FAQs</span>
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         </a>
@@ -446,6 +322,6 @@
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Checklist for Factory/Playground Projects", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+        <script>window.__DOCS__ = { "title": "Project Shell Deployment Guide", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
     </body>
 </html>

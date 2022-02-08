@@ -6,30 +6,31 @@
     <meta name="turbo-cache-control" content="no-cache">
 
     <!-- Primary Meta Tags -->
-    <title>API Overview</title>
-    <meta name="title" content="API Overview">
-    <meta name="description" content="An overview of the current Art Blocks APIs." />
+    <title>PBAB OpenSea Setup</title>
+    <meta name="title" content="PBAB OpenSea Setup">
+    <meta name="description" content="Setting up the OpenSea storefront for your Powered by Art Blocks project." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.artblocks.io/art-blocks-api/api-overview/">
-    <meta property="og:title" content="API Overview">
-    <meta property="og:description" content="An overview of the current Art Blocks APIs.">
+    <meta property="og:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-opensea-setup/">
+    <meta property="og:title" content="PBAB OpenSea Setup">
+    <meta property="og:description" content="Setting up the OpenSea storefront for your Powered by Art Blocks project.">
+    <meta property="og:image" content="https://docs.artblocks.io/static/screenshot1.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.artblocks.io/art-blocks-api/api-overview/">
-    <meta property="twitter:title" content="API Overview">
-    <meta property="twitter:description" content="An overview of the current Art Blocks APIs.">
+    <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-opensea-setup/">
+    <meta property="twitter:title" content="PBAB OpenSea Setup">
+    <meta property="twitter:description" content="Setting up the OpenSea storefront for your Powered by Art Blocks project.">
+    <meta property="twitter:image" content="https://docs.artblocks.io/static/screenshot1.png">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.11.2.697653642748" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.11.2.697659301672" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697653642748" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697659301672" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697653642748" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.11.2.697653642748" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697659301672" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -71,7 +72,7 @@
             </a>
         </li>
         <li class="md:mr-6">
-            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/creator-onboarding/readme/">
+            <a class="inline-flex items-center py-2 md:mb-0 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="/creator-docs/creator-onboarding/readme/">
                 <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                     <g fill="currentColor">
                         <path fill-rule="evenodd" d="M5 2.5a.5.5 0 00-.5.5v18a.5.5 0 00.5.5h14a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5zm10 0v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5zM3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H5a2 2 0 01-2-2V3z"/>
@@ -214,211 +215,45 @@
                 <div id="docs-sidebar-right-toggle"></div>
                
                 <!-- Page content  -->
-<doc-anchor-target id="api-overview" class="break-words">
+<doc-anchor-target id="pbab-opensea-setup" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#api-overview">#</doc-anchor-trigger>
-        <span>API Overview</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pbab-opensea-setup">#</doc-anchor-trigger>
+        <span>PBAB OpenSea Setup</span>
     </h1>
 </doc-anchor-target>
-<p>An overview of the current Art Blocks APIs.</p>
-<div class="flex mb-6">
-    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3">
-<p>We are currently in the process of working on finalizing a more comprehensive project-oriented API which we plan to release in the first half of 2022. This API will encapsulate both onchain data (the information readily available via the Art Blocks public subgraph on The Graph) and additional off-chain data (e.g., all available features for a given project)</p>
-        </div>
-    </div>
-</div>
-<doc-anchor-target id="hosted-apis">
+<p>Setting up the OpenSea storefront for your Powered by Art Blocks project.</p>
+<doc-anchor-target id="opensea-storefront-ownership-transfer">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#hosted-apis">#</doc-anchor-trigger>
-        <span>Hosted APIs</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#opensea-storefront-ownership-transfer">#</doc-anchor-trigger>
+        <span>OpenSea Storefront Ownership Transfer</span>
     </h2>
 </doc-anchor-target>
-<p>As a quick overview, the main APIs that exist currently are:</p>
-<doc-anchor-target id="token-api">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#token-api">#</doc-anchor-trigger>
-        <span>Token API</span>
-    </h3>
-</doc-anchor-target>
-<p>Provides the token metadata for a given Art Blocks token.</p>
-<p>Pattern: <code v-pre>https:token.artblocks.io/{tokenID}</code><br />
-Sample: <a href="https://token.artblocks.io/0">https://token.artblocks.io/0</a></p>
-<doc-anchor-target id="generator-api">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#generator-api">#</doc-anchor-trigger>
-        <span>Generator API</span>
-    </h3>
-</doc-anchor-target>
-<p>Provides an i-frame-able live-view for the art associated with a given Art Blocks token.</p>
-<p>Pattern: <code v-pre>https://generator.artblocks.io/{tokenID}</code><br />
-Sample: <a href="https://generator.artblocks.io/0">https://generator.artblocks.io/0</a></p>
-<doc-anchor-target id="media-apimedia-server">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#media-apimedia-server">#</doc-anchor-trigger>
-        <span>Media API/Media server</span>
-    </h3>
-</doc-anchor-target>
-<p>Provides a static snapshot of the rendered live-view for a given Art Blocks token.</p>
-<p>Pattern: <code v-pre>https://media.artblocks.io/{tokenID}.png</code><br />
-Sample: <a href="https://media.artblocks.io/0.png">https://media.artblocks.io/0.png</a></p>
-<hr />
-<p>In addition to the standard static renders provided for each token, there are two other static renders currently provided: &quot;HD&quot; and &quot;thumbnail&quot;. These items can be found at:</p>
-<ul>
-<li>HD Renders – <code v-pre>https://media.artblocks.io/hd/{tokenID}.png</code></li>
-<li>Thumbnail Renders – <code v-pre>https://media.artblocks.io/thumb/{tokenID}.png</code></li>
-</ul>
-<p>Please note that these additional static render formats are still currently being back-filled and may not yet be present for all tokens. Our current recommendation for those looking to depend on the &quot;HD&quot; or &quot;thumbnail&quot; responses is to a) first attempt the HD/thumb image resource that you would pefer, b) if this resource is not available, fall back to the standard sized image resource.</p>
-<p>Please also note that the Generator API and Media API links for a given token are included in the token response for that token from the Token API.</p>
-<doc-anchor-target id="art-blocks-subgraph-via-the-graph">
+<p>After the first token has been minted on your new Powered by Art Blocks contract, you should be able to see this token in the OpenSea storefront. You will find this in the format <code v-pre>https://opensea.io/assets/{CONTRACT_ADDRESS}/{TOKEN_ID}</code> e.g. <a href="https://opensea.io/assets/0x13aae6f9599880edbb7d144bb13f1212cee99533/1000167">https://opensea.io/assets/0x13aae6f9599880edbb7d144bb13f1212cee99533/1000167</a>.</p>
+<p>Once this first token has been populated, the Art Blocks team will be able to transfer the OpenSea collection for your project over to a wallet that you control. By default, the Art Blocks team will plan to use the same address for the OpenSea collection ownership as is designated to be the admin of your smart contract. <strong>If you would prefer that the OpenSea collection be managed by a different wallet address,</strong> please reach out to the Art Blocks team to request this <strong>before the project has already been transferred to your team.</strong></p>
+<p>After your OpenSea collection has had your designated wallet added to be an administrator of the collection, you may remove the wallet that Art Blocks controls from being an additional admin, which is added automatically at the time of collection creation based on the contract deployer wallet address. We recommend that you do so, so that only you control your OpenSea storefront.</p>
+<p>If you run into any issues during this process, please reach out to the Art Blocks and/or OpenSea teams!</p>
+<doc-anchor-target id="opensea-storefront-options">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#art-blocks-subgraph-via-the-graph">#</doc-anchor-trigger>
-        <span>Art Blocks Subgraph (via The Graph)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#opensea-storefront-options">#</doc-anchor-trigger>
+        <span>OpenSea Storefront Options</span>
     </h2>
 </doc-anchor-target>
-<p>The Art Blocks mainnet subgraph on The Graph can currently be queried against via both hosted service (<a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks">https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks</a>) and via the decentralized Graph network (<a href="https://thegraph.com/explorer/subgraph?id=0x3c3cab03c83e48e2e773ef5fc86f52ad2b15a5b0-0">https://thegraph.com/explorer/subgraph?id=0x3c3cab03c83e48e2e773ef5fc86f52ad2b15a5b0-0</a>).</p>
-<p><strong>Recommandation:</strong> Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.</p>
-<doc-anchor-target id="subgraph-querying-walkthrough">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#subgraph-querying-walkthrough">#</doc-anchor-trigger>
-        <span>Subgraph Querying Walkthrough</span>
-    </h3>
-</doc-anchor-target>
-<p>The following provides some examples on how to use the Art Blocks subgraph to perform a handful of common queries.</p>
-<doc-anchor-target id="important-notes">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#important-notes">#</doc-anchor-trigger>
-        <span>Important Notes</span>
-    </h4>
-</doc-anchor-target>
-<ul>
-<li>Performance/indexing on the hosted subgraph service is oftentimes slower compared to the decentralized subgraph. That being said, the hosted subgraph is free while the decentralized one requires pay-per-query in GRT.</li>
-<li>The Art Blocks subgraphs currently also index any PBAB (Powered by Artblocks) contracts, in addition to the core Art Blocks contracts. Please keep that in mind and make use of the <code v-pre>contract_in</code> filter to ensure you are working with Art Blocks data only, if that is your intention.</li>
-<li>While querying against the subgraph if using the <code v-pre>contract_in</code> filter the Art Blocks contracts to restrict for are <code v-pre>0x059edd72cd353df5106d2b9cc5ab83a52287ac3a</code> (for the V0 contract that supports projects 0-3) and <code v-pre>0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270</code> (for the V1 contract that supports projects 4-current).</li>
-</ul>
-<doc-anchor-target id="the-basics">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#the-basics">#</doc-anchor-trigger>
-        <span>The Basics</span>
-    </h4>
-</doc-anchor-target>
-<p>Retrieving a specific Art Blocks project by short ID (no contract):</p>
+<p>For Powered by Art Blocks projects, there are two options that OpenSea is able to provide for collection organization.</p>
+<p>1. All projects are grouped in one single collection (&quot;the old Art Blocks way&quot;), where individual projects within a collection are shown as property dropdowns in the left sidebar of the OpenSea UI.</p>
+<p><figure class="content-center">
+    <img src="/static/screenshot1.png" alt="All projects in one collection." />
+    <figcaption class="caption">All projects in one collection.</figcaption>
+</figure>
+</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-graphql"><code v-pre class="language-graphql">{
-  projects(where: {projectId: &quot;0&quot;, contract_in: [&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;, &quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;]}) {
-    id
-    invocations
-    artistName
-    name
-  }
-}</code></pre>
+<pre class="language-none"><code v-pre class="language-none"> 2\. Each new project on your contract is handled as its own collection on OpenSea (&quot;the new Art Blocks way&quot;), where project traits are properties themselves.</code></pre>
 </doc-codeblock></div>
-<p>Retrieving a specific Art Blocks project by full ID (includes contract):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-graphql"><code v-pre class="language-graphql">{
-  project(id:&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
-    id
-    invocations
-    artistName
-    name
-  }
-}</code></pre>
-</doc-codeblock></div>
-<p>Retrieving a specific Art Blocks token by short ID (no contract):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-graphql"><code v-pre class="language-graphql">{
-  tokens(where: {tokenId: &quot;0&quot;, contract_in: [&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;, &quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;]}) {
-    id
-    tokenId
-  }
-}</code></pre>
-</doc-codeblock></div>
-<p>Retrieving a specific Art Blocks token by full ID (includes contract):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-graphql"><code v-pre class="language-graphql">{
-  token(id: &quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
-    id
-    tokenId
-  }
-}</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="beyond-the-basics">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#beyond-the-basics">#</doc-anchor-trigger>
-        <span>Beyond The Basics</span>
-    </h4>
-</doc-anchor-target>
-<p>Retrieve the last 5 most recently created projects across Art Blocks and Powered by Art Blocks (remember that you can use a <code v-pre>contract_in</code> filter to restrict this to only specific contracts):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-graphql"><code v-pre class="language-graphql">{
-  projects(first: 5, orderBy: createdAt, orderDirection: desc) {
-    id
-    name
-    artistName
-    invocations
-    maxInvocations
-  }
-}</code></pre>
-</doc-codeblock></div>
-<p>Retrieve the top 10 projects across Art Blocks and Powered by Art Blocks, based on # of invocations:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-graphql"><code v-pre class="language-graphql">{
-  projects(first: 10, orderBy: invocations, orderDirection: desc) {
-    id
-    name
-    artistName
-    invocations
-    maxInvocations
-  }
-}</code></pre>
-</doc-codeblock></div>
-<p>Retrieve the most recently minted Art Blocks token:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-graphql"><code v-pre class="language-graphql">{
-  tokens(first: 1, orderBy: createdAt, orderDirection: desc, where:{ contract_in: [&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;, &quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;]}) {
-    id
-    hash
-    owner {
-      id
-    }
-    project {
-      name
-      artistName
-    }
-  }
-}</code></pre>
-</doc-codeblock></div>
-<p>Retrieve all tokens owned by a specific address, across Art Blocks and Powered by Art Blocks:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-graphql"><code v-pre class="language-graphql">{
-  tokens(where: {owner: &quot;&lt;owner address&gt;&quot;}) {
-    id
-  }
-}</code></pre>
-</doc-codeblock></div>
-<p>Retrieve the general metadata/status for the Art Blocks subgraph (useful for debugging):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-graphql"><code v-pre class="language-graphql">{
-  _meta {
-    hasIndexingErrors
-    block {
-      number
-      hash
-    }
-  }
-}</code></pre>
-</doc-codeblock></div>
-<p>Pagination should be used for large queries. The Graph enforces upper limits on <code v-pre>first</code> and <code v-pre>skip</code> parameters since they generally perform poorly when set to large values (limits as of 01/2022 are <code v-pre>first&lt;=1000</code> and <code v-pre>skip&lt;=5000</code>). It is much better to page through entities based on an attribute such as token ID, block number, or some other parameter. For more information, see <a href="https://thegraph.com/docs/en/developer/graphql-api/#pagination">The Graph documentation</a></p>
+<p><figure class="content-center">
+    <img src="/static/screenshot2.png" alt="Each project as its own collection." />
+    <figcaption class="caption">Each project as its own collection.</figcaption>
+</figure>
+</p>
+<p>By default, collections are organized via method 1. above. If you would like your collection to be handled via method 2., please reach out to the Art Blocks team and we can facilitate this change being made by OpenSea on your behalf.</p>
 
 
 
@@ -428,7 +263,7 @@ Sample: <a href="https://media.artblocks.io/0.png">https://media.artblocks.io/0.
             </div>
 
             <div class="flex flex-wrap items-center justify-between mt-14">
-    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/ArtBlocks/artblocks-docs/blob/main/art-blocks-api/api-overview.md" target="_blank" rel="noopener">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/ArtBlocks/artblocks-docs/blob/main/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-opensea-setup.md" target="_blank" rel="noopener">
         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         <span>Edit this page</span>
     </a>
@@ -438,16 +273,23 @@ Sample: <a href="https://media.artblocks.io/0.png">https://media.artblocks.io/0.
 
 <nav class="flex mt-14">
     <div class="w-1/2">
-        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs/">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-partner-onboarding-steps/">
             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
             <span>
                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                <span class="block mt-1">FAQs</span>
+                <span class="block mt-1">PBAB Partner Onboarding Steps</span>
             </span>
         </a>
     </div>
 
     <div class="w-1/2">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-project-launch/">
+            <span>
+                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                <span class="block mt-1">PBAB Project Launch</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        </a>
     </div>
 </nav>
 
@@ -492,6 +334,6 @@ Sample: <a href="https://media.artblocks.io/0.png">https://media.artblocks.io/0.
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "API Overview", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+        <script>window.__DOCS__ = { "title": "PBAB OpenSea Setup", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
     </body>
 </html>
