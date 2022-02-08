@@ -1,0 +1,29 @@
+input: .
+output: .retype
+url: docs.artblocks.io/creator-docs
+
+branding:
+  title: Art Blocks
+  label: Docs
+  logo: static/squigWhiteCircle.png
+
+edit:
+  repo: https://github.com/geoffreymcgill/artblocks-docs
+
+links:
+  - text: Art Blocks
+    link: https://artblocks.io/
+    icon: home
+
+  - text: Docs
+    link: /readme.md
+    icon: file
+
+  - text: Wiki
+    link: https://artblocks.wiki/
+    icon: book
+
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved."
+
+poweredByRetype: false

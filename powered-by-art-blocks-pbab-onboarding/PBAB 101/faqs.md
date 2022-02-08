@@ -1,8 +1,6 @@
----
-description: Frequently asked questions.
----
-
 # FAQs
+
+Frequently asked questions.
 
 ## What are the current PBAB offerings?
 
