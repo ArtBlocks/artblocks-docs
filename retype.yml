@@ -8,7 +8,7 @@ branding:
   logo: static/squigWhiteCircle.png
 
 edit:
-  repo: https://github.com/geoffreymcgill/artblocks-docs
+  repo: https://github.com/ArtBlocks/artblocks-docs
 
 links:
   - text: Art Blocks
