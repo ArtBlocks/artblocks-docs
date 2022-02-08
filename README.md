@@ -1,3 +1,4 @@
 ---
-redirect: creator-onboarding/readme/readme.md
+redirect: /creator-onboarding/readme/readme.md
+visibility: hidden
 ---

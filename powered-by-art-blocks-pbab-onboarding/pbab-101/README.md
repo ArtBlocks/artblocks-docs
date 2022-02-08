@@ -1,6 +1,3 @@
----
-route: /creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/
----
 # PBAB 101
 
 A high level process-map for PBAB onboarding.

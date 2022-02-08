@@ -1,6 +1,5 @@
 ---
 order: -100
-route: /creator-docs/creator-onboarding/curated-checklist/
 description: A project checklist to walk through for Curated projects.
 ---
 # Checklist for Curated Projects
