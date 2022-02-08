@@ -1,6 +1,6 @@
 ---
 order: 800
-route: /creator-docs/creator-onboarding/readme/faqs/
+# route: /creator-docs/creator-onboarding/readme/faqs/
 description: Frequently asked questions.
 ---
 # FAQs

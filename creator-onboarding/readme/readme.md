@@ -1,5 +1,5 @@
 ---
-route: /creator-docs/creator-onboarding/readme/
+# route: /creator-docs/creator-onboarding/readme/
 ---
 # Art Blocks 101 for Creators
 

@@ -1,5 +1,5 @@
 ---
-route: /creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs
+# route: /creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs
 ---
 # FAQs
 
