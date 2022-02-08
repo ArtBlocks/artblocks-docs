@@ -1,5 +1,6 @@
 ---
 order: -200
+route: /creator-docs/creator-onboarding/factory-checklist/
 description: A project checklist to walk through for Factory/Playground projects.
 ---
 # Checklist for Factory/Playground Projects

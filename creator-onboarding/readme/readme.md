@@ -1,3 +1,6 @@
+---
+route: /creator-docs/creator-onboarding/readme/
+---
 # Art Blocks 101 for Creators
 
 A guide on getting started as a creator with Art Blocks.

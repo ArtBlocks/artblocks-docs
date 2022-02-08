@@ -1,3 +1,3 @@
 ---
-redirect: creator-onboarding/readme/
+redirect: creator-onboarding/readme/readme.md
 ---

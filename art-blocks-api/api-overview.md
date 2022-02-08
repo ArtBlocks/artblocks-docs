@@ -1,3 +1,6 @@
+---
+route: /creator-docs/art-blocks-api/api-overview/
+---
 # API Overview
 
 An overview of the current Art Blocks APIs.
