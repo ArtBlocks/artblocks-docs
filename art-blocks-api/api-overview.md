@@ -44,7 +44,14 @@ Please also note that the Generator API and Media API links for a given token ar
 
 ## Art Blocks Subgraph (via The Graph)
 
-The Art Blocks mainnet subgraph on The Graph can currently be queried against via both hosted service (https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks) and via the decentralized Graph network (https://thegraph.com/explorer/subgraph?id=0x3c3cab03c83e48e2e773ef5fc86f52ad2b15a5b0-0).
+The Art Blocks mainnet subgraph on The Graph can currently be queried a few ways:
+
+| The Graph Service | Art Blocks Data | Limited Secondary Sales Data | URL |
+| --- | --- | --- | --- |
+| Hosted Service | Yes | No | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks |
+| Hosted Service | Yes | Yes^[1] | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-with-secondary |
+| Decentralized Graph Network | Yes | No | https://thegraph.com/explorer/subgraph?id=0x3c3cab03c83e48e2e773ef5fc86f52ad2b15a5b0-0 |
+>[1] Currently limited to OpenSea
 
 **Recommandation:** Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.
 
