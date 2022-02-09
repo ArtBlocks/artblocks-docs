@@ -24,12 +24,12 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.11.2.697667642825" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.11.2.697751043122" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697667642825" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697751043122" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697667642825" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.11.2.697667642825" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697751043122" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.11.2.697751043122" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -262,7 +262,42 @@ Sample: <a href="https://media.artblocks.io/0.png">https://media.artblocks.io/0.
         <span>Art Blocks Subgraph (via The Graph)</span>
     </h2>
 </doc-anchor-target>
-<p>The Art Blocks mainnet subgraph on The Graph can currently be queried against via both hosted service (<a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks">https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks</a>) and via the decentralized Graph network (<a href="https://thegraph.com/explorer/subgraph?id=0x3c3cab03c83e48e2e773ef5fc86f52ad2b15a5b0-0">https://thegraph.com/explorer/subgraph?id=0x3c3cab03c83e48e2e773ef5fc86f52ad2b15a5b0-0</a>).</p>
+<p>The Art Blocks mainnet subgraph on The Graph can currently be queried a few ways:</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>The Graph Service</th>
+<th>Art Blocks Data</th>
+<th>Limited Secondary Sales Data</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hosted Service</td>
+<td>Yes</td>
+<td>No</td>
+<td><a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks">https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks</a></td>
+</tr>
+<tr>
+<td>Hosted Service</td>
+<td>Yes</td>
+<td>Yes^[1]</td>
+<td><a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-with-secondary">https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-with-secondary</a></td>
+</tr>
+<tr>
+<td>Decentralized Graph Network</td>
+<td>Yes</td>
+<td>No</td>
+<td><a href="https://thegraph.com/explorer/subgraph?id=0x3c3cab03c83e48e2e773ef5fc86f52ad2b15a5b0-0">https://thegraph.com/explorer/subgraph?id=0x3c3cab03c83e48e2e773ef5fc86f52ad2b15a5b0-0</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>[1] Currently limited to OpenSea</p>
+</blockquote>
 <p><strong>Recommandation:</strong> Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.</p>
 <doc-anchor-target id="subgraph-querying-walkthrough">
     <h3>
