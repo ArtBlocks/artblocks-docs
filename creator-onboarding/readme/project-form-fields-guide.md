@@ -91,7 +91,7 @@ Select your script type and the version number of that dependency from the drop 
 
 ### Aspect ratio (width / height)*
 
-Your project’s outputs must be dimension agnostic, meaning it scales seamlessly to any window size. See more on this [here](/readme.md#dimensionless). This field is used to set the aspect ratio for image renders, but does not have any impact on an output’s live view.
+Your project’s outputs must be dimension agnostic, meaning it scales seamlessly to any window size. See more on this [here](readme.md#dimensionless). This field is used to set the aspect ratio for image renders, but does not have any impact on an output’s live view.
 
 While you can control the aspect ratio, you will have no control over the dimensions of the browser someone else might be using.
 

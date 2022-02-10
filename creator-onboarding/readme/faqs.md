@@ -124,7 +124,7 @@ No, this is not currently possible. You'll need to be signed in with your wallet
 
 ## How much money / ETH do I need to upload my project?
 
-The cost depends on the complexity of your project and how many lines of code it requires. See [here](/readme.md#cost) for more specific information about how to budget for a drop.
+The cost depends on the complexity of your project and how many lines of code it requires. See [here](readme.md#cost) for more specific information about how to budget for a drop.
 
 ---
 
