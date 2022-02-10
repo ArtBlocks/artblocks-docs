@@ -24,11 +24,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.11.2.697752755586" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.11.2.697849022407" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697752755586" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697849022407" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697752755586" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697849022407" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -218,16 +218,16 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li>Please ensure that you have reviewed and abided by our <a href="readme.md#documentation">Documentation</a> and <a href="readme.md#guidelines-and-constraints">Guidelines &amp; Constraints</a>. If you are assigning rarity to different things, Art Blocks strongly recommends that you use an instance of the Random class found <a href="readme.md#safely-deriving-randomness-from-the-token-hash">here</a> to feed all of your project&#x27;s randomness. Prior to uploading, please verify that your script meets this requirement.</li>
-<li>Ensure your wallet is funded with enough ETH to pay the gas fees for the upload and unpausing process. For more information on the estimated cost of these steps, <a href="readme.md#cost">click here.</a></li>
+<li>Please ensure that you have reviewed and abided by our <a href="../readme/#documentation">Documentation</a> and <a href="../readme/#guidelines-and-constraints">Guidelines &amp; Constraints</a>. If you are assigning rarity to different things, Art Blocks strongly recommends that you use an instance of the Random class found <a href="../readme/#safely-deriving-randomness-from-the-token-hash">here</a> to feed all of your project&#x27;s randomness. Prior to uploading, please verify that your script meets this requirement.</li>
+<li>Ensure your wallet is funded with enough ETH to pay the gas fees for the upload and unpausing process. For more information on the estimated cost of these steps, <a href="../readme/#cost">click here.</a></li>
 <li>Submit one field at a time. Wait for that transaction to clear before attempting the next field.</li>
 <li>When you upload your script, please copy it exactly from testnet.</li>
 <li>Include the following in the Project Base URI field: <code v-pre>https://api.artblocks.io/token/</code>
 <ul>
-<li><strong>Important:</strong> If you are setting this field for a PBAB project, rather than an Art Blocks project directly, the <code v-pre>baseTokenURI</code> field should follow a slightly different structure. Please see the <a href="powered-by-art-blocks-pbab-onboarding/adding-new-project-shells.md">PBAB documentation</a> for more info.</li>
+<li><strong>Important:</strong> If you are setting this field for a PBAB project, rather than an Art Blocks project directly, the <code v-pre>baseTokenURI</code> field should follow a slightly different structure. Please see the <a href="../../powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells/">PBAB documentation</a> for more info.</li>
 </ul>
 </li>
-<li>As <a href="readme.md">noted in the main documentation overview</a>, please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field <strong>should not</strong> be set if you are accepting ETH as your payment type.</li>
+<li>As <a href="../readme/">noted in the main documentation overview</a>, please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field <strong>should not</strong> be set if you are accepting ETH as your payment type.</li>
 <li>Please double-check, triple-check, and then check again the generated <a href="../readme/features/">features script</a> results on staging to ensure they are 100% accurate. This is <strong>extremely important</strong> to get right, as it changes to fix any bugs you may introduce in this script may have massive impact on how the artwork is perceived by collectors and may cause confusion in the secondary market. It is <strong>your responsibility</strong> to guarantee that your features script is properly verified in the artist staging environment.</li>
 </ol>
 <doc-anchor-target id="features">
@@ -237,7 +237,7 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li>Please see <a href="creator-onboarding/features.md">Features</a> for full details on how you set your project features as an artist.</li>
+<li>Please see <a href="../readme/features/">Features</a> for full details on how you set your project features as an artist.</li>
 <li>The features script for your project should first be tested on the Ropsten testnet (<a href="https://artist-staging.artblocks.io">https://artist-staging.artblocks.io</a>), alongside your art script. Ensure that your features are being displayed as expected on testnet before proceeding to project deployment to mainnet.</li>
 <li>When uploading your feature script to mainnet (<a href="https://www.artblocks.io/">https://www.artblocks.io/</a>), please ensure that you are uploading the exact same features script, taking the same care that you would with your art script itself.</li>
 <li>While the features script <em>is not</em> stored on-chain like the art script is, bugs in your features script will cause meaningful disruptions for collectors trying to explore your work on a per-feature basis.</li>

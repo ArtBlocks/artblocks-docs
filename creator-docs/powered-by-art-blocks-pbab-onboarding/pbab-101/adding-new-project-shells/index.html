@@ -26,11 +26,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.11.2.697752755586" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.11.2.697849022407" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697752755586" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.697849022407" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697752755586" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.697849022407" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -214,7 +214,7 @@
 <li>If you are having trouble finding your project on the Ropsten Art Blocks site, you should be able to navigate to it directly with by entering in your browser a URL of the format: <code v-pre>https://artist-staging.artblocks.io/project/{CONTRACT_ADDRESS}-{PROJECT_ID}</code> (e.g. for the first project shell on your PBAB core contract, the <code v-pre>{PROJECT_ID}</code> would be <code v-pre>0</code>, then <code v-pre>1</code>, then <code v-pre>2</code>, etc.).</li>
 <li>If you are having trouble seeing your project on the corresponding-network&#x27;s Art Blocks site, first try disconnecting and reconnecting your wallet to the site, ensuring that you are connected with the previously specified artist wallet.</li>
 <li>When asked to provide the <code v-pre>baseTokenURI</code> for your project, this should be <code v-pre>https://token.artblocks.io/{CONTRACT_ADDRESS}/</code>, where <code v-pre>{CONTRACT_ADDRESS}</code> is the address of <strong>the core contract</strong> for your PBAB project (e.g. <code v-pre>0x06710498339b30834653459Ac90F52Cbd2F1D085</code> for the project linked above in step 2.). For the Ropsten testnet, this should be <code v-pre>https://token.staging.artblocks.io/{CONTRACT_ADDRESS}/</code>.</li>
-<li>Generally speaking, the <a href="/">Art Blocks 101 for Creators guide</a> should be broadly applicable to this onboarding step for PBAB-partner-platform artists.</li>
+<li>Generally speaking, the <a href="/creator-docs/creator-onboarding/readme/">Art Blocks 101 for Creators guide</a> should be broadly applicable to this onboarding step for PBAB-partner-platform artists.</li>
 </ul>
 </li>
 </ol>
