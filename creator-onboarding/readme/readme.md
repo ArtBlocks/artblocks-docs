@@ -287,4 +287,4 @@ Once your project is selected to be included in one of the Art Blocks collection
 
 This script is essentially a copy of your rendering script but without any dependencies present (the server won't have access to them).
 
-For full details on how to structure your project features, please see [Art Blocks Features Script](creator-onboarding/readme/features.md#features-overview).
+For full details on how to structure your project features, please see [Art Blocks Features Script](features.md#features-overview).
