@@ -6,23 +6,21 @@
     <meta name="turbo-cache-control" content="no-cache">
 
     <!-- Primary Meta Tags -->
-    <title>Project Shell Deployment Guide</title>
-    <meta name="title" content="Project Shell Deployment Guide">
-    <meta name="description" content="An overview of how to deploy a new project on your custom PBAB contract." />
+    <title>Project Pricing Model</title>
+    <meta name="title" content="Project Pricing Model">
+    <meta name="description" content="Art Blocks Project Pricing Model" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells/">
-    <meta property="og:title" content="Project Shell Deployment Guide">
-    <meta property="og:description" content="An overview of how to deploy a new project on your custom PBAB contract.">
-    <meta property="og:image" content="https://docs.artblocks.io/static/screenshot3.png">
+    <meta property="og:url" content="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/">
+    <meta property="og:title" content="Project Pricing Model">
+    <meta property="og:description" content="Art Blocks Project Pricing Model">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells/">
-    <meta property="twitter:title" content="Project Shell Deployment Guide">
-    <meta property="twitter:description" content="An overview of how to deploy a new project on your custom PBAB contract.">
-    <meta property="twitter:image" content="https://docs.artblocks.io/static/screenshot3.png">
+    <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/">
+    <meta property="twitter:title" content="Project Pricing Model">
+    <meta property="twitter:description" content="Art Blocks Project Pricing Model">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -191,33 +189,13 @@
                 <div id="docs-sidebar-right-toggle"></div>
                
                 <!-- Page content  -->
-<doc-anchor-target id="project-shell-deployment-guide" class="break-words">
+<doc-anchor-target id="project-pricing-model" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#project-shell-deployment-guide">#</doc-anchor-trigger>
-        <span>Project Shell Deployment Guide</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-pricing-model">#</doc-anchor-trigger>
+        <span>Project Pricing Model</span>
     </h1>
 </doc-anchor-target>
-<p>An overview of how to deploy a new project on your custom PBAB contract.</p>
-<ol>
-<li>Collect 3 pieces of information for the to-be-deployed project on your PBAB contract.
-<ol>
-<li>The project title (e.g. &quot;Fun Lines&quot;)</li>
-<li>The artist wallet address, this will determine which address has access to configure the project from within the Art Blocks artist interface, (e.g. <code v-pre>0x78592a6fBE68fEBf226040a5D25ad7e69F2FeAb6</code>).</li>
-<li>The price-per-mint, this will need to be specified <a href="https://eth-converter.com"><strong>in WEI</strong></a>, (e.g. <code v-pre>350000000000000000</code>, which is 0.35 in ETH).</li>
-</ol>
-</li>
-<li>Navigate to your PBAB Core Contract on Etherscan (e.g. <a href="https://ropsten.etherscan.io/address/0x06710498339b30834653459Ac90F52Cbd2F1D085#code">https://ropsten.etherscan.io/address/0x06710498339b30834653459Ac90F52Cbd2F1D085#code</a>).</li>
-<li>Navigate to the &quot;Write contract&quot; tab and connect your wallet to Etherscan.<img src="/static/screenshot3.png" alt="" /></li>
-<li>Use the <code v-pre>addProject</code> method to create a new project shell, specifying the information initially collected (as defined in 1. above).</li>
-<li>Once 4. has been completed, when connected to the Art Blocks website (<a href="https://artist-staging.artblocks.io">https://artist-staging.artblocks.io</a> for Ropsten, and <a href="https://artblocks.io">https://artblocks.io</a> for mainnet), <strong>with the artist wallet</strong> used in step 4., your artist should be able to begin entering their project details.
-<ul>
-<li>If you are having trouble finding your project on the Ropsten Art Blocks site, you should be able to navigate to it directly with by entering in your browser a URL of the format: <code v-pre>https://artist-staging.artblocks.io/project/{CONTRACT_ADDRESS}-{PROJECT_ID}</code> (e.g. for the first project shell on your PBAB core contract, the <code v-pre>{PROJECT_ID}</code> would be <code v-pre>0</code>, then <code v-pre>1</code>, then <code v-pre>2</code>, etc.).</li>
-<li>If you are having trouble seeing your project on the corresponding-network&#x27;s Art Blocks site, first try disconnecting and reconnecting your wallet to the site, ensuring that you are connected with the previously specified artist wallet.</li>
-<li>When asked to provide the <code v-pre>baseTokenURI</code> for your project, this should be <code v-pre>https://token.artblocks.io/{CONTRACT_ADDRESS}/</code>, where <code v-pre>{CONTRACT_ADDRESS}</code> is the address of <strong>the core contract</strong> for your PBAB project (e.g. <code v-pre>0x06710498339b30834653459Ac90F52Cbd2F1D085</code> for the project linked above in step 2.). For the Ropsten testnet, this should be <code v-pre>https://token.staging.artblocks.io/{CONTRACT_ADDRESS}/</code>.</li>
-<li>Generally speaking, the <a href="/creator-docs/creator-onboarding/readme/">Art Blocks 101 for Creators guide</a> should be broadly applicable to this onboarding step for PBAB-partner-platform artists.</li>
-</ul>
-</li>
-</ol>
+<p>This page is currently under contruction. Coming soon...</p>
 
 
 
@@ -227,7 +205,7 @@
             </div>
 
             <div class="flex flex-wrap items-center justify-between mt-14">
-    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/ArtBlocks/artblocks-docs/blob/main/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells.md" target="_blank" rel="noopener">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/ArtBlocks/artblocks-docs/blob/main/creator-onboarding/readme/project-pricing-model.md" target="_blank" rel="noopener">
         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         <span>Edit this page</span>
     </a>
@@ -237,17 +215,17 @@
 
 <nav class="flex mt-14">
     <div class="w-1/2">
-        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-project-launch/">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/creator-onboarding/readme/project-form-fields-guide/">
             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
             <span>
                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                <span class="block mt-1">PBAB Project Launch</span>
+                <span class="block mt-1">Project Form Fields Guide</span>
             </span>
         </a>
     </div>
 
     <div class="w-1/2">
-        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs/">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/creator-docs/creator-onboarding/readme/faqs/">
             <span>
                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
                 <span class="block mt-1">FAQs</span>
@@ -298,6 +276,6 @@
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Project Shell Deployment Guide", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+        <script>window.__DOCS__ = { "title": "Project Pricing Model", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
     </body>
 </html>
