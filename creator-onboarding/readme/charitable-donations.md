@@ -4,7 +4,7 @@ description: Charitable Donation Information
 ---
 # Charitable Donation Information
 
-To maintain our commitment to charitable giving, we ask artists to donate 25% of all profits above resting price via dutch auction to a charity of their choice. To whom and how donations are made is completely up to the artist. Below answers a number of common questions about how to donate and where to find crypto-friendly charities. 
+To maintain our commitment to charitable giving, we ask artists to donate 25% of profits above resting price via dutch auction to a charity of their choice. To whom and how donations are made is completely up to the artist. Below answers a number of common questions about how to donate and where to find crypto-friendly charities. 
 
 
 ## Where can I find a list of charities that accept crypto donations?
