@@ -204,7 +204,7 @@ OpenSea is the exception to this. OpenSea will collect royalties on the secondar
 
 ## Am I required to donate 25% to charity?
 
-To maintain our commitment to charitable giving, we ask all artists to donate 25% of all sales above 0.25 ETH to a charity of their choice. Once the price drops below 0.25 ETH, the charity component is optional. Beyond that, to whom and how you donate is up to you. When a project only has one artist, they often use the additional payee field to manage on-chain donations. But all revenue can be routed to a single wallet and donated after the fact. We highly recommend consulting with a tax professional to understand your local tax liability, especially if you plan to personally receive all funds before donating.
+To maintain our commitment to charitable giving, we ask artists to donate 25% of all profits above resting price via dutch auction to a charity of their choice. To whom and how you donate is completely up to you. When a project only has one artist, they often use the additional payee field to manage on-chain donations. If using the additional payee field for donations, this field can be cleared before lowering to resting price. All revenue can also be routed to a single wallet and donated after the fact. We highly recommend consulting with a tax professional to understand your local tax liability, especially if you plan to personally receive all funds before donating.
 
 ---
 
@@ -216,7 +216,7 @@ If the charity you’d like to donate to is not crypto-friendly, we recommend ch
 
 ---
 
-## How should I donate to charity?
+## How can I donate to charity?
 
 Here are a few donation options:
 
@@ -236,7 +236,7 @@ If you’d like to receive all funds from your project’s sale in your primary 
 
 ---
 
-## How do I remove my charitable giving information from the additional payee field mid-Dutch Auction?
+## How do I remove charitable giving information from the additional payee field mid-Dutch Auction?
 
 If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier. These fields cannot be blank once the dutch auction has begun.
 
@@ -254,7 +254,7 @@ You can also check out our [After Dinner Mints episode](https://www.youtube.com/
 
 ## Is there a place I can connect with other artists and chat?
 
-All artists are added to the artist-exclusive #artist-lounge channel in Discord where you can interact with other Art Blocks artists, share projects, and ask questions. We also encourage artists to participate in our Discord community. If you're selected for a curated drop, you'll have your own artist channel dedicated to focused discussions on your work. If you're selected for a factory drop, you can chat with artists and collectors in the #factory-projects channel.
+All artists are added to the artist-exclusive #artist-general channel in Discord where you can interact with other Art Blocks artists, share projects, and ask questions. We also encourage artists to participate in our Discord community. If you're selected for a curated drop, you'll have your own artist channel dedicated to focused discussions on your work. If you're selected for a factory drop, you can chat with artists and collectors in the #factory-projects channel.
 
 ---
 
