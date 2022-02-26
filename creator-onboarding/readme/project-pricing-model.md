@@ -4,6 +4,10 @@ description: Art Blocks Project Pricing Model
 ---
 # Project Pricing Model
 
+This resource defines Art Blocks project pricing model. This resource is intended for artists as they are determining their project's series size and price per token. 
+
+---
+
 Art Blocks has imposed overall total value limitations to each release. You are not required or even encouraged to consume the project category's entire total value. Consider your audience and the breadth of your project/mints and decide what’s best for you. This price model should serve as a baseline for determining your project's size and price. 
 
 Projects are broken up into categories (first factory, factory return, playground, and curated) and each is assigned a maximum resting value that guides the selection of project size in relation to resting price. The maximum resting value is the total value that a project can generate at its resting price. This is calculated by multiplying the series size by the resting price. For Dutch auctions, the resting price is the final price tier of the auction sequence. For fixed price sales, the resting price is equivalent to the fixed price. 
