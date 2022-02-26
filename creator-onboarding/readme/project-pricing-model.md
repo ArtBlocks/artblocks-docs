@@ -27,7 +27,7 @@ Examples all with a maximum resting value of 60 ETH (Factory Return):
 * 250 outputs sold at a fixed price of 0.24 (250 x 0.24 = 60)
 * 1000 outputs sold via dutch auction tiers 0.4 > 0.28 > 0.16 > 0.1 > 0.06 (1000 x 0.06 = 60)
 
-_Do note that this price structure does not affect the establishment of dutch auction starting price and tiers. Artists can design their dutch auction tiers as they'd like._
+_Do note that this price structure does not affect the establishment of dutch auction starting price and tiers. Artists can design their dutch auction tiers as they'd like. Artists are also not limited to the series size options outlined in the above chart._
 
 You are not required or even encouraged to consume the project category's entire total value. Consider your audience and breadth of your project/mints and decide what’s best for you. Keep in mind there is a two month cooldown period after a release is complete before you can deploy another project.
 
