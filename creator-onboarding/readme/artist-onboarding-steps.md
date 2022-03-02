@@ -15,7 +15,7 @@ Due to the surge in Art Blocks popularity, applications may take up to several m
 
 ## 2. Script test runs and project review
 
-Our Creative Team will ask you for an updated version of your project if available and will screen your application and working prototype. Based on this, we will  decide whether to move forward with a launch on Art Blocks.
+Our Creative Team will reach out via the email address on your application form. We will ask you for an updated version of your project if available and will screen your application and working prototype. Based on this, we will  decide whether to move forward with a launch on Art Blocks.
 
 If your project is selected, you'll move into the Creator Terms step. If it is not selected, you'll receive brief feedback and be invited to apply again during our next application cycle.
 
