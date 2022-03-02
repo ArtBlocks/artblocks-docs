@@ -24,12 +24,12 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.11.2.699157157883" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.11.2.699552663680" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.699157157883" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.699552663680" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.699157157883" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.11.2.699157157883" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.699552663680" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.11.2.699552663680" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -197,6 +197,8 @@
     </h1>
 </doc-anchor-target>
 <p>A guide on getting started as a creator with Art Blocks.</p>
+<p><span class="docs-emoji">&#x1F4E2;</span> !!!
+<strong>The primary audience for this document are artists who have already entered the pipeline for launching a project on Art Blocks. If you are currently waiting in the applications queue for Art Blocks, this documentation will hopefully provide a helpful guide for you in terms of what to expect, but many of the steps here will not be actionable for you until you have had a project shell set up by the Art Blocks team.</strong></p>
 <div class="flex mb-6">
     <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -210,10 +212,7 @@
             </svg>
         </div>
         <div class="pr-5 ml-3">
-<p>The primary audience for this document are artists who have already entered the pipeline for launching a project on Art Blocks. If you are currently waiting in the applications queue for Art Blocks, this documentation will hopefully provide a helpful guide for you in terms of what to expect, but many of the steps here will not be actionable for you until you have had a project shell set up by the Art Blocks team.</p>
-        </div>
-    </div>
-</div>
+<p><span class="docs-emoji">&#x1F4E2;</span> <strong>Note:</strong> <em><strong>You will likely need to tweak/optimize your project code to get it working in the Art Blocks environment.</strong> Specifically, static images are rendered for all projects (used as thumbnails, on other platforms, etc.). To generate these, Art Blocks currently uses compute instances running headless Chromium with <a href="https://github.com/puppeteer/puppeteer">Puppeteer</a>. Headless Chromium requires the use of <a href="https://swiftshader.googlesource.com/SwiftShader/+/HEAD/docs/Index.md">SwiftShader</a>, a CPU implementation of the GPU API. This means GPU intensive projects will render slower and may require code optimization and performance improvements from the artist.</em></p>
 <doc-anchor-target id="documentation">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#documentation">#</doc-anchor-trigger>
@@ -563,6 +562,9 @@ function setup() {
 <p>Once your project is selected to be included in one of the Art Blocks collections, the onboarding team will help you with this. The one thing to keep in mind is that all of the attributes you want displayed should be directly generated from the transaction hash and should not depend on any other randomness.</p>
 <p>This script is essentially a copy of your rendering script but without any dependencies present (the server won&#x27;t have access to them).</p>
 <p>For full details on how to structure your project features, please see <a href="features/#features-overview">Art Blocks Features Script</a>.</p>
+        </div>
+    </div>
+</div>
 
 
 
