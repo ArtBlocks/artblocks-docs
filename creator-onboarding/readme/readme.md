@@ -3,11 +3,11 @@
 A guide on getting started as a creator with Art Blocks.
 
 !!!
-**The primary audience for this document are artists who have already entered the pipeline for launching a project on Art Blocks. If you are an artist currently waiting in the applications queue or applying to Art Blocks, this documentation will provide a helpful guide for you in terms of what to expect, but many of the steps here will not be actionable for you until you have had a project shell set up by the Art Blocks team.**
+**The primary audience for this document is artists who have already entered the pipeline for launching a project on Art Blocks. If you are an artist currently waiting in the applications queue or applying to Art Blocks, this documentation will provide a helpful guide for you in terms of what to expect, but many of the steps here will not be actionable for you until you have had a project shell set up by the Art Blocks team.**
 !!!
 
 !!!
-**Artists will likely need to tweak/optimize their project code to get it working in the Art Blocks environment.** Specifically, static images are rendered for all projects (used as thumbnails, on other platforms, etc.). To generate these, Art Blocks currently uses compute instances running headless Chromium with [Puppeteer](https://github.com/puppeteer/puppeteer). Headless Chromium requires the use of [SwiftShader](https://swiftshader.googlesource.com/SwiftShader/+/HEAD/docs/Index.md), a CPU implementation of the GPU API. This means GPU intensive projects will render slower and may require code optimization and performance improvements from the artist._
+**Artists will likely need to tweak/optimize their project code to get it working in the Art Blocks environment.** Specifically, static images are rendered for all projects (used as thumbnails, on other platforms, etc.). To generate these, Art Blocks currently uses compute instances running headless Chromium with [Puppeteer](https://github.com/puppeteer/puppeteer). Headless Chromium requires the use of [SwiftShader](https://swiftshader.googlesource.com/SwiftShader/+/HEAD/docs/Index.md), a CPU implementation of the GPU API. This means GPU intensive projects will render slower and may require code optimization and performance improvements from the artist.
 !!!
 
 ## Documentation
