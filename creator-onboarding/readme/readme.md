@@ -7,7 +7,7 @@ A guide on getting started as a creator with Art Blocks.
 !!!
 
 !!!
-**Artists will likely need to tweak/optimize their project code to get it working in the Art Blocks environment.** Specifically, static images are rendered for all projects (used as thumbnails, on other platforms, etc.). To generate these, Art Blocks currently uses compute instances running headless Chromium with [Puppeteer](https://github.com/puppeteer/puppeteer). Headless Chromium requires the use of [SwiftShader](https://swiftshader.googlesource.com/SwiftShader/+/HEAD/docs/Index.md), a CPU implementation of the GPU API. This means GPU intensive projects will render slower and may require code optimization and performance improvements from the artist.
+**Artists will likely need to tweak/optimize their project code to get it working in the Art Blocks environment.** Specifically, static images are rendered for all projects (used as thumbnails, on other platforms, etc.). To generate these, Art Blocks currently uses compute instances running headless Chromium with [Puppeteer](https://github.com/puppeteer/puppeteer). Headless Chromium requires the use of [SwiftShader](https://swiftshader.googlesource.com/SwiftShader/+/HEAD/docs/Index.md), a CPU implementation of the GPU API. This means GPU intensive projects will render slower and may require code optimization and performance improvements from the artist. To closely replicate this environment on your end while developing, we recommend using Chrome and turning **off** "Use Hardware Acceleration" in Settings.
 !!!
 
 ## Documentation
