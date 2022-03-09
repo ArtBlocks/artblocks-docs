@@ -34,9 +34,9 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 
 ## Charity Component
 
-* To maintain our commitment to charitable giving, we ask all artists to donate 25% of all sales above 0.25 ETH to a charity of your choice. Once the price drops below 0.25 ETH, the charity component is optional. If this applies to your works, please determine your charity of choice before mint #0.
-* To whom and how you donate is up to you. If you are a single artist, you may use the additional payee field to manage on-chain donations. All revenue can also be routed to a single wallet and donated after your drop. We highly recommend consulting with a tax professional to understand your local tax liability, especially if you plan to personally receive all funds before donating.
-* To find a list of charities that accept crypto donations, you can ask for advice in [!badge #artist-general] and check the pinned messages for a charity guide.
+* To maintain our commitment to charitable giving, we ask artists to donate 25% of profits above resting price via dutch auction to a charity of their choice. If this applies to your works, please determine your charity of choice before mint #0.
+* To whom and how you donate is up to you. If you are a single artist, you may use the additional payee field to manage on-chain donations. All revenue can also be routed to a single wallet and donated after your drop. We highly recommend consulting with a tax professional to understand your local tax liability, especially if you plan to personally receive all funds before donating. Please see additional information on how to donate in our [Charitable Donation Information Guide](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/charitable-donations/#how-can-i-donate-to-charity)
+* To find a list of charities that accept crypto donations, you can ask for advice in [!label #artist-general] and check the pinned messages for a charity guide.
 
 ## Mint #0
 
@@ -65,7 +65,7 @@ Once scheduled, you will have the option to make your Ropsten shell public to co
 
 * Dutch auction prices will need to be manually changed by the artist every 5 minutes. To change the token price during a dutch auction, you will need to adjust the 'price per token' field and click Submit.
 * If using a dutch auction drop mechanic, send in the tx 30 seconds before the 5 minute mark. You will want to use 2x or more what is suggested as high gas on https://etherscan.io/gastracker), but please keep an eye on gas as there are times when gas can spike, in which case you will need to speed up the tx. If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.
-* If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier.
+* If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing to your resting price, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier.
 
 ## Rarities
 
