@@ -67,7 +67,7 @@ Once scheduled, you will have the option to make your Ropsten shell public to co
 
 * Dutch auction prices will need to be manually changed by the artist every 5 minutes. To change the token price during a dutch auction, you will need to adjust the 'price per token' field and click Submit.
 * If using a dutch auction drop mechanic, send in the tx 30 seconds before the 5 minute mark. You will want to use 2x or more what is suggested as high gas on https://etherscan.io/gastracker), but please keep an eye on gas as there are times when gas can spike, in which case you will need to speed up the tx. If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.
-* If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier.
+* If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing to your resting price, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier.
 
 ## Rarities
 
