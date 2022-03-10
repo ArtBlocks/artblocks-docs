@@ -41,7 +41,7 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 ## Mint #0
 
 1. **Before** minting mint #0, ensure that your "additional payee wallet" has been set for the same configuration that you will use it for in your project release. E.g., if you are using the "additional payee wallet" field to donate to charity at the time of mint, you must set this before minting your #0. This is done to ensure that this full functionality is tested end-to-end as part of the mint #0 process, and that there are no issues with the wallet selected for the additional payee.
-2. Once your project information has been uploaded, please confirm that you're ready for mint #0.
+2. Once your project information has been uploaded, contact your artist liaison and let them know it's ready. They will instruct you when to proceed with the first mint.
 3. Mint #0 should occur at least 48 hours in advance of your scheduled release.
 
 ## Scheduling
