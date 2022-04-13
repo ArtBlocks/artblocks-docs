@@ -1,5 +1,5 @@
 # Artblocks Viewer
-This is the main repo for [live.artblocks.io](https://live.artblocks.io/) It is built using [Preact](https://github.com/developit/preact-cli/blob/master/README.md). The data is populated by querying the Graphql API endpoints hosted on hasura.
+An overview of [live.artblocks.io](https://live.artblocks.io/)
 
 ## Routes
 >All routes are for the environment specified in .env file and act as such. i.e. Ropsten contracts will not work on mainnet and vice versa
