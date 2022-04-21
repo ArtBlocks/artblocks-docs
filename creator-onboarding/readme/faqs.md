@@ -202,9 +202,9 @@ OpenSea is the exception to this. OpenSea will collect royalties on the secondar
 
 ---
 
-## Am I required to donate 25% to charity?
+## What is Art Blocks commitment to charitable giving?
 
-To maintain our commitment to charitable giving, we ask artists to donate 25% of all profits above resting price via dutch auction to a charity of their choice. To whom and how you donate is completely up to you. When a project only has one artist, they often use the additional payee field to manage on-chain donations. If using the additional payee field for donations, this field can be cleared before lowering to resting price. All revenue can also be routed to a single wallet and donated after the fact. We highly recommend consulting with a tax professional to understand your local tax liability, especially if you plan to personally receive all funds before donating.
+To maintain our commitment to charitable giving, we ask artists to consider donating 25% of profits above resting price via Dutch auction to an eligible charity of their choice. If this applies to your works, please determine your eligible charity of choice before mint #0. To whom and how you donate is up to you but you should consider whether the charity or the cause you are donating to qualifies under United States tax laws as a charity/cause that is qualified to receive tax-deductible donations. If you are a single artist, you may use the additional payee field to manage on-chain donations. All revenue may also be routed to a single wallet and donated after your drop. We highly recommend consulting with a tax professional to understand your local tax liability, especially if you plan to personally receive all funds before donating.
 
 ---
 
