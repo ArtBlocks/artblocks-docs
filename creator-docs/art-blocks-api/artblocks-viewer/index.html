@@ -27,11 +27,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.703825308276" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.704331043838" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.703825308276" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.704331043838" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.703825308276" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.704331043838" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -205,15 +205,15 @@
 </blockquote>
 <p><strong>live.artblocks.io/</strong>
 Home page of the site which returns the latest <em>rendered</em> minted token from any of the Art Blocks contracts</p>
-<p CONTRACT_ADDRESS=""><strong>live.artblocks.io/</strong> enter any Art Blocks or PBAB contract and you be presented with the latest <em>rendered</em> mint.</p>
+<p><strong>live.artblocks.io/<code v-pre>{CONTRACT_ADDRESS}</code></strong> enter any Art Blocks or PBAB contract and you be presented with the latest <em>rendered</em> mint.</p>
 <ul>
 <li><em>Example:</em> Latest Artblocks_VO mint <a href="https://live.artblocks.io/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a">https://live.artblocks.io/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a</a></li>
 </ul>
-<p CONTRACT_ADDRESS="" PROJECT_INDEX=""><strong>live.artblocks.io//</strong> enter any Art Blocks or PBAB contract followed by the index of the project and you be presented with the latest <em>rendered</em> mint.</p>
+<p><strong>live.artblocks.io/<code v-pre>{CONTRACT_ADDRESS}</code>/<code v-pre>{PROJECT_INDEX}</code></strong> enter any Art Blocks or PBAB contract followed by the index of the project and you be presented with the latest <em>rendered</em> mint.</p>
 <ul>
 <li><em>Example:</em> Latest Chromie Squiggle mint <a href="https://live.artblocks.io/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a/0">https://live.artblocks.io/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a/0</a></li>
 </ul>
-<p TOKEN_ID=""><strong>live.artblocks.io/token/</strong> enter any Art Blocks or PBAB token id and you are presented with that token.</p>
+<p><strong>live.artblocks.io/token/<code v-pre>{TOKEN_ID}</code></strong> enter any Art Blocks or PBAB token id and you are presented with that token.</p>
 <ul>
 <li><em>Example:</em> Latest Chromie Squiggle mint #71 <a href="https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71">https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71</a></li>
 </ul>
