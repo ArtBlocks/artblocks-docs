@@ -7,13 +7,13 @@ An overview of [live.artblocks.io](https://live.artblocks.io/)
 **live.artblocks.io/**
 Home page of the site which returns the latest *rendered* minted token from any of the Art Blocks contracts  
 
-**live.artblocks.io/{CONTRACT_ADDRESS}** enter any Art Blocks or PBAB contract and you be presented with the latest *rendered* mint.  
+**live.artblocks.io/`{CONTRACT_ADDRESS}`** enter any Art Blocks or PBAB contract and you be presented with the latest *rendered* mint.  
 + *Example:* Latest Artblocks_VO mint https://live.artblocks.io/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a
 
-**live.artblocks.io/{CONTRACT_ADDRESS}/{PROJECT_INDEX}** enter any Art Blocks or PBAB contract followed by the index of the project and you be presented with the latest *rendered* mint.   
+**live.artblocks.io/`{CONTRACT_ADDRESS}`/`{PROJECT_INDEX}`** enter any Art Blocks or PBAB contract followed by the index of the project and you be presented with the latest *rendered* mint.   
 + *Example:* Latest Chromie Squiggle mint https://live.artblocks.io/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a/0
 
-**live.artblocks.io/token/{TOKEN_ID}** enter any Art Blocks or PBAB token id and you are presented with that token.   
+**live.artblocks.io/token/`{TOKEN_ID}`** enter any Art Blocks or PBAB token id and you are presented with that token.   
 + *Example:* Latest Chromie Squiggle mint #71 https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71
 
 ## Contracts
