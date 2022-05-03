@@ -47,10 +47,11 @@ For many artists, the process for writing your features script will likely entai
 
 In order for filtering and rarity \(% occurrence of different features\) to be accessible via the Art Blocks website, the feature fields must be added in the artist interface UI on the Art Blocks website.
 
-There are two types of feature fields: `enum` and `number`:
+There are three types of feature fields: `enum`, `number`, and `boolean`:
 
 * For `enum` fields, values should be outputted as strings in your features scripts.
 * For `number` fields, the step size set in the feature fields is used for the step size of the slider in the filters. This step size is set in the feature fields UI, not in the script, and should be on a per field basis.
+* For `boolean` fields, the only values are true and false, so you just need to give the field a name.
 * If there are only a few specific number values expected to be output, an artist might want to use an `enum` field and output the enumerated possible numeric values as strings \(e.g. if the slider UI would _not_ be the best way to navigate these features\).
 
 ## Migration From Legacy Features Arrays
@@ -66,3 +67,27 @@ This tool is being used to assist the Art Blocks team in attempting to automatic
 ## Additional Notes
 
 For future projects \(that have not yet minted out, which is necessary for Rev Dan's automated migration approach\), it is necessary that this data be determined based on the `tokenData` itself rather than just mapping the `tokenId` to a given existing set of features as the features cannot be known until time of mint \(unless all named features are purely based on the `tokenId` and not the `hash`\).
+
+You also have the option to upload a json file to set all of your feature fields. The shape of the file should be in the following format:
+```
+[
+  {
+    "type": "enum",
+    "name": string,
+    "options": string[]
+  },
+  {
+    "type": "boolean",
+    "name": string
+  },
+  {
+    "type": "number",
+    "name": string,
+    "min": number,
+    "max": number,
+    "step": number > 0
+  }
+]
+```
+On upload of the json file it will overrwrite any existing feature fields in the current form. You also are able to download your existing feature fields as a json file using the buttons found in the feature fields form. 
+
