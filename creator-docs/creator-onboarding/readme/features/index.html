@@ -27,12 +27,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.704331043838" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.704924310870" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.704331043838" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.704924310870" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.704331043838" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.704331043838" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.704924310870" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.704924310870" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -240,10 +240,11 @@ function calculateFeatures(tokenData) {
     </h2>
 </doc-anchor-target>
 <p>In order for filtering and rarity (% occurrence of different features) to be accessible via the Art Blocks website, the feature fields must be added in the artist interface UI on the Art Blocks website.</p>
-<p>There are two types of feature fields: <code v-pre>enum</code> and <code v-pre>number</code>:</p>
+<p>There are three types of feature fields: <code v-pre>enum</code>, <code v-pre>number</code>, and <code v-pre>boolean</code>:</p>
 <ul>
 <li>For <code v-pre>enum</code> fields, values should be outputted as strings in your features scripts.</li>
 <li>For <code v-pre>number</code> fields, the step size set in the feature fields is used for the step size of the slider in the filters. This step size is set in the feature fields UI, not in the script, and should be on a per field basis.</li>
+<li>For <code v-pre>boolean</code> fields, the only values are true and false, so you just need to give the field a name.</li>
 <li>If there are only a few specific number values expected to be output, an artist might want to use an <code v-pre>enum</code> field and output the enumerated possible numeric values as strings (e.g. if the slider UI would <em>not</em> be the best way to navigate these features).</li>
 </ul>
 <doc-anchor-target id="migration-from-legacy-features-arrays">
@@ -263,6 +264,28 @@ function calculateFeatures(tokenData) {
     </h2>
 </doc-anchor-target>
 <p>For future projects (that have not yet minted out, which is necessary for Rev Dan&#x27;s automated migration approach), it is necessary that this data be determined based on the <code v-pre>tokenData</code> itself rather than just mapping the <code v-pre>tokenId</code> to a given existing set of features as the features cannot be known until time of mint (unless all named features are purely based on the <code v-pre>tokenId</code> and not the <code v-pre>hash</code>).</p>
+<p>You also have the option to upload a json file to set all of your feature fields. The shape of the file should be in the following format:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">[
+  {
+    &quot;type&quot;: &quot;enum&quot;,
+    &quot;name&quot;: string,
+    &quot;options&quot;: string[]
+  },
+  {
+    &quot;type&quot;: &quot;boolean&quot;,
+    &quot;name&quot;: string
+  },
+  {
+    &quot;type&quot;: &quot;number&quot;,
+    &quot;name&quot;: string,
+    &quot;min&quot;: number,
+    &quot;max&quot;: number,
+    &quot;step&quot;: number &gt; 0
+  }
+]</code></pre>
+</doc-codeblock></div>
+<p>On upload of the json file it will overrwrite any existing feature fields in the current form. You also are able to download your existing feature fields as a json file using the buttons found in the feature fields form.</p>
 
                                 
                                 <!-- Required only on API pages -->
