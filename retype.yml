@@ -7,6 +7,10 @@ branding:
   label: Docs
   logo: static/squigWhiteCircle.png
 
+integrations:
+  googleAnalytics:
+    id: G-NGMHL6GNM0
+
 edit:
   repo: https://github.com/ArtBlocks/artblocks-docs
 
