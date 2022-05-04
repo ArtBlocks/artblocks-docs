@@ -27,11 +27,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.704924310870" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.704991197790" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.704924310870" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.704991197790" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.704924310870" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.704991197790" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -215,7 +215,7 @@ Home page of the site which returns the latest <em>rendered</em> minted token fr
 </ul>
 <p><strong>live.artblocks.io/token/<code v-pre>{TOKEN_ID}</code></strong> enter any Art Blocks or PBAB token id and you are presented with that token.</p>
 <ul>
-<li><em>Example:</em> Latest Chromie Squiggle mint #71 <a href="https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71">https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71</a></li>
+<li><em>Example:</em> Chromie Squiggle mint #71 <a href="https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71">https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71</a></li>
 </ul>
 <doc-anchor-target id="contracts">
     <h2>
@@ -235,6 +235,31 @@ Home page of the site which returns the latest <em>rendered</em> minted token fr
 <li>MOMENT: 0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676</li>
 <li>Plottables: 0xa319c382a702682129fcbf55d514e61a16f97f9c</li>
 <li>TBOA: 0x62e37f664b5945629b6549a87f8e10ed0b6d923b</li>
+</ul>
+<doc-anchor-target id="customizable-display">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#customizable-display">#</doc-anchor-trigger>
+        <span>Customizable Display</span>
+    </h2>
+</doc-anchor-target>
+<p>You can create a customizable display for any route on artblocks-viewer. This is done through query params added to the end of the url. In order to activate this ability you must first add <code v-pre>?useCustomViewParams=true</code> to the end of the whatever route you are using. i.e. <a href="https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71?useCustomViewParams=true">https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71?useCustomViewParams=true</a> is the most basic customized url of Chromie Squiggle mint #71 with just the squiggle centered in the middle of the page.</p>
+<p>All of the customization that can be done and the default values are as follows:</p>
+<ul>
+<li><strong>useCusomtomViewParams</strong>: this is to specify you are using the custom view display and all other params require this to be true. <code v-pre>default: false</code></li>
+<li><strong>width</strong>: this can be any valid html size and is the width of the token being displayed <code v-pre>default: 90vw</code></li>
+<li><strong>height</strong>: this can be any valid html size and is the height of the token being displayed <code v-pre>default: 90vh</code></li>
+<li><strong>backgroundColor</strong>: this can be any six digit hex color and is the background color of the page <code v-pre>default: ffffff</code></li>
+<li><strong>showText</strong>: this is whether or not to show the text information about the currently displayed token. All other text params depend on this to be true to work <code v-pre>default: false</code></li>
+<li><strong>textColor</strong>: this can be any six digit hex color and is the color of the text <code v-pre>default: 000000</code></li>
+<li><strong>fontSize</strong>: this can be any valid html size and is the size of the text <code v-pre>default: 20px</code></li>
+<li><strong>textBackground</strong>: this can be any six digit hex color and is the background color of the text <code v-pre>default: none</code></li>
+<li><strong>textBottom</strong>: this can be any valid html size and is the distance from the bottom of the screen of the text <code v-pre>default: 3em</code></li>
+</ul>
+<p><strong>Example URLs</strong>:</p>
+<ul>
+<li>Latest Chimera: <a href="https://live.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/233?useCustomViewParams=true&amp;backgroundColor=F8C8DC&amp;showText=true">https://live.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/233?useCustomViewParams=true&amp;backgroundColor=F8C8DC&amp;showText=true</a></li>
+<li>Latest Artblocks Mint: <a href="https://live.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/?useCustomViewParams=true&amp;backgroundColor=a2beb1&amp;showText=true&amp;textBackground=000000&amp;fontSize=30px&amp;textColor=ffffff&amp;textBottom=1em">https://live.artblocks.io/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/?useCustomViewParams=true&amp;backgroundColor=a2beb1&amp;showText=true&amp;textBackground=000000&amp;fontSize=30px&amp;textColor=ffffff&amp;textBottom=1em</a></li>
+<li>Streamlines #414: <a href="https://live.artblocks.io/token/0xa319c382a702682129fcbf55d514e61a16f97f9c-414/?useCustomViewParams=true&amp;backgroundColor=671108&amp;showText=true&amp;textColor=bfb3b2&amp;textBottom=0.5em&amp;width=425px&amp;height=550px">https://live.artblocks.io/token/0xa319c382a702682129fcbf55d514e61a16f97f9c-414/?useCustomViewParams=true&amp;backgroundColor=671108&amp;showText=true&amp;textColor=bfb3b2&amp;textBottom=0.5em&amp;width=425px&amp;height=550px</a></li>
 </ul>
 
                                 
