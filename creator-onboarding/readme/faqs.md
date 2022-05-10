@@ -293,3 +293,15 @@ As a next step in your Art Blocks journey, you will have a two month cooldown pe
 Should you return, you'll submit a brief form with information about your proposed project. Once filled out, your project will be screened internally by our team via your testnet shell. Screenings occur weekly, so there will not be an extensive waiting period here. In our review, we will focus on overall aesthetics, variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually. Based on this review, you will either move forward from there or we will ask that you take a one month development period before returning with a new project for screening.
 
 This will be in addition to the curation review. This screening will be done by members of Art Blocks' team. Following that screening, accepted projects will then be viewed by our Curation Board as well. Right now this screening step takes place for new artists and is part of our application onboarding process, so the big change here is just that returning Factory artists will be starting at that step rather than fast-tracking to the Curation Review. This initial screening will also be an opportunity for Art Blocks' team to provide more direct feedback on newly proposed projects.
+
+---
+
+## How do I know the application period to send my first work?
+
+Applications will remain open indefinitely. To learn more about the application process visit: artblocks.io/learn
+
+---
+
+## What is the process for submitting a first work?
+
+You may apply using [this application form](https://mpphuqcai14.typeform.com/apply-ab-artist). We expect that artists have a creative history as well as the ability to provide an original generative script. We process applications in chronological order, prioritizing those with working prototypes. To learn more about the application process please visit artblocks.io/learn
