@@ -30,11 +30,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.705016980597" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.705465761431" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.705016980597" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.705465761431" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.705016980597" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.705465761431" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -221,6 +221,48 @@
 </ul>
 </li>
 </ol>
+<doc-anchor-target id="what-effect-does-locking-a-pbab-project-have">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#what-effect-does-locking-a-pbab-project-have">#</doc-anchor-trigger>
+        <span>What effect does locking a PBAB project have?</span>
+    </h2>
+</doc-anchor-target>
+<p>Locking a project (specifically on <code v-pre>GenArt721CoreV2</code>) permanently freezes artist name, project name, project scripts, project license, and project ipfs hash on the blockchain. Additionally, maximum invocations of a project can never be increased.</p>
+<p>A summary of how the smart contract functions behave:</p>
+<ul>
+<li><code v-pre>toggleProjectIsLocked</code>
+<ul>
+<li>only callable by admin whitelisted wallets on the core contract</li>
+<li>can only lock projects (i.e. locked projects can not be unlocked)</li>
+</ul>
+</li>
+<li>The following functionality is only allowed on unlocked projects:
+<ul>
+<li><code v-pre>updateProjectName</code></li>
+<li><code v-pre>updateProjectArtistName</code></li>
+<li><code v-pre>updateProjectLicense</code></li>
+<li>project script changes:
+<ul>
+<li><code v-pre>addProjectScript</code></li>
+<li><code v-pre>updateProjectScript</code></li>
+<li><code v-pre>removeProjectLastScript</code></li>
+<li><code v-pre>updateProjectScriptJSON</code></li>
+</ul>
+</li>
+<li><code v-pre>updateProjectIpfsHash</code></li>
+</ul>
+</li>
+<li>The following functionality is affected by a project being unlocked vs. locked:
+<ul>
+<li><code v-pre>updateProjectMaxInvocations</code>
+<ul>
+<li>prior to being locked, maximum invocations may be increased</li>
+<li>after being locked, maximum invocations may only be decreased</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->
