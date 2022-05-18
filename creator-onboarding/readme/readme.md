@@ -157,6 +157,7 @@ p5.js | `v1.0.0` | https://p5js.org
 processing.js | `v1.4.6` | https://processing.org
 a-frame | `v1.2.0` | https://aframe.io
 three.js | `r124` | https://threejs.org
+babylon.js | `v5.0.0` | https://babylonjs.com
 vox | `v1.1.0-beta` |
 megavox | `v1.1.0-beta` |
 regl | `v2.1.0` |
