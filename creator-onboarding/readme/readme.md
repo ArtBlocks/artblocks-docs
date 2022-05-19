@@ -222,6 +222,10 @@ So a 10 KB project at 100 gwei would be:
 
 Artists have recently targeted between \~5-20 KB for their code (without the library), but obviously this will vary by project scope.
 
+### Data Compression 
+
+We allow artists to compress data stored within their scripts (e.g. SVG data); but in the case where the logic of the script itself is compressed to the point of obfuscating the auditing process we may ask that artists remove this level of compression.
+
 ## Attribution
 
 Much (generative art) source code is published under permissive copyleft licenses, making it available to be used by everybody and depending on the license even for commercial purposes. In case your project's code contains any code not written by yourself, please inform the Art Blocks team about it so the appropriate considerations and attributions can be made.
