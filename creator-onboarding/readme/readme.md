@@ -167,6 +167,9 @@ Zdog | `v1.1.2` | https://github.com/metafizzy/zdog
 
 Additional libraries may be added at moderator discretion, but the rule is only one external library per project.
 
+### Code templates by dependency type
+When uploading your project to testnet, you may refer to this script template: https://github.com/ArtBlocks/node-artblocks/blob/main/src/templates.js
+
 ### Deterministic
 
 Each output must be deterministic based on a single hash. More specifically, the initial output or frame must be the same. If your piece is animated, some randomness is okay. This is so when the art is rendered as an image (e.g. for OpenSea) it is always the same.
