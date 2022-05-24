@@ -30,12 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.706298237683" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.706731023757" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.706298237683" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.706731023757" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.706298237683" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.706298237683" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.706731023757" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.2.706731023757" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -374,6 +374,7 @@ R.random_choice([1, 2, 3])  // Random choice from a given list. Nice for random 
 <th>Library</th>
 <th>Version</th>
 <th>Source</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
@@ -381,9 +382,11 @@ R.random_choice([1, 2, 3])  // Random choice from a given list. Nice for random 
 <td>No Library at all</td>
 <td></td>
 <td>Vanilla JS, CSS, HTML, WebGL</td>
+<td></td>
 </tr>
 <tr>
 <td>svg</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -391,51 +394,67 @@ R.random_choice([1, 2, 3])  // Random choice from a given list. Nice for random 
 <td>p5.js</td>
 <td><code v-pre>v1.0.0</code></td>
 <td><a href="https://p5js.org">https://p5js.org</a></td>
+<td></td>
 </tr>
 <tr>
 <td>processing.js</td>
 <td><code v-pre>v1.4.6</code></td>
 <td><a href="https://processing.org">https://processing.org</a></td>
+<td></td>
 </tr>
 <tr>
 <td>a-frame</td>
 <td><code v-pre>v1.2.0</code></td>
 <td><a href="https://aframe.io">https://aframe.io</a></td>
+<td></td>
 </tr>
 <tr>
 <td>three.js</td>
 <td><code v-pre>r124</code></td>
 <td><a href="https://threejs.org">https://threejs.org</a></td>
+<td></td>
+</tr>
+<tr>
+<td>babylon.js</td>
+<td><code v-pre>v5.0.0</code></td>
+<td><a href="https://babylonjs.com">https://babylonjs.com</a></td>
+<td>Canvas element provided by template (#babylon-canvas)</td>
 </tr>
 <tr>
 <td>vox</td>
 <td><code v-pre>v1.1.0-beta</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>megavox</td>
 <td><code v-pre>v1.1.0-beta</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td>regl</td>
 <td><code v-pre>v2.1.0</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
 <td>tone.js</td>
 <td><code v-pre>v14.8.15</code></td>
 <td><a href="https://tonejs.github.io">https://tonejs.github.io</a></td>
+<td></td>
 </tr>
 <tr>
 <td>paper.js</td>
 <td><code v-pre>v0.12.15</code></td>
 <td><a href="http://paperjs.org">http://paperjs.org</a></td>
+<td></td>
 </tr>
 <tr>
 <td>Zdog</td>
 <td><code v-pre>v1.1.2</code></td>
 <td><a href="https://github.com/metafizzy/zdog">https://github.com/metafizzy/zdog</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
