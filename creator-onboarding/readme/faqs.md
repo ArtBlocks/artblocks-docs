@@ -164,7 +164,7 @@ Once you finalize a drop date with the Art Blocks team, you're welcome to share 
 
 ## How should I price my artwork?
 
-Once you near finalization of your project, you'll be in close dialogue with our team about how to price your work. Ultimately, we will defer to the artist to decide how to price a work, but can offer recommendations, advice, and context based on the market conditions at the time of your drop.
+Once you near finalization of your project, you'll be in close dialogue with our team about how to price your work. Ultimately, we will defer to the artist to decide how to price a work, but will offer recommendations, advice, and context based on the market conditions at the time of your drop. Once a project's price is set for release, the price cannot be lowered or changed as the project is public. 
 
 ---
 
