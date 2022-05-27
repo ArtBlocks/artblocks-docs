@@ -30,11 +30,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.707007831962" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707007915936" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707007831962" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707007915936" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707007831962" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707007915936" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -563,6 +563,40 @@ Charity Info (for any mints sold over 0.25eth, 25% is required to be donated to 
     </h2>
 </doc-anchor-target>
 <p>You may apply using <a href="https://mpphuqcai14.typeform.com/apply-ab-artist">this application form</a>. We expect that artists have a creative history as well as the ability to provide an original generative script. We process applications in chronological order, prioritizing those with working prototypes. To learn more about the application process please visit artblocks.io/learn</p>
+<hr />
+<doc-anchor-target id="what-is-the-mintersuite-and-how-does-it-work">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#what-is-the-mintersuite-and-how-does-it-work">#</doc-anchor-trigger>
+        <span>What is the MinterSuite and how does it work?</span>
+    </h2>
+</doc-anchor-target>
+<p>The MinterSuite is an update to our broader smart-contract architecture at Art Blocks that allows artists to set specific minting contracts on a per-project basis.</p>
+<p>The MinterSuite currently includes the following minter options, which will continue to be expanded over time:</p>
+<ul>
+<li>Dutch Auction - Linear Price Decrease
+<ul>
+<li>Linear Dutch Auctions specify starting price, starting time, ending time, and ending price, and the price will linearly decrease over that time for each block</li>
+</ul>
+</li>
+<li>Dutch Auction - Exponential Price Decrease 
+<ul>
+<li>Exponential Dutch Auctions are when the artist decides the half-life for each price drop</li>
+</ul>
+</li>
+<li>Set Price - Custom ERC20
+<ul>
+<li> Fixed price with a custom token</li>
+</ul>
+</li>
+<li>Set Price - ETH
+<ul>
+<li> Fixed price in ETH </li>
+</ul>
+</li>
+</ul>
+<p>The MinterSuite includes support for a V1 series of the 4 initially introduced minters, to improve the experience for minting with smart contract wallets (e.g. Gnosis and Argent) and slightly reduce the gas-cost of minting in the process.</p>
+<p>To find out how to set your project price using the MinterSuite visit [this page](<a href="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter">url</a>).</p>
+<p>To learn how to imitate your MinterSuite choice, use our Checklist before launching your project.</p>
 
                                 
                                 <!-- Required only on API pages -->
