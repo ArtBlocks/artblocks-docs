@@ -1,0 +1,38 @@
+---
+order: 850
+---
+# PBAB Royalty Registry Setup
+
+## Royalty Registry
+
+The [Royalty Registry](https://royaltyregistry.xyz/lookup) is an on-chain tool used by many marketplaces (OpenSea, Coinbase NFT, etc.) to query royalty payment addresses and percentages when a token is sold. The Royalty Registry lives on the Ethereum blockchain and is decentralized.
+
+## Royalties Overview
+
+For PBAB contracts, the following addresses may receive royalties:
+
+Party | Address defined: | Royalty Percentage
+--- | --- | ---
+Platform (PBAB Partner) | **defined and configured on Royalty Registry override contract** | default 2.5%, configurable on override contract
+Render Provider (Art Blocks) | defined on PBAB core contract | default 2.5%, configurable on override contract
+Artist | defined on PBAB core contract | defined on PBAB contract, typically 5%
+Additional Payee | defined on PBAB core contract | defined on PBAB contract
+
+## Required Setup
+
+Two setup steps are required before Art Blocks PBAB contracts will integrate properly with the Royalty Registry:
+
+1. Create a new override on the Royalty Registry for your PBAB core contract
+   - Connect your PBAB `admin` wallet to the Royalty Registry's [Configure](https://royaltyregistry.xyz/configure) dapp and set your override to the Art Blocks PBAB royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#code)
+2. Set your Platform royalty payment address
+   - Connect your PBAB `admin` wallet to the Art Blocks PBAB royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract), on etherscan
+   - Call the `updatePlatformRoyaltyAddressForContract` function with your PBAB token contract address as `_tokenContract`, and your desired platform royalty payment address as `_platformRoylatyAddress`.
+
+Now you will automatically be collecting royalties from sales on secondary markets that support use of the Royalty Registry!
+
+## Optional Configuring
+
+Royalty percentages of 2.5% are used by default by the Art Blocks PBAB royalty override contract. The `admin` of any given PBAB core contract can override these percentages by calling `updatePlatformBpsForContract` or `updateRenderProviderBpsForContract` on the Art Blocks PBAB royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract), on etherscan
+>Note that royalty proportions are defined in terms of Basis points. For example, 250 BPS = 2.5% royalty. See [this article](https://www.investopedia.com/terms/b/basispoint.asp) for more information.
+
+After initial setup, the Platform (PBAB partner) royalty payment address may be updated at any time by the `admin` of a given PBAB core contract by calling the `updatePlatformRoyaltyAddressForContract` function on the Art Blocks PBAB royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract), on etherscan
