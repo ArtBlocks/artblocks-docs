@@ -44,6 +44,16 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 2. Once your project information has been uploaded, **please confirm in your artist DM that you're ready for mint #0**. The Art Blocks Team will look over your project shell and then give you the go-ahead to mint #0. 
 3. Mint #0 must occur before your release can be scheduled.
 
+
+## Initiating your MinterSuite choice
+
+Note: Mint #0 will be created using the Set Price- ETH option. If your project will be sold via Dutch Auction, please set the price to your DA’s resting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option. 
+
+If you are using a fixed price, your project will be unpaused under the Danger tab right before your project’s release. Once a project using Set Price - ETH or Set Price - Custom ERC20 is unpaused, it will be live for minting. 
+
+If you are using the Dutch Auction - Exponential Price Decrease or Dutch Auction - Linear Price Decrease, your project will be unpaused prior to your auction’s start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free. 
+
+
 ## Scheduling
 
 * Once mint #0 and the features script are in place, Art Blocks will work with you to schedule/announce your release.
@@ -61,11 +71,6 @@ Once scheduled, you will have the option to make your Ropsten shell public to co
 * When unpausing the project, please send in the tx 30 seconds prior to the top of the hour. To unpause the project, please send high gas (2-3x what is suggested as high gas on https://etherscan.io/gastracker). If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.
 * Once the transaction clears, your project will be live for minting.
 
-## If Dutch Auction
-
-* Dutch auction prices will need to be manually changed by the artist every 5 minutes. To change the token price during a dutch auction, you will need to adjust the 'price per token' field and click Submit.
-* If using a dutch auction drop mechanic, send in the tx 30 seconds before the 5 minute mark. You will want to use 2x or more what is suggested as high gas on https://etherscan.io/gastracker), but please keep an eye on gas as there are times when gas can spike, in which case you will need to speed up the tx. If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.
-* If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing to your resting price, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier.
 
 ## Rarities
 
