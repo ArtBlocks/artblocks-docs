@@ -305,3 +305,26 @@ Applications will remain open indefinitely. To learn more about the application 
 ## What is the process for submitting a first work?
 
 You may apply using [this application form](https://mpphuqcai14.typeform.com/apply-ab-artist). We expect that artists have a creative history as well as the ability to provide an original generative script. We process applications in chronological order, prioritizing those with working prototypes. To learn more about the application process please visit artblocks.io/learn
+
+---
+
+## What is the MinterSuite and how does it work? 
+
+The MinterSuite is an update to our broader smart-contract architecture at Art Blocks that allows artists to set specific minting contracts on a per-project basis.
+
+The MinterSuite includes the following minter options:
+
+* Dutch Auction - Linear Price Decrease
+    * Linear Dutch Auctions specify starting price, starting time, ending time, and ending price, and the price will linearly decrease over that time for each block
+* Dutch Auction - Exponential Price Decrease 
+    * Exponential Dutch Auctions are when the artist decides the half-life for each price drop
+* Set Price - Custom ERC20
+    *  Fixed price with a custom token
+* Set Price - ETH
+    *  Fixed price in ETH 
+
+The MinterSuite includes support for a V1 series of the 4 initially introduced minters, to improve the experience for minting with smart contract wallets (e.g. Gnosis and Argent) and slightly reduce the gas-cost of minting in the process.
+
+To find out how to set your project price using the MinterSuite visit [this page]([url](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter )). 
+
+To learn how to imitate your MinterSuite choice, use our Checklist before launching your project. 
