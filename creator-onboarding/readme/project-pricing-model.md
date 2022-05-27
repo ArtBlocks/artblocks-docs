@@ -43,5 +43,5 @@ Approaching price in terms of overall value leaves room for artists to ensure th
 
 # Price Reductions
 
-A project's pricing cannot be altered after release. Instead, you may reduce your project size, but must run the change by the Artist Liasion or Aristic Coordinator.
+A project's pricing cannot be altered after release. Instead, you may reduce your project size, but must run the change by the Artist Liasion or Artistic Coordinator.
 
