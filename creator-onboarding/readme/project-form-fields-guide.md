@@ -135,6 +135,37 @@ All code required for calculating your features (including any necessary helper 
 For many artists, the process for writing your features script will likely entail starting with your project script, copying it into the `calculateFeatures` interface/shell found [here](features.md#features-script-interface), and then trimming it down to remove all library (e.g. p5js) references and draw functionality and instead to build the relative key-value object map for your features.
 
 ---
+## Minter
+
+### MinterSuite 
+
+The MinterSuite is an update to our broader smart-contract architecture at Art Blocks that allows artists to set specific minting contracts on a per-project basis.
+
+The MinterSuite currently includes the following minter options, which will continue to expand over time:
+
+• Dutch Auction - Linear Price Decrease
+     Linear Dutch Auctions specify starting price, starting time, ending time, and ending price, and the price will linearly decrease over that time for        each block
+• Dutch Auction - Exponential Price Decrease 
+    Exponential Dutch Auctions are when the artist decides the half-life for each price drop
+• Set Price - Custom ERC20
+    Fixed price with a custom token
+• Set Price - ETH
+    Fixed price in ETH 
+
+The MinterSuite includes support for a V1 series of the 4 initially introduced minters, to improve the experience for minting with smart contract wallets (e.g. Gnosis and Argent) and slightly reduce the gas-cost of minting in the process.
+
+
+### How to set your project price
+
+1. Determine your pricing. You have the option to choose between a set price in ETH, an automated linear dutch auction, an automated exponential dutch auction, or a set price in custom ERC20. The first step is to choose your desired selling option. The Art Blocks team can assist in determining this.
+    a. Set price in ETH: Set price in ETH is a fixed price for your sale. 
+    b. Automated linear dutch auction: For linear dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of     the auction. The price will then gradually decrease each block over the total auction time. 
+    c. Automated exponential dutch auction: For exponential dutch auctions, artists specify the starting price, ending price, and the half-life for price     drops. An easier way to determine this is to think of the total duration of the DA and then work backward to find the half-life at that total time. 
+    As an example, let's say that an exponential dutch auction was starting at 1 ETH and lowering to 0.1 ETH over 30 minutes. In this case, the half-life     is 9 minutes meaning that over the course of every 9 minutes, the price would gradually be cut in half. So after 9 minutes, the DA will reach 0.5 and     after 18 minutes, the DA will reach 0.25. The price drops within those half-life steps will gradually lower every block. You can use this calculator       to find your auction’s half-life: https://www.calculator.net/half-life-calculator.html. Please note that results from that calculator will need to be     converted from minutes to seconds for Art Blocks. 
+    d. Set price in custom ERC20: Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom       token. 
+2. Input your pricing information. Go to the Minter tab within your shell and select the ‘minter for project’ drop-down menu. From that menu, select your desired MinterSuite option. [Please note that mint #0 will be created using the Set Price- ETH option. If your project will be sold via Dutch Auction, please set the price to your DA’s resting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option.] Once the price option has been selected from the drop-down menu, select Submit. After submitting, enter the required information for your MinterSuite choice below and submit.
+
+---
 
 ## Payout:
 
