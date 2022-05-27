@@ -141,7 +141,7 @@ For many artists, the process for writing your features script will likely entai
 
 The MinterSuite is an update to our broader smart-contract architecture at Art Blocks that allows artists to set specific minting contracts on a per-project basis.
 
-The MinterSuite includes the following minter options:
+The MinterSuite currently includes the following minter options, which will continue to expand over time:
 
 • Dutch Auction - Linear Price Decrease
      Linear Dutch Auctions specify starting price, starting time, ending time, and ending price, and the price will linearly decrease over that time for        each block
