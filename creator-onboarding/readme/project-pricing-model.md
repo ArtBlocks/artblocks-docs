@@ -41,3 +41,7 @@ The above category prices impose limits on project's overall resting value. That
 
 Approaching price in terms of overall value leaves room for artists to ensure that their collection size and output pricing aligns with their created project. Keep in mind that if a collection uses a dutch auction sales mechanic, the collection may realize a greater value than the resting price. This pricing guidance does not limit the overall value a project may generate, it just requires that the project's resting value is not higher than these maximum prices. Conversely, artists are welcome to set prices and series sizes that fall below the specified maximum resting values. We recognize that the market is forever changing. Art Blocks will continue to monitor sales data and adjust these values as appropriate over time. 
 
+# Price Reductions
+
+A project's pricing cannot be altered after release. Instead, you may reduce your project size, but must run the change by the Artist Liasion or Aristic Coordinator.
+
