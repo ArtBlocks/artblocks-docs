@@ -30,11 +30,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.707008652512" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707011513389" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707008652512" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707011513389" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707008652512" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707011513389" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -365,7 +365,7 @@
 </doc-anchor-target>
 <p>If your project is selected for a drop on Art Blocks, you&#x27;ll need to have the following information ready. This is typically collected near the end of the process, so you&#x27;ll have time to make these decisions as you&#x27;re onboarding.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">Would you like your Ropsten testnet project made public? Y/N
+<pre class="language-none"><code v-pre class="language-none">Would you like your Ropsten testnet project made public? YES/NO
 
 [Curated/Playground/Factory]
 Project name:
@@ -374,10 +374,9 @@ Project Link: https://www.artblocks.io/project/[#]
 Project Conversations: #factory-projects or #\[artist-name]
 Start Date/Time: TBD with the AB team
 Total Mints:
-Drop Mechanic:
-Mint Price:
-Pricing Tiers (if DA):
-Charity Info (for any mints sold over 0.25eth, 25% is required to be donated to charity of your choice):</code></pre>
+Drop Mechanic (Fixed price/Dutch auction):
+Mint Price (start price and resting price if DA):
+Charity Info (if applicable):</code></pre>
 </doc-codeblock></div>
 <hr />
 <doc-anchor-target id="my-project-is-uploaded-and-ready-to-go-how-do-i-mint-my-first-output">
@@ -595,7 +594,7 @@ Charity Info (for any mints sold over 0.25eth, 25% is required to be donated to 
 </li>
 </ul>
 <p>The MinterSuite includes support for a V1 series of the 4 initially introduced minters, to improve the experience for minting with smart contract wallets (e.g. Gnosis and Argent) and slightly reduce the gas-cost of minting in the process.</p>
-<p>To find out how to set your project price using the MinterSuite visit [this page](<a href="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter">url</a>).</p>
+<p>To find out how to set your project price using the MinterSuite visit <a href="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter">this page</a>.</p>
 <p>To learn how to imitate your MinterSuite choice, use our Checklist before launching your project.</p>
 
                                 
