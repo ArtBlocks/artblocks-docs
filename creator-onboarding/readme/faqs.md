@@ -133,7 +133,7 @@ The cost depends on the complexity of your project and how many lines of code it
 If your project is selected for a drop on Art Blocks, you'll need to have the following information ready. This is typically collected near the end of the process, so you'll have time to make these decisions as you're onboarding.
 
 ```
-Would you like your Ropsten testnet project made public? Y/N
+Would you like your Ropsten testnet project made public? YES/NO
 
 [Curated/Playground/Factory]
 Project name:
@@ -142,10 +142,9 @@ Project Link: https://www.artblocks.io/project/[#]
 Project Conversations: #factory-projects or #\[artist-name]
 Start Date/Time: TBD with the AB team
 Total Mints:
-Drop Mechanic:
-Mint Price:
-Pricing Tiers (if DA):
-Charity Info (for any mints sold over 0.25eth, 25% is required to be donated to charity of your choice):
+Drop Mechanic (Fixed price/Dutch auction):
+Mint Price (start price and resting price if DA):
+Charity Info (if applicable):
 ```
 
 ---
@@ -325,6 +324,6 @@ The MinterSuite currently includes the following minter options, which will cont
 
 The MinterSuite includes support for a V1 series of the 4 initially introduced minters, to improve the experience for minting with smart contract wallets (e.g. Gnosis and Argent) and slightly reduce the gas-cost of minting in the process.
 
-To find out how to set your project price using the MinterSuite visit [this page]([url](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter )). 
+To find out how to set your project price using the MinterSuite visit [this page](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter). 
 
 To learn how to imitate your MinterSuite choice, use our Checklist before launching your project. 
