@@ -15,6 +15,7 @@ A high level process-map for PBAB onboarding.
         * To create a new project shell, you should use the `addProject` method of your newly deployed PBAB Core Contract. This can be done by connecting to the contract via Etherscan.
 4.  Your team will integrate a custom web frontend with your deployed PBAB smart contracts (e.g. **implementing their own purchase + display flow**) and with the Art Blocks API as needed. An example of frontend purchase flow logic is provided here as a reference for integrating partners:
 
+<details><summary>example</summary>
     ```js
     /** CONNECTION **/
     // A Web3Provider wraps a standard Web3 provider, which is
@@ -101,6 +102,8 @@ A high level process-map for PBAB onboarding.
     const tokenId = tokenIdBigNum.toString()
     // Use the token id to display the newly minted token with the iframe'd generator
     ```
+   </details>
+   
 5. Your team will use https://artist-staging.artblocks.io site to configure all project metadata details (e.g. project description, license associated with outputs,  artist website) and upload your project script source code. This process looks very similar to the process within Art Blocks itself for creators uploading their projects, so "[Art Blocks 101 for Creators](../../creator-onboarding/readme/readme.md#documentation)" should provide a good reference for this process. If you need help along the way, the Art Blocks team will help guide you through the process.
 6. Once you've fully completed the setup and testing process for **any** PBAB project on your platform, you can request a project script audit from Art Blocks to guaruntee resolution-agnositicism and determinism. **Warning**: if you'd like to opt-out of this step, it may result in undiagnosed issues with the rendered outputs of an unaudited project due to not conforming to Art Blocks' resolution-agnositic and deterministic standards (e.g. they perform differently on different screen sizes, different devices different operating systems, or are different from view-to-view).
 7. After the entire end-to-end integration has been vetted on Ropsten, the above process may proceed on mainnet. Vetting includes minting in each minting format, from the PBAB partner's frontend minting experience, while integrated with the Art Blocks' provided rendering infrastructure, etc.
