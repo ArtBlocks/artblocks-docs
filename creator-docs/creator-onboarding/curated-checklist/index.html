@@ -30,11 +30,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.2.707330645887" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.2.707330663825" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707330645887" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.2.707330663825" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707330645887" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.2.707330663825" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -276,6 +276,14 @@
 <li>Once your project information has been uploaded, <strong>please confirm in your artist DM that you&#x27;re ready for mint #0</strong>. The Art Blocks Team will look over your project shell and then give you the go-ahead to mint #0.</li>
 <li>Mint #0 must occur before your release can be scheduled.</li>
 </ol>
+<doc-anchor-target id="initiating-your-mintersuite-choice">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#initiating-your-mintersuite-choice">#</doc-anchor-trigger>
+        <span>Initiating your MinterSuite choice</span>
+    </h3>
+</doc-anchor-target>
+<p>Note: Before Mint #0, choose your minter from the suite. If you are using a fixed price, your project will be unpaused under the Danger tab right before your project’s release. Once a project using Set Price - ETH or Set Price - Custom ERC20 is unpaused, it will be live for minting. If your project will be sold via Dutch Auction, please set the price to your DA’s resting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option.</p>
+<p>If you are using the Dutch Auction - Exponential Price Decrease or Dutch Auction - Linear Price Decrease, your project will be unpaused prior to your auction’s start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free.</p>
 <doc-anchor-target id="scheduling">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#scheduling">#</doc-anchor-trigger>
@@ -310,17 +318,6 @@
 <li>When it&#x27;s time, you&#x27;ll click the Unpause button under the Danger tab.</li>
 <li>When unpausing the project, please send in the tx 30 seconds prior to the top of the hour. To unpause the project, please send high gas (2-3x what is suggested as high gas on <a href="https://etherscan.io/gastracker">https://etherscan.io/gastracker</a>). If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.</li>
 <li>Once the transaction clears, your project will be live for minting.</li>
-</ul>
-<doc-anchor-target id="if-dutch-auction">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#if-dutch-auction">#</doc-anchor-trigger>
-        <span>If Dutch Auction</span>
-    </h2>
-</doc-anchor-target>
-<ul>
-<li>Dutch auction prices will need to be manually changed by the artist every 5 minutes. To change the token price during a dutch auction, you will need to adjust the &#x27;price per token&#x27; field and click Submit.</li>
-<li>If using a dutch auction drop mechanic, send in the tx 30 seconds before the 5 minute mark. You will want to use 2x or more what is suggested as high gas on <a href="https://etherscan.io/gastracker">https://etherscan.io/gastracker</a>), but please keep an eye on gas as there are times when gas can spike, in which case you will need to speed up the tx. If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.</li>
-<li>If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing to your resting price, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier.</li>
 </ul>
 <doc-anchor-target id="rarities">
     <h2>
