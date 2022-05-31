@@ -41,9 +41,9 @@ The landscape of on-demand generative content has plenty of room to experiment. 
 
 Current and upcoming use cases: 
 
-*Fashion
-*Premier Artists
-*Media / Tech / Consumer brands
-*Gaming
-*Sports
-*BYOP - build your own platform
+- Fashion
+- Premier Artists
+- Media / Tech / Consumer brands
+- Gaming
+- Sports
+- BYOP - build your own platform
