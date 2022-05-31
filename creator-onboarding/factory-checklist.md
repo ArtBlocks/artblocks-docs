@@ -47,11 +47,10 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 
 ## Initiating your MinterSuite choice
 
-Note: Mint #0 will be created using the Set Price- ETH option. If your project will be sold via Dutch Auction, please set the price to your DA’s resting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option. 
-
-If you are using a fixed price, your project will be unpaused under the Danger tab right before your project’s release. Once a project using Set Price - ETH or Set Price - Custom ERC20 is unpaused, it will be live for minting. 
+Note: Before Mint #0, choose your minter from the suite. If you are using a fixed price, your project will be unpaused under the Danger tab right before your project’s release. Once a project using Set Price - ETH or Set Price - Custom ERC20 is unpaused, it will be live for minting. If your project will be sold via Dutch Auction, please set the price to your DA’s resting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option. 
 
 If you are using the Dutch Auction - Exponential Price Decrease or Dutch Auction - Linear Price Decrease, your project will be unpaused prior to your auction’s start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free. 
+
 
 
 ## Scheduling
