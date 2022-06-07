@@ -327,3 +327,16 @@ The MinterSuite includes support for a V1 series of the 4 initially introduced m
 To find out how to set your project price using the MinterSuite visit [this page](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter). 
 
 To learn how to imitate your MinterSuite choice, use our Checklist before launching your project. 
+
+---
+
+## Do you have access to historical data of other Art Blocks sales? 
+
+There are a few helpful tools for this:
+ 1. https://artacle.io/ 
+
+This resource has most Art Blocks projects and will show the distribution of sales for Dutch Auctions.
+
+2. https://rarity.guide/ 
+
+This focuses on the rarity of mints per project, the time between mint #2, and the rate of sales. 
