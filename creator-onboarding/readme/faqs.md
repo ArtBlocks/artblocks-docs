@@ -133,7 +133,7 @@ The cost depends on the complexity of your project and how many lines of code it
 If your project is selected for a drop on Art Blocks, you'll need to have the following information ready. This is typically collected near the end of the process, so you'll have time to make these decisions as you're onboarding.
 
 ```
-Would you like your Ropsten testnet project made public? Y/N
+Would you like your Ropsten testnet project made public? YES/NO
 
 [Curated/Playground/Factory]
 Project name:
@@ -142,10 +142,9 @@ Project Link: https://www.artblocks.io/project/[#]
 Project Conversations: #factory-projects or #\[artist-name]
 Start Date/Time: TBD with the AB team
 Total Mints:
-Drop Mechanic:
-Mint Price:
-Pricing Tiers (if DA):
-Charity Info (for any mints sold over 0.25eth, 25% is required to be donated to charity of your choice):
+Drop Mechanic (Fixed price/Dutch auction):
+Mint Price (start price and resting price if DA):
+Charity Info (if applicable):
 ```
 
 ---
@@ -305,3 +304,39 @@ Applications will remain open indefinitely. To learn more about the application 
 ## What is the process for submitting a first work?
 
 You may apply using [this application form](https://mpphuqcai14.typeform.com/apply-ab-artist). We expect that artists have a creative history as well as the ability to provide an original generative script. We process applications in chronological order, prioritizing those with working prototypes. To learn more about the application process please visit artblocks.io/learn
+
+---
+
+## What is the MinterSuite and how does it work? 
+
+The MinterSuite is an update to our broader smart-contract architecture at Art Blocks that allows artists to set specific minting contracts on a per-project basis.
+
+The MinterSuite currently includes the following minter options, which will continue to be expanded over time:
+
+* Dutch Auction - Linear Price Decrease
+    * Linear Dutch Auctions specify starting price, starting time, ending time, and ending price, and the price will linearly decrease over that time for each block
+* Dutch Auction - Exponential Price Decrease 
+    * Exponential Dutch Auctions are when the artist decides the half-life for each price drop
+* Set Price - Custom ERC20
+    *  Fixed price with a custom token
+* Set Price - ETH
+    *  Fixed price in ETH 
+
+The MinterSuite includes support for a V1 series of the 4 initially introduced minters, to improve the experience for minting with smart contract wallets (e.g. Gnosis and Argent) and slightly reduce the gas-cost of minting in the process.
+
+To find out how to set your project price using the MinterSuite visit [this page](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter). 
+
+To learn how to imitate your MinterSuite choice, use our Checklist before launching your project. 
+
+---
+
+## Do you have access to historical data of other Art Blocks sales? 
+
+There are a few helpful tools for this:
+ 1. https://artacle.io/ 
+
+This resource has most Art Blocks projects and will show the distribution of sales for Dutch Auctions.
+
+2. https://rarity.guide/ 
+
+This focuses on the rarity of mints per project, the time between mint #2, and the rate of sales. 
