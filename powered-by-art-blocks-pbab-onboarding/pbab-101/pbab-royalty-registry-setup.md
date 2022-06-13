@@ -23,12 +23,16 @@ Additional Payee | defined on PBAB core contract | defined on PBAB contract
 Two setup steps are required before Art Blocks PBAB contracts will integrate properly with the Royalty Registry:
 
 1. Create a new override on the Royalty Registry for your PBAB core contract
-   - Connect your PBAB `admin` wallet to the Royalty Registry's [Configure](https://royaltyregistry.xyz/configure) dapp and set your override to the Art Blocks PBAB royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#code)
+   - View the Royalty Registry's mainnet registry contract on etherscan: [https://etherscan.io/address/0xad2184fb5dbcfc05d8f056542fb25b04fa32a95d#writeProxyContract](https://etherscan.io/address/0xad2184fb5dbcfc05d8f056542fb25b04fa32a95d#writeProxyContract)
+   - Using the `Connect to Web3` button, connect your PBAB `admin` wallet to etherscan when on the "Write as Proxy" tab.
+   - Call the `setRoyaltyLookupAddress` function with the following arguments:
+     - `tokenAddress`: The address of your PBAB core contract
+     - `royaltyLookupAddress`: The address of the standard Art Blocks PBAB Royalty Registry override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#code)
 2. Set your Platform royalty payment address
    - Connect your PBAB `admin` wallet to the Art Blocks PBAB royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract), on etherscan
-   - Call the `updatePlatformRoyaltyAddressForContract` function with your PBAB token contract address as `_tokenContract`, and your desired platform royalty payment address as `_platformRoylatyAddress`.
+   - Call the `updatePlatformRoyaltyAddressForContract` function with your PBAB token contract address as `_tokenContract`, and your desired platform royalty payment address as `_platformRoylatyAddress`
 
-Now you will automatically be collecting royalties from sales on secondary markets that support use of the Royalty Registry!
+Now you will automatically be receiving royalties from sales on secondary markets that support use of the Royalty Registry!
 
 ## Optional Configuring
 
