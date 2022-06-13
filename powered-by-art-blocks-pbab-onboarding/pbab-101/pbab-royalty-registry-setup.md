@@ -30,7 +30,7 @@ Two setup steps are required before Art Blocks PBAB contracts will integrate pro
      - `royaltyLookupAddress`: The address of the standard Art Blocks PBAB Royalty Registry override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#code)
 2. Set your Platform royalty payment address
    - Connect your PBAB `admin` wallet to the Art Blocks PBAB royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract), on etherscan
-   - Call the `updatePlatformRoyaltyAddressForContract` function with your PBAB token contract address as `_tokenContract`, and your desired platform royalty payment address as `_platformRoylatyAddress`
+   - Call the `updatePlatformRoyaltyAddressForContract` function with your PBAB token contract address as `_tokenContract`, and your desired platform royalty payment address as `_platformRoyaltyAddress`
 
 Now you will automatically be receiving royalties from sales on secondary markets that support use of the Royalty Registry!
 
