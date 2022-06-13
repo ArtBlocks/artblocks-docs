@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.707950374622">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.708456331255">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.3.0.707950374622" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.3.0.708456331255" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.3.0.707950374622" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.3.0.708456331255" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.3.0.707950374622" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.3.0.708456331255" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -279,17 +279,24 @@
 <ol>
 <li>Create a new override on the Royalty Registry for your PBAB core contract
 <ul>
-<li>Connect your PBAB <code v-pre>admin</code> wallet to the Royalty Registry&#x27;s <a href="https://royaltyregistry.xyz/configure">Configure</a> dapp and set your override to the Art Blocks PBAB royalty override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#code">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a></li>
+<li>View the Royalty Registry&#x27;s mainnet registry contract on etherscan: <a href="https://etherscan.io/address/0xad2184fb5dbcfc05d8f056542fb25b04fa32a95d#writeProxyContract">https://etherscan.io/address/0xad2184fb5dbcfc05d8f056542fb25b04fa32a95d#writeProxyContract</a></li>
+<li>Using the <code v-pre>Connect to Web3</code> button, connect your PBAB <code v-pre>admin</code> wallet to etherscan when on the &quot;Write as Proxy&quot; tab.</li>
+<li>Call the <code v-pre>setRoyaltyLookupAddress</code> function with the following arguments:
+<ul>
+<li><code v-pre>tokenAddress</code>: The address of your PBAB core contract</li>
+<li><code v-pre>royaltyLookupAddress</code>: The address of the standard Art Blocks PBAB Royalty Registry override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#code">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Set your Platform royalty payment address
 <ul>
 <li>Connect your PBAB <code v-pre>admin</code> wallet to the Art Blocks PBAB royalty override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a>, on etherscan</li>
-<li>Call the <code v-pre>updatePlatformRoyaltyAddressForContract</code> function with your PBAB token contract address as <code v-pre>_tokenContract</code>, and your desired platform royalty payment address as <code v-pre>_platformRoylatyAddress</code>.</li>
+<li>Call the <code v-pre>updatePlatformRoyaltyAddressForContract</code> function with your PBAB token contract address as <code v-pre>_tokenContract</code>, and your desired platform royalty payment address as <code v-pre>_platformRoylatyAddress</code></li>
 </ul>
 </li>
 </ol>
-<p>Now you will automatically be collecting royalties from sales on secondary markets that support use of the Royalty Registry!</p>
+<p>Now you will automatically be receiving royalties from sales on secondary markets that support use of the Royalty Registry!</p>
 <doc-anchor-target id="optional-configuring">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#optional-configuring">#</doc-anchor-trigger>
