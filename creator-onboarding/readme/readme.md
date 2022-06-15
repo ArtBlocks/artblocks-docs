@@ -30,6 +30,8 @@ let hash = tokenData.hash
 
 Included in the `tokenData` is also the `tokenId`. The `tokenId` encodes both the project and mint.
 
+**Please note:** if you include using the `tokenId` as a way to determine the outputs of your script **you must** disclose this as part of the release communications for your project.
+
 ```
 tokenId = (projectNumber * 1000000) + mintNumber
 ```
