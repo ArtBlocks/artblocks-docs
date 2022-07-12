@@ -37,7 +37,7 @@ _Do note that this price structure does not affect the establishment of dutch au
 
 # How To Use This Pricing Model
 
-The above category prices impose limits on project's overall resting value. That said, you are encouraged to also consider your audience and breadth of your project/mints when determining the best series size and price per token for your project. Keep in mind there is a two month cooldown period after a release is complete before you can deploy another project.
+The above category prices impose limits on project's overall resting value. That said, you are encouraged to also consider your audience and breadth of your project/mints when determining the best series size and price per token for your project. 
 
 Approaching price in terms of overall value leaves room for artists to ensure that their collection size and output pricing aligns with their created project. Keep in mind that if a collection uses a dutch auction sales mechanic, the collection may realize a greater value than the resting price. This pricing guidance does not limit the overall value a project may generate, it just requires that the project's resting value is not higher than these maximum prices. Conversely, artists are welcome to set prices and series sizes that fall below the specified maximum resting values. We recognize that the market is forever changing. Art Blocks will continue to monitor sales data and adjust these values as appropriate over time. 
 
