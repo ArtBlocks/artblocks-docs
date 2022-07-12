@@ -42,7 +42,7 @@ Once your application has been reached in the queue, communication will move qui
 
 ## Who can I reach out to if I have questions?
 
-Sarah ([!badge Discord: sross#6444]), our Artist Liaison will be your primary point of contact, along with Jeff Davis ([!badge Discord: jeffgdavis#0102]), our CCO. You can reach them on Discord or send them an email.
+Sarah ([!badge Discord: sross#6444]), our Artist Liaison will be your primary point of contact, along with Mad Pinney ([!badge Discord: madpinney#1183]), our Artistic Coordinator. You can reach them on Discord or send them an email.
 
 ---
 
@@ -275,7 +275,12 @@ However, we ask that you clearly communicate why you're minting more than one to
 
 ## How long do I need to wait before releasing a project through Art Blocks again?
 
-We require artists to take a 2 month cool off period between drops in the Playground and Factory. In addition, there is a 6 month cool-off period between considerations for Curated projects. The cool off period begins when your project sells out (i.e. when minting is 100% completed).
+In order to submit a new project, your previous project must be closed (sold out/completed) as artists are limited to one active project on Art Blocks at a time. 
+
+Curated artists will still need to wait 6 months to share new projects with the Curation Board for review. Until this 6 month period is reached, submitted projects from Curated artists will be considered for Playground. 
+
+As a reminder, new projects can be submitted for review either via a working prototype or via your existing testnet shell, which you will continue to have edit access to. All projects (including playground) will be screened before being accepted to Art Blocks. To submit a new project for review, please DM Sarah ([!badge Discord: sross#6444]), our Artist Liaison or Mad Pinney ([!badge Discord: madpinney#1183]), our Artistic Coordinator. 
+
 
 ---
 
