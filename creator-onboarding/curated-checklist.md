@@ -30,7 +30,8 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 
 1. Consider the overall economics of your project for a successful release.
 2. Artists can only have one active project at a time.
-3. As a note, we require artists to take a 6 month cooldown period between considerations for Curated projects. There is also a required 2 month cooldown period between Playground and Factory drops. The cooldown period begins when your project sells out (i.e. when minting is 100% complete).
+3. As a note, we require artists to take a 6 month cooldown period between considerations for Curated projects.
+
 
 ## Charity Component
 
