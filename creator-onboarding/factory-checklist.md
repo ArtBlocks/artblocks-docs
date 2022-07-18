@@ -30,7 +30,7 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 
 1. Consider the overall economics of your project for a successful release.
 2. Artists can only have one active project at a time.
-3. As a note, we require artists to take a 2 month cooldown period between Playground and Factory drops. The cooldown period begins when your project sells out (i.e. when minting is 100% complete).
+3. In order to submit a new project, your previous project must be closed (sold out/completed).
 
 ## Charity Component
 
