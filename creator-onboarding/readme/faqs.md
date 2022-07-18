@@ -279,9 +279,9 @@ We require artists to take a 2 month cool off period between drops in the Playgr
 
 ---
 
-## Will I have access to my testnet shell during my cooldown period?
+## Will I have access to my testnet shell after I release my project?
 
-Yes you will and we encourage you to use your testnet shell during your cooldown period. We kindly ask that you wait to ask for thumbnail refreshes if needed until after your cooldown period to limit noise on our end.
+Yes you will and we encourage you to use your testnet shell if you plan to submit another project. When you've uploaded a new script, please send a message through your Ropsten DM.
 
 ---
 
