@@ -20,8 +20,16 @@ Additional Payee | defined on PBAB core contract | defined on PBAB contract
 
 ## Required Setup
 
-Two setup steps are required before Art Blocks PBAB contracts will integrate properly with the Royalty Registry:
+The following steps are required before Art Blocks PBAB contracts will integrate properly with the Royalty Registry.
 
+A. Pre-setup:
+  - Ensure every project has the desired artist royalty percentage set on the PBAB contract.
+    - IMPORTANT: This percentage represents the percentage of the total token sale that will be paid to combination of artist & additional payee. It is typically 5%. Additionally, the default 2.5% to PBAB platform and 2.5% to render provider will be also added by the Royalty Registry override contracts below.
+    - **Only artists** may update their project's royalty percentage. They can call `updateProjectSecondaryMarketRoyaltyPercentage(<_projectId>, <_royaltyPercentage>)` on the PBAB contract from their artist wallet. Typically royalty percentage would be the number 5, representing 5%.
+   >**Note:** This percentage is different that what OpenSea has asked us to do with their off-chain royalty system. In the old system, typically 5%+2.5%+2.5%=10% was set on OpenSea's website because they only supported bulk payments to a single address. In the new on-chain system, payments to more than a single address will be supported.
+
+
+B. Royalty Registry Integration:
 1. Create a new override on the Royalty Registry for your PBAB core contract
    - View the Royalty Registry's mainnet registry contract on etherscan: [https://etherscan.io/address/0xad2184fb5dbcfc05d8f056542fb25b04fa32a95d#writeProxyContract](https://etherscan.io/address/0xad2184fb5dbcfc05d8f056542fb25b04fa32a95d#writeProxyContract)
    - Using the `Connect to Web3` button, connect your PBAB `admin` wallet to etherscan when on the "Write as Proxy" tab.
