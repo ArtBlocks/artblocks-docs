@@ -1,5 +1,7 @@
+---
 order: 400
-description: MARKETING 101
+description: Marketing 101
+---
 
 # MARKETING 101
 Marketing is an essential part of a successful release. Instant sell-outs are not guaranteed and crypto markets remain volatile, which can cause a lot of pressure for artists to build an active and engaged collector base. Fortunately, you can do this by tapping into Art Blocks’ thriving community. Art Blocks has a following of over 150k on Twitter and a Discord community of almost 45k and growing. Use this to your advantage. Below, we will outline guidelines and tips as you prepare to release your work.
@@ -17,7 +19,7 @@ Newsletter: Art Blocks announces upcoming releases on Tuesday via our newsletter
 Discord: The following week's releases are announced in #upcoming-projects on Discord at the end of each week.
 
 ### Curated Releases
-Curated releases are included in the weekly Twitter roundup, newsletter, and #upcoming-projects announcement. Curated releases are also announced by CCO, Jeff Davis, with a global ping in #community-announcements the Thursday before their release. In addition, Jeff will publish an interview with the artist on (Medium)[https://medium.com/the-link-art-blocks]. Curated artists will have their own Discord channel to engage with collectors.
+Curated releases are included in the weekly Twitter roundup, newsletter, and #upcoming-projects announcement. Curated releases are also announced by CCO, Jeff Davis, with a global ping in #community-announcements the Thursday before their release. In addition, Jeff will publish an interview with the artist on [Medium](https://medium.com/the-link-art-blocks). Curated artists will have their own Discord channel to engage with collectors.
 
 ### Art Blocks Community Programming
 The Art Blocks community team hosts a series of public programming to help generate context and conversation around generative art, upcoming projects, and the creative coding process. All Art Blocks artists are invited to participate in these programs! If you are interested in joining, please send a Discord DM to madpinney#1183 to be connected with our Community Team. 
@@ -25,15 +27,15 @@ The Art Blocks community team hosts a series of public programming to help gener
 **Pre-Drop Talk**
 Pre-Drop Talks happen on Twitter Spaces 15 minutes prior to the release of your project. A member of the community team will ask you a series of questions that help collectors get to know more about your creative process and the decisions behind your project. Pre-drop talks are announced on Twitter a few days before release, and you’ll be connected with the host of your talk after your project is announced in #upcoming-projects. You will receive interview questions in advance of the live show. If you are not on Twitter, the Community Team will explore alternative ways to host this conversation with you. 
 
-**(Minters & Makers)[https://podcasts.apple.com/us/podcast/minters-makers-by-art-blocks/id1611604712]**
+**[Minters & Makers](https://podcasts.apple.com/us/podcast/minters-makers-by-art-blocks/id1611604712)**
 Minters & Makers is a weekly Twitter Space hosted by Art Blocks about generative art. Guests include artists, community members, curators, and generative art experts. Episodes are later released on Spotify and Apple Podcasts. 
 
 
-**(After Dinner Mints, ADM)[https://www.youtube.com/watch?v=kSF5zFvsvkw&list=PLSNTJAzmISeakvdFzT2WPIKPVIq47ng-O]**
+**[After Dinner Mints, ADM](https://www.youtube.com/watch?v=kSF5zFvsvkw&list=PLSNTJAzmISeakvdFzT2WPIKPVIq47ng-O)**
 An Art Blocks show released on Youtube revolving around conversations with Art blocks artists, staff, and community members.  Shows are later released as a podcast.
 
 
-**(ADM: Behind the Code)[https://www.youtube.com/watch?v=05tfj7yHZZM&list=PLSNTJAzmISebdho4eKXsBSdDElZdEQV-G]**
+**[ADM: Behind the Code](https://www.youtube.com/watch?v=05tfj7yHZZM&list=PLSNTJAzmISebdho4eKXsBSdDElZdEQV-G)**
 A subset of After Dinner Mints that happens bi-monthly and invites artists to share their screen and go behind the scenes on the technical process behind their recent drop. 
 
 *Artists are welcome to participate in all community programs and should reach out to Ponyo#3092 or madpinney#1183 on Discord if they are interested.*
@@ -74,7 +76,7 @@ Web3 trends towards Twitter and Discord. In addition to participating on the Art
 ## Tips for managing social media use:
 For anyone who is considering reducing time on social media, it is a good idea to find out how much time you are spending there. There are apps that will help you get a baseline of how much time you are spending before setting a goal of reducing that time. 
 
-(This article)[https://wethegeek.com/best-apps-to-track-limit-social-media-usage/] from March 2022 recommends the best apps for tracking and reducing time on  social media. 
+[This article](https://wethegeek.com/best-apps-to-track-limit-social-media-usage/) from March 2022 recommends the best apps for tracking and reducing time on  social media. 
 
 ### Make a routine that works for you: 
 After determining how much time you are spending on social media, start to pay close  attention to the emotions you feel when scrolling through a social media feed. If the emotions  are negative (FOMO, anxiety, jealousy, anger, or depression) it may not be the best place for you.  Consider removing the apps that bring up this feeling most. Choose an activity that can replace social media at that time – taking a walk, reading a book, breathing exercises, calling a friend,  etc. can be a remedy for these negative emotions.  
