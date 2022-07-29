@@ -1,3 +1,6 @@
+order: 400
+description: MARKETING 101
+
 # MARKETING 101
 Marketing is an essential part of a successful release. Instant sell-outs are not guaranteed and crypto markets remain volatile, which can cause a lot of pressure for artists to build an active and engaged collector base. Fortunately, you can do this by tapping into Art Blocks’ thriving community. Art Blocks has a following of over 150k on Twitter and a Discord community of almost 45k and growing. Use this to your advantage. Below, we will outline guidelines and tips as you prepare to release your work.
 
