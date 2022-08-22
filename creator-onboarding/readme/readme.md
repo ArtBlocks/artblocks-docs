@@ -59,7 +59,7 @@ let tokenData = genTokenData(123);
 
 ### Safely deriving randomness from the token hash
 
-Art Blocks strongly recommends that all artists use an instance of the following Random class to feed all of their project's randomness.
+Art Blocks requires that all artists use an instance of the following Random class to feed all of their project's randomness. If you need to modify/customize the Random class, please flag this to our team during the review process.
 
 ```js
 class Random {
