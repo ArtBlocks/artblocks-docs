@@ -42,19 +42,23 @@ Once your application has been reached in the queue, communication will move qui
 
 ## Who can I reach out to if I have questions?
 
-Sarah ([!badge Discord: sross#6444]), our Artist Liaison will be your primary point of contact, along with Jeff Davis ([!badge Discord: jeffgdavis#0102]), our CCO. You can reach them on Discord or send them an email.
+Sarah ([!badge Discord: sross#6444]), our Associate Artistic Director, alongside, Mad ([!badge Discord: madpinney#1138]), our Artistic Coordiantor. You can reach them on Discord or send them an email.
 
 ---
 
 ## What are the general standards for achieving curation status? What are the criteria that differentiate curated and factory?
 
-For each project, our curation board looks at overall aesthetics, variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually.
-
-It's important to note that curation status is not strictly a designation of quality. Instead, the curated collection indicates a substantial addition to Art Blocks' narrative within generative art.
-
-For example, a project may be a technical, visual, and conceptual masterpiece, but if the idea has previously been explored in the curated collection, it may not substantially add to the broader narrative.
+The Curated Collection is a group of projects that pushes the boundaries of Generative Art in their aesthetic beauty, conceptualization, technical quality, and innovation. A project in the Curated Collection covers new territory using code that employs inventive, never-before-seen techniques that operate to support an original intention and concept. Board members look for collections that evoke emotional, intellectual, and conceptual qualities through aesthetics while sustaining the viewer’s interest.
 
 ---
+
+
+## Can I resubmit my project after it is reviewed by the Curation Board?
+
+Although curators will provide actionable feedback to improve your upcoming release, projects do not go back to the board to redetermine curatorial status unless the work was initally scored close to curatorial status. 
+
+---
+
 
 ## Why are rarities judged as a metric for curation?
 
@@ -64,13 +68,13 @@ Rarities aren't included as a metric for determining curation status. However, o
 
 ## Will I receive feedback from the curation board on my submissions?
 
-If requested, feedback from the Curation Board can be provided. The goal of this feedback will be to highlight observations that our Curation Board made about your current project upon their review
+Feedback from the Curation Board will be provided. The goal of this feedback will be to highlight observations that our Curation Board made about your current project upon their review.
 
 ---
 
 ## Who is on the curation board?
 
-Our Curation Board is made up of a diverse group of artists and people in the art space. You can read more about the Curation Board on our Medium page: https://medium.com/the-link-art-blocks
+Our Curation Board is made up of a diverse group of artists and people in the art space. You can read more about the Curation Board on our Medium page: 
 
 ---
 
@@ -133,7 +137,7 @@ The cost depends on the complexity of your project and how many lines of code it
 If your project is selected for a drop on Art Blocks, you'll need to have the following information ready. This is typically collected near the end of the process, so you'll have time to make these decisions as you're onboarding.
 
 ```
-Would you like your Ropsten testnet project made public? YES/NO
+Would you like your Goerli testnet project made public? YES/NO
 
 [Curated/Playground/Factory]
 Project name:
@@ -163,19 +167,7 @@ Once you finalize a drop date with the Art Blocks team, you're welcome to share 
 
 ## How should I price my artwork?
 
-Once you near finalization of your project, you'll be in close dialogue with our team about how to price your work. Ultimately, we will defer to the artist to decide how to price a work, but can offer recommendations, advice, and context based on the market conditions at the time of your drop.
-
----
-
-## How should I set up a dutch auction? How many price decrements should there be? What should I set for my floor price?
-
-The structure and price levels of a dutch auction are largely up to the artist, but the Art Blocks team is happy to work with you directly to offer advice for price structuring based on market observations.
-
----
-
-## I used a custom currency for my project. How do I get back to ETH?
-
-To switch back to ETH, change the currency symbol to ETH and the contract address to 0x0000...
+Once you near finalization of your project, you'll be in close dialogue with our team about how to price your work. (This resource)[https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/#project-pricing-model] defines Art Blocks project pricing model. This resource is intended for artists as they are determining their project's series size and price per token.
 
 ---
 
@@ -253,7 +245,7 @@ You can also check out our [After Dinner Mints episode](https://www.youtube.com/
 
 ## Is there a place I can connect with other artists and chat?
 
-All artists are added to the artist-exclusive #artist-general channel in Discord where you can interact with other Art Blocks artists, share projects, and ask questions. We also encourage artists to participate in our Discord community. If you're selected for a curated drop, you'll have your own artist channel dedicated to focused discussions on your work. If you're selected for a factory drop, you can chat with artists and collectors in the #factory-projects channel.
+Once you’ve been accepted to release on Art Blocks, you’ll be assigned an Artist role in Discord. Here’s your chance to tap into a community of artists who are either preparing for their first release or have already released on Art Blocks! On Tuesdays at 11 PM CT/12 PM ET, Art Blocks hosts Office Hours on Google Meet. This meeting is an open invitation to chat with other artists and the Art Blocks team face to face (or audio to audio). With our community spread across the world, it can be difficult to connect with one another. Through this standing meeting, we hope to bring artists together and strengthen our artist community. Add this meeting to your calendar.
 
 ---
 
@@ -275,7 +267,7 @@ However, we ask that you clearly communicate why you're minting more than one to
 
 ## How long do I need to wait before releasing a project through Art Blocks again?
 
-We require artists to take a 2 month cool off period between drops in the Playground and Factory. In addition, there is a 6 month cool-off period between considerations for Curated projects. The cool off period begins when your project sells out (i.e. when minting is 100% completed).
+When minting on your project is 100% complete, you may submit another project for release. For curated projects, there is a 6 month cooldown period between consideration for curated status.
 
 ---
 
