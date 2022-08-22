@@ -48,11 +48,8 @@ Sarah ([!badge Discord: sross#6444]), our Artist Liaison will be your primary po
 
 ## What are the general standards for achieving curation status? What are the criteria that differentiate curated and factory?
 
-For each project, our curation board looks at overall aesthetics, variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually.
+The Curated Collection is a group of projects that pushes the boundaries of Generative Art in their aesthetic beauty, conceptualization, technical quality, and innovation. A project in the Curated Collection covers new territory using code that employs inventive, never-before-seen techniques that operate to support an original intention and concept. Board members look for collections that evoke emotional, intellectual, and conceptual qualities through aesthetics while sustaining the viewer’s interest.
 
-It's important to note that curation status is not strictly a designation of quality. Instead, the curated collection indicates a substantial addition to Art Blocks' narrative within generative art.
-
-For example, a project may be a technical, visual, and conceptual masterpiece, but if the idea has previously been explored in the curated collection, it may not substantially add to the broader narrative.
 
 ---
 
@@ -70,7 +67,7 @@ If requested, feedback from the Curation Board can be provided. The goal of this
 
 ## Who is on the curation board?
 
-Our Curation Board is made up of a diverse group of artists and people in the art space. You can read more about the Curation Board on our Medium page: https://medium.com/the-link-art-blocks
+Our Curation Board is made up of a diverse group of artists and people in the art space. You can read more about the Curation Board on our Medium page: https://medium.com/the-link-art-blocks/meet-the-art-blocks-curation-board-696102e747e3
 
 ---
 
@@ -133,7 +130,7 @@ The cost depends on the complexity of your project and how many lines of code it
 If your project is selected for a drop on Art Blocks, you'll need to have the following information ready. This is typically collected near the end of the process, so you'll have time to make these decisions as you're onboarding.
 
 ```
-Would you like your Ropsten testnet project made public? YES/NO
+Would you like your Goerli testnet project made public? YES/NO
 
 [Curated/Playground/Factory]
 Project name:
