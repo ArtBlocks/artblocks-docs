@@ -16,7 +16,8 @@ A high level process-map for PBAB onboarding.
 4.  Your team will integrate a custom web frontend with your deployed PBAB smart contracts (e.g. **implementing their own purchase + display flow**) and with the Art Blocks API as needed. An example of frontend purchase flow logic is provided here as a reference for integrating partners:
 
 <details>
-    <summary>Example frontend purchase flow logic in JavaScript</summary>    
+    <summary>Example frontend purchase flow logic in JavaScript</summary>
+       ### Code
        ```js
           /** CONNECTION **/
           // A Web3Provider wraps a standard Web3 provider, which is
