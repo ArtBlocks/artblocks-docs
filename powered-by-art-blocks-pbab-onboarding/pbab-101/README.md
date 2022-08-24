@@ -16,97 +16,20 @@ A high level process-map for PBAB onboarding.
 4.  Your team will integrate a custom web frontend with your deployed PBAB smart contracts (e.g. **implementing their own purchase + display flow**) and with the Art Blocks API as needed. An example of frontend purchase flow logic is provided here as a reference for integrating partners:
 
 <details>
-    <summary>Example frontend purchase flow logic in JavaScript</summary>
-    <p>
-    
-       ```js
-          /** CONNECTION **/
-          // A Web3Provider wraps a standard Web3 provider, which is
-          // what Metamask injects as window.ethereum into each page
-          const provider = new ethers.providers.Web3Provider(window.ethereum)
-          // Connect to Dapp. This should happen in response to a user interaction
-          await provider.send("eth_requestAccounts", []);
-          // A signer is required to make any write transactions
-          const signer = provider.getSigner();
-          const userAddress = await signer.getAddress()
+  <summary>Click me</summary>
+  
+  ### Heading
+  1. Foo
+  2. Bar
+     * Baz
+     * Qux
 
-          /** PRE PURCHASE **/
-          // Check that the project is unpaused, active, and
-          // has not yet reached its maxInvocations. Also get
-          // price per token.
-          const genArt = new ethers.Contract('<CORE CONTRACT ADDRESS>', GEN_ART_ABI, provider)
-          const { paused } = await genArt.projectScriptInfo('<PROJECT ID>')
-          const { invocations, maxInvocations, pricePerTokenInWei, active, currencyAddress } = await genArt.projectTokenInfo('<PROJECT ID>')
-          if (Number(invocations) >= Number(maxInvocations) || paused || !active) {
-            // Disable purchase
-            return
-          }
-
-          /** PRE PURCHASE (ERC-20) **/
-          const NULL_ADDRESS = '0x0000000000000000000000000000000000000000'
-          const projectUsesErc20 = currencyAddress && currencyAddress !== NULL_ADDRESS
-          if (projectUsesErc20) {
-            // Set up ERC-20 contract
-            const erc20 = new ethers.Contract('<ERC-20 CONTRACT ADDRESS>', ERC20_ABI, signer)
-
-            // Check that the user has the required amount of ERC-20
-            const balance = await erc20.balanceOf(userAddress)
-            if (balance.lt(pricePerTokenInWei)) {
-              // Show insufficent funds error
-              return
-            }
-
-            // Check allowance for minterAddress allowed by user
-            const allowance = await erc20.allowance(
-              userAddress,
-              '<MINTER CONTRACT ADDRESS>'
-            )
-
-            // If the user has not yet allowed enough of their ERC-20 to be used
-            // by the minter, have them approve enough.
-            if (allowance.lt(pricePerTokenInWei)) {
-              // Trigger user wallet dialogue. This should be done in response to user interaction.
-              const approveTransaction = await erc20.approve('<MINTER CONTRACT ADDRESS>', pricePerTokenInWei)
-              // Wait for approve transaction confirmation
-              await approveTransaction.wait(1)
-            }
-          }
-
-          /** PURCHASE **/
-          // Set up minter contract connected to users wallet
-          const minter = new ethers.Contract('<MINTER CONTRACT ADDRESS>', MINTER_ABI, signer);
-          // Initiate purchase transaction (user must confirm through metamask).
-          // If paying in ether, we must include a payable value otherwise payable value will be 0.
-          const transaction = await minter.purchase('<PROJECT ID>', { value: projectUsesErc20 ? '0' : pricePerTokenInWei})
-          // Wait for the transaction to be confirmed. The number passed to the wait function specifies the
-          // number of block confirmations to wait for.  You may want to wait longer than a single
-          // block to prevent showing the wrong output in case of a chain reorg. The Art Blocks site
-          // waits for 3 block confirmations.
-          const receipt = await transaction.wait(3)
-          // Iterate through events to find mint event
-          const mintEvent = (receipt.events || []).find(
-            (receiptEvent) => {
-              const event = genArt.interface.getEvent(
-                receiptEvent.topics[0]
-              )
-              return event && event.name === 'Mint'
-            }
-          )
-
-          // Decode the mint event
-          const mintEventDecoded = genArt.interface.decodeEventLog(
-            'Mint',
-            mintEvent.data,
-            mintEvent.topics
-          )
-          // Token ID as BigNumber object
-          const tokenIdBigNum = mintEventDecoded['_tokenId']
-          // Token ID as string
-          const tokenId = tokenIdBigNum.toString()
-          // Use the token id to display the newly minted token with the iframe'd generator
-      ```
-      
-    </p>
+  ### Some Code
+  ```js
+  function logSomething(something) {
+    console.log('Something', something);
+  }
+  ```
 </details>
    
 5. Your team will use https://artist-staging.artblocks.io site to configure all project metadata details (e.g. project description, license associated with outputs,  artist website) and upload your project script source code. This process looks very similar to the process within Art Blocks itself for creators uploading their projects, so "[Art Blocks 101 for Creators](../../creator-onboarding/readme/readme.md#documentation)" should provide a good reference for this process. If you need help along the way, the Art Blocks team will help guide you through the process.
