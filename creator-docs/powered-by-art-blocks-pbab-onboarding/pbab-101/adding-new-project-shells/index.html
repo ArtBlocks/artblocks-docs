@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714675099602">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714686492694">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>Project Shell Deployment Guide</title>
     <meta name="title" content="Project Shell Deployment Guide">
-    <meta name="description" content="An overview of how to deploy a new project on your custom PBAB contract." />
+    <meta name="description" content="An overview of deploying a new project on your custom Art Blocks Engine contract." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells/" />
@@ -23,23 +23,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells/">
     <meta property="og:title" content="Project Shell Deployment Guide">
-    <meta property="og:description" content="An overview of how to deploy a new project on your custom PBAB contract.">
+    <meta property="og:description" content="An overview of deploying a new project on your custom Art Blocks Engine contract.">
     <meta property="og:image" content="https://docs.artblocks.io/static/screenshot3.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/adding-new-project-shells/">
     <meta property="twitter:title" content="Project Shell Deployment Guide">
-    <meta property="twitter:description" content="An overview of how to deploy a new project on your custom PBAB contract.">
+    <meta property="twitter:description" content="An overview of deploying a new project on your custom Art Blocks Engine contract.">
     <meta property="twitter:image" content="https://docs.artblocks.io/static/screenshot3.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.714675099602" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.714686492694" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.714675099602" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.714686492694" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.714675099602" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.714686492694" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -224,26 +224,20 @@
         <span>Project Shell Deployment Guide</span>
     </h1>
 </doc-anchor-target>
-<p>An overview of how to deploy a new project on your custom PBAB contract.</p>
+<p>An overview of deploying a new project on your custom Art Blocks Engine contract.</p>
 <ol>
-<li>Collect 3 pieces of information for the to-be-deployed project on your PBAB contract.
-<ol>
-<li>The project title (e.g. &quot;Fun Lines&quot;)</li>
-<li>The artist wallet address, this will determine which address has access to configure the project from within the Art Blocks artist interface, (e.g. <code v-pre>0x78592a6fBE68fEBf226040a5D25ad7e69F2FeAb6</code>).</li>
-<li>The price-per-mint, this will need to be specified <a href="https://eth-converter.com"><strong>in WEI</strong></a>, (e.g. <code v-pre>350000000000000000</code>, which is 0.35 in ETH).</li>
-</ol>
-</li>
-<li>Navigate to your PBAB Core Contract on Etherscan (e.g. <a href="https://ropsten.etherscan.io/address/0x06710498339b30834653459Ac90F52Cbd2F1D085#code">https://ropsten.etherscan.io/address/0x06710498339b30834653459Ac90F52Cbd2F1D085#code</a>).</li>
+<li>Collect 3 pieces of information for the to-be-deployed project on your Engine contract.
+1.1 The project title (e.g. &quot;Fun Lines&quot;)
+1.2 The artist&#x27;s wallet address, this will determine which address has access to configure the project from within the artist interface, (e.g. <code v-pre>0x78592a6fBE68fEBf226040a5D25ad7e69F2FeAb6</code>).
+1.3 The price-per-mint, this will need to be specified <a href="https://eth-converter.com"><strong>in WEI</strong></a>, (e.g. <code v-pre>350000000000000000</code>, which is 0.35 in ETH).</li>
+<li>Navigate to your Engine Core Contract on Etherscan (e.g. <a href="https://ropsten.etherscan.io/address/0x06710498339b30834653459Ac90F52Cbd2F1D085#code">https://ropsten.etherscan.io/address/0x06710498339b30834653459Ac90F52Cbd2F1D085#code</a>).</li>
 <li>Navigate to the &quot;Write contract&quot; tab and connect your wallet to Etherscan.<img src="../../../../static/screenshot3.png" alt="" /></li>
-<li>Use the <code v-pre>addProject</code> method to create a new project shell, specifying the information initially collected (as defined in 1. above).</li>
-<li>Once 4. has been completed, when connected to the Art Blocks website (<a href="https://artist-staging.artblocks.io">https://artist-staging.artblocks.io</a> for Ropsten, and <a href="https://artblocks.io">https://artblocks.io</a> for mainnet), <strong>with the artist wallet</strong> used in step 4., your artist should be able to begin entering their project details.
-<ul>
-<li>If you are having trouble finding your project on the Ropsten Art Blocks site, you should be able to navigate to it directly with by entering in your browser a URL of the format: <code v-pre>https://artist-staging.artblocks.io/project/{CONTRACT_ADDRESS}-{PROJECT_ID}</code> (e.g. for the first project shell on your PBAB core contract, the <code v-pre>{PROJECT_ID}</code> would be <code v-pre>0</code>, then <code v-pre>1</code>, then <code v-pre>2</code>, etc.).</li>
-<li>If you are having trouble seeing your project on the corresponding-network&#x27;s Art Blocks site, first try disconnecting and reconnecting your wallet to the site, ensuring that you are connected with the previously specified artist wallet.</li>
-<li>When asked to provide the <code v-pre>baseTokenURI</code> for your project, this should be <code v-pre>https://token.artblocks.io/{CONTRACT_ADDRESS}/</code>, where <code v-pre>{CONTRACT_ADDRESS}</code> is the address of <strong>the core contract</strong> for your PBAB project (e.g. <code v-pre>0x06710498339b30834653459Ac90F52Cbd2F1D085</code> for the project linked above in step 2.). For the Ropsten testnet, this should be <code v-pre>https://token.staging.artblocks.io/{CONTRACT_ADDRESS}/</code>.</li>
-<li>Generally speaking, the <a href="../../../creator-onboarding/readme/">Art Blocks 101 for Creators guide</a> should be broadly applicable to this onboarding step for PBAB-partner-platform artists.</li>
-</ul>
-</li>
+<li>Use the <code v-pre>addProject</code> method to create a new project shell, specifying the information collected in step 1 above.</li>
+<li>Once 4 has been completed, connect to the Art Blocks website  (<a href="https://artist-staging.artblocks.io">https://artist-staging.artblocks.io</a> for testnet, and <a href="https://artblocks.io">https://artblocks.io</a> for mainnet), <strong>with the artist wallet</strong> used in step 4., your artist should be able to begin entering their project details.
+5.1 If you are having trouble finding your project on the Ropsten Art Blocks site, you should be able to navigate to it directly by entering in your browser a URL of the format: <code v-pre>https://artist-staging.artblocks.io/project/{CONTRACT_ADDRESS}-{PROJECT_ID}</code> (e.g. for the first project shell on your Engine core contract, the <code v-pre>{PROJECT_ID}</code> would be <code v-pre>0</code>, then <code v-pre>1</code>, then <code v-pre>2</code>, etc.).
+5.2 If you are having trouble seeing your project on the corresponding-network&#x27;s Art Blocks site, first try disconnecting and reconnecting your wallet to the site, ensuring that you are connected with the previously specified artist wallet.
+5.3 When asked to provide the <code v-pre>baseTokenURI</code> for your project, this should be <code v-pre>https://token.artblocks.io/{CONTRACT_ADDRESS}/</code>, where <code v-pre>{CONTRACT_ADDRESS}</code> is the address of <strong>the core contract</strong> for your Engine project (e.g. <code v-pre>0x06710498339b30834653459Ac90F52Cbd2F1D085</code> for the project linked above in step 2.). For the testnet, this should be <code v-pre>https://token.staging.artblocks.io/{CONTRACT_ADDRESS}/</code>.
+5.4 Generally speaking, the <a href="../../../creator-onboarding/readme/">Art Blocks 101 for Creators guide</a> should be broadly applicable to this onboarding step for PBAB-partner-platform artists.</li>
 </ol>
 
                                 
