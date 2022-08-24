@@ -244,11 +244,27 @@ Common source code licenses (in creative coding):
 
 There are many other free-to-use licenses commonly used on open source software. Please carefully read the full details on any licensed code you re-use or modify, before including it in your project.
 
-## Testing on Ropsten
+## Testing on Goerli 
 
-Once your application is approved and your script is ready, you will test it out on an [Art Blocks](https://artist-staging.artblocks.io) staging site running on one of Ethereum's test networks (Ropsten). This will make sure there aren't any bugs or errors and that if it's working on Ropsten, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
+Once your application is approved and your script is ready, you will test it out on an Art Blocks staging site running on one of Ethereum's test networks (Goerli). This will make sure there aren't any bugs or errors and that if it's working on Goerli, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
 
-Note: If you don't have "Ropsten ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: https://faucet.dimensions.network/.
+Note: If you don't have "Goerly ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: - - 
+https://goerlifaucet.com/ 
+https://goerli-faucet.pk910.de/ (POW faucet so this can run in the background and accumulate goerliETH over time)
+
+**ROPSTEN > GOERLI UPGRADE **
+_As of Aug 2, 2022_
+
+Ropsten is being deprecated entirely as a network. New testnet means new smart contracts: Ropsten artist-staging data will be preserved in a read-only state to be accessed at https://ropsten-artist-staging.artblocks.io/ after August 2nd. 
+
+The website for AB core will remain the same: You will still visit https://artist-staging.artblocks.io/, but you will be asked to connect with the Goerli Test Network rather than the Ropsten Test Network. 
+
+If you previously had a testnet shell on the Ropsten network, you may stilla access your project shell using https://ropsten-artist-staging.artblocks.io/ as a frozen read-only set of data. If you are a returning artist, please send XX or XX a DM to set up a Goerli project shell. 
+
+As a reminder, you can stock up on Goerli ETH here:
+https://goerlifaucet.com/ 
+https://goerli-faucet.pk910.de/ (POW faucet so this can run in the background and accumulate goerliETH over time)
+
 
 ### Interacting with your Project
 
