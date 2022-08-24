@@ -28,6 +28,7 @@ A high level process-map for PBAB onboarding.
   // A signer is required to make any write transactions
   const signer = provider.getSigner();
   const userAddress = await signer.getAddress()
+  
   /** PRE PURCHASE **/
   // Check that the project is unpaused, active, and
   // has not yet reached its maxInvocations. Also get
@@ -39,23 +40,27 @@ A high level process-map for PBAB onboarding.
     // Disable purchase
     return
   }
+  
   /** PRE PURCHASE (ERC-20) **/
   const NULL_ADDRESS = '0x0000000000000000000000000000000000000000'
   const projectUsesErc20 = currencyAddress && currencyAddress !== NULL_ADDRESS
   if (projectUsesErc20) {
     // Set up ERC-20 contract
     const erc20 = new ethers.Contract('<ERC-20 CONTRACT ADDRESS>', ERC20_ABI, signer)
+    
     // Check that the user has the required amount of ERC-20
     const balance = await erc20.balanceOf(userAddress)
     if (balance.lt(pricePerTokenInWei)) {
       // Show insufficent funds error
       return
     }
+    
     // Check allowance for minterAddress allowed by user
     const allowance = await erc20.allowance(
       userAddress,
       '<MINTER CONTRACT ADDRESS>'
     )
+    
     // If the user has not yet allowed enough of their ERC-20 to be used
     // by the minter, have them approve enough.
     if (allowance.lt(pricePerTokenInWei)) {
@@ -65,6 +70,7 @@ A high level process-map for PBAB onboarding.
       await approveTransaction.wait(1)
     }
   }
+  
   /** PURCHASE **/
   // Set up minter contract connected to users wallet
   const minter = new ethers.Contract('<MINTER CONTRACT ADDRESS>', MINTER_ABI, signer);
@@ -85,6 +91,7 @@ A high level process-map for PBAB onboarding.
       return event && event.name === 'Mint'
     }
   )
+  
   // Decode the mint event
   const mintEventDecoded = genArt.interface.decodeEventLog(
     'Mint',
