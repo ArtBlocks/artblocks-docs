@@ -105,6 +105,7 @@ A high level process-map for PBAB onboarding.
           const tokenId = tokenIdBigNum.toString()
           // Use the token id to display the newly minted token with the iframe'd generator
       ```
+      
     </p>
 </details>
    
