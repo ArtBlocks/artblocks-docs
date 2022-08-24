@@ -17,7 +17,7 @@ A high level process-map for PBAB onboarding.
 
 <details><summary>Example frontend purchase flow logic in JavaScript</summary>
    
-      js
+    ```js
     /** CONNECTION **/
     // A Web3Provider wraps a standard Web3 provider, which is
     // what Metamask injects as window.ethereum into each page
@@ -102,7 +102,7 @@ A high level process-map for PBAB onboarding.
     // Token ID as string
     const tokenId = tokenIdBigNum.toString()
     // Use the token id to display the newly minted token with the iframe'd generator
-   
+   ```
 </details>
    
 5. Your team will use https://artist-staging.artblocks.io site to configure all project metadata details (e.g. project description, license associated with outputs,  artist website) and upload your project script source code. This process looks very similar to the process within Art Blocks itself for creators uploading their projects, so "[Art Blocks 101 for Creators](../../creator-onboarding/readme/readme.md#documentation)" should provide a good reference for this process. If you need help along the way, the Art Blocks team will help guide you through the process.
