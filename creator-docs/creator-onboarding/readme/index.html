@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714675086097">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714675099602">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.714675086097" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.714675099602" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714675086097" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.714675099602" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714675086097" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.714675086097" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.714675099602" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.714675099602" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -570,14 +570,24 @@ function setup() {
 <li><a href="https://choosealicense.com/licenses/gpl-3.0/">GPL</a>: similar to CC BY-SA</li>
 </ul>
 <p>There are many other free-to-use licenses commonly used on open source software. Please carefully read the full details on any licensed code you re-use or modify, before including it in your project.</p>
-<doc-anchor-target id="testing-on-ropsten">
+<doc-anchor-target id="testing-on-goerli">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#testing-on-ropsten">#</doc-anchor-trigger>
-        <span>Testing on Ropsten</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#testing-on-goerli">#</doc-anchor-trigger>
+        <span>Testing on Goerli</span>
     </h2>
 </doc-anchor-target>
-<p>Once your application is approved and your script is ready, you will test it out on an <a href="https://artist-staging.artblocks.io">Art Blocks</a> staging site running on one of Ethereum&#x27;s test networks (Ropsten). This will make sure there aren&#x27;t any bugs or errors and that if it&#x27;s working on Ropsten, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You&#x27;ll still be using the same wallet and address, except on the test network.</p>
-<p>Note: If you don&#x27;t have &quot;Ropsten ETH&quot; ask a mod or previous artist, we&#x27;ll send you some to play with. Or if you don&#x27;t feel like waiting, request some from the faucet: <a href="https://faucet.dimensions.network/">https://faucet.dimensions.network/</a>.</p>
+<p>Once your application is approved and your script is ready, you will test it out on an Art Blocks staging site running on one of Ethereum&#x27;s test networks (Goerli). This will make sure there aren&#x27;t any bugs or errors and that if it&#x27;s working on Goerli, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You&#x27;ll still be using the same wallet and address, except on the test network.</p>
+<p>Note: If you don&#x27;t have &quot;Goerly ETH&quot; ask a mod or previous artist, we&#x27;ll send you some to play with. Or if you don&#x27;t feel like waiting, request some from the faucet: - -
+<a href="https://goerlifaucet.com/">https://goerlifaucet.com/</a>
+<a href="https://goerli-faucet.pk910.de/">https://goerli-faucet.pk910.de/</a> (POW faucet so this can run in the background and accumulate goerliETH over time)</p>
+<p>**ROPSTEN &gt; GOERLI UPGRADE **
+<em>As of Aug 2, 2022</em></p>
+<p>Ropsten is being deprecated entirely as a network. New testnet means new smart contracts: Ropsten artist-staging data will be preserved in a read-only state to be accessed at <a href="https://ropsten-artist-staging.artblocks.io/">https://ropsten-artist-staging.artblocks.io/</a> after August 2nd.</p>
+<p>The website for AB core will remain the same: You will still visit <a href="https://artist-staging.artblocks.io/">https://artist-staging.artblocks.io/</a>, but you will be asked to connect with the Goerli Test Network rather than the Ropsten Test Network.</p>
+<p>If you previously had a testnet shell on the Ropsten network, you may stilla access your project shell using <a href="https://ropsten-artist-staging.artblocks.io/">https://ropsten-artist-staging.artblocks.io/</a> as a frozen read-only set of data. If you are a returning artist, please send XX or XX a DM to set up a Goerli project shell.</p>
+<p>As a reminder, you can stock up on Goerli ETH here:
+<a href="https://goerlifaucet.com/">https://goerlifaucet.com/</a>
+<a href="https://goerli-faucet.pk910.de/">https://goerli-faucet.pk910.de/</a> (POW faucet so this can run in the background and accumulate goerliETH over time)</p>
 <doc-anchor-target id="interacting-with-your-project">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#interacting-with-your-project">#</doc-anchor-trigger>
