@@ -18,6 +18,7 @@ A high level process-map for PBAB onboarding.
 <details>
     <summary>Example frontend purchase flow logic in JavaScript</summary>
 
+    ### CODE
        ```js
           /** CONNECTION **/
           // A Web3Provider wraps a standard Web3 provider, which is
