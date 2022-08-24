@@ -6,14 +6,14 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714674806210">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714674887045">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>PBAB Royalty Registry Setup</title>
-    <meta name="title" content="PBAB Royalty Registry Setup">
+    <title>Art Blocks Engine Royalty Registry Setup</title>
+    <meta name="title" content="Art Blocks Engine Royalty Registry Setup">
     <meta name="description" content="The Royalty Registry is an on-chain tool used by many marketplaces (OpenSea, Coinbase NFT, etc." />
 
     <!-- Canonical -->
@@ -22,22 +22,22 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-royalty-registry-setup/">
-    <meta property="og:title" content="PBAB Royalty Registry Setup">
+    <meta property="og:title" content="Art Blocks Engine Royalty Registry Setup">
     <meta property="og:description" content="The Royalty Registry is an on-chain tool used by many marketplaces (OpenSea, Coinbase NFT, etc.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-royalty-registry-setup/">
-    <meta property="twitter:title" content="PBAB Royalty Registry Setup">
+    <meta property="twitter:title" content="Art Blocks Engine Royalty Registry Setup">
     <meta property="twitter:description" content="The Royalty Registry is an on-chain tool used by many marketplaces (OpenSea, Coinbase NFT, etc.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.714674806210" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.714674887045" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.714674806210" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.714674887045" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.714674806210" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.714674887045" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -216,10 +216,10 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="pbab-royalty-registry-setup" class="break-words">
+<doc-anchor-target id="art-blocks-engine-royalty-registry-setup" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pbab-royalty-registry-setup">#</doc-anchor-trigger>
-        <span>PBAB Royalty Registry Setup</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#art-blocks-engine-royalty-registry-setup">#</doc-anchor-trigger>
+        <span>Art Blocks Engine Royalty Registry Setup</span>
     </h1>
 </doc-anchor-target>
 <doc-anchor-target id="royalty-registry">
@@ -235,7 +235,7 @@
         <span>Royalties Overview</span>
     </h2>
 </doc-anchor-target>
-<p>For PBAB contracts, the following addresses may receive royalties:</p>
+<p>For Engine contracts, the following addresses may receive royalties:</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -247,24 +247,24 @@
 </thead>
 <tbody>
 <tr>
-<td>Platform (PBAB Partner)</td>
+<td>Platform (Engine Partner)</td>
 <td><strong>defined and configured on Royalty Registry override contract</strong></td>
 <td>default 2.5%, configurable on override contract</td>
 </tr>
 <tr>
 <td>Render Provider (Art Blocks)</td>
-<td>defined on PBAB core contract</td>
+<td>defined on Engine core contract</td>
 <td>default 2.5%, configurable on override contract</td>
 </tr>
 <tr>
 <td>Artist</td>
-<td>defined on PBAB core contract</td>
-<td>defined on PBAB contract, typically 5%</td>
+<td>defined on Engine core contract</td>
+<td>defined on Engine contract, typically 5%</td>
 </tr>
 <tr>
 <td>Additional Payee</td>
-<td>defined on PBAB core contract</td>
-<td>defined on PBAB contract</td>
+<td>defined on Engine core contract</td>
+<td>defined on Engine contract</td>
 </tr>
 </tbody>
 </table>
@@ -275,15 +275,15 @@
         <span>Required Setup</span>
     </h2>
 </doc-anchor-target>
-<p>The following steps are required before Art Blocks PBAB contracts will integrate properly with the Royalty Registry.</p>
+<p>The following steps are required before Art Blocks Engine contracts will integrate properly with the Royalty Registry.</p>
 <ol type="A">
 <li>Pre-setup:</li>
 </ol>
 <ul>
-<li>Ensure every project has the desired artist royalty percentage set on the PBAB contract.
+<li>Ensure every project has the desired artist royalty percentage set on the Engine contract.
 <ul>
-<li>IMPORTANT: This percentage represents the percentage of the total token sale that will be paid to combination of artist &amp; additional payee. It is typically 5%. Additionally, the default 2.5% to PBAB platform and 2.5% to render provider will be also added by the Royalty Registry override contracts below.</li>
-<li><strong>Only artists</strong> may update their project&#x27;s royalty percentage. They can call <code v-pre>updateProjectSecondaryMarketRoyaltyPercentage(&lt;_projectId&gt;, &lt;_royaltyPercentage&gt;)</code> on the PBAB contract from their artist wallet. Typically royalty percentage would be the number 5, representing 5%.</li>
+<li>IMPORTANT: This percentage represents the percentage of the total token sale that will be paid to combination of artist &amp; additional payee. It is typically 5%. Additionally, the default 2.5% to the Engine platform (you) and 2.5% to render provider (Art Blocks) will be also added by the Royalty Registry override contracts below.</li>
+<li><strong>Only artists</strong> may update their project&#x27;s royalty percentage. They can call <code v-pre>updateProjectSecondaryMarketRoyaltyPercentage(&lt;_projectId&gt;, &lt;_royaltyPercentage&gt;)</code> on the Engine contract from their artist wallet. Typically royalty percentage would be the number 5, representing 5%.</li>
 </ul>
 </li>
 </ul>
@@ -294,22 +294,22 @@
 <li>Royalty Registry Integration:</li>
 </ol>
 <ol>
-<li>Create a new override on the Royalty Registry for your PBAB core contract
+<li>Create a new override on the Royalty Registry for your Engine core contract
 <ul>
 <li>View the Royalty Registry&#x27;s mainnet registry contract on etherscan: <a href="https://etherscan.io/address/0xad2184fb5dbcfc05d8f056542fb25b04fa32a95d#writeProxyContract">https://etherscan.io/address/0xad2184fb5dbcfc05d8f056542fb25b04fa32a95d#writeProxyContract</a></li>
-<li>Using the <code v-pre>Connect to Web3</code> button, connect your PBAB <code v-pre>admin</code> wallet to etherscan when on the &quot;Write as Proxy&quot; tab.</li>
+<li>Using the <code v-pre>Connect to Web3</code> button, connect your Engine <code v-pre>admin</code> wallet to etherscan when on the &quot;Write as Proxy&quot; tab.</li>
 <li>Call the <code v-pre>setRoyaltyLookupAddress</code> function with the following arguments:
 <ul>
-<li><code v-pre>tokenAddress</code>: The address of your PBAB core contract</li>
-<li><code v-pre>royaltyLookupAddress</code>: The address of the standard Art Blocks PBAB Royalty Registry override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#code">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a></li>
+<li><code v-pre>tokenAddress</code>: The address of your Engine core contract</li>
+<li><code v-pre>royaltyLookupAddress</code>: The address of the standard Art Blocks Engine Royalty Registry override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#code">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Set your Platform royalty payment address
 <ul>
-<li>Connect your PBAB <code v-pre>admin</code> wallet to the Art Blocks PBAB royalty override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a>, on etherscan</li>
-<li>Call the <code v-pre>updatePlatformRoyaltyAddressForContract</code> function with your PBAB token contract address as <code v-pre>_tokenContract</code>, and your desired platform royalty payment address as <code v-pre>_platformRoyaltyAddress</code></li>
+<li>Connect your Engine <code v-pre>admin</code> wallet to the Art Blocks Engine royalty override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a>, on etherscan</li>
+<li>Call the <code v-pre>updatePlatformRoyaltyAddressForContract</code> function with your Engine token contract address as <code v-pre>_tokenContract</code>, and your desired platform royalty payment address as <code v-pre>_platformRoyaltyAddress</code></li>
 </ul>
 </li>
 </ol>
@@ -320,11 +320,11 @@
         <span>Optional Configuring</span>
     </h2>
 </doc-anchor-target>
-<p>Royalty percentages of 2.5% are used by default by the Art Blocks PBAB royalty override contract. The <code v-pre>admin</code> of any given PBAB core contract can override these percentages by calling <code v-pre>updatePlatformBpsForContract</code> or <code v-pre>updateRenderProviderBpsForContract</code> on the Art Blocks PBAB royalty override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a>, on etherscan</p>
+<p>Royalty percentages of 2.5% are used by default by the Art Blocks Engine royalty override contract. The <code v-pre>admin</code> of any given PBAB core contract can override these percentages by calling <code v-pre>updatePlatformBpsForContract</code> or <code v-pre>updateRenderProviderBpsForContract</code> on the Art Blocks Engine royalty override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a>, on etherscan</p>
 <blockquote>
 <p>Note that royalty proportions are defined in terms of Basis points. For example, 250 BPS = 2.5% royalty. See <a href="https://www.investopedia.com/terms/b/basispoint.asp">this article</a> for more information.</p>
 </blockquote>
-<p>After initial setup, the Platform (PBAB partner) royalty payment address may be updated at any time by the <code v-pre>admin</code> of a given PBAB core contract by calling the <code v-pre>updatePlatformRoyaltyAddressForContract</code> function on the Art Blocks PBAB royalty override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a>, on etherscan</p>
+<p>After initial setup, the Platform (Engine partner) royalty payment address may be updated at any time by the <code v-pre>admin</code> of a given Engine core contract by calling the <code v-pre>updatePlatformRoyaltyAddressForContract</code> function on the Art Blocks Engine royalty override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a>, on etherscan</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -397,6 +397,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "PBAB Royalty Registry Setup", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Art Blocks Engine Royalty Registry Setup", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
