@@ -6,15 +6,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714674331720">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714674806210">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>PBAB Project Launch</title>
-    <meta name="title" content="PBAB Project Launch">
-    <meta name="description" content="A high level overview of launching new projects on a new PBAB contract." />
+    <title>Art Blocks Engine Project Launch</title>
+    <meta name="title" content="Art Blocks Engine Project Launch">
+    <meta name="description" content="A high-level overview of launching new projects on a new Art Blocks Engine contract." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-project-launch/" />
@@ -22,22 +22,22 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-project-launch/">
-    <meta property="og:title" content="PBAB Project Launch">
-    <meta property="og:description" content="A high level overview of launching new projects on a new PBAB contract.">
+    <meta property="og:title" content="Art Blocks Engine Project Launch">
+    <meta property="og:description" content="A high-level overview of launching new projects on a new Art Blocks Engine contract.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-project-launch/">
-    <meta property="twitter:title" content="PBAB Project Launch">
-    <meta property="twitter:description" content="A high level overview of launching new projects on a new PBAB contract.">
+    <meta property="twitter:title" content="Art Blocks Engine Project Launch">
+    <meta property="twitter:description" content="A high-level overview of launching new projects on a new Art Blocks Engine contract.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.714674331720" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.714674806210" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.714674331720" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.714674806210" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.714674331720" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.714674806210" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -216,24 +216,24 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="pbab-project-launch" class="break-words">
+<doc-anchor-target id="art-blocks-engine-project-launch" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pbab-project-launch">#</doc-anchor-trigger>
-        <span>PBAB Project Launch</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#art-blocks-engine-project-launch">#</doc-anchor-trigger>
+        <span>Art Blocks Engine Project Launch</span>
     </h1>
 </doc-anchor-target>
-<p>A high level overview of launching new projects on a new PBAB contract.</p>
+<p>A high-level overview of launching new projects on a new Art Blocks Engine contract.</p>
 <hr />
-<p>After having deployed a PBAB contract, you can now create projects on your contract.</p>
+<p>After deploying an Engine contract, you can now create projects on your contract.</p>
 <p>To create a new project shell, use the <code v-pre>addProject</code> method of your deployed Core Contract. This can be done by connecting to the contract via Etherscan.</p>
-<p>For a more in-depth guide on creating new projects on your PBAB contract, please see the <a href="../adding-new-project-shells/">&quot;Project Shell Deployment Guide&quot;</a>.</p>
+<p>For a more in-depth guide on creating new projects on your Engine contract, please see the <a href="../adding-new-project-shells/">&quot;Project Shell Deployment Guide&quot;</a>.</p>
 <doc-anchor-target id="pre-mint-0-flight-check">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#pre-mint-0-flight-check">#</doc-anchor-trigger>
         <span>Pre-mint-#0 Flight Check</span>
     </h2>
 </doc-anchor-target>
-<p>Prior to minting your first token (#0) on your new project shell, please verify the following.</p>
+<p>Before minting your first token (#0) on your new project shell, please verify the following.</p>
 <ol>
 <li>The <code v-pre>baseTokenURI</code> has been set, taking the format of <code v-pre>http://token.artblocks.io/{CORE_CONTRACT_ADDRESS}/</code>.</li>
 <li>The max invocations for the project have been set <strong>on the minter</strong>. This is achieved by calling the <code v-pre>setProjectMaxInvocations</code> on the Minter contract when connecting with Etherscan, with the project ID of the project to be minted as the parameter. <strong>Note</strong>: This should only be done <em>after</em> setting this max invocations for the project on the Core Contract itself.</li>
@@ -245,10 +245,10 @@
         <span>Pre-launch (pre-open-minting) Flight Check</span>
     </h2>
 </doc-anchor-target>
-<p>Prior to launching your token for open minting, please verify the following.</p>
+<p>Prior to launching your token for open minting, please verify the following:</p>
 <ol>
 <li>The project has been activated by the contract admin. This can be verified by reading the <code v-pre>projectTokenInfo</code> field.</li>
-<li>The project is not yet unpaused. Project pause status is toggle-able by the project artist. This can be verified by reading the <code v-pre>projectScriptInfo</code> field.</li>
+<li>The project is not yet unpaused. Project pause status is toggleable by the project artist. This can be verified by reading the <code v-pre>projectScriptInfo</code> field.</li>
 </ol>
 
                                 
@@ -322,6 +322,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "PBAB Project Launch", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Art Blocks Engine Project Launch", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
