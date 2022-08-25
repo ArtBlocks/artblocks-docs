@@ -114,17 +114,17 @@ A high-level process map for Art Blocks Engine onboarding.
 
    If you need help, the Art Blocks team will help guide you through the process.
 
-   6. After you've set up and tested an Engine project, you can request a script audit from Art Blocks to guarantee resolution-agnosticism and determinism. 
+6. After you've set up and tested an Engine project, you can request a script audit from Art Blocks to guarantee resolution-agnosticism and determinism. 
 
 **Warning:** if you opt-out of this step, it may result in undiagnosed issues with the rendered outputs. An unaudited project may not conform to the Art Blocks resolution-agnostic and deterministic standards. This means outputs may differ between screen sizes, devices, and operating systems or could be different from view to view.
 
 
-   7. After the complete end-to-end integration has been vetted on testnet, the above process may proceed on mainnet. 
+7. After the complete end-to-end integration has been vetted on testnet, the above process may proceed on mainnet. 
 
 Vetting includes minting in (1) each minting format, (2) from the Engine partner's frontend minting experience, and (3) while integrated with the Art Blocks' provided rendering infrastructure.
 
 
-   8.** Repeat steps 2-7 for mainnet deployment.** 
+8.** Repeat steps 2-7 for mainnet deployment.** 
    
 In summary, mainnet deployment entails:
 - Deploy mainnet contracts.
