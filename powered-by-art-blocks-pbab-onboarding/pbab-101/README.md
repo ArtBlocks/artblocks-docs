@@ -106,7 +106,8 @@ A high-level process map for Art Blocks Engine onboarding.
   ```
 </details>
    
-5. Your team will use https://artist-staging.artblocks.io site to upload your project script source code and configure all project metadata details:
+
+   5. Your team will use https://artist-staging.artblocks.io site to upload your project script source code and configure all project metadata details:
 - project description
 - the license associated with outputs
 - artist website
