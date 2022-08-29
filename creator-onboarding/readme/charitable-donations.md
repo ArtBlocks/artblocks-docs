@@ -25,11 +25,27 @@ To use Endaoment, go to Endaoment.org and create a fund. Then, enter ndao.eth in
 
 You can also find a tutorial of how to use Endaoment [here](https://www.loom.com/share/822350f1a1c84f25b253cc9e4d2cee38)
 
-**2)** **Create a second wallet**
+**2)** **Make a zero-fee on-chain donation with CryptoforCharity.io**
+
+CryptoForCharity is a zero-fee platform enabling donations in crypto assets directly to charity. You can support any US-based 501c(3) charity in good standing with the IRS, or donate to any of several cause funds focused on a specific issue.
+
+Donations through CryptoForCharity are set at the contract level and automatically routed at the time of payment without touching your wallet (and potentially avoiding tax liability or the need to account for and deduct the income/donation). Donated funds can also be held for a short time following your drop, if you'd prefer to designate the charity or cause fund you wish to support after the fact, but they cannot be held indefinitely.
+
+Generating a charity or cause fund wallet is straightforward -- simply fill out the form [here](https://www.cryptoforcharity.io/nft-creators). You can also reach out directly to SimonSays#0670 in the AB discord for help.
+
+For a bit more on how it's set up under the hood, [CryptoForCharity put together this tax guidance for NFT creators](https://www.cryptoforcharity.io/nft-creators).  
+
+
+**4)** **Receive funds in your primary wallet**
+
+If you’d like to receive all funds from your project’s sale in your primary wallet, that’s fine, but please communicate the total donations with Art Blocks and the community. Please be aware that receiving money in your personal wallet may incur tax obligations and reduce the total donation amount.
+
+
+**3)** **Create a second wallet**
 
 If you’d like to create a second wallet separate from your personal wallet, you can enter the wallet's address in the additional payee field to collect the total donation amount you intend to donate. If using the additional payee field for donations, this field can be cleared before lowering to resting price.
 
-**3)** **Receive funds in your primary wallet**
+**4)** **Receive funds in your primary wallet**
 
 If you’d like to receive all funds from your project’s sale in your primary wallet, that’s fine, but please communicate the total donations with Art Blocks and the community. Please be aware that receiving money in your personal wallet may incur tax obligations and reduce the total donation amount.
 
