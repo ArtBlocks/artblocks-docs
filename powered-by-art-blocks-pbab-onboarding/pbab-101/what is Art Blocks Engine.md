@@ -1,11 +1,11 @@
-# What is Powered by Art Blocks?
-Powered by Art Blocks (PBAB) is a custom branded solution from Art Blocks.  It allows the generative NFT minting technology used by artists at Art Blocks to be integrated with third-party sites. 
+# What is Art Blocks Engine?
+Art Blocks Engine is a custom branded solution from Art Blocks.  It allows the generative NFT minting technology used by artists at Art Blocks to be integrated with third-party sites. 
 
-PBAB allows partners to release generative outputs using our existing smart contracts and rendering infrastructure resulting in turnkey and branded generative projects. PBAB partners own their smart contracts and can use them to release as many projects as they like. 
+Engine allows partners to release generative outputs using our existing smart contracts and rendering infrastructure resulting in turnkey and branded generative projects. Engine partners own their smart contracts and can use them to release as many projects as they like. 
 
 We currently partner with organizations from every sector that are interested in launching generative projects.
 
-For more information on Powered by Art Blocks partnerships please contact: info@artblocks.io
+For more information on Art Blocks Engine partnerships please contact: info@artblocks.io
 
 ## What is generative art?
 
@@ -19,7 +19,7 @@ The interesting part of modern generative art is that it involves working in ser
 Nonfungible tokens (NFT) are unique digital assets stored on blockchain technology that can represent any digital or physical asset. 
 
 ## On-chain vs. off-chain
-Powered by Art Blocks (PBAB) enables creators to immutably store their generative NFT directly on the Ethereum blockchain (on-chain) or reference an external library or asset (off-chain). For an off-chain implimentation, partners can reference external off-chain assets using decentralized storage solutions like IPFS.
+Art Blocks Engine enables creators to immutably store their generative NFT directly on the Ethereum blockchain (on-chain) or reference an external library or asset (off-chain). For an off-chain implimentation, partners can reference external off-chain assets using decentralized storage solutions like IPFS.
 
 Decentralized and fully on-chain content is the most durable digital asset available. Typically, a creative coder writes a generative script in JavaScript and stores it directly on the blockchain. As long as you have access to a computer, a web browser, and Ethereum’s public ledger, you’ll always be able to reproduce the NFT in its original form and track ownership since creation. An on-chain NFT inherits the provenance, security, and durability of Ethereum itself, making them the highest quality digital asset available.
 
@@ -31,10 +31,10 @@ Off-chain NFTs rely on assets stored on external servers. There are many reasons
 
 For this reason, we only allow certain external libraries to be used in project scripts given their general recognition as extremely reliable file storage sources.
 
-PBAB offers on-chain and off-chain solutions with our generative NFT minting technology. Which one is right for you depends on your project’s goals and technical capabilities. 
+Art Blocks Engine offers on-chain and off-chain solutions with our generative NFT minting technology. Which one is right for you depends on your project’s goals and technical capabilities. 
 
 ## Creating durable digital assets
-Creating on-chain generative NFTs ensures your collectors can expect their digital assets to stay the same forever. But if you choose to launch a generative project with off-chain assets, there are ways to mitigate the risk of going off-line using technology like IPFS or Arweave. We’re happy to chat about the right PBAB implementation for your next project.
+Creating on-chain generative NFTs ensures your collectors can expect their digital assets to stay the same forever. But if you choose to launch a generative project with off-chain assets, there are ways to mitigate the risk of going off-line using technology like IPFS or Arweave. We’re happy to chat about the right Art Blocks Engine implementation for your next project.
 
 ## Potential use-cases
 The landscape of on-demand generative content has plenty of room to experiment. Some of our current partners include artists, galleries, art houses, online publications, and game developers. If you’re exploring an interesting project, get in touch, and let’s build together. 

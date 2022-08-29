@@ -42,17 +42,14 @@ Once your application has been reached in the queue, communication will move qui
 
 ## Who can I reach out to if I have questions?
 
-Sarah ([!badge Discord: sross#6444]), our Artist Liaison will be your primary point of contact, along with Jeff Davis ([!badge Discord: jeffgdavis#0102]), our CCO. You can reach them on Discord or send them an email.
+Sarah ([!badge Discord: sross#6444]), our Artist Liaison will be your primary point of contact, along with Mad Pinney ([!badge Discord: madpinney#1183]), our Artistic Coordinator. You can reach them on Discord or send them an email.
 
 ---
 
 ## What are the general standards for achieving curation status? What are the criteria that differentiate curated and factory?
 
-For each project, our curation board looks at overall aesthetics, variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually.
+The Curated Collection is a group of projects that pushes the boundaries of Generative Art in their aesthetic beauty, conceptualization, technical quality, and innovation. A project in the Curated Collection covers new territory using code that employs inventive, never-before-seen techniques that operate to support an original intention and concept. Board members look for collections that evoke emotional, intellectual, and conceptual qualities through aesthetics while sustaining the viewer’s interest.
 
-It's important to note that curation status is not strictly a designation of quality. Instead, the curated collection indicates a substantial addition to Art Blocks' narrative within generative art.
-
-For example, a project may be a technical, visual, and conceptual masterpiece, but if the idea has previously been explored in the curated collection, it may not substantially add to the broader narrative.
 
 ---
 
@@ -64,13 +61,13 @@ Rarities aren't included as a metric for determining curation status. However, o
 
 ## Will I receive feedback from the curation board on my submissions?
 
-If requested, feedback from the Curation Board can be provided. The goal of this feedback will be to highlight observations that our Curation Board made about your current project upon their review
+Feedback from the Curation Board will be provided. The goal of this feedback will be to highlight observations that our Curation Board made about your current project upon their review
 
 ---
 
 ## Who is on the curation board?
 
-Our Curation Board is made up of a diverse group of artists and people in the art space. You can read more about the Curation Board on our Medium page: https://medium.com/the-link-art-blocks
+Our Curation Board is made up of a diverse group of artists and people in the art space. You can read more about the Curation Board on our Medium page: https://medium.com/the-link-art-blocks/meet-the-art-blocks-curation-board-696102e747e3
 
 ---
 
@@ -133,7 +130,7 @@ The cost depends on the complexity of your project and how many lines of code it
 If your project is selected for a drop on Art Blocks, you'll need to have the following information ready. This is typically collected near the end of the process, so you'll have time to make these decisions as you're onboarding.
 
 ```
-Would you like your Ropsten testnet project made public? YES/NO
+Would you like your Goerli testnet project made public? YES/NO
 
 [Curated/Playground/Factory]
 Project name:
@@ -157,25 +154,20 @@ You can use the Purchases Paused button to mint both on the artist staging platf
 
 ## Can I share information about my drop on social media before it's announced?
 
-Once you finalize a drop date with the Art Blocks team, you're welcome to share and promote your drop on all social media!
+Once you finalize a drop date with the Art Blocks team, you're welcome to share and promote your drop on all social media! We have created a [Marketing  101](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/marketing101/#marketing-101) document to support your efforts in the lead up to your drop. 
 
 ---
 
 ## How should I price my artwork?
 
-Once you near finalization of your project, you'll be in close dialogue with our team about how to price your work. Ultimately, we will defer to the artist to decide how to price a work, but can offer recommendations, advice, and context based on the market conditions at the time of your drop.
+Once you near finalization of your project, you'll be in close dialogue with our team about how to price your work. We have a [Project Pricing Model](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/) that guides the decision on the pricing of your collection. 
 
 ---
 
 ## How should I set up a dutch auction? How many price decrements should there be? What should I set for my floor price?
 
-The structure and price levels of a dutch auction are largely up to the artist, but the Art Blocks team is happy to work with you directly to offer advice for price structuring based on market observations.
+The Art Blocks team will work with you directly to offer advice for price structuring based on market observations.
 
----
-
-## I used a custom currency for my project. How do I get back to ETH?
-
-To switch back to ETH, change the currency symbol to ETH and the contract address to 0x0000...
 
 ---
 
@@ -209,7 +201,7 @@ To maintain our commitment to charitable giving, we ask artists to consider dona
 
 ## Where can I find a list of charities that accept crypto donations?
 
-To find a list of charities, you can ask for advice in #artist-general and check the pinned messages for a charity guide.
+To find a list of charities, you can ask for advice in #artist-general and check the pinned messages for a charity guide. 
 
 If the charity you’d like to donate to is not crypto-friendly, we recommend checking out endaoment.org. They are a 501c(3) that enables on-chain donations to any US-based 501c(3) via a Donor Advised Fund (DAF). This method can also be done fully on-chain, so the donations never touch your personal wallet.
 
@@ -233,6 +225,17 @@ If you’d like to create a second wallet separate from your personal wallet, yo
 
 If you’d like to receive all funds from your project’s sale in your primary wallet, that’s fine, but please communicate the total donations with Art Blocks and the community. Please be aware that receiving money in your personal wallet may incur tax obligations and reduce the total donation amount.
 
+**4)** Make a zero-fee on-chain donation with CryptoforCharity.io
+
+CryptoForCharity is a zero-fee platform enabling donations in crypto assets directly to charity. You can support any US-based 501c(3) charity in good standing with the IRS, or donate to any of several cause funds focused on a specific issue.
+
+Donations through CryptoForCharity are set at the contract level and automatically routed at the time of payment without touching your wallet (and potentially avoiding tax liability or the need to account for and deduct the income/donation). Donated funds can also be held for a short time following your drop, if you'd prefer to designate the charity or cause fund you wish to support after the fact, but they cannot be held indefinitely.
+
+Generating a charity or cause fund wallet is straightforward -- simply fill out the form [here](https://www.cryptoforcharity.io/nft-creators). You can also reach out directly to SimonSays#0670 in the AB discord for help.
+
+For a bit more on how it's set up under the hood, [CryptoForCharity put together this tax guidance for NFT creators](https://www.cryptoforcharity.io/nft-creators).  
+
+
 ---
 
 ## How do I remove charitable giving information from the additional payee field mid-Dutch Auction?
@@ -253,7 +256,7 @@ You can also check out our [After Dinner Mints episode](https://www.youtube.com/
 
 ## Is there a place I can connect with other artists and chat?
 
-All artists are added to the artist-exclusive #artist-general channel in Discord where you can interact with other Art Blocks artists, share projects, and ask questions. We also encourage artists to participate in our Discord community. If you're selected for a curated drop, you'll have your own artist channel dedicated to focused discussions on your work. If you're selected for a factory drop, you can chat with artists and collectors in the #factory-projects channel.
+All artists are added to the artist-exclusive #artist-general channel in Discord where you can interact with other Art Blocks artists, share projects, and ask questions. We also encourage artists to participate in our Discord community. In addition, Art Blocks hosts a weekly [Office Hours](https://calendar.google.com/calendar/u/1?cid=Y192a2RxdWluZ3ZsM2EyMmJudWxxZnFkb2sxOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t). This dedicated time is place for artists to chat face-to-face, meet the Art Blocks team, participate in artist development- focused programming, and group critiques. If you're selected for a curated drop, you'll have your own artist channel dedicated to focused discussions on your work. If you're selected for a factory drop, you can chat with artists and collectors in the #factory-projects channel. 
 
 ---
 
@@ -275,23 +278,27 @@ However, we ask that you clearly communicate why you're minting more than one to
 
 ## How long do I need to wait before releasing a project through Art Blocks again?
 
-We require artists to take a 2 month cool off period between drops in the Playground and Factory. In addition, there is a 6 month cool-off period between considerations for Curated projects. The cool off period begins when your project sells out (i.e. when minting is 100% completed).
+When minting on an artist's collection is 100% complete, they may begin the process of screening a new work. Please note, there is a 6 month cool-off period between considerations for Curated projects. 
 
 ---
 
-## Will I have access to my testnet shell during my cooldown period?
+## Will I have access to my testnet shell after I release my project?
 
-Yes you will and we encourage you to use your testnet shell during your cooldown period. We kindly ask that you wait to ask for thumbnail refreshes if needed until after your cooldown period to limit noise on our end.
+Yes, you will. Please note, as of Aug 2, 2022, Art Blocks switched testing networks from Ropsten to Goerli. Ropsten artist-staging data will be preserved in a read-only state to be accessed at https://ropsten-artist-staging.artblocks.io/.
+
+The website for AB core will remain the same: You will still visit https://artist-staging.artblocks.io/, but you will be asked to connect with the Goerli Test Network rather than the Ropsten Test Network.
+
+If you previously had a testnet shell on the Ropsten network, you may still access your project shell using https://ropsten-artist-staging.artblocks.io/ as a frozen read-only set of data. If you are a returning artist, please send Sarah ([!badge Discord: sross#6444]) or ([!badge Discord: madpinney#1183]) a DM to set up a Goerli project shell.
 
 ---
 
 ## What is the process upon returning to Art Blocks as a Factory artist?
 
-As a next step in your Art Blocks journey, you will have a two month cooldown period before being eligible to submit another project. Your two month cooldown starts the day that your project sells out (i.e., when minting is 100% completed). After this period, you will be eligible to submit your next project to Art Blocks. We ask that you keep track of this timing on your end and please reach back out to us if you’d like to submit a project again after this time. You will continue to have access to your testnet shell during this time, so feel free to use that during your cooldown period.
+After your project sells out, you will be eligible to submit your next project to Art Blocks. You will continue to have access to your testnet shell during this time.  new projects can be submitted for review either via a working prototype or via your existing testnet shell, which you will continue to have edit access to. All projects (including playground) will be screened before being accepted to Art Blocks. To submit a new project for review, please DM Sarah ([!badge Discord: sross#6444]), our Artist Liaison or Mad Pinney ([!badge Discord: madpinney#1183]), our Artistic Coordinator. 
 
-Should you return, you'll submit a brief form with information about your proposed project. Once filled out, your project will be screened internally by our team via your testnet shell. Screenings occur weekly, so there will not be an extensive waiting period here. In our review, we will focus on overall aesthetics, variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually. Based on this review, you will either move forward from there or we will ask that you take a one month development period before returning with a new project for screening.
+From there, you will re-enter the screening process. The first screening is conducted by a screening committee made up of Art Blocks' staff and generative art experts. This review focuses determines which projects will be released on the platform and addresses variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually. 
 
-This will be in addition to the curation review. This screening will be done by members of Art Blocks' team. Following that screening, accepted projects will then be viewed by our Curation Board as well. Right now this screening step takes place for new artists and is part of our application onboarding process, so the big change here is just that returning Factory artists will be starting at that step rather than fast-tracking to the Curation Review. This initial screening will also be an opportunity for Art Blocks' team to provide more direct feedback on newly proposed projects.
+If the work is accepted to be released on Art Blocks you will then move through the same onboarding process as your previous project, which is also outlined[here]([https://pages.github.com/](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/#5-feedback-check).
 
 ---
 

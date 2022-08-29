@@ -22,7 +22,7 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 ## Features
 
 1. Please see [Features](readme/features.md) for full details on how you set your project features as an artist.
-2. The features script for your project should first be tested on the Ropsten testnet (https://artist-staging.artblocks.io), alongside your art script. Ensure that your features are being displayed as expected on testnet before proceeding to project deployment to mainnet.
+2. The features script for your project should first be tested on the Goerli testnet (https://artist-staging.artblocks.io), alongside your art script. Ensure that your features are being displayed as expected on testnet before proceeding to project deployment to mainnet.
 3. When uploading your feature script to mainnet (https://www.artblocks.io/), please ensure that you are uploading the exact same features script, taking the same care that you would with your art script itself.
 4. While the features script _is not_ stored on-chain like the art script is, bugs in your features script will cause meaningful disruptions for collectors trying to explore your work on a per-feature basis.
 
@@ -30,7 +30,7 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 
 1. Consider the overall economics of your project for a successful release.
 2. Artists can only have one active project at a time.
-3. As a note, we require artists to take a 2 month cooldown period between Playground and Factory drops. The cooldown period begins when your project sells out (i.e. when minting is 100% complete).
+3. In order to submit a new project, your previous project must be closed (sold out/completed).
 
 ## Charity Component
 
@@ -58,11 +58,11 @@ If you are using the Dutch Auction - Exponential Price Decrease or Dutch Auction
 * Once mint #0 and the features script are in place, Art Blocks will work with you to schedule/announce your release.
 * After your project has been scheduled, you are free to announce and promote your project on your social media.
 
-## Ropsten
-Once scheduled, you will have the option to make your Ropsten shell public to collectors. To help collectors easily differentiate Ropsten shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Ropsten public:
-1. Add [Sample Outputs] as a prefix to your project title. The formatting of your Ropsten title will be "[Sample Outputs] Project Name"
-2. Adjust your price information in Ropsten to be the same as on mainnet
-3. Adjust your max invocations in Ropsten to be the same as on mainnet
+## Goerli
+Once scheduled, you will have the option to make your Ropsten shell public to collectors. To help collectors easily differentiate Goerli shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Ropsten public:
+1. Add [Sample Outputs] as a prefix to your project title. The formatting of your Goerli title will be "[Sample Outputs] Project Name"
+2. Adjust your price information in Goerli to be the same as on mainnet
+3. Adjust your max invocations in Goerli to be the same as on mainnet
 
 ## Unpausing
 

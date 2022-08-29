@@ -77,6 +77,6 @@ Congratulations, you have made it! Your project is ready to be unpaused and open
 
 You can participate in an optional live pre-launch talk with one of our team members to answer questions and chat with the community.
 
-Once your project is 100% minted, you'll move into our cooldown period (2 months between Factory and Playground projects and 6 months between Curated projects), which is the amount of time we require between new project submissions.
+Once your project is 100% minted, you can submit another project for release.
 
 [!badge Timeline: typically \~2 weeks after the completion of step 7]
