@@ -30,6 +30,8 @@ let hash = tokenData.hash
 
 Included in the `tokenData` is also the `tokenId`. The `tokenId` encodes both the project and mint.
 
+**Please note:** if you include using the `tokenId` as a way to determine the outputs of your script **you must** disclose this as part of the release communications for your project.
+
 ```
 tokenId = (projectNumber * 1000000) + mintNumber
 ```
@@ -252,14 +254,14 @@ Note: If you don't have "Goerly ETH" ask a mod or previous artist, we'll send yo
 https://goerlifaucet.com/ 
 https://goerli-faucet.pk910.de/ (POW faucet so this can run in the background and accumulate goerliETH over time)
 
-**ROPSTEN > GOERLI UPGRADE **
+### ROPSTEN > GOERLI UPGRADE 
 _As of Aug 2, 2022_
 
 Ropsten is being deprecated entirely as a network. New testnet means new smart contracts: Ropsten artist-staging data will be preserved in a read-only state to be accessed at https://ropsten-artist-staging.artblocks.io/ after August 2nd. 
 
 The website for AB core will remain the same: You will still visit https://artist-staging.artblocks.io/, but you will be asked to connect with the Goerli Test Network rather than the Ropsten Test Network. 
 
-If you previously had a testnet shell on the Ropsten network, you may stilla access your project shell using https://ropsten-artist-staging.artblocks.io/ as a frozen read-only set of data. If you are a returning artist, please send XX or XX a DM to set up a Goerli project shell. 
+If you previously had a testnet shell on the Ropsten network, you may still access your project shell using https://ropsten-artist-staging.artblocks.io/ as a frozen read-only set of data. If you are a returning artist, please send([!badge Discord: madpinney#1183]) a DM to set up a Goerli project shell. 
 
 As a reminder, you can stock up on Goerli ETH here:
 https://goerlifaucet.com/ 
