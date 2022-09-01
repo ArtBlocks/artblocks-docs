@@ -26,7 +26,7 @@ Once the project objectives and scope are agreed upon, you'll work with our oper
 [!badge Timeline: 1 week]
 
 ## 4. Smart contract details
-
+ 
 To get started, you'll provide our team with:
 
 1. **An Ethereum wallet address** that you own and will use to manage your Art Blocks Engine smart contracts.
