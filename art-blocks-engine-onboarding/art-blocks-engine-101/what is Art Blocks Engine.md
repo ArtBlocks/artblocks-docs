@@ -1,9 +1,9 @@
 # What is Art Blocks Engine and Engine Flex?
 Art Blocks Engine and Engine Flex are custom branded solutions from Art Blocks. Our offerings allow the generative NFT minting technology used by artists at Art Blocks to be integrated with third-party sites. 
 
-Engine allows partners to release generative outputs using our existing smart contracts and rendering infrastructure resulting in turnkey and branded generative projects. Engine partners own their smart contracts and can use them to release as many projects as they like.
+Engine allows partners to release generative outputs using our existing smart contracts and rendering infrastructure resulting in turnkey and branded generative projects. Engine partners own their smart contracts and can use them to release as many projects as they like as often as they like.
 
-We currently partner with organizations from every sector that are interested in launching generative projects.
+We currently partner with organizations from every sector that are interested in launching generative collections, but are particularly interested in the fashion, sports, media, manufacturing, and fine art industries.
 
 For more information on Art Blocks Engine partnerships please contact: info@artblocks.io
 
