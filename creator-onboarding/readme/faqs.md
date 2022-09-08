@@ -203,7 +203,7 @@ To maintain our commitment to charitable giving, we ask artists to consider dona
 
 To find a list of charities, you can ask for advice in #artist-general and check the pinned messages for a charity guide. 
 
-If the charity you’d like to donate to is not crypto-friendly, we recommend checking out endaoment.org. They are a 501c(3) that enables on-chain donations to any US-based 501c(3) via a Donor Advised Fund (DAF). This method can also be done fully on-chain, so the donations never touch your personal wallet.
+If the charity you’d like to donate to is not crypto-friendly, we recommend checking out endaoment.org or CryptoForCharity.io. They both enable on-chain donations to any US-based 501c(3). Endaoment uses a DAF model and has a 1.5% fee; CryptoForCharity sends the gifts on as they're made and is zero fee. This method can also be done fully on-chain, so the donations never touch your personal wallet. They are a 501c(3) that enables on-chain donations to any US-based 501c(3) via a Donor Advised Fund (DAF). This method can also be done fully on-chain, so the donations never touch your personal wallet.
 
 ---
 
@@ -217,15 +217,7 @@ Endaoment is a 501c(3) organization that accepts crypto and distributes donation
 
 To use Endaoment, go to Endaoment.org and create a fund. Then, enter ndao.eth in the additional payee field. Once you’ve created the fund, contact Dan (Druid#4611 on Discord) with your fund’s URL and project number. Once your project launches and the money is in your Endaoment Fund, you can send donations in any amount to any charity in the US. Many artists prefer this route so they can support many charities with smaller donations rather than one charity with one large donation. Please note - Endaoment charges 1.5% to receive, convert, and send money to a charity.
 
-**2)** Create a second wallet
-
-If you’d like to create a second wallet separate from your personal wallet, you can enter the wallet's address in the additional payee field to collect the total donation amount you intend to donate.
-
-**3)** Receive funds in your primary wallet
-
-If you’d like to receive all funds from your project’s sale in your primary wallet, that’s fine, but please communicate the total donations with Art Blocks and the community. Please be aware that receiving money in your personal wallet may incur tax obligations and reduce the total donation amount.
-
-**4)** Make a zero-fee on-chain donation with CryptoforCharity.io
+**2)** Make a zero-fee on-chain donation with CryptoforCharity.io
 
 CryptoForCharity is a zero-fee platform enabling donations in crypto assets directly to charity. You can support any US-based 501c(3) charity in good standing with the IRS, or donate to any of several cause funds focused on a specific issue.
 
@@ -235,6 +227,13 @@ Generating a charity or cause fund wallet is straightforward -- simply fill out 
 
 For a bit more on how it's set up under the hood, [CryptoForCharity put together this tax guidance for NFT creators](https://www.cryptoforcharity.io/nft-creators).  
 
+**3)** Create a second wallet
+
+If you’d like to create a second wallet separate from your personal wallet, you can enter the wallet's address in the additional payee field to collect the total donation amount you intend to donate.
+
+**4)** Receive funds in your primary wallet
+
+If you’d like to receive all funds from your project’s sale in your primary wallet, that’s fine, but please communicate the total donations with Art Blocks and the community. Please be aware that receiving money in your personal wallet may incur tax obligations and reduce the total donation amount.
 
 ---
 
