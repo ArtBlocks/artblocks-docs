@@ -297,7 +297,7 @@ After your project sells out, you will be eligible to submit your next project t
 
 From there, you will re-enter the screening process. The first screening is conducted by a screening committee made up of Art Blocks' staff and generative art experts. This review focuses determines which projects will be released on the platform and addresses variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually. 
 
-If the work is accepted to be released on Art Blocks you will then move through the same onboarding process as your previous project, which is also outlined[here]([https://pages.github.com/](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/#5-feedback-check).
+If the work is accepted to be released on Art Blocks you will then move through the same onboarding process as your previous project, which is also outlined [here](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/#5-feedback-check).
 
 ---
 

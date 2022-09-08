@@ -1,16 +1,16 @@
 # FAQs
 
-- [What are the Art Blocks Engine offerings?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#what-are-the-art-blocks-engine-offerings)
-- [What's included with Art Blocks Engine?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#what-are-the-current-art-blocks-engine-offerings)
-- [What effect does ‘locking’ a project have?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#what-effect-does-locking-an-art-blocks-engine-project-have)
-- [How can we add more team members to Discord?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#how-can-we-add-more-team-members-to-discord)
-- [How long will the process take from start to public launch?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#how-long-will-the-process-take-from-start-to-public-launch)
-- [What information do we need to provide?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#what-information-do-we-need-to-provide-to-deploy-our-smart-contracts)
-- [Does Art Blocks create a front-end site for our project?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#does-art-blocks-create-a-front-end-site-for-our-project)
-- [How long will each stage of the process take?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#how-long-will-each-stage-of-the-process-take)
-- [Core contract vs. Minter contract?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#core-contract-vs-minter-contract)
-- [How do we list Art Blocks Engine pieces on OpenSea?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#how-do-we-list-art-blocks-engine-pieces-on-opensea)
-- [What's the difference between a testnet token and a mainnet token?](https://github.com/ArtBlocks/artblocks-docs/edit/main/powered-by-art-blocks-pbab-onboarding/pbab-101/faqs.md#whats-the-difference-between-a-testnet-token-and-a-mainnet-token)
+- [What are the Art Blocks Engine offerings?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#what-are-the-art-blocks-engine-offerings)
+- [What's included with Art Blocks Engine?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#what-are-the-current-art-blocks-engine-offerings)
+- [What effect does ‘locking’ a project have?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#what-effect-does-locking-an-art-blocks-engine-project-have)
+- [How can we add more team members to Discord?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#how-can-we-add-more-team-members-to-discord)
+- [How long will the process take from start to public launch?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#how-long-will-the-process-take-from-start-to-public-launch)
+- [What information do we need to provide?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#what-information-do-we-need-to-provide-to-deploy-our-smart-contracts)
+- [Does Art Blocks create a front-end site for our project?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#does-art-blocks-create-a-front-end-site-for-our-project)
+- [How long will each stage of the process take?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#how-long-will-each-stage-of-the-process-take)
+- [Core contract vs. Minter contract?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#core-contract-vs-minter-contract)
+- [How do we list Art Blocks Engine pieces on OpenSea?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#how-do-we-list-art-blocks-engine-pieces-on-opensea)
+- [What's the difference between a testnet token and a mainnet token?](https://github.com/ArtBlocks/artblocks-docs/edit/main/art-blocks-engine-onboarding/art-blocks-engine-101/faqs.md#whats-the-difference-between-a-testnet-token-and-a-mainnet-token)
 
 ## What are the Art Blocks Engine offerings?
 
@@ -76,7 +76,7 @@ However, several factors will likely delay the process. To reduce delays, we rec
 - Having a front-end developer ready
 - Having an artist lined up or generative script ready
 - Having a go-to-market strategy ready
-- Allocating sufficient time for your team to get fully onboarded - specifically steps 7, 8, and 10 of the [onboarding process](https://docs.artblocks.io/creator-docs/powered-by-art-blocks-pbab-onboarding/pbab-101/pbab-partner-onboarding-steps/).
+- Allocating sufficient time for your team to get fully onboarded - specifically steps 7, 8, and 10 of the [onboarding process](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/Engine-partner-onboarding-steps/).
 
 ## What information do we need to provide to deploy our smart contracts?
 
