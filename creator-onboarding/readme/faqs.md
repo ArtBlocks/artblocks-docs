@@ -203,7 +203,7 @@ To maintain our commitment to charitable giving, we ask artists to consider dona
 
 To find a list of charities, you can ask for advice in #artist-general and check the pinned messages for a charity guide. 
 
-If the charity you’d like to donate to is not crypto-friendly, we recommend checking out endaoment.org or CryptoForCharity.io. They both enable on-chain donations to any US-based 501c(3). Endaoment uses a DAF model and has a 1.5% fee; CryptoForCharity sends the gifts on as they're made and is zero fee. This method can also be done fully on-chain, so the donations never touch your personal wallet.. They are a 501c(3) that enables on-chain donations to any US-based 501c(3) via a Donor Advised Fund (DAF). This method can also be done fully on-chain, so the donations never touch your personal wallet.
+If the charity you’d like to donate to is not crypto-friendly, we recommend checking out endaoment.org or CryptoForCharity.io. They both enable on-chain donations to any US-based 501c(3). Endaoment uses a DAF model and has a 1.5% fee; CryptoForCharity sends the gifts on as they're made and is zero fee. This method can also be done fully on-chain, so the donations never touch your personal wallet. They are a 501c(3) that enables on-chain donations to any US-based 501c(3) via a Donor Advised Fund (DAF). This method can also be done fully on-chain, so the donations never touch your personal wallet.
 
 ---
 
