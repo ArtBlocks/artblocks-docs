@@ -24,9 +24,9 @@ The following steps are required before Art Blocks Engine contracts will integra
 
 A. Pre-setup:
   - Ensure every project has the desired artist royalty percentage set on the Engine contract.
-    - IMPORTANT: This percentage represents the percentage of the total token sale that will be paid to combination of artist & additional payee. It is typically 5%. Additionally, the default 2.5% to the Engine platform (you) and 2.5% to render provider (Art Blocks) will be also added by the Royalty Registry override contracts below.
+    - IMPORTANT: This percentage represents the percentage of the total token sale that will be paid to a combination of artist & additional payee. It is typically 5%. Additionally, the default 2.5% to the Engine platform (you) and 2.5% to render provider (Art Blocks) will be also added by the Royalty Registry override contracts below.
     - **Only artists** may update their project's royalty percentage. They can call `updateProjectSecondaryMarketRoyaltyPercentage(<_projectId>, <_royaltyPercentage>)` on the Engine contract from their artist wallet. Typically royalty percentage would be the number 5, representing 5%.
-   >**Note:** This percentage is different that what OpenSea has asked us to do with their off-chain royalty system. In the old system, typically 5%+2.5%+2.5%=10% was set on OpenSea's website because they only supported bulk payments to a single address. In the new on-chain system, payments to more than a single address will be supported.
+   >**Note:** This percentage is different than what OpenSea has asked us to do with their off-chain royalty system. In the old system, typically 5%+2.5%+2.5%=10% was set on OpenSea's website because they only supported bulk payments to a single address. In the new on-chain system, payments to more than a single address will be supported.
 
 
 B. Royalty Registry Integration:
