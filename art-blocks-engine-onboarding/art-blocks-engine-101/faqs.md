@@ -112,7 +112,7 @@ However, we do have a front-end template with all the web3 connectivity you need
 ## Core contract vs. Minter contract
 
 **Core contract:**
-This is the smart ontract that controls the artwork created by the artist. No financial transactions occur on this smart contract.
+This is the smart contract that controls the artwork created by the artist. No financial transactions occur on this smart contract.
 
 **Minter contract:**
 These smart contracts receive funds and split them between the artist(s) and the platform. Artists receive funds directly from these contracts.
