@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.715986458926">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.716326513696">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.715986458926" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.716326513696" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.715986458926" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.716326513696" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.715986458926" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.716326513696" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -386,7 +386,7 @@
 <li><strong>Important for mainnet</strong>: Test-mint a token in each currency that will be accepted for a project. Verify that your front end is used to successfully mint using each currency to ensure a proper end-to-end test.</li>
 <li>If actions of whitelisting/removing minters are expected, test those actions.</li>
 <li>If actions of changing max invocations are expected, test those actions.</li>
-<li>When using your front-end to mint, ensure at least a 10% margin is added to each transaction&#x27;s <a href="https://docs.ethers.io/v5/api/providers/provider/#Provider-estimateGas">estimated Gas Limit</a>, as originated by the your fronend logic.
+<li>When using your front-end to mint, ensure at least a 10% margin is added to each transaction&#x27;s <a href="https://docs.ethers.io/v5/api/providers/provider/#Provider-estimateGas">estimated Gas Limit</a>, as originated by your frontend logic.
 <ul>
 <li>If a 0% margin is used during a live NFT sale, the blockchain state will likely change between a user-submitted transaction and when it&#x27;s mined. Therefore, small changes in the required Gas Limit will likely result in transaction failures if the gas necessary increases.</li>
 </ul>
