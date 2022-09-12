@@ -146,7 +146,7 @@ In summary, mainnet deployment entails:
    * **Important for mainnet**: Test-mint a token in each currency that will be accepted for a project. Verify that your front end is used to successfully mint using each currency to ensure a proper end-to-end test.
    * If actions of whitelisting/removing minters are expected, test those actions.
    * If actions of changing max invocations are expected, test those actions.
-   * When using your front-end to mint, ensure at least a 10% margin is added to each transaction's [estimated Gas Limit](https://docs.ethers.io/v5/api/providers/provider/#Provider-estimateGas), as originated by the your fronend logic.
+   * When using your front-end to mint, ensure at least a 10% margin is added to each transaction's [estimated Gas Limit](https://docs.ethers.io/v5/api/providers/provider/#Provider-estimateGas), as originated by your frontend logic.
      * If a 0% margin is used during a live NFT sale, the blockchain state will likely change between a user-submitted transaction and when it's mined. Therefore, small changes in the required Gas Limit will likely result in transaction failures if the gas necessary increases.
 
    10. You are now ready to sync with the Art Blocks team on planning for a launch date, which is **at least 1 week** from when the above steps have all been completed.
