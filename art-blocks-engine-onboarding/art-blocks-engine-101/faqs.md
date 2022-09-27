@@ -123,4 +123,13 @@ OpenSea will automatically detect and display projects on your contract as one l
 
 ## What's the difference between a testnet token and a mainnet token?
 
-**Testnet tokens are free, unlimited, and worthless.** They only exist as a tool for the testing environment before spending actual money (Ether) deploying on Ethereum’s mainnet. 
+**Testnet tokens are free, unlimited, and worthless.** They only exist as a tool for the testing environment before spending actual money (Ether) deploying on Ethereum’s mainnet.
+
+## Flex: What are the limitations around file size and file type for external assets? How many external assets can a project have?
+
+There are no explicit limitations on the contract side, neither for file size or type or how many external assets a project can have. Ultimately, this is at the discretion of the artist, but Art Blocks recommends paying close attention to ensure that artworks are as acessible as possible for as many different types of users as possible. Generally speaking, the above factors should be influenced by trying to achieve the best user experience for the artwork in terms of performance and load time.
+
+Some additional recommendations:
+
+- Try to keep the overall download size for users viewing the work to be under ~10mb OR ensure the artwork description mentions the heavier load/longer loading time. Additionally, consider whether or not it may make sense to have a loading indicator as part of the artwork itself.
+- When working with less common file types, remember to test on various platforms/browsers, to ensure the best cross-platform compatability possible.
