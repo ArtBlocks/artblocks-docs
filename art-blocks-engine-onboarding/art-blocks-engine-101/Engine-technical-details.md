@@ -68,7 +68,9 @@ let tokenData = {
 }
 ```
 
-Your project script can then easily make use of these dependencies by combining the CID of the asset with the appropriate gateway. As a simple example: If you have an external asset dependency with a CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` and a dependencyType of `IPFS`, you can construct the full url of your external asset depdency by combining the `preferredIPFSGateway`, which let's assume is `https://ipfs.io/ipfs/`, with the asset CID. This gives you the full url of the asset, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, and allows your project script to download it with `fetch` and use it as it sees fit.
+Your project script can then easily make use of these dependencies by combining the CID of the asset with the appropriate gateway. As a simple example: If you have an external asset dependency with a CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` and a dependencyType of `IPFS`, you can construct the full url of your external asset depdency by combining the `preferredIPFSGateway`, which let's assume is `https://ipfs.io/ipfs/`, with the asset CID. This gives you the full url of the asset, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, and allows your project script to download it with `fetch` and use it as it sees fit. 
+
+Note that if your CID is pointing to a directory of assets, rather than a single asset, your project script will need to be aware of the file naming structure of this directory to fetch the assets individually. Using the previous example, imagine that CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` was pointing to a directory of 10 PNG images, with filenames corresponding to the numbers 1-10. Your project script would generate the same full url with the information provided, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, but also append the specific file you want to fetch by being aware of the naming conventions, ie `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg/1.png`.
 
 ## Loading JS Libraries As External Asset Dependencies
 
