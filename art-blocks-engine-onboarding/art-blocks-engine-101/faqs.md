@@ -133,3 +133,7 @@ Some additional recommendations:
 
 - Try to keep the overall download size for users viewing the work to be under ~10mb OR ensure the artwork description mentions the heavier load/longer loading time. Additionally, consider whether or not it may make sense to have a loading indicator as part of the artwork itself.
 - When working with less common file types, remember to test on various platforms/browsers, to ensure the best cross-platform compatability possible.
+
+## Flex: Can JS external asset dependencies make external calls to other APIs/assets?
+
+Having your JS external asset dependencies making external calls, wherther it's to an API or other assets, is not a supported use of the Engine Flex offering, as it breaks the assumption of only utilizing off-chain decentralized platforms. We encourage you to, instead, serialize any data you may need from these external calls into assets (JSON, TXT, etc) that are also stored on the platforms Engine Flex currently supports (IPFS and Arweave).
