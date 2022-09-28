@@ -11,7 +11,9 @@ struct ExternalAssetDependency {
 }
 ```
 
-The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain, decentralized assets stored on supported platforms. An external asset dependency is comprised of its content indentifier (CID) and dependencyType, which maps to an Engine Flex supported platform. Engine Flex currently supports adding external asset dependencies from the following platforms:
+The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain assets stored using decentralized storage technologies. An external asset dependency is comprised of its content indentifier (CID) and dependencyType, which maps to an Engine Flex supported platform. 
+
+Engine Flex currently supports adding external asset dependencies hosted using the following decentralized storage solutions:
 - IPFS
 - Arweave
 
@@ -42,7 +44,9 @@ string public preferredIPFSGateway;
 string public preferredArweaveGateway;
 ```
 
-The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave). Gateways are accessible HTTP interfaces and, when combined with an asset CID, expose urls for assets being stored on these off-chain decentralized platforms. These preferred gateways are updateable with a string param via the following functions: `updateArweaveGateway()` & `updateIPFSGateway()`.       Please note that these preferred gateways are set per-contract, not per-project.
+The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave). Gateways are accessible HTTP interfaces and, when combined with an asset CID, expose urls for assets being stored on these off-chain decentralized platforms. These preferred gateways are updateable with a string param via the following functions: `updateArweaveGateway()` & `updateIPFSGateway()`.       
+
+Please note that these preferred gateways are set per-contract, not per-project.
 
 ## Working With Exeternal Asset Dependencies In Your Project Script
 
@@ -111,5 +115,5 @@ function lockProjectExternalAssetDependencies(uint256 _projectId)
 This irreversible action removes the ability to add, update or remove from a project's external asset dependencies.
 
 Important notes:
-- Preferrred gateways do not get locked with this action and, in general, cannot be locked
+- Preferrred gateways do not get locked with this action and, in general, cannot be locked. This is intentional to allow support for modifying the preferred gateway over time, which may change while CIDs remain fixed/permanent.
 - You can lock a project's external asset dependencies regardless of whether or not the project itself is locked. And you can continue to modify a project's external dependencies even if the project is locked, as long as the external asset dependencies for the project are not locked.
