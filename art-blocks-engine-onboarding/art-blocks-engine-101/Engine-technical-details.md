@@ -27,15 +27,21 @@ function updateProjectExternalAssetDependency(uint256 _projectId, uint256 _index
 function removeProjectExternalAssetDependency(uint256 _projectId, uint256 _index)
 ```
 
-Some important notes to keep in mind with the above functions:
-- Only allowlisted/artist addresses can call these.
-- `ExternalAssetDependencyType _dependencyType` is a solidity enum, which can be passed in to these functions as a uint8. This enum only defines two options as of now, `IPFS` and `ARWEAVE`, which can be represented as `0` and `1` respectively. 
-- In the interest of saving gas, the `removeProjectExternalAssetDependency()` function is implemented in such a way that it does not preserve the order of the project's external asset dependency mapping and, therefore, the order in which the external asset depdendencies are returned should not be relied upon in any way. Additional implementation details described here: https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/PBAB%2BCollabs/GenArt721CoreV2_ENGINE_FLEX.sol#L596
-
 For convenience and utility, the contract also provides the following function, allowing you to easily grab a project's external asset dependency at a specific index:
 ```solidity
 function projectExternalAssetDependencyByIndex(uint256 _projectId, uint256 _index) 
 ```
+
+Some important factors to keep in mind with the above functions:
+- Only allowlisted/artist addresses can call these.
+- `ExternalAssetDependencyType _dependencyType` is a solidity enum, which can be passed in to these functions as a uint8. This enum only defines two options as of now, `IPFS` and `ARWEAVE`, which can be represented as `0` and `1` respectively. 
+
+### Note On Removing External Asset Dependencies
+ 
+In the interest of saving gas, the `removeProjectExternalAssetDependency()` function is implemented in such a way that it does not preserve the order of the project's external asset dependency mapping. Specifically, the way this removal logic works is as follows: when an index to remove is passed in, the element at that index being removed is swapped with the element at the last index of the list of assets. Now that the last index holds the element to be removed, that element is removed off the list. This method, in addition to being more gas efficient, also ensures that our list/mapping does not have any "holes". The tradeoff, however, is that the removel causes the order of the external asset dependencies in this list to change, albeit in a deterministic manner: the element at the last index always moves to the removed index. This is important to keep in mind when writing your project script, though you can always update the ordering manually as you see fit by utilizing the `updateProjectExternalAssetDependency()` function.
+
+You can view directly the full implementation of this removal function here: https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/PBAB%2BCollabs/GenArt721CoreV2_ENGINE_FLEX.sol#L596
+
 
 ## Preferred Gateways
 
