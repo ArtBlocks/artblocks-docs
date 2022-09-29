@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.717796454883">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.717797670076">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.717796454883" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.717797670076" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.717796454883" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.717797670076" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.717796454883" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.717796454883" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.717797670076" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.717797670076" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -283,10 +283,10 @@ string public preferredArweaveGateway;</code></pre>
 </doc-codeblock></div>
 <p>The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS &amp; Arweave). Gateways are accessible HTTP interfaces and, when combined with an asset CID, expose urls for assets being stored on these off-chain decentralized platforms. These preferred gateways are updateable with a string param via the following functions: <code v-pre>updateArweaveGateway()</code> &amp; <code v-pre>updateIPFSGateway()</code>.</p>
 <p>Please note that these preferred gateways are set per-contract, not per-project.</p>
-<doc-anchor-target id="working-with-exeternal-asset-dependencies-in-your-project-script">
+<doc-anchor-target id="working-with-external-asset-dependencies-in-your-project-script">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#working-with-exeternal-asset-dependencies-in-your-project-script">#</doc-anchor-trigger>
-        <span>Working With Exeternal Asset Dependencies In Your Project Script</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#working-with-external-asset-dependencies-in-your-project-script">#</doc-anchor-trigger>
+        <span>Working With External Asset Dependencies In Your Project Script</span>
     </h2>
 </doc-anchor-target>
 <p>When you request the live view for a given token of a project, the <code v-pre>hash</code> and <code v-pre>tokenId</code> of the token are provided in the <code v-pre>tokenData</code> object and the Art Blocks Generator injects this into the served HTML live view. This <code v-pre>tokenData</code> object has now been extended with the following external asset dependency related data, if it is available:</p>
