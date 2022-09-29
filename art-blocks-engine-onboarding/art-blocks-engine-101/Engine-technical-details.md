@@ -53,7 +53,7 @@ The Engine Flex contract allows you to specify preferred gateways for the curren
 
 Please note that these preferred gateways are set per-contract, not per-project.
 
-## Working With Exeternal Asset Dependencies In Your Project Script
+## Working With External Asset Dependencies In Your Project Script
 
 When you request the live view for a given token of a project, the `hash` and `tokenId` of the token are provided in the `tokenData` object and the Art Blocks Generator injects this into the served HTML live view. This `tokenData` object has now been extended with the following external asset dependency related data, if it is available:
 
