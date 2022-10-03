@@ -1,8 +1,8 @@
 ---
 order: 500
-description: Community Aggreements 
+description: Community Agreements 
 ---
-# Community Aggreements 
+# Community Agreements 
 
 These community guidelines have been inspired by BUFU By Us For Us, Flatbush Mixtape, Binch Press (BP), and Queer.Archive.Work (QAW)  Community Agreements. 
 
