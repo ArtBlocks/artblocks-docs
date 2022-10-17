@@ -7,19 +7,19 @@ Pinata is an excellent IPFS resource built with creators and non-technical users
 You can sign up for a free account which will allow up to 100 files and 1GB of storage! To get started visit [pinata.cloud](pinata.cloud) and click the “Sign Up” button in the top right. It will ask you for a name, email, and password. 
 
 ## Uploading Content
-### Once you’re signed in you will see the Files Page which looks something like this: ![](/static/Pinata%20setup%201.png)
+### Once you’re signed in you will see the Files Page which looks something like this: ![setup](/static/Pinata%20setup%201.png)
 
 
-### To start uploading content, simply click on the “Upload +” button and select “File” ![](/static/Pinata%20setup%202.png)
+### To start uploading content, simply click on the “Upload +” button and select “File” ![upload](/static/Pinata%20setup%202.png)
 
 
-### Of course from there click “Select File” and choose the file on your computer ![](/static/Pinata%20setup%203.png)
+### Of course from there click “Select File” and choose the file on your computer ![select](/static/Pinata%20setup%203.png)
 
 
-### Then give it a name, and click upload; that’s it! ![](/static/Pinata%20setup%204.png)
+### Then give it a name, and click upload; that’s it! ![name](/static/Pinata%20setup%204.png)
 
 
-### Once it’s done uploading you will see the file listed on your files page! ![](/static/Pinata%20setup%205.png)
+### Once it’s done uploading you will see the file listed on your files page! ![complete](/static/Pinata%20setup%205.png)
 
 What’s important to note is the “CID” which stands for “Content Identifier.” It’s the core of IPFS and how files can be shared across the IPFS network. This is what you would input into the “cid” portion of an Art Blocks generative script and would look something like this: 
 
