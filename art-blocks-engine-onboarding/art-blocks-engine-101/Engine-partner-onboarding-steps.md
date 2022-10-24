@@ -53,13 +53,19 @@ Art Blocks will integrate your contracts with our rendering infrastructure and p
 
 Your team will integrate your site’s front-end with the contract created by Art Blocks to test your outputs on the testnet.
 
-[!badge Timeline: Varies (dependent on partner)]
+[!badge Timeline: Depends on partner]
+- [x] Connect your front end to testnet contracts
 
 ## 8. Test mints on partner site
 
 Your team ensures the minting process is working on the test network by minting your NFTs using the front-end of your site.
 
-[!badge Timeline: Varies (dependent on partner)]
+[!badge Timeline: Depends on partner]
+- [x] Mint test outputs
+- [x] Test drop mechanic (flat price, Dutch Auction, whitelists, etc.)
+- [x] Test purchase with custom ERC20 (if applicable) 
+- [x] Request a script audit from Art Blocks
+- [x] Test your script across different hardware/software ([browserstack.com](https://www.browserstack.com/)) 
 
 ## 9. Deployment to mainnet
 
@@ -71,7 +77,10 @@ Art Blocks deploys the mainnet version of your contract and integrates it with o
 
 Your team integrates the mainnet contract with your site and prepares to generate your first NFT (mint #0)
 
-[!badge Timeline: Varies (dependent on partner)]
+[!badge Timeline: Depends on partner]
+- [x] Connect your front end with the *new* mainnet contracts, using the same minting mechanics from testnet (drop type & currency) 
+- [x] Mint #0 from your front end 
+
 
 ## 11. Mint #0
 
