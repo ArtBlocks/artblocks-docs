@@ -7,10 +7,10 @@ We are currently in the process of working on finalizing a more comprehensive pr
 !!!
 
 Quick Links:
-- [Token API](#Token-API)
-- [Generator API](#Generator-API)
-- [Media API/Media Server](#Media-APIMedia-server)
-- [Art Blocks Subgraph](#Art-Blocks-Subgraph-via-The-Graph)
+- [Token API](#token-api)
+- [Generator API](#generator-api)
+- [Media API/Media Server](#media-apimedia-server)
+- [Art Blocks Subgraph](#art-blocks-subgraph-via-the-graph)
 
 ## Hosted APIs
 
@@ -139,7 +139,7 @@ Retrieving a specific Art Blocks project by short ID (no contract):
 
 <table>
 <tr>
-<td> Network </td> <td> Contract Type </td> <td> Query </td>
+<td> Network </td> <td> Contract Type </td> <td style="width:700px"> Query </td>
 </tr>
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
@@ -222,7 +222,7 @@ Retrieving a specific Art Blocks project by full ID (includes contract):
 
 <table>
 <tr>
-<td> Network </td> <td> Contract Type </td> <td> Query </td>
+<td> Network </td> <td> Contract Type </td> <td style="width:600px"> Query </td>
 </tr>
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
@@ -304,7 +304,7 @@ Retrieving a specific Art Blocks token by short ID (no contract):
 
 <table>
 <tr>
-<td> Network </td> <td> Contract Type </td> <td> Query </td>
+<td> Network </td> <td> Contract Type </td> <td style="width:700px"> Query </td>
 </tr>
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
@@ -359,7 +359,7 @@ Retrieving a specific Art Blocks token by full ID (includes contract):
 
 <table>
 <tr>
-<td> Network </td> <td> Contract Type </td> <td> Query </td>
+<td> Network </td> <td> Contract Type </td> <td style="width:600px"> Query </td>
 </tr>
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
