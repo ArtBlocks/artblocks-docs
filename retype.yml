@@ -5,7 +5,7 @@ url: docs.artblocks.io
 branding:
   title: Art Blocks
   label: Docs
-  logo: static/squigWhiteCircle.png
+  logo: static/squigLogo.png
 
 integrations:
   googleAnalytics:
