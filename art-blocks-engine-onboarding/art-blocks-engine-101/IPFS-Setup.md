@@ -4,22 +4,22 @@ Pinata is an excellent IPFS resource built with creators and non-technical users
 
 ## Signing Up
 
-You can sign up for a free account which will allow up to 100 files and 1GB of storage! To get started visit [pinata.cloud](pinata.cloud) and click the “Sign Up” button in the top right. It will ask you for a name, email, and password. 
+You can sign up for a free account which will allow up to 100 files and 1GB of storage! To get started visit [pinata.cloud](https://bit.ly/3DtEmhN) and click the “Sign Up” button in the top right. It will ask you for a name, email, and password. 
 
 ## Uploading Content
-### Once you’re signed in you will see the Files Page which looks something like this: ![setup](/static/Pinata_setup_1.png)
+Once you’re signed in you will see the Files Page which looks something like this: ![setup](/static/Pinata_setup_1.png)
 
 
-### To start uploading content, simply click on the “Upload +” button and select “File” ![upload](/static/Pinata_setup_2.png)
+To start uploading content, simply click on the “Upload +” button and select “File” ![upload](/static/Pinata_setup_2.png)
 
 
-### Of course from there click “Select File” and choose the file on your computer ![select](/static/Pinata_setup_3.png)
+Of course from there click “Select File” and choose the file on your computer ![select](/static/Pinata_setup_3.png)
 
 
-### Then give it a name, and click upload; that’s it! ![name](/static/Pinata_setup_4.png)
+Then give it a name, and click upload; that’s it! ![name](/static/Pinata_setup_4.png)
 
 
-### Once it’s done uploading you will see the file listed on your files page! ![complete](/static/Pinata_setup_5.png)
+Once it’s done uploading you will see the file listed on your files page! ![complete](/static/Pinata_setup_5.png)
 
 What’s important to note is the “CID” which stands for “Content Identifier.” It’s the core of IPFS and how files can be shared across the IPFS network. This is what you would input into the “cid” portion of an Art Blocks generative script and would look something like this: 
 
