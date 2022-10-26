@@ -119,7 +119,6 @@ Subgraph information is serviced by a decentralized group of server operators ca
 
 ## Helpful Resources
 
-<br>
 - [Video Tutorial on creating an API Key](https://www.youtube.com/watch?v=UrfIpm-Vlgs)
 - [Managing your API Key & setting your indexer preferences](https://thegraph.com/docs/en/studio/managing-api-keys/)
 - [Querying from an application](https://thegraph.com/docs/en/developer/querying-from-your-app/)
