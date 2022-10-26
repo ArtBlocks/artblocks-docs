@@ -540,4 +540,3 @@ Retrieve the project script for a given project id
 ```
 
 Pagination should be used for large queries. The Graph enforces upper limits on `first` and `skip` parameters since they generally perform poorly when set to large values (limits as of 01/2022 are `first<=1000` and `skip<=5000`). It is much better to page through entities based on an attribute such as token ID, block number, or some other parameter. For more information, see [The Graph documentation](https://thegraph.com/docs/en/developer/graphql-api/#pagination)
-**Recommandation:** Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.
