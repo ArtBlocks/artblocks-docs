@@ -107,7 +107,7 @@ We are working on a media server for Engine partners. Currently, media is access
 
 Art Blocks has a GraphQL API Endpoint hosted by [The Graph](https://thegraph.com/docs/about/introduction#what-the-graph-is) called a subgraph for indexing and organizing data from the Art Blocks smart contracts.
 
-This subgraph can be used to query Art Blocks data.
+This subgraph can be used to query for on-chain data related to the Art Blocks contracts.
 
 Subgraph information is serviced by a decentralized group of server operators called Indexers.
 
