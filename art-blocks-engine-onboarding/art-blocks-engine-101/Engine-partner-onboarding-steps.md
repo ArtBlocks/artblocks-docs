@@ -32,6 +32,7 @@ To get started, you'll provide our team with:
 1. **An Ethereum wallet address** that you own and will use to manage your Art Blocks Engine smart contracts.
 2. **The name you’ll use for tokens** from your contract (e.g., for Art Blocks, it is "Art Blocks")
 3. **The ticker symbol you’ll use for tokens** from your contract (e.g., for Art Blocks, it is "BLOCKS")
+4. **Mint mechanic** you'd like to use for the first drop. Fixed-price ETH, fixed-price custom ERC20 token, **linear** automated descending (Dutch) auction, **exponential** automated descending (Dutch) auction, or an allowlist minter. 
 
 Note: We cannot deploy your contract until you provide the above information. **The name and symbol tied to your contract cannot change once it’s set.**_
 
@@ -86,7 +87,20 @@ Your team integrates the mainnet contract with your site and prepares to generat
 
 You can mint your project's first official token via your site!
 
-## 12. Project launch
+## 12. Set secondary royalties
+
+Art Blocks will set *our* secondary royalty before we transfer contract ownership, but you are responsible for setting your own secondary royalty across all secondary marketplaces. 
+
+OpenSea - https://docs.opensea.io/docs/10-setting-fees-on-secondary-sales  
+LooksRare - https://docs.looksrare.org/guides/collection-management/set-or-edit-collection-royalties  
+x2y2 - https://docs.x2y2.io/guides/collection-management/manage-your-collection  
+
+Note: The vast majority of secondary activity takes place on OpenSea. Currently, OpenSea does not recognize on-chain roylaties and needs to be set through their interface. However, they plan to recognize [Roylaty Registry](https://royaltyregistry.xyz/lookup) in the near-ish future. We highly encourage you to sign up for the Royalty Registry to avoid missed secondary roylaties. 
+  
+Instructions on setting up Royalty Registry - https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-royalty-registry-setup/
+
+
+## 13. Project launch
 
 You can choose a launch date for your project. Please allow at least one week between a successful mint #0 and a go-live date.
 
