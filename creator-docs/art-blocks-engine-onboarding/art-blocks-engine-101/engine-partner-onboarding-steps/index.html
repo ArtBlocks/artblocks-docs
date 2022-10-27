@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720148981858">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720197932918">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.720148981858" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.720197932918" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.720148981858" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.720197932918" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.720148981858" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.720197932918" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -265,6 +265,7 @@
 <li><strong>An Ethereum wallet address</strong> that you own and will use to manage your Art Blocks Engine smart contracts.</li>
 <li><strong>The name you’ll use for tokens</strong> from your contract (e.g., for Art Blocks, it is &quot;Art Blocks&quot;)</li>
 <li><strong>The ticker symbol you’ll use for tokens</strong> from your contract (e.g., for Art Blocks, it is &quot;BLOCKS&quot;)</li>
+<li><strong>Mint mechanic</strong> you&#x27;d like to use for the first drop. Fixed-price ETH, fixed-price custom ERC20 token, <strong>linear</strong> automated descending (Dutch) auction, <strong>exponential</strong> automated descending (Dutch) auction, or an allowlist minter.</li>
 </ol>
 <p>Note: We cannot deploy your contract until you provide the above information. <strong>The name and symbol tied to your contract cannot change once it’s set.</strong>_</p>
 <p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
@@ -351,10 +352,22 @@
     </h2>
 </doc-anchor-target>
 <p>You can mint your project&#x27;s first official token via your site!</p>
-<doc-anchor-target id="12-project-launch">
+<doc-anchor-target id="12-set-secondary-royalties">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#12-project-launch">#</doc-anchor-trigger>
-        <span>12. Project launch</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#12-set-secondary-royalties">#</doc-anchor-trigger>
+        <span>12. Set secondary royalties</span>
+    </h2>
+</doc-anchor-target>
+<p>Art Blocks will set <em>our</em> secondary royalty before we transfer contract ownership, but you are responsible for setting your own secondary royalty across all secondary marketplaces.</p>
+<p>OpenSea - <a href="https://docs.opensea.io/docs/10-setting-fees-on-secondary-sales">https://docs.opensea.io/docs/10-setting-fees-on-secondary-sales</a><br />
+LooksRare - <a href="https://docs.looksrare.org/guides/collection-management/set-or-edit-collection-royalties">https://docs.looksrare.org/guides/collection-management/set-or-edit-collection-royalties</a><br />
+x2y2 - <a href="https://docs.x2y2.io/guides/collection-management/manage-your-collection">https://docs.x2y2.io/guides/collection-management/manage-your-collection</a></p>
+<p>Note: The vast majority of secondary activity takes place on OpenSea. Currently, OpenSea does not recognize on-chain roylaties and needs to be set through their interface. However, they plan to recognize <a href="https://royaltyregistry.xyz/lookup">Roylaty Registry</a> in the near-ish future. We highly encourage you to sign up for the Royalty Registry to avoid missed secondary roylaties.</p>
+<p>Instructions on setting up Royalty Registry - <a href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-royalty-registry-setup/">https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-royalty-registry-setup/</a></p>
+<doc-anchor-target id="13-project-launch">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#13-project-launch">#</doc-anchor-trigger>
+        <span>13. Project launch</span>
     </h2>
 </doc-anchor-target>
 <p>You can choose a launch date for your project. Please allow at least one week between a successful mint #0 and a go-live date.</p>
