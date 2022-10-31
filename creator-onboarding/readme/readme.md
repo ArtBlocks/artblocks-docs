@@ -215,15 +215,15 @@ Storing code on Ethereum is expensive! Taking average gas prices, you can genera
 Based on previous projects, we've estimated the cost of uploading a script to be the following; where Bytes is the size of your project and gwei price is the price you set when submitting your transaction. It always helps to wait until non-peak hours to upload your script.
 
 ```
-Cost (ETH) = 675 * Bytes * Gwei Price * (1/1000000000)
+Cost (ETH) = 235 * Bytes * Gwei Price * (1/1000000000)
 ```
 
 So a 10 KB project at 100 gwei would be:
 
 ```
-675 * 10000 * 100 * (1 / 1000000000)
-675000000 / 1000000000
-0.675 ETH
+235 * 10000 * 100 * (1 / 1000000000)
+235000000 / 1000000000
+0.235 ETH
 ```
 
 Artists have recently targeted between \~5-20 KB for their code (without the library), but obviously this will vary by project scope.
