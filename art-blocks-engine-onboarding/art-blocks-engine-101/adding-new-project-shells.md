@@ -6,9 +6,9 @@ order: 700
 An overview of deploying a new project on your custom Art Blocks Engine contract.
 
 1. Collect 3 pieces of information for the to-be-deployed project on your Engine contract.
-   1.1 The project title (e.g. "Fun Lines")
-   1.2 The artist's wallet address, this will determine which address has access to configure the project from within the artist interface, (e.g. `0x78592a6fBE68fEBf226040a5D25ad7e69F2FeAb6`).
-   1.3 The price-per-mint, this will need to be specified [**in WEI**](https://eth-converter.com), (e.g. `350000000000000000`, which is 0.35 in ETH).
+   1.1 The project title (e.g. "Fun Lines")  
+   1.2 The artist's wallet address, this will determine which address has access to configure the project from within the artist interface, (e.g. `0x78592a6fBE68fEBf226040a5D25ad7e69F2FeAb6`).  
+   1.3 The price-per-mint, this will need to be specified [**in WEI**](https://eth-converter.com), (e.g. `350000000000000000`, which is 0.35 in ETH).  
 2. Navigate to your Engine Core Contract on Etherscan (e.g. https://ropsten.etherscan.io/address/0x06710498339b30834653459Ac90F52Cbd2F1D085#code).
 3. Navigate to the "Write contract" tab and connect your wallet to Etherscan.![](/static/screenshot3.png)
 4. Use the `addProject` method to create a new project shell, specifying the information collected in step 1 above.
