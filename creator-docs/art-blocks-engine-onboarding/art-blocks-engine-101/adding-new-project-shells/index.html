@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720563699795">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720712220469">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -35,11 +35,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.720563699795" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.720712220469" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.720563699795" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.720712220469" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.720563699795" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.720712220469" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -234,7 +234,7 @@
 <li>Navigate to the &quot;Write contract&quot; tab and connect your wallet to Etherscan.<img src="../../../../static/screenshot3.png" alt="" /></li>
 <li>Use the <code v-pre>addProject</code> method to create a new project shell, specifying the information collected in step 1 above.</li>
 <li>Once 4 has been completed, connect to the Art Blocks website  (<a href="https://artist-staging.artblocks.io">https://artist-staging.artblocks.io</a> for testnet, and <a href="https://artblocks.io">https://artblocks.io</a> for mainnet), <strong>with the artist wallet</strong> used in step 4., your artist should be able to begin entering their project details.
-5.1 If you are having trouble finding your project on the Ropsten Art Blocks site, you should be able to navigate to it directly by entering in your browser a URL of the format: <code v-pre>https://artist-staging.artblocks.io/project/{CONTRACT_ADDRESS}-{PROJECT_ID}</code> (e.g. for the first project shell on your Engine core contract, the <code v-pre>{PROJECT_ID}</code> would be <code v-pre>0</code>, then <code v-pre>1</code>, then <code v-pre>2</code>, etc.).
+5.1 If you are having trouble finding your project on the Testnet Art Blocks site, you should be able to navigate to it directly by entering in your browser a URL of the format: <code v-pre>https://artist-staging.artblocks.io/project/{CONTRACT_ADDRESS}/{PROJECT_ID}</code> (e.g. for the first project shell on your Engine core contract, the <code v-pre>{PROJECT_ID}</code> would be <code v-pre>0</code>, then <code v-pre>1</code>, then <code v-pre>2</code>, etc.).
 5.2 If you are having trouble seeing your project on the corresponding-network&#x27;s Art Blocks site, first try disconnecting and reconnecting your wallet to the site, ensuring that you are connected with the previously specified artist wallet.
 5.3 When asked to provide the <code v-pre>baseTokenURI</code> for your project, this should be <code v-pre>https://token.artblocks.io/{CONTRACT_ADDRESS}/</code>, where <code v-pre>{CONTRACT_ADDRESS}</code> is the address of <strong>the core contract</strong> for your Engine project (e.g. <code v-pre>0x06710498339b30834653459Ac90F52Cbd2F1D085</code> for the project linked above in step 2.). For the testnet, this should be <code v-pre>https://token.staging.artblocks.io/{CONTRACT_ADDRESS}/</code>.
 5.4 Generally speaking, the <a href="../../../creator-onboarding/readme/">Art Blocks 101 for Creators guide</a> should be broadly applicable to this onboarding step for PBAB-partner-platform artists.</li>
