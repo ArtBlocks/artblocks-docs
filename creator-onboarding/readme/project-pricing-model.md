@@ -8,9 +8,10 @@ This resource defines Art Blocks project pricing model. This resource is intende
 
 ---
 
-Art Blocks has imposed overall total value limitations to each release. You are not required or even encouraged to consume the project category's entire total value. Consider your audience and the breadth of your project/mints and decide what’s best for you. This price model should serve as a baseline for determining your project's size and price. 
+Art Blocks has imposed overall total value limitations to each release. You are not required (or even encouraged) to consume the project category's entire total value. This resource is intended for artists to better understand the relationship between project size and price per token.
 
-Projects are broken up into categories (first factory, factory return, playground, and curated) and each is assigned a maximum resting value that guides the selection of project size in relation to resting price. The maximum resting value is the total value that a project can generate at its resting price. This is calculated by multiplying the series size by the resting price. For Dutch auctions, the resting price is the final price tier of the auction sequence. For fixed price sales, the resting price is equivalent to the fixed price. 
+Projects are in two product categories: Art Blocks Presents and Curated. Each collection is assigned a maximum resting value guided by the collection size. The maximum resting value is the total value that a project can generate at its resting price. This is calculated by multiplying the series size by the resting price. For Dutch auctions, the resting price is the final price tier of the auction sequence. For fixed-price sales, the resting price is equivalent to the fixed price. 
+
 
 # Project Pricing Model Explained
 
@@ -43,5 +44,10 @@ Approaching price in terms of overall value leaves room for artists to ensure th
 
 # Price Reductions
 
-A project's pricing cannot be altered after release. Instead, you may reduce your project size, but must run the change by the Artist Liasion or Artistic Coordinator.
+A project's pricing cannot be altered after release. Instead, you may reduce your project size but must run the change by the Art Blocks Art Team in your [M_] DM on Discord. We recommend waiting at least 4 weeks before reducing collection size. 
+
+Our contract automatically locks projects FOUR WEEKS after their final mint.
+
+**Note**: If the artist reduces maxInvocations to current invocations, that tx is considered the start of the four-week timer until lock.
+
 
