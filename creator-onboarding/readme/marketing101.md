@@ -3,14 +3,14 @@ order: 500
 description: Marketing 101
 ---
 # Marketing 101 
-Marketing can help projects reach their widest audiences. Crypto markets are volatile, and sales are not guaranteed. One way artists achieve sustainable success can be to build an active and engaged audience. Art Blocks has a thriving community on several social media channels that is enthusiastic to engage with new artists and new projects. We encourage you to engage with this communit and provide resources for doing so, as you prepare to release your work.
+Marketing can help projects reach their widest audiences. Crypto markets are volatile, and sales are not guaranteed. One way artists achieve sustainable success can be to build an active and engaged audience. Art Blocks has a thriving community on several social media channels that is enthusiastic to engage with new artists and new projects. We encourage you to engage with this community and provide resources for doing so, as you prepare to release your work.
 
 ## Guidelines 
 We ask that all artists DO NOT announce their Art Blocks affiliation until they’ve completed Mint #0 and have been provided a confirmed release date by the Art Team. You can use this time to share progress on your project and to connect with community members on Discord. 
 
 Artists whose projects have been designated for Curated release must wait to announce the project and its Curated designation until after Art Blocks has made  an official announcement. 
 
-## Art BlocksPromotion Resources
+## Art Blocks Promotion Resources
 
 ### Art Blocks Presents Releases
 
