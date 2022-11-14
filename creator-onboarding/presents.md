@@ -15,7 +15,7 @@ Before proceeding to mainnet upload, please verify that your script behaves as e
 3. Submit one field at a time. Wait for that transaction to clear before attempting the next field.
 4. When you upload your script, please copy it exactly from testnet.
 5. Include the following in the Project Base URI field: `https://api.artblocks.io/token/`
-   * **Important:** If you are setting this field for a Engine project, rather than an Art Blocks project directly, the `baseTokenURI` field should follow a slightly different structure. Please see the [Art Blocks Engine documentation](../art-blocks-engine-onboarding/art-blocks-engine-101/adding-new-project-shells.md) for more info.
+   * **Important:** If you are setting this field for an Engine project, rather than an Art Blocks project directly, the `baseTokenURI` field should follow a slightly different structure. Please see the [Art Blocks Engine documentation](../art-blocks-engine-onboarding/art-blocks-engine-101/adding-new-project-shells.md) for more info.
 6. As [noted in the main documentation overview](readme/readme.md), please ensure that you are only setting a currency address if you are using some custom ERC20-compatible token (e.g., DAI) for the sale of your work. This field **should not** be set if you are accepting ETH as your payment type.
 7. Please double-check, triple-check, and then check again the generated [features script](readme/features.md) results on staging to ensure they are 100% accurate. This is **extremely important** to get right, as it changes to fix any bugs you may introduce in this script may have a massive impact on how the artwork is perceived by collectors and may cause confusion in the secondary market. It is **your responsibility** to guarantee that your features script is properly verified in the artist staging environment.
 
@@ -57,7 +57,7 @@ If you are using the Dutch auction - Exponential Price Decrease or Dutch auction
 * After your project has been scheduled, you are free to announce and promote your project on your social media.
 
 ## Goerli
-Once scheduled, you will have the option to make your Goerli shell public to collectors. To help collectors easily differentiate Goerli shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Ropsten public:
+Once scheduled, you will have the option to make your Goerli shell public to collectors. To help collectors easily differentiate Goerli shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Goerli public:
 1. Add [Sample Outputs] as a prefix to your project title. The formatting of your Goerli title will be "[Sample Outputs] Project Name"
 2. Adjust your price information in Goerli to be the same as on mainnet
 3. Adjust your max invocations in Goerli to be the same as on mainnet
