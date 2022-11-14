@@ -1,342 +1,191 @@
 ---
-order: 800
+Order: 700
 description: Frequently asked questions.
 ---
+
 # FAQs
 
 To suggest a question to be added, fill out this form: [Creator FAQs Suggestion Box](https://forms.gle/P3TJcZ8ydqFmMyiw9)
 
----
+## Application
 
-## When can I expect to hear back after I submit an application?
+### When can I expect to hear back after I submit an application?
 
-Once an application is submitted, it’s added to our pipeline for review. Depending on congestion, it can take anywhere from a few weeks to a few months before we reach out to get the process started. The first conversation is focused on the status of your project and seeing what you’ve been working on.
+Once an application is submitted, it’s added to our pipeline for review. Depending on the volume of applications, it can take anywhere from a few weeks to a few months before you can expect to hear from us. The first conversation will focus on the status of your project, including reviewing test outputs.
 
-We highly recommend you take advantage of this time and continue refining your script. This not only improves the project but speeds up the onboarding process once conversations start.
+We highly recommend you take advantage of this time to continue refining your script and to gather your supporting materials. This not only improves the project, but will accelerate the on-boarding process.
 
----
+### What happens after I apply?
 
-## What happens after I apply?
+We'll reach out to check on the status of your project submission when we reach your application in the queue. You can share any updates with us, or let us know if you need a bit more time to finish uploading and iterating your script. After we have your final submission, it will be reviewed, and you will be notified whether or not your project is selected for an Art Blocks launch. If your project is selected, you'll move into the [Artist Onboarding Steps](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/).
 
-After an application period ends, our creative team will begin the process of reviewing applications in the order they were received. We'll reach out to check on the status of your project prototype when we reach your application in the queue. You can share any updates with us, or let us know if you need a bit more time to finalize a prototype. After we have your final submission, you'll hear back from us whether or not your project is selected for an Art Blocks launch. If your project is selected, you'll move into the Artist Onboarding process.
+### What is the expected timeline for hearing back from Art Blocks throughout the application process?
 
----
+Once your application has been reached in the queue, you can expect responses within 48 hours during weekdays. Please note that weekends are not working hours for Art Blocks. For communications sent over the weekend, please allow 72 hours for a response.
 
-## What are the steps in the process and how do I know when I've completed them?
+### How do I know the application period to send my first work?
 
-Please see our Artist Onboarding Steps page for a more detailed overview of the onboarding process.
+For the time being, applications will remain open indefinitely. To learn more about the application process, visit [apply.artblocks.io](apply.artblocks.io).
 
----
+### What is the process for submitting my first work?
 
-## Approximately how long will each step of the process take?
+You may apply using [this application form](artblocks.io/apply). We expect that artists have a creative history and the ability to provide an original generative script.
 
-Once the artist onboarding process begins, it will take approximately 4-6 weeks to upload your project, finalize it on testnet, submit it for curation review, finalize it on mainnet, schedule a launch date, and finally release the project. The length of each step differs and depends somewhat on how quickly you, the artist, finalize your scripts. Please see our artist onboarding flow for more information about the timeline of each step.
+## Artist Pipeline 
 
----
+### What are the steps in the process and how do I know when I've completed them?
 
-## What is the expected timeline for hearing back from Art Blocks throughout the application process?
+Please see [Artist Onboarding Steps](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/) for a more detailed overview of the onboarding process.
 
-Once your application has been reached in the queue, communication will move quickly. During weekdays, you can expect responses within 24 hours. Please note that weekends are not working hours for Art Blocks. For communications sent over the weekend, please allow 72 hours for a response.
+### Approximately how long will each step of the process take?
 
----
+Once the artist onboarding process begins, it will take approximately 1-2 months to upload your project, finalize it on testnet, submit it for curation review, finalize it on mainnet, schedule a launch date, and finally release the project. The length of each step differs and depends somewhat on how quickly you, the artist, finalize your scripts. Please see our artist onboarding flow for more information about the timeline of each step.
 
-## Who can I reach out to if I have questions?
+### Who can I reach out to if I have questions?
 
-Sarah ([!badge Discord: sross#6444]), our Artist Liaison will be your primary point of contact, along with Mad Pinney ([!badge Discord: madpinney#1183]), our Artistic Coordinator. You can reach them on Discord or send them an email.
+For questions related to your application, please post your inquiry in #artist-application-support. You may also use the #help channel 
 
----
+## Curation Review 
 
-## What are the general standards for achieving curation status? What are the criteria that differentiate curated and factory?
+### What are the general standards for achieving curation status? 
 
-The Curated Collection is a group of projects that pushes the boundaries of Generative Art in their aesthetic beauty, conceptualization, technical quality, and innovation. A project in the Curated Collection covers new territory using code that employs inventive, never-before-seen techniques that operate to support an original intention and concept. Board members look for collections that evoke emotional, intellectual, and conceptual qualities through aesthetics while sustaining the viewer’s interest.
+The Curated Collection is a group of projects that pushes the boundaries of Generative Art. A project in the Curated Collection covers new territory using code that employs inventive, never-before-seen techniques to support an original intention and concept. Board members look for collections that evoke emotional, intellectual, and conceptual qualities through aesthetics while sustaining the viewer’s interest.
 
+### Are rarities judged as a metric for curation?
 
----
+Rarities aren't included as a metric for determining curation status. However, the overall variety of a collection is important so that the project contains diversity over the course of a large number of mints.
 
-## Why are rarities judged as a metric for curation?
+### Will I receive feedback from the curation board on my submissions?
 
-Rarities aren't included as a metric for determining curation status. However, overall variety of a collection is important so that the project continues to be exciting over the course of a large number of mints.
+Feedback from the Curation Board will be provided. The goal of this feedback will be to highlight observations that our Curation Board made about your current project upon their review.
 
----
+### Who is on the curation board?
 
-## Will I receive feedback from the curation board on my submissions?
+Art Blocks has invited individuals to our Curation Board based on their expertise, passion for the evolution and growth of on-chain generative art, and their industry leadership.
 
-Feedback from the Curation Board will be provided. The goal of this feedback will be to highlight observations that our Curation Board made about your current project upon their review
+You can read more about the Curation Board [here](https://info.artblocks.io/spectrum/meet-the-art-blocks-curation-board).
 
----
+## Technical Requirements
 
-## Who is on the curation board?
+### Are all browsers supported for Art Blocks drops? Is mobile supported?
 
-Our Curation Board is made up of a diverse group of artists and people in the art space. You can read more about the Curation Board on our Medium page: https://medium.com/the-link-art-blocks/meet-the-art-blocks-curation-board-696102e747e3
+All modern browsers are supported (including mobile), though you may run into issues using Internet Explorer. We recommend using Browserstack https://www.browserstack.com/ to test across devices.
 
----
+### Do I need to know Solidity (to write my own smart contract)?
 
-## Are all browsers supported for AB drops? Is mobile supported?
+No. Art Blocks handles all of that for you. All you need to create is the artwork.
 
-All modern browsers are supported (including mobile), though you may run into issues if using internet explorer.
+### Can I load external assets into my project (textures, audio, etc)?
 
----
+Not at this time. Currently, everything must be included in the script file. For small and critical assets, you may be able to use `base-64` encoding to encode the asset into your script, but that will count as data to be stored.
 
-## Do I need to know Solidity (to write my own smart contracts)?
+### Can I use text? What fonts can I use?
 
-No. Art Blocks handles all of that for you. All you need to do is the artwork.
+You can use text in your project! Font choice is technically at your discretion, but you're encouraged to use the core web fonts to ensure universal support and maintain the piece's integrity over the longer term. (`serif,` `sans-serif,` `monospace`, and less commonly, `cursive` and `fantasy.`)
 
----
+### What are the minimum hardware requirements? What type of graphics card do I need?
 
-## Does the size include the library that I'm using?
+Any computer with an internet connection will work! No special graphics cards are required.
 
-No, the library you use is not stored on-chain with your project. A script tag linking to a CDN hosting the library you choose will be injected into the window scope when the project runs.
+## Staging 
 
----
+### Is it possible to see my project without being connected to my wallet? So I can test it across different devices and browsers without connecting?
 
-## Are there limits on script length?
+No, this is not currently possible. You'll need to be signed in with your wallet to access your project. You can however view live view links without being connected to a wallet. To view a live view link while your shell is private, add `?render=true/` to the end of the URL.
 
-If your script is big, consider minifying it. There are no limits for total script length. That said, scripts that are larger than 10 kilibytes will need to be broken up into segments of 10kb. Segments can be added using the plus symbol (+) when uploading a script. Be aware that you will have to pay in transaction gas fees proportional to the size of script upload you are performing.
+### What is the MinterSuite, and how does it work? 
 
----
+The MinterSuite allows artists to set specific minting contracts on a per-project basis. The MinterSuite currently includes the following minter options, which will continue to be expanded over time: 
 
-## Can I load external assets into my project (textures, audio, etc)?
+**Set Price - ETH** is used for fixed price releases.
 
-Not yet. Some ideas are being worked on that will allow external assets to get pulled in, but currently everything must be included in the script file. For small and critical assets, you may be able to use `base-64` encoding to encode the asset into your script, but that will count as data to be stored.
+**Automated Exponential Dutch Auction**: For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops.
 
----
+**Automated Linear Dutch Auction:** For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time.
 
-## Can I use text? What fonts can I use?
+**Set price in custom ERC20:** Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale. 
 
-You can use text in your project! Font choice is technically at your discretion but you're encouraged to use the core web fonts to ensure universal support and maintain the integrity of the piece over the longer term. (`serif`, `sans-serif`, `monospace` and less commonly `cursive` and `fantasy`)
+**Set Price - ETH, Allowlisted Users Only (V1)** these are addresses that are allowed to mint as many times as they want until they reach the mint limit (artists sets mint/wallet)
 
----
+To find out how to set your project price using the MinterSuite visit [this page](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter). 
 
-## What are the minimum hardware requirements? What type of graphics card do I need?
+## Uploading Your Script 
 
-Any computer with an internet connection will work! No special graphics cards required.
-
----
-
-## Is it possible to see my project without being connected to my wallet? So I can test it across different devices and browsers without having to connect?
-
-No, this is not currently possible. You'll need to be signed in with your wallet to access your project.
-
----
-
-## How much money / ETH do I need to upload my project?
+### How much money / ETH do I need to upload my project?
 
 The cost depends on the complexity of your project and how many lines of code it requires. See [here](readme.md#cost) for more specific information about how to budget for a drop.
 
----
+### My project is uploaded and ready to go. How do I mint my first output?
 
-## What information will I need to provide about my project?
+You can use the “Purchases Paused” button to mint both on the artist staging platform and mainnet _**without**_ unpausing your project. We suggest using this method to mint Token #0 to avoid any accidental early mints.
+
+### Are there limits on script length?
+
+If your script is big, consider minifying it. There are no limits to the total script length. That said, scripts that are larger than 24 kilobytes will need to be broken up into segments of 24kb. Segments can be added using the plus symbol (+) when uploading a script. Be aware that you will have to pay transaction gas fees proportional to the size of the script upload.
+
+###  Does the size include the library that I'm using?
+
+No, the library you use is not stored on-chain with your project. A script tag linking to a CDN hosting the library you choose will be injected into the window scope when the project runs.
+
+## Preparing for your drop 
+
+### What information will I need to provide about my project?
 
 If your project is selected for a drop on Art Blocks, you'll need to have the following information ready. This is typically collected near the end of the process, so you'll have time to make these decisions as you're onboarding.
 
 ```
 Would you like your Goerli testnet project made public? YES/NO
 
-[Curated/Playground/Factory]
+[Curated/Presents]
 Project name:
 Artist name:
 Project Link: https://www.artblocks.io/project/[#]
-Project Conversations: #factory-projects or #\[artist-name]
-Start Date/Time: TBD with the AB team
+Project Conversations: #block-talk or #\[artist-name]
+Start Date/Time: To be determined with the Art Blocks team
 Total Mints:
-Drop Mechanic (Fixed price/Dutch auction):
-Mint Price (start price and resting price if DA):
+Drop Mechanic (fixed price/Dutch auction):
+Mint Price (start price and resting price if Dutch auction):
 Charity Info (if applicable):
 ```
 
----
+### Can I share information about my drop on social media before it's announced?
 
-## My project is uploaded and ready to go. How do I mint my first output?
+Once you finalize a drop date with the Art Blocks team, you're welcome to share and promote your drop on all social media! We have created a [Marketing  101](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/marketing101/#marketing-101) document to support your efforts in the lead-up to your drop. 
 
-You can use the Purchases Paused button to mint both on the artist staging platform and mainnet _**without**_ unpausing your project. We suggest using this method to mint Token #0 to avoid any accidental early mints from other collectors
+### When will I know when my drop is scheduled? When will the drop be announced?
 
----
-
-## Can I share information about my drop on social media before it's announced?
-
-Once you finalize a drop date with the Art Blocks team, you're welcome to share and promote your drop on all social media! We have created a [Marketing  101](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/marketing101/#marketing-101) document to support your efforts in the lead up to your drop. 
-
----
-
-## How should I price my artwork?
-
-Once you near finalization of your project, you'll be in close dialogue with our team about how to price your work. We have a [Project Pricing Model](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/) that guides the decision on the pricing of your collection. 
-
----
-
-## How should I set up a dutch auction? How many price decrements should there be? What should I set for my floor price?
-
-The Art Blocks team will work with you directly to offer advice for price structuring based on market observations.
+Once your application is approved, it takes approximately 6-8 weeks to reach a launch date for your project. You'll work closely with our team to schedule a drop date, which typically will be about 2 weeks after your project is finalized on mainnet. Every Friday, our team announces the following week's projects in the Discord channel, #upcoming-projects.
 
 
----
-
-## What percent of project profits does Art Blocks take?
-
-Art Blocks takes 10% of the total primary sales and 2.5% of secondary sales.
-
----
-
-## What percent of secondary royalty sales do artists receive?
-
-On OpenSea, the most popular secondary marketplace, artists receive 5% of all secondary sales and Art Blocks receives 2.5% of all secondary sales.
-
-On other platforms, artists can set their own secondary percentage on their project for other markets that may recognize that field. For consistency, we recommend setting your secondary market royalty to 5%.
-
----
-
-## How does royalty distribution work?
-
-Royalty distribution varies based on the secondary marketplace. Most secondary marketplaces (Rarible, etc.) will read your royalties from your contract (the secondary market royalty field) and will send the ETH accordingly directly to you.
-
-OpenSea is the exception to this. OpenSea will collect royalties on the secondary sales directly (5%). These royalties are then transferred to Art Blocks and Art Blocks will then manually transfer those royalties to each artist. Royalty distributions will be announced in our artist channel.
-
----
-
-## What is Art Blocks commitment to charitable giving?
-
-To maintain our commitment to charitable giving, we ask artists to consider donating 25% of profits above resting price via Dutch auction to an eligible charity of their choice. If this applies to your works, please determine your eligible charity of choice before mint #0. To whom and how you donate is up to you but you should consider whether the charity or the cause you are donating to qualifies under United States tax laws as a charity/cause that is qualified to receive tax-deductible donations. If you are a single artist, you may use the additional payee field to manage on-chain donations. All revenue may also be routed to a single wallet and donated after your drop. We highly recommend consulting with a tax professional to understand your local tax liability, especially if you plan to personally receive all funds before donating.
-
----
-
-## Where can I find a list of charities that accept crypto donations?
-
-To find a list of charities, you can ask for advice in #artist-general and check the pinned messages for a charity guide. 
-
-If the charity you’d like to donate to is not crypto-friendly, we recommend checking out endaoment.org or CryptoForCharity.io. They both enable on-chain donations to any US-based 501c(3). Endaoment uses a DAF model and has a 1.5% fee; CryptoForCharity sends the gifts on as they're made and is zero fee. This method can also be done fully on-chain, so the donations never touch your personal wallet. They are a 501c(3) that enables on-chain donations to any US-based 501c(3) via a Donor Advised Fund (DAF). This method can also be done fully on-chain, so the donations never touch your personal wallet.
-
----
-
-## How can I donate to charity?
-
-Here are a few donation options:
-
-**1)** On-chain donations through Endaoment.org
-
-Endaoment is a 501c(3) organization that accepts crypto and distributes donations to any US-based 501c(3) charity in good standing with the IRS. Donations through Endaoment are set at the contract level and automatically routed at the time of payment without touching your wallet (and potentially avoiding tax liability).
-
-To use Endaoment, go to Endaoment.org and create a fund. Then, enter ndao.eth in the additional payee field. Once you’ve created the fund, contact Dan (Druid#4611 on Discord) with your fund’s URL and project number. Once your project launches and the money is in your Endaoment Fund, you can send donations in any amount to any charity in the US. Many artists prefer this route so they can support many charities with smaller donations rather than one charity with one large donation. Please note - Endaoment charges 1.5% to receive, convert, and send money to a charity.
-
-**2)** Make a zero-fee on-chain donation with CryptoforCharity.io
-
-CryptoForCharity is a zero-fee platform enabling donations in crypto assets directly to charity. You can support any US-based 501c(3) charity in good standing with the IRS, or donate to any of several cause funds focused on a specific issue.
-
-Donations through CryptoForCharity are set at the contract level and automatically routed at the time of payment without touching your wallet (and potentially avoiding tax liability or the need to account for and deduct the income/donation). Donated funds can also be held for a short time following your drop, if you'd prefer to designate the charity or cause fund you wish to support after the fact, but they cannot be held indefinitely.
-
-Generating a charity or cause fund wallet is straightforward -- simply fill out the form [here](https://www.cryptoforcharity.io/nft-creators). You can also reach out directly to SimonSays#0670 in the AB discord for help.
-
-For a bit more on how it's set up under the hood, [CryptoForCharity put together this tax guidance for NFT creators](https://www.cryptoforcharity.io/nft-creators).  
-
-**3)** Create a second wallet
-
-If you’d like to create a second wallet separate from your personal wallet, you can enter the wallet's address in the additional payee field to collect the total donation amount you intend to donate.
-
-**4)** Receive funds in your primary wallet
-
-If you’d like to receive all funds from your project’s sale in your primary wallet, that’s fine, but please communicate the total donations with Art Blocks and the community. Please be aware that receiving money in your personal wallet may incur tax obligations and reduce the total donation amount.
-
----
-
-## How do I remove charitable giving information from the additional payee field mid-Dutch Auction?
-
-If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier. These fields cannot be blank once the dutch auction has begun.
-
----
-
-## Where can I learn more about best practices for security, including hardware wallets?
-
-Great question! We recommend that all users have a hardware wallet (typically Ledger or Trezor) that you use to interact with MetaMask.
-
-You can learn more about security in the NFT space [here](https://medium.com/the-link-art-blocks/how-to-secure-your-collection-3dca5c073aef) (how to keep your collection safe) and [here](https://medium.com/the-link-art-blocks/avoiding-scams-and-staying-safe-9a6808a4146e) (how to avoid scams).
-
-You can also check out our [After Dinner Mints episode](https://www.youtube.com/watch?v=u8MK99grAfI) dedicated to security!
-
----
-
-## Is there a place I can connect with other artists and chat?
-
-All artists are added to the artist-exclusive #artist-general channel in Discord where you can interact with other Art Blocks artists, share projects, and ask questions. We also encourage artists to participate in our Discord community. In addition, Art Blocks hosts a weekly [Office Hours](https://calendar.google.com/calendar/u/1?cid=Y192a2RxdWluZ3ZsM2EyMmJudWxxZnFkb2sxOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t). This dedicated time is place for artists to chat face-to-face, meet the Art Blocks team, participate in artist development- focused programming, and group critiques. If you're selected for a curated drop, you'll have your own artist channel dedicated to focused discussions on your work. If you're selected for a factory drop, you can chat with artists and collectors in the #factory-projects channel. 
-
----
-
-## When will I know when my drop is scheduled? When will the drop be announced?
-
-Once your application is approved, it takes approximately 5-6 weeks to reach a launch date for your project. You'll work closely with our team to schedule a drop date, which typically will be about 2 weeks after your project is finalized on main net. Every Friday, our team announces the following week's projects in the Discord channel, #upcoming-projects.
-
----
-
-## Can I mint pieces of my own artwork? How many?
+### Can I mint pieces of my own artwork? How many?
 
 All artists on Art Blocks will mint the first piece (mint #0) of the collection for themselves. If you collaborated with other artists, you can each mint one of the first outputs before the project goes live.
 
-If you're dropping in the Playground or Factory and you'd like to mint more pieces of the collection (for gifts or giveaways), reach out to our Artist Liaison, Sarah.
+If you're dropping in the Presents category and you'd like to mint more pieces of the collection (for gifts or giveaways), let us know in your artist DM. If you’d like to mint more than just Mint #0, wee ask that you clearly communicate why you're minting more than one to the community.
 
-However, we ask that you clearly communicate why you're minting more than one to the community.
+## Price Mechanics 
 
----
+### How should I price my artwork?
 
-## How long do I need to wait before releasing a project through Art Blocks again?
+Once you near the finalization of your project, you'll be in close dialogue with our team about how to price your work. We have a [Project Pricing Model](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/) that guides the decision on the pricing of Art Blocks collections. 
 
-When minting on an artist's collection is 100% complete, they may begin the process of screening a new work. Please note, there is a 6 month cool-off period between considerations for Curated projects. 
+### How is project revenue shared?
 
----
+Art Blocks is allotted 10% of the total primary sales and 2.5% of secondary sales. Artists can donate a percentage of sales to a charity of their choice to be distributed on primary and/or secondary sales. Artists will also receive 5% of secondary sales in perpetuity. 
 
-## Will I have access to my testnet shell after I release my project?
+### What percent of secondary royalty sales do artists receive?
 
-Yes, you will. Please note, as of Aug 2, 2022, Art Blocks switched testing networks from Ropsten to Goerli. Ropsten artist-staging data will be preserved in a read-only state to be accessed at https://ropsten-artist-staging.artblocks.io/.
+On OpenSea, the most popular secondary marketplace, artists receive 5% of all secondary sales, and Art Blocks receives 2.5% of all secondary sales.
 
-The website for AB core will remain the same: You will still visit https://artist-staging.artblocks.io/, but you will be asked to connect with the Goerli Test Network rather than the Ropsten Test Network.
+On other platforms, artists can set their own secondary percentage on their project for other markets that may recognize that field. For consistency, we recommend setting your default secondary market royalty to 5%.
 
-If you previously had a testnet shell on the Ropsten network, you may still access your project shell using https://ropsten-artist-staging.artblocks.io/ as a frozen read-only set of data. If you are a returning artist, please send Sarah ([!badge Discord: sross#6444]) or ([!badge Discord: madpinney#1183]) a DM to set up a Goerli project shell.
+### How does royalty distribution work?
 
----
+Royalty distribution varies based on the secondary marketplace. Most secondary marketplaces (Rarible,Archipelago, Looksrare etc.) will read your royalties from your contract (the secondary market royalty field) and will send the ETH accordingly directly to the wallet associated with the project.
 
-## What is the process upon returning to Art Blocks as a Factory artist?
+OpenSea is the exception to this. OpenSea will collect royalties on the secondary sales directly (5%). These royalties are then transferred to Art Blocks and Art Blocks will then manually transfer those royalties to each artist. Royalty distributions will be announced in our artist channel.
 
-After your project sells out, you will be eligible to submit your next project to Art Blocks. You will continue to have access to your testnet shell during this time.  new projects can be submitted for review either via a working prototype or via your existing testnet shell, which you will continue to have edit access to. All projects (including playground) will be screened before being accepted to Art Blocks. To submit a new project for review, please DM Sarah ([!badge Discord: sross#6444]), our Artist Liaison or Mad Pinney ([!badge Discord: madpinney#1183]), our Artistic Coordinator. 
-
-From there, you will re-enter the screening process. The first screening is conducted by a screening committee made up of Art Blocks' staff and generative art experts. This review focuses determines which projects will be released on the platform and addresses variety in mints, and the degree to which a project explores new territory technically, visually, and conceptually. 
-
-If the work is accepted to be released on Art Blocks you will then move through the same onboarding process as your previous project, which is also outlined [here](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/#5-feedback-check).
-
----
-
-## How do I know the application period to send my first work?
-
-Applications will remain open indefinitely. To learn more about the application process visit: artblocks.io/learn
-
----
-
-## What is the process for submitting a first work?
-
-You may apply using [this application form](https://mpphuqcai14.typeform.com/apply-ab-artist). We expect that artists have a creative history as well as the ability to provide an original generative script. We process applications in chronological order, prioritizing those with working prototypes. To learn more about the application process please visit artblocks.io/learn
-
----
-
-## What is the MinterSuite and how does it work? 
-
-The MinterSuite is an update to our broader smart-contract architecture at Art Blocks that allows artists to set specific minting contracts on a per-project basis.
-
-The MinterSuite currently includes the following minter options, which will continue to be expanded over time:
-
-* Dutch Auction - Linear Price Decrease
-    * Linear Dutch Auctions specify starting price, starting time, ending time, and ending price, and the price will linearly decrease over that time for each block
-* Dutch Auction - Exponential Price Decrease 
-    * Exponential Dutch Auctions are when the artist decides the half-life for each price drop
-* Set Price - Custom ERC20
-    *  Fixed price with a custom token
-* Set Price - ETH
-    *  Fixed price in ETH 
-
-The MinterSuite includes support for a V1 series of the 4 initially introduced minters, to improve the experience for minting with smart contract wallets (e.g. Gnosis and Argent) and slightly reduce the gas-cost of minting in the process.
-
-To find out how to set your project price using the MinterSuite visit [this page](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter). 
-
-To learn how to imitate your MinterSuite choice, use our Checklist before launching your project. 
-
----
-
-## Do you have access to historical data of other Art Blocks sales? 
+### Do you have access to historical data of other Art Blocks sales? 
 
 There are a few helpful tools for this:
  1. https://artacle.io/ 
@@ -345,4 +194,86 @@ This resource has most Art Blocks projects and will show the distribution of sal
 
 2. https://rarity.guide/ 
 
-This focuses on the rarity of mints per project, the time between mint #2, and the rate of sales. 
+This focuses on the rarity of mints per project, the time between mint #2, and the rate of sales.
+
+## Charitable Giving 
+
+### What is Art Blocks' commitment to charitable giving?
+
+To maintain our commitment to charitable giving, we ask artists to consider donating 25% of sales above the resting price via Dutch auction to a charity of their choice. If you elect to participate in this way, please determine your chosen charity, and confirm its eligibility, before mint #0. To whom and how you donate is entirely up to you. Art Blocks does not require you to donate any proceeds in order to engage with our platform. If you do elect to donate to a charity, it is advisable to consider whether the charity which you choose to support qualifies under United States tax law to receive tax-deductible donations. If your project designates only one primary wallet, you may use the additional payee field to manage on-chain donations. All revenue may also be routed to a single wallet and donated after your drop. We encourage you to consult with a tax professional to understand any potential tax implications of your planned giving, as these can be widely variable.
+
+### Where can I find a list of charities that accept crypto donations?
+
+To find a list of charities, you can ask for advice in #artist-general and check the pinned messages for a charity guide. 
+
+If the charity you’d like to donate to is not set up to receive crypto donations, we recommend checking out endaoment.org or CryptoForCharity.io. They both enable on-chain donations to any US-based 501c(3). Endaoment uses a Donor Advised Fund (DAF) model and has a 1.5% fee; CryptoForCharity sends the gifts on as they're made and is zero fee. This method can also be done fully on-chain, so the donations go directly to the charity, as opposed to going through the project’s designated primary wallet. Please note: different methods of distribution can have different tax implications, and Art Blocks advises every artist to consult with a tax professional when making these plans.. 
+
+### How can I donate to charity?
+
+Here are a few donation options:
+
+**1) On-chain donations through Endaoment.org**
+
+Endaoment is a 501c(3) organization that accepts crypto and distributes donations to any qualified US-based 501c(3) charity. Donations through Endaoment are set at the contract level and automatically routed at the time of payment.
+To use Endaoment, go to Endaoment.org and create a fund. Then, enter ` 0x9D5025B327E6B863E5050141C987d988c07fd8B` or  `ndao.eth` in the additional payee field. Once you’ve created the fund, contact us in your [M_] artist DM with your fund’s URL and project number. Once your project launches and the money is in your Endaoment Fund, you can send donations to any qualified charity in the United States. Many artists prefer this route so they can support multiple charities with donations, rather than just one charity with a single donation. *Please note that Endaoment charges 1.5% to receive, convert, and send money to a charity.
+
+You can also find a tutorial of how to use Endaoment [here](https://www.loom.com/share/822350f1a1c84f25b253cc9e4d2cee38).
+
+**2) Make a zero-fee on-chain donation with CryptoforCharity.io**
+
+CryptoForCharity is a zero-fee platform that enables donations in crypto assets directly to charity. Any qualified US-based 501c(3) charity  and several cause funds focused on a specific issue.
+
+Donations through CryptoForCharity are set at the contract level and automatically routed at the time of payment.
+
+Generating a charity or cause fund wallet is straightforward -- fill out the form [here](https://www.cryptoforcharity.io/nft-creators). You can also contact SimonSays#0670 in the Art Blocks discord for help.
+
+For a bit more on how this functions, [CryptoForCharity put together this tax guidance for NFT creators](https://www.cryptoforcharity.io/nft-creators).  
+
+**3) Create a second wallet**
+
+If you’d like to create an additional wallet separate from the primary wallet designated for the project, you can enter that wallet's address in the “Additional Payee” field to collect the funds you intend to donate.
+
+**4) Receive funds in your primary wallet**
+
+If you’d like to receive all funds from your project’s sale in your primary wallet, but still intend to participate in charitable giving, we recommend you communicate the total donations with Art Blocks and the community. Please be aware that each of the different methods of distributing funds can have its own tax implications, and Art Blocks recommends you consult a tax professional when making these plans. 
+
+### How do I adjust charitable giving information from the additional payee field mid-Dutch auction?
+
+If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below resting price, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to the project’s primary wallet address and adjust the additional payee percentage to 0% before submitting the next price tier. These fields cannot be blank once the Dutch auction has begun.
+
+## Security 
+
+### Where can I learn more about best practices for security, including hardware wallets?
+
+We recommend that all users have a hardware wallet that they use to interact with MetaMask.
+
+You can learn more about security in the NFT space [here](https://medium.com/the-link-art-blocks/how-to-secure-your-collection-3dca5c073aef) (how to keep your collection safe) and [here](https://medium.com/the-link-art-blocks/avoiding-scams-and-staying-safe-9a6808a4146e) (how to avoid scams).
+
+You can also check out our [After Dinner Mints episode](https://www.youtube.com/watch?v=u8MK99grAfI) dedicated to security!
+
+## Artist Community 
+
+### Is there a place I can connect with other artists and chat?
+
+All artists are added to the artist-exclusive #artist-general channel in Discord, where you can interact with other Art Blocks artists, share projects, and ask questions. We encourage artists to participate in our Discord community. In addition, Art Blocks hosts a weekly [Office Hours](https://calendar.google.com/calendar/u/1?cid=Y192a2RxdWluZ3ZsM2EyMmJudWxxZnFkb2sxOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t). This dedicated time is the place for artists to chat synchronously, meet the Art Blocks team, participate in artist development-focused programming, and group critiques. If your project has been chosen for an Art Blocks Curated release, we will establish a dedicated artist’s  Discord channel for you  to centralize discussions of that project. For all artists releasing on Art Blocks, , the #block-talk channel is a great place to interact with fellow artists, collectors, and community members. 
+
+## Post-Drop 
+
+### How long do I need to wait before releasing a project through Art Blocks again?
+
+When an artist’s project is 100% minted (i.e. “complete”), the artist is eligible to submit a new project for screening. Please note: there is a six month “cool-off” period after a Curated project is complete before the artist may submit another project for consideration as Curated.. 
+
+### Will I have access to my testnet shell after I release my project?
+
+Yes. Please note, as of Aug 2, 2022, Art Blocks switched testing networks from Ropsten to Goerli.
+
+If you previously had a testnet shell on the Ropsten network, you may still access your project shell using https://ropsten-artist-staging.artblocks.io/ as a read-only set of data. If you are a returning artist, please write in your artist DM, or in #artist-general. 
+
+### What is the process upon returning to Art Blocks as a non-Curated artist?
+
+After your project is completed, you will be eligible to submit a new project for screening consideration. You will continue to have access to your testnet shell. New projects can be submitted for review either via a working prototype or via your existing testnet shell, to which you will continue to have access. To submit a new project for screening by sending a message to your Artist DM. 
+
+The first screening determines if a work is accepted onto the platform. A committee made up of Art Blocks' staff and generative art experts conducts this screening. This review focuses on overall aesthetics, mint variety, and the degree to which a project explores new territory technically, visually, and conceptually. Returning artists are still subject to the highly-selective screening process.
+
+If the work is accepted to be released on Art Blocks you will then move through the same onboarding process as your previous project, which is also outlined [here](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/#5-feedback-check).
+
