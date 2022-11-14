@@ -60,7 +60,7 @@ If you are using the Dutch auction - Exponential Price Decrease or Dutch auction
 * After your project has been scheduled, you are free to announce and promote your project on your social media.
 
 ## Goerli
-Once scheduled, you will have the option to make your Goerlishell public to collectors. To help collectors easily differentiate Goerli shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Goerli public:
+Once scheduled, you will have the option to make your Goerli shell public to collectors. To help collectors easily differentiate Goerli shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Goerli public:
 1. Add [Sample Outputs] as a prefix to your project title. The formatting of your Goerli title will be "[Sample Outputs] Project Name"
 2. Adjust your price information in Goerli to be the same as on mainnet
 3. Adjust your max invocations in Goerli to be the same as on mainnet
