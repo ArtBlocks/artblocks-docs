@@ -48,6 +48,8 @@ We will configure your smart contract before transferring ownership to Ethereum 
 
 Art Blocks will integrate your contracts with our rendering infrastructure and provide access to our staging website for you to perform project onboarding and configuration via the Art Blocks site on the test network.
 
+Contracts are deployed twice per month and typically take 1 week to complete and transfer. 
+
 [!badge Timeline: 1 week]
 
 ## 7. Integration with partner’s site
