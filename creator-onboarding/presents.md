@@ -45,6 +45,10 @@ To maintain our commitment to charitable giving, we ask artists to consider dona
 2. Once your project information has been uploaded, **please confirm in your artist DM that you're ready for mint #0**. The Art Blocks Team will look over your project shell and then give you the go-ahead to mint #0. 
 3. Mint #0 must occur before your release can be scheduled.
 
+### Payout Details 
+
+Be sure that you've input information in all field forms. If you do not have an additional payee for primary or secondary sales, you may put `0x000000000000000` in the field and 0% for the payee percentage. 
+
 ## Initiating your MinterSuite choice
 
 Note: Before Mint #0, choose your minter from the suite. If you are using a fixed price, your project will be unpaused under the Danger tab right before your project’s release. Once a project using Set Price - ETH or Set Price - Custom ERC20 is unpaused, it will be live for minting. If your project will be sold via Dutch auction, please set the price to your DA’s resting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option. 
