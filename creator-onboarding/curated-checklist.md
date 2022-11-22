@@ -52,6 +52,10 @@ Note: Before Mint #0, choose your minter from the suite. If you are using a fixe
 
 If you are using the Dutch auction - Exponential Price Decrease or Dutch auction - Linear Price Decrease, your project will be unpaused prior to your auction’s start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free. 
 
+### Payout Details 
+
+Be sure that you've input information in all field forms. If you do not have an additional payee for primary or secondary sales, you may put `0x000000000000000` in the field and 0% for the payee percentage. 
+
 ## Scheduling
 
 * Once mint #0 and the features script are in place, Art Blocks will work with you to schedule/announce your curated release.
