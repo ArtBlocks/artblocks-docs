@@ -1,13 +1,13 @@
 ---
 order: -50
-description: Testnet Checklist
+description: Staging Checklist
 ---
 
-# Checklist for Projects
+# Staging Shell Checklist
 
 !!!danger
 For Accepted Artists: Ask questions in the Discord DM titled [G_] the Art Team provided to you
-For Applying Artists: Ask questions in  #artist-application-support on Art Blocks’ Discord Server 
+For Applying Artists: Ask questions in  #artist-applications on Art Blocks’ Discord Server 
 !!!
 
 ## Connect Your Wallet 
