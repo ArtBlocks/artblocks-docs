@@ -4,7 +4,7 @@ description: Project Pricing: Dutch Auction Settings
 ---
 # Project Pricing: Dutch Auction Settings 
 
-This resource intends for artists to understand better exponential Dutch auction settings. Dutch auctions are the recommended model for project economics. The project pricing model has been updated to allow for more price discovery based on market conditions. 
+This resource intends for artists to better understand exponential Dutch auction settings. Dutch auctions are the recommended model for project economics. The project pricing model has been updated to allow for more price discovery based on market conditions. 
 
 Dutch Auction settings are based on the project collection type (Curated vs. Presents) and whether the project is the first release by the artist. For exponential Dutch auctions, artists specify the starting price, ending price, and half-life for price drops. Each collection is assigned a recommended starting value and maximum resting price guided by the collection size and series category. The recommended starting price is the value you should use for the start of the auction. The maximum resting price refers to the base price of an auction; this is the final price tier of the auction sequence.
 
