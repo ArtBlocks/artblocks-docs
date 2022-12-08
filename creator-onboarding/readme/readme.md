@@ -134,7 +134,7 @@ R.random_dec()      // Random decimal [0-1)
 R.random_num(0, 10) // Random decimal [0-10)
 R.random_int(0, 10) // Random integer [0-10]
 R.random_bool(0.5)  // Random boolean with probability 0.5
-R.random_choice([1, 2, 3])  // Random choice from a given list. Nice for random from a discreet set like a color palette
+R.random_choice([1, 2, 3])  // Random choice from a given list. Great for getting a random color from a discrete color palette
 ```
 
 Every time one of these functions is called, `random_dec()` will also be called somewhere in the stack, applying the deterministic arithmetic to the seed and returning a new random number.
