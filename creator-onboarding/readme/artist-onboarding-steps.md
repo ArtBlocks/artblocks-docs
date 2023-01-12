@@ -8,7 +8,7 @@ Below, you'll find an overview of each step of our onboarding process, as well a
 
 For the time being, applications will remain open. You may apply using this [link](https://www.artblocks.io/apply). We expect that artists have a creative history and the ability to provide an original generative script. If you plan to work collaboratively, please provide complete information for all contributors. All submitted work must be original. We do not intend to release projects that use licensed, purchased, or recycled content. Please make sure you’re bringing your unique project to Art Blocks. If you’ve applied after October 28, 2022, you’ll be given a staging shell to deploy your script on testnet.
 
-To learn more about the application process please visit [apply.artblocks.io](apply.artblocks.io).
+To learn more about the application process please visit [artblocks.io/apply](artblocks.io/apply).
 
 !!!info Timeline
 Due to high volume, applications may take up to several months to process. We appreciate your patience every step of the way. Please understand that Art Blocks operates using a mentorship model, providing hands-on assistance and guidance while managing hundreds of artists in our pipeline.
