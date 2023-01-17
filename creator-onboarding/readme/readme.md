@@ -208,6 +208,33 @@ tokenData = {
 
 And then play with the browser window size, and refresh to check that your art looks the same at any resolution.
 
+### Shaders
+
+If you are using shaders, you must include the shader code in the script itself (not in a separate file). A typical vertex & fragment shader might be defined like the following:
+
+```js
+const vertexShader = `
+  // Vertex shader code
+  attribute vec2 aTexCoord;
+  ...
+`
+const fragmentShader = `
+  // Fragment shader code
+  varying vec2 vTexCoord;
+  ...
+`
+```
+These can then be used by the library you are using to render your art. For example, if using p5js:
+
+```js
+let shaderProgram;
+function setup() {
+  createCanvas(100, 100, WEBGL);
+  shaderProgram = createShader(vertexShader, fragmentShader);
+  shader(shaderProgram);
+}
+```
+
 ### Cost
 
 Storing code on Ethereum is expensive! Taking average gas prices, you can generally expect to pay \~$10 for each full line of code your script requires. With that in mind - keep things efficient, maximize code reuse with functions, remove comments, and minify your finished code.
