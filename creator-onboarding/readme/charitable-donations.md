@@ -35,12 +35,6 @@ Generating a charity or cause fund wallet is straightforward -- simply fill out 
 
 For a bit more on how it's set up under the hood, [CryptoForCharity put together this tax guidance for NFT creators](https://www.cryptoforcharity.io/nft-creators).  
 
-
-**4)** **Receive funds in your primary wallet**
-
-If you’d like to receive all funds from your project’s sale in your primary wallet, that’s fine, but please communicate the total donations with Art Blocks and the community. Please be aware that receiving money in your personal wallet may incur tax obligations and reduce the total donation amount.
-
-
 **3)** **Create a second wallet**
 
 If you’d like to create a second wallet separate from your personal wallet, you can enter the wallet's address in the additional payee field to collect the total donation amount you intend to donate. If using the additional payee field for donations, this field can be cleared before lowering to resting price.
