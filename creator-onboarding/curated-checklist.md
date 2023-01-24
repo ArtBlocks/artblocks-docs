@@ -49,19 +49,18 @@ Include the wallet addresses for primary and secondary sales to be distributed. 
 
 
 ## Mint #0
-1. **Before** minting mint #0, ensure that your "additional payee wallet" has been set for the same configuration that you will use it for in your project release. E.g., if you are using the "additional payee wallet" field to donate to charity at the time of mint, you must set this before minting your #0. This is done to ensure that this full functionality is tested end-to-end as part of the mint #0 process, and that there are no issues with the wallet selected for the additional payee. **Please note: Art Blocks does not currently support sending primary sales payments into a multi-sig contract and there are known issues when attempting to do so. While we plan to update our minting smart contracts in the near future to resolve this, multi-sig wallets should not be used for this purpose at this time.**
-2. Once your project information has been uploaded, **please confirm in your artist DM that you're ready for mint #0**. The Art Blocks Team will look over your project shell and then give you the go-ahead to mint #0. 
-3. Mint #0 must occur before your release can be scheduled.
+1. **Note**: Mint #0 will be completed with the Set Price minter. Set the minter to Set Price ETH with the set price as your Dutch Auction’s base price for Mint #0
+2. **Before** minting Mint #0, ensure that your "additional payee wallet" has been set for the same configuration that you will use it for in your project release. E.g., if you are using the "additional payee wallet" field to donate to charity at the time of mint, you must set this before minting your #0. This is done to ensure that this full functionality is tested end-to-end as part of the mint #0 process, and that there are no issues with the wallet selected for the additional payee. **Please note: Art Blocks does not currently support sending primary sales payments into a multi-sig contract and there are known issues when attempting to do so. While we plan to update our minting smart contracts in the near future to resolve this, multi-sig wallets should not be used for this purpose at this time.**
+3. Once your project information has been uploaded, **please confirm in your artist DM that you're ready for mint #0**. The Art Blocks Team will look over your project shell and then give you the go-ahead to mint #0. 
+4. Mint #0 must occur before your release can be scheduled.
 
 ### Initiating your MinterSuite choice
-
-Note: Before Mint #0, choose your minter from the suite. If you are using a fixed price, your project will be unpaused under the Danger tab right before your project’s release. Once a project using Set Price - ETH or Set Price - Custom ERC20 is unpaused, it will be live for minting. If your project will be sold via Dutch auction, please set the price to your auction’sresting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option. 
 
 If you are using the Dutch auction - Exponential Price Decrease or Dutch auction - Linear Price Decrease, your project will be unpaused prior to your auction’s start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free. 
 
 ### Payout Details 
 
-Be sure that you've input information in all field forms. If you do not have an additional payee for primary or secondary sales, you may put `0x000000000000000` in the field and 0% for the payee percentage. 
+Be sure that you've input information in all field forms. If you do not have an additional payee for primary or secondary sales, you may put `0x0000000000000000000000000000000000000000` in the field and 0% for the payee percentage. 
 
 ## Scheduling
 
@@ -69,12 +68,6 @@ Be sure that you've input information in all field forms. If you do not have an 
 * Curated releases will include an artist feature with a Q\&A to be gathered following scheduling.
 * Curated artists will also have an artist channel created in Discord. To pin messages in your artist channel, you must enable two-factor authentication within User Settings > My Account in Discord.
 * After your project has been scheduled, you are free to announce and promote your project on your social media.
-
-## Goerli
-Once scheduled, you will have the option to make your Goerli shell public to collectors. To help collectors easily differentiate Goerli shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Goerli public:
-1. Add [Sample Outputs] as a prefix to your project title. The formatting of your Goerli title will be "[Sample Outputs] Project Name"
-2. Adjust your price information in Goerli to be the same as on mainnet
-3. Adjust your max invocations in Goerli to be the same as on mainnet
 
 ## Unpausing
 
@@ -88,7 +81,7 @@ Once scheduled, you will have the option to make your Goerli shell public to col
 
 ## Finishing Steps
 
-1. Once your project is completely sold out, you may reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting. You're also more than happy to keep them up. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0%
+1. Once your project is completely sold out, you may reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0. In order to successfully complete this change, you will need to input information in all fields in the Payout tab. 
 2. You may also remove any language from your Project Description that was specifically included to describe sales mechanics.
 3. Report final charity donation totals in your Mainnet DM
 4. Please fill out the appropriate form to add bot-support to your Discord channel for your completed project: https://github.com/ArtBlocks/artbot/issues/new/choose.
