@@ -328,7 +328,7 @@ Once you have a working minified version of your project, a recommended way of s
 ```
 split -b 10k filename.js new_filename
 ```
-That will create an evenly distributed set of files with the splitted code, automatically. The maximum size you can upload to Artblocks per transaction is around 10.5KB (you can center that as -b 10500 in the split tool, since it does not take decimals)
+That will create an evenly distributed set of files with the splitted code, automatically. The maximum size you can upload to Artblocks per transaction is around 24KB (you can center that as -b 23900 in the split tool, since it does not take decimals)
 
 if you are on Windows, you can use the same command if you have git bash, or a tool like [7-Zip](https://www.7-zip.org/), which allows you to split without compression.
 
