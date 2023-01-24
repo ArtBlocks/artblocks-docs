@@ -33,7 +33,8 @@ Add tags (add below)
 
 ## Economics
 
-1. Consider the overall economics of your project for a successful release. The Art Blocks team will provide guidance. 
+1. Review the Project Pricing Model for Dutch auctions [here](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/#project-pricing-dutch-auction-settings)
+2. Consider the overall economics of your project for a successful release.
 3. Artists can only have one active project at a time.
 4. As a note, we require artists to take a 6 month cooldown period between considerations for Curated projects. The cooldown period begins when your project sells out (i.e. when minting is 100% complete). 
 
