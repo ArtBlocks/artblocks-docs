@@ -8,6 +8,7 @@ title: Subgraph Entities
 - [`Project`](#project)
 - [`ProjectScript`](#projectscript)
 - [`ProposedArtistAddressesAndSplit`](#proposedartistaddressesandsplit)
+- [`EngineRegistry`](#engineregistry)
 - [`Contract`](#contract)
 - [`Whitelisting`](#whitelisting)
 - [`Account`](#account)
@@ -105,6 +106,14 @@ Description: get specific details on the pay flow for a specified artist
 | project                                 | Project! | Project associated with this proposed artist addresses and splits |
 | createdAt                               | BigInt!  | When address initiated                                            |
 
+# EngineRegistry
+Description: Get specific details on the Art Blocks Engine registry. At this time, this is used largely for indexing purposes of V3_Engine* contracts only.
+| Field                               | Type                           | Description                                                                                                                     |
+| ----------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| id | ID! | Unique identifier made up of the Engine Registry's contract address |
+| registeredContracts | [Contract!] | Core contracts that are registered on this Engine Registry, when this is most recent Engine Registry to add the contract |
+
+
 # Contract
 
 Description: get specific information about contracts
@@ -117,6 +126,10 @@ Description: get specific information about contracts
 | renderProviderPercentage            | BigInt!                        | Percentage of primary sales allocated to the platform                                                                           |
 | renderProviderSecondarySalesAddress | Bytes                          | Address that receives secondary sales platform royalties (null for pre-V3 contracts, check Royalty Registry)                    |
 | renderProviderSecondarySalesBPS     | BigInt                         | Basis points of secondary sales allocated to the platform (null for pre-V3 contracts, check Royalty Registry)                   |
+| enginePlatformProviderAddress | Bytes | Address that receives primary sales platform fees, only for V3_Engine contracts |
+| enginePlatformProviderPercentage | BigInt | Percentage of primary sales allocated to the platform, only for V3_Engine contracts | 
+| enginePlatformProviderSecondarySalesAddress | Bytes | Address that receives secondary sales platform royalties, only for V3_Engine contracts |
+| enginePlatformProviderSecondarySalesBPS | BigInt | Basis points of secondary sales allocated to the platform, only for V3_Engine contracts |
 | mintWhitelisted                     | [Bytes!]!                      | List of contracts that are allowed to mint                                                                                      |
 | randomizerContract                  | Bytes                          | Randomizer contract used to generate token hashes                                                                               |
 | curationRegistry                    | Bytes                          | Curation registry contract address                                                                                              |
@@ -131,6 +144,8 @@ Description: get specific information about contracts
 | preferredIPFSGateway                | String                         | The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave) |
 | preferredArweaveGateway             | String                         | The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave) |
 | newProjectsForbidden                | Boolean!                       | New projects forbidden (can only be true on V3+ contracts)                                                                      |
+| autoApproveArtistSplitProposals | Boolean | Automatically approve all artist split proposals (used on V3 Engine contracts) |
+| registeredOn | EngineRegistry | Latest engine registry that this contract is registered with, if any (used for indexing purposes) |
 
 # Whitelisting
 
