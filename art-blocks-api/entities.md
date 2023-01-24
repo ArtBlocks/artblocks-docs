@@ -22,6 +22,11 @@ title: Subgraph Entities
 - [`SaleLookupTable`](#salelookuptable)
 - [`Transfer`](#transfer)
 - [`ProjectExternalAssetDependency`](#projectexternalassetdependency)
+- [`Dependency`](#dependency)
+- [`DependencyRegistry`](#dependencyregistry)
+- [`DependencyAdditionalCDN`](#dependencyadditionalcdn)
+- [`DependencyAdditionalRepository`](#dependencyadditionalrepository)
+- [`DependencyScript`](#dependencyscript)
 
 # Project
 
@@ -118,34 +123,34 @@ Description: Get specific details on the Art Blocks Engine registry. At this tim
 
 Description: get specific information about contracts
 
-| Field                               | Type                           | Description                                                                                                                     |
-| ----------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| id                                  | ID!                            | Unique identifier made up of contract address                                                                                   |
-| type                                | CoreType!                      | Core contract type                                                                                                              |
-| renderProviderAddress               | Bytes!                         | Address that receives primary sales platform fees                                                                               |
-| renderProviderPercentage            | BigInt!                        | Percentage of primary sales allocated to the platform                                                                           |
-| renderProviderSecondarySalesAddress | Bytes                          | Address that receives secondary sales platform royalties (null for pre-V3 contracts, check Royalty Registry)                    |
-| renderProviderSecondarySalesBPS     | BigInt                         | Basis points of secondary sales allocated to the platform (null for pre-V3 contracts, check Royalty Registry)                   |
-| enginePlatformProviderAddress | Bytes | Address that receives primary sales platform fees, only for V3_Engine contracts |
-| enginePlatformProviderPercentage | BigInt | Percentage of primary sales allocated to the platform, only for V3_Engine contracts | 
-| enginePlatformProviderSecondarySalesAddress | Bytes | Address that receives secondary sales platform royalties, only for V3_Engine contracts |
-| enginePlatformProviderSecondarySalesBPS | BigInt | Basis points of secondary sales allocated to the platform, only for V3_Engine contracts |
-| mintWhitelisted                     | [Bytes!]!                      | List of contracts that are allowed to mint                                                                                      |
-| randomizerContract                  | Bytes                          | Randomizer contract used to generate token hashes                                                                               |
-| curationRegistry                    | Bytes                          | Curation registry contract address                                                                                              |
-| dependencyRegistry                  | Bytes                          | Dependency registry contract address                                                                                            |
-| nextProjectId                       | BigInt!                        | Project ID listed on the contract                                                                                               |
-| projects                            | [Project!](#project)           | List of projects on the contract                                                                                                |
-| tokens                              | [Token!](#token)               | List of tokens on the contract                                                                                                  |
-| whitelisted                         | [Whitelisting!](#whitelisting) | Accounts whitelisted on the contract                                                                                            |
-| createdAt                           | BigInt!                        | When contract initiated                                                                                                         |
-| updatedAt                           | BigInt!                        | When contract updated                                                                                                           |
-| minterFilter                        | MinterFilter                   | Associated minter filter (if applicable)                                                                                        |
-| preferredIPFSGateway                | String                         | The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave) |
-| preferredArweaveGateway             | String                         | The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave) |
-| newProjectsForbidden                | Boolean!                       | New projects forbidden (can only be true on V3+ contracts)                                                                      |
-| autoApproveArtistSplitProposals | Boolean | Automatically approve all artist split proposals (used on V3 Engine contracts) |
-| registeredOn | EngineRegistry | Latest engine registry that this contract is registered with, if any (used for indexing purposes) |
+| Field                                       | Type                           | Description                                                                                                                     |
+| ------------------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| id                                          | ID!                            | Unique identifier made up of contract address                                                                                   |
+| type                                        | CoreType!                      | Core contract type                                                                                                              |
+| renderProviderAddress                       | Bytes!                         | Address that receives primary sales platform fees                                                                               |
+| renderProviderPercentage                    | BigInt!                        | Percentage of primary sales allocated to the platform                                                                           |
+| renderProviderSecondarySalesAddress         | Bytes                          | Address that receives secondary sales platform royalties (null for pre-V3 contracts, check Royalty Registry)                    |
+| renderProviderSecondarySalesBPS             | BigInt                         | Basis points of secondary sales allocated to the platform (null for pre-V3 contracts, check Royalty Registry)                   |
+| enginePlatformProviderAddress               | Bytes                          | Address that receives primary sales platform fees, only for V3_Engine contracts                                                 |
+| enginePlatformProviderPercentage            | BigInt                         | Percentage of primary sales allocated to the platform, only for V3_Engine contracts                                             |
+| enginePlatformProviderSecondarySalesAddress | Bytes                          | Address that receives secondary sales platform royalties, only for V3_Engine contracts                                          |
+| enginePlatformProviderSecondarySalesBPS     | BigInt                         | Basis points of secondary sales allocated to the platform, only for V3_Engine contracts                                         |
+| mintWhitelisted                             | [Bytes!]!                      | List of contracts that are allowed to mint                                                                                      |
+| randomizerContract                          | Bytes                          | Randomizer contract used to generate token hashes                                                                               |
+| curationRegistry                            | Bytes                          | Curation registry contract address                                                                                              |
+| dependencyRegistry                          | Bytes                          | Dependency registry contract address                                                                                            |
+| nextProjectId                               | BigInt!                        | Project ID listed on the contract                                                                                               |
+| projects                                    | [Project!](#project)           | List of projects on the contract                                                                                                |
+| tokens                                      | [Token!](#token)               | List of tokens on the contract                                                                                                  |
+| whitelisted                                 | [Whitelisting!](#whitelisting) | Accounts whitelisted on the contract                                                                                            |
+| createdAt                                   | BigInt!                        | When contract initiated                                                                                                         |
+| updatedAt                                   | BigInt!                        | When contract updated                                                                                                           |
+| minterFilter                                | MinterFilter                   | Associated minter filter (if applicable)                                                                                        |
+| preferredIPFSGateway                        | String                         | The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave) |
+| preferredArweaveGateway                     | String                         | The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave) |
+| newProjectsForbidden                        | Boolean!                       | New projects forbidden (can only be true on V3+ contracts)                                                                      |
+| autoApproveArtistSplitProposals             | Boolean                        | Automatically approve all artist split proposals (used on V3 Engine contracts)                                                  |
+| registeredOn                                | EngineRegistry                 | Latest engine registry that this contract is registered with, if any (used for indexing purposes)                               |
 
 # Whitelisting
 
@@ -318,3 +323,70 @@ Description: get info about projects external asset dependency
 | dependencyType | ProjectExternalAssetDependencyType! | The dependency type                          |
 | cid            | String!                             | The dependency cid                           |
 | index          | BigInt!                             | The dependency index                         |
+
+# Dependency
+
+Description: information about registered dependency (e.g. p5js@1.0.0)
+
+| Field                     | Type                                                                    | Description                                                                                         |
+| ------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| id                        | ID!                                                                     | Unique identifier made up of dependency name and version separated by an @ symbol (e.g. p5js@1.0.0) |
+| preferredCDN              | String!                                                                 | Preffered CDN for this dependency                                                                   |
+| additionalCDNs            | [\[DependencyAdditionalCDN!\]!](#dependencyadditionalcdn)               | Additional CDNs for this dependency                                                                 |
+| additionalCDNCount        | BigInt!                                                                 | Number of additional CDNs for this dependency                                                       |
+| preferredRepository       | String!                                                                 | Preffered repository for this dependency                                                            |
+| additionalRepositoryCount | BigInt!                                                                 | Additional repositories for this dependency                                                         |
+| additionalRepositories    | [\[DependencyAdditionalRepository!\]!](#dependencyadditionalrepository) | Number of additional repositories for this dependency                                               |
+| scripts                   | [\[DependencyScript!\]!](#dependencyscript)                             | List of on-chain scripts that for this dependency                                                   |
+| scriptCount               | BigInt!                                                                 | Number of on-chain scripts for this dependency                                                      |
+| script                    | String                                                                  | Concatenated string of all scripts for this dependency                                              |
+| referenceWebsite          | String!                                                                 | Reference website for this dependency (e.g. https://p5js.org)                                       |
+| dependencyRegistry        | DependencyRegistry!                                                     | Depenency registry contract that this dependency is registered on                                   |
+| updatedAt                 | BigInt!                                                                 | Timestamp of last update                                                                            |
+
+# DependencyRegistry
+
+Description: information about a dependency registry contract
+
+| Field                  | Type                           | Description                                                           |
+| ---------------------- | ------------------------------ | --------------------------------------------------------------------- |
+| id                     | Bytes!                         | Unique identifier made up of dependency registry contract address     |
+| supportedCoreContracts | [\[Contract!\]!](#contract)    | Core contracts that this registry can provide dependeny overrides for |
+| dependencies           | [\[Dependency!\]](#dependency) | List of dependencies that are registered on this registry contract    |
+| owner                  | Bytes!                         | Current owner of this contract                                        |
+| updatedAt              | BigInt!                        | Timestamp of last update                                              |
+
+# DependencyAdditionalCDN
+
+Description: information about an additional CDN for a dependency
+
+| Field      | Type                       | Description                                          |     |
+| ---------- | -------------------------- | ---------------------------------------------------- | --- |
+| id         | ID!                        | Unique identifier made up of dependency id and index |     |
+| dependency | [Dependency!](#dependency) | Dependency this additional CDN belongs to            |     |
+| cdn        | String!                    | URL of the CDN                                       |     |
+| index      | BigInt!                    | Index of this additional CDN                         |     |
+
+# DependencyAdditionalRepository
+
+Description: information about an additional repository for a dependency
+
+
+| Field      | Type                       | Description                                          |
+| ---------- | -------------------------- | ---------------------------------------------------- |
+| id         | ID!                        | Unique identifier made up of dependency id and index |
+| dependency | [Dependency!](#dependency) | Dependency this additional repository belongs to     |
+| repository | String!                    | URL of the repository                                |
+| index      | BigInt!                    | Index of this additional repository                  |
+
+# DependencyScript
+
+Description: information about a script for a dependency
+
+| Field      | Type                       | Description                                              |
+| ---------- | -------------------------- | -------------------------------------------------------- |
+| id         | ID!                        | Unique identifier made up of dependency id and index     |
+| dependency | [Dependency!](#dependency) | Dependency this script belongs to                        |
+| index      | BigInt!                    | Index of this script                                     |
+| script     | String!                    | Contents of script                                       |
+| address    | Bytes!                     | Address of the bytecode storage contract for this script |
