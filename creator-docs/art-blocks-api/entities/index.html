@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727900515942">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727909476855">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.727900515942" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.727909476855" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.727900515942" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.727909476855" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.727900515942" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.727909476855" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -240,6 +240,11 @@
 <li><doc-anchor-trigger to="#salelookuptable"><code v-pre>SaleLookupTable</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#transfer"><code v-pre>Transfer</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#projectexternalassetdependency"><code v-pre>ProjectExternalAssetDependency</code></doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#dependency"><code v-pre>Dependency</code></doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#dependencyregistry"><code v-pre>DependencyRegistry</code></doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#dependencyadditionalcdn"><code v-pre>DependencyAdditionalCDN</code></doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#dependencyadditionalrepository"><code v-pre>DependencyAdditionalRepository</code></doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#dependencyscript"><code v-pre>DependencyScript</code></doc-anchor-trigger></li>
 </ul>
 <doc-anchor-target id="project">
     <h1>
@@ -1448,6 +1453,266 @@
 <td>index</td>
 <td>BigInt!</td>
 <td>The dependency index</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="dependency">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dependency">#</doc-anchor-trigger>
+        <span>Dependency</span>
+    </h1>
+</doc-anchor-target>
+<p>Description: information about registered dependency (e.g. <a href="mailto:p5js@1.0.0">p5js@1.0.0</a>)</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ID!</td>
+<td>Unique identifier made up of dependency name and version separated by an @ symbol (e.g. <a href="mailto:p5js@1.0.0">p5js@1.0.0</a>)</td>
+</tr>
+<tr>
+<td>preferredCDN</td>
+<td>String!</td>
+<td>Preffered CDN for this dependency</td>
+</tr>
+<tr>
+<td>additionalCDNs</td>
+<td><doc-anchor-trigger to="#dependencyadditionalcdn">[DependencyAdditionalCDN!]!</doc-anchor-trigger></td>
+<td>Additional CDNs for this dependency</td>
+</tr>
+<tr>
+<td>additionalCDNCount</td>
+<td>BigInt!</td>
+<td>Number of additional CDNs for this dependency</td>
+</tr>
+<tr>
+<td>preferredRepository</td>
+<td>String!</td>
+<td>Preffered repository for this dependency</td>
+</tr>
+<tr>
+<td>additionalRepositoryCount</td>
+<td>BigInt!</td>
+<td>Additional repositories for this dependency</td>
+</tr>
+<tr>
+<td>additionalRepositories</td>
+<td><doc-anchor-trigger to="#dependencyadditionalrepository">[DependencyAdditionalRepository!]!</doc-anchor-trigger></td>
+<td>Number of additional repositories for this dependency</td>
+</tr>
+<tr>
+<td>scripts</td>
+<td><doc-anchor-trigger to="#dependencyscript">[DependencyScript!]!</doc-anchor-trigger></td>
+<td>List of on-chain scripts that for this dependency</td>
+</tr>
+<tr>
+<td>scriptCount</td>
+<td>BigInt!</td>
+<td>Number of on-chain scripts for this dependency</td>
+</tr>
+<tr>
+<td>script</td>
+<td>String</td>
+<td>Concatenated string of all scripts for this dependency</td>
+</tr>
+<tr>
+<td>referenceWebsite</td>
+<td>String!</td>
+<td>Reference website for this dependency (e.g. <a href="https://p5js.org">https://p5js.org</a>)</td>
+</tr>
+<tr>
+<td>dependencyRegistry</td>
+<td>DependencyRegistry!</td>
+<td>Depenency registry contract that this dependency is registered on</td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td>BigInt!</td>
+<td>Timestamp of last update</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="dependencyregistry">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dependencyregistry">#</doc-anchor-trigger>
+        <span>DependencyRegistry</span>
+    </h1>
+</doc-anchor-target>
+<p>Description: information about a dependency registry contract</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Bytes!</td>
+<td>Unique identifier made up of dependency registry contract address</td>
+</tr>
+<tr>
+<td>supportedCoreContracts</td>
+<td><doc-anchor-trigger to="#contract">[Contract!]!</doc-anchor-trigger></td>
+<td>Core contracts that this registry can provide dependeny overrides for</td>
+</tr>
+<tr>
+<td>dependencies</td>
+<td><doc-anchor-trigger to="#dependency">[Dependency!]</doc-anchor-trigger></td>
+<td>List of dependencies that are registered on this registry contract</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Bytes!</td>
+<td>Current owner of this contract</td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td>BigInt!</td>
+<td>Timestamp of last update</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="dependencyadditionalcdn">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dependencyadditionalcdn">#</doc-anchor-trigger>
+        <span>DependencyAdditionalCDN</span>
+    </h1>
+</doc-anchor-target>
+<p>Description: information about an additional CDN for a dependency</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ID!</td>
+<td>Unique identifier made up of dependency id and index</td>
+<td></td>
+</tr>
+<tr>
+<td>dependency</td>
+<td><doc-anchor-trigger to="#dependency">Dependency!</doc-anchor-trigger></td>
+<td>Dependency this additional CDN belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td>cdn</td>
+<td>String!</td>
+<td>URL of the CDN</td>
+<td></td>
+</tr>
+<tr>
+<td>index</td>
+<td>BigInt!</td>
+<td>Index of this additional CDN</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="dependencyadditionalrepository">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dependencyadditionalrepository">#</doc-anchor-trigger>
+        <span>DependencyAdditionalRepository</span>
+    </h1>
+</doc-anchor-target>
+<p>Description: information about an additional repository for a dependency</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ID!</td>
+<td>Unique identifier made up of dependency id and index</td>
+</tr>
+<tr>
+<td>dependency</td>
+<td><doc-anchor-trigger to="#dependency">Dependency!</doc-anchor-trigger></td>
+<td>Dependency this additional repository belongs to</td>
+</tr>
+<tr>
+<td>repository</td>
+<td>String!</td>
+<td>URL of the repository</td>
+</tr>
+<tr>
+<td>index</td>
+<td>BigInt!</td>
+<td>Index of this additional repository</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="dependencyscript">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dependencyscript">#</doc-anchor-trigger>
+        <span>DependencyScript</span>
+    </h1>
+</doc-anchor-target>
+<p>Description: information about a script for a dependency</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ID!</td>
+<td>Unique identifier made up of dependency id and index</td>
+</tr>
+<tr>
+<td>dependency</td>
+<td><doc-anchor-trigger to="#dependency">Dependency!</doc-anchor-trigger></td>
+<td>Dependency this script belongs to</td>
+</tr>
+<tr>
+<td>index</td>
+<td>BigInt!</td>
+<td>Index of this script</td>
+</tr>
+<tr>
+<td>script</td>
+<td>String!</td>
+<td>Contents of script</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Bytes!</td>
+<td>Address of the bytecode storage contract for this script</td>
 </tr>
 </tbody>
 </table>
