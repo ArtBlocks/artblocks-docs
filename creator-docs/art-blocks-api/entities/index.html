@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727404691548">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727891662071">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.727404691548" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.727891662071" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.727404691548" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.727891662071" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.727404691548" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.727891662071" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -226,6 +226,7 @@
 <li><doc-anchor-trigger to="#project"><code v-pre>Project</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#projectscript"><code v-pre>ProjectScript</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#proposedartistaddressesandsplit"><code v-pre>ProposedArtistAddressesAndSplit</code></doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#engineregistry"><code v-pre>EngineRegistry</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#contract"><code v-pre>Contract</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#whitelisting"><code v-pre>Whitelisting</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#account"><code v-pre>Account</code></doc-anchor-trigger></li>
@@ -610,6 +611,17 @@
 </tbody>
 </table>
 </div>
+<doc-anchor-target id="engineregistry">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#engineregistry">#</doc-anchor-trigger>
+        <span>EngineRegistry</span>
+    </h1>
+</doc-anchor-target>
+<p>Description: Get specific details on the Art Blocks Engine registry. At this time, this is used largely for indexing purposes of V3_Engine* contracts only.
+| Field                               | Type                           | Description                                                                                                                     |
+| ----------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| id | ID! | Unique identifier made up of the Engine Registry&#x27;s contract address |
+| registeredContracts | [Contract!] | Core contracts that are registered on this Engine Registry, when this is most recent Engine Registry to add the contract |</p>
 <doc-anchor-target id="contract">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#contract">#</doc-anchor-trigger>
@@ -656,6 +668,26 @@
 <td>renderProviderSecondarySalesBPS</td>
 <td>BigInt</td>
 <td>Basis points of secondary sales allocated to the platform (null for pre-V3 contracts, check Royalty Registry)</td>
+</tr>
+<tr>
+<td>enginePlatformProviderAddress</td>
+<td>Bytes</td>
+<td>Address that receives primary sales platform fees, only for V3_Engine contracts</td>
+</tr>
+<tr>
+<td>enginePlatformProviderPercentage</td>
+<td>BigInt</td>
+<td>Percentage of primary sales allocated to the platform, only for V3_Engine contracts</td>
+</tr>
+<tr>
+<td>enginePlatformProviderSecondarySalesAddress</td>
+<td>Bytes</td>
+<td>Address that receives secondary sales platform royalties, only for V3_Engine contracts</td>
+</tr>
+<tr>
+<td>enginePlatformProviderSecondarySalesBPS</td>
+<td>BigInt</td>
+<td>Basis points of secondary sales allocated to the platform, only for V3_Engine contracts</td>
 </tr>
 <tr>
 <td>mintWhitelisted</td>
@@ -726,6 +758,16 @@
 <td>newProjectsForbidden</td>
 <td>Boolean!</td>
 <td>New projects forbidden (can only be true on V3+ contracts)</td>
+</tr>
+<tr>
+<td>autoApproveArtistSplitProposals</td>
+<td>Boolean</td>
+<td>Automatically approve all artist split proposals (used on V3 Engine contracts)</td>
+</tr>
+<tr>
+<td>registeredOn</td>
+<td>EngineRegistry</td>
+<td>Latest engine registry that this contract is registered with, if any (used for indexing purposes)</td>
 </tr>
 </tbody>
 </table>
