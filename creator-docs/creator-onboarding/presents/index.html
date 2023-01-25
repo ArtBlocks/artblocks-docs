@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727914444925">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727928429012">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.727914444925" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.727928429012" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.727914444925" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.727928429012" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.727914444925" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.727928429012" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -310,7 +310,8 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li><strong>Before</strong> minting mint #0, ensure that your &quot;additional payee wallet&quot; has been set for the same configuration that you will use it for in your project release. E.g., if you are using the &quot;additional payee wallet&quot; field to donate to charity at the time of mint, you must set this before minting your #0. This is done to ensure that this full functionality is tested end-to-end as part of the mint #0 process, and that there are no issues with the wallet selected for the additional payee. <strong>Please note: Art Blocks does not currently support sending primary sales payments into a multi-sig contract and there are known issues when attempting to do so. While we plan to update our minting smart contracts in the near future to resolve this, multi-sig wallets should not be used for this purpose at this time.</strong></li>
+<li>Note: Mint #0 will be completed with the Set Price minter. If you are using a fixed price, your project will be unpaused under the Danger tab right before your project’s release. Once a project using Set Price - ETH or Set Price - Custom ERC20 is unpaused, it will be live for minting. If your project will be sold via Dutch auction, please set the minter to Set Price ETH with the set price as your Dutch Auction’s base price for Mint #0.</li>
+<li><strong>Before</strong> minting Mint #0, ensure that your &quot;additional payee wallet&quot; has been set for the same configuration that you will use it for in your project release. E.g., if you are using the &quot;additional payee wallet&quot; field to donate to charity at the time of mint, you must set this before minting your #0. This is done to ensure that this full functionality is tested end-to-end as part of the mint #0 process, and that there are no issues with the wallet selected for the additional payee. <strong>Please note: Art Blocks does not currently support sending primary sales payments into a multi-sig contract and there are known issues when attempting to do so. While we plan to update our minting smart contracts in the near future to resolve this, multi-sig wallets should not be used for this purpose at this time.</strong></li>
 <li>Once your project information has been uploaded, <strong>please confirm in your artist DM that you&#x27;re ready for mint #0</strong>. The Art Blocks Team will look over your project shell and then give you the go-ahead to mint #0.</li>
 <li>Mint #0 must occur before your release can be scheduled.</li>
 </ol>
@@ -320,14 +321,13 @@
         <span>Payout Details</span>
     </h3>
 </doc-anchor-target>
-<p>Be sure that you&#x27;ve input information in all field forms. If you do not have an additional payee for primary or secondary sales, you may put <code v-pre>0x000000000000000</code> in the field and 0% for the payee percentage.</p>
+<p>Be sure that you&#x27;ve input information in all field forms. If you do not have an additional payee for primary or secondary sales, you may put <code v-pre>0x0000000000000000000000000000000000000000</code> in the field and 0% for the payee percentage.</p>
 <doc-anchor-target id="initiating-your-mintersuite-choice">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#initiating-your-mintersuite-choice">#</doc-anchor-trigger>
         <span>Initiating your MinterSuite choice</span>
     </h2>
 </doc-anchor-target>
-<p>Note: Before Mint #0, choose your minter from the suite. If you are using a fixed price, your project will be unpaused under the Danger tab right before your project’s release. Once a project using Set Price - ETH or Set Price - Custom ERC20 is unpaused, it will be live for minting. If your project will be sold via Dutch auction, please set the price to your DA’s resting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option.</p>
 <p>If you are using the Dutch auction - Exponential Price Decrease or Dutch auction - Linear Price Decrease, your project will be unpaused prior to your auction’s start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free.</p>
 <doc-anchor-target id="scheduling">
     <h2>
@@ -338,18 +338,33 @@
 <ul>
 <li>Once mint #0 and the features script are in place, Art Blocks will work with you to schedule/announce your release.</li>
 <li>After your project has been scheduled, you are free to announce and promote your project on your social media.</li>
+<li>Refer to our Marketing 101 Guide <a href="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/marketing101/">here</a></li>
 </ul>
-<doc-anchor-target id="goerli">
+<doc-anchor-target id="allowlist">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#goerli">#</doc-anchor-trigger>
-        <span>Goerli</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#allowlist">#</doc-anchor-trigger>
+        <span>Allowlist:</span>
     </h2>
 </doc-anchor-target>
-<p>Once scheduled, you will have the option to make your Goerli shell public to collectors. To help collectors easily differentiate Goerli shells from live projects and also ensure consistency in price and series size across your shells, please do the following prior to making your Goerli public:</p>
+<p>The allowlist minter is available for projects in the Presents, Explorations, and Collaborations Collections. This process is supported through the Art Blocks platform as a tool to mitigate botting and to create access to the minting experience for established collectors and to new participants. Art Blocks’ role in the allowlist feature is through smart contract development. Artists are responsible for the selection of allowlisted minters.</p>
 <ol>
-<li>Add [Sample Outputs] as a prefix to your project title. The formatting of your Goerli title will be &quot;[Sample Outputs] Project Name&quot;</li>
-<li>Adjust your price information in Goerli to be the same as on mainnet</li>
-<li>Adjust your max invocations in Goerli to be the same as on mainnet</li>
+<li>Artists can choose the list of addresses to allow as well as the number of mints allowed per-wallet. Currently, artists are responsible for crafting their allowlist and uploading a comma-separated list of ETH addresses in a .txt or .CSV file to the minter option.</li>
+</ol>
+<ol type="a">
+<li><a href="https://www.premint.xyz/">Premint</a> is a super helpful tool for creating an allowlist by using social channels to reach collectors, friends, family, etc. In addition, Art Blocks hosts a Python script for retrieving &amp; snapshotting either a list of all Art Blocks token holders or the token-holders of a specific project.</li>
+</ol>
+<ol start="2">
+<li>Allowlists are available before the public dutch auction. Artists are responsible for unpausing their project the day prior.</li>
+<li>Allowlists are sold via a fixed price. The Art Blocks Team recommends a fixed price that is 0.05-0.1 ETH above the auction’s resting price.</li>
+<li><strong>Note</strong> The allowlist feature is not a reserve feature. All allowlisted wallets will have access to purchase a mint and there will not be a limit set on the total number of mints via the allowlist.</li>
+<li>Artists must update the Sales Notes section with the criteria for the allowlist, the open date/time for the allowlist, and the close date/time for the allowlist. We also recommend that artists post in our #artist-announcements channel to announce the opening of an allowlist mint.</li>
+</ol>
+<p><strong>To set the allowlist minter:</strong></p>
+<ol>
+<li>Select Set Price- ETH, Allowlisted Users Only</li>
+<li>Upload your .csv or .txt file</li>
+<li>Enter your fixed price</li>
+<li>We recommend leaving the mint per wallet limit to 1 for allowlist . If you would like to adjust this, please let the Art Blocks Team know.</li>
 </ol>
 <doc-anchor-target id="unpausing">
     <h2>
@@ -378,10 +393,10 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li>Once your project is complete, you may reset the “Additional Payee Percentage” to 0% for any charitable giving conducted during minting. You&#x27;re also more than happy to keep them up. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0%</li>
+<li>Once your project is complete, you may reset the “Additional Payee Percentage” to 0% for any charitable giving conducted during minting. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0. In order to successfully update payout details, you will need to enter information into all fields to submit the change.</li>
 <li>You may also remove any language from your Project Description to describe sales mechanics.</li>
-<li>Report final charity donation totals in your artist DM
-4.<strong>[For previously Curated only]</strong> Please fill out the appropriate form to add bot support to your Discord channel for your completed project: <a href="https://github.com/ArtBlocks/artbot/issues/new/choose">https://github.com/ArtBlocks/artbot/issues/new/choose</a>.</li>
+<li>Report final charity donation totals in your artist DM</li>
+<li><strong>[For previously Curated only]</strong> Please fill out the appropriate form to add bot support to your Discord channel for your completed project: <a href="https://github.com/ArtBlocks/artbot/issues/new/choose">https://github.com/ArtBlocks/artbot/issues/new/choose</a>.</li>
 </ol>
 
                                 
