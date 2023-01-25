@@ -32,7 +32,7 @@ Add relevant tags to your project. More on tags [here](https://docs.artblocks.io
 
 ## Economics
 
-1. First review the Art Blocks Project Price model [here](https://docs.artblocks.io/creator-docs/creator-onboarding/presents/#economics). 
+1. Review the Project Pricing Model for Dutch auctions [here](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/#project-pricing-dutch-auction-settings)
 2. Consider the overall economics of your project for a successful release.
 3. Artists can only have one active project at a time.
 4. In order to submit a new project, your previous project must be closed (sold out/completed).
@@ -40,7 +40,7 @@ Add relevant tags to your project. More on tags [here](https://docs.artblocks.io
 ## Charity Component
 To maintain our commitment to charitable giving, we ask artists to consider donating 25% of sales above the resting price via Dutch auction to a charity of their choice. If you elect to participate in this way, please determine your chosen charity, and confirm its eligibility, before mint #0. To whom and how you donate is entirely up to you. Art Blocks does not require you to donate any proceeds in order to engage with our platform. If you do elect to donate to a charity, it is advisable to consider whether the charity which you choose to support qualifies under United States tax law to receive tax-deductible donations. If your project designates only one primary wallet, you may use the additional payee field to manage on-chain donations. All revenue may also be routed to a single wallet and donated after your drop. We encourage you to consult with a tax professional to understand any potential tax implications of your planned giving, as these can be widely variable.
 
-For more information on Charitable Donations, please see the article linked [here](https://docs.artblocks.io/creator-docs/creator-onboarding/presents/#charity-component).
+Learn more about Charitable Donation [here](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/charitable-donations/).
 
 ## Approve additional payee info for primary and secondary sales⛽
 Include the wallet addresses for primary and secondary sales to be distributed. Once submitted, the details will be approved by the Art Team. If you do not have additional wallet addresses that will receive funds from primary or secondary sales you must input `0x0000000000000000000000000000000000000000` in the blank fields. 
