@@ -32,7 +32,25 @@ Note: For your Art Blocks application, please connect with a hot wallet. Hardwar
 
 ## Test Minting
 
-Note: Before minting using `Purchases Paused` to mint test outputs without unpausing your project. Be sure to set your `Minter` Tab to `Set Price - ETH`. Before the Art Team reviews your project, mint 50-70 outputs. 
+1. Before minting, go to the `minter` tab and set the minter to `Set Price - ETH (V2)`. Set the `base price` low as to not waste GoerliEth. 
+
+<img width="1872" alt="01_minting" src="https://user-images.githubusercontent.com/103667291/214971637-38b650ff-5464-48b1-92b3-8725ce0841b6.png">
+
+2. After you `submit` the minter to `Set Price - ETH (V2)` and entered the `base price`, go back to your project page and scroll down. 
+
+<img width="1902" alt="02_minting" src="https://user-images.githubusercontent.com/103667291/214971934-1c738de5-a208-40c0-9698-8a811d45e155.png">
+
+3. Above `Additional details` you will find the button that says `UPCOMING`. By pressing this button, you can mint outputs without unpausing your project. 
+
+<img width="1866" alt="03_minting" src="https://user-images.githubusercontent.com/103667291/214972116-80a024f0-257c-4c37-a99b-597e732b7bf0.png">
+
+4. Press `PURCHASE`.
+
+<img width="1898" alt="04_minting" src="https://user-images.githubusercontent.com/103667291/214972204-b7cfe8f6-96f9-494c-96a4-f5403f66e066.png">
+
+5. Success! You've minted your first test output. In order for your project shell to be reviewed by the internal screening committee, you will need to mint 50-70 test outputs. 
+
+<img width="1900" alt="05_minting" src="https://user-images.githubusercontent.com/103667291/214972489-538b0842-f897-4562-8537-6ff36094e2d3.png">
 
 ## Features
 
