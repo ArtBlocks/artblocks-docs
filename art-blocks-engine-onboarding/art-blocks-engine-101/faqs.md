@@ -139,3 +139,11 @@ Some additional recommendations:
 ## Flex: Can JS external asset dependencies make external calls to other APIs/assets?
 
 Having your JS external asset dependencies making external calls, whether it's to an API or other assets, is not a supported use of the Engine Flex offering, as it breaks the assumption of only utilizing off-chain decentralized platforms. We encourage you to, instead, serialize any data you may need from these external calls into assets (JSON, TXT, etc) that are also stored on the platforms Engine Flex currently supports (IPFS and Arweave).
+
+## For the status of a project on the contract, how does 'active' and 'paused' differ?
+
+The value of `paused` is determined by artist, whereas `active` is determined by contract admin. Both need to be in a mintable state (`paused`=false, `active`=true) for a project to be publicly available to mint.
+
+## Why is there a small delay between the token's mint transaction confirming and it being viewable on the Art Blocks Generator (live view)?
+
+Art Blocks uses the decentralized Graph network to index on-chain data in our publicly availible subgraph. There can be a slight delay between the first block confirmation on the ethereum network for a transaction and that transaction being indexed by our subgraph. To mitigate this, as an Art Blocks engine provider, your client should be waiting multiple block confirmations (we recommend at least 2 blocks) before it shows the generator view to the user. The generator will return an error message if the token is not indexed yet, accompanied by 4XX status code. Many clients also employ a polling strategy, only showing the requested generator view once the requested generator url is returning a 2XX status code.
