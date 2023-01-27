@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727928457444">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.728155120729">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.727928457444" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.728155120729" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.727928457444" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.728155120729" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.727928457444" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.728155120729" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -418,6 +418,20 @@ These smart contracts receive funds and split them between the artist(s) and the
     </h2>
 </doc-anchor-target>
 <p>Having your JS external asset dependencies making external calls, whether it&#x27;s to an API or other assets, is not a supported use of the Engine Flex offering, as it breaks the assumption of only utilizing off-chain decentralized platforms. We encourage you to, instead, serialize any data you may need from these external calls into assets (JSON, TXT, etc) that are also stored on the platforms Engine Flex currently supports (IPFS and Arweave).</p>
+<doc-anchor-target id="for-the-status-of-a-project-on-the-contract-how-does-active-and-paused-differ">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#for-the-status-of-a-project-on-the-contract-how-does-active-and-paused-differ">#</doc-anchor-trigger>
+        <span>For the status of a project on the contract, how does &#x27;active&#x27; and &#x27;paused&#x27; differ?</span>
+    </h2>
+</doc-anchor-target>
+<p>The value of <code v-pre>paused</code> is determined by artist, whereas <code v-pre>active</code> is determined by contract admin. Both need to be in a mintable state (<code v-pre>paused</code>=false, <code v-pre>active</code>=true) for a project to be publicly available to mint.</p>
+<doc-anchor-target id="why-is-there-a-small-delay-between-the-tokens-mint-transaction-confirming-and-it-being-viewable-on-the-art-blocks-generator-live-view">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#why-is-there-a-small-delay-between-the-tokens-mint-transaction-confirming-and-it-being-viewable-on-the-art-blocks-generator-live-view">#</doc-anchor-trigger>
+        <span>Why is there a small delay between the token&#x27;s mint transaction confirming and it being viewable on the Art Blocks Generator (live view)?</span>
+    </h2>
+</doc-anchor-target>
+<p>Art Blocks uses the decentralized Graph network to index on-chain data in our publicly available subgraph. There can be a slight delay between the first block confirmation on the ethereum network for a transaction and that transaction being indexed by our subgraph. To mitigate this, as an Art Blocks engine provider, your client should be waiting multiple block confirmations (we recommend at least 2 blocks) before it shows the generator view to the user. The generator will return an error message if the token is not indexed yet, accompanied by 4XX status code. Many clients also employ a polling strategy, only showing the requested generator view once the requested generator url is returning a 2XX status code.</p>
 
                                 
                                 <!-- Required only on API pages -->
