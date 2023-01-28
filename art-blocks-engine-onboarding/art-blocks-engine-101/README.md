@@ -15,7 +15,7 @@ A high-level process map for Art Blocks Engine onboarding.
    3 The ticker for tokens from your contract (e.g. for Art Blocks it is "BLOCKS" https://etherscan.io/address/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270#code).
 3. Art Blocks' will deploy a set of testnet smart contracts for your team to begin integrating with.
    * After testnet deployment, there are two steps that may proceed in parallel.
-     1. Your team can integrate your front end to allow for minting via your new Engine smart contract (using deployed Ropsten smart contracts).
+     1. Your team can integrate your front end to allow for minting via your new Engine smart contract (using deployed Engine smart contracts).
      2. Art Blocks will need to integrate your newly deployed testnet smart contracts with our rendering infrastructure on testnet. After that, your team will connect to the staging site https://artist-staging.artblocks.io and interact with projects on the testing network you created as if they were on Art Blocks.
         * An ETA for this infrastructure integration piece will be given at the time of testnet contract deployment. On average, this will take 1 week from the time of testnet deployment.
         * To create a new project shell, you should use the addProject method of your newly deployed Engine Core Contract. This can be done by connecting to the contract via Etherscan.
