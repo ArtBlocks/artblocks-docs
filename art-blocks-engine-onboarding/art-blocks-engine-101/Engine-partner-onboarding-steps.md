@@ -1,5 +1,5 @@
 ---
-order: 1000
+order: 200
 ---
 # Engine Partner Onboarding Steps
 

@@ -1,5 +1,5 @@
 ---
-order: 700
+order: 400
 ---
 # Project Shell Deployment Guide
 

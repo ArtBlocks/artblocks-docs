@@ -1,5 +1,5 @@
 ---
-order: 900
+order: 500
 ---
 # Art Blocks Engine OpenSea Setup
 

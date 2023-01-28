@@ -1,3 +1,7 @@
+---
+order: 800
+---
+
 # Using Pinata for External Assets
 
 Pinata is an excellent IPFS resource built with creators and non-technical users in mind, making it easy to upload content that you can use inside Art Blocks! This will walk you through the basics of uploading content to Pinata. 

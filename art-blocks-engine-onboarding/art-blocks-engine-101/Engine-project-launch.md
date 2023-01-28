@@ -1,5 +1,5 @@
 ---
-order: 800
+order: 300
 ---
 # Art Blocks Engine Project Launch
 
