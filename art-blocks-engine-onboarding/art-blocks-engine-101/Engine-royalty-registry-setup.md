@@ -1,5 +1,5 @@
 ---
-order: 850
+order: 600
 ---
 # Art Blocks Engine Royalty Registry Setup
 
@@ -44,7 +44,7 @@ Now you will automatically be receiving royalties from sales on secondary market
 
 ## Optional Configuring
 
-Royalty percentages of 2.5% are used by default by the Art Blocks Engine royalty override contract. The `admin` of any given PBAB core contract can override these percentages by calling `updatePlatformBpsForContract` or `updateRenderProviderBpsForContract` on the Art Blocks Engine royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract), on etherscan
+Royalty percentages of 2.5% are used by default by the Art Blocks Engine royalty override contract. The `admin` of any given Engine core contract can override these percentages by calling `updatePlatformBpsForContract` or `updateRenderProviderBpsForContract` on the Art Blocks Engine royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract), on etherscan
 >Note that royalty proportions are defined in terms of Basis points. For example, 250 BPS = 2.5% royalty. See [this article](https://www.investopedia.com/terms/b/basispoint.asp) for more information.
 
 After initial setup, the Platform (Engine partner) royalty payment address may be updated at any time by the `admin` of a given Engine core contract by calling the `updatePlatformRoyaltyAddressForContract` function on the Art Blocks Engine royalty override contract, [0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f](https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract), on etherscan
