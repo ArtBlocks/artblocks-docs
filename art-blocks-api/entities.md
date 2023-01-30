@@ -181,7 +181,7 @@ Description: get project account information
 | Field   | Type     | Description                    |
 | ------- | -------- | ------------------------------ |
 | id      | ID!      | Unique identifier token id     |
-| account | Account! | Account asssociated to project |
+| account | Account! | Account associated to project  |
 | project | Project! | Name of project                |
 | count   | Int!     | Total count of the project     |
 
@@ -271,20 +271,20 @@ Description: get details of payment for an NFT
 
 Description: get sale information
 
-| Field             | Type                                 | Description                                                                                                                                                  |
-| ----------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| id                | ID!                                  | The sale id formated: tokenId - token.nextSaleId (using first token sold for bundles) for Opensea V1/V2, orderHash from sale event for Looksrare and Seaport |
-| txHash            | Bytes!                               | The hash of the transaction                                                                                                                                  |
-| exchange          | Exchange!                            | The exchange used for this sale                                                                                                                              |
-| saleType          | SaleType!                            | The sale type (SingleBundle)                                                                                                                                 |
-| blockNumber       | BigInt!                              | The block number of the sale                                                                                                                                 |
-| blockTimestamp    | BigInt!                              | The timestamp of the sale                                                                                                                                    |
-| summaryTokensSold | String!                              | A raw formated string of the token(s) sold (i.e TokenID1::TokenID2::TokenID3)                                                                                |
-| saleLookupTables  | [SaleLookupTable!](#salelookuptable) | Lookup table to get the list of Tokens sold in this sale                                                                                                     |
-| seller            | Bytes!                               | The seller address                                                                                                                                           |
-| buyer             | Bytes!                               | The buyer address                                                                                                                                            |
-| payments          | [Payment!](#payment)                 | List of Payment tokens involved in this sale                                                                                                                 |
-| isPrivate         | Boolean!                             | Private sales are flagged by this boolean                                                                                                                    |
+| Field             | Type                                 | Description                                                                                                                                                   |
+| ----------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                | ID!                                  | The sale id formatted: tokenId - token.nextSaleId (using first token sold for bundles) for Opensea V1/V2, orderHash from sale event for Looksrare and Seaport |
+| txHash            | Bytes!                               | The hash of the transaction                                                                                                                                   |
+| exchange          | Exchange!                            | The exchange used for this sale                                                                                                                               |
+| saleType          | SaleType!                            | The sale type (SingleBundle)                                                                                                                                  |
+| blockNumber       | BigInt!                              | The block number of the sale                                                                                                                                  |
+| blockTimestamp    | BigInt!                              | The timestamp of the sale                                                                                                                                     |
+| summaryTokensSold | String!                              | A raw formatted string of the token(s) sold (i.e TokenID1::TokenID2::TokenID3)                                                                                |
+| saleLookupTables  | [SaleLookupTable!](#salelookuptable) | Lookup table to get the list of Tokens sold in this sale                                                                                                      |
+| seller            | Bytes!                               | The seller address                                                                                                                                            |
+| buyer             | Bytes!                               | The buyer address                                                                                                                                             |
+| payments          | [Payment!](#payment)                 | List of Payment tokens involved in this sale                                                                                                                  |
+| isPrivate         | Boolean!                             | Private sales are flagged by this boolean                                                                                                                     |
 
 # SaleLookupTable
 
@@ -306,7 +306,7 @@ Description: transfer info on an NFT
 | Field           | Type    | Description                   |
 | --------------- | ------- | ----------------------------- |
 | id              | ID!     | Unique identifier of transfer |
-| transactionHash | Bytes!  | trasaction hash of transfer   |
+| transactionHash | Bytes!  | transaction hash of transfer  |
 | token           | Token!  | token address of NFT          |
 | createdAt       | BigInt! | when transfer initiated       |
 | to              | Bytes!  | address transferred to        |
@@ -331,30 +331,30 @@ Description: information about registered dependency (e.g. p5js@1.0.0)
 | Field                     | Type                                                                    | Description                                                                                         |
 | ------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | id                        | ID!                                                                     | Unique identifier made up of dependency name and version separated by an @ symbol (e.g. p5js@1.0.0) |
-| preferredCDN              | String!                                                                 | Preffered CDN for this dependency                                                                   |
+| preferredCDN              | String!                                                                 | Preferred CDN for this dependency                                                                   |
 | additionalCDNs            | [\[DependencyAdditionalCDN!\]!](#dependencyadditionalcdn)               | Additional CDNs for this dependency                                                                 |
 | additionalCDNCount        | BigInt!                                                                 | Number of additional CDNs for this dependency                                                       |
-| preferredRepository       | String!                                                                 | Preffered repository for this dependency                                                            |
+| preferredRepository       | String!                                                                 | Preferred repository for this dependency                                                            |
 | additionalRepositoryCount | BigInt!                                                                 | Additional repositories for this dependency                                                         |
 | additionalRepositories    | [\[DependencyAdditionalRepository!\]!](#dependencyadditionalrepository) | Number of additional repositories for this dependency                                               |
 | scripts                   | [\[DependencyScript!\]!](#dependencyscript)                             | List of on-chain scripts that for this dependency                                                   |
 | scriptCount               | BigInt!                                                                 | Number of on-chain scripts for this dependency                                                      |
 | script                    | String                                                                  | Concatenated string of all scripts for this dependency                                              |
 | referenceWebsite          | String!                                                                 | Reference website for this dependency (e.g. https://p5js.org)                                       |
-| dependencyRegistry        | DependencyRegistry!                                                     | Depenency registry contract that this dependency is registered on                                   |
+| dependencyRegistry        | DependencyRegistry!                                                     | Dependency registry contract that this dependency is registered on                                  |
 | updatedAt                 | BigInt!                                                                 | Timestamp of last update                                                                            |
 
 # DependencyRegistry
 
 Description: information about a dependency registry contract
 
-| Field                  | Type                           | Description                                                           |
-| ---------------------- | ------------------------------ | --------------------------------------------------------------------- |
-| id                     | Bytes!                         | Unique identifier made up of dependency registry contract address     |
-| supportedCoreContracts | [\[Contract!\]!](#contract)    | Core contracts that this registry can provide dependeny overrides for |
-| dependencies           | [\[Dependency!\]](#dependency) | List of dependencies that are registered on this registry contract    |
-| owner                  | Bytes!                         | Current owner of this contract                                        |
-| updatedAt              | BigInt!                        | Timestamp of last update                                              |
+| Field                  | Type                           | Description                                                            |
+| ---------------------- | ------------------------------ | ---------------------------------------------------------------------- |
+| id                     | Bytes!                         | Unique identifier made up of dependency registry contract address      |
+| supportedCoreContracts | [\[Contract!\]!](#contract)    | Core contracts that this registry can provide dependency overrides for |
+| dependencies           | [\[Dependency!\]](#dependency) | List of dependencies that are registered on this registry contract     |
+| owner                  | Bytes!                         | Current owner of this contract                                         |
+| updatedAt              | BigInt!                        | Timestamp of last update                                               |
 
 # DependencyAdditionalCDN
 
