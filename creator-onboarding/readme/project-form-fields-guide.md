@@ -182,6 +182,9 @@ Projects with multiple artists can use the additional payee address field to spl
 
 !!!danger Artists must propose changes to their payment addresses (and splits between primary/additional) for admin approval. Approval is granted before Mint #0!!!
 
+#### Revenue splits with multiple artists
+For projects with multiple artists, we recommend using [0xSplits](https://www.0xsplits.xyz/) to split revenue among the group. Instructions on how to create a Split can be found [here](https://www.youtube.com/watch?v=P_uqQJghNAo). Once you’ve created your Split, paste the address into the additional payee field. You can also include a charitable giving donation directly in the Split.
+
 #### Propose current artist address or add a new one
 This address will have access to edit the project in Art Blocks’ staging environment.
 
