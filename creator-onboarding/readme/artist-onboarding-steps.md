@@ -68,25 +68,25 @@ Once the audit is complete, you'll move on to the mainnet finalization stage and
 
 [!badge Timeline: Artist-dependent, but most artists spend about 1 week on this step]
 
-## 8. Finalize project logistics and schedule project launch
+## 9. Finalize project logistics and schedule project launch
 
-Lock in series size, price mechanics (Dutch Auction, Linear Auction, or Fixed Price), launch date, and charity component for your project. For more information about price mechanics and the charity component, please see our [FAQs](faqs.md). Art Blocks releases three projects weekly; due to the number of artists in our pipeline, there is often a 2-6 week runway for release. After you have scheduled your project for release, you may begin promoting the project. For tips on marketing, please see our [Marketing 101](marketing-101.md). After your project is scheduled, you must complete our Cover Pages, an official record of the agreed terms. You must complete the document to receive royalty payments. 
+Lock in series size, price mechanics (Dutch Auction, Linear Auction, or Fixed Price), launch date, revenue splits, and charity component for your project. For more information about price mechanics, revenue splits, and the charity component, please see our FAQs. For more information about price mechanics and the charity component, please see our [FAQs](faqs.md). Art Blocks releases three projects weekly; due to the number of artists in our pipeline, there is often a 2-6 week runway for release. After you have scheduled your project for release, you may begin promoting the project. For tips on marketing, please see our [Marketing 101](marketing-101.md). After your project is scheduled, you must complete our Cover Pages, an official record of the agreed terms. You must complete the document to receive royalty payments. 
 
 [!badge Timeline: 1-2 days]
 
-## 8b. Artist Interview [Curated projects only]
+## 9a. Artist Interview [Curated projects only]
 
 Complete an interview with the Art Team to be published the week of your project launch. This interview will highlight your background, creative history, and Art Blocks project.
 
 [!badge Timeline: dependant on release runway]
 
-## 9. Project Launch
+## 10. Project Launch
 
 Congratulations, you have made it! Your project is ready to be unpaused and opened for minting. You can participate in an optional live Pre-Drop Talk on Twitter with one of our Community Team members to answer questions and chat with the community.
 
 [!badge Timeline: typically ~4-6 weeks after the completion of Step 8]
 
-## 10. Post-Launch 
+## 11. Post-Launch 
 
 After you’ve released your project, you will be asked to fill out an Art Blocks Feedback Survey. In addition to your feedback, we will inquire about your interest in being considered for commissions, partnerships, contract work, and more with our Art Blocks Engine partners. Please also report charitable donations to your mainnet DM. 
 
