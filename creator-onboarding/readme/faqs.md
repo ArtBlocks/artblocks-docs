@@ -185,6 +185,9 @@ Royalty distribution varies based on the secondary marketplace. Most secondary m
 
 OpenSea is the exception to this. OpenSea will collect royalties on the secondary sales directly (5%). These royalties are then transferred to Art Blocks and Art Blocks will then manually transfer those royalties to each artist. Royalty distributions will be announced in our artist channel.
 
+### How can I customize revenue splits?
+Setting up revenue splits can be done through the [Payout](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#payout) fields in your project form. You can use the additional payee field within the form directly to send a portion of the revenue to that account. Many artists use this to make a charitable donation. To split revenue with more than one account, we recommend using [0xSplits](https://www.0xsplits.xyz/). Instructions on how to create a Split can be found [here](https://www.youtube.com/watch?v=P_uqQJghNAo). Once your Split is created, paste the address into the additional payee field.
+
 ### Do you have access to historical data of other Art Blocks sales? 
 
 There are a few helpful tools for this:
