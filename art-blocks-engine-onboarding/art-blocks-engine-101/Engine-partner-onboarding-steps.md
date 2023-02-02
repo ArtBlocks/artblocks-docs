@@ -29,10 +29,11 @@ Once the project objectives and scope are agreed upon, you'll work with our oper
 
 To get started, you'll provide our team with:
 
-1. **An Ethereum wallet address** that you own and will use to manage your Art Blocks Engine smart contracts.
-2. **The name you’ll use for tokens** from your contract (e.g., for Art Blocks, it is "Art Blocks")
-3. **The ticker symbol you’ll use for tokens** from your contract (e.g., for Art Blocks, it is "BLOCKS")
-4. **Mint mechanic** you'd like to use for the first drop. Fixed-price ETH, fixed-price custom ERC20 token, **linear** automated descending (Dutch) auction, **exponential** automated descending (Dutch) auction, or an allowlist minter. 
+- **An Ethereum Goerli testnet wallet address** (that you currently own and control) you'll use to manage your Art Blocks Engine smart contracts.
+- The **name** you’ll use for tokens from your contract (e.g., for Art Blocks, it is "Art Blocks")
+- The **ticker symbol** you’ll use for tokens from your contract (e.g., for Art Blocks, it is "BLOCKS")
+- **Type of deployment**: Only on-chain Engine or Flex Engine
+- **Mint mechanic** you'd like to use for the first drop: Fixed-price ETH (standard) or an exponential automated descending Dutch auction (some added complexity)
 
 Note: We cannot deploy your contract until you provide the above information. **The name and symbol tied to your contract cannot change once it’s set.**_
 
@@ -56,25 +57,26 @@ Contracts are deployed twice per month and typically take 1 week to complete and
 
 Your team will integrate your site’s front-end with the contract created by Art Blocks to test your outputs on the testnet.
 
-[!badge Timeline: Depends on partner]
+[!badge Timeline: weeks-months (depends on partner)]
 - [x] Connect your front end to testnet contracts
 
 ## 8. Test mints on partner site
 
 Your team ensures the minting process is working on the test network by minting your NFTs using the front-end of your site.
 
-[!badge Timeline: Depends on partner]
+[!badge Timeline: weeks-months (depends on partner)]
 - [x] Mint test outputs
 - [x] Test drop mechanic (flat price, Dutch Auction, whitelists, etc.)
 - [x] Test purchase with custom ERC20 (if applicable) 
 - [x] Request a script audit from Art Blocks
 - [x] Test your script across different hardware/software ([browserstack.com](https://www.browserstack.com/)) 
+- [x] Let the Art Blocks team know testing is complete and you're ready for a mainnet deployment
 
 ## 9. Deployment to mainnet
 
 Art Blocks deploys the mainnet version of your contract and integrates it with our infrastructure.
 
-[!badge Timeline: 1-2 weeks]
+[!badge Timeline: 2 weeks]
 
 ## 10. Infrastructure integration (mainnet)
 
