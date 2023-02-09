@@ -2,7 +2,7 @@
 
 ---
 
-Interested in learning about an Art Blocks Engine partnership? Email info@artblocks.io to get the conversation started! 
+Interested in learning about an Art Blocks Engine partnership? Email engine@artblocks.io to get the conversation started! 
 
 ---
 
