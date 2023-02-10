@@ -10,13 +10,11 @@ Dutch Auction settings are based on the project collection type (Curated vs. Pre
 
 Art Blocks recommends using exponential decay with these values for no longer than an hour. We will monitor market conditions and adjust these values as needed over time. If you'd like to explore a project size of less than 100, alternate sales mechanics, or have an established sales history outside of these parameters, please speak with Art Blocks’ Art Team for a specialized recommendation.
 
-<img width="933" alt="Project Pricing: Dutch Auction Settings" src="https://user-images.githubusercontent.com/103667291/217963170-5b07412a-b7ad-4461-9ea5-c9885e64b04c.png">
-
+![New Price Model ](https://user-images.githubusercontent.com/103667291/218131538-441f1fc0-4a1c-4cef-802a-2baed089d780.jpg)
 
 # Price Reductions
 
-A project's pricing cannot be altered after r[Uploading 01_project price model.pdf…]()
-elease. Instead, you may reduce your project size but must run the change by the Art Blocks Art Team in your [M_] DM on Discord. We recommend waiting at least 4 weeks before reducing collection size. 
+A project's pricing cannot be altered after release. Instead, you may reduce your project size but must run the change by the Art Blocks Art Team in your [M_] DM on Discord. We recommend waiting at least 4 weeks before reducing collection size. 
 
 Our contract automatically locks projects FOUR WEEKS after their final mint.
 
