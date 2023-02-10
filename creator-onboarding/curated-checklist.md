@@ -56,7 +56,7 @@ Include the wallet addresses for primary and secondary sales to be distributed. 
 
 ### Initiating your MinterSuite choice
 
-If you are using the Dutch auction - Exponential Price Decrease or Dutch auction - Linear Price Decrease, your project will be unpaused prior to your auction’s start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free. 
+If you are using the Dutch auction - Exponential Price Decrease with/without settlement or Dutch auction - Linear Price Decrease, your project will be unpaused prior to your auction’s start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free. 
 
 ### Payout Details 
 
