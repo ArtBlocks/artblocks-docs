@@ -129,6 +129,13 @@ The MinterSuite currently includes the following minter options, which will cont
 
 **Automated Exponential Dutch Auction**: For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops. 
 
+**Dutch Auction with Settlement - Exponential Price Decrease**
+
+In this option, collectors will pay the price of the last mint. Collectors who purchase above this price will be able to claim a settlement after the auction which will be the difference between the price they purchased at and the last purchase price. What this means for artists is that you would claim your revenue after the project’s sell out/after the dutch auction duration in one transaction. The Dutch auction with settlement minter can be coupled with an allowlist minter. In this case, the allowlist must come before the dutch auction with settlement*.
+
+*This minter employs a lot of game theory on the collector’s end. While all collectors will pay the resting price of the auction, we do not expect the overall revenue that artists receive to decrease between this option and the exponential Dutch auction without settlement. While we begin rolling this option out, we will continue to allow DAs without settlement, but we would like to move towards all DAs including settlement in the future. 
+
+
 **Automated Linear Dutch Auction**: For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time.
 
 **Set price in custom ERC20**: Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale. 
