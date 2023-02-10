@@ -82,6 +82,10 @@ The allowlist minter is available for projects in the Presents, Explorations, an
 3. Enter your fixed price
 4. We recommend leaving the mint per wallet limit to 1 for allowlist . If you would like to adjust this, please let the Art Blocks Team know.
 
+## Pre-Drop Talk 
+
+Pre-Drop Talks happen on Twitter Spaces 15 minutes prior to the release of your project. A member of the Community Team will ask you a series of questions to help collectors get to know more about your creative process and the decisions behind your project. Pre-drop talks are announced on Twitter a few days before release, and you’ll be connected with the host of your talk after your project is announced in #upcoming-projects. You will receive interview questions in advance of the live show. If you do not have a Twitter account, the Community Team will explore alternative ways to host this conversation with you.
+
 ## Unpausing
 
 * When it's time, you'll click the Unpause button under the Danger tab.
