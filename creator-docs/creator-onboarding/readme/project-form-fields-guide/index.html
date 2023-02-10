@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.729358596042">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.729376084558">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.729358596042" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.729376084558" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.729358596042" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.729376084558" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.729358596042" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.729376084558" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -410,6 +410,9 @@
 <p>The MinterSuite currently includes the following minter options, which will continue to expand over time:
 <strong>Set Price - ETH</strong> is used for fixed price releases</p>
 <p><strong>Automated Exponential Dutch Auction</strong>: For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops.</p>
+<p><strong>Dutch Auction with Settlement - Exponential Price Decrease</strong></p>
+<p>In this option, collectors will pay the price of the last mint. Collectors who purchase above this price will be able to claim a settlement after the auction which will be the difference between the price they purchased at and the last purchase price. What this means for artists is that you would claim your revenue after the project’s sell out/after the dutch auction duration in one transaction. The Dutch auction with settlement minter can be coupled with an allowlist minter. In this case, the allowlist must come before the dutch auction with settlement*.</p>
+<p>*This minter employs a lot of game theory on the collector’s end. While all collectors will pay the resting price of the auction, we do not expect the overall revenue that artists receive to decrease between this option and the exponential Dutch auction without settlement. While we begin rolling this option out, we will continue to allow DAs without settlement, but we would like to move towards all DAs including settlement in the future.</p>
 <p><strong>Automated Linear Dutch Auction</strong>: For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time.</p>
 <p><strong>Set price in custom ERC20</strong>: Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale.</p>
 <p><strong>Set Price - ETH, Allowlisted Users Only (V2)</strong> is used for allowing only a predetermined list of wallet addresses to mint. These wallets can mint unlimited times until the project invocations limit is reached (if no mint limit was set) or as many times as they want until they reach the mint limit.</p>
