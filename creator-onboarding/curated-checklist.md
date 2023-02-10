@@ -69,6 +69,10 @@ Be sure that you've input information in all field forms. If you do not have an 
 * Curated artists will also have an artist channel created in Discord. To pin messages in your artist channel, you must enable two-factor authentication within User Settings > My Account in Discord.
 * After your project has been scheduled, you are free to announce and promote your project on your social media.
 
+## Pre-Drop Talk 
+
+Pre-Drop Talks happen on Twitter Spaces 15 minutes prior to the release of your project. A member of the Community Team will ask you a series of questions to help collectors get to know more about your creative process and the decisions behind your project. Pre-drop talks are announced on Twitter a few days before release, and you’ll be connected with the host of your talk after your project is announced in #upcoming-projects. You will receive interview questions in advance of the live show. If you do not have a Twitter account, the Community Team will explore alternative ways to host this conversation with you.
+
 ## Unpausing
 
 * When it's time, you'll click the Unpause button under the Danger tab.
