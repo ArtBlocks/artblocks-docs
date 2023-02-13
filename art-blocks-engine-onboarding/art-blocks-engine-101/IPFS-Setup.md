@@ -1,5 +1,5 @@
 ---
-order: 800
+order: 300
 ---
 
 # Using Pinata for External Assets
