@@ -1,5 +1,5 @@
 ---
-order: 600
+order: 500
 ---
 # Art Blocks Engine Royalty Registry Setup
 
