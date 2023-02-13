@@ -1,5 +1,5 @@
 ---
-order: 950
+order: 100
 ---
 
 # FAQs
