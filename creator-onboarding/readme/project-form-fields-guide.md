@@ -140,9 +140,17 @@ In this option, collectors will pay the price of the last mint. Collectors who p
 
 **Set price in custom ERC20**: Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale. 
 
-**Set Price - ETH, Allowlisted Users Only (V2)** is used for allowing only a predetermined list of wallet addresses to mint. These wallets can mint unlimited times until the project invocations limit is reached (if no mint limit was set) or as many times as they want until they reach the mint limit. 
+**Set Price - ETH, Allowlisted Users Only (V5)** is used for allowing only a predetermined list of wallet addresses to mint. These wallets can mint unlimited times until the project invocations limit is reached (if no mint limit was set) or as many times as they want until they reach the mint limit. 
 
 Artists can choose the list of addresses to allow as well as the # of mints allowed per-wallet. Currently, artists are responsible for crafting their allowlist and uploading a comma-separated list of ETH addresses in a .txt or .CSV file to the artist dashboard. [Premint](https://www.premint.xyz/) is a super helpful tool for creating an allowlist by using social channels to reach collectors, friends, family, etc. In addition, Art Blocks hosts a [Python script](https://github.com/ArtBlocks/artblocks-community-tooling/tree/main/SnapshotABHolders) for retrieving & snapshotting either a list of all Art Blocks token holders or the token-holders of a specific project.
+
+Note that vault delegation via [Delegate Cash](https://delegate.cash/) is available for the Allowlisted Users minter. For more details please visit this [video walkthrough](https://www.youtube.com/watch?v=2-AgG--zcaw&list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&index=5).
+
+**Set Price - ETH, Token Holders Only (V4)** this minter allows its tokens to be minted with ETH when the purchaser owns an allowlisted ERC-721 NFT. This contract does NOT track if a purchaser has/has not minted already (ie. a "mint limit" is not available) -- it simply restricts purchasing to anybody that holds one or more of a specified list of ERC-721 NFTs.
+
+Artists may use the artist dashboard to pre-select a list of allowlisted projects, of which any valid token holders will be able to purchase for the upcoming project. Note that a "snapshot" won't apply to this minter -- after the project's been made public, users can purchase a token from any allowlisted project and mint freely.
+
+Note that vault delegation via [Delegate Cash](https://delegate.cash/) is available for the Token Holders Only minter. For more details please visit this [video walkthrough](https://www.youtube.com/watch?v=2-AgG--zcaw&list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&index=5).
 
 **[Artists on Staging]** After you’ve uploaded your script and you’re ready to start minting, ensure your `minter` is set to `Set Price - ETH (V2)`. You’ll want to set your mint price at `.0` since you’re using Goerli ETH. 
 
