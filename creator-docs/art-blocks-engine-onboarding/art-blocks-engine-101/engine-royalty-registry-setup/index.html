@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730918566709">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.730937203152">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>Art Blocks Engine Royalty Registry Setup</title>
     <meta name="title" content="Art Blocks Engine Royalty Registry Setup">
-    <meta name="description" content="The Royalty Registry is an on-chain tool used by many marketplaces (OpenSea, Coinbase NFT, etc." />
+    <meta name="description" content="The Royalty Registry is an on-chain tool used by many marketplaces ((soon) OpenSea, Coinbase NFT, etc." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-royalty-registry-setup/" />
@@ -23,21 +23,21 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-royalty-registry-setup/">
     <meta property="og:title" content="Art Blocks Engine Royalty Registry Setup">
-    <meta property="og:description" content="The Royalty Registry is an on-chain tool used by many marketplaces (OpenSea, Coinbase NFT, etc.">
+    <meta property="og:description" content="The Royalty Registry is an on-chain tool used by many marketplaces ((soon) OpenSea, Coinbase NFT, etc.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-royalty-registry-setup/">
     <meta property="twitter:title" content="Art Blocks Engine Royalty Registry Setup">
-    <meta property="twitter:description" content="The Royalty Registry is an on-chain tool used by many marketplaces (OpenSea, Coinbase NFT, etc.">
+    <meta property="twitter:description" content="The Royalty Registry is an on-chain tool used by many marketplaces ((soon) OpenSea, Coinbase NFT, etc.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.730918566709" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.730937203152" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.730918566709" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.730937203152" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.730918566709" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.730937203152" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -228,11 +228,17 @@
         <span>Royalty Registry</span>
     </h2>
 </doc-anchor-target>
-<p>The <a href="https://royaltyregistry.xyz/lookup">Royalty Registry</a> is an on-chain tool used by many marketplaces (OpenSea, Coinbase NFT, etc.) to query royalty payment addresses and percentages when a token is sold. The Royalty Registry lives on the Ethereum blockchain and is decentralized.</p>
-<doc-anchor-target id="royalties-overview">
+<p>The <a href="https://royaltyregistry.xyz/lookup">Royalty Registry</a> is an on-chain tool used by many marketplaces ((soon) OpenSea, Coinbase NFT, etc.) to query royalty payment addresses and percentages when a token is sold. The Royalty Registry lives on the Ethereum blockchain and is decentralized.</p>
+<blockquote>
+<p><span class="docs-emoji">&#x26A0;&#xFE0F;</span> Art Blocks Engine contracts integrate with the Royalty Registry directly to handle many projects and artists on a single contract. Please do not use the <a href="https://royaltyregistry.xyz/configure">Royalty Registry&#x27;s &quot;Configure&quot; UI</a> to configure the royalties for your Engine contracts. Doing so will result in incorrect royalty payments across many projects. Instead, see the documentation below.</p>
+</blockquote>
+<blockquote>
+<p>Note that the <a href="https://royaltyregistry.xyz/lookup">Royalty Registry&#x27;s &quot;Lookup&quot; UI</a> is a great tool for confirming that your Engine contracts are configured correctly after the configuration steps below have been completed.</p>
+</blockquote>
+<doc-anchor-target id="royalty-payment-addresses">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#royalties-overview">#</doc-anchor-trigger>
-        <span>Royalties Overview</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#royalty-payment-addresses">#</doc-anchor-trigger>
+        <span>Royalty Payment Addresses</span>
     </h2>
 </doc-anchor-target>
 <p>For Engine contracts, the following addresses may receive royalties:</p>
@@ -241,58 +247,80 @@
 <thead>
 <tr>
 <th>Party</th>
-<th>Address defined:</th>
-<th>Royalty Percentage</th>
+<th>Typical Royalty Percentage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Platform (Engine Partner)</td>
-<td><strong>defined and configured on Royalty Registry override contract</strong></td>
-<td>default 2.5%, configurable on override contract</td>
+<td>default 2.5%</td>
 </tr>
 <tr>
 <td>Render Provider (Art Blocks)</td>
-<td>defined on Engine core contract</td>
-<td>default 2.5%, configurable on override contract</td>
+<td>default 2.5%</td>
 </tr>
 <tr>
 <td>Artist</td>
-<td>defined on Engine core contract</td>
-<td>defined on Engine contract, typically 5%</td>
+<td>typically 5%, but configureable by artist</td>
 </tr>
 <tr>
 <td>Additional Payee</td>
-<td>defined on Engine core contract</td>
-<td>defined on Engine contract</td>
+<td>split between Artist &amp; Additional Payee varies across projects</td>
 </tr>
 </tbody>
 </table>
 </div>
-<doc-anchor-target id="required-setup">
+<doc-anchor-target id="configuring-royalties">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#required-setup">#</doc-anchor-trigger>
-        <span>Required Setup</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configuring-royalties">#</doc-anchor-trigger>
+        <span>Configuring Royalties</span>
     </h2>
 </doc-anchor-target>
+<p>V3 and V2 Engine contracts are configured differently. V3 Engine contracts are the latest version of the Art Blocks Engine contracts. Since they were designed after the Royalty Registry was released, they automatically integrate with with the Royalty Registry. V2 Engine contracts also integrate with the Royalty Registry, but have a shim-layer that must also be configured. This is because V2 Engine contracts were designed before the Royalty Registry was released.</p>
+<doc-anchor-target id="configuring-v3-engine-contracts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configuring-v3-engine-contracts">#</doc-anchor-trigger>
+        <span>Configuring V3 Engine Contracts</span>
+    </h2>
+</doc-anchor-target>
+<p>Simply configure the relevant royalty payment details on the token contract itself:</p>
+<p><strong>admin (contract-wide):</strong></p>
+<ul>
+<li>Ensuring platform and render provider payment addresses are correct, updateable by contract admin by calling <code v-pre>updateProviderSalesAddresses</code> on the Engine core contract</li>
+<li>Ensuring platform and render provider payment percentages are correct, updateable by contract admin by calling <code v-pre>updateProviderSecondarySalesBPS</code> on the Engine core contract</li>
+</ul>
+<p><strong>artist (project-specific):</strong></p>
+<ul>
+<li>Ensuring the project&#x27;s artist royalty percentage is correct, updateable on the website by the artist in their project dashboard.</li>
+<li>Ensuring the project&#x27;s artist and additional payee splits are correct, updateable on the website by the artist in their project dashboard.</li>
+</ul>
+<doc-anchor-target id="configuring-v2-engine-contracts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configuring-v2-engine-contracts">#</doc-anchor-trigger>
+        <span>Configuring V2 Engine Contracts</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="required-v2-setup">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#required-v2-setup">#</doc-anchor-trigger>
+        <span>Required V2 Setup</span>
+    </h3>
+</doc-anchor-target>
 <p>The following steps are required before Art Blocks Engine contracts will integrate properly with the Royalty Registry.</p>
-<ol type="A">
-<li>Pre-setup:</li>
-</ol>
+<p><strong>A. Pre-setup:</strong></p>
 <ul>
 <li>Ensure every project has the desired artist royalty percentage set on the Engine contract.
 <ul>
 <li>IMPORTANT: This percentage represents the percentage of the total token sale that will be paid to a combination of artist &amp; additional payee. It is typically 5%. Additionally, the default 2.5% to the Engine platform (you) and 2.5% to render provider (Art Blocks) will be also added by the Royalty Registry override contracts below.</li>
-<li><strong>Only artists</strong> may update their project&#x27;s royalty percentage. They can call <code v-pre>updateProjectSecondaryMarketRoyaltyPercentage(&lt;_projectId&gt;, &lt;_royaltyPercentage&gt;)</code> on the Engine contract from their artist wallet. Typically royalty percentage would be the number 5, representing 5%.</li>
-</ul>
-</li>
-</ul>
+<li><strong>Only artists</strong> may update their project&#x27;s royalty percentage. They can call <code v-pre>updateProjectSecondaryMarketRoyaltyPercentage(&lt;_projectId&gt;, &lt;_royaltyPercentage&gt;)</code> on the Engine contract from their artist wallet. Typically royalty percentage would be the number 5, representing 5%.
 <blockquote>
 <p><strong>Note:</strong> This percentage is different than what OpenSea has asked us to do with their off-chain royalty system. In the old system, typically 5%+2.5%+2.5%=10% was set on OpenSea&#x27;s website because they only supported bulk payments to a single address. In the new on-chain system, payments to more than a single address will be supported.</p>
 </blockquote>
-<ol type="A" start="2">
-<li>Royalty Registry Integration:</li>
-</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>B. Royalty Registry Integration:</strong></p>
 <ol>
 <li>Create a new override on the Royalty Registry for your Engine core contract
 <ul>
@@ -314,11 +342,11 @@
 </li>
 </ol>
 <p>Now you will automatically be receiving royalties from sales on secondary markets that support use of the Royalty Registry!</p>
-<doc-anchor-target id="optional-configuring">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#optional-configuring">#</doc-anchor-trigger>
-        <span>Optional Configuring</span>
-    </h2>
+<doc-anchor-target id="optional-v2-configuring">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#optional-v2-configuring">#</doc-anchor-trigger>
+        <span>Optional V2 Configuring</span>
+    </h3>
 </doc-anchor-target>
 <p>Royalty percentages of 2.5% are used by default by the Art Blocks Engine royalty override contract. The <code v-pre>admin</code> of any given Engine core contract can override these percentages by calling <code v-pre>updatePlatformBpsForContract</code> or <code v-pre>updateRenderProviderBpsForContract</code> on the Art Blocks Engine royalty override contract, <a href="https://etherscan.io/address/0x31e1cc72e6f9e27c2ecbb500d978de1691173f5f#writeContract">0x31E1cC72E6f9E27C2ECbB500d978de1691173F5f</a>, on etherscan</p>
 <blockquote>
