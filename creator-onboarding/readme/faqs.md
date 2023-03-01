@@ -9,10 +9,19 @@ To suggest a question to be added, fill out this form: [Creator FAQs Suggestion 
 
 ## Application
 
+### How can a generative artist be published in Art Blocks?
+
+Art Blocks has an application form that generative artists can submit. Please note that we are becoming increasingly selective, only accepting around 2% of projects submitted for release.
+
+You can find out an application here: [artblocks.io/apply](https://www.artblocks.io/apply)
+
+You will receive a project shell on our staging site when you apply. This project shell is where you will upload your project to Art Blocks for review. Only the wallet address connected to Art Blocks will have access to the project shell when applying. The shell creation ensures that all projects are compatible with Art Blocks and reviewed using a standard format.
+
+
 ### When can I expect to hear back after I submit an application?
 
 When you're ready to proceed to our screening stage, please email apply@artblocks.io with a link to your staging shell. 
-Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 50-70 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. The team will let you know when the work will be screened and give you a timeline for the acceptance decision. 
+Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 40-50 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. The team will let you know when the work will be screened and give you a timeline for the acceptance decision. 
 
 ### Are we notified of the result (accepted/rejected) or only if it is accepted?
 
@@ -22,33 +31,21 @@ After you notify the team that you are ready for review by emailing apply@artblo
 
 Please reuse the shell that was created upon application if you’d like to submit a new project, and this process is applied to artists who were rejected and would like to re-submit a prototype for review. Upload your new script and refresh the thumbnails to update your staging shell. 
 
-### How can a generative artist be published in Art Blocks?
-
-Art Blocks has an application form that generative artists can submit. Please note that we are becoming increasingly selective, only accepting around 2% of projects submitted for release.
-
-You can find out an application here: artblocks.io/apply
-
-You will receive a project shell on our staging site when you apply. This project shell is where you will upload your project to Art Blocks for review. Only the wallet address connected to Art Blocks will have access to the project shell when applying. The shell creation ensures that all projects are compatible with Art Blocks and reviewed using a standard format.
-
 ### What happens after I apply?
 
-We'll reach out to check on the status of your project submission when we reach your application in the queue. You can share any updates with us, or let us know if you need a bit more time to finish uploading and iterating your script. After we have your final submission, it will be reviewed, and you will be notified whether or not your project is selected for an Art Blocks launch. If your project is selected, you'll move into the [Artist Onboarding Steps](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/).
+Once you apply, you will have access to a staging shell on testnet. There, you can upload your generative script and mint test outputs. Prototypes should have 40-50 mints, a project description, and feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. When you're ready to proceed to our screening stage, please email apply@artblocks.io with a link to your staging shell. All prototypes should be completely finished before review. The Art Blocks team will give you a timeline as to when the project will be reviewed and when you will be  notified whether or not your project is selected for an Art Blocks launch. Please note, we are becoming increasingly selective, only accepting 2% of projects submitted for release. Take your time in the artistic process to ensure you are bringing forth your best work. 
 
 ### I cannot fill out the application form on Typeform. 
 
 Please note that we have moved our application to artblocks.io/apply. You will receive a project shell on our staging site when you apply. This project shell is where you will upload your project to Art Blocks for review. Only the wallet address connected to Art Blocks will have access to the project shell when applying. The shell creation ensures that all projects are compatible with Art Blocks and reviewed using a standard format.
 
-### I applied using artblocks.io/apply, and after connecting my wallet, I couldn’t fill out any form. 
-
-Try clearing your cache. 
-
 ### How do I know the application period to send my first work?
 
-For the time being, applications will remain open indefinitely. To learn more about the application process, visit [apply.artblocks.io](apply.artblocks.io).
+Applications will remain open indefinitely. To learn more about the application process, visit [artblocks.io/apply](artblocks.io/apply). 
 
 ### What is the process for submitting my first work?
 
-You may apply using [this application form](artblocks.io/apply). We expect that artists have a creative history and the ability to provide an original generative script.
+You may apply using [this application form](artblocks.io/apply). 
 
 ### I received a link to upload my prototype, but it's not working; what should I do? 
 
@@ -56,13 +53,33 @@ Clear your cache and ensure you are connected to the wallet you applied with and
 
 ### At the time of submission, I did not put a project preview. If I do it now, does it restart the application process to zero? Can it help in the process?
 
-Applications are logged in chronological order in our database. You will let us know that your prototype is ready to be reviewed for release by emailing apply@artblocks.io. Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 50-70 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. 
+Applications are logged in chronological order in our database. You will let us know that your prototype is ready to be reviewed for release by emailing apply@artblocks.io. Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 40-50 mints, a project description, and feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. 
 
-## Artist Application Technical Questions 
+## Staging 
+
+### Is it possible to see my project without being connected to my wallet? So I can test it across different devices and browsers without connecting?
+
+No, this is not currently possible. You'll need to be signed in with your wallet to access your project. You can however view live view links without being connected to a wallet. To view a live view link while your shell is private, add `?render=true/` to the end of the URL.
+
+### What is the MinterSuite, and how does it work? 
+
+The MinterSuite allows artists to set specific minting contracts on a per-project basis. The MinterSuite currently includes the following minter options, which will continue to be expanded over time: 
+
+**Set Price - ETH** is used for fixed price releases.
+
+**Automated Exponential Dutch Auction**: For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops.
+
+**Automated Linear Dutch Auction:** For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time.
+
+**Set price in custom ERC20:** Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale. 
+
+**Set Price - ETH, Allowlisted Users Only (V1)** these are addresses that are allowed to mint as many times as they want until they reach the mint limit (artists sets mint/wallet)
+
+To find out how to set your project price using the MinterSuite visit [this page](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter). 
 
 ### The documentation states that only one external library can be used, and then there is a list of some libraries. I’m unsure if this is the list of libraries allowed to use or only examples of popular libraries. Can I, for example, use a game engine library that is not on that list? 
 
-Everything on the Limited Dependencies list in our Creator Documentation is compatible with the platform. See here: https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies
+Everything on the limited dependencies list in our Creator Documentation is compatible with the platform. See here: https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies
 
 ### I have opened my shell on the staging site but cannot upload sample outputs of my prototype. 
 
@@ -74,21 +91,21 @@ All Art Blocks work is completely on-chain. Artists must upload their technicall
 
 ### My script works and is shown in "Explore Possibilities," but my test mints are not showing. The console is showing many NextJs script errors. Any suggestions? Could it be my script's fault?
 
-Your script has to work to be the correct version of the limited dependencies accepted by the platform. Learn more here: https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies
+Your script must be the same version of the [limited dependencies](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies) accepted by the platform. 
 
 Consider using this starter template, which gives you an environment similar to Art Blocks: https://github.com/ArtBlocks/artblocks-starter-template 
 
 ### Where do I add my public files in the staging environment (html, CSS)? 
 
-The only thing you add is a script, and you can choose a library that will add the container(canvas) and the script import.
+You only need to submit the prototype script, then you can choose a library in the `script` tab of the `edit project` which will add the container(canvas) and the script import.
 
-### There is a difference between my thumbnails and the live view. 
+### There is a difference between my thumbnails and the live views. 
 
 Randomness becomes deterministic when it's seeded, which is what's happening with the Art Blocks token data and suggested Random class. Once initialized, all calls to the random_dec method must remain consistent.  Resolving anything random before starting to draw is handy in that regard, plus you'll also need to provide that code for the calculateFeatures function.
 
 If you're getting inconsistent outputs, the first thing would be to ensure there's no any forgotten Math.random() in your code and that your token data looks okay.
 
-My artwork depends on some deterministic Random function calls, and features depend on it. In the staging environment, the features script is completely separated from the artwork script. How can I calculate the features? The only solution I can see is to rewrite the random calls in the feature script in the same order they are called in the artwork script. Any different, simpler, and safer. approach to suggest me?
+### My artwork depends on some deterministic Random function calls, and features depend on it. In the staging environment, the features script is completely separated from the artwork script. How can I calculate the features? The only solution I can see is to rewrite the random calls in the feature script in the same order they are called in the artwork script. Any different, simpler, and safer. approach to suggest me?
 
 You will rewrite the random calls in the feature script in the same order they are called in the artwork script. More info here: https://docs.artblocks.io/creator-docs/creator-onboarding/readme/features/
 
@@ -112,11 +129,11 @@ Please see [Artist Onboarding Steps](https://docs.artblocks.io/creator-docs/crea
 
 ### Approximately how long will each step of the process take?
 
-Once the artist onboarding process begins, it will take approximately 1-2 months to upload your project, finalize it on testnet, submit it for curation review, finalize it on mainnet, schedule a launch date, and finally release the project. The length of each step differs and depends somewhat on how quickly you, the artist, finalize your scripts. Please see our artist onboarding flow for more information about the timeline of each step.
+Once a project is accepted for release, it will take approximately 1-2 months to finalize your project on testnet, submit it for curation review, upload the script on mainnet, schedule a launch date, and finally release the project. The length of each step differs and depends somewhat on how quickly you, the artist, finalize your scripts. Please see our [Artist Onboarding Steps](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/) for more information about the timeline of each step.
 
 ### Who can I reach out to if I have questions?
 
-For questions related to your application, please post your inquiry in #artist-application-support. You may also use the #help channel 
+For questions related to your application, please post your inquiry in #artist-applications. You may also use the #help channel 
 
 ## Curation Review 
 
@@ -160,29 +177,7 @@ You can use text in your project! Font choice is technically at your discretion,
 
 Any computer with an internet connection will work! No special graphics cards are required.
 
-## Staging 
-
-### Is it possible to see my project without being connected to my wallet? So I can test it across different devices and browsers without connecting?
-
-No, this is not currently possible. You'll need to be signed in with your wallet to access your project. You can however view live view links without being connected to a wallet. To view a live view link while your shell is private, add `?render=true/` to the end of the URL.
-
-### What is the MinterSuite, and how does it work? 
-
-The MinterSuite allows artists to set specific minting contracts on a per-project basis. The MinterSuite currently includes the following minter options, which will continue to be expanded over time: 
-
-**Set Price - ETH** is used for fixed price releases.
-
-**Automated Exponential Dutch Auction**: For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops.
-
-**Automated Linear Dutch Auction:** For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time.
-
-**Set price in custom ERC20:** Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale. 
-
-**Set Price - ETH, Allowlisted Users Only (V1)** these are addresses that are allowed to mint as many times as they want until they reach the mint limit (artists sets mint/wallet)
-
-To find out how to set your project price using the MinterSuite visit [this page](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#minter). 
-
-## Uploading Your Script 
+## Uploading Your Script to Mainnet
 
 ### How much money / ETH do I need to upload my project?
 
