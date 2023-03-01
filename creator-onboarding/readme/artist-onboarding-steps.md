@@ -27,7 +27,7 @@ Please note that all Art Blocks team members are working within US time zones, w
 
 ## 3. Script test runs and project review
 
-**When you're ready to proceed to our screening stage, please email apply@artblocks.io/ with a link to your staging shell.**
+**When you're ready to proceed to our screening stage, please email apply@artblocks.io with a link to your staging shell.**
 
 Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 40-50 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. The team will let you know when the work will be screened and give you a timeline for the acceptance decision. 
 
