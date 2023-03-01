@@ -56,7 +56,7 @@ Clear your cache and ensure you are connected to the wallet you applied with and
 
 ### At the time of submission, I did not put a project preview. If I do it now, does it restart the application process to zero? Can it help in the process?
 
-Applications are logged in chronological order in our database. You will let us know that your prototype is ready to be reviewed for release by emailing artblocks.io/apply. Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 50-70 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. 
+Applications are logged in chronological order in our database. You will let us know that your prototype is ready to be reviewed for release by emailing apply@artblocks.io. Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 50-70 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. 
 
 ## Artist Application Technical Questions 
 
