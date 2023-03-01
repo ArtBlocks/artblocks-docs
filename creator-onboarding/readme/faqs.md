@@ -11,17 +11,36 @@ To suggest a question to be added, fill out this form: [Creator FAQs Suggestion 
 
 ### When can I expect to hear back after I submit an application?
 
-Once an application is submitted, it’s added to our pipeline for review. Depending on the volume of applications, it can take anywhere from a few weeks to a few months before you can expect to hear from us. The first conversation will focus on the status of your project, including reviewing test outputs.
+When you're ready to proceed to our screening stage, please email apply@artblocks.io with a link to your staging shell. 
+Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 50-70 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. The team will let you know when the work will be screened and give you a timeline for the acceptance decision. 
 
-We highly recommend you take advantage of this time to continue refining your script and to gather your supporting materials. This not only improves the project, but will accelerate the on-boarding process.
+### Are we notified of the result (accepted/rejected) or only if it is accepted?
+
+After you notify the team that you are ready for review by emailing apply@artblocks.io, the team will let you know when the work will be screened and give you a timeline for the acceptance decision. 
+
+### If I change my mind about the collection I am trying to release, can I just change it in my current project id, or should I re-apply?
+
+Please reuse the shell that was created upon application if you’d like to submit a new project, and this process is applied to artists who were rejected and would like to re-submit a prototype for review. Upload your new script and refresh the thumbnails to update your staging shell. 
+
+### How can a generative artist be published in Art Blocks?
+
+Art Blocks has an application form that generative artists can submit. Please note that we are becoming increasingly selective, only accepting around 2% of projects submitted for release.
+
+You can find out an application here: artblocks.io/apply
+
+You will receive a project shell on our staging site when you apply. This project shell is where you will upload your project to Art Blocks for review. Only the wallet address connected to Art Blocks will have access to the project shell when applying. The shell creation ensures that all projects are compatible with Art Blocks and reviewed using a standard format.
 
 ### What happens after I apply?
 
 We'll reach out to check on the status of your project submission when we reach your application in the queue. You can share any updates with us, or let us know if you need a bit more time to finish uploading and iterating your script. After we have your final submission, it will be reviewed, and you will be notified whether or not your project is selected for an Art Blocks launch. If your project is selected, you'll move into the [Artist Onboarding Steps](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/artist-onboarding-steps/).
 
-### What is the expected timeline for hearing back from Art Blocks throughout the application process?
+### I cannot fill out the application form on Typeform. 
 
-Once your application has been reached in the queue, you can expect responses within 48 hours during weekdays. Please note that weekends are not working hours for Art Blocks. For communications sent over the weekend, please allow 72 hours for a response.
+Please note that we have moved our application to artblocks.io/apply. You will receive a project shell on our staging site when you apply. This project shell is where you will upload your project to Art Blocks for review. Only the wallet address connected to Art Blocks will have access to the project shell when applying. The shell creation ensures that all projects are compatible with Art Blocks and reviewed using a standard format.
+
+### I applied using artblocks.io/apply, and after connecting my wallet, I couldn’t fill out any form. 
+
+Try clearing your cache. 
 
 ### How do I know the application period to send my first work?
 
@@ -30,6 +49,60 @@ For the time being, applications will remain open indefinitely. To learn more ab
 ### What is the process for submitting my first work?
 
 You may apply using [this application form](artblocks.io/apply). We expect that artists have a creative history and the ability to provide an original generative script.
+
+### I received a link to upload my prototype, but it's not working; what should I do? 
+
+Clear your cache and ensure you are connected to the wallet you applied with and using the Goerli test network. 
+
+### At the time of submission, I did not put a project preview. If I do it now, does it restart the application process to zero? Can it help in the process?
+
+Applications are logged in chronological order in our database. You will let us know that your prototype is ready to be reviewed for release by emailing apply@artblocks.io. Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 50-70 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. 
+
+## Artist Application Technical Questions 
+
+### The documentation states that only one external library can be used, and then there is a list of some libraries. I’m unsure if this is the list of libraries allowed to use or only examples of popular libraries. Can I, for example, use a game engine library that is not on that list? 
+
+Everything on the Limited Dependencies list in our Creator Documentation is compatible with the platform. See here: https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies
+
+### I have opened my shell on the staging site but cannot upload sample outputs of my prototype. 
+
+You must first upload your prototype script and then mint test outputs. Learn how to mint without unpausing your project here: https://docs.artblocks.io/creator-docs/creator-onboarding/testnet-checklist/#test-minting
+
+### Is it possible to create a project on the site without a library code? Is it possible to do a project based on ipfs, or should everything be generated exclusively on Art Blocks? 
+
+All Art Blocks work is completely on-chain. Artists must upload their technically-compatible project scripts to their staging shell to produce a collection. All projects must use the limited dependencies outlined in our Creator Documentation: https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies
+
+### My script works and is shown in "Explore Possibilities," but my test mints are not showing. The console is showing many NextJs script errors. Any suggestions? Could it be my script's fault?
+
+Your script has to work to be the correct version of the limited dependencies accepted by the platform. Learn more here: https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies
+
+Consider using this starter template, which gives you an environment similar to Art Blocks: https://github.com/ArtBlocks/artblocks-starter-template 
+
+### Where do I add my public files in the staging environment (html, CSS)? 
+
+The only thing you add is a script, and you can choose a library that will add the container(canvas) and the script import.
+
+### There is a difference between my thumbnails and the live view. 
+
+Randomness becomes deterministic when it's seeded, which is what's happening with the Art Blocks token data and suggested Random class. Once initialized, all calls to the random_dec method must remain consistent.  Resolving anything random before starting to draw is handy in that regard, plus you'll also need to provide that code for the calculateFeatures function.
+
+If you're getting inconsistent outputs, the first thing would be to ensure there's no any forgotten Math.random() in your code and that your token data looks okay.
+
+My artwork depends on some deterministic Random function calls, and features depend on it. In the staging environment, the features script is completely separated from the artwork script. How can I calculate the features? The only solution I can see is to rewrite the random calls in the feature script in the same order they are called in the artwork script. Any different, simpler, and safer. approach to suggest me?
+
+You will rewrite the random calls in the feature script in the same order they are called in the artwork script. More info here: https://docs.artblocks.io/creator-docs/creator-onboarding/readme/features/
+
+### I set up the features, types, and options in my staging shell, and copied my original code into the `Calculate Features` section, removed all the p5.js drawing, then set it up to build key-value pairs. Right now, I have the key-value pairs being assigned to an object called "features." How do I get the script to return the right object? The code isn't giving me any errors, but no features appear when I look at the mints. 
+
+You should have the function return the dictionary with the features iirc, using the syntax `return {object name}`. If the problem still occurs, clear your cache. There may also be an authentication issue, so log out and log back into your wallet. 
+
+### Can I visually verify my code is working properly through the Art Blocks staging platform?
+
+If you can mint test outputs successfully, your script will likely be compatible with the platform. Check out our technical documentation here: https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#documentation
+
+### Where is the mint button? Do we have to set a price? 
+
+Learn how to mint without unpausing your project here: https://docs.artblocks.io/creator-docs/creator-onboarding/testnet-checklist/#test-minting
 
 ## Artist Pipeline 
 
