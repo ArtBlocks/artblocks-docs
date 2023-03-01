@@ -6,7 +6,7 @@ Below, you'll find an overview of each step of our onboarding process, as well a
 
 ## 1. Application
 
-For the time being, applications will remain open. You may apply using this [link](https://www.artblocks.io/apply). We expect that artists have a creative history and the ability to provide an original generative script. If you plan to work collaboratively, please provide complete information for all contributors. All submitted work must be original. We do not intend to release projects that use licensed, purchased, or recycled content. Please make sure you’re bringing your unique project to Art Blocks. If you’ve applied after October 28, 2022, you’ll be given a staging shell to deploy your script on testnet.
+For the time being, applications will remain open. You may apply using this [link](https://www.artblocks.io/apply). We expect that artists have a creative history and the ability to provide an original generative script. If you plan to work collaboratively, please provide complete information for all contributors. All submitted work must be original. We do not intend to release projects that use licensed, purchased, or recycled content. Please make sure you’re bringing your unique project to Art Blocks.  You will receive a project shell on our staging site when you apply. This project shell is where you will upload your project to Art Blocks for review. Only the wallet address connected to Art Blocks will have access to the project shell when applying. The shell creation ensures that all projects are compatible with Art Blocks and reviewed using a standard format. 
 
 To learn more about the application process please visit [artblocks.io/apply](artblocks.io/apply).
 
@@ -20,7 +20,6 @@ You'll be asked to upload your project to the artist staging site on the Goerli 
 
 Please mint 40-50 test mints to produce a wide variety before review. At this stage, the creative components of your project should be almost completely finalized and appear the way you would want them to for the official launch. In addition, you will also want to provide a project description and include your features script. To confirm you’ve included everything in your staging shell, refer to the [Testnet Checklist] (testnet-checklist.md). Required fields are marked in testnet with a “📄: fields required for artist screening” indication. As you are uploading to testnet, you only need to fill in fields with this indication. 
 
-
 Please note that all Art Blocks team members are working within US time zones, which means that there may be a delay in processing requests. 
 
 [!badge Timeline: Artist-dependent, but most artists spend about 1 week on this step]
@@ -28,7 +27,9 @@ Please note that all Art Blocks team members are working within US time zones, w
 
 ## 3. Script test runs and project review
 
-Once you’ve reached your spot in the queue, Art Blocks Art Team will reach out via email to confirm you’re ready to move on to the first screening. 
+**When you're ready to proceed to our screening stage, please email apply@artblocks.io with a link to your staging shell.**
+
+Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 40-50 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. The team will let you know when the work will be screened and give you a timeline for the acceptance decision. 
 
 The first screening determines if a work is accepted onto the platform. A committee made up of Art Blocks' staff and generative art experts conducts this screening. This review focuses on overall aesthetics, mint variety, and the degree to which a project explores new territory technically, visually, and conceptually. With the high quantity and quality of submissions, Art Blocks is highly selective and can accept only roughly 15% of applications.
 
@@ -36,7 +37,7 @@ If your project is selected, you'll move into the Creator Terms step. If it is n
 
 Note: This stage does not determine if your project will be a Curated release.
 
-[!badge Timeline: 2-4 weeks]
+[!badge Timeline: 3-6 weeks]
 
 ## 4. Creator terms
 
