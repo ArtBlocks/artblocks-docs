@@ -36,7 +36,7 @@ For exponential Dutch auctions, artists specify the starting price, ending price
 
 For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time. Collectors will pay more for tokens purchased earlier in the auction, and less for tokens purchased later in the auction.
 
-## `Set price in custom ERC20`
+## `Set price in Custom ERC20`
 
 Set price in ERC20 is a fixed price minter that allows accepting any ERC20 token as payment for your sale of tokens. In addition to specifying a fixed price, artists will specify the ERC20 token address for the custom token sale.
 
@@ -58,7 +58,7 @@ Note that vault delegation via [Delegate Cash](https://delegate.cash/) is availa
 
 This minter allows tokens to be minted with ETH when the purchaser owns a token from one or more allowlisted Art Blocks or Art Blocks Engine project. This contract does not track if a purchaser has/has not minted already (ie. a "mint limit" is not available) -- it simply restricts purchasing to anybody that holds one or more of a specified list of ERC-721 NFTs.
 
-Artists may use the artist dashboard to pre-select a list of allowlisted Art Blocks or Art Blocks Engine projects, of which any valid token holders will be able to purchase for the upcoming project. Note that a "snapshot" won't apply to this minter -- after the project's been made public, users can purchase a token from any allowlisted project and mint freely.
+Artists may use the artist dashboard to pre-select a list of allowlisted Art Blocks or Art Blocks Engine projects, of which any valid token holders will be able to purchase for the upcoming project. Note that a "snapshot" won't apply to this minter -- after the project has been made public, users can purchase a token from any allowlisted project and mint freely.
 
 !!!info
 Note that vault delegation via [Delegate Cash](https://delegate.cash/) is available for the Token Holders Only minter. For more details please visit this [video walkthrough](https://www.youtube.com/watch?v=2-AgG--zcaw&list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&index=5).

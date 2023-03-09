@@ -207,8 +207,15 @@ For linear Dutch auctions, artists will specify the `starting time`, `starting p
 
 Pricing of tokens on this minter is only supported as a fixed price, in ETH.
 
+To set up an allowlist for your project:
+
+1. Select `Set Price - ETH, Allowlisted Users Only`
+2. Upload your .csv or .txt file. See info box below for more details.
+3. Enter your fixed price
+4. We recommend leaving the mint per wallet limit to 1 for allowlist. If you would like to adjust this, please let the Art Blocks Team know.
+
 !!!info
-For details on how to create and upload an allowlist, please see the _Allowlisted Users Only_ portion of the [Minter Suite Overview](#minter-suite-overview-⛽📄) section above.
+Artists are responsible for crafting their allowlist and uploading a comma-separated list of ETH addresses in a .txt or .CSV file to the artist dashboard. These wallet addresses cannot be ENS names, but list the full address of the wallet. [Premint](https://www.premint.xyz/) is a super helpful tool for creating an allowlist by using social channels to reach collectors, friends, family, etc. In addition, Art Blocks hosts a [Python script](https://github.com/ArtBlocks/artblocks-community-tooling/tree/main/SnapshotABHolders) for retrieving & snapshotting either a list of all Art Blocks token holders or the token-holders of a specific project.
 !!!
 
 ---
@@ -217,9 +224,7 @@ For details on how to create and upload an allowlist, please see the _Allowliste
 
 Pricing of tokens on this minter is only supported as a fixed price, in ETH.
 
-!!!info
-For details on how to specify which token holders are allowed to mint your project, please see the _Token Holders Only_ portion of the [Minter Suite Overview](#minter-suite-overview-⛽📄) section above.
-!!!
+Artists may use the artist dashboard to pre-select a list of allowlisted Art Blocks or Art Blocks Engine projects, of which any valid token holders will be able to purchase for the upcoming project. Note that a "snapshot" won't apply to this minter -- after the project has been made public, users can purchase a token from any allowlisted project and mint freely.
 
 ---
 
