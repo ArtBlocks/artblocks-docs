@@ -1,6 +1,7 @@
 ---
 order: 900
 ---
+
 # Project Form Fields Guide
 
 Below, you'll find a guide to all form fields and buttons within testnet and mainnet project environments.
@@ -20,11 +21,12 @@ The Edit Project button will lead to the back end of your shell, where you will 
 
 ## Project:
 
-### Project name  ⛽📄
+### Project name ⛽📄
 
 This is the public name of your project.
 
-### Artist name  ⛽📄
+### Artist name ⛽📄
+
 This is how your name will appear on Art Blocks. What you choose to enter here is up to your personal preference.
 
 ### Project website ⛽
@@ -34,7 +36,8 @@ This field is optional. The link entered in your project website field should le
 Make sure to enter a fully defined website link, including the `https://`
 
 ### Project description ⛽📄
-The project description is a key opportunity to highlight your intentions and provide an interpretative frame around how you want a viewer/collector to approach your project. If you are struggling with this element, we have a series of prompts to guide your first draft. 
+
+The project description is a key opportunity to highlight your intentions and provide an interpretative frame around how you want a viewer/collector to approach your project. If you are struggling with this element, we have a series of prompts to guide your first draft.
 • Begin with a strong, clear opening sentence.
 
 • Lead with the artistic inquiry; what questions can be prompted or answered through this work?
@@ -57,27 +60,31 @@ Art Blocks recommends selecting a license that aligns with your values as a crea
 
 ## Token:
 
-### Sales Notes 
-This describes project-specific sales mechanics. 
+### Sales Notes
 
-### Charitable Giving Details 
+This describes project-specific sales mechanics.
+
+### Charitable Giving Details
+
 This is where you will describe the charitable giving component of your drop, if applicable. The majority of projects released on Art Blocks choose to earmark at least 25% for this giving opportunity, but the final figure is up to you. An example of a charitable giving description is: `25% of proceeds above the resting price will be donated to non-profit educational organizations in Arizona dedicated to protecting the Sonoran Desert and its Native culture.`
 
 ### Maximum invocations ⛽
+
 This is your total project series size.
 
 ### Base uri ⛽
+
 [Mainnet Only] If you are an artist, your project base uri field should be: https://api.artblocks.io/token/.
 
 ## Script:
 
 ### Script type ⛽📄
 
-Select your script type and the version number of that dependency from the drop-down menu provided.  Artists must define the library AND version (when applicable).
+Select your script type and the version number of that dependency from the drop-down menu provided. Artists must define the library AND version (when applicable).
 
-### Aspect ratio (width/height) 
+### Aspect ratio (width/height)
 
-Your project’s outputs must be dimension agnostic, meaning they will scale  seamlessly to any window size. See more on this [here](readme.md#dimensionless). This field sets the aspect ratio for image renders but does not impact an output’s live view.
+Your project’s outputs must be dimension agnostic, meaning they will scale seamlessly to any window size. See more on this [here](readme.md#dimensionless). This field sets the aspect ratio for image renders but does not impact an output’s live view.
 
 While you can control the aspect ratio, you will have no control over the dimensions of the browser on which your project will be viewed.
 
@@ -85,7 +92,7 @@ Your aspect ratio should be a single number. This will be your token’s width d
 
 ### Render delay 📄
 
-If your piece takes a certain amount of time to render fully, you can type in the render delay to let the server know when to render your output’s thumbnails. This render time will be in milliseconds. If your algorithm is GPU intensive, and thumbnails do not render after the render delay, request `Enhanced GPU Rendering`. For accepted artists, file the request in your artist DM. For applying artists, file your request in the Art Blocks’ Discord Channel #artist-application-support. 
+If your piece takes a certain amount of time to render fully, you can type in the render delay to let the server know when to render your output’s thumbnails. This render time will be in milliseconds. If your algorithm is GPU intensive, and thumbnails do not render after the render delay, request `Enhanced GPU Rendering`. For accepted artists, file the request in your artist DM. For applying artists, file your request in the Art Blocks’ Discord Channel #artist-application-support.
 
 ### Display static (toggle)
 
@@ -94,6 +101,7 @@ If red, the project’s primary view will be dynamic; if blue, the project’s p
 For optimized performance, toggle `display static` if outputs are not animated, but take a long time to render.
 
 ### Project scripts ⛽📄
+
 Here, you will upload your project’s script. Your features script should be separate from your project script.
 
 Remember, tokenData.hash is a global variable in the environment this script will live in, so you do not need to define tokenData in your script, except your script will have access to it.
@@ -120,65 +128,106 @@ For many artists, the process for writing your features script will likely entai
 
 ## Minter:
 
-### MinterSuite ⛽📄
+!!!info
+For an overview of all minters available on Art Blocks, please see the [Minter Suite](minter-suite.md) page.
 
-The MinterSuite is an update to our broader smart-contract architecture at Art Blocks that allows artists to set specific minting contracts on a per-project basis.
+### Configuring Your Minter ⛽📄
 
-The MinterSuite currently includes the following minter options, which will continue to expand over time:
-**Set Price - ETH** is used for fixed price releases
+Go to the Minter tab within your shell and select the ‘minter for project’ drop-down menu. From that menu, select your desired MinterSuite option. [Please note that mint #0 will be created using the Set Price- ETH option.]
 
-**Automated Exponential Dutch Auction**: For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops. 
+Once the desired minter is selected, you will be able to input and configure your minter's pricing and other relevant information, performing any necessary transactions along the way. For help determining pricing and configuration, please see the [Minting on Mainnet](#minting-on-mainnet) section below.
 
-**Dutch Auction with Settlement - Exponential Price Decrease**
+### Minting on Staging
 
-In this option, collectors will pay the price of the last mint. Collectors who purchase above this price will be able to claim a settlement after the auction which will be the difference between the price they purchased at and the last purchase price. What this means for artists is that you would claim your revenue after the project’s sell out/after the dutch auction duration in one transaction. The Dutch auction with settlement minter can be coupled with an allowlist minter. In this case, the allowlist must come before the dutch auction with settlement*.
+After you’ve uploaded your script and you’re ready to start minting, ensure your `minter` is set to `Set Price - ETH (V4)`. You’ll want to set your mint price at `.0` since you’re using Goerli ETH.
 
-*This minter employs a lot of game theory on the collector’s end. While all collectors will pay the resting price of the auction, we do not expect the overall revenue that artists receive to decrease between this option and the exponential Dutch auction without settlement. While we begin rolling this option out, we will continue to allow DAs without settlement, but we would like to move towards all DAs including settlement in the future. 
+### Minting on Mainnet
 
+This section provides an overview of how to configure your selected minters on mainnet. The Art Blocks team can assist and advise in determining the best type of minter and associated pricing parameters.
 
-**Automated Linear Dutch Auction**: For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time.
+Based on your selected minter option, you will need to set your project price. The different pricing mechanics are outlined below.
 
-**Set price in custom ERC20**: Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale. 
+!!!info
+Note that all current production minters support the ability to limit the number of mints on that specific minter for your project. This means that multiple minters may be used sequentially for a given project.
+!!!
 
-**Set Price - ETH, Allowlisted Users Only (V5)** is used for allowing only a predetermined list of wallet addresses to mint. These wallets can mint unlimited times until the project invocations limit is reached (if no mint limit was set) or as many times as they want until they reach the mint limit. 
+---
 
-Artists can choose the list of addresses to allow as well as the # of mints allowed per-wallet. Currently, artists are responsible for crafting their allowlist and uploading a comma-separated list of ETH addresses in a .txt or .CSV file to the artist dashboard. These wallet addresses cannot be ENS names, but list the full address of the wallet. [Premint](https://www.premint.xyz/) is a super helpful tool for creating an allowlist by using social channels to reach collectors, friends, family, etc. In addition, Art Blocks hosts a [Python script](https://github.com/ArtBlocks/artblocks-community-tooling/tree/main/SnapshotABHolders) for retrieving & snapshotting either a list of all Art Blocks token holders or the token-holders of a specific project.
+**Set Price Minters (ETH | ERC20)**
 
-Note that vault delegation via [Delegate Cash](https://delegate.cash/) is available for the Allowlisted Users minter. For more details please visit this [video walkthrough](https://www.youtube.com/watch?v=2-AgG--zcaw&list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&index=5).
+The price to purchase a token is set by the artist and is the same for all purchasers.
 
-**Set Price - ETH, Token Holders Only (V4)** this minter allows its tokens to be minted with ETH when the purchaser owns an allowlisted ERC-721 NFT. This contract does NOT track if a purchaser has/has not minted already (ie. a "mint limit" is not available) -- it simply restricts purchasing to anybody that holds one or more of a specified list of ERC-721 NFTs.
+If using an ERC20 minter, the artist will need to specify the ERC20 token address for the custom token sale.
 
-Artists may use the artist dashboard to pre-select a list of allowlisted projects, of which any valid token holders will be able to purchase for the upcoming project. Note that a "snapshot" won't apply to this minter -- after the project's been made public, users can purchase a token from any allowlisted project and mint freely.
+---
 
-Note that vault delegation via [Delegate Cash](https://delegate.cash/) is available for the Token Holders Only minter. For more details please visit this [video walkthrough](https://www.youtube.com/watch?v=2-AgG--zcaw&list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&index=5).
+**Automated Exponential Dutch Auction (with settlement | without settlement)**
 
-**[Artists on Staging]** After you’ve uploaded your script and you’re ready to start minting, ensure your `minter` is set to `Set Price - ETH (V2)`. You’ll want to set your mint price at `.0` since you’re using Goerli ETH. 
+!!!info
+In addition to the information below, please see the [Project Pricing: Dutch Auction Settings](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/) section for more information on how to determine the appropriate pricing parameters for your auction.
+!!!
 
-### How to set your Project Price
+For exponential Dutch auctions, artists specify the `start time`, `starting price`, `ending price`, and `half-life` for price drops. These auction mechanisms aim to allow collectors to achieve price discovery on the blockchain.
 
-You may choose between the different pricing mechanics outlined below. The first step is to choose your desired selling option. The Art Blocks team can assist and advise in determining this.
+Half-life is the least intuitive of the parameters. One way to determine half-life is to think of the total duration of the auction and then work backward to find the half-life at that total time. . For example:
 
-### Different Project pricing mechanics. 
+- Consider Exponential Dutch auction was starting at 1 ETH and lowering to 0.1 ETH over 30 minutes.
+- Using [this calculator](https://www.calculator.net/half-life-calculator.html), the half-life can be determined to be 9 minutes (540 seconds). This means every 9 minutes, the price would gradually be cut in half. After 9 minutes, the auction will reach 0.5, and after 18 minutes, the auction will reach 0.25. The price drops within those half-life steps will gradually lower every block until the auction ends, at which point the auction will remain constant at the ending price.
 
-**Set Price - ETH** is used for fixed price releases
+One way to think of an exponential auction is that the rate of price _percent_ decrease is constant throughout the auction.
 
-**Automated Exponential Dutch Auction**: For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops. An easier way to determine this is to think of the total duration of the auction and then work backward to find the half-life at that total time. This model allows collectors to decide the value of the work. For example, let's say that an Exponential Dutch auction was starting at 1 ETH and lowering to 0.1 ETH over 30 minutes. In this case, the half-life is 9 minutes. This means every 9 minutes, the price would gradually be cut in half. After 9 minutes, the auction will reach 0.5, and after 18 minutes, the auction will reach 0.25. The price drops within those half-life steps will gradually lower every block. You can use [this calculator] (https://www.calculator.net/half-life-calculator.html) to find your auction’s half-life: Please note that results from that calculator will need to be converted from minutes to seconds for Art Blocks. 
+!!!info Artist Instructions for Claiming Revenue (settlement minter only)
 
-**Automated Linear Dutch Auction**: For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time.
+Artists are able to claim revenue after either:
 
-**Set price in custom ERC20**: Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale. 
+- the project’s sell out, or
+- the dutch auction reaches resting price
 
-**Set Price - ETH, Allowlisted Users Only (V1)** these are addresses that are allowed to mint as many times as they want until they reach the mint limit (artists sets mint/wallet)
+We ask that artists promptly collect revenue when it becomes available. To collect revenue:
 
-### Input your pricing information
+- Click the `Claim Revenue` button that becomes available in your artist dashboard, wich will prompt you to send a transaction
+  - If the button is selected after the project has sold out, all revenue from the project will be distributed at the time of claim
+  - If the button is selected after the auction reaches resting price, but before all tokens have been sold, revenue from previous purchases will be transferred. Revenue from subsequent purchases at resting price will be distributed immediately at the time of of each purchse.
 
-Go to the Minter tab within your shell and select the ‘minter for project’ drop-down menu. From that menu, select your desired MinterSuite option. [Please note that mint #0 will be created using the Set Price- ETH option. If your project is sold via Dutch auction, please set the price to your auction’s resting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option.] Once the price option has been selected from the drop-down menu, select Submit. If you’re using a Dutch auction minter option, you will then enter the `start price in eth` and `base price in eth`.
+!!!
+
+---
+
+**Automated Linear Dutch Auction**
+
+!!!info
+In addition to the information below, please see the [Project Pricing: Dutch Auction Settings](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/) section for more information on how to determine the appropriate pricing parameters for your auction.
+!!!
+
+For linear Dutch auctions, artists will specify the `starting time`, `starting price`, `ending price`, and `ending time` of the auction. The price will then linearly decrease each block over the total auction time.
+
+---
+
+**Set Price - ETH, Allowlisted Users Only**
+
+Pricing of tokens on this minter is only supported as a fixed price, in ETH.
+
+!!!info
+For details on how to create and upload an allowlist, please see the _Allowlisted Users Only_ portion of the [Minter Suite Overview](#minter-suite-overview-⛽📄) section above.
+!!!
+
+---
+
+**Set Price - ETH, Token Holders Only**
+
+Pricing of tokens on this minter is only supported as a fixed price, in ETH.
+
+!!!info
+For details on how to specify which token holders are allowed to mint your project, please see the _Token Holders Only_ portion of the [Minter Suite Overview](#minter-suite-overview-⛽📄) section above.
+!!!
+
+---
 
 ## Tags:
 
-Tags are labels you can assign to your project. Users can now filter collections based on the following tags: `animated,` `interactive,` `evolving,`  `audio,` and `responsive.`
+Tags are labels you can assign to your project. Users can now filter collections based on the following tags: `animated,` `interactive,` `evolving,` `audio,` and `responsive.`
 
-You may add tags to your project in  `edit project` on the `tags` button in your shell. If you’ve already released your work on Art Blocks, we encourage you to go in and add relevant tags to your project. 
+You may add tags to your project in `edit project` on the `tags` button in your shell. If you’ve already released your work on Art Blocks, we encourage you to go in and add relevant tags to your project.
 
 **animated** - moving image projects
 
@@ -190,32 +239,42 @@ You may add tags to your project in  `edit project` on the `tags` button in your
 
 **responsive** - project outputs scale to any screen size
 
-If you have a suggested tag for your project that you would like to be considered, please post your suggestions in Discord in #artist-general. 
+If you have a suggested tag for your project that you would like to be considered, please post your suggestions in Discord in #artist-general.
 
 ## Payout ⛽
+
 Projects with multiple artists can use the additional payee address field to split project payments between multiple wallets for primary and secondary sales. When a project only has one artist, the additional payee field is commonly used to manage on-chain charitable donations. The charity’s wallet can be entered in the additional payee field. The percentage entered in the additional payee field will then be directly transferred to the charity as sales are made.
 
-!!!danger Artists must propose changes to their payment addresses (and splits between primary/additional) for admin approval. Approval is granted before Mint #0!!!
+!!!danger
+Artists must propose changes to their payment addresses (and splits between primary/additional) for admin approval. Approval is granted before Mint #0
+!!!
 
 #### Revenue splits with multiple artists
+
 For projects with multiple artists, we recommend using [0xSplits](https://www.0xsplits.xyz/) to split revenue among the group. Instructions on how to create a Split can be found [here](https://www.youtube.com/watch?v=P_uqQJghNAo). Once you’ve created your Split, paste the address into the additional payee field. You can also include a charitable giving donation directly in the Split.
 
 #### Propose current artist address or add a new one
+
 This address will have access to edit the project in Art Blocks’ staging environment.
 
 #### Propose additional payee address for primary sales
-Input collaborator’s or charity wallet address here. 
+
+Input collaborator’s or charity wallet address here.
 
 #### Propose additional payee percentage for primary sales
+
 Payout percentages are at the artist’s discretion.
 
 #### Propose additional payee address for secondary sales
-Additional address that will receive a portion of secondary sales. 
+
+Additional address that will receive a portion of secondary sales.
 
 #### Propose additional payee percentage for primary sales
+
 The royalty field should be entered as a number and does not require a % symbol.
 
-#### Understanding secondary sales 
+#### Understanding secondary sales
+
 Secondary marketplaces can choose if they’d like to honor the secondary market royalty amount. Please note that OpenSea does not currently honor this field. On OpenSea, artists receive 5% of all secondary sales. Because of this, for consistency, we recommend setting your secondary market royalty to 5%. Note that all secondary details are for on-chain royalties, which OpenSea is not yet supporting (but we expect that will happen soon). For OpenSea royalties, Art Blocks will redistribute secondary sales monthly.
 
 To learn more about royalty distributions, see [here](faqs.md#how-does-royalty-distribution-work).
@@ -236,11 +295,11 @@ When it is time for your project to go live, you will press the “Unpause” bu
 
 ### Refresh Token Image
 
-This button will queue your token thumbnail to be refreshed. The refresh takes time to process fully. If a script update was successful, and `live views` are correct, but thumbnails haven’t refreshed, please clear your cache. If you have cleared your cache and are still not seeing the correct thumbnail view,a subgraph delay may be the reason. Stay updated on system operations at [status.artblocks.io] (status.artblocks.io). 
+This button will queue your token thumbnail to be refreshed. The refresh takes time to process fully. If a script update was successful, and `live views` are correct, but thumbnails haven’t refreshed, please clear your cache. If you have cleared your cache and are still not seeing the correct thumbnail view,a subgraph delay may be the reason. Stay updated on system operations at [status.artblocks.io] (status.artblocks.io).
 
 Rendering tokens does take computing power, of which we have a limited amount. Please feel free to refresh tokens after making updates, but note that if our rendering pipeline starts clogging up requests, we may have to consider rate-limiting refresh requests. In summary, use this button when testing out updates, but avoid spamming, or things will get jammed up.
 
-With this button, you can refresh per token. The Art BlocksTeam has the power to refresh all thumbnails in a project at once, and we are happy to do so for you. Request a batch refresh after updating your script in your artist DM. If you are still in the application queue, you may request a batch refresh in the #artist-application-support channel in Discord. 
+With this button, you can refresh per token. The Art BlocksTeam has the power to refresh all thumbnails in a project at once, and we are happy to do so for you. Request a batch refresh after updating your script in your artist DM. If you are still in the application queue, you may request a batch refresh in the #artist-application-support channel in Discord.
 
 ### Details
 
