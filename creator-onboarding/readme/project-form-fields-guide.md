@@ -130,6 +130,7 @@ For many artists, the process for writing your features script will likely entai
 
 !!!info
 For an overview of all minters available on Art Blocks, please see the [Minter Suite](minter-suite.md) page.
+!!!
 
 ### Configuring Your Minter ⛽📄
 
@@ -224,7 +225,7 @@ Artists may use the artist dashboard to pre-select a list of allowlisted Art Blo
 
 ---
 
-## Tags:
+## Tags
 
 Tags are labels you can assign to your project. Users can now filter collections based on the following tags: `animated,` `interactive,` `evolving,` `audio,` and `responsive.`
 
