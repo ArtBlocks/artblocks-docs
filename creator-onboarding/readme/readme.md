@@ -164,6 +164,7 @@ vox | `v1.1.0-beta` |
 megavox | `v1.1.0-beta` |
 regl | `v2.1.0` |
 tone.js | `v14.8.15` | https://tonejs.github.io
+twemoji | `v14.0.2` | https://github.com/twitter/twemoji
 paper.js | `v0.12.15` | http://paperjs.org
 Zdog | `v1.1.2` | https://github.com/metafizzy/zdog
 
