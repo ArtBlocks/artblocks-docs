@@ -164,7 +164,7 @@ If using an ERC20 minter, the artist will need to specify the ERC20 token addres
 **Automated Exponential Dutch Auction (with settlement | without settlement)**
 
 !!!info
-In addition to the information below, please see the [Project Pricing: Dutch Auction Settings](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/) section for more information on how to determine the appropriate pricing parameters for your auction.
+In addition to the information below, please see the [Project Pricing: Dutch Auction Settings](project-pricing-model.md) section for more information on how to determine the appropriate pricing parameters for your auction.
 !!!
 
 For exponential Dutch auctions, artists specify the `start time`, `starting price`, `ending price`, and `half-life` for price drops. These auction mechanisms aim to allow collectors to achieve price discovery on the blockchain.
@@ -194,10 +194,6 @@ We ask that artists promptly collect revenue when it becomes available. To colle
 ---
 
 **Automated Linear Dutch Auction**
-
-!!!info
-In addition to the information below, please see the [Project Pricing: Dutch Auction Settings](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/) section for more information on how to determine the appropriate pricing parameters for your auction.
-!!!
 
 For linear Dutch auctions, artists will specify the `starting time`, `starting price`, `ending price`, and `ending time` of the auction. The price will then linearly decrease each block over the total auction time.
 

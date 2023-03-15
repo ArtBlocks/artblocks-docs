@@ -28,6 +28,10 @@ We are currently rolling this minter out in production. For a period of time, we
 
 Note that the Dutch auction with settlement minter can be coupled with an allowlist minter. In this case, the allowlist portion of the auction must come before the dutch auction with settlement.
 
+!!!info
+For Art Blocks Flagship, please see the [Project Pricing: Dutch Auction Settings](project-pricing-model.md) section for more information on how to determine the appropriate pricing parameters for your auction.
+!!!
+
 ## `Automated Exponential Dutch Auction`
 
 For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops. Collectors will pay more for tokens purchased earlier in the auction, and less for tokens purchased later in the auction.
@@ -63,7 +67,3 @@ Artists may use the artist dashboard to pre-select a list of allowlisted Art Blo
 !!!info
 Note that vault delegation via [Delegate Cash](https://delegate.cash/) is available for the Token Holders Only minter. For more details please visit this [video walkthrough](https://www.youtube.com/watch?v=2-AgG--zcaw&list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&index=5).
 !!!
-
-## Configuring Your Minter
-
-TODO
