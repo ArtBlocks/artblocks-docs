@@ -8,9 +8,13 @@ order: 500
 
 The [Royalty Registry](https://royaltyregistry.xyz/lookup) is an on-chain tool used by many marketplaces ((soon) OpenSea, Coinbase NFT, etc.) to query royalty payment addresses and percentages when a token is sold. The Royalty Registry lives on the Ethereum blockchain and is decentralized.
 
-> :warning: Art Blocks Engine contracts integrate with the Royalty Registry directly to handle many projects and artists on a single contract. Please do not use the [Royalty Registry's "Configure" UI](https://royaltyregistry.xyz/configure) to configure the royalties for your Engine contracts. Doing so will result in incorrect royalty payments across many projects. Instead, see the documentation below.
+!!!danger
+Art Blocks Engine contracts integrate with the Royalty Registry directly to handle many projects and artists on a single contract. Please do not use the [Royalty Registry's "Configure" UI](https://royaltyregistry.xyz/configure) to configure the royalties for your Engine contracts. Doing so will result in incorrect royalty payments across many projects. Instead, see the documentation below.
+!!!
 
-> Note that the [Royalty Registry's "Lookup" UI](https://royaltyregistry.xyz/lookup) is a great tool for confirming that your Engine contracts are configured correctly after the configuration steps below have been completed.
+!!!info
+Note that the [Royalty Registry's "Lookup" UI](https://royaltyregistry.xyz/lookup) is a great tool for confirming that your Engine contracts are configured correctly after the configuration steps below have been completed.
+!!!
 
 ## Royalty Payment Addresses
 
