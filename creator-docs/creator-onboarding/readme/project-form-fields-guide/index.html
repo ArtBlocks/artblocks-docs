@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.731178803701">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732216262721">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.731178803701" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.732216262721" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.731178803701" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.732216262721" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.731178803701" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.732216262721" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -254,14 +254,14 @@
 <doc-anchor-target id="project-name">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#project-name">#</doc-anchor-trigger>
-        <span>Project name  <span class="docs-emoji">&#x26FD;</span><span class="docs-emoji">&#x1F4C4;</span></span>
+        <span>Project name <span class="docs-emoji">&#x26FD;</span><span class="docs-emoji">&#x1F4C4;</span></span>
     </h3>
 </doc-anchor-target>
 <p>This is the public name of your project.</p>
 <doc-anchor-target id="artist-name">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#artist-name">#</doc-anchor-trigger>
-        <span>Artist name  <span class="docs-emoji">&#x26FD;</span><span class="docs-emoji">&#x1F4C4;</span></span>
+        <span>Artist name <span class="docs-emoji">&#x26FD;</span><span class="docs-emoji">&#x1F4C4;</span></span>
     </h3>
 </doc-anchor-target>
 <p>This is how your name will appear on Art Blocks. What you choose to enter here is up to your personal preference.</p>
@@ -341,14 +341,14 @@
         <span>Script type <span class="docs-emoji">&#x26FD;</span><span class="docs-emoji">&#x1F4C4;</span></span>
     </h3>
 </doc-anchor-target>
-<p>Select your script type and the version number of that dependency from the drop-down menu provided.  Artists must define the library AND version (when applicable).</p>
+<p>Select your script type and the version number of that dependency from the drop-down menu provided. Artists must define the library AND version (when applicable).</p>
 <doc-anchor-target id="aspect-ratio-widthheight">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#aspect-ratio-widthheight">#</doc-anchor-trigger>
         <span>Aspect ratio (width/height)</span>
     </h3>
 </doc-anchor-target>
-<p>Your project’s outputs must be dimension agnostic, meaning they will scale  seamlessly to any window size. See more on this <a href="../#dimensionless">here</a>. This field sets the aspect ratio for image renders but does not impact an output’s live view.</p>
+<p>Your project’s outputs must be dimension agnostic, meaning they will scale seamlessly to any window size. See more on this <a href="../#dimensionless">here</a>. This field sets the aspect ratio for image renders but does not impact an output’s live view.</p>
 <p>While you can control the aspect ratio, you will have no control over the dimensions of the browser on which your project will be viewed.</p>
 <p>Your aspect ratio should be a single number. This will be your token’s width divided by height. For example, if your tokens are square, your aspect ratio should be 1.</p>
 <doc-anchor-target id="render-delay">
@@ -400,61 +400,167 @@
         <span>Minter:</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="mintersuite">
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>For an overview of all minters available on Art Blocks, please see the <a href="../minter-suite/">Minter Suite</a> page.</p>
+<doc-anchor-target id="configuring-your-minter-">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#mintersuite">#</doc-anchor-trigger>
-        <span>MinterSuite <span class="docs-emoji">&#x26FD;</span><span class="docs-emoji">&#x1F4C4;</span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configuring-your-minter-">#</doc-anchor-trigger>
+        <span>Configuring Your Minter <span class="docs-emoji">&#x26FD;</span><span class="docs-emoji">&#x1F4C4;</span></span>
     </h3>
 </doc-anchor-target>
-<p>The MinterSuite is an update to our broader smart-contract architecture at Art Blocks that allows artists to set specific minting contracts on a per-project basis.</p>
-<p>The MinterSuite currently includes the following minter options, which will continue to expand over time:
-<strong>Set Price - ETH</strong> is used for fixed price releases</p>
-<p><strong>Automated Exponential Dutch Auction</strong>: For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops.</p>
-<p><strong>Dutch Auction with Settlement - Exponential Price Decrease</strong></p>
-<p>In this option, collectors will pay the price of the last mint. Collectors who purchase above this price will be able to claim a settlement after the auction which will be the difference between the price they purchased at and the last purchase price. What this means for artists is that you would claim your revenue after the project’s sell out/after the dutch auction duration in one transaction. The Dutch auction with settlement minter can be coupled with an allowlist minter. In this case, the allowlist must come before the dutch auction with settlement*.</p>
-<p>*This minter employs a lot of game theory on the collector’s end. While all collectors will pay the resting price of the auction, we do not expect the overall revenue that artists receive to decrease between this option and the exponential Dutch auction without settlement. While we begin rolling this option out, we will continue to allow DAs without settlement, but we would like to move towards all DAs including settlement in the future.</p>
-<p><strong>Automated Linear Dutch Auction</strong>: For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time.</p>
-<p><strong>Set price in custom ERC20</strong>: Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale.</p>
-<p><strong>Set Price - ETH, Allowlisted Users Only (V5)</strong> is used for allowing only a predetermined list of wallet addresses to mint. These wallets can mint unlimited times until the project invocations limit is reached (if no mint limit was set) or as many times as they want until they reach the mint limit.</p>
-<p>Artists can choose the list of addresses to allow as well as the # of mints allowed per-wallet. Currently, artists are responsible for crafting their allowlist and uploading a comma-separated list of ETH addresses in a .txt or .CSV file to the artist dashboard. These wallet addresses cannot be ENS names, but list the full address of the wallet. <a href="https://www.premint.xyz/">Premint</a> is a super helpful tool for creating an allowlist by using social channels to reach collectors, friends, family, etc. In addition, Art Blocks hosts a <a href="https://github.com/ArtBlocks/artblocks-community-tooling/tree/main/SnapshotABHolders">Python script</a> for retrieving &amp; snapshotting either a list of all Art Blocks token holders or the token-holders of a specific project.</p>
-<p>Note that vault delegation via <a href="https://delegate.cash/">Delegate Cash</a> is available for the Allowlisted Users minter. For more details please visit this <a href="https://www.youtube.com/watch?v=2-AgG--zcaw&amp;list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&amp;index=5">video walkthrough</a>.</p>
-<p><strong>Set Price - ETH, Token Holders Only (V4)</strong> this minter allows its tokens to be minted with ETH when the purchaser owns an allowlisted ERC-721 NFT. This contract does NOT track if a purchaser has/has not minted already (ie. a &quot;mint limit&quot; is not available) -- it simply restricts purchasing to anybody that holds one or more of a specified list of ERC-721 NFTs.</p>
-<p>Artists may use the artist dashboard to pre-select a list of allowlisted projects, of which any valid token holders will be able to purchase for the upcoming project. Note that a &quot;snapshot&quot; won&#x27;t apply to this minter -- after the project&#x27;s been made public, users can purchase a token from any allowlisted project and mint freely.</p>
-<p>Note that vault delegation via <a href="https://delegate.cash/">Delegate Cash</a> is available for the Token Holders Only minter. For more details please visit this <a href="https://www.youtube.com/watch?v=2-AgG--zcaw&amp;list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&amp;index=5">video walkthrough</a>.</p>
-<p><strong>[Artists on Staging]</strong> After you’ve uploaded your script and you’re ready to start minting, ensure your <code v-pre>minter</code> is set to <code v-pre>Set Price - ETH (V2)</code>. You’ll want to set your mint price at <code v-pre>.0</code> since you’re using Goerli ETH.</p>
-<doc-anchor-target id="how-to-set-your-project-price">
+<p>Go to the Minter tab within your shell and select the ‘minter for project’ drop-down menu. From that menu, select your desired MinterSuite option. [Please note that mint #0 will be created using the Set Price- ETH option.]</p>
+<p>Once the desired minter is selected, you will be able to input and configure your minter&#x27;s pricing and other relevant information, performing any necessary transactions along the way. For help determining pricing and configuration, please see the <doc-anchor-trigger to="#minting-on-mainnet">Minting on Mainnet</doc-anchor-trigger> section below.</p>
+<doc-anchor-target id="minting-on-staging">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#how-to-set-your-project-price">#</doc-anchor-trigger>
-        <span>How to set your Project Price</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#minting-on-staging">#</doc-anchor-trigger>
+        <span>Minting on Staging</span>
     </h3>
 </doc-anchor-target>
-<p>You may choose between the different pricing mechanics outlined below. The first step is to choose your desired selling option. The Art Blocks team can assist and advise in determining this.</p>
-<doc-anchor-target id="different-project-pricing-mechanics">
+<p>After you’ve uploaded your script and you’re ready to start minting, ensure your <code v-pre>minter</code> is set to <code v-pre>Set Price - ETH (V4)</code>. You’ll want to set your mint price at <code v-pre>.0</code> since you’re using Goerli ETH.</p>
+<doc-anchor-target id="minting-on-mainnet">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#different-project-pricing-mechanics">#</doc-anchor-trigger>
-        <span>Different Project pricing mechanics.</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#minting-on-mainnet">#</doc-anchor-trigger>
+        <span>Minting on Mainnet</span>
     </h3>
 </doc-anchor-target>
-<p><strong>Set Price - ETH</strong> is used for fixed price releases</p>
-<p><strong>Automated Exponential Dutch Auction</strong>: For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops. An easier way to determine this is to think of the total duration of the auction and then work backward to find the half-life at that total time. This model allows collectors to decide the value of the work. For example, let&#x27;s say that an Exponential Dutch auction was starting at 1 ETH and lowering to 0.1 ETH over 30 minutes. In this case, the half-life is 9 minutes. This means every 9 minutes, the price would gradually be cut in half. After 9 minutes, the auction will reach 0.5, and after 18 minutes, the auction will reach 0.25. The price drops within those half-life steps will gradually lower every block. You can use [this calculator] (<a href="https://www.calculator.net/half-life-calculator.html">https://www.calculator.net/half-life-calculator.html</a>) to find your auction’s half-life: Please note that results from that calculator will need to be converted from minutes to seconds for Art Blocks.</p>
-<p><strong>Automated Linear Dutch Auction</strong>: For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time.</p>
-<p><strong>Set price in custom ERC20</strong>: Set price in ERC20 is a fixed price for your sale with a custom token. Artists will specify the address for the custom token sale.</p>
-<p><strong>Set Price - ETH, Allowlisted Users Only (V1)</strong> these are addresses that are allowed to mint as many times as they want until they reach the mint limit (artists sets mint/wallet)</p>
-<doc-anchor-target id="input-your-pricing-information">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#input-your-pricing-information">#</doc-anchor-trigger>
-        <span>Input your pricing information</span>
-    </h3>
-</doc-anchor-target>
-<p>Go to the Minter tab within your shell and select the ‘minter for project’ drop-down menu. From that menu, select your desired MinterSuite option. [Please note that mint #0 will be created using the Set Price- ETH option. If your project is sold via Dutch auction, please set the price to your auction’s resting price for mint #0. After mint #0, you may then adjust the MinterSuite back to your desired option.] Once the price option has been selected from the drop-down menu, select Submit. If you’re using a Dutch auction minter option, you will then enter the <code v-pre>start price in eth</code> and <code v-pre>base price in eth</code>.</p>
+<p>This section provides an overview of how to configure your selected minters on mainnet. The Art Blocks team can assist and advise in determining the best type of minter and associated pricing parameters.</p>
+<p>Based on your selected minter option, you will need to set your project price. The different pricing mechanics are outlined below.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Note that all current production minters support the ability to limit the number of mints on that specific minter for your project. This means that multiple minters may be used sequentially for a given project.</p>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+<hr />
+<p><strong>Set Price Minters (ETH | ERC20)</strong></p>
+<p>The price to purchase a token is set by the artist and is the same for all purchasers.</p>
+<p>If using an ERC20 minter, the artist will need to specify the ERC20 token address for the custom token sale.</p>
+<hr />
+<p><strong>Automated Exponential Dutch Auction (with settlement | without settlement)</strong></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>In addition to the information below, please see the <a href="../project-pricing-model/">Project Pricing: Dutch Auction Settings</a> section for more information on how to determine the appropriate pricing parameters for your auction.</p>
+        </div>
+    </div>
+</div>
+<p>For exponential Dutch auctions, artists specify the <code v-pre>start time</code>, <code v-pre>starting price</code>, <code v-pre>ending price</code>, and <code v-pre>half-life</code> for price drops. These auction mechanisms aim to allow collectors to achieve price discovery on the blockchain.</p>
+<p>Half-life is the least intuitive of the parameters. One way to determine half-life is to think of the total duration of the auction and then work backward to find the half-life at that total time. . For example:</p>
+<ul>
+<li>Consider Exponential Dutch auction was starting at 1 ETH and lowering to 0.1 ETH over 30 minutes.</li>
+<li>Using <a href="https://www.calculator.net/half-life-calculator.html">this calculator</a>, the half-life can be determined to be 9 minutes (540 seconds). This means every 9 minutes, the price would gradually be cut in half. After 9 minutes, the auction will reach 0.5, and after 18 minutes, the auction will reach 0.25. The price drops within those half-life steps will gradually lower every block until the auction ends, at which point the auction will remain constant at the ending price.</li>
+</ul>
+<p>One way to think of an exponential auction is that the rate of price <em>percent</em> decrease is constant throughout the auction.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Artist Instructions for Claiming Revenue (settlement minter only)</h5>
+<p>Artists are able to claim revenue after either:</p>
+<ul>
+<li>the project’s sell out, or</li>
+<li>the dutch auction reaches resting price</li>
+</ul>
+<p>We ask that artists promptly collect revenue when it becomes available. To collect revenue:</p>
+<ul>
+<li>Click the <code v-pre>Claim Revenue</code> button that becomes available in your artist dashboard, wich will prompt you to send a transaction
+<ul>
+<li>If the button is selected after the project has sold out, all revenue from the project will be distributed at the time of claim</li>
+<li>If the button is selected after the auction reaches resting price, but before all tokens have been sold, revenue from previous purchases will be transferred. Revenue from subsequent purchases at resting price will be distributed immediately at the time of of each purchse.</li>
+</ul>
+</li>
+</ul>
+        </div>
+    </div>
+</div>
+<hr />
+<p><strong>Automated Linear Dutch Auction</strong></p>
+<p>For linear Dutch auctions, artists will specify the <code v-pre>starting time</code>, <code v-pre>starting price</code>, <code v-pre>ending price</code>, and <code v-pre>ending time</code> of the auction. The price will then linearly decrease each block over the total auction time.</p>
+<hr />
+<p><strong>Set Price - ETH, Allowlisted Users Only</strong></p>
+<p>Pricing of tokens on this minter is only supported as a fixed price, in ETH.</p>
+<p>To set up an allowlist for your project:</p>
+<ol>
+<li>Select <code v-pre>Set Price - ETH, Allowlisted Users Only</code></li>
+<li>Upload your .csv or .txt file. See info box below for more details.</li>
+<li>Enter your fixed price</li>
+<li>We recommend leaving the mint per wallet limit to 1 for allowlist. If you would like to adjust this, please let the Art Blocks Team know.</li>
+</ol>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Artists are responsible for crafting their allowlist and uploading a comma-separated list of ETH addresses in a .txt or .CSV file to the artist dashboard. These wallet addresses cannot be ENS names, but list the full address of the wallet. <a href="https://www.premint.xyz/">Premint</a> is a super helpful tool for creating an allowlist by using social channels to reach collectors, friends, family, etc. In addition, Art Blocks hosts a <a href="https://github.com/ArtBlocks/artblocks-community-tooling/tree/main/SnapshotABHolders">Python script</a> for retrieving &amp; snapshotting either a list of all Art Blocks token holders or the token-holders of a specific project.</p>
+        </div>
+    </div>
+</div>
+<hr />
+<p><strong>Set Price - ETH, Token Holders Only</strong></p>
+<p>Pricing of tokens on this minter is only supported as a fixed price, in ETH.</p>
+<p>Artists may use the artist dashboard to pre-select a list of allowlisted Art Blocks or Art Blocks Engine projects, of which any valid token holders will be able to purchase for the upcoming project. Note that a &quot;snapshot&quot; won&#x27;t apply to this minter -- after the project has been made public, users can purchase a token from any allowlisted project and mint freely.</p>
+<hr />
 <doc-anchor-target id="tags">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#tags">#</doc-anchor-trigger>
         <span>Tags:</span>
     </h2>
 </doc-anchor-target>
-<p>Tags are labels you can assign to your project. Users can now filter collections based on the following tags: <code v-pre>animated,</code> <code v-pre>interactive,</code> <code v-pre>evolving,</code>  <code v-pre>audio,</code> and <code v-pre>responsive.</code></p>
-<p>You may add tags to your project in  <code v-pre>edit project</code> on the <code v-pre>tags</code> button in your shell. If you’ve already released your work on Art Blocks, we encourage you to go in and add relevant tags to your project.</p>
+<p>Tags are labels you can assign to your project. Users can now filter collections based on the following tags: <code v-pre>animated,</code> <code v-pre>interactive,</code> <code v-pre>evolving,</code> <code v-pre>audio,</code> and <code v-pre>responsive.</code></p>
+<p>You may add tags to your project in <code v-pre>edit project</code> on the <code v-pre>tags</code> button in your shell. If you’ve already released your work on Art Blocks, we encourage you to go in and add relevant tags to your project.</p>
 <p><strong>animated</strong> - moving image projects</p>
 <p><strong>interactive</strong> - projects respond to user’s input</p>
 <p><strong>evolving</strong> - project tokens develop gradually over time</p>
@@ -480,7 +586,10 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-            <h5>Artists must propose changes to their payment addresses (and splits between primary/additional) for admin approval. Approval is granted before Mint #0!!!</h5>
+<p>Artists must propose changes to their payment addresses (and splits between primary/additional) for admin approval. Approval is granted before Mint #0</p>
+        </div>
+    </div>
+</div>
 <doc-anchor-target id="revenue-splits-with-multiple-artists">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#revenue-splits-with-multiple-artists">#</doc-anchor-trigger>
@@ -537,9 +646,9 @@
         <span>Danger:</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="artist-address-">
+<doc-anchor-target id="artist-address">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#artist-address-">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#artist-address">#</doc-anchor-trigger>
         <span>Artist address <span class="docs-emoji">&#x26FD;</span></span>
     </h3>
 </doc-anchor-target>
@@ -589,9 +698,6 @@
 </doc-anchor-target>
 <p>As a note, the live generator view will give a bad request error until the project is public. To access the live view add <code v-pre>/?render=true</code> to the end of the generator link. I.e. <code v-pre>https://generator-staging-goerli.artblocks.io/0x00000000000000000/46000000/?render=true</code></p>
 <p>Once a project is public, this link will function. While a project is private, live views can also be viewed on the details section of the individual token.</p>
-        </div>
-    </div>
-</div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -617,10 +723,10 @@
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../creator-docs/creator-onboarding/readme/features/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../creator-docs/creator-onboarding/readme/minter-suite/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Art Blocks Features Script</span>
+                                                <span class="block mt-1">Minter Suite</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
