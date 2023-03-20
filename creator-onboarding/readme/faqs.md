@@ -171,7 +171,7 @@ Not at this time. Currently, everything must be included in the script file. For
 
 ### Can I use text? What fonts can I use?
 
-You can use text in your project! Font choice is technically at your discretion, but you're encouraged to use the core web fonts to ensure universal support and maintain the piece's integrity over the longer term. (`serif,` `sans-serif,` `monospace`, and less commonly, `cursive` and `fantasy.`)
+You can use text in your project! Font choice is technically at your discretion, but you're encouraged to embed them in your scripts directly or use the core web fonts to ensure universal support and maintain the piece's integrity over the longer term. (`serif,` `sans-serif,` `monospace`, and less commonly, `cursive` and `fantasy.`)
 
 ### What are the minimum hardware requirements? What type of graphics card do I need?
 
