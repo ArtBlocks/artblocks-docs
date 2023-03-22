@@ -1,3 +1,8 @@
+---
+label: Welcome
+icon: home
+---
+
 # Welcome to the Art Blocks Docs!
 [![GitPOAPs](https://public-api.gitpoap.io/v1/repo/ArtBlocks/artblocks-docs/badge)](https://www.gitpoap.io/gh/ArtBlocks/artblocks-docs)
 
