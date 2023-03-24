@@ -19,13 +19,13 @@ Each "seed", also known as a "hash string" is a hexadecimal string generated in 
 For example:
 
 ```js
-"0x11ac128f8b54949c12d04102cfc01960fc496813cbc3495bf77aeed738579738"
+"0x11ac128f8b54949c12d04102cfc01960fc496813cbc3495bf77aeed738579738";
 ```
 
 This hash will be the source of entropy or variation use to determine the output of your algorithm. When your art is rendered on Art Blocks, your script will have access to a global variable called `tokenData`. One of the first lines in your script should be to read in the hash from this variable.
 
 ```js
-let hash = tokenData.hash
+let hash = tokenData.hash;
 ```
 
 Included in the `tokenData` is also the `tokenId`. The `tokenId` encodes both the project and mint.
@@ -39,8 +39,8 @@ tokenId = (projectNumber * 1000000) + mintNumber
 If your script needs to know the mint number or project number, it can do so like this:
 
 ```js
-let projectNumber = Math.floor(parseInt(tokenData.tokenId) / 1000000)
-let mintNumber = parseInt(tokenData.tokenId) % 1000000
+let projectNumber = Math.floor(parseInt(tokenData.tokenId) / 1000000);
+let mintNumber = parseInt(tokenData.tokenId) % 1000000;
 ```
 
 When you are testing locally, this variable obviously will not be defined in your browser environment. This here is a simple function to generate valid hashes and tokenIds.
@@ -53,7 +53,10 @@ function genTokenData(projectNum) {
     hash += Math.floor(Math.random() * 16).toString(16);
   }
   data.hash = hash;
-  data.tokenId = (projectNum * 1000000 + Math.floor(Math.random() * 1000)).toString();
+  data.tokenId = (
+    projectNum * 1000000 +
+    Math.floor(Math.random() * 1000)
+  ).toString();
   return data;
 }
 let tokenData = genTokenData(123);
@@ -68,12 +71,15 @@ class Random {
   constructor() {
     this.useA = false;
     let sfc32 = function (uint128Hex) {
-      let a = parseInt(uint128Hex.substr(0, 8), 16);
-      let b = parseInt(uint128Hex.substr(8, 8), 16);
-      let c = parseInt(uint128Hex.substr(16, 8), 16);
-      let d = parseInt(uint128Hex.substr(24, 8), 16);
+      let a = parseInt(uint128Hex.substring(0, 8), 16);
+      let b = parseInt(uint128Hex.substring(8, 16), 16);
+      let c = parseInt(uint128Hex.substring(16, 24), 16);
+      let d = parseInt(uint128Hex.substring(24, 32), 16);
       return function () {
-        a |= 0; b |= 0; c |= 0; d |= 0;
+        a |= 0;
+        b |= 0;
+        c |= 0;
+        d |= 0;
         let t = (((a + b) | 0) + d) | 0;
         d = (d + 1) | 0;
         a = b ^ (b >>> 9);
@@ -84,9 +90,9 @@ class Random {
       };
     };
     // seed prngA with first half of tokenData.hash
-    this.prngA = new sfc32(tokenData.hash.substr(2, 32));
+    this.prngA = new sfc32(tokenData.hash.substring(2, 34));
     // seed prngB with second half of tokenData.hash
-    this.prngB = new sfc32(tokenData.hash.substr(34, 32));
+    this.prngB = new sfc32(tokenData.hash.substring(34, 66));
     for (let i = 0; i < 1e6; i += 2) {
       this.prngA();
       this.prngB();
@@ -124,17 +130,17 @@ The convenience methods `random_num`, `random_int`, `random_bool`, and `random_c
 We can get an instance of the Random class like so:
 
 ```js
-let R = new Random()
+let R = new Random();
 ```
 
 Now each time we need some randomness we can call various helper functions:
 
 ```js
-R.random_dec()      // Random decimal [0-1)
-R.random_num(0, 10) // Random decimal [0-10)
-R.random_int(0, 10) // Random integer [0-10]
-R.random_bool(0.5)  // Random boolean with probability 0.5
-R.random_choice([1, 2, 3])  // Random choice from a given list. Great for getting a random color from a discrete color palette
+R.random_dec(); // Random decimal [0-1)
+R.random_num(0, 10); // Random decimal [0-10)
+R.random_int(0, 10); // Random integer [0-10]
+R.random_bool(0.5); // Random boolean with probability 0.5
+R.random_choice([1, 2, 3]); // Random choice from a given list. Great for getting a random color from a discrete color palette
 ```
 
 Every time one of these functions is called, `random_dec()` will also be called somewhere in the stack, applying the deterministic arithmetic to the seed and returning a new random number.
@@ -151,26 +157,27 @@ Now you have the basics here are some general principles you need to consider wh
 
 Each project can have zero or one library dependency. The approved dependencies are currently the following:
 
-Library | Version | Source | Notes
---- | --- | --- | ---
-No Library at all | | Vanilla JS, CSS, HTML, WebGL
-svg | |
-p5.js | `v1.0.0` | https://p5js.org
-processing.js | `v1.4.6` | https://processing.org
-a-frame | `v1.2.0` | https://aframe.io
-three.js | `r124` | https://threejs.org
-babylon.js | `v5.0.0` | https://babylonjs.com | Canvas element provided by template (#babylon-canvas)
-vox | `v1.1.0-beta` |
-megavox | `v1.1.0-beta` |
-regl | `v2.1.0` |
-tone.js | `v14.8.15` | https://tonejs.github.io
-twemoji | `v14.0.2` | https://github.com/twitter/twemoji
-paper.js | `v0.12.15` | http://paperjs.org
-Zdog | `v1.1.2` | https://github.com/metafizzy/zdog
+| Library           | Version       | Source                             | Notes                                                 |
+| ----------------- | ------------- | ---------------------------------- | ----------------------------------------------------- |
+| No Library at all |               | Vanilla JS, CSS, HTML, WebGL       |
+| svg               |               |
+| p5.js             | `v1.0.0`      | https://p5js.org                   |
+| processing.js     | `v1.4.6`      | https://processing.org             |
+| a-frame           | `v1.2.0`      | https://aframe.io                  |
+| three.js          | `r124`        | https://threejs.org                |
+| babylon.js        | `v5.0.0`      | https://babylonjs.com              | Canvas element provided by template (#babylon-canvas) |
+| vox               | `v1.1.0-beta` |
+| megavox           | `v1.1.0-beta` |
+| regl              | `v2.1.0`      |
+| tone.js           | `v14.8.15`    | https://tonejs.github.io           |
+| twemoji           | `v14.0.2`     | https://github.com/twitter/twemoji |
+| paper.js          | `v0.12.15`    | http://paperjs.org                 |
+| Zdog              | `v1.1.2`      | https://github.com/metafizzy/zdog  |
 
 Additional libraries may be added at moderator discretion, but the rule is only one external library per project.
 
 ### Code templates by dependency type
+
 When uploading your project to testnet, you may refer to this script template: https://github.com/ArtBlocks/node-artblocks/blob/main/src/templates.js
 
 ### Deterministic
@@ -184,15 +191,15 @@ The output must be dimension agnostic. Meaning it scales seamlessly to any dimen
 A simple way to account for this is to define a default dimension and create a multiplier to scale coordinates or sizes relative to the canvas dimensions. Below uses p5js as an example but the same principle applies regardless of the language.
 
 ```js
-var DEFAULT_SIZE = 1000
-var WIDTH = window.innerWidth
-var HEIGHT = window.innerHeight
-var DIM = Math.min(WIDTH, HEIGHT)
-var M = DIM / DEFAULT_SIZE
+var DEFAULT_SIZE = 1000;
+var WIDTH = window.innerWidth;
+var HEIGHT = window.innerHeight;
+var DIM = Math.min(WIDTH, HEIGHT);
+var M = DIM / DEFAULT_SIZE;
 
 function setup() {
-  createCanvas(WIDTH, HEIGHT)
-  rect(100*M, 500*M, 50*M, 50*M)
+  createCanvas(WIDTH, HEIGHT);
+  rect(100 * M, 500 * M, 50 * M, 50 * M);
 }
 ```
 
@@ -202,9 +209,9 @@ Set the hash to a constant value:
 
 ```js
 tokenData = {
-    hash: "0x11ac16678959949c12d5410212301960fc496813cbc3495bf77aeed738579738",
-    tokenId: "123000456"
-}
+  hash: "0x11ac16678959949c12d5410212301960fc496813cbc3495bf77aeed738579738",
+  tokenId: "123000456",
+};
 ```
 
 And then play with the browser window size, and refresh to check that your art looks the same at any resolution.
@@ -218,13 +225,14 @@ const vertexShader = `
   // Vertex shader code
   attribute vec2 aTexCoord;
   ...
-`
+`;
 const fragmentShader = `
   // Fragment shader code
   varying vec2 vTexCoord;
   ...
-`
+`;
 ```
+
 These can then be used by the library you are using to render your art. For example, if using p5js:
 
 ```js
@@ -256,7 +264,7 @@ So a 10 KB project at 100 gwei would be:
 
 Artists have recently targeted between \~5-20 KB for their code (without the library), but obviously this will vary by project scope.
 
-### Data Compression 
+### Data Compression
 
 We allow artists to compress data stored within their scripts (e.g. SVG data); but in the case where the logic of the script itself is compressed to the point of obfuscating the auditing process we may ask that artists remove this level of compression.
 
@@ -266,35 +274,35 @@ Much (generative art) source code is published under permissive copyleft license
 
 Common source code licenses (in creative coding):
 
-* [CC BY](https://creativecommons.org/licenses/by/4.0/): The original author and license must be clearly and appropriately stated.
-* [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/): As CC BY, but all derivates must also be licensed under CC BY-SA.
-* [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/): As CC BY-SA, but no commercial use is allowed.
-* [MIT](https://choosealicense.com/licenses/mit/): similar to CC BY
-* [GPL](https://choosealicense.com/licenses/gpl-3.0/): similar to CC BY-SA
+- [CC BY](https://creativecommons.org/licenses/by/4.0/): The original author and license must be clearly and appropriately stated.
+- [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/): As CC BY, but all derivates must also be licensed under CC BY-SA.
+- [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/): As CC BY-SA, but no commercial use is allowed.
+- [MIT](https://choosealicense.com/licenses/mit/): similar to CC BY
+- [GPL](https://choosealicense.com/licenses/gpl-3.0/): similar to CC BY-SA
 
 There are many other free-to-use licenses commonly used on open source software. Please carefully read the full details on any licensed code you re-use or modify, before including it in your project.
 
-## Testing on Goerli 
+## Testing on Goerli
 
 Once your application is approved and your script is ready, you will test it out on an Art Blocks staging site running on one of Ethereum's test networks (Goerli). This will make sure there aren't any bugs or errors and that if it's working on Goerli, it will work on Mainnet. You can connect to this site by changing the network in your browser wallet (e.g. the very top button of MetaMask). You'll still be using the same wallet and address, except on the test network.
 
-Note: If you don't have "Goerly ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: - - 
-https://goerlifaucet.com/ 
+Note: If you don't have "Goerly ETH" ask a mod or previous artist, we'll send you some to play with. Or if you don't feel like waiting, request some from the faucet: - -
+https://goerlifaucet.com/
 https://goerli-faucet.pk910.de/ (POW faucet so this can run in the background and accumulate goerliETH over time)
 
-### ROPSTEN > GOERLI UPGRADE 
+### ROPSTEN > GOERLI UPGRADE
+
 _As of Aug 2, 2022_
 
-Ropsten is being deprecated entirely as a network. New testnet means new smart contracts: Ropsten artist-staging data will be preserved in a read-only state to be accessed at https://ropsten-artist-staging.artblocks.io/ after August 2nd. 
+Ropsten is being deprecated entirely as a network. New testnet means new smart contracts: Ropsten artist-staging data will be preserved in a read-only state to be accessed at https://ropsten-artist-staging.artblocks.io/ after August 2nd.
 
-The website for AB core will remain the same: You will still visit https://artist-staging.artblocks.io/, but you will be asked to connect with the Goerli Test Network rather than the Ropsten Test Network. 
+The website for AB core will remain the same: You will still visit https://artist-staging.artblocks.io/, but you will be asked to connect with the Goerli Test Network rather than the Ropsten Test Network.
 
-If you previously had a testnet shell on the Ropsten network, you may still access your project shell using https://ropsten-artist-staging.artblocks.io/ as a frozen read-only set of data. If you are a returning artist, please send([!badge Discord: madpinney#1183]) a DM to set up a Goerli project shell. 
+If you previously had a testnet shell on the Ropsten network, you may still access your project shell using https://ropsten-artist-staging.artblocks.io/ as a frozen read-only set of data. If you are a returning artist, please send([!badge Discord: madpinney#1183]) a DM to set up a Goerli project shell.
 
 As a reminder, you can stock up on Goerli ETH here:
-https://goerlifaucet.com/ 
+https://goerlifaucet.com/
 https://goerli-faucet.pk910.de/ (POW faucet so this can run in the background and accumulate goerliETH over time)
-
 
 ### Interacting with your Project
 
@@ -329,6 +337,7 @@ Once you have a working minified version of your project, a recommended way of s
 ```
 split -b 10k filename.js new_filename
 ```
+
 That will create an evenly distributed set of files with the splitted code, automatically. The maximum size you can upload to Artblocks per transaction is around 24KB (you can center that as -b 23900 in the split tool, since it does not take decimals)
 
 if you are on Windows, you can use the same command if you have git bash, or a tool like [7-Zip](https://www.7-zip.org/), which allows you to split without compression.
