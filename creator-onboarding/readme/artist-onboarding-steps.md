@@ -1,24 +1,22 @@
 ---
 order: 1000
 ---
+## Artist Onboarding Flow 
+![Q3 2022 artist onboarding flow](https://user-images.githubusercontent.com/103667291/227399189-10987a2f-c7c4-434e-9c37-41c50934e9aa.jpg)
 
 Below, you'll find an overview of each step of our onboarding process, as well as an **, estimated** time required for each step.
 
 ## 1. Application
 
-For the time being, applications will remain open. You may apply using this [link](https://www.artblocks.io/apply). We expect that artists have a creative history and the ability to provide an original generative script. If you plan to work collaboratively, please provide complete information for all contributors. All submitted work must be original. We do not intend to release projects that use licensed, purchased, or recycled content. Please make sure you’re bringing your unique project to Art Blocks.  You will receive a project shell on our staging site when you apply. This project shell is where you will upload your project to Art Blocks for review. Only the wallet address connected to Art Blocks will have access to the project shell when applying. The shell creation ensures that all projects are compatible with Art Blocks and reviewed using a standard format. 
+You may apply using this [link](https://www.artblocks.io/apply). We expect that artists have a creative history and the ability to provide an original generative script. If you plan to work collaboratively, please provide complete information for all contributors. All submitted work must be original. We do not intend to release projects that use licensed, purchased, or recycled content. Please make sure you’re bringing your unique project to Art Blocks.  You will receive a project shell on our staging site when you apply. This project shell is where you will upload your project to Art Blocks for review. Only the wallet address connected to Art Blocks will have access to the project shell when applying. The shell creation ensures that all projects are compatible with Art Blocks and reviewed using a standard format. 
 
 To learn more about the application process please visit [artblocks.io/apply](artblocks.io/apply).
-
-!!!info Timeline
-Due to high volume, applications may take up to several months to process. We appreciate your patience every step of the way. Please understand that Art Blocks operates using a mentorship model, providing hands-on assistance and guidance while managing hundreds of artists in our pipeline.
-!!!
 
 ## 2. Upload to testnet
 
 You'll be asked to upload your project to the artist staging site on the Goerli test network. Here you can mint test outputs of your project and work out any kinks in your script before the Art Blocks selection committee reviews it. 
 
-Please mint 40-50 test mints to produce a wide variety before review. At this stage, the creative components of your project should be almost completely finalized and appear the way you would want them to for the official launch. In addition, you will also want to provide a project description and include your features script. To confirm you’ve included everything in your staging shell, refer to the [Testnet Checklist] (testnet-checklist.md). Required fields are marked in testnet with a “📄: fields required for artist screening” indication. As you are uploading to testnet, you only need to fill in fields with this indication. 
+Ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 40-60 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. To confirm you’ve included everything in your staging shell, refer to the [Testnet Checklist] (testnet-checklist.md). Required fields are marked in testnet with a “📄: fields required for artist screening” indication. As you are uploading to testnet, you only need to fill in fields with this indication. 
 
 Please note that all Art Blocks team members are working within US time zones, which means that there may be a delay in processing requests. 
 
@@ -27,15 +25,15 @@ Please note that all Art Blocks team members are working within US time zones, w
 
 ## 3. Script test runs and project review
 
-**When you're ready to proceed to our screening stage, please email apply@artblocks.io with a link to your staging shell.**
+Before Art Blocks considers projects for release, the project must be completely finished and uploaded to artist-staging.artblocks.io. All staging shells must have 40-60 mints, a project description, an artist bio, and features traits that follow the conceptual and formal logic of the collection. We are superseding the chronological queue of applications. **When your project is ready for review, you must email apply@artblocks.io indicating you are ready to be considered for release.** 
 
-Before the screening, ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 40-50 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. All prototypes should be completely finished before review. The team will let you know when the work will be screened and give you a timeline for the acceptance decision. 
+All prototypes should be completely finished before review. The team will let you know when the work will be screened and give you a timeline for the acceptance decision. 
 
-The first screening determines if a work is accepted onto the platform. A committee made up of Art Blocks' staff and generative art experts conducts this screening. This review focuses on overall aesthetics, mint variety, and the degree to which a project explores new territory technically, visually, and conceptually. With the high quantity and quality of submissions, Art Blocks is highly selective and can accept only roughly 15% of applications.
+Successful projects will go through two screenings, the first is mediated by an internal committee on the Art Blocks team, and the second is by the Art Blocks Curation Board. Art Blocks Curation Board members are responsible for reviewing, critiquing, and selecting projects included in Art Blocks’ Curated Collection, a group of projects that have been recognized for significant accomplishment in aesthetics, conceptual rigor, technical quality, and innovation. Releasing on Art Blocks is a selective process, and projects should be outstanding in their aesthetics, innovation, technical quality, and concept. We are currently accepting 10% of projects submitted to release. Artists will receive, upon acceptance to the platform, the product category under which they will release, Presents or Curated, and collection size and pricing recommendations. Artists are provided clear and constructive feedback, opportunities to engage with artists, curators and collectors to promote learning, inquiry, and dialogue with on-chain generative art, and lastly, hands-on support in marketing and writing about the work. We appreciate your patience as you wait to be reviewed, accepted, and on-boarded onto Art Blocks.
 
-If your project is selected, you'll move into the Creator Terms step. If it is not selected, you'll receive brief feedback and be invited to apply again with a different project. 
+Projects are selected for release based on the criteria outlined here: ![Project scoring rubric v1](https://user-images.githubusercontent.com/103667291/227399103-dc47aaaf-08d3-4baf-8d37-5d0604ec1e71.jpg)
 
-Note: This stage does not determine if your project will be a Curated release.
+If your project is selected, you'll move into the Creator Terms step. 
 
 [!badge Timeline: 3-6 weeks]
 
@@ -45,19 +43,14 @@ Our team will send you Art Blocks' Creator Terms via email to sign. These docume
 
 [!badge Timeline: Artist dependent. Typically 1-2 days]
 
-## 5. Feedback check
+## 5. Discord DM Created
 
-Once accepted projects have been screened, the artist will be connected with our Artistic Director to provide 1:1 feedback. You will have the opportunity to incorporate this feedback before the Curation review. It may take up to a week before receiving feedback. 
-
-[!badge Timeline: 7-10 days]
-
-## 6. Curation review
-
-After you have incorporated the feedback and made any last minute edits to your script or project description, your project will be considered for designation as Curated. Our Curation Board reviews your project and test mints and determines whether it's approved for an Art Blocks Curated release. Curators are looking at your shell and assessing it based on aesthetics, concept, technical quality, and innovation. After making their decision, the Curation Board will provide detailed feedback, which can be incorporated before your release (either as Curated, if it has been chosen, or as Presents, if it has not been chosen).  For more information about the Curation Board, their voting metrics, and the difference between Art Blocks Presents and Art Blocks Curated, please see our [FAQs](faqs.md). 
+Once creator terms have been accepted, the artist will be connected with the Art Team to prepare their project for release. Curated projects will be connected with the Artistic Director for 1:1 studio visit. You will have the opportunity to incorporate feedback from the selection review before moving to mainnet. 
 
 [!badge Timeline: 7-10 days]
 
-## 7. Finalize your script and do QA testing 
+
+## 6. Finalize your script and do QA testing 
 
 After you’ve received notes from the Curation Board and made final edits to your project, our team will audit your script. Art Blocks’ audit ensures the project meets the technical requirements of the platform. During the audit, your project will be checked for security concerns and consistency across different resolutions and aspect ratios will be verified. Your script can be minified for the audit.
 
