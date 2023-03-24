@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732936027316">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.732998129040">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.732936027316" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.732998129040" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732936027316" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.732998129040" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732936027316" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.732936027316" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.732998129040" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.732998129040" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -268,11 +268,11 @@
 <p>Each &quot;seed&quot;, also known as a &quot;hash string&quot; is a hexadecimal string generated in a pseudo-random manner at the time the token is minted. Each character (0-9, a-f) represents a value from 0-15 and each pair of characters (&quot;aa&quot;, or &quot;f2&quot;) represents a value from 0-255.</p>
 <p>For example:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">&quot;0x11ac128f8b54949c12d04102cfc01960fc496813cbc3495bf77aeed738579738&quot;</code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">&quot;0x11ac128f8b54949c12d04102cfc01960fc496813cbc3495bf77aeed738579738&quot;;</code></pre>
 </doc-codeblock></div>
 <p>This hash will be the source of entropy or variation use to determine the output of your algorithm. When your art is rendered on Art Blocks, your script will have access to a global variable called <code v-pre>tokenData</code>. One of the first lines in your script should be to read in the hash from this variable.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">let hash = tokenData.hash</code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">let hash = tokenData.hash;</code></pre>
 </doc-codeblock></div>
 <p>Included in the <code v-pre>tokenData</code> is also the <code v-pre>tokenId</code>. The <code v-pre>tokenId</code> encodes both the project and mint.</p>
 <p><strong>Please note:</strong> if you include using the <code v-pre>tokenId</code> as a way to determine the outputs of your script <strong>you must</strong> disclose this as part of the release communications for your project.</p>
@@ -281,8 +281,8 @@
 </doc-codeblock></div>
 <p>If your script needs to know the mint number or project number, it can do so like this:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">let projectNumber = Math.floor(parseInt(tokenData.tokenId) / 1000000)
-let mintNumber = parseInt(tokenData.tokenId) % 1000000</code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">let projectNumber = Math.floor(parseInt(tokenData.tokenId) / 1000000);
+let mintNumber = parseInt(tokenData.tokenId) % 1000000;</code></pre>
 </doc-codeblock></div>
 <p>When you are testing locally, this variable obviously will not be defined in your browser environment. This here is a simple function to generate valid hashes and tokenIds.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -293,7 +293,10 @@ let mintNumber = parseInt(tokenData.tokenId) % 1000000</code></pre>
     hash += Math.floor(Math.random() * 16).toString(16);
   }
   data.hash = hash;
-  data.tokenId = (projectNum * 1000000 + Math.floor(Math.random() * 1000)).toString();
+  data.tokenId = (
+    projectNum * 1000000 +
+    Math.floor(Math.random() * 1000)
+  ).toString();
   return data;
 }
 let tokenData = genTokenData(123);</code></pre>
@@ -310,12 +313,15 @@ let tokenData = genTokenData(123);</code></pre>
   constructor() {
     this.useA = false;
     let sfc32 = function (uint128Hex) {
-      let a = parseInt(uint128Hex.substr(0, 8), 16);
-      let b = parseInt(uint128Hex.substr(8, 8), 16);
-      let c = parseInt(uint128Hex.substr(16, 8), 16);
-      let d = parseInt(uint128Hex.substr(24, 8), 16);
+      let a = parseInt(uint128Hex.substring(0, 8), 16);
+      let b = parseInt(uint128Hex.substring(8, 16), 16);
+      let c = parseInt(uint128Hex.substring(16, 24), 16);
+      let d = parseInt(uint128Hex.substring(24, 32), 16);
       return function () {
-        a |= 0; b |= 0; c |= 0; d |= 0;
+        a |= 0;
+        b |= 0;
+        c |= 0;
+        d |= 0;
         let t = (((a + b) | 0) + d) | 0;
         d = (d + 1) | 0;
         a = b ^ (b &gt;&gt;&gt; 9);
@@ -326,9 +332,9 @@ let tokenData = genTokenData(123);</code></pre>
       };
     };
     // seed prngA with first half of tokenData.hash
-    this.prngA = new sfc32(tokenData.hash.substr(2, 32));
+    this.prngA = new sfc32(tokenData.hash.substring(2, 34));
     // seed prngB with second half of tokenData.hash
-    this.prngB = new sfc32(tokenData.hash.substr(34, 32));
+    this.prngB = new sfc32(tokenData.hash.substring(34, 66));
     for (let i = 0; i &lt; 1e6; i += 2) {
       this.prngA();
       this.prngB();
@@ -362,15 +368,15 @@ let tokenData = genTokenData(123);</code></pre>
 <p>The convenience methods <code v-pre>random_num</code>, <code v-pre>random_int</code>, <code v-pre>random_bool</code>, and <code v-pre>random_choice</code> may be removed if not needed for a specific project. Artists may also add their own convenience methods, but all randomness should be originally sourced from the <code v-pre>random_dec()</code> function.</p>
 <p>We can get an instance of the Random class like so:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">let R = new Random()</code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">let R = new Random();</code></pre>
 </doc-codeblock></div>
 <p>Now each time we need some randomness we can call various helper functions:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">R.random_dec()      // Random decimal [0-1)
-R.random_num(0, 10) // Random decimal [0-10)
-R.random_int(0, 10) // Random integer [0-10]
-R.random_bool(0.5)  // Random boolean with probability 0.5
-R.random_choice([1, 2, 3])  // Random choice from a given list. Great for getting a random color from a discrete color palette</code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">R.random_dec(); // Random decimal [0-1)
+R.random_num(0, 10); // Random decimal [0-10)
+R.random_int(0, 10); // Random integer [0-10]
+R.random_bool(0.5); // Random boolean with probability 0.5
+R.random_choice([1, 2, 3]); // Random choice from a given list. Great for getting a random color from a discrete color palette</code></pre>
 </doc-codeblock></div>
 <p>Every time one of these functions is called, <code v-pre>random_dec()</code> will also be called somewhere in the stack, applying the deterministic arithmetic to the seed and returning a new random number.</p>
 <doc-anchor-target id="i-heard-i-shouldnt-use-mathrandom-why-not">
@@ -516,24 +522,24 @@ R.random_choice([1, 2, 3])  // Random choice from a given list. Great for gettin
 <p>The output must be dimension agnostic. Meaning it scales seamlessly to any dimension. While you can control the dimension ratio (e.g. width/height can be 1.0, 1.5, 0.75 etc.) you have no control over the dimensions of the browser someone else might be using. The output will be rendered by the server at 2400x2400 (see below for ratios other than 1) and typically displayed in most browsers at 1000x1000 but your output should be the same at higher resolutions. Obviously, at lower resolutions, fewer pixels may limit what your output looks like, such as the smoothness of lines, which is okay. This is mainly to ensure your work can be reproduced at print quality.</p>
 <p>A simple way to account for this is to define a default dimension and create a multiplier to scale coordinates or sizes relative to the canvas dimensions. Below uses p5js as an example but the same principle applies regardless of the language.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">var DEFAULT_SIZE = 1000
-var WIDTH = window.innerWidth
-var HEIGHT = window.innerHeight
-var DIM = Math.min(WIDTH, HEIGHT)
-var M = DIM / DEFAULT_SIZE
+<pre class="language-javascript"><code v-pre class="language-javascript">var DEFAULT_SIZE = 1000;
+var WIDTH = window.innerWidth;
+var HEIGHT = window.innerHeight;
+var DIM = Math.min(WIDTH, HEIGHT);
+var M = DIM / DEFAULT_SIZE;
 
 function setup() {
-  createCanvas(WIDTH, HEIGHT)
-  rect(100*M, 500*M, 50*M, 50*M)
+  createCanvas(WIDTH, HEIGHT);
+  rect(100 * M, 500 * M, 50 * M, 50 * M);
 }</code></pre>
 </doc-codeblock></div>
 <p>Before submitting your script, it&#x27;s probably a good idea to test it in different resolutions and aspect ratios.</p>
 <p>Set the hash to a constant value:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-javascript"><code v-pre class="language-javascript">tokenData = {
-    hash: &quot;0x11ac16678959949c12d5410212301960fc496813cbc3495bf77aeed738579738&quot;,
-    tokenId: &quot;123000456&quot;
-}</code></pre>
+  hash: &quot;0x11ac16678959949c12d5410212301960fc496813cbc3495bf77aeed738579738&quot;,
+  tokenId: &quot;123000456&quot;,
+};</code></pre>
 </doc-codeblock></div>
 <p>And then play with the browser window size, and refresh to check that your art looks the same at any resolution.</p>
 <doc-anchor-target id="shaders">
@@ -548,12 +554,12 @@ function setup() {
   // Vertex shader code
   attribute vec2 aTexCoord;
   ...
-`
+`;
 const fragmentShader = `
   // Fragment shader code
   varying vec2 vTexCoord;
   ...
-`</code></pre>
+`;</code></pre>
 </doc-codeblock></div>
 <p>These can then be used by the library you are using to render your art. For example, if using p5js:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
