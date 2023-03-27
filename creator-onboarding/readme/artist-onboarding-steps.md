@@ -2,8 +2,8 @@
 order: 1000
 ---
 ## Artist Onboarding Flow 
-![Artist Onboarding Process-page-001](https://user-images.githubusercontent.com/103667291/227627791-f577f4fd-c8a0-4ce2-bc78-53f2cf464529.jpg)
 
+![Artist Onboarding Process-1-page-001](https://user-images.githubusercontent.com/103667291/228015983-496046e9-bc5d-4d05-90b8-2ec3565460cc.jpg)
 
 Below, you'll find an overview of each step of our onboarding process, as well as an **, estimated** time required for each step.
 
