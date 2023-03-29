@@ -4,7 +4,6 @@ icon: home
 ---
 
 # Welcome to the Art Blocks Docs!
-[![GitPOAPs](https://public-api.gitpoap.io/v1/repo/ArtBlocks/artblocks-docs/badge)](https://www.gitpoap.io/gh/ArtBlocks/artblocks-docs)
 
 This documentation seeks to provide guidance for 3 primary audiences: 
 
@@ -15,3 +14,5 @@ This documentation seeks to provide guidance for 3 primary audiences:
 You will find the three main sections in our documentation mirrors these three primary audiences. Please explore the docs here, and let us know if you have any questions.
 
 For any issues with the docs, please file a bug [here](https://github.com/ArtBlocks/artblocks-docs/issues), or send us a PR with a suggested change! 
+
+[![GitPOAPs](https://public-api.gitpoap.io/v1/repo/ArtBlocks/artblocks-docs/badge)](https://www.gitpoap.io/gh/ArtBlocks/artblocks-docs)
