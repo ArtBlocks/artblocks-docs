@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733598918881">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733969120995">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.733598918881" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.733969120995" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.733598918881" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.733969120995" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.733598918881" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.733969120995" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -250,6 +250,16 @@
 <li>The project has been activated by the contract admin. This can be verified by reading the <code v-pre>projectTokenInfo</code> field.</li>
 <li>The project is not yet unpaused. Project pause status is toggleable by the project artist. This can be verified by reading the <code v-pre>projectScriptInfo</code> field.</li>
 </ol>
+<doc-anchor-target id="configure-minter-and-project-details-for-each-project-on-etherscan">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-minter-and-project-details-for-each-project-on-etherscan">#</doc-anchor-trigger>
+        <span>Configure minter and project details for each project on Etherscan</span>
+    </h2>
+</doc-anchor-target>
+<p>For Engine and Flex Engine V3 contracts, the artist&#x27;s wallet needs to set up minters for each project individually.</p>
+<p>First, assign the minter to your project by using the <code v-pre>MinterFilterV1</code> contract found in your deployment file. The artist&#x27;s wallet should use function #6 on the contract, entering the <code v-pre>_projectID</code> and <code v-pre>_minterAddress</code>. You can find the minter address in your deployment log, which is pinned in your partner channel.</p>
+<p>Once the minter is linked to your project, set the project details on the minter contract. The deployed minter addresses can be found in your deployment file.</p>
+<p>For example, if Art Blocks deployed a Dutch Auction with a settlement minter for your core contract, navigate to the <code v-pre>MinterDAExpSettlementV2</code> contract linked to your core contract. Then, use function #13 to enter details like <code v-pre>_projectId</code>, <code v-pre>_auctionTimestampStart</code>, <code v-pre>_priceDecayHalfLifeSeconds</code>, <code v-pre>_startPrice</code>, and <code v-pre>_basePrice</code>. Make sure this is done using the artist&#x27;s wallet.</p>
 
                                 
                                 <!-- Required only on API pages -->
