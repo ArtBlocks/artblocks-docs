@@ -15,7 +15,7 @@ struct ExternalAssetDependency {
 }
 ```
 
-The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain assets stored using decentralized storage technologies and, with the latest version of flex, also supports fully on-chain data storage. An external asset dependency is comprised of its content indentifier (CID), if it's using Arweave or IPFS, a bytecodeAddress if it's spefically dealing with fully on-chain data, and a dependencyType, which maps to an Engine Flex supported platform. 
+The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain assets stored using decentralized storage technologies and, with the latest version of flex, also supports fully on-chain data storage. An external asset dependency is comprised of its content identifier (CID), if it's using Arweave or IPFS, a bytecodeAddress if it's specifically dealing with fully on-chain data, and a dependencyType, which maps to an Engine Flex supported platform. 
 
 Engine Flex currently supports adding external asset dependencies of the following types:
 - IPFS
@@ -50,11 +50,11 @@ struct ExternalAssetDependencyWithData {
         string data;
 }
 ```
-Note that for dependencyTypes other than onchain (IPFS, Arweave), the returned bytecodeAddress with be the zero address and data will be an empty string. Conversely, if the dependencyType is onchain, the returned cid will be an empty string.
+Note that for dependencyTypes other than onchain (IPFS, Arweave), the returned bytecodeAddress will be the zero address and data will be an empty string. Conversely, if the dependencyType is onchain, the returned cid will be an empty string.
 
 Some important factors to keep in mind with the above functions:
 - Only allowlisted/artist addresses can call these.
-- `ExternalAssetDependencyType _dependencyType` is a solidity enum, which can be passed in to these functions as a uint8. This enum only defines three options as of now, `IPFS`,`ARWEAVE`, and `ONCHAIN`, which can be represented as `0`,`1`, and `2` respectively. 
+- `ExternalAssetDependencyType _dependencyType` is a solidity enum, which can be passed into these functions as a uint8. This enum only defines three options as of now, `IPFS`,`ARWEAVE`, and `ONCHAIN`, which can be represented as `0`,`1`, and `2` respectively. 
 
 ### Note On Removing External Asset Dependencies
  
@@ -94,7 +94,7 @@ let tokenData = {
 }
 ```
 
-Your project script can then easily make use of these dependencies by combining the CID of the asset with the appropriate gateway, if you are dealing with IPFS/Arweave dependencies. As a simple example: If you have an external asset dependency with a CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` and a dependencyType of `IPFS`, you can construct the full url of your external asset depdency by combining the `preferredIPFSGateway`, which let's assume is `https://ipfs.io/ipfs/`, with the asset CID. This gives you the full url of the asset, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, and allows your project script to download it with `fetch` and use it as it sees fit. For fully onchain external asset dependencies, the full data string that is stored on the blockchain will be injected.
+Your project script can then easily make use of these dependencies by combining the CID of the asset with the appropriate gateway, if you are dealing with IPFS/Arweave dependencies. As a simple example: If you have an external asset dependency with a CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` and a dependencyType of `IPFS`, you can construct the full url of your external asset dependency by combining the `preferredIPFSGateway`, which let's assume is `https://ipfs.io/ipfs/`, with the asset CID. This gives you the full url of the asset, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, and allows your project script to download it with `fetch` and use it as it sees fit. For fully onchain external asset dependencies, the full data string that is stored on the blockchain will be injected.
 
 Note that for IPFS/Arweave external asset dependencies if your CID is pointing to a directory of assets, rather than a single asset, your project script will need to be aware of the file naming structure of this directory to fetch the assets individually. Using the previous example, imagine that CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` was pointing to a directory of 10 PNG images, with filenames corresponding to the numbers 1-10. Your project script would generate the same full url with the information provided, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, but also append the specific file you want to fetch by being aware of the naming conventions, ie `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg/1.png`.
 
@@ -106,7 +106,7 @@ If you are specifically looking to utilize an IPFS/ARWEAVE type external asset d
 (async () => {
         await import('JS_EXTERNAL_ASSET_DEPENDENCY_FULL_URL_GOES_HERE');
     
-        // project script follows bellow
+        // project script follows below
 })()
 ```
 
@@ -136,12 +136,12 @@ loadScript('JS_EXTERNAL_ASSET_DEPENDENCY_FULL_URL_GOES_HERE', myProjectScriptCod
 
 ## Locking A Project's External Asset Dependencies
 
-Artists and allowlisted addresses also have the ability to lock a project's external asset depdencies:
+Artists and allowlisted addresses also have the ability to lock a project's external asset dependencies:
 ```solidity
 function lockProjectExternalAssetDependencies(uint256 _projectId)
 ```
 This irreversible action removes the ability to add, update or remove from a project's external asset dependencies.
 
 Important notes:
-- Preferrred gateways do not get locked with this action and, in general, cannot be locked. This is intentional to allow support for modifying the preferred gateway over time, which may change while CIDs remain fixed/permanent.
+- Preferred gateways do not get locked with this action and, in general, cannot be locked. This is intentional to allow support for modifying the preferred gateway over time, which may change while CIDs remain fixed/permanent.
 - You can lock a project's external asset dependencies regardless of whether or not the project itself is locked. And you can continue to modify a project's external dependencies even if the project is locked, as long as the external asset dependencies for the project are not locked.
