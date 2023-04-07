@@ -1,6 +1,9 @@
 # Art Blocks Engine Flex Technical Details
 
-This page goes deeper into some technical considerations when working with Artblocks Engine Flex
+This page goes deeper into some technical considerations when working with the most current version of Artblocks Engine Flex.
+The latest version of the Engine Flex contract (v3) and interface can be found here:
+- https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol
+- https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/interfaces/0.8.x/IGenArt721CoreContractV3_Engine_Flex.sol
 
 ## Introduction To External Asset Dependencies
 
@@ -8,39 +11,56 @@ This page goes deeper into some technical considerations when working with Artbl
 struct ExternalAssetDependency {
         string cid;
         ExternalAssetDependencyType dependencyType;
+        address bytecodeAddress;
 }
 ```
 
-The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain assets stored using decentralized storage technologies. An external asset dependency is comprised of its content indentifier (CID) and dependencyType, which maps to an Engine Flex supported platform. 
+The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain assets stored using decentralized storage technologies and, with the latest version of flex, also supports fully on-chain data storage. An external asset dependency is comprised of its content indentifier (CID), if it's using Arweave or IPFS, a bytecodeAddress if it's spefically dealing with fully on-chain data, and a dependencyType, which maps to an Engine Flex supported platform. 
 
-Engine Flex currently supports adding external asset dependencies hosted using the following decentralized storage solutions:
+Engine Flex currently supports adding external asset dependencies of the following types:
 - IPFS
 - Arweave
+- Onchain (data lives entirely on the blockchain)
 
 ## Adding, Updating & Removing External Asset Dependencies
 
 When working with and manipulating a project's external asset dependencies, you'll be relying on the following functions:
 
 ```solidity
-function addProjectExternalAssetDependency(uint256 _projectId, string calldata _cid, ExternalAssetDependencyType _dependencyType)
-function updateProjectExternalAssetDependency(uint256 _projectId, uint256 _index, string calldata _cid, ExternalAssetDependencyType _dependencyType)
+function addProjectExternalAssetDependency(uint256 _projectId, string memory _cidOrData, ExternalAssetDependencyType _dependencyType)
+function updateProjectExternalAssetDependency(uint256 _projectId, uint256 _index, string memory _cidOrData, ExternalAssetDependencyType _dependencyType)
 function removeProjectExternalAssetDependency(uint256 _projectId, uint256 _index)
 ```
+Note the parameter `_cidOrData`, which allows you to either pass in a CID if you are working with the IPFS/Arweave dependencyTypes or a data string if you are working with the onchain dependencyType.
 
 For convenience and utility, the contract also provides the following function, allowing you to easily grab a project's external asset dependency at a specific index:
 ```solidity
 function projectExternalAssetDependencyByIndex(uint256 _projectId, uint256 _index) 
 ```
+This convenience function returns data in the form of the following format:
+```solidity
+/**
+* @notice An external asset dependency with data. This is a convenience struct that contains the CID of the dependency,
+* the type of the dependency, the address of the bytecode for this dependency, and the data retrieved from this bytecode address.
+*/
+struct ExternalAssetDependencyWithData {
+        string cid;
+        ExternalAssetDependencyType dependencyType;
+        address bytecodeAddress;
+        string data;
+}
+```
+Note that for dependencyTypes other than onchain (IPFS, Arweave), the returned bytecodeAddress with be the zero address and data will be an empty string. Conversely, if the dependencyType is onchain, the returned cid will be an empty string.
 
 Some important factors to keep in mind with the above functions:
 - Only allowlisted/artist addresses can call these.
-- `ExternalAssetDependencyType _dependencyType` is a solidity enum, which can be passed in to these functions as a uint8. This enum only defines two options as of now, `IPFS` and `ARWEAVE`, which can be represented as `0` and `1` respectively. 
+- `ExternalAssetDependencyType _dependencyType` is a solidity enum, which can be passed in to these functions as a uint8. This enum only defines three options as of now, `IPFS`,`ARWEAVE`, and `ONCHAIN`, which can be represented as `0`,`1`, and `2` respectively. 
 
 ### Note On Removing External Asset Dependencies
  
 In the interest of saving gas, the `removeProjectExternalAssetDependency()` function is implemented in such a way that it does not preserve the order of the project's external asset dependency mapping. Specifically, the way this removal logic works is as follows: when an index to remove is passed in, the element at that index being removed is swapped with the element at the last index of the list of assets. Now that the last index holds the element to be removed, that element is removed off the list. This method, in addition to being more gas efficient, also ensures that our list/mapping does not have any "holes". The tradeoff, however, is that the removal causes the order of the external asset dependencies in this list to change, albeit in a deterministic manner: the element at the last index always moves to the removed index. This is important to keep in mind when writing your project script, though you can always update the ordering manually as you see fit by utilizing the `updateProjectExternalAssetDependency()` function.
 
-You can view directly the full implementation of this removal function here: https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/PBAB%2BCollabs/GenArt721CoreV2_ENGINE_FLEX.sol#L596
+You can view directly the full implementation of this removal function here: https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol#L524
 
 ## Preferred Gateways
 
@@ -64,7 +84,8 @@ let tokenData = {
   externalAssetDependencies: [
     {
       cid: "",
-      dependencyType: ""
+      dependencyType: "",
+      data: ""
     },
     ...
   ],
@@ -73,13 +94,13 @@ let tokenData = {
 }
 ```
 
-Your project script can then easily make use of these dependencies by combining the CID of the asset with the appropriate gateway. As a simple example: If you have an external asset dependency with a CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` and a dependencyType of `IPFS`, you can construct the full url of your external asset depdency by combining the `preferredIPFSGateway`, which let's assume is `https://ipfs.io/ipfs/`, with the asset CID. This gives you the full url of the asset, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, and allows your project script to download it with `fetch` and use it as it sees fit. 
+Your project script can then easily make use of these dependencies by combining the CID of the asset with the appropriate gateway, if you are dealing with IPFS/Arweave dependencies. As a simple example: If you have an external asset dependency with a CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` and a dependencyType of `IPFS`, you can construct the full url of your external asset depdency by combining the `preferredIPFSGateway`, which let's assume is `https://ipfs.io/ipfs/`, with the asset CID. This gives you the full url of the asset, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, and allows your project script to download it with `fetch` and use it as it sees fit. For fully onchain external asset dependencies, the full data string that is stored on the blockchain will be injected.
 
-Note that if your CID is pointing to a directory of assets, rather than a single asset, your project script will need to be aware of the file naming structure of this directory to fetch the assets individually. Using the previous example, imagine that CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` was pointing to a directory of 10 PNG images, with filenames corresponding to the numbers 1-10. Your project script would generate the same full url with the information provided, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, but also append the specific file you want to fetch by being aware of the naming conventions, ie `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg/1.png`.
+Note that for IPFS/Arweave external asset dependencies if your CID is pointing to a directory of assets, rather than a single asset, your project script will need to be aware of the file naming structure of this directory to fetch the assets individually. Using the previous example, imagine that CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` was pointing to a directory of 10 PNG images, with filenames corresponding to the numbers 1-10. Your project script would generate the same full url with the information provided, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, but also append the specific file you want to fetch by being aware of the naming conventions, ie `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg/1.png`.
 
 ## Loading JS Libraries As External Asset Dependencies
 
-If you are specifically looking to utilize an external asset dependency as a JavaScript library in your project script, you cannot simply add it as a script element onto the page. You must load it in a blocking manner so that the browser does not attempt to run your project script code before the lib is  fully loaded. Here is an example of how to do this with ES6 dynamic imports (supported by most modern browsers: https://caniuse.com/es6-module-dynamic-import):
+If you are specifically looking to utilize an IPFS/ARWEAVE type external asset dependency as a JavaScript library in your project script, you cannot simply add it as a script element onto the page. You must load it in a blocking manner so that the browser does not attempt to run your project script code before the lib is  fully loaded. Here is an example of how to do this with ES6 dynamic imports (supported by most modern browsers: https://caniuse.com/es6-module-dynamic-import):
 
 ```js
 (async () => {
