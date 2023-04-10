@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.733969120995">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734456511341">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>Art Blocks Engine Flex Technical Details</title>
     <meta name="title" content="Art Blocks Engine Flex Technical Details">
-    <meta name="description" content="This page goes deeper into some technical considerations when working with Artblocks Engine Flex" />
+    <meta name="description" content="This page goes deeper into some technical considerations when working with the most current version of Artblocks Engine Flex." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-technical-details/" />
@@ -23,22 +23,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-technical-details/">
     <meta property="og:title" content="Art Blocks Engine Flex Technical Details">
-    <meta property="og:description" content="This page goes deeper into some technical considerations when working with Artblocks Engine Flex">
+    <meta property="og:description" content="This page goes deeper into some technical considerations when working with the most current version of Artblocks Engine Flex.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-technical-details/">
     <meta property="twitter:title" content="Art Blocks Engine Flex Technical Details">
-    <meta property="twitter:description" content="This page goes deeper into some technical considerations when working with Artblocks Engine Flex">
+    <meta property="twitter:description" content="This page goes deeper into some technical considerations when working with the most current version of Artblocks Engine Flex.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.733969120995" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.734456511341" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.733969120995" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.734456511341" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.733969120995" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.733969120995" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.734456511341" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.734456511341" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -223,7 +223,12 @@
         <span>Art Blocks Engine Flex Technical Details</span>
     </h1>
 </doc-anchor-target>
-<p>This page goes deeper into some technical considerations when working with Artblocks Engine Flex</p>
+<p>This page goes deeper into some technical considerations when working with the most current version of Artblocks Engine Flex.
+The latest version of the Engine Flex contract (v3) and interface can be found here:</p>
+<ul>
+<li><a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol">https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol</a></li>
+<li><a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/interfaces/0.8.x/IGenArt721CoreContractV3_Engine_Flex.sol">https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/interfaces/0.8.x/IGenArt721CoreContractV3_Engine_Flex.sol</a></li>
+</ul>
 <doc-anchor-target id="introduction-to-external-asset-dependencies">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#introduction-to-external-asset-dependencies">#</doc-anchor-trigger>
@@ -234,13 +239,15 @@
 <pre class="language-solidity"><code v-pre class="language-solidity">struct ExternalAssetDependency {
         string cid;
         ExternalAssetDependencyType dependencyType;
+        address bytecodeAddress;
 }</code></pre>
 </doc-codeblock></div>
-<p>The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain assets stored using decentralized storage technologies. An external asset dependency is comprised of its content indentifier (CID) and dependencyType, which maps to an Engine Flex supported platform.</p>
-<p>Engine Flex currently supports adding external asset dependencies hosted using the following decentralized storage solutions:</p>
+<p>The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain assets stored using decentralized storage technologies and, with the latest version of flex, also supports fully on-chain data storage. An external asset dependency is comprised of its content identifier (CID), if it&#x27;s using Arweave or IPFS, a bytecodeAddress if it&#x27;s specifically dealing with fully on-chain data, and a dependencyType, which maps to an Engine Flex supported platform.</p>
+<p>Engine Flex currently supports adding external asset dependencies of the following types:</p>
 <ul>
 <li>IPFS</li>
 <li>Arweave</li>
+<li>Onchain (data lives entirely on the blockchain)</li>
 </ul>
 <doc-anchor-target id="adding-updating--removing-external-asset-dependencies">
     <h2>
@@ -250,18 +257,33 @@
 </doc-anchor-target>
 <p>When working with and manipulating a project&#x27;s external asset dependencies, you&#x27;ll be relying on the following functions:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-solidity"><code v-pre class="language-solidity">function addProjectExternalAssetDependency(uint256 _projectId, string calldata _cid, ExternalAssetDependencyType _dependencyType)
-function updateProjectExternalAssetDependency(uint256 _projectId, uint256 _index, string calldata _cid, ExternalAssetDependencyType _dependencyType)
+<pre class="language-solidity"><code v-pre class="language-solidity">function addProjectExternalAssetDependency(uint256 _projectId, string memory _cidOrData, ExternalAssetDependencyType _dependencyType)
+function updateProjectExternalAssetDependency(uint256 _projectId, uint256 _index, string memory _cidOrData, ExternalAssetDependencyType _dependencyType)
 function removeProjectExternalAssetDependency(uint256 _projectId, uint256 _index)</code></pre>
 </doc-codeblock></div>
+<p>Note the parameter <code v-pre>_cidOrData</code>, which allows you to either pass in a CID if you are working with the IPFS/Arweave dependencyTypes or a data string if you are working with the onchain dependencyType.</p>
 <p>For convenience and utility, the contract also provides the following function, allowing you to easily grab a project&#x27;s external asset dependency at a specific index:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-solidity"><code v-pre class="language-solidity">function projectExternalAssetDependencyByIndex(uint256 _projectId, uint256 _index) </code></pre>
 </doc-codeblock></div>
+<p>This convenience function returns data in the form of the following format:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-solidity"><code v-pre class="language-solidity">/**
+* @notice An external asset dependency with data. This is a convenience struct that contains the CID of the dependency,
+* the type of the dependency, the address of the bytecode for this dependency, and the data retrieved from this bytecode address.
+*/
+struct ExternalAssetDependencyWithData {
+        string cid;
+        ExternalAssetDependencyType dependencyType;
+        address bytecodeAddress;
+        string data;
+}</code></pre>
+</doc-codeblock></div>
+<p>Note that for dependencyTypes other than onchain (IPFS, Arweave), the returned bytecodeAddress will be the zero address and data will be an empty string. Conversely, if the dependencyType is onchain, the returned cid will be an empty string.</p>
 <p>Some important factors to keep in mind with the above functions:</p>
 <ul>
 <li>Only allowlisted/artist addresses can call these.</li>
-<li><code v-pre>ExternalAssetDependencyType _dependencyType</code> is a solidity enum, which can be passed in to these functions as a uint8. This enum only defines two options as of now, <code v-pre>IPFS</code> and <code v-pre>ARWEAVE</code>, which can be represented as <code v-pre>0</code> and <code v-pre>1</code> respectively.</li>
+<li><code v-pre>ExternalAssetDependencyType _dependencyType</code> is a solidity enum, which can be passed into these functions as a uint8. This enum only defines three options as of now, <code v-pre>IPFS</code>,<code v-pre>ARWEAVE</code>, and <code v-pre>ONCHAIN</code>, which can be represented as <code v-pre>0</code>,<code v-pre>1</code>, and <code v-pre>2</code> respectively.</li>
 </ul>
 <doc-anchor-target id="note-on-removing-external-asset-dependencies">
     <h3>
@@ -270,7 +292,7 @@ function removeProjectExternalAssetDependency(uint256 _projectId, uint256 _index
     </h3>
 </doc-anchor-target>
 <p>In the interest of saving gas, the <code v-pre>removeProjectExternalAssetDependency()</code> function is implemented in such a way that it does not preserve the order of the project&#x27;s external asset dependency mapping. Specifically, the way this removal logic works is as follows: when an index to remove is passed in, the element at that index being removed is swapped with the element at the last index of the list of assets. Now that the last index holds the element to be removed, that element is removed off the list. This method, in addition to being more gas efficient, also ensures that our list/mapping does not have any &quot;holes&quot;. The tradeoff, however, is that the removal causes the order of the external asset dependencies in this list to change, albeit in a deterministic manner: the element at the last index always moves to the removed index. This is important to keep in mind when writing your project script, though you can always update the ordering manually as you see fit by utilizing the <code v-pre>updateProjectExternalAssetDependency()</code> function.</p>
-<p>You can view directly the full implementation of this removal function here: <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/PBAB%2BCollabs/GenArt721CoreV2_ENGINE_FLEX.sol#L596">https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/PBAB%2BCollabs/GenArt721CoreV2_ENGINE_FLEX.sol#L596</a></p>
+<p>You can view directly the full implementation of this removal function here: <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol#L524">https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol#L524</a></p>
 <doc-anchor-target id="preferred-gateways">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#preferred-gateways">#</doc-anchor-trigger>
@@ -297,7 +319,8 @@ string public preferredArweaveGateway;</code></pre>
   externalAssetDependencies: [
     {
       cid: &quot;&quot;,
-      dependencyType: &quot;&quot;
+      dependencyType: &quot;&quot;,
+      data: &quot;&quot;
     },
     ...
   ],
@@ -305,20 +328,20 @@ string public preferredArweaveGateway;</code></pre>
   preferredArweaveGateway: &quot;&quot;
 }</code></pre>
 </doc-codeblock></div>
-<p>Your project script can then easily make use of these dependencies by combining the CID of the asset with the appropriate gateway. As a simple example: If you have an external asset dependency with a CID <code v-pre>QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code> and a dependencyType of <code v-pre>IPFS</code>, you can construct the full url of your external asset depdency by combining the <code v-pre>preferredIPFSGateway</code>, which let&#x27;s assume is <code v-pre>https://ipfs.io/ipfs/</code>, with the asset CID. This gives you the full url of the asset, <code v-pre>https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code>, and allows your project script to download it with <code v-pre>fetch</code> and use it as it sees fit.</p>
-<p>Note that if your CID is pointing to a directory of assets, rather than a single asset, your project script will need to be aware of the file naming structure of this directory to fetch the assets individually. Using the previous example, imagine that CID <code v-pre>QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code> was pointing to a directory of 10 PNG images, with filenames corresponding to the numbers 1-10. Your project script would generate the same full url with the information provided, <code v-pre>https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code>, but also append the specific file you want to fetch by being aware of the naming conventions, ie <code v-pre>https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg/1.png</code>.</p>
+<p>Your project script can then easily make use of these dependencies by combining the CID of the asset with the appropriate gateway, if you are dealing with IPFS/Arweave dependencies. As a simple example: If you have an external asset dependency with a CID <code v-pre>QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code> and a dependencyType of <code v-pre>IPFS</code>, you can construct the full url of your external asset dependency by combining the <code v-pre>preferredIPFSGateway</code>, which let&#x27;s assume is <code v-pre>https://ipfs.io/ipfs/</code>, with the asset CID. This gives you the full url of the asset, <code v-pre>https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code>, and allows your project script to download it with <code v-pre>fetch</code> and use it as it sees fit. For fully onchain external asset dependencies, the full data string that is stored on the blockchain will be injected.</p>
+<p>Note that for IPFS/Arweave external asset dependencies if your CID is pointing to a directory of assets, rather than a single asset, your project script will need to be aware of the file naming structure of this directory to fetch the assets individually. Using the previous example, imagine that CID <code v-pre>QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code> was pointing to a directory of 10 PNG images, with filenames corresponding to the numbers 1-10. Your project script would generate the same full url with the information provided, <code v-pre>https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code>, but also append the specific file you want to fetch by being aware of the naming conventions, ie <code v-pre>https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg/1.png</code>.</p>
 <doc-anchor-target id="loading-js-libraries-as-external-asset-dependencies">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#loading-js-libraries-as-external-asset-dependencies">#</doc-anchor-trigger>
         <span>Loading JS Libraries As External Asset Dependencies</span>
     </h2>
 </doc-anchor-target>
-<p>If you are specifically looking to utilize an external asset dependency as a JavaScript library in your project script, you cannot simply add it as a script element onto the page. You must load it in a blocking manner so that the browser does not attempt to run your project script code before the lib is  fully loaded. Here is an example of how to do this with ES6 dynamic imports (supported by most modern browsers: <a href="https://caniuse.com/es6-module-dynamic-import">https://caniuse.com/es6-module-dynamic-import</a>):</p>
+<p>If you are specifically looking to utilize an IPFS/ARWEAVE type external asset dependency as a JavaScript library in your project script, you cannot simply add it as a script element onto the page. You must load it in a blocking manner so that the browser does not attempt to run your project script code before the lib is  fully loaded. Here is an example of how to do this with ES6 dynamic imports (supported by most modern browsers: <a href="https://caniuse.com/es6-module-dynamic-import">https://caniuse.com/es6-module-dynamic-import</a>):</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-javascript"><code v-pre class="language-javascript">(async () =&gt; {
         await import('JS_EXTERNAL_ASSET_DEPENDENCY_FULL_URL_GOES_HERE');
     
-        // project script follows bellow
+        // project script follows below
 })()</code></pre>
 </doc-codeblock></div>
 <p>Here&#x27;s another method without using ES6 dynamic imports, instead relying on using a callback that gets fired after the JS external asset dependency is injected into the html via a script tag:</p>
@@ -350,14 +373,14 @@ loadScript('JS_EXTERNAL_ASSET_DEPENDENCY_FULL_URL_GOES_HERE', myProjectScriptCod
         <span>Locking A Project&#x27;s External Asset Dependencies</span>
     </h2>
 </doc-anchor-target>
-<p>Artists and allowlisted addresses also have the ability to lock a project&#x27;s external asset depdencies:</p>
+<p>Artists and allowlisted addresses also have the ability to lock a project&#x27;s external asset dependencies:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-solidity"><code v-pre class="language-solidity">function lockProjectExternalAssetDependencies(uint256 _projectId)</code></pre>
 </doc-codeblock></div>
 <p>This irreversible action removes the ability to add, update or remove from a project&#x27;s external asset dependencies.</p>
 <p>Important notes:</p>
 <ul>
-<li>Preferrred gateways do not get locked with this action and, in general, cannot be locked. This is intentional to allow support for modifying the preferred gateway over time, which may change while CIDs remain fixed/permanent.</li>
+<li>Preferred gateways do not get locked with this action and, in general, cannot be locked. This is intentional to allow support for modifying the preferred gateway over time, which may change while CIDs remain fixed/permanent.</li>
 <li>You can lock a project&#x27;s external asset dependencies regardless of whether or not the project itself is locked. And you can continue to modify a project&#x27;s external dependencies even if the project is locked, as long as the external asset dependencies for the project are not locked.</li>
 </ul>
 
