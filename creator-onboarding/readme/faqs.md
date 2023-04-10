@@ -283,34 +283,40 @@ If the charity you’d like to donate to is not set up to receive crypto donatio
 
 Here are a few donation options:
 
-**1) On-chain donations through Endaoment.org**
 
-Endaoment is a 501c(3) organization that accepts crypto and distributes donations to any qualified US-based 501c(3) charity. Donations through Endaoment are set at the contract level and automatically routed at the time of payment.
-To use Endaoment, go to Endaoment.org and create a fund. Then, enter ` 0x9D5025B327E6B863E5050141C987d988c07fd8B` or  `ndao.eth` in the additional payee field. Once you’ve created the fund, contact us in your [M_] artist DM with your fund’s URL and project number. Once your project launches and the money is in your Endaoment Fund, you can send donations to any qualified charity in the United States. Many artists prefer this route so they can support multiple charities with donations, rather than just one charity with a single donation. *Please note that Endaoment charges 1.5% to receive, convert, and send money to a charity.
+**1)** **On-chain donations through Endaoment.org**
 
-You can also find a tutorial of how to use Endaoment [here](https://www.loom.com/share/822350f1a1c84f25b253cc9e4d2cee38).
+Endaoment is a 501(c)(3) organization that accepts crypto and distributes donations to any US-based 501(c)(3) charity in good standing with the IRS. Donations through Endaoment are set at the contract level and automatically routed at the time of payment without touching your wallet (potentially avoiding tax liability/deductibility).
 
-**2) Make a zero-fee on-chain donation with CryptoforCharity.io**
+To use Endaoment, go to [Endaoment.org](https://endaoment.org), connect your wallet and create a fund. Then, enter your fund's contract address (shown on your newly created fund page) in the additional payee field. If using the additional payee field for donations, this field can be cleared before lowering to resting price. Many artists prefer this route so they can support multiple charities with smaller donations rather than a single charity with one large donation, but you can also set up organization as additional payee directly. In this case, go to [Endaoment.org](https://endaoment.org/explore), use their search bar to locate the org in question, and copy the contract address directly from the organization's profile page to the payee field (you can do this for multiple charities if desired). If the organization(s) shows as 'Not Deployed', simply click 'Deploy' to create a smart contract for that nonprofit. When that process completes, a contract address will populate on the organization's profile page. After the mint concludes, contact Dan (Druid#4611 on Discord) with your fund’s URL or smart contract address. Endaoment will then process contributed ETH into USDC, allowing you to send donations in any amount to any charity in the US using their UI. Please note - Endaoment charges 1.5% to receive, convert, and distribute money to nonprofits.
 
-CryptoForCharity is a zero-fee platform that enables donations in crypto assets directly to charity. Any qualified US-based 501c(3) charity  and several cause funds focused on a specific issue.
+You can also find a tutorial of how to use Endaoment [here](https://www.loom.com/share/822350f1a1c84f25b253cc9e4d2cee38), can find direct support in their Discord server [here](https://discord.gg/endaoment) by creating a ticket in the #🙋｜get․help channel, and can read up on their documentation [here](https://docs.endaoment.org).
 
-Donations through CryptoForCharity are set at the contract level and automatically routed at the time of payment.
+**2)** **Make a zero-fee on-chain donation with CryptoforCharity.io**
 
-Generating a charity or cause fund wallet is straightforward -- fill out the form [here](https://www.cryptoforcharity.io/nft-creators). You can also contact SimonSays#0670 in the Art Blocks discord for help.
+CryptoForCharity is a zero-fee platform enabling donations in crypto assets directly to charity. You can support any US-based 501(c)(3) charity in good standing with the IRS, or donate to any of several cause funds focused on a specific issue.
 
-For a bit more on how this functions, [CryptoForCharity put together this tax guidance for NFT creators](https://www.cryptoforcharity.io/nft-creators).  
+Donations through CryptoForCharity are set at the contract level and automatically routed at the time of payment without touching your wallet (and potentially avoiding tax liability or the need to account for and deduct the income/donation). Donated funds can also be held for a short time following your drop, if you'd prefer to designate the charity or cause fund you wish to support after the fact, but they cannot be held indefinitely.
 
-**3) Create a second wallet**
+Generating a charity or cause fund wallet is straightforward -- simply fill out the form [here](https://www.cryptoforcharity.io/nft-creators). You can also reach out directly to SimonSays#0670 in the AB discord for help.
 
-If you’d like to create an additional wallet separate from the primary wallet designated for the project, you can enter that wallet's address in the “Additional Payee” field to collect the funds you intend to donate.
+For a bit more on how it's set up under the hood, [CryptoForCharity put together this tax guidance for NFT creators](https://www.cryptoforcharity.io/nft-creators).  
 
-**4) Receive funds in your primary wallet**
+**3)** **Create a second wallet**
 
-If you’d like to receive all funds from your project’s sale in your primary wallet, but still intend to participate in charitable giving, we recommend you communicate the total donations with Art Blocks and the community. Please be aware that each of the different methods of distributing funds can have its own tax implications, and Art Blocks recommends you consult a tax professional when making these plans. 
+If you’d like to create a second wallet separate from your personal wallet, you can enter the wallet's address in the additional payee field to collect the total donation amount you intend to donate. If using the additional payee field for donations, this field can be cleared before lowering to resting price.
 
-### How do I adjust charitable giving information from the additional payee field mid-Dutch auction?
+**4)** **Receive funds in your primary wallet**
 
-If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below resting price, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to the project’s primary wallet address and adjust the additional payee percentage to 0% before submitting the next price tier. These fields cannot be blank once the Dutch auction has begun.
+If you’d like to receive all funds from your project’s sale in your primary wallet, that’s fine, but please communicate the total donations with Art Blocks and the community. Please be aware that receiving money in your personal wallet may incur tax obligations and reduce the total donation amount.
+
+## How do I remove charitable giving information from the additional payee field mid-Dutch Auction?
+
+If charity information is entered as an additional payee field and you would like to remove this information prior to decreasing your tier below 0.25 ETH, please adjust the additional payee field to either 0x0000000000000000000000000000000000000000 or to your own wallet address and adjust the additional payee percentage to 0% before submitting the next price tier. These fields cannot be blank once the dutch auction has begun.
+
+## What has Art Blocks donated to charity in the past?
+
+To learn more about Art Blocks commitment to charitable giving, see our [Charity on Chain: 2021 Wrap-Up](https://medium.com/the-link-art-blocks/charity-on-chain-2021-wrap-up-c69782fa7f4a).
 
 ## Security 
 
