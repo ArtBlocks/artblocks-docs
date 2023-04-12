@@ -21,33 +21,25 @@ order: 100
 ## What are the Art Blocks Engine offerings?
 
 **Art Blocks Engine:**   
-The same flagship product used by Art Blocks for on-chain storage of generative systems. Projects can either use no dependencies or one dependency from a short list of highly decentralized libraries.
-
-[Check this link](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies) for a complete list of allowed dependencies.
+Used for on-chain storage of generative systems. Projects can use no dependencies or one dependency from a list of decentralized libraries. [See the allowed dependencies here.](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies)
 
 
 **Art Blocks Engine Flex:**   
-Our newest offering allows generative systems to reference off-chain assets stored on [IPFS](https://ipfs.io/) or [Arweave](https://www.arweave.org/). This means generative systems can use photography, AI, GAN, and other creative tools that are otherwise impractical.
+Allows generative systems to reference off-chain assets stored on IPFS or Arweave, enabling creative tools like photography, AI, and GAN.
 
-If you’re unsure which offering better fits your needs, get in touch, and we can chat through the benefits of each approach. 
+Email us at Engine@artblocks.io to discuss which offering best suits your needs.
 
 ## What's included with Art Blocks Engine?
 
 For a new partnership, the standard current Art Blocks Engine offerings include:
 
-1. Deployment of basic Engine smart contracts suite to testnet and mainnet (includes ETH gas costs incurred for contract deployments):
-   1.1 `GenArt721CoreV2` contract: main Engine contract
-   1.2 `GenArt721Minter` contract: minting contract, which supports minting in ETH and ERC20 tokens–can be upgraded in the future
-   1.3 `Randomizer` contract: basic randomizer, which provides additional entropy to the core contract for token creation–can be upgraded in the future
-2. Integration of deployed Core contract with decentralized Graph indexing architecture on testnet and mainnet (includes GRT costs incurred for subgraph update deployment).
-3. Integration of deployed contracts and subgraph with Art Blocks’ project setup site, and with Art Blocks’ rendering and metadata infrastructure, on testnet and mainnet. APIs provided will include: 
-   * Token API
-   * Generator API
-   * Rendered Image API
+1. Deployment of Engine smart contracts suite to testnet and mainnet (includes gas costs).
+2. Integration of deployed Core contract with decentralized Graph indexing architecture on testnet and mainnet, includes GRT costs incurred for subgraph update deployment.
+3. Integration of deployed contracts and subgraph with Art Blocks' project setup site and rendering/metadata infrastructure (APIs: Token, Generator, Rendered Image).
 
 ## What effect does ‘locking’ a project have?
 
-Locking a project (specifically on GenArt721CoreV2) permanently freezes the artist name, project name, project scripts, project license, and project IPFS hash on the blockchain. Additionally, maximum invocations of a project can never be increased.
+Locking a project (specifically on V2 Contracts) permanently freezes the artist name, project name, project scripts, project license, and project IPFS hash on the blockchain. Additionally, maximum invocations of a project can never be increased.
 
  **Locked projects can not be unlocked**
 
@@ -70,35 +62,43 @@ A summary of how the smart contract functions behave:
     - before being locked, maximum invocations may be increased
     - after being locked, maximum invocations may only be decreased
 
+### Changes for V3 contracts (deployed after March '23)
+
+- In addition to the above, artists can update project description when project is unlocked. However, only contract admins can update project the description when the project is locked.
+- **V3 contracts autolock four weeks after a project is complete.**
+
 ## How can we add more team members to Discord?
 
-Contact your account manager for an active invite link to the private Discord server.
+Contact your account manager for an invite link to the private Discord server.
 
 ## How long will the process take from start to public launch?
 
-The process typically takes 10 weeks from our first conversation until your first public launch. 
-
-However, several factors will likely delay the process. To reduce delays, we recommend:
-- Having a front-end developer ready
-- Having an artist lined up or generative script ready
-- Having a go-to-market strategy ready
-- Allocating sufficient time for your team to get fully onboarded - specifically steps 7, 8, and 10 of the [onboarding process](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/Engine-partner-onboarding-steps/).
+The process typically takes 10 weeks from initial conversation to public launch, but is **highly** dependant on partner's resource allocation. To reduce delays, have a front-end developer, artist, go-to-market strategy, and sufficient onboarding time ready. 
 
 ## What information do we need to provide to deploy our smart contracts?
 
 To get started, you'll provide our team with:
 
-- **An Ethereum wallet address** that you own and will use to manage your Art Blocks Engine smart contracts.
-- **The name you’ll use for tokens** from your contract (e.g., for Art Blocks, it is "Art Blocks")
-- T**he ticker symbol you’ll use for tokens** from your contract (e.g., for Art Blocks, it is "BLOCKS")
+- Network: (Mainnet or Testnet)
+- A testnet/mainnet Ethereum wallet address (that you currently own and control) you'll use to manage your Art Blocks Engine smart contracts.
+- The name you’ll use for tokens from your contract (e.g., for Art Blocks, it is "Art Blocks")
+- The ticker symbol you’ll use for tokens from your contract (e.g., for Art Blocks, it is "BLOCKS")
+- Deployment Type: V3 Onchain Engine or V3 Flex Engine
+- Minter Type: set price eth only, set price custom erc20, merkle tree allowlist, holder-gated, linear DA, exponential DA, and exponential DA with settlement
+- Starting project ID # (>=0):
+- Set `autoApproveArtistSplitProposals` true or false**
 
-Note: We cannot deploy your contract until you provide the above information. **The name and symbol tied to your contract cannot change once it’s set.**
+**It needs to be set at deployment and cannot be changed later. 
+
+tldr - if true, artist royalty wallet changes are auto-approved. If false, the contract admin will need to approve the artist's royalty wallet changes. This is an added check to ensure your artists aren't changing royalty wallets to a random address, which could complicate accounting/ OFAC compliance. 
+
+We cannot deploy your contract until you provide the above information. **The name and symbol tied to your contract cannot change once your contract is deployed.**
 
 ## Does Art Blocks create a front-end site for our project?
 
 No, partners are responsible for creating and designing their customer-facing experience. 
 
-However, we do have a front-end template with all the web3 connectivity you need to launch. You will still be responsible for branding/designing the template, but this significantly reduces the time needed to complete a front-end. 
+However, we do have a [front-end React template](https://github.com/ArtBlocks/artblocks-engine-react) with web3 functionality you need to launch a minting site. You will still be responsible for designing the user exerpeicne, but this significantly reduces the time needed to complete a front-end. 
 
 ## How long will each stage of the process take?
 
@@ -115,17 +115,23 @@ However, we do have a front-end template with all the web3 connectivity you need
 11. Mint #0 - **Instant**
 12. Project launch! - **1 week** after step 11
 
-## Core contract vs. Minter contract
+## Contract Ecosystem
 
 **Core contract:**
 This is the smart contract that controls the artwork created by the artist. No financial transactions occur on this smart contract.
 
+**AdminACL:**
+By default, Engine smart contracts have two sets of permissions, Admin and Artist. The AdminACL contract controls which wallets can access which functions on your core contract. If you'd like to assign more granular control of your smart contract to different wallets, you can fork and customize the AdminACL contract. 
+
+**Minter Filer:**
+The minter filter configures minter-types to specific projects. 
+
 **Minter contract:**
 These smart contracts receive funds and split them between the artist(s) and the platform. Artists receive funds directly from these contracts.
 
-## How do we list Art Blocks Engine pieces on OpenSea?
+## How do we list Art Blocks Engine pieces on secondary markets?
 
-OpenSea will automatically detect and display projects on your contract as one large collection. If you’d like each project to have its own storefront, please contact account manager to facilitate the change. 
+Secondary marketplaces will automatically detect and display projects on your contract. If you’d like each project to have its own storefront on OpenSea, please contact an account manager to facilitate the change. 
 
 ## What's the difference between a testnet token and a mainnet token?
 
