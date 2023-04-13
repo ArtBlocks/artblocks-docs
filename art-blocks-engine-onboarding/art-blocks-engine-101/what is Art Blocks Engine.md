@@ -43,6 +43,8 @@ Both core contracts integrate with various peripheral contracts to provide flexi
 
 Partners should choose between the V3 Engine core contract and the V3 Engine Flex core contract based on their project's goals and technical capabilities. The smart contract architecture for Art Blocks Engine provides a robust and flexible system for managing and creating generative NFTs while integrating with various peripheral contracts to extend its capabilities.
 
+For additional context, please check out [this architecture overview (with accompanying diagrams)](https://github.com/ArtBlocks/artblocks-contracts/blob/main/MINTER_SUITE.md).
+
 ## What is generative art?
 
 Generative art is about developing systems that define rules for creating art. By introducing randomness to those systems, core concepts are expressed through unique outputs. In a contemporary sense, this means writing computer algorithms to define the system and introduce randomness, which allows for conceptual exploration and rapid iteration. 
