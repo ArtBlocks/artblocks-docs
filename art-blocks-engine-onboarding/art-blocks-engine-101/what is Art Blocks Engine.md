@@ -32,7 +32,7 @@ The Art Blocks Engine offers two core contract options: the V3 Engine core contr
 
 The V3 Engine core contract is an ERC-721 NFT contract that manages metadata for all Art Blocks NFTs, including artist scripts, token hashes, and token royalty data.
 
-The V3 Engine Flex core contract allows artists to use external assets in their Engine tokens. These external assets can be images, videos, audio, or other data and may be stored on decentralized storage systems such as IPFS, Arweave, or on the Ethereum blockchain.
+The V3 Engine Flex core contract includes everything in the V3 Engine contract, but also allows artists to use external assets in their Engine tokens. These external assets can be images, videos, audio, or other data and may be stored on decentralized storage systems such as IPFS, Arweave, or on the Ethereum blockchain
 
 Both core contracts integrate with various peripheral contracts to provide flexible, customizable, and extensible functionality. These peripheral contracts are:
 
