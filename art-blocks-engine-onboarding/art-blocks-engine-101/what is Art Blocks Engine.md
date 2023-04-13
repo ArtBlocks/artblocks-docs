@@ -43,7 +43,7 @@ Both core contracts integrate with various peripheral contracts to provide flexi
 
 Partners should choose between the V3 Engine core contract and the V3 Engine Flex core contract based on their project's goals and technical capabilities. The smart contract architecture for Art Blocks Engine provides a robust and flexible system for managing and creating generative NFTs while integrating with various peripheral contracts to extend its capabilities.
 
-For additional context, please check out [this architecture overview (with accompanying diagrams)](https://github.com/ArtBlocks/artblocks-contracts/blob/main/MINTER_SUITE.md).
+For additional context, please check out [this architecture overview (with accompanying diagrams)](https://github.com/ArtBlocks/artblocks-contracts/blob/main/V3_ARCHITECTURE.md).
 
 ## What is the "minter suite"?
 
@@ -63,6 +63,8 @@ A summary of the division of responsibilities between the MinterFilter and indiv
   - Retrieves price information for tokens in a project, including token price in wei, currency symbol, and currency address.
 
 tl;dr: The MinterFilter serves as a control layer that ensures the correct minter is used for each project, while Minters handle token purchase processes and project-specific settings. This division of responsibilities enables a secure, efficient, and flexible set of contracts that we call the "minter suite".
+
+For additional context, please check out [this architecture overview (with accompanying diagrams)](https://github.com/ArtBlocks/artblocks-contracts/blob/main/MINTER_SUITE.md).
 
 ## What is generative art?
 
