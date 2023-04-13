@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734717288089">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734734399266">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.734717288089" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.734734399266" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.734717288089" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.734734399266" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.734717288089" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.734734399266" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -244,6 +244,51 @@
 <p>Currently, we do not yet support the turnkey ability to programically upload/pin these dependencies to IPFS/Arweave within the Engine experience directly; however, our team is more than happy to assist partners in the process of uploading/pinning assets on IPFS/Arweave using existing third party solutions for doing so (e.g. Pinata in the case of IPFS).</p>
 <p>Note that for a single project, it is possible to have a single off-chain dependency (e.g. a single image file) or a set of off-chain dependencies (e.g. a series of images from a set). This means that is possible, for example, to have a project that creates 1of1ofX generative variants of a single base image asset, or one in which for a given token a random image is selected from the base image asset set, and then a generative process is applied to it.</p>
 <p>It is also important to note that images are not the only supported external asset dependency type. It is possible to reference any file type that can be pinned/uploaded to IPFS or Arweave and intelligbly incorporated into a generative algorithm to create interesting artistic outputs. For example, a project could use <code v-pre>tensorflow.js</code> as its single-depedency, have its generative script be a tensorflow based creative coding algorithm, and store the model file for the machine learning model on IPFS or Arweave to support a ML/AI based project.</p>
+<doc-anchor-target id="what-is-the-smart-contract-architecture-for-art-blocks-engine">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#what-is-the-smart-contract-architecture-for-art-blocks-engine">#</doc-anchor-trigger>
+        <span>What is the smart contract architecture for Art Blocks Engine?</span>
+    </h2>
+</doc-anchor-target>
+<p>The Art Blocks Engine offers two core contract options: the V3 Engine core contract and the V3 Engine Flex core contract. These contracts are mutually exclusive, and partners should select the appropriate core contract based on their needs and whether they require the flex capabilities.</p>
+<p>The V3 Engine core contract is an ERC-721 NFT contract that manages metadata for all Art Blocks NFTs, including artist scripts, token hashes, and token royalty data.</p>
+<p>The V3 Engine Flex core contract includes everything in the V3 Engine contract, but also allows artists to use external assets in their Engine tokens. These external assets can be images, videos, audio, or other data and may be stored on decentralized storage systems such as IPFS, Arweave, or on the Ethereum blockchain</p>
+<p>Both core contracts integrate with various peripheral contracts to provide flexible, customizable, and extensible functionality. These peripheral contracts are:</p>
+<ul>
+<li>Admin Access Control List (ACL) contract: Manages granting admin access to the core contract and related contracts. It is designed to be highly flexible, extensible, and upgradable.</li>
+<li>Randomizer contract: Generates pseudo-random numbers for the core contract when new tokens are minted. This architecture is designed to be highly flexible, enabling designs that may desire asynchronous random number generation or other hash generation methods.</li>
+<li>Engine Registry contract: Notifies the subgraph indexing service of new Art Blocks Engine tokens. When the Engine Registry emits an event, the subgraph indexing service is notified, and the Engine contract is indexed and made available for querying on the Art Blocks subgraph.</li>
+<li>Minter Suite contracts: A collection of contracts used to mint Art Blocks Engine tokens. The Minter Suite is designed to be highly flexible and can be used to mint tokens in various ways.</li>
+</ul>
+<p>Partners should choose between the V3 Engine core contract and the V3 Engine Flex core contract based on their project&#x27;s goals and technical capabilities. The smart contract architecture for Art Blocks Engine provides a robust and flexible system for managing and creating generative NFTs while integrating with various peripheral contracts to extend its capabilities.</p>
+<p>For additional context, please check out <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/V3_ARCHITECTURE.md">this architecture overview (with accompanying diagrams)</a>.</p>
+<doc-anchor-target id="what-is-the-minter-suite">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#what-is-the-minter-suite">#</doc-anchor-trigger>
+        <span>What is the &quot;minter suite&quot;?</span>
+    </h2>
+</doc-anchor-target>
+<p>The Art Blocks minter suite is a collection of smart contracts that facilitate the secure and efficient minting of generative art tokens for Engine contracts in the V3 architecture.</p>
+<p>A summary of the division of responsibilities between the MinterFilter and individual Minters can be summarized as:</p>
+<ul>
+<li><p>MinterFilter:</p>
+<ul>
+<li>Maintains a list of approved minters that can mint tokens for projects on the platform.</li>
+<li>Assigns a specific minter to each project, which can be updated by the project&#x27;s artist or the platform&#x27;s Admin ACL.</li>
+<li>Checks if the minter is the assigned minter for a project before allowing the token to be minted.</li>
+</ul>
+</li>
+<li><p>Minters:</p>
+<ul>
+<li>Provides information about the minter type and associated core contract and MinterFilter addresses.</li>
+<li>Handles the token purchase process through the &quot;purchase&quot; and &quot;purchaseTo&quot; functions for specific projects.</li>
+<li>Managed the maximum number of invocations (for the given minter) for each project.</li>
+<li>Retrieves price information for tokens in a project, including token price in wei, currency symbol, and currency address.</li>
+</ul>
+</li>
+</ul>
+<p>tl;dr: The MinterFilter serves as a control layer that ensures the correct minter is used for each project, while Minters handle token purchase processes and project-specific settings. This division of responsibilities enables a secure, efficient, and flexible set of contracts that we call the &quot;minter suite&quot;.</p>
+<p>For additional context, please check out <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/MINTER_SUITE.md">this architecture overview (with accompanying diagrams)</a>.</p>
 <doc-anchor-target id="what-is-generative-art">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#what-is-generative-art">#</doc-anchor-trigger>
