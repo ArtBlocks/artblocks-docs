@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734458308915">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734717288089">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.734458308915" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.734717288089" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.734458308915" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.734717288089" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.734458308915" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.734717288089" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -244,11 +244,10 @@
     </h2>
 </doc-anchor-target>
 <p><strong>Art Blocks Engine:</strong><br />
-The same flagship product used by Art Blocks for on-chain storage of generative systems. Projects can either use no dependencies or one dependency from a short list of highly decentralized libraries.</p>
-<p><a href="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies">Check this link</a> for a complete list of allowed dependencies.</p>
+Used for on-chain storage of generative systems. Projects can use no dependencies or one dependency from a list of decentralized libraries. <a href="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/#limited-dependencies">See the allowed dependencies here.</a></p>
 <p><strong>Art Blocks Engine Flex:</strong><br />
-Our newest offering allows generative systems to reference off-chain assets stored on <a href="https://ipfs.io/">IPFS</a> or <a href="https://www.arweave.org/">Arweave</a>. This means generative systems can use photography, AI, GAN, and other creative tools that are otherwise impractical.</p>
-<p>If you’re unsure which offering better fits your needs, get in touch, and we can chat through the benefits of each approach.</p>
+Allows generative systems to reference off-chain assets stored on IPFS or Arweave, enabling creative tools like photography, AI, and GAN.</p>
+<p>Email us at <a href="mailto:Engine@artblocks.io">Engine@artblocks.io</a> to discuss which offering best suits your needs.</p>
 <doc-anchor-target id="whats-included-with-art-blocks-engine">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#whats-included-with-art-blocks-engine">#</doc-anchor-trigger>
@@ -257,18 +256,9 @@ Our newest offering allows generative systems to reference off-chain assets stor
 </doc-anchor-target>
 <p>For a new partnership, the standard current Art Blocks Engine offerings include:</p>
 <ol>
-<li>Deployment of basic Engine smart contracts suite to testnet and mainnet (includes ETH gas costs incurred for contract deployments):
-1.1 <code v-pre>GenArt721CoreV2</code> contract: main Engine contract
-1.2 <code v-pre>GenArt721Minter</code> contract: minting contract, which supports minting in ETH and ERC20 tokens–can be upgraded in the future
-1.3 <code v-pre>Randomizer</code> contract: basic randomizer, which provides additional entropy to the core contract for token creation–can be upgraded in the future</li>
-<li>Integration of deployed Core contract with decentralized Graph indexing architecture on testnet and mainnet (includes GRT costs incurred for subgraph update deployment).</li>
-<li>Integration of deployed contracts and subgraph with Art Blocks’ project setup site, and with Art Blocks’ rendering and metadata infrastructure, on testnet and mainnet. APIs provided will include:
-<ul>
-<li>Token API</li>
-<li>Generator API</li>
-<li>Rendered Image API</li>
-</ul>
-</li>
+<li>Deployment of Engine smart contracts suite to testnet and mainnet (includes gas costs).</li>
+<li>Integration of deployed Core contract with decentralized Graph indexing architecture on testnet and mainnet, includes GRT costs incurred for subgraph update deployment.</li>
+<li>Integration of deployed contracts and subgraph with Art Blocks&#x27; project setup site and rendering/metadata infrastructure (APIs: Token, Generator, Rendered Image).</li>
 </ol>
 <doc-anchor-target id="what-effect-does-locking-a-project-have">
     <h2>
@@ -276,7 +266,7 @@ Our newest offering allows generative systems to reference off-chain assets stor
         <span>What effect does ‘locking’ a project have?</span>
     </h2>
 </doc-anchor-target>
-<p>Locking a project (specifically on GenArt721CoreV2) permanently freezes the artist name, project name, project scripts, project license, and project IPFS hash on the blockchain. Additionally, maximum invocations of a project can never be increased.</p>
+<p>Locking a project (specifically on V2 Contracts) permanently freezes the artist name, project name, project scripts, project license, and project IPFS hash on the blockchain. Additionally, maximum invocations of a project can never be increased.</p>
 <p><strong>Locked projects can not be unlocked</strong></p>
 <p>A summary of how the smart contract functions behave:</p>
 <ul>
@@ -313,27 +303,30 @@ Our newest offering allows generative systems to reference off-chain assets stor
 </ul>
 </li>
 </ul>
+<doc-anchor-target id="changes-for-v3-contracts-deployed-after-march-23">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#changes-for-v3-contracts-deployed-after-march-23">#</doc-anchor-trigger>
+        <span>Changes for V3 contracts (deployed after March &#x27;23)</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>In addition to the above, artists can update project description when project is unlocked. However, only contract admins can update project the description when the project is locked.</li>
+<li><strong>V3 contracts autolock four weeks after a project is complete.</strong></li>
+</ul>
 <doc-anchor-target id="how-can-we-add-more-team-members-to-discord">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-we-add-more-team-members-to-discord">#</doc-anchor-trigger>
         <span>How can we add more team members to Discord?</span>
     </h2>
 </doc-anchor-target>
-<p>Contact your account manager for an active invite link to the private Discord server.</p>
+<p>Contact your account manager for an invite link to the private Discord server.</p>
 <doc-anchor-target id="how-long-will-the-process-take-from-start-to-public-launch">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#how-long-will-the-process-take-from-start-to-public-launch">#</doc-anchor-trigger>
         <span>How long will the process take from start to public launch?</span>
     </h2>
 </doc-anchor-target>
-<p>The process typically takes 10 weeks from our first conversation until your first public launch.</p>
-<p>However, several factors will likely delay the process. To reduce delays, we recommend:</p>
-<ul>
-<li>Having a front-end developer ready</li>
-<li>Having an artist lined up or generative script ready</li>
-<li>Having a go-to-market strategy ready</li>
-<li>Allocating sufficient time for your team to get fully onboarded - specifically steps 7, 8, and 10 of the <a href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/Engine-partner-onboarding-steps/">onboarding process</a>.</li>
-</ul>
+<p>The process typically takes 10 weeks from initial conversation to public launch, but is <strong>highly</strong> dependant on partner&#x27;s resource allocation. To reduce delays, have a front-end developer, artist, go-to-market strategy, and sufficient onboarding time ready.</p>
 <doc-anchor-target id="what-information-do-we-need-to-provide-to-deploy-our-smart-contracts">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#what-information-do-we-need-to-provide-to-deploy-our-smart-contracts">#</doc-anchor-trigger>
@@ -342,11 +335,18 @@ Our newest offering allows generative systems to reference off-chain assets stor
 </doc-anchor-target>
 <p>To get started, you&#x27;ll provide our team with:</p>
 <ul>
-<li><strong>An Ethereum wallet address</strong> that you own and will use to manage your Art Blocks Engine smart contracts.</li>
-<li><strong>The name you’ll use for tokens</strong> from your contract (e.g., for Art Blocks, it is &quot;Art Blocks&quot;)</li>
-<li>T<strong>he ticker symbol you’ll use for tokens</strong> from your contract (e.g., for Art Blocks, it is &quot;BLOCKS&quot;)</li>
+<li>Network: (Mainnet or Testnet)</li>
+<li>A testnet/mainnet Ethereum wallet address (that you currently own and control) you&#x27;ll use to manage your Art Blocks Engine smart contracts.</li>
+<li>The name you’ll use for tokens from your contract (e.g., for Art Blocks, it is &quot;Art Blocks&quot;)</li>
+<li>The ticker symbol you’ll use for tokens from your contract (e.g., for Art Blocks, it is &quot;BLOCKS&quot;)</li>
+<li>Deployment Type: V3 Onchain Engine or V3 Flex Engine</li>
+<li>Minter Type: set price eth only, set price custom erc20, merkle tree allowlist, holder-gated, linear DA, exponential DA, and exponential DA with settlement</li>
+<li>Starting project ID # (&gt;=0):</li>
+<li>Set <code v-pre>autoApproveArtistSplitProposals</code> true or false**</li>
 </ul>
-<p>Note: We cannot deploy your contract until you provide the above information. <strong>The name and symbol tied to your contract cannot change once it’s set.</strong></p>
+<p>**It needs to be set at deployment and cannot be changed later.</p>
+<p>tldr - if true, artist royalty wallet changes are auto-approved. If false, the contract admin will need to approve the artist&#x27;s royalty wallet changes. This is an added check to ensure your artists aren&#x27;t changing royalty wallets to a random address, which could complicate accounting/ OFAC compliance.</p>
+<p>We cannot deploy your contract until you provide the above information. <strong>The name and symbol tied to your contract cannot change once your contract is deployed.</strong></p>
 <doc-anchor-target id="does-art-blocks-create-a-front-end-site-for-our-project">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#does-art-blocks-create-a-front-end-site-for-our-project">#</doc-anchor-trigger>
@@ -354,7 +354,7 @@ Our newest offering allows generative systems to reference off-chain assets stor
     </h2>
 </doc-anchor-target>
 <p>No, partners are responsible for creating and designing their customer-facing experience.</p>
-<p>However, we do have a front-end template with all the web3 connectivity you need to launch. You will still be responsible for branding/designing the template, but this significantly reduces the time needed to complete a front-end.</p>
+<p>However, we do have a <a href="https://github.com/ArtBlocks/artblocks-engine-react">front-end React template</a> with web3 functionality you need to launch a minting site. You will still be responsible for designing the user exerpeicne, but this significantly reduces the time needed to complete a front-end.</p>
 <doc-anchor-target id="how-long-will-each-stage-of-the-process-take">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#how-long-will-each-stage-of-the-process-take">#</doc-anchor-trigger>
@@ -375,23 +375,27 @@ Our newest offering allows generative systems to reference off-chain assets stor
 <li>Mint #0 - <strong>Instant</strong></li>
 <li>Project launch! - <strong>1 week</strong> after step 11</li>
 </ol>
-<doc-anchor-target id="core-contract-vs-minter-contract">
+<doc-anchor-target id="contract-ecosystem">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#core-contract-vs-minter-contract">#</doc-anchor-trigger>
-        <span>Core contract vs. Minter contract</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#contract-ecosystem">#</doc-anchor-trigger>
+        <span>Contract Ecosystem</span>
     </h2>
 </doc-anchor-target>
 <p><strong>Core contract:</strong>
 This is the smart contract that controls the artwork created by the artist. No financial transactions occur on this smart contract.</p>
+<p><strong>AdminACL:</strong>
+By default, Engine smart contracts have two sets of permissions, Admin and Artist. The AdminACL contract controls which wallets can access which functions on your core contract. If you&#x27;d like to assign more granular control of your smart contract to different wallets, you can fork and customize the AdminACL contract.</p>
+<p><strong>Minter Filer:</strong>
+The minter filter configures minter-types to specific projects.</p>
 <p><strong>Minter contract:</strong>
 These smart contracts receive funds and split them between the artist(s) and the platform. Artists receive funds directly from these contracts.</p>
-<doc-anchor-target id="how-do-we-list-art-blocks-engine-pieces-on-opensea">
+<doc-anchor-target id="how-do-we-list-art-blocks-engine-pieces-on-secondary-markets">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#how-do-we-list-art-blocks-engine-pieces-on-opensea">#</doc-anchor-trigger>
-        <span>How do we list Art Blocks Engine pieces on OpenSea?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-do-we-list-art-blocks-engine-pieces-on-secondary-markets">#</doc-anchor-trigger>
+        <span>How do we list Art Blocks Engine pieces on secondary markets?</span>
     </h2>
 </doc-anchor-target>
-<p>OpenSea will automatically detect and display projects on your contract as one large collection. If you’d like each project to have its own storefront, please contact account manager to facilitate the change.</p>
+<p>Secondary marketplaces will automatically detect and display projects on your contract. If you’d like each project to have its own storefront on OpenSea, please contact an account manager to facilitate the change.</p>
 <doc-anchor-target id="whats-the-difference-between-a-testnet-token-and-a-mainnet-token">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#whats-the-difference-between-a-testnet-token-and-a-mainnet-token">#</doc-anchor-trigger>
