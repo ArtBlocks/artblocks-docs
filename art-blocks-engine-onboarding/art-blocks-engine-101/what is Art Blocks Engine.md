@@ -45,6 +45,25 @@ Partners should choose between the V3 Engine core contract and the V3 Engine Fle
 
 For additional context, please check out [this architecture overview (with accompanying diagrams)](https://github.com/ArtBlocks/artblocks-contracts/blob/main/MINTER_SUITE.md).
 
+## What is the "minter suite"?
+
+The Art Blocks minter suite is a collection of smart contracts that facilitate the secure and efficient minting of generative art tokens for Engine contracts in the V3 architecture. 
+
+A summary of the division of responsibilities between the MinterFilter and individual Minters can be summarized as:
+
+- MinterFilter:
+  - Maintains a list of approved minters that can mint tokens for projects on the platform.
+  - Assigns a specific minter to each project, which can be updated by the project's artist or the platform's Admin ACL.
+  - Checks if the minter is the assigned minter for a project before allowing the token to be minted.
+
+- Minters:
+  - Provides information about the minter type and associated core contract and MinterFilter addresses.
+  - Handles the token purchase process through the "purchase" and "purchaseTo" functions for specific projects.
+  - Managed the maximum number of invocations (for the given minter) for each project.
+  - Retrieves price information for tokens in a project, including token price in wei, currency symbol, and currency address.
+
+tl;dr: The MinterFilter serves as a control layer that ensures the correct minter is used for each project, while Minters handle token purchase processes and project-specific settings. This division of responsibilities enables a secure, efficient, and flexible set of contracts that we call the "minter suite".
+
 ## What is generative art?
 
 Generative art is about developing systems that define rules for creating art. By introducing randomness to those systems, core concepts are expressed through unique outputs. In a contemporary sense, this means writing computer algorithms to define the system and introduce randomness, which allows for conceptual exploration and rapid iteration. 
