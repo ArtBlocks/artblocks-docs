@@ -94,7 +94,7 @@ Your aspect ratio should be a single number. This will be your token’s width d
 
 If your piece takes a certain amount of time to render fully, you can type in the render delay to let the server know when to render your output’s static images. This render time will be in milliseconds. If your algorithm is GPU intensive, and thumbnails do not render after the render delay, request `Enhanced GPU Rendering`. For accepted artists, file the request in your artist DM. For applying artists, file your request in the Art Blocks’ Discord Channel #artist-application-support.
 
-### Generate mp4 assets (toggle) 📄
+### Generate MP4 assets (toggle) 📄
 
 If checked, GIFs and MP4s will be generated on individual token refreshes, batch token refreshes, and new token mints. There will be a link to the MP4 under the token display component when the MP4 is created and available for that token. If checked, the MP4 render delay, MP4 duration, MP4 frame rate, and MP4 aspect ratio settings will be visible in the UI.
 
