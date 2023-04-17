@@ -96,13 +96,13 @@ If your piece takes a certain amount of time to render fully, you can type in th
 
 ### Generate mp4 assets (toggle) 📄
 
-If checked, GIFs and MP4s will be generated on individual token refreshes, batch token refreshes, and new token mints. There will be a link to the MP4 under the token display component when the MP4 is created and available for that token. If checked the MP4 render delay, MP4 duration, MP4 frame rate, and MP4 aspect ratio settings will be visible in the UI.
+If checked, GIFs and MP4s will be generated on individual token refreshes, batch token refreshes, and new token mints. There will be a link to the MP4 under the token display component when the MP4 is created and available for that token. If checked, the MP4 render delay, MP4 duration, MP4 frame rate, and MP4 aspect ratio settings will be visible in the UI.
 
 Please note that scripts utilizing CSS rules for transitions and animations may not render as intended.
 
 ### MP4 Render delay
 
-Similar to the PNG render delay, the render delay in milliseconds for GIF and MP4 outputs.
+The render delay in milliseconds to start animation capture for GIF and MP4 outputs.
 
 ### MP4 Duration
 
