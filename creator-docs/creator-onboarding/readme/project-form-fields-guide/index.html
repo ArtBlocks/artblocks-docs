@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.734811385291">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.735064129328">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.734811385291" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.735064129328" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.734811385291" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.735064129328" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.734811385291" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.735064129328" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -351,21 +351,63 @@
 <p>Your project’s outputs must be dimension agnostic, meaning they will scale seamlessly to any window size. See more on this <a href="../#dimensionless">here</a>. This field sets the aspect ratio for image renders but does not impact an output’s live view.</p>
 <p>While you can control the aspect ratio, you will have no control over the dimensions of the browser on which your project will be viewed.</p>
 <p>Your aspect ratio should be a single number. This will be your token’s width divided by height. For example, if your tokens are square, your aspect ratio should be 1.</p>
-<doc-anchor-target id="render-delay">
+<doc-anchor-target id="png-render-delay">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#render-delay">#</doc-anchor-trigger>
-        <span>Render delay <span class="docs-emoji">&#x1F4C4;</span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#png-render-delay">#</doc-anchor-trigger>
+        <span>PNG Render delay <span class="docs-emoji">&#x1F4C4;</span></span>
     </h3>
 </doc-anchor-target>
-<p>If your piece takes a certain amount of time to render fully, you can type in the render delay to let the server know when to render your output’s thumbnails. This render time will be in milliseconds. If your algorithm is GPU intensive, and thumbnails do not render after the render delay, request <code v-pre>Enhanced GPU Rendering</code>. For accepted artists, file the request in your artist DM. For applying artists, file your request in the Art Blocks’ Discord Channel #artist-application-support.</p>
-<doc-anchor-target id="display-static-toggle">
+<p>If your piece takes a certain amount of time to render fully, you can type in the render delay to let the server know when to render your output’s static images. This render time will be in milliseconds. If your algorithm is GPU intensive, and thumbnails do not render after the render delay, request <code v-pre>Enhanced GPU Rendering</code>. For accepted artists, file the request in your artist DM. For applying artists, file your request in the Art Blocks’ Discord Channel #artist-application-support.</p>
+<doc-anchor-target id="generate-mp4-assets-toggle">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#display-static-toggle">#</doc-anchor-trigger>
-        <span>Display static (toggle)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#generate-mp4-assets-toggle">#</doc-anchor-trigger>
+        <span>Generate MP4 assets (toggle) <span class="docs-emoji">&#x1F4C4;</span></span>
     </h3>
 </doc-anchor-target>
-<p>If red, the project’s primary view will be dynamic; if blue, the project’s primary view will be static. These settings will be reflected on Art Blocks and secondary markets once the project is live.</p>
-<p>For optimized performance, toggle <code v-pre>display static</code> if outputs are not animated, but take a long time to render.</p>
+<p>If checked, GIFs and MP4s will be generated on individual token refreshes, batch token refreshes, and new token mints. There will be a link to the MP4 under the token display component when the MP4 is created and available for that token. If checked, the MP4 render delay, MP4 duration, MP4 frame rate, and MP4 aspect ratio settings will be visible in the UI.</p>
+<p>Please note that scripts utilizing CSS rules for transitions and animations may not render as intended.</p>
+<doc-anchor-target id="mp4-render-delay">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mp4-render-delay">#</doc-anchor-trigger>
+        <span>MP4 Render delay</span>
+    </h3>
+</doc-anchor-target>
+<p>The render delay in milliseconds to start animation capture for GIF and MP4 outputs.</p>
+<doc-anchor-target id="mp4-duration">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mp4-duration">#</doc-anchor-trigger>
+        <span>MP4 Duration</span>
+    </h3>
+</doc-anchor-target>
+<p>The total length of the MP4, between 1 and 30 seconds. Setting this does not affect GIFs, they are set to 5 seconds.</p>
+<doc-anchor-target id="mp4-frame-rate">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mp4-frame-rate">#</doc-anchor-trigger>
+        <span>MP4 Frame rate</span>
+    </h3>
+</doc-anchor-target>
+<p>The number of frames per second of the MP4. Setting this does not affect GIFs, they are set to 24 fps.</p>
+<doc-anchor-target id="mp4-aspect-ratio">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mp4-aspect-ratio">#</doc-anchor-trigger>
+        <span>MP4 Aspect ratio</span>
+    </h3>
+</doc-anchor-target>
+<p>The aspect ratio of GIF and MP4 outputs. Due to limitations with the video codec the options are 1:1, 16:9, 9:16, 3:4, and 4:3.</p>
+<doc-anchor-target id="primary-display-format">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#primary-display-format">#</doc-anchor-trigger>
+        <span>Primary display format</span>
+    </h3>
+</doc-anchor-target>
+<p>The project&#x27;s primary view asset. This setting will be reflected on token and project detail pages on Art Blocks and secondary markets. For optimized performance, select <code v-pre>PNG</code> or <code v-pre>MP4</code> for animated projects, if outputs take a long time to render.</p>
+<doc-anchor-target id="thumbnail-preview-format">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#thumbnail-preview-format">#</doc-anchor-trigger>
+        <span>Thumbnail preview format</span>
+    </h3>
+</doc-anchor-target>
+<p>The project&#x27;s thumbnail preview asset. This setting will be reflected on grid pages on Art Blocks and secondary markets.</p>
 <doc-anchor-target id="project-scripts">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#project-scripts">#</doc-anchor-trigger>
