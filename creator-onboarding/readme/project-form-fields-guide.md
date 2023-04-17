@@ -90,15 +90,39 @@ While you can control the aspect ratio, you will have no control over the dimens
 
 Your aspect ratio should be a single number. This will be your token’s width divided by height. For example, if your tokens are square, your aspect ratio should be 1.
 
-### Render delay 📄
+### PNG Render delay 📄
 
-If your piece takes a certain amount of time to render fully, you can type in the render delay to let the server know when to render your output’s thumbnails. This render time will be in milliseconds. If your algorithm is GPU intensive, and thumbnails do not render after the render delay, request `Enhanced GPU Rendering`. For accepted artists, file the request in your artist DM. For applying artists, file your request in the Art Blocks’ Discord Channel #artist-application-support.
+If your piece takes a certain amount of time to render fully, you can type in the render delay to let the server know when to render your output’s static images. This render time will be in milliseconds. If your algorithm is GPU intensive, and thumbnails do not render after the render delay, request `Enhanced GPU Rendering`. For accepted artists, file the request in your artist DM. For applying artists, file your request in the Art Blocks’ Discord Channel #artist-application-support.
 
-### Display static (toggle)
+### Generate MP4 assets (toggle) 📄
 
-If red, the project’s primary view will be dynamic; if blue, the project’s primary view will be static. These settings will be reflected on Art Blocks and secondary markets once the project is live.
+If checked, GIFs and MP4s will be generated on individual token refreshes, batch token refreshes, and new token mints. There will be a link to the MP4 under the token display component when the MP4 is created and available for that token. If checked, the MP4 render delay, MP4 duration, MP4 frame rate, and MP4 aspect ratio settings will be visible in the UI.
 
-For optimized performance, toggle `display static` if outputs are not animated, but take a long time to render.
+Please note that scripts utilizing CSS rules for transitions and animations may not render as intended.
+
+### MP4 Render delay
+
+The render delay in milliseconds to start animation capture for GIF and MP4 outputs.
+
+### MP4 Duration
+
+The total length of the MP4, between 1 and 30 seconds. Setting this does not affect GIFs, they are set to 5 seconds.
+
+### MP4 Frame rate
+
+The number of frames per second of the MP4. Setting this does not affect GIFs, they are set to 24 fps.
+
+### MP4 Aspect ratio
+
+The aspect ratio of GIF and MP4 outputs. Due to limitations with the video codec the options are 1:1, 16:9, 9:16, 3:4, and 4:3.
+
+### Primary display format
+
+The project's primary view asset. This setting will be reflected on token and project detail pages on Art Blocks and secondary markets. For optimized performance, select `PNG` or `MP4` for animated projects, if outputs take a long time to render.
+
+### Thumbnail preview format
+
+The project's thumbnail preview asset. This setting will be reflected on grid pages on Art Blocks and secondary markets.
 
 ### Project scripts ⛽📄
 
