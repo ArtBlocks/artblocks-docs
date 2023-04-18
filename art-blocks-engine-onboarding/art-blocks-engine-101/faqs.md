@@ -17,7 +17,8 @@ order: 100
 - [What's the difference between a testnet token and a mainnet token?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#whats-the-difference-between-a-testnet-token-and-a-mainnet-token)
 - [Flex: What are the limitations around file size and file type for external assets? How many external assets can a project have?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#flex-what-are-the-limitations-around-file-size-and-file-type-for-external-assets-how-many-external-assets-can-a-project-have)
 - [Flex: Can JS external asset dependencies make external calls to other APIs/assets?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#flex-can-js-external-asset-dependencies-make-external-calls-to-other-apisassets)
-- [How does project size work on the minterFilter contract vs Core contract?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#How-does-project-size-work-on-the-minterFilter-contract-vs-Core-contract)
+- [How does project size work on the minterFilter contract vs Core contract?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#how-does-project-size-work-on-the-minterfilter-contract-vs-core-contract)
+- [How does `autoApproveArtistSplitProposals` work?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#how-does-autoApproveArtistSplitProposals-work)
 
 ## What are the Art Blocks Engine offerings?
 
@@ -169,3 +170,9 @@ On the other hand, the **minterFilter contract** allows you to set max invocatio
 
 1. The new value of _maxInvocations should not be greater than the maxInvocations set in the core contract.
 2. The new value of _maxInvocations should not be less than the current number of invocations.
+
+## How does `autoApproveArtistSplitProposals` work?
+
+When `true`, `aproveArtistSplitProposals` is a feature thatallows artists to automatically change their royalty split payout address and the split percentage without requiring approval from the contract admin. This makes the process faster and more convenient for artists but may increase the risk of unauthorized changes to royalty wallets, which could complicate accounting or OFAC compliance. 
+
+If set to `alse` the contract admin will need to approve any changes to the artist's royalty wallet, adding a layer of security and control.
