@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.735076033134">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.735149901340">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.735076033134" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.735149901340" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.735076033134" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.735149901340" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.735076033134" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.735149901340" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -236,6 +236,7 @@
 <li><a href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#whats-the-difference-between-a-testnet-token-and-a-mainnet-token">What&#x27;s the difference between a testnet token and a mainnet token?</a></li>
 <li><a href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#flex-what-are-the-limitations-around-file-size-and-file-type-for-external-assets-how-many-external-assets-can-a-project-have">Flex: What are the limitations around file size and file type for external assets? How many external assets can a project have?</a></li>
 <li><a href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#flex-can-js-external-asset-dependencies-make-external-calls-to-other-apisassets">Flex: Can JS external asset dependencies make external calls to other APIs/assets?</a></li>
+<li><a href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#How-does-project-size-work-on-the-minterFilter-contract-vs-Core-contract">How does project size work on the minterFilter contract vs Core contract?</a></li>
 </ul>
 <doc-anchor-target id="what-are-the-art-blocks-engine-offerings">
     <h2>
@@ -436,6 +437,19 @@ These smart contracts receive funds and split them between the artist(s) and the
     </h2>
 </doc-anchor-target>
 <p>Art Blocks uses the decentralized Graph network to index on-chain data in our publicly available subgraph. There can be a slight delay between the first block confirmation on the ethereum network for a transaction and that transaction being indexed by our subgraph. To mitigate this, as an Art Blocks engine provider, your client should be waiting multiple block confirmations (we recommend at least 2 blocks) before it shows the generator view to the user. The generator will return an error message if the token is not indexed yet, accompanied by 4XX status code. Many clients also employ a polling strategy, only showing the requested generator view once the requested generator url is returning a 2XX status code.</p>
+<doc-anchor-target id="how-does-project-size-work-on-the-minterfilter-contract-vs-core-contract">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-does-project-size-work-on-the-minterfilter-contract-vs-core-contract">#</doc-anchor-trigger>
+        <span>How does project size work on the minterFilter contract vs Core contract?</span>
+    </h2>
+</doc-anchor-target>
+<p>A project&#x27;s max invocations on Art Blocks contracts are handled differently on the Core contract and the minterFilter contract.</p>
+<p>On the <strong>Core contract</strong>, setting a project size establishes the project&#x27;s maximum size, and this value <strong>cannot</strong> be increased once set. The max invocations on the core contract define the absolute upper limit for the number of mints for a specific project.</p>
+<p>On the other hand, the <strong>minterFilter contract</strong> allows you to set max invocations for a specific minter using the <code v-pre>manuallyLimitProjectMaxInvocations</code> function. This setting does not lock the project size but controls the maximum number of mints allowed by that particular minter. When updating the maxInvocations value for a project in the minterFilter contract, you must adhere to these conditions:</p>
+<ol>
+<li>The new value of _maxInvocations should not be greater than the maxInvocations set in the core contract.</li>
+<li>The new value of _maxInvocations should not be less than the current number of invocations.</li>
+</ol>
 
                                 
                                 <!-- Required only on API pages -->
