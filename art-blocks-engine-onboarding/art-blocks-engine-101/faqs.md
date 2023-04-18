@@ -17,6 +17,7 @@ order: 100
 - [What's the difference between a testnet token and a mainnet token?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#whats-the-difference-between-a-testnet-token-and-a-mainnet-token)
 - [Flex: What are the limitations around file size and file type for external assets? How many external assets can a project have?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#flex-what-are-the-limitations-around-file-size-and-file-type-for-external-assets-how-many-external-assets-can-a-project-have)
 - [Flex: Can JS external asset dependencies make external calls to other APIs/assets?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#flex-can-js-external-asset-dependencies-make-external-calls-to-other-apisassets)
+- [How does project size work on the minterFilter contract vs Core contract?](https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/faqs/#How-does-project-size-work-on-the-minterFilter-contract-vs-Core-contract)
 
 ## What are the Art Blocks Engine offerings?
 
@@ -157,3 +158,14 @@ The value of `paused` is determined by artist, whereas `active` is determined by
 ## Why is there a small delay between the token's mint transaction confirming and it being viewable on the Art Blocks Generator (live view)?
 
 Art Blocks uses the decentralized Graph network to index on-chain data in our publicly available subgraph. There can be a slight delay between the first block confirmation on the ethereum network for a transaction and that transaction being indexed by our subgraph. To mitigate this, as an Art Blocks engine provider, your client should be waiting multiple block confirmations (we recommend at least 2 blocks) before it shows the generator view to the user. The generator will return an error message if the token is not indexed yet, accompanied by 4XX status code. Many clients also employ a polling strategy, only showing the requested generator view once the requested generator url is returning a 2XX status code.
+
+## How does project size work on the minterFilter contract vs Core contract?
+
+A project's max invocations on Art Blocks contracts are handled differently on the Core contract and the minterFilter contract.
+
+On the **Core contract**, setting a project size establishes the project's maximum size, and this value **cannot** be increased once set. The max invocations on the core contract define the absolute upper limit for the number of mints for a specific project.
+
+On the other hand, the **minterFilter contract** allows you to set max invocations for a specific minter using the `manuallyLimitProjectMaxInvocations` function. This setting does not lock the project size but controls the maximum number of mints allowed by that particular minter. When updating the maxInvocations value for a project in the minterFilter contract, you must adhere to these conditions:
+
+1. The new value of _maxInvocations should not be greater than the maxInvocations set in the core contract.
+2. The new value of _maxInvocations should not be less than the current number of invocations.
