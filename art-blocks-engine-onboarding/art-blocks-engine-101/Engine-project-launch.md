@@ -1,38 +1,64 @@
 ---
 order: 800
 ---
-# Art Blocks Engine Project Launch
 
-A high-level overview of launching new projects on a new Art Blocks Engine contract.
+# Engine Project Deployment and Launch Guide
 
----
+This guide provides basic instructions for deploying and launching a new project on the V2 and V3 Engine smart contracts. You will learn how to create a project shell, assign a minter to each project, and setup the necessary configurations before minting and launching your project. This documentation aims to simplify the process and ensure a smooth project launch on the Art Blocks Engine platform.
 
-After deploying an Engine contract, you can now create projects on your contract.
+There are slight variations between V2 and V3 contracts, which will be noted in the relevant sections. 
 
-To create a new project shell, use the `addProject` method of your deployed Core Contract. This can be done by connecting to the contract via Etherscan.
+## Project Shell Deployment
 
-For a more in-depth guide on creating new projects on your Engine contract, please see the ["Project Shell Deployment Guide"](adding-new-project-shells.md).
+1.  Collect the required information for the project:
+    -   Project title (e.g., "Fun Lines")
+    -   Artist's wallet address (e.g., 0x78592a6fBE68fEBf226040a5D25ad7e69F2FeAb6)
+    -   (V2 only) Price-per-mint specified in WEI (e.g., 350000000000000000, or 0.35 ETH)
+2.  Navigate to your Engine Core Contract on Etherscan and connect your wallet. You can find this link in your `DEPLOYMENTS.md` log. [https://goerli.etherscan.io/address/0xd2363Acbf8CdF01A5FdfcB8f0295e0a5dF94518D#code](https://goerli.etherscan.io/address/0xd2363Acbf8CdF01A5FdfcB8f0295e0a5dF94518D#code)) 
+    
+3.  Click the "Write contract" tab and use the `addProject` method to create a new project shell, specifying the information collected in step 1.
+    
+4.  Connect to the Art Blocks website with the artist wallet used in in Step 3. Your artist should be able to begin entering project details.
+
+	Testnet URL: `https://artist-staging.artblocks.io/engine/[flex OR fullyonchain]/projects/[coreContractAddress]/[projectID]` 
+	example: https://artist-staging.artblocks.io/engine/flex/projects/0x28b82AA5bb6d00363ae0FBC5ecaD689Ae49BC82B/0
+
+	Mainnet URL: `https://www.artblocks.io/engine/[flex OR fullyonchain]/projects/[coreContractAddress]/[projectID]`
+	example: https://www.artblocks.io/engine/fullyonchain/projects/0xa319C382a702682129fcbF55d514E61a16f97f9c/1
+    
+5.  If you encounter issues finding or seeing your project on the Art Blocks site, disconnect and reconnect your wallet, ensuring you are connected with the previously specified artist wallet.
+
+## Assigning a Minter (V3 only)
+
+Minters are assigned on a per-project basis on V3 contracts. To assign minters, follow these steps: 
+
+1.  Assign the minter to your project by using the `MinterFilterV1` contract found in your deployment file. The artist's wallet should use function #6 `setMinterForProject`, entering the `_projectID` and `_minterAddress`. You can find the minter address in your deployment log, which is pinned in your partner channel.
+    
+2.  Once the minter is linked to your project, set the project details on the minter contract. The deployed minter addresses can be found in your deployment file.
+
+	For example, if Art Blocks deployed a Dutch Auction minter for your core contract, navigate to the  `MinterDAExpV4`  contract on Etherscan (in your `DEPLOYMENT.md` log). Then, use the function `setAuctionDetails` to enter details like  `_projectId`,  `_auctionTimestampStart`,  `_priceDecayHalfLifeSeconds`,  `_startPrice`, and  `_basePrice`. Make sure this is done using the artist's wallet.
+    
 
 ## Pre-mint-#0 Flight Check
 
-Before minting your first token (#0) on your new project shell, please verify the following.
+Before minting your first token (#0) on your new project shell, verify the following:
 
-1. The `baseTokenURI` has been set, taking the format of `http://token.artblocks.io/{CORE_CONTRACT_ADDRESS}/`.
-2. The max invocations for the project have been set **on the minter**. This is achieved by calling the `setProjectMaxInvocations` on the Minter contract when connecting with Etherscan, with the project ID of the project to be minted as the parameter. **Note**: This should only be done _after_ setting this max invocations for the project on the Core Contract itself.
-3. Perform a test-mint in each currency the project accepts (e.g. if the project is planned to use both ETH and some custom ERC20 token for separate stages of the launch, ensure that **both** minting flows are empirically verified).
+1.  The baseTokenURI has been set, following the format [http://token.artblocks.io/{CORE_CONTRACT_ADDRESS}/](http://token.artblocks.io/%7BCORE_CONTRACT_ADDRESS%7D/).
+2.  The max invocations for the project have been set. (note: project size **cannot** be increased once set on V3 contracts)
+3. Mint through your own front end. On testnet, you'll want to test each minter type and currency you plan to use on mainnet.
 
 ## Pre-launch (pre-open-minting) Flight Check
 
-Prior to launching your token for open minting, please verify the following:
+For a project to be avaialble for public purchase, the project must be activated by the admin, and unpaused by the artist.
 
-1. The project has been activated by the contract admin. This can be verified by reading the `projectTokenInfo` field.
-2. The project is not yet unpaused. Project pause status is toggleable by the project artist. This can be verified by reading the `projectScriptInfo` field.
+tldr:
+inactive + paused (default state) = private project shell and unable to purchase
+active + paused = public project shell and ***only*** the artist wallet can purchase
+active + unpaused = open to purchase
 
-## Configure minter and project details for each project on Etherscan
-For Engine and Flex Engine V3 contracts, the artist's wallet needs to set up minters for each project individually.
+Before launching your project for open minting, verify the following:
 
-First, assign the minter to your project by using the `MinterFilterV1` contract found in your deployment file. The artist's wallet should use function #6 on the contract, entering the `_projectID` and `_minterAddress`. You can find the minter address in your deployment log, which is pinned in your partner channel.
+1.  The project has been activated by the contract admin.
+2.  The project is not yet unpaused.
 
-Once the minter is linked to your project, set the project details on the minter contract. The deployed minter addresses can be found in your deployment file.
-
-For example, if Art Blocks deployed a Dutch Auction with a settlement minter for your core contract, navigate to the `MinterDAExpSettlementV2` contract linked to your core contract. Then, use function #13 to enter details like `_projectId`, `_auctionTimestampStart`, `_priceDecayHalfLifeSeconds`, `_startPrice`, and `_basePrice`. Make sure this is done using the artist's wallet.
+Once unpaused the project will be open, depending on the minter being used (DA will not open until specified `startTime`)
