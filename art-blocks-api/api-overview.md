@@ -2,15 +2,12 @@
 
 An overview of the current Art Blocks APIs.
 
-!!!
-We are currently in the process of working on finalizing a more comprehensive project-oriented API which we plan to release in the first half of 2022. This API will encapsulate both onchain data (the information readily available via the Art Blocks public subgraph on The Graph) and additional off-chain data (e.g., all available features for a given project)
-!!!
-
 Quick Links:
 - [Token API](#token-api)
 - [Generator API](#generator-api)
 - [Media API/Media Server](#media-apimedia-server)
 - [Art Blocks Subgraph](#art-blocks-subgraph)
+- [GraphQL API](#graphql-api)
 
 ## Hosted APIs
 
@@ -144,3 +141,13 @@ The Art Blocks testnet subgraph can be queried at the URL below:
 | Hosted Service | Yes | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-artist-staging-goerli |
 
 **Recommendation:** Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.
+
+<br>
+
+### GraphQL API
+
+Provides a broader set of the data that our front-end consumes — this includes both on-chain and off-chain data.
+
+| Environment | URL |
+| --- | --- |
+| Production | `https://data.artblocks.io/v1/graphql` |
