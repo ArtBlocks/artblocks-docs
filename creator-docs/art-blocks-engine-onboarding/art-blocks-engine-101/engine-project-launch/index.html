@@ -6,15 +6,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.735164924092">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.735232379368">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Art Blocks Engine Project Launch</title>
-    <meta name="title" content="Art Blocks Engine Project Launch">
-    <meta name="description" content="A high-level overview of launching new projects on a new Art Blocks Engine contract." />
+    <title>Engine Project Deployment and Launch Guide</title>
+    <meta name="title" content="Engine Project Deployment and Launch Guide">
+    <meta name="description" content="This guide provides basic instructions for deploying and launching a new project on the V2 and V3 Engine smart contracts." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-project-launch/" />
@@ -22,22 +22,22 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-project-launch/">
-    <meta property="og:title" content="Art Blocks Engine Project Launch">
-    <meta property="og:description" content="A high-level overview of launching new projects on a new Art Blocks Engine contract.">
+    <meta property="og:title" content="Engine Project Deployment and Launch Guide">
+    <meta property="og:description" content="This guide provides basic instructions for deploying and launching a new project on the V2 and V3 Engine smart contracts.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-project-launch/">
-    <meta property="twitter:title" content="Art Blocks Engine Project Launch">
-    <meta property="twitter:description" content="A high-level overview of launching new projects on a new Art Blocks Engine contract.">
+    <meta property="twitter:title" content="Engine Project Deployment and Launch Guide">
+    <meta property="twitter:description" content="This guide provides basic instructions for deploying and launching a new project on the V2 and V3 Engine smart contracts.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.735164924092" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.735232379368" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.735164924092" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.735232379368" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.735164924092" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.735232379368" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -216,28 +216,66 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="art-blocks-engine-project-launch" class="break-words">
+<doc-anchor-target id="engine-project-deployment-and-launch-guide" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#art-blocks-engine-project-launch">#</doc-anchor-trigger>
-        <span>Art Blocks Engine Project Launch</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#engine-project-deployment-and-launch-guide">#</doc-anchor-trigger>
+        <span>Engine Project Deployment and Launch Guide</span>
     </h1>
 </doc-anchor-target>
-<p>A high-level overview of launching new projects on a new Art Blocks Engine contract.</p>
-<hr />
-<p>After deploying an Engine contract, you can now create projects on your contract.</p>
-<p>To create a new project shell, use the <code v-pre>addProject</code> method of your deployed Core Contract. This can be done by connecting to the contract via Etherscan.</p>
-<p>For a more in-depth guide on creating new projects on your Engine contract, please see the <a href="../adding-new-project-shells/">&quot;Project Shell Deployment Guide&quot;</a>.</p>
+<p>This guide provides basic instructions for deploying and launching a new project on the V2 and V3 Engine smart contracts. You will learn how to create a project shell, assign a minter to each project, and setup the necessary configurations before minting and launching your project. This documentation aims to simplify the process and ensure a smooth project launch on the Art Blocks Engine platform.</p>
+<p>There are slight variations between V2 and V3 contracts, which will be noted in the relevant sections.</p>
+<doc-anchor-target id="project-shell-deployment">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-shell-deployment">#</doc-anchor-trigger>
+        <span>Project Shell Deployment</span>
+    </h2>
+</doc-anchor-target>
+<ol>
+<li><p>Collect the required information for the project:</p>
+<ul>
+<li>Project title (e.g., &quot;Fun Lines&quot;)</li>
+<li>Artist&#x27;s wallet address (e.g., 0x78592a6fBE68fEBf226040a5D25ad7e69F2FeAb6)</li>
+<li>(V2 only) Price-per-mint specified in WEI (e.g., 350000000000000000, or 0.35 ETH)</li>
+</ul>
+</li>
+<li><p>Navigate to your Engine Core Contract on Etherscan and connect your wallet. You can find this link in your <code v-pre>DEPLOYMENTS.md</code> log. <a href="https://goerli.etherscan.io/address/0xd2363Acbf8CdF01A5FdfcB8f0295e0a5dF94518D#code">https://goerli.etherscan.io/address/0xd2363Acbf8CdF01A5FdfcB8f0295e0a5dF94518D#code</a>)</p>
+</li>
+<li><p>Click the &quot;Write contract&quot; tab and use the <code v-pre>addProject</code> method to create a new project shell, specifying the information collected in step 1.</p>
+</li>
+<li><p>Connect to the Art Blocks website with the artist wallet used in in Step 3. Your artist should be able to begin entering project details.</p>
+<p>Testnet URL: <code v-pre>https://artist-staging.artblocks.io/engine/[flex OR fullyonchain]/projects/[coreContractAddress]/[projectID]</code>
+example: <a href="https://artist-staging.artblocks.io/engine/flex/projects/0x28b82AA5bb6d00363ae0FBC5ecaD689Ae49BC82B/0">https://artist-staging.artblocks.io/engine/flex/projects/0x28b82AA5bb6d00363ae0FBC5ecaD689Ae49BC82B/0</a></p>
+<p>Mainnet URL: <code v-pre>https://www.artblocks.io/engine/[flex OR fullyonchain]/projects/[coreContractAddress]/[projectID]</code>
+example: <a href="https://www.artblocks.io/engine/fullyonchain/projects/0xa319C382a702682129fcbF55d514E61a16f97f9c/1">https://www.artblocks.io/engine/fullyonchain/projects/0xa319C382a702682129fcbF55d514E61a16f97f9c/1</a></p>
+</li>
+<li><p>If you encounter issues finding or seeing your project on the Art Blocks site, disconnect and reconnect your wallet, ensuring you are connected with the previously specified artist wallet.</p>
+</li>
+</ol>
+<doc-anchor-target id="assigning-a-minter-v3-only">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#assigning-a-minter-v3-only">#</doc-anchor-trigger>
+        <span>Assigning a Minter (V3 only)</span>
+    </h2>
+</doc-anchor-target>
+<p>Minters are assigned on a per-project basis on V3 contracts. To assign minters, follow these steps:</p>
+<ol>
+<li><p>Assign the minter to your project by using the <code v-pre>MinterFilterV1</code> contract found in your deployment file. The artist&#x27;s wallet should use function #6 <code v-pre>setMinterForProject</code>, entering the <code v-pre>_projectID</code> and <code v-pre>_minterAddress</code>. You can find the minter address in your deployment log, which is pinned in your partner channel.</p>
+</li>
+<li><p>Once the minter is linked to your project, set the project details on the minter contract. The deployed minter addresses can be found in your deployment file.</p>
+<p>For example, if Art Blocks deployed a Dutch Auction minter for your core contract, navigate to the  <code v-pre>MinterDAExpV4</code>  contract on Etherscan (in your <code v-pre>DEPLOYMENT.md</code> log). Then, use the function <code v-pre>setAuctionDetails</code> to enter details like  <code v-pre>_projectId</code>,  <code v-pre>_auctionTimestampStart</code>,  <code v-pre>_priceDecayHalfLifeSeconds</code>,  <code v-pre>_startPrice</code>, and  <code v-pre>_basePrice</code>. Make sure this is done using the artist&#x27;s wallet.</p>
+</li>
+</ol>
 <doc-anchor-target id="pre-mint-0-flight-check">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#pre-mint-0-flight-check">#</doc-anchor-trigger>
         <span>Pre-mint-#0 Flight Check</span>
     </h2>
 </doc-anchor-target>
-<p>Before minting your first token (#0) on your new project shell, please verify the following.</p>
+<p>Before minting your first token (#0) on your new project shell, verify the following:</p>
 <ol>
-<li>The <code v-pre>baseTokenURI</code> has been set, taking the format of <code v-pre>http://token.artblocks.io/{CORE_CONTRACT_ADDRESS}/</code>.</li>
-<li>The max invocations for the project have been set <strong>on the minter</strong>. This is achieved by calling the <code v-pre>setProjectMaxInvocations</code> on the Minter contract when connecting with Etherscan, with the project ID of the project to be minted as the parameter. <strong>Note</strong>: This should only be done <em>after</em> setting this max invocations for the project on the Core Contract itself.</li>
-<li>Perform a test-mint in each currency the project accepts (e.g. if the project is planned to use both ETH and some custom ERC20 token for separate stages of the launch, ensure that <strong>both</strong> minting flows are empirically verified).</li>
+<li>The baseTokenURI has been set, following the format <a href="http://token.artblocks.io/%7BCORE_CONTRACT_ADDRESS%7D/">http://token.artblocks.io//</a>.</li>
+<li>The max invocations for the project have been set. (note: project size <strong>cannot</strong> be increased once set on V3 contracts)</li>
+<li>Mint through your own front end. On testnet, you&#x27;ll want to test each minter type and currency you plan to use on mainnet.</li>
 </ol>
 <doc-anchor-target id="pre-launch-pre-open-minting-flight-check">
     <h2>
@@ -245,21 +283,17 @@
         <span>Pre-launch (pre-open-minting) Flight Check</span>
     </h2>
 </doc-anchor-target>
-<p>Prior to launching your token for open minting, please verify the following:</p>
+<p>For a project to be avaialble for public purchase, the project must be activated by the admin, and unpaused by the artist.</p>
+<p>tldr:
+inactive + paused (default state) = private project shell and unable to purchase
+active + paused = public project shell and <em><strong>only</strong></em> the artist wallet can purchase
+active + unpaused = open to purchase</p>
+<p>Before launching your project for open minting, verify the following:</p>
 <ol>
-<li>The project has been activated by the contract admin. This can be verified by reading the <code v-pre>projectTokenInfo</code> field.</li>
-<li>The project is not yet unpaused. Project pause status is toggleable by the project artist. This can be verified by reading the <code v-pre>projectScriptInfo</code> field.</li>
+<li>The project has been activated by the contract admin.</li>
+<li>The project is not yet unpaused.</li>
 </ol>
-<doc-anchor-target id="configure-minter-and-project-details-for-each-project-on-etherscan">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-minter-and-project-details-for-each-project-on-etherscan">#</doc-anchor-trigger>
-        <span>Configure minter and project details for each project on Etherscan</span>
-    </h2>
-</doc-anchor-target>
-<p>For Engine and Flex Engine V3 contracts, the artist&#x27;s wallet needs to set up minters for each project individually.</p>
-<p>First, assign the minter to your project by using the <code v-pre>MinterFilterV1</code> contract found in your deployment file. The artist&#x27;s wallet should use function #6 on the contract, entering the <code v-pre>_projectID</code> and <code v-pre>_minterAddress</code>. You can find the minter address in your deployment log, which is pinned in your partner channel.</p>
-<p>Once the minter is linked to your project, set the project details on the minter contract. The deployed minter addresses can be found in your deployment file.</p>
-<p>For example, if Art Blocks deployed a Dutch Auction with a settlement minter for your core contract, navigate to the <code v-pre>MinterDAExpSettlementV2</code> contract linked to your core contract. Then, use function #13 to enter details like <code v-pre>_projectId</code>, <code v-pre>_auctionTimestampStart</code>, <code v-pre>_priceDecayHalfLifeSeconds</code>, <code v-pre>_startPrice</code>, and <code v-pre>_basePrice</code>. Make sure this is done using the artist&#x27;s wallet.</p>
+<p>Once unpaused the project will be open, depending on the minter being used (DA will not open until specified <code v-pre>startTime</code>)</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -332,6 +366,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Art Blocks Engine Project Launch", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Engine Project Deployment and Launch Guide", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
