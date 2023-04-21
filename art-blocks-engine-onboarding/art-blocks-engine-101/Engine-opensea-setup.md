@@ -24,7 +24,7 @@ For Art Blocks Engine projects, there are two options that OpenSea can provide f
 
 ![All projects in one collection.](/static/screenshot1.png)
 
-     2\. Each new project on your contract is handled as its own collection on OpenSea, where project traits are properties.
+   2\. Each new project on your contract is handled as its own collection on OpenSea, where project traits are properties.
 
 ![Each project as its own collection.](/static/screenshot2.png)
 
