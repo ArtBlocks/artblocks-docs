@@ -43,9 +43,11 @@ Minters are assigned on a per-project basis on V3 contracts. To assign minters, 
 
 Before minting your first token (#0) on your new project shell, verify the following:
 
-1.  The baseTokenURI has been set, following the format [http://token.artblocks.io/{CORE_CONTRACT_ADDRESS}/](http://token.artblocks.io/%7BCORE_CONTRACT_ADDRESS%7D/).
-2.  The max invocations for the project have been set. (note: project size **cannot** be increased once set on V3 contracts)
-3. Mint through your own front end. On testnet, you'll want to test each minter type and currency you plan to use on mainnet.
+1.  The baseTokenURI has been set, following the format 
+ - Mainnet: http://token.artblocks.io/{CORE_CONTRACT_ADDRESS}/
+ - Testnet: https://generator-staging-goerli.artblocks.io/[CORE_CONTRACT_ADDRESS]/
+3. The max invocations for the project have been set. (note: project size **cannot** be increased once set on V3 contracts)
+4. Mint through your own front end. On testnet, you'll want to test each minter type and currency you plan to use on mainnet.
 
 ## Pre-launch (pre-open-minting) Flight Check
 
