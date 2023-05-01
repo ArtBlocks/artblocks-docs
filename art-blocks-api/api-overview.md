@@ -151,3 +151,7 @@ Provides a broader set of the data that our front-end consumes — this includes
 | Environment | URL |
 | --- | --- |
 | Production | `https://data.artblocks.io/v1/graphql` |
+
+For a full detailed overview of this GraphQL API, please reference: https://docs.artblocks.io/public-api-docs/
+
+Additionally, you can use this interactive Hasura plaground to test out queries: https://cloud.hasura.io/public/graphiql?endpoint=https://data.artblocks.io/v1/graphql
