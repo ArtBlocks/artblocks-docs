@@ -23,6 +23,7 @@ The Mobile Minter is perfect for situations where:
 - An artist wants to distribute their work at a live event
 - An iPad or iPhone with the latest iOS version is available
 - A small amount of Ethereum is on hand to cover gas fees for token recipients
+- You've set up a Stripe account to accept fiat payment (optional)
 
 ---
 
