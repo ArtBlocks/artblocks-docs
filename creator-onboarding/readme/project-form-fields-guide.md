@@ -122,7 +122,7 @@ The project's primary view asset. This setting will be reflected on token and pr
 
 ### Thumbnail preview format
 
-The project's thumbnail preview asset. This setting will be reflected on grid pages on Art Blocks and secondary markets.
+The project's thumbnail preview asset. This setting will be reflected on grid pages on Art Blocks and secondary markets. It will also be reflected in the gallery view section on project pages within Art Blocks. For the gallery view, if the chosen asset type is `MP4` or `GIF`, an `MP4` will be displayed due to the inferior resolution of `GIF` in this context. If `PNG` is selected, the gallery view will display the `PNG` asset.
 
 ### Project scripts ⛽📄
 
