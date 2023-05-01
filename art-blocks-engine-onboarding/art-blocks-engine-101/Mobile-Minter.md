@@ -121,7 +121,7 @@ Currently, gas fees must be pre-funded by the artist or the organization using t
 
 ### Can my prepaid gas fee balance be returned to me?
 
-Yes, please contact us to arrange the return of any remaining funds to the original depositing wallet.
+Yes, please contact us to arrange the return of any remaining funds to the original depositing wallet. To have the remaining ETH returned, ensure that the funds were initially transferred to the Mobile Minter's hot wallet from an address capable of receiving ETH on behalf of your organization. The unspent ETH can only be sent back to the original sender's wallet.
 
 ### Can multiple projects be managed simultaneously through the Mobile Minter app?
 
@@ -134,7 +134,3 @@ The Mobile Minter app processes fiat payments via Stripe Terminal, which support
 ### Is it possible to customize the appearance of the Mobile Minter app for my event?
 
 While the Mobile Minter app does not offer customization, you can embed [live.artblocks.io](https://live.artblocks.io/) inside of a page that showcases your event's theme and branding. Please refer to the [Art Blocks documentation site](https://docs.artblocks.io/creator-docs/art-blocks-api/artblocks-viewer/#artblocks-viewer) for an overview of configuration options for the live viewer.
-
-### I have unspent ETH in the Mobile Minter's hot wallet. How can I retrieve the funds?
-
-To have the remaining ETH returned, ensure that the funds were initially transferred to the Mobile Minter's hot wallet from an address capable of receiving ETH on behalf of your organization. The unspent ETH can only be sent back to the original sender's wallet.
