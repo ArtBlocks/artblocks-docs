@@ -130,7 +130,7 @@ Here, you will upload your project’s script. Your features script should be se
 
 Remember, tokenData.hash is a global variable in the environment this script will live in, so you do not need to define tokenData in your script, except your script will have access to it.
 
-If your script is big, consider minifying it. There are no limits to the total script length. That said, scripts larger than 24 kilobytes will need to be broken up into segments of 24kb. Segments can be added using the plus symbol (+) when uploading a script. Be aware that you will have to pay transaction gas fees proportional to the size of the script upload.
+If your script is big, consider minifying it. There are no limits to the total script length. That said, scripts larger than 24 kilobytes will need to be broken up into segments of 24kb. Segments can be added using the "add script segment" button when uploading a script. Be aware that you will have to pay transaction gas fees proportional to the size of the script upload.
 
 ### Features
 

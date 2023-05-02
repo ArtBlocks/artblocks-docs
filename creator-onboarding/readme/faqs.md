@@ -189,7 +189,7 @@ You can use the “Purchases Paused” button to mint both on the artist staging
 
 ### Are there limits on script length?
 
-If your script is big, consider minifying it. There are no limits to the total script length. That said, scripts that are larger than 24 kilobytes will need to be broken up into segments of 24kb. Segments can be added using the plus symbol (+) when uploading a script. Be aware that you will have to pay transaction gas fees proportional to the size of the script upload.
+If your script is big, consider minifying it. There are no limits to the total script length. That said, scripts that are larger than 24 kilobytes will need to be broken up into segments of 24kb. Segments can be added using the "add script segment" button when uploading a script. Be aware that you will have to pay transaction gas fees proportional to the size of the script upload.
 
 ###  Does the size include the library that I'm using?
 
