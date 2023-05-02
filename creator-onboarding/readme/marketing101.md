@@ -6,9 +6,14 @@ description: Marketing 101
 Marketing can help projects reach their widest audiences. Crypto markets are volatile, and sales are not guaranteed. One way artists achieve sustainable success can be to build an active and engaged audience. Art Blocks has a thriving community on several social media channels that is enthusiastic to engage with new artists and new projects. We encourage you to engage with this community and provide resources for doing so, as you prepare to release your work.
 
 ## Guidelines 
-We ask that all artists DO NOT announce their Art Blocks affiliation until they’ve completed Mint #0 and have been provided a confirmed release date by the Art Team. You can use this time to share progress on your project and to connect with community members on Discord. 
 
-Artists whose projects have been designated for Curated release must wait to announce the project and its Curated designation until after Art Blocks has made  an official announcement. 
+Please adhere to the following guidelines for public communication prior to the launch of your Art Blocks drop:
+
+1. If you are working on a project for Art Blocks without an approved release, announce it as a "planned submission" to Art Blocks.
+2. If your project is approved for release but not yet scheduled, announce it as a "planned release" on Art Blocks.
+3. If your project has a scheduled release date, announce it as an "upcoming release" on Art Blocks.
+
+For artists with projects designated as Curated releases, wait to reveal the project and its Curated status until after Art Blocks has made an official announcement.
 
 ## Art Blocks Promotion Resources
 
