@@ -30,7 +30,7 @@ There are slight variations between V2 and V3 contracts, which will be noted in 
 
 ## Assigning a Minter (V3 only)
 
-Minters are assigned on a per-project basis on V3 contracts. To assign minters, follow these steps: 
+Minters are assigned on a per-project basis on V3 contracts, and minters must be assigned by the **artist's wallet**. For the artist wallet to assign a minter, follow these steps: 
 
 1.  Assign the minter to your project by using the `MinterFilterV1` contract found in your deployment file. The artist's wallet should use function #6 `setMinterForProject`, entering the `_projectID` and `_minterAddress`. You can find the minter address in your deployment log, which is pinned in your partner channel.
     
