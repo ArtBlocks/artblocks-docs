@@ -29,13 +29,19 @@ Once the project objectives and scope are agreed upon, you'll work with our oper
 
 To get started, you'll provide our team with:
 
-- **An Ethereum Goerli testnet wallet address** (that you currently own and control) you'll use to manage your Art Blocks Engine smart contracts.
-- The **name** you’ll use for tokens from your contract (e.g., for Art Blocks, it is "Art Blocks")
-- The **ticker symbol** you’ll use for tokens from your contract (e.g., for Art Blocks, it is "BLOCKS")
-- **Type of deployment**: Only on-chain Engine or Flex Engine
-- **Mint mechanic** you'd like to use for the first drop: Fixed-price ETH (standard) or an exponential automated descending Dutch auction (some added complexity)
+- An Ethereum wallet address (that you currently own and control) you'll use to manage your Art Blocks Engine smart contracts
+- The name you’ll use for tokens from your contract (e.g., for Art Blocks, it is "Art Blocks")
+- The ticker symbol you’ll use for tokens from your contract (e.g., for Art Blocks, it is "BLOCKS")
+- Deployment Type: V3 Engine or V3 Engine Flex
+- [Minter Type](https://github.com/ArtBlocks/artblocks-contracts/blob/main/MINTER_SUITE.md#minter-suite-documentation): flat price eth only, set price custom erc20, merkle tree allowlist, holder-gated, linear DA, exponential DA, and exponential DA with settlement
+- Starting project ID # (>=0):
+- Set autoApproveArtistSplitProposals: true or false
 
-Note: We cannot deploy your contract until you provide the above information. **The name and symbol tied to your contract cannot change once it’s set.**_
+Regarding "autoApproveArtistSplitProposals" - It needs to be set at deployment and cannot be changed later. 
+
+tldr - if true, artist royalty wallet changes are auto-approved. If false, the contract admin will need to approve the artist's royalty wallet changes. This is an added check to ensure your artists aren't changing royalty wallets to a random address, which could complicate accounting/ OFAC compliance. 
+
+Note: We cannot deploy your contract until you provide the above information. **The name and symbol tied to your contract cannot change once it’s deployed.**_
 
 [!badge Timeline: 1-2 days]
 
