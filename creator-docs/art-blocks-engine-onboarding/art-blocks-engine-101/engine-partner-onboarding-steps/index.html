@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737161790948">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737249903922">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.737161790948" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.737249903922" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.737161790948" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.737249903922" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.737161790948" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.737249903922" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -262,13 +262,17 @@
 </doc-anchor-target>
 <p>To get started, you&#x27;ll provide our team with:</p>
 <ul>
-<li><strong>An Ethereum Goerli testnet wallet address</strong> (that you currently own and control) you&#x27;ll use to manage your Art Blocks Engine smart contracts.</li>
-<li>The <strong>name</strong> you’ll use for tokens from your contract (e.g., for Art Blocks, it is &quot;Art Blocks&quot;)</li>
-<li>The <strong>ticker symbol</strong> you’ll use for tokens from your contract (e.g., for Art Blocks, it is &quot;BLOCKS&quot;)</li>
-<li><strong>Type of deployment</strong>: Only on-chain Engine or Flex Engine</li>
-<li><strong>Mint mechanic</strong> you&#x27;d like to use for the first drop: Fixed-price ETH (standard) or an exponential automated descending Dutch auction (some added complexity)</li>
+<li>An Ethereum wallet address (that you currently own and control) you&#x27;ll use to manage your Art Blocks Engine smart contracts</li>
+<li>The name you’ll use for tokens from your contract (e.g., for Art Blocks, it is &quot;Art Blocks&quot;)</li>
+<li>The ticker symbol you’ll use for tokens from your contract (e.g., for Art Blocks, it is &quot;BLOCKS&quot;)</li>
+<li>Deployment Type: V3 Engine or V3 Engine Flex</li>
+<li><a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/MINTER_SUITE.md#minter-suite-documentation">Minter Type</a>: flat price eth only, set price custom erc20, merkle tree allowlist, holder-gated, linear DA, exponential DA, and exponential DA with settlement</li>
+<li>Starting project ID # (&gt;=0):</li>
+<li>Set autoApproveArtistSplitProposals: true or false</li>
 </ul>
-<p>Note: We cannot deploy your contract until you provide the above information. <strong>The name and symbol tied to your contract cannot change once it’s set.</strong>_</p>
+<p>Regarding &quot;autoApproveArtistSplitProposals&quot; - It needs to be set at deployment and cannot be changed later.</p>
+<p>tldr - if true, artist royalty wallet changes are auto-approved. If false, the contract admin will need to approve the artist&#x27;s royalty wallet changes. This is an added check to ensure your artists aren&#x27;t changing royalty wallets to a random address, which could complicate accounting/ OFAC compliance.</p>
+<p>Note: We cannot deploy your contract until you provide the above information. <strong>The name and symbol tied to your contract cannot change once it’s deployed.</strong>_</p>
 <p><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-6 px-2 text-xs rounded-md">
     <span>Timeline: 1-2 days</span>
 </span></p>
