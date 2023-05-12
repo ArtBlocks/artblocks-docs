@@ -2,7 +2,7 @@
 order: 500
 ---
 
-# Art Blocks Engine Royalty Registry Setup
+# Art Blocks Engine Royalty Registry Setup (V2 contracts only)
 
 ## Royalty Registry
 
