@@ -2,8 +2,8 @@
 
 This page goes deeper into some technical considerations when working with the most current version of Artblocks Engine Flex.
 The latest version of the Engine Flex contract (v3) and interface can be found here:
-- https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol
-- https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/interfaces/0.8.x/IGenArt721CoreContractV3_Engine_Flex.sol
+- https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol
+- https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/interfaces/0.8.x/IGenArt721CoreContractV3_Engine_Flex.sol
 
 ## Introduction To External Asset Dependencies
 
@@ -15,7 +15,7 @@ struct ExternalAssetDependency {
 }
 ```
 
-The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain assets stored using decentralized storage technologies and, with the latest version of flex, also supports fully on-chain data storage. An external asset dependency is comprised of its content identifier (CID), if it's using Arweave or IPFS, a bytecodeAddress if it's specifically dealing with fully on-chain data, and a dependencyType, which maps to an Engine Flex supported platform. 
+The Engine Flex contract introduces the concept of external asset dependencies. These essentially function as on-chain pointers to off-chain assets stored using decentralized storage technologies and, with the latest version of flex, also supports fully on-chain data storage. An external asset dependency is comprised of its content identifier (CID), if it's using Arweave or IPFS, a bytecodeAddress if it's specifically dealing with fully on-chain data, and a dependencyType, which maps to an Engine Flex supported platform.
 
 Engine Flex currently supports adding external asset dependencies of the following types:
 - IPFS
@@ -35,7 +35,7 @@ Note the parameter `_cidOrData`, which allows you to either pass in a CID if you
 
 For convenience and utility, the contract also provides the following function, allowing you to easily grab a project's external asset dependency at a specific index:
 ```solidity
-function projectExternalAssetDependencyByIndex(uint256 _projectId, uint256 _index) 
+function projectExternalAssetDependencyByIndex(uint256 _projectId, uint256 _index)
 ```
 This convenience function returns data in the form of the following format:
 ```solidity
@@ -54,13 +54,13 @@ Note that for dependencyTypes other than onchain (IPFS, Arweave), the returned b
 
 Some important factors to keep in mind with the above functions:
 - Only allowlisted/artist addresses can call these.
-- `ExternalAssetDependencyType _dependencyType` is a solidity enum, which can be passed into these functions as a uint8. This enum only defines three options as of now, `IPFS`,`ARWEAVE`, and `ONCHAIN`, which can be represented as `0`,`1`, and `2` respectively. 
+- `ExternalAssetDependencyType _dependencyType` is a solidity enum, which can be passed into these functions as a uint8. This enum only defines three options as of now, `IPFS`,`ARWEAVE`, and `ONCHAIN`, which can be represented as `0`,`1`, and `2` respectively.
 
 ### Note On Removing External Asset Dependencies
- 
+
 In the interest of saving gas, the `removeProjectExternalAssetDependency()` function is implemented in such a way that it does not preserve the order of the project's external asset dependency mapping. Specifically, the way this removal logic works is as follows: when an index to remove is passed in, the element at that index being removed is swapped with the element at the last index of the list of assets. Now that the last index holds the element to be removed, that element is removed off the list. This method, in addition to being more gas efficient, also ensures that our list/mapping does not have any "holes". The tradeoff, however, is that the removal causes the order of the external asset dependencies in this list to change, albeit in a deterministic manner: the element at the last index always moves to the removed index. This is important to keep in mind when writing your project script, though you can always update the ordering manually as you see fit by utilizing the `updateProjectExternalAssetDependency()` function.
 
-You can view directly the full implementation of this removal function here: https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol#L524
+You can view directly the full implementation of this removal function here: https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol#L524
 
 ## Preferred Gateways
 
@@ -69,7 +69,7 @@ string public preferredIPFSGateway;
 string public preferredArweaveGateway;
 ```
 
-The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave). Gateways are accessible HTTP interfaces and, when combined with an asset CID, expose urls for assets being stored on these off-chain decentralized platforms. These preferred gateways are updateable with a string param via the following functions: `updateArweaveGateway()` & `updateIPFSGateway()`.       
+The Engine Flex contract allows you to specify preferred gateways for the currently supported dependency types (IPFS & Arweave). Gateways are accessible HTTP interfaces and, when combined with an asset CID, expose urls for assets being stored on these off-chain decentralized platforms. These preferred gateways are updateable with a string param via the following functions: `updateArweaveGateway()` & `updateIPFSGateway()`.
 
 Please note that these preferred gateways are set per-contract, not per-project.
 
@@ -105,7 +105,7 @@ If you are specifically looking to utilize an IPFS/ARWEAVE type external asset d
 ```js
 (async () => {
         await import('JS_EXTERNAL_ASSET_DEPENDENCY_FULL_URL_GOES_HERE');
-    
+
         // project script follows below
 })()
 ```
@@ -120,7 +120,7 @@ function loadScript(url, callback)
    script.type = 'text/javascript';
    script.src = url;
 
-   // then bind the event to the callback function 
+   // then bind the event to the callback function
    // there are several events for cross browser compatibility
    script.onreadystatechange = callback;
    script.onload = callback;
