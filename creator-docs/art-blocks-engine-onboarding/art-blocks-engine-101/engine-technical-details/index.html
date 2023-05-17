@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737661502452">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737673393293">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.737661502452" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.737673393293" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.737661502452" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.737673393293" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.737661502452" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.737661502452" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.737673393293" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.737673393293" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -383,6 +383,14 @@ loadScript('JS_EXTERNAL_ASSET_DEPENDENCY_FULL_URL_GOES_HERE', myProjectScriptCod
 <li>Preferred gateways do not get locked with this action and, in general, cannot be locked. This is intentional to allow support for modifying the preferred gateway over time, which may change while CIDs remain fixed/permanent.</li>
 <li>You can lock a project&#x27;s external asset dependencies regardless of whether or not the project itself is locked. And you can continue to modify a project&#x27;s external dependencies even if the project is locked, as long as the external asset dependencies for the project are not locked.</li>
 </ul>
+<doc-anchor-target id="why-should-i-use-the-engine-flex-specific-fields-for-cids-and-ipfs-gateways-rather-than-hard-coding-these-values-in-the-script">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#why-should-i-use-the-engine-flex-specific-fields-for-cids-and-ipfs-gateways-rather-than-hard-coding-these-values-in-the-script">#</doc-anchor-trigger>
+        <span>Why should I use the Engine Flex specific fields for CIDs and IPFS gateways rather than hard-coding these values in the script?</span>
+    </h2>
+</doc-anchor-target>
+<p>The Engine Flex contract was designed to expose specific on-contract fields for storing external asset dependencies (either via auxiliary on-chain storage, IPFS CIDs, or Arweave CIDs). For collectors and archivists preserving these art works, this increases the introspect-ability of where these external assets are stored, e.g. allowing for a more streamlined and robust process for replicating external assets stored on IPFS for a given project in the future.</p>
+<p>Additionally, after project scripts are locked, if an IPFS gateway is hardcoded it isn&#x27;t possible to update this in the future if the gateway (but not the underlying asset CIDs) needs to change for whatever reason (partner is migrating gateway providers from Pinata to Infura, partner is shutting down private gateway in favor of a public one, etc.). If using the specified on-chain fields, the CIDs can be locked independently from the gateway, allowing flexibility to preserve future compatibility of the on-chain generator down the road.</p>
 
                                 
                                 <!-- Required only on API pages -->
