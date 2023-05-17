@@ -145,3 +145,9 @@ This irreversible action removes the ability to add, update or remove from a pro
 Important notes:
 - Preferred gateways do not get locked with this action and, in general, cannot be locked. This is intentional to allow support for modifying the preferred gateway over time, which may change while CIDs remain fixed/permanent.
 - You can lock a project's external asset dependencies regardless of whether or not the project itself is locked. And you can continue to modify a project's external dependencies even if the project is locked, as long as the external asset dependencies for the project are not locked.
+
+## Why should I use the Engine Flex specific fields for CIDs and IPFS gateways rather than hard-coding these values in the script?
+
+The Engine Flex contract was designed to expose specific on-contract fields for storing external asset dependencies (either via auxiliary on-chain storage, IPFS CIDs, or Arweave CIDs). For collectors and archivists preserving these art works, this increases the introspect-ability of where these external assets are stored, e.g. allowing for a more streamlined and robust process for replicating external assets stored on IPFS for a given project in the future.
+
+Additionally, after project scripts are locked, if an IPFS gateway is hardcoded it isn't possible to update this in the future if the gateway (but not the underlying asset CIDs) needs to change for whatever reason (partner is migrating gateway providers from Pinata to Infura, partner is shutting down private gateway in favor of a public one, etc.). If using the specified on-chain fields, the CIDs can be locked independently from the gateway, allowing flexibility to preserve future compatibility of the on-chain generator down the road.
