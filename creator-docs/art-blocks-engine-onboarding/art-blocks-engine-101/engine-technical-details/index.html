@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737250277327">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737661502452">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.737250277327" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.737661502452" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.737250277327" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.737661502452" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.737250277327" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.737250277327" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.737661502452" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../../resources/js/prism.js?v=2.4.0.737661502452" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -226,8 +226,8 @@
 <p>This page goes deeper into some technical considerations when working with the most current version of Artblocks Engine Flex.
 The latest version of the Engine Flex contract (v3) and interface can be found here:</p>
 <ul>
-<li><a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol">https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol</a></li>
-<li><a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/interfaces/0.8.x/IGenArt721CoreContractV3_Engine_Flex.sol">https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/interfaces/0.8.x/IGenArt721CoreContractV3_Engine_Flex.sol</a></li>
+<li><a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol">https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol</a></li>
+<li><a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/interfaces/0.8.x/IGenArt721CoreContractV3_Engine_Flex.sol">https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/interfaces/0.8.x/IGenArt721CoreContractV3_Engine_Flex.sol</a></li>
 </ul>
 <doc-anchor-target id="introduction-to-external-asset-dependencies">
     <h2>
@@ -264,7 +264,7 @@ function removeProjectExternalAssetDependency(uint256 _projectId, uint256 _index
 <p>Note the parameter <code v-pre>_cidOrData</code>, which allows you to either pass in a CID if you are working with the IPFS/Arweave dependencyTypes or a data string if you are working with the onchain dependencyType.</p>
 <p>For convenience and utility, the contract also provides the following function, allowing you to easily grab a project&#x27;s external asset dependency at a specific index:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-solidity"><code v-pre class="language-solidity">function projectExternalAssetDependencyByIndex(uint256 _projectId, uint256 _index) </code></pre>
+<pre class="language-solidity"><code v-pre class="language-solidity">function projectExternalAssetDependencyByIndex(uint256 _projectId, uint256 _index)</code></pre>
 </doc-codeblock></div>
 <p>This convenience function returns data in the form of the following format:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -292,7 +292,7 @@ struct ExternalAssetDependencyWithData {
     </h3>
 </doc-anchor-target>
 <p>In the interest of saving gas, the <code v-pre>removeProjectExternalAssetDependency()</code> function is implemented in such a way that it does not preserve the order of the project&#x27;s external asset dependency mapping. Specifically, the way this removal logic works is as follows: when an index to remove is passed in, the element at that index being removed is swapped with the element at the last index of the list of assets. Now that the last index holds the element to be removed, that element is removed off the list. This method, in addition to being more gas efficient, also ensures that our list/mapping does not have any &quot;holes&quot;. The tradeoff, however, is that the removal causes the order of the external asset dependencies in this list to change, albeit in a deterministic manner: the element at the last index always moves to the removed index. This is important to keep in mind when writing your project script, though you can always update the ordering manually as you see fit by utilizing the <code v-pre>updateProjectExternalAssetDependency()</code> function.</p>
-<p>You can view directly the full implementation of this removal function here: <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol#L524">https://github.com/ArtBlocks/artblocks-contracts/blob/main/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol#L524</a></p>
+<p>You can view directly the full implementation of this removal function here: <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol#L524">https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/GenArt721CoreV3_Engine_Flex.sol#L524</a></p>
 <doc-anchor-target id="preferred-gateways">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#preferred-gateways">#</doc-anchor-trigger>
@@ -340,7 +340,7 @@ string public preferredArweaveGateway;</code></pre>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-javascript"><code v-pre class="language-javascript">(async () =&gt; {
         await import('JS_EXTERNAL_ASSET_DEPENDENCY_FULL_URL_GOES_HERE');
-    
+
         // project script follows below
 })()</code></pre>
 </doc-codeblock></div>
@@ -354,7 +354,7 @@ string public preferredArweaveGateway;</code></pre>
    script.type = 'text/javascript';
    script.src = url;
 
-   // then bind the event to the callback function 
+   // then bind the event to the callback function
    // there are several events for cross browser compatibility
    script.onreadystatechange = callback;
    script.onload = callback;
