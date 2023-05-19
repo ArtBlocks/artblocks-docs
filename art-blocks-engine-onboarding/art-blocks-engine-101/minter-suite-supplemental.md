@@ -10,7 +10,54 @@ This page provides supplemental information for the Art Blocks Minter Suite, whi
 V3 Engine core contracts are able to use the Art Blocks Minter Suite by default, however the Engine minter suite does not currently support indexing in the Art Blocks subgraph and api. Work is underway to add this functionality, but in the interim, additional information may be provided on this page to help partners successfully use the Art Blocks Minter Suite.
 !!!
 
-## Allowlist Minter
+---
+
+## Auction Reset Process
+
+A subset of minters utilize automated, scheduled auctions to distribute artwork to collectors. The auction reset process is a mechanism that allows artists to pause and reschedule their auction, within certain limitations, if an issue arises during a live project release. Example situations may be:
+
+- Unexpected website downtime
+- Artist unintentionally left project in a paused state
+- Auction parameters were not set as intended
+
+Some of the possible failure modes above can result in a state where:
+
+- Collectors are not able to purchase tokens from the website
+- Bots are still able to purchase tokens by submitting transactions directly to the blockchain
+
+If in a state where bots can purchase but humans can not, the situation requires immediate action to prevent or minimize damage.
+
+### 1. [URGENT] Pause the Auction
+
+The most important step in the auction reset process is for the Artist pause the auction. This prevents any further purchases from being made.
+
+Tips:
+
+- Ensure that the project is not already paused (i.e. this step is already complete), and do not toggle the pause button more than once (i.e. pause then unpause)
+- Artist should use a very high gas price to ensure that the pause transaction is mined quickly
+- Artist should use a tool like [Etherscan](https://etherscan.io/) to monitor the status of the pause transaction
+- Verify the paused state of the contract by checking the project's core contract on a tool like [Etherscan](https://etherscan.io/)
+
+!!!danger
+**DA with Settlement:** This step is especially urgent! Settlement minters require that every new purchase price is less than or equal to the previous purchase price (even after an auction is reset). If a bot purchases a token prior to a project being paused, that project’s reconfigured auction (even after reset) is constrained to only be able to start at the bot’s purchase price.
+!!!
+
+### 2. Reset auction
+
+When using a Dutch auction, the auction will need to be reset and reconfigured.
+
+This is a 2-step provess, and requires admin-intervention for security:
+
+1. ADMIN - Call `resetAuctionDetails` on the minter contract
+2. ARTIST - Configure the auction parameters via your typical process (e.g. artist dashboard)
+
+### 3. Communicate and enjoy!
+
+Ensure your collectors are aware of the new auction parameters, and enjoy the new auction!
+
+---
+
+## Allowlist Minter Details
 
 The Allowlist Minter uses a Merkle tree to gas-efficiently allow a set of addresses to mint tokens from a project.
 
