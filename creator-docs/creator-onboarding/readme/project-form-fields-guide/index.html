@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738363934007">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738438376610">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.738363934007" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.738438376610" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.738363934007" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.738438376610" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.738363934007" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.738438376610" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -358,6 +358,14 @@
     </h3>
 </doc-anchor-target>
 <p>If your piece takes a certain amount of time to render fully, you can type in the render delay to let the server know when to render your output’s static images. This render time will be in milliseconds. If your algorithm is GPU intensive, and thumbnails do not render after the render delay, request <code v-pre>Enhanced GPU Rendering</code>. For accepted artists, file the request in your artist DM. For applying artists, file your request in the Art Blocks’ Discord Channel #artist-application-support.</p>
+<doc-anchor-target id="canvas-mode-toggle">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#canvas-mode-toggle">#</doc-anchor-trigger>
+        <span>Canvas Mode (toggle) <span class="docs-emoji">&#x1F4C4;</span></span>
+    </h3>
+</doc-anchor-target>
+<p>If checked, data is directly pulled from the <canvas> element using <code v-pre>.toDataURL()</code> when producing static image renders. This additional rendering mode can be leveraged for projects with varying aspect ratios across different tokens.</p>
+<p>Please note that scripts containing multiple <canvas> elements may not render as intended.</p>
 <doc-anchor-target id="generate-mp4-assets-toggle">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#generate-mp4-assets-toggle">#</doc-anchor-trigger>
