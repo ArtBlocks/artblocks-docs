@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738796717166">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.738797896811">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.4.0.738796717166" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.738797896811" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.738796717166" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.738797896811" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.738796717166" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.738797896811" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.738797896811" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -559,6 +560,166 @@
 </tbody>
 </table>
 </div>
+<doc-anchor-target id="authentication">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication">#</doc-anchor-trigger>
+        <span>Authentication</span>
+    </h4>
+</doc-anchor-target>
+<p>The following documentation explains how to authenticate with the Art Blocks API to retrieve a JSON Web Token (JWT). This JWT can then be used to gain authenticated access to our GraphQL API. The methods explained here are intended for a client-side environment where a signer is available to sign messages. The procedures are explained using two approaches: Direct API endpoints and GraphQL.</p>
+<p>We recommend using the GraphQL-based approach as we have more control over it and can ensure its stability even if underlying API endpoints change. Note that the domain for authentication may change in the future for the Direct API-based approach, while the GraphQL endpoint will remain the same.</p>
+<doc-anchor-target id="graphql-based-authentication-flow-recommended">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#graphql-based-authentication-flow-recommended">#</doc-anchor-trigger>
+        <span>GraphQL-based Authentication Flow (Recommended)</span>
+    </h5>
+</doc-anchor-target>
+<p>The GraphQL-based approach leverages the GraphQL schema provided by Art Blocks. This is the recommended approach for stability and future-proofing your implementation.</p>
+<p>Here are the functions used in this flow:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">async function fetchMessageFromApiGql(userAddress) {
+  const query = gql`
+    query GetAuthMessage($publicAddress: String!, $domain: String!, $uri: String!) {
+      getAuthMessage(publicAddress: $publicAddress, domain: $domain, uri: $uri) {
+        authMessage
+      }
+    }
+  `;
+
+  const variables = {
+    publicAddress: userAddress,
+    domain: window.location.host,
+    uri: window.location.origin,
+  };
+
+  const result = await request(AB_GRAPHQL_ENDPOINT, query, variables);
+
+  if (!result || !result.getAuthMessage) {
+    throw new Error(&quot;Failed to fetch auth message&quot;);
+  }
+
+  return result.getAuthMessage.authMessage;
+}
+
+async function getJwtGql(userAddress) {
+  const message = await fetchMessageFromApiGql(userAddress);
+
+  // Sign message here using the client-side signer
+  const signature = /* code to sign message goes here */
+
+  const mutation = gql`
+    mutation Authenticate($input: AuthenticateInput!) {
+      authenticate(input: $input) {
+        jwt
+        expiration
+      }
+    }
+  `;
+
+  const variables = {
+    input: {
+      publicAddress: userAddress,
+      signature
+    }
+  };
+
+  const result = await request(AB_GRAPHQL_ENDPOINT, mutation, variables);
+
+  if (!result || !result.authenticate) {
+    return null;
+  }
+
+  return {
+    jwt: result.authenticate.jwt,
+    expiration: result.authenticate.expiration,
+  };
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="direct-api-based-authentication-flow">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#direct-api-based-authentication-flow">#</doc-anchor-trigger>
+        <span>Direct API-based Authentication Flow</span>
+    </h5>
+</doc-anchor-target>
+<p>The Direct API-based approach involves interacting with the <code v-pre>https://artblocks.io/api/get-auth-message</code> and <code v-pre>https://artblocks.io/api/authenticate</code> endpoints. We recommend using the GraphQL-based flow instead because of its improved stability and future-proofing, but we&#x27;re providing the Direct API-based method for those who prefer it.</p>
+<blockquote>
+<p><span class="docs-emoji">&#x26A0;&#xFE0F;</span> Warning: The domain for authentication may change in the future for the Direct API-based approach. Using the GraphQL-based approach is recommended to avoid future disruptions.</p>
+</blockquote>
+<p>Here are the functions used in this flow:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">async function fetchMessageFromApi(userAddress) {
+  const response = await fetch(AB_MESSAGE_API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      publicAddress: userAddress,
+      domain: window.location.host,
+      uri: window.location.origin,
+    }),
+  });
+
+  const result = await response.json();
+
+  if (!result.ok) {
+    throw new Error(result.error);
+  }
+
+  return result.data.message;
+}
+
+async function getJwtApi(userAddress) {
+  const message = await fetchMessageFromApi(userAddress);
+
+  // Sign message here using the client-side signer
+  const signature = /* code to sign message goes here */
+
+  const response = await fetch(`${AB_WEBSITE_BASE_URL}/api/authenticate`, {
+    method: &quot;POST&quot;,
+    headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+    body: JSON.stringify({
+      publicAddress: userAddress,
+      signature,
+      message
+    }),
+  });
+
+  const result = await response.json();
+
+  if (!result.ok) {
+    return null;
+  }
+
+  return result.data.jwt;
+}</code></pre>
+</doc-codeblock></div>
+<p>In both methods, you will find a placeholder <code v-pre>/* code to sign message goes here */</code> where you should implement your code to sign the message using your client-side signer.</p>
+<doc-anchor-target id="using-the-jwt-for-authenticated-access">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#using-the-jwt-for-authenticated-access">#</doc-anchor-trigger>
+        <span>Using the JWT for Authenticated Access</span>
+    </h5>
+</doc-anchor-target>
+<p>Once the JWT has been obtained using either of the above methods, it can be used to make authenticated requests to the Art Blocks GraphQL API. The JWT should be included in the <code v-pre>Authorization</code> header of the request. Here&#x27;s an example:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">// Assume jwt contains the JWT you received from the previous steps
+const jwt = &quot;your-jwt-token&quot;;
+
+// An example of a GraphQL request using the JWT
+const query = gql`
+  query {
+    // Your query here
+  }
+`;
+
+const response = await fetch(AB_GRAPHQL_ENDPOINT, {
+  method: &quot;POST&quot;,
+  headers: { 
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+    &quot;Authorization&quot;: `Bearer ${jwt}`
+  },
+  body: JSON.stringify({ query }),
+});</code></pre>
+</doc-codeblock></div>
 <p>For a full detailed overview of this GraphQL API, please reference: <a href="https://docs.artblocks.io/public-api-docs/">https://docs.artblocks.io/public-api-docs/</a></p>
 <p>Additionally, you can use this interactive Hasura plaground to test out queries: <a href="https://cloud.hasura.io/public/graphiql?endpoint=https://data.artblocks.io/v1/graphql">https://cloud.hasura.io/public/graphiql?endpoint=https://data.artblocks.io/v1/graphql</a></p>
 
@@ -633,6 +794,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "API Overview", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "API Overview", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
