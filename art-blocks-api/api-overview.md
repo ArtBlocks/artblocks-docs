@@ -152,6 +152,160 @@ Provides a broader set of the data that our front-end consumes — this includes
 | --- | --- |
 | Production | `https://data.artblocks.io/v1/graphql` |
 
+#### Authentication
+
+The following documentation explains how to authenticate with the Art Blocks API to retrieve a JSON Web Token (JWT). This JWT can then be used to gain authenticated access to our GraphQL API. The methods explained here are intended for a client-side environment where a signer is available to sign messages. The procedures are explained using two approaches: Direct API endpoints and GraphQL.
+
+We recommend using the GraphQL-based approach as we have more control over it and can ensure its stability even if underlying API endpoints change. Note that the domain for authentication may change in the future for the Direct API-based approach, while the GraphQL endpoint will remain the same.
+
+##### GraphQL-based Authentication Flow (Recommended)
+
+The GraphQL-based approach leverages the GraphQL schema provided by Art Blocks. This is the recommended approach for stability and future-proofing your implementation.
+
+Here are the functions used in this flow:
+
+```javascript
+async function fetchMessageFromApiGql(userAddress) {
+  const query = gql`
+    query GetAuthMessage($publicAddress: String!, $domain: String!, $uri: String!) {
+      getAuthMessage(publicAddress: $publicAddress, domain: $domain, uri: $uri) {
+        authMessage
+      }
+    }
+  `;
+
+  const variables = {
+    publicAddress: userAddress,
+    domain: window.location.host,
+    uri: window.location.origin,
+  };
+
+  const result = await request(AB_GRAPHQL_ENDPOINT, query, variables);
+
+  if (!result || !result.getAuthMessage) {
+    throw new Error("Failed to fetch auth message");
+  }
+
+  return result.getAuthMessage.authMessage;
+}
+
+async function getJwtGql(userAddress) {
+  const message = await fetchMessageFromApiGql(userAddress);
+
+  // Sign message here using the client-side signer
+  const signature = /* code to sign message goes here */
+
+  const mutation = gql`
+    mutation Authenticate($input: AuthenticateInput!) {
+      authenticate(input: $input) {
+        jwt
+        expiration
+      }
+    }
+  `;
+
+  const variables = {
+    input: {
+      publicAddress: userAddress,
+      signature
+    }
+  };
+
+  const result = await request(AB_GRAPHQL_ENDPOINT, mutation, variables);
+
+  if (!result || !result.authenticate) {
+    return null;
+  }
+
+  return {
+    jwt: result.authenticate.jwt,
+    expiration: result.authenticate.expiration,
+  };
+}
+```
+
+##### Direct API-based Authentication Flow
+
+The Direct API-based approach involves interacting with the `https://artblocks.io/api/get-auth-message` and `https://artblocks.io/api/authenticate` endpoints. We recommend using the GraphQL-based flow instead because of its improved stability and future-proofing, but we're providing the Direct API-based method for those who prefer it.
+
+> ⚠️ Warning: The domain for authentication may change in the future for the Direct API-based approach. Using the GraphQL-based approach is recommended to avoid future disruptions.
+
+Here are the functions used in this flow:
+
+```javascript
+async function fetchMessageFromApi(userAddress) {
+  const response = await fetch(AB_MESSAGE_API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      publicAddress: userAddress,
+      domain: window.location.host,
+      uri: window.location.origin,
+    }),
+  });
+
+  const result = await response.json();
+
+  if (!result.ok) {
+    throw new Error(result.error);
+  }
+
+  return result.data.message;
+}
+
+async function getJwtApi(userAddress) {
+  const message = await fetchMessageFromApi(userAddress);
+
+  // Sign message here using the client-side signer
+  const signature = /* code to sign message goes here */
+
+  const response = await fetch(`${AB_WEBSITE_BASE_URL}/api/authenticate`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      publicAddress: userAddress,
+      signature,
+      message
+    }),
+  });
+
+  const result = await response.json();
+
+  if (!result.ok) {
+    return null;
+  }
+
+  return result.data.jwt;
+}
+```
+
+In both methods, you will find a placeholder `/* code to sign message goes here */` where you should implement your code to sign the message using your client-side signer.
+
+##### Using the JWT for Authenticated Access
+
+Once the JWT has been obtained using either of the above methods, it can be used to make authenticated requests to the Art Blocks GraphQL API. The JWT should be included in the `Authorization` header of the request. Here's an example:
+
+```javascript
+// Assume jwt contains the JWT you received from the previous steps
+const jwt = "your-jwt-token";
+
+// An example of a GraphQL request using the JWT
+const query = gql`
+  query {
+    // Your query here
+  }
+`;
+
+const response = await fetch(AB_GRAPHQL_ENDPOINT, {
+  method: "POST",
+  headers: { 
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${jwt}`
+  },
+  body: JSON.stringify({ query }),
+});
+```
+
 For a full detailed overview of this GraphQL API, please reference: https://docs.artblocks.io/public-api-docs/
 
 Additionally, you can use this interactive Hasura plaground to test out queries: https://cloud.hasura.io/public/graphiql?endpoint=https://data.artblocks.io/v1/graphql
