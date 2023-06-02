@@ -10,11 +10,7 @@ There are slight variations between V2 and V3 contracts, which will be noted in 
 
 ## Project Shell Deployment
 
-<div align="center">
-    <a href="https://www.loom.com/embed/9cb61eef17724107a6e7916d682c8bd5">
-        <img src="https://cdn.loom.com/sessions/thumbnails/9cb61eef17724107a6e7916d682c8bd5-with-play.gif" alt="Video Thumbnail" width="50%" height="">
-    </a>
-</div>
+[!embed](https://www.loom.com/embed/9cb61eef17724107a6e7916d682c8bd5)
 
 1.  Collect the required information for the project:
     -   Project title (e.g., "Fun Lines")
@@ -36,11 +32,7 @@ There are slight variations between V2 and V3 contracts, which will be noted in 
 
 ## Assigning a Minter (V3 only)
 
-<div align="center">
-    <a href="https://www.loom.com/share/66f542b3ef024f7c80059115e76bae8d">
-        <img src="https://cdn.loom.com/sessions/thumbnails/66f542b3ef024f7c80059115e76bae8d-with-play.gif" alt="Video Thumbnail" width="50%" height="">
-    </a>
-</div>
+[!embed](https://www.loom.com/share/66f542b3ef024f7c80059115e76bae8d)
 
 Minters are assigned on a per-project basis on V3 contracts, and minters must be assigned by the **artist's wallet**. For the artist wallet to assign a minter, follow these steps: 
 
@@ -77,8 +69,4 @@ Before launching your project for open minting, verify the following:
 
 Once unpaused the project will be open, depending on the minter being used (DA will not open until specified `startTime`)
 
-<div align="center">
-    <a href="https://www.loom.com/share/65a8e19513944d3c9a39952696c11f43">
-        <img src="https://cdn.loom.com/sessions/thumbnails/65a8e19513944d3c9a39952696c11f43-with-play.gif" alt="Video Thumbnail" width="50%" height="">
-    </a>
-</div>
+[!embed](https://www.loom.com/share/65a8e19513944d3c9a39952696c11f43)
