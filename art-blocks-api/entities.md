@@ -222,37 +222,30 @@ Description: get details about minters on a project
 
 Description: get details about mint on a project
 
-| Field                         | Type          | Description                                                                                                                                       |
-| ----------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id                            | ID!           | Unique identifier made up of minter contract address                                                                                              |
-| type                          | MinterType!   | Minter type                                                                                                                                       |
-| minterFilter                  | MinterFilter! | Associated Minter Filter                                                                                                                          |
-| minimumAuctionLengthInSeconds | BigInt        | Deprecated, use `extraMinterDetails[minimumAuctionLengthInSeconds]`.<br> Minimum allowed auction length in seconds (linear Dutch auction minters) |
-| minimumHalfLifeInSeconds      | BigInt        | Deprecated, use `extraMinterDetails[minimumHalfLifeInSeconds]`.<br> Minimum allowed half life in seconds (exponential Dutch auction minters)      |
-| maximumHalfLifeInSeconds      | BigInt        | Deprecated, use `extraMinterDetails[maximumHalfLifeInSeconds]`.<br> Maximum allowed half life in seconds (exponential Dutch auction minters)      |
-| extraMinterDetails            | String!       | Configuration details used by specific minters (json string)                                                                                      |
-| coreContract                  | Contract!     | Associated core contract                                                                                                                          |
-| updatedAt                     | BigInt!       | When the minter updated                                                                                                                           |
+| Field              | Type          | Description                                                  |
+| ------------------ | ------------- | ------------------------------------------------------------ |
+| id                 | ID!           | Unique identifier made up of minter contract address         |
+| type               | MinterType!   | Minter type                                                  |
+| minterFilter       | MinterFilter! | Associated Minter Filter                                     |
+| extraMinterDetails | String!       | Configuration details used by specific minters (json string) |
+| coreContract       | Contract!     | Associated core contract                                     |
+| updatedAt          | BigInt!       | When the minter updated                                      |
 
 # ProjectMinterConfiguration
 
 Description: get details of a specific mint
 
-| Field              | Type     | Description                                                                                                          |
-| ------------------ | -------- | -------------------------------------------------------------------------------------------------------------------- |
-| id                 | ID!      | Unique identifier made up of minter contract address-projectId                                                       |
-| project            | Project! | The associated project                                                                                               |
-| minter             | Minter!  | The associated minter                                                                                                |
-| priceIsConfigured  | Boolean! | true if project's token price has been configured on minter                                                          |
-| currencySymbol     | String!  | currency symbol as defined on minter - ETH reserved for ether                                                        |
-| currencyAddress    | Bytes!   | currency address as defined on minter - address(0) reserved for ether                                                |
-| purchaseToDisabled | Boolean! | Defines if purchasing token to another is allowed                                                                    |
-| basePrice          | BigInt   | price of token or resting price of Duch auction, in wei                                                              |
-| startPrice         | BigInt   | Deprecated, use `extraMinterDetails[startPrice]`.<br> Dutch auction start price, in wei                              |
-| halfLifeSeconds    | BigInt   | Deprecated, use `extraMinterDetails[halfLifeSeconds]`.<br> Half life for exponential decay Dutch auction, in seconds |
-| startTime          | BigInt   | Deprecated, use `extraMinterDetails[startTime]`.<br> Dutch auction start time (unix timestamp)                       |
-| endTime            | BigInt   | Deprecated, use `extraMinterDetails[endTime]`.<br> Linear Dutch auction end time (unix timestamp)                    |
-| extraMinterDetails | String!  | Configuration details used by specific minter project configurations (json string)                                   |
+| Field              | Type     | Description                                                                        |
+| ------------------ | -------- | ---------------------------------------------------------------------------------- |
+| id                 | ID!      | Unique identifier made up of minter contract address-projectId                     |
+| project            | Project! | The associated project                                                             |
+| minter             | Minter!  | The associated minter                                                              |
+| priceIsConfigured  | Boolean! | true if project's token price has been configured on minter                        |
+| currencySymbol     | String!  | currency symbol as defined on minter - ETH reserved for ether                      |
+| currencyAddress    | Bytes!   | currency address as defined on minter - address(0) reserved for ether              |
+| purchaseToDisabled | Boolean! | Defines if purchasing token to another is allowed                                  |
+| basePrice          | BigInt   | price of token or resting price of Duch auction, in wei                            |
+| extraMinterDetails | String!  | Configuration details used by specific minter project configurations (json string) |
 
 # Payment
 
