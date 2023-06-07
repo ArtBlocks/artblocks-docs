@@ -207,6 +207,7 @@ async function getJwtGql(userAddress) {
   const variables = {
     input: {
       publicAddress: userAddress,
+      message,
       signature
     }
   };
