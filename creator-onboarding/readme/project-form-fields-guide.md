@@ -96,9 +96,9 @@ If your piece takes a certain amount of time to render fully, you can type in th
 
 ### Canvas Mode (toggle) 📄
 
-If checked, data is directly pulled from the <canvas> element using `.toDataURL()` when producing static image renders. This additional rendering mode can be leveraged for projects with varying aspect ratios across different tokens.
+If checked, data is directly pulled from the `Canvas` element using `.toDataURL()` when producing static image renders. This additional rendering mode can be leveraged for projects with varying aspect ratios across different tokens.
 
-Please note that scripts containing multiple <canvas> elements may not render as intended.
+Please note that scripts containing multiple `Canvas` elements may not render as intended.
 
 ### Generate MP4 assets (toggle) 📄
 
