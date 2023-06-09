@@ -37,6 +37,22 @@ Provides the token metadata for a given Art Blocks token.
 | Engine | `https:token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0x81236b5a105d3ad6b56ac41a03e1fd8893a08859/1000001 |
 
 
+**Arbitrum One**
+
+* Note: Contract address is required
+
+| Contract Type | Pattern |
+| --- | --- |
+| Engine |  `https://token.arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
+
+**Arbitrum Testnet**
+
+* Note: Contract address is required
+
+| Contract Type | Pattern |
+| --- | --- |
+| Engine |  `https://token.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
+
 <br>
 
 ### Generator API
@@ -59,24 +75,64 @@ Provides an i-frame-able live-view for the art associated with a given Art Block
 | Flagship | `https://generator-staging-goerli.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/8000002 |
 | Engine | `https://generator-staging-goerli.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
 
+**Arbitrum One**
+
+* Note: Contract address is required
+
+| Contract Type | Pattern |
+| --- | --- |
+| Engine |  `https://generator.arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
+
+**Arbitrum Testnet**
+
+* Note: Contract address is required
+
+| Contract Type | Pattern |
+| --- | --- |
+| Engine |  `https://generator.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
+
 <br>
 
 ### Media API/Media server
 
 Provides a static snapshot of the rendered live-view for a given Art Blocks token.
 
-**Mainnet (Flagship)**
+**Mainnet**
 
-| Pattern | Sample |
+| Contract Type | Pattern | Sample |
+| --- | --- | --- |
+| Flagship | `https://media.artblocks.io/{tokenID}.png` | https://media.artblocks.io/0.png |
+| Engine | `https://media-proxy.artblocks.io/{contractAddress}/{tokenId}.png` | https://media-proxy.artblocks.io/0x145789247973c5d612bf121e9e4eef84b63eb707/782.png |
+
+**Testnet**
+
+| Contract Type | Pattern | Sample |
+| --- | --- | --- |
+| Flagship | `https://media-proxy-staging.artblocks.io/{tokenID}.png` | https://media-proxy-staging.artblocks.io/0.png |
+| Engine | | `https://media-proxy-staging.artblocks.io/{contractAddress}/{tokenID}.png` | https://media-proxy-staging.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
+
+**Arbitrum One**
+
+* Note: Contract address is required
+
+| Contract Type | Pattern |
 | --- | --- |
-| `https://media.artblocks.io/{tokenID}.png` | https://media.artblocks.io/0.png |
+| Engine |  `https://media-proxy-arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
+
+**Arbitrum Testnet**
+
+* Note: Contract address is required
+
+| Contract Type | Pattern |
+| --- | --- |
+| Engine |  `https://media-proxy-arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
 
 ---
 
 In addition to the standard static renders provided for each token, there are two other static renders currently provided: "HD" and "thumbnail". These items can be found at:
 
-* HD Renders – `https://media.artblocks.io/hd/{tokenID}.png`
-* Thumbnail Renders – `https://media.artblocks.io/thumb/{tokenID}.png`
+* HD Renders – `https://media-proxy.artblocks.io/hd/{tokenID}.png`
+* Thumbnail Renders – `https://media-proxy.artblocks.io/thumb/{tokenID}.png`
 
 Please note that these additional static render formats are still currently being back-filled and may not yet be present for all tokens. Our current recommendation for those looking to depend on the "HD" or "thumbnail" responses is to a) first attempt the HD/thumb image resource that you would pefer, b) if this resource is not available, fall back to the standard sized image resource. For the current state of the ongoing backfill of HD and thumbnail assets, please refer to [this spreadsheet](https://docs.google.com/spreadsheets/d/1Li6TMieXL3MENtg5sq9omRVPsa8MWWb7eZU1uDwYxvU/edit?usp=drive_web&ouid=100711456886886984200).
 
