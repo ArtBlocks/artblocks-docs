@@ -30,7 +30,7 @@ CryptoForCharity is a zero-fee platform enabling donations in crypto assets dire
 
 Donations through CryptoForCharity are set at the contract level and automatically routed at the time of payment without touching your wallet (and potentially avoiding tax liability or the need to account for and deduct the income/donation). Donated funds can also be held for a short time following your drop, if you'd prefer to designate the charity or cause fund you wish to support after the fact, but they cannot be held indefinitely.
 
-Generating a charity or cause fund wallet is straightforward -- simply fill out the form [here](https://www.cryptoforcharity.io/nft-creators). You can also reach out directly to SimonSays#0670 in the AB discord for help.
+Generating a charity or cause fund wallet is straightforward -- simply fill out the form [here](https://www.cryptoforcharity.io/nft-creators). 
 
 For a bit more on how it's set up under the hood, [CryptoForCharity put together this tax guidance for NFT creators](https://www.cryptoforcharity.io/nft-creators).  
 
