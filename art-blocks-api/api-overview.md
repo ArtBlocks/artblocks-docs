@@ -131,8 +131,8 @@ Provides a static snapshot of the rendered live-view for a given Art Blocks toke
 
 In addition to the standard static renders provided for each token, there are two other static renders currently provided: "HD" and "thumbnail". These items can be found at:
 
-* HD Renders – `https://media-proxy.artblocks.io/hd/{tokenID}.png`
-* Thumbnail Renders – `https://media-proxy.artblocks.io/thumb/{tokenID}.png`
+* HD Renders – `https://media.artblocks.io/hd/{tokenID}.png`
+* Thumbnail Renders – `https://media.artblocks.io/thumb/{tokenID}.png`
 
 Please note that these additional static render formats are still currently being back-filled and may not yet be present for all tokens. Our current recommendation for those looking to depend on the "HD" or "thumbnail" responses is to a) first attempt the HD/thumb image resource that you would pefer, b) if this resource is not available, fall back to the standard sized image resource. For the current state of the ongoing backfill of HD and thumbnail assets, please refer to [this spreadsheet](https://docs.google.com/spreadsheets/d/1Li6TMieXL3MENtg5sq9omRVPsa8MWWb7eZU1uDwYxvU/edit?usp=drive_web&ouid=100711456886886984200).
 
