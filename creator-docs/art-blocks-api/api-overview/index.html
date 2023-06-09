@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739562587570">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739640744832">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.739562587570" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.739640744832" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.739562587570" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.739640744832" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.739562587570" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.739562587570" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.739640744832" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.739640744832" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -298,6 +298,46 @@
 </tbody>
 </table>
 </div>
+<p><strong>Arbitrum One</strong></p>
+<ul>
+<li>Note: Contract address is required</li>
+</ul>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract Type</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td><code v-pre>https://token.arbitrum.artblocks.io/{contractAddress}/{tokenID}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Arbitrum Testnet</strong></p>
+<ul>
+<li>Note: Contract address is required</li>
+</ul>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract Type</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td><code v-pre>https://token.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 <br>
 <doc-anchor-target id="generator-api">
     <h3>
@@ -357,6 +397,46 @@
 </tbody>
 </table>
 </div>
+<p><strong>Arbitrum One</strong></p>
+<ul>
+<li>Note: Contract address is required</li>
+</ul>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract Type</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td><code v-pre>https://generator.arbitrum.artblocks.io/{contractAddress}/{tokenID}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Arbitrum Testnet</strong></p>
+<ul>
+<li>Note: Contract address is required</li>
+</ul>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract Type</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td><code v-pre>https://generator.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 <br>
 <doc-anchor-target id="media-apimedia-server">
     <h3>
@@ -365,19 +445,93 @@
     </h3>
 </doc-anchor-target>
 <p>Provides a static snapshot of the rendered live-view for a given Art Blocks token.</p>
-<p><strong>Mainnet (Flagship)</strong></p>
+<p><strong>Mainnet</strong></p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
+<th>Contract Type</th>
 <th>Pattern</th>
 <th>Sample</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>Flagship</td>
 <td><code v-pre>https://media.artblocks.io/{tokenID}.png</code></td>
 <td><a href="https://media.artblocks.io/0.png">https://media.artblocks.io/0.png</a></td>
+</tr>
+<tr>
+<td>Engine</td>
+<td><code v-pre>https://media-proxy.artblocks.io/{contractAddress}/{tokenId}.png</code></td>
+<td><a href="https://media-proxy.artblocks.io/0x145789247973c5d612bf121e9e4eef84b63eb707/782.png">https://media-proxy.artblocks.io/0x145789247973c5d612bf121e9e4eef84b63eb707/782.png</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Testnet</strong></p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract Type</th>
+<th>Pattern</th>
+<th>Sample</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flagship</td>
+<td><code v-pre>https://media-proxy-staging.artblocks.io/{tokenID}.png</code></td>
+<td><a href="https://media-proxy-staging.artblocks.io/0.png">https://media-proxy-staging.artblocks.io/0.png</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Engine</td>
+<td></td>
+<td><code v-pre>https://media-proxy-staging.artblocks.io/{contractAddress}/{tokenID}.png</code></td>
+<td><a href="https://media-proxy-staging.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001">https://media-proxy-staging.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Arbitrum One</strong></p>
+<ul>
+<li>Note: Contract address is required</li>
+</ul>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract Type</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td><code v-pre>https://media-proxy-arbitrum.artblocks.io/{contractAddress}/{tokenID}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Arbitrum Testnet</strong></p>
+<ul>
+<li>Note: Contract address is required</li>
+</ul>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract Type</th>
+<th>Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td><code v-pre>https://media-proxy-arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}</code></td>
 </tr>
 </tbody>
 </table>
