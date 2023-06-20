@@ -243,15 +243,11 @@ Art Blocks is allotted 10% of the total primary sales and 2.5% of secondary sale
 
 ### What percent of secondary royalty sales do artists receive?
 
-On OpenSea, the most popular secondary marketplace, artists receive 5% of all secondary sales, and Art Blocks receives 2.5% of all secondary sales.
+As an artist, you should be aware of recent changes in royalty rate determination at OpenSea and Blur, which have resulted in a range of royalty payment percentages (from 0.5% to 7.5%). Due to this change, we've had to adjust our royalty payout calculations.
 
-On other platforms, artists can set their own secondary percentage on their project for other markets that may recognize that field. For consistency, we recommend setting your default secondary market royalty to 5%.
+We've chosen to uphold the same royalty split ratio between our Artists and Art Blocks (2/3 for the Artist and 1/3 for Art Blocks). Art Blocks handles the distribution of royalty payments received from marketplaces that do not offer direct splits through the Royalty Registry, following an internal review of secondary sales transactions.
 
-### How does royalty distribution work?
-
-Royalty distribution varies based on the secondary marketplace. Most secondary marketplaces (Rarible,Archipelago, Looksrare etc.) will read your royalties from your contract (the secondary market royalty field) and will send the ETH accordingly directly to the wallet associated with the project.
-
-OpenSea is the exception to this. OpenSea will collect royalties on the secondary sales directly (5%). These royalties are then transferred to Art Blocks and Art Blocks will then manually transfer those royalties to each artist. Royalty distributions will be announced in our artist channel.
+If you have any questions regarding this updated split methodology or information regarding royalty payouts, please post in #artist-general on Discord. 
 
 ### How can I customize revenue splits?
 Setting up revenue splits can be done through the [Payout](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-form-fields-guide/#payout) fields in your project form. You can use the additional payee field within the form directly to send a portion of the revenue to that account. Many artists use this to make a charitable donation. To split revenue with more than one account, we recommend using [0xSplits](https://www.0xsplits.xyz/). Instructions on how to create a Split can be found [here](https://www.youtube.com/watch?v=P_uqQJghNAo). Once your Split is created, paste the address into the additional payee field.
