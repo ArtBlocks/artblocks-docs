@@ -196,6 +196,13 @@ The Art Blocks testnet subgraph can be queried at the URL below:
 | --- | --- | --- |
 | Hosted Service | Yes | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-artist-staging-goerli |
 
+The Art Blocks Arbitrum subgraphs can be queried at the URLs below:
+
+| The Graph Service | Art Blocks Data | Environment | URL |
+| --- | --- | --- | --- |
+| Hosted Service | Yes | Production | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-arbitrum |
+| Hosted Service | Yes | Staging | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-staging-arbitrum |
+
 **Recommendation:** Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.
 
 <br>
@@ -204,9 +211,12 @@ The Art Blocks testnet subgraph can be queried at the URL below:
 
 Provides a broader set of the data that our front-end consumes — this includes both on-chain and off-chain data.
 
-| Environment | URL |
-| --- | --- |
-| Production | `https://data.artblocks.io/v1/graphql` |
+| Chain | Environment | URL |
+| --- | --- | --- |
+| Ethereum | Production | `https://data.artblocks.io/v1/graphql` |
+| Ethereum | Staging | `https://ab-staging-goerli.hasura.app/v1/graphql` |
+| Arbitrum | Production | `https://ab-prod-arbitrum.hasura.app/v1/graphql` |
+| Arbitrum | Staging | `https://ab-staging-arbitrum.hasura.app/v1/graphql` |
 
 #### Authentication
 
