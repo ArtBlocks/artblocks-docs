@@ -243,7 +243,7 @@ Art Blocks is allotted 10% of the total primary sales and 2.5% of secondary sale
 
 ### What percent of secondary royalty sales do artists receive?
 
-As an artist, you should be aware of recent changes in royalty rate determination at OpenSea and Blur, which have resulted in a range of royalty payment percentages (from 0.5% to 7.5%). Due to this change, we've had to adjust our royalty payout calculations.
+As an artist, you should be aware of recent changes in royalty rate determination at OpenSea and Blur, which have resulted in a range of royalty payment percentages (from 0% to 5%). Due to this change, we've had to adjust our royalty payout calculations.
 
 We've chosen to uphold the same royalty split ratio between our Artists and Art Blocks (2/3 for the Artist and 1/3 for Art Blocks). Art Blocks handles the distribution of royalty payments received from marketplaces that do not offer direct splits through the Royalty Registry, following an internal review of secondary sales transactions.
 
