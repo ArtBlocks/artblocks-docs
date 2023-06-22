@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740594698397">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740767519771">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.740594698397" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.740767519771" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740594698397" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740767519771" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740594698397" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.740594698397" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740767519771" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=3.0.3.740767519771" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -689,6 +689,33 @@
 </tbody>
 </table>
 </div>
+<p>The Art Blocks Arbitrum subgraphs can be queried at the URLs below:</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>The Graph Service</th>
+<th>Art Blocks Data</th>
+<th>Environment</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hosted Service</td>
+<td>Yes</td>
+<td>Production</td>
+<td><a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-arbitrum">https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-arbitrum</a></td>
+</tr>
+<tr>
+<td>Hosted Service</td>
+<td>Yes</td>
+<td>Staging</td>
+<td><a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-staging-arbitrum">https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-staging-arbitrum</a></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Recommendation:</strong> Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.</p>
 <br>
 <doc-anchor-target id="graphql-api">
@@ -702,14 +729,31 @@
 <table class="comfortable">
 <thead>
 <tr>
+<th>Chain</th>
 <th>Environment</th>
 <th>URL</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>Ethereum</td>
 <td>Production</td>
 <td><code v-pre>https://data.artblocks.io/v1/graphql</code></td>
+</tr>
+<tr>
+<td>Ethereum</td>
+<td>Staging</td>
+<td><code v-pre>https://ab-staging-goerli.hasura.app/v1/graphql</code></td>
+</tr>
+<tr>
+<td>Arbitrum</td>
+<td>Production</td>
+<td><code v-pre>https://ab-prod-arbitrum.hasura.app/v1/graphql</code></td>
+</tr>
+<tr>
+<td>Arbitrum</td>
+<td>Staging</td>
+<td><code v-pre>https://ab-staging-arbitrum.hasura.app/v1/graphql</code></td>
 </tr>
 </tbody>
 </table>
