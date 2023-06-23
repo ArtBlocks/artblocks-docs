@@ -64,8 +64,7 @@ For an overview of all minters available for artists, please see the [Minter Sui
 
 For more detailed instructions on how to configure your selected minter, please see the [Minter section of the Project Form Fields Guide](readme/project-form-fields-guide.md#minter) .
 
-!!!info
-If you are using the `Dutch auction - Exponential Price Decrease` (with or without settlement) or `Dutch auction - Linear Price Decrease`, your project will be unpaused prior to your auction’s start time, and the minter will automatically open for minting at the start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free.
+!!!If you are using the `Dutch auction - Exponential Price Decrease` (with or without settlement) or `Dutch auction - Linear Price Decrease,` you will need to unpause your project before your auction's start time. Your project can be unpaused under the Danger tab any time prior to the starting time of your auction.  We recommend unpausing projects on the morning of your release. Once unpaused, your project will be marked as “Upcoming,” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free. !!!
 
 ## Scheduling
 
@@ -91,9 +90,9 @@ Pre-Drop Talks happen on Twitter Spaces 15 minutes prior to the release of your 
 
 ## Finishing Steps
 
-1. Once your project is completely sold out, you may reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0. In order to successfully complete this change, you will need to input information in all fields in the Payout tab.
-2. You may also remove any language from your Project Description that was specifically included to describe sales mechanics.
-3. Report final charity donation totals in your Mainnet DM
-4. Please fill out the appropriate form to add bot-support to your Discord channel for your completed project: https://github.com/ArtBlocks/artbot/issues/new/choose.
-5. Personalize your OpenSea Collection. Learn more about doing so (here)[https://docs.artblocks.io/creator-docs/creator-onboarding/readme/opensea-personalization/].
-6. Last, please feel free to hang out as much or as little as you'd like in your channel going forward. If you plan to take an extended amount of time away from the community in the next month, we'd appreciate it if you would communicate that you are disconnecting to your collectors in case they have any questions in the interim.
+1. If you are using Settlement in your auction, after the auction has completed, you must go to `Payout Tab` and `claim revenue`.
+2. Once your project is completely sold out, you may reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0. In order to successfully complete this change, you will need to input information in all fields in the Payout tab.
+4. Report final charity donation totals in your Mainnet DM
+5. Please fill out the appropriate form to add bot-support to your Discord channel for your completed project: https://github.com/ArtBlocks/artbot/issues/new/choose.
+6. Personalize your OpenSea Collection. Learn more about doing so [here](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/opensea-personalization/).
+7. Last, please feel free to hang out as much or as little as you'd like in your channel going forward. If you plan to take an extended amount of time away from the community in the next month, we'd appreciate it if you would communicate that you are disconnecting to your collectors in case they have any questions in the interim.
