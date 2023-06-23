@@ -65,7 +65,7 @@ For an overview of all minters available for artists, please see the [Minter Sui
 For more detailed instructions on how to configure your selected minter, please see the [Minter section of the Project Form Fields Guide](readme/project-form-fields-guide.md#minter) .
 
 !!!info
-If you are using the `Dutch auction - Exponential Price Decrease` (with or without settlement) or `Dutch auction - Linear Price Decrease`, your project will be unpaused prior to your auction’s start time, and the minter will automatically open for minting at the start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free.
+If you are using the `Dutch auction - Exponential Price Decrease` (with or without settlement) or `Dutch auction - Linear Price Decrease,` you will need to unpause your project before your auction's start time. Your project can be unpaused under the Danger tab any time prior to the starting time of your auction.  We recommend unpausing projects on the morning of your release. Once unpaused, your project will be marked as “Upcoming,” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free.
 !!!
 
 ## Scheduling
@@ -91,7 +91,8 @@ Pre-Drop Talks happen on Twitter Spaces 15 minutes prior to the release of your 
 
 ## Finishing Steps
 
-1. Once your project is complete, you may reset the “Additional Payee Percentage” to 0% for any charitable giving conducted during minting. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0. In order to successfully update payout details, you will need to enter information into all fields to submit the change.
-2. You may also remove any language from your Project Description to describe sales mechanics.
+1. If you are using Settlement in your auction, after the auction has completed, you must go to `Payout Tab` and `claim revenue`.
+2. Once your project is complete, you may reset the “Additional Payee Percentage” to 0% for any charitable giving conducted during minting. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0. In order to successfully update payout details, you will need to enter information into all fields to submit the change.
 3. Report final charity donation totals in your artist DM
-4. **[For previously Curated only]** Please fill out the appropriate form to add bot support to your Discord channel for your completed project: https://github.com/ArtBlocks/artbot/issues/new/choose.
+4. Personalize your OpenSea Collection. Learn more about doing so [here](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/opensea-personalization/).
+5. **[For previously Curated only]** Please fill out the appropriate form to add bot support to your Discord channel for your completed project: https://github.com/ArtBlocks/artbot/issues/new/choose.
