@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740854616631">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.740854643447">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -33,11 +33,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.0.3.740854616631" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=3.0.3.740854643447" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740854616631" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=3.0.3.740854643447" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740854616631" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=3.0.3.740854643447" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -328,10 +328,10 @@
 <p>For an overview of all minters available for artists, please see the <a href="../readme/minter-suite/">Minter Suite</a> page.</p>
 <p>For more detailed instructions on how to configure your selected minter, please see the <a href="../readme/project-form-fields-guide/#minter">Minter section of the Project Form Fields Guide</a> .</p>
 <div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
         <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
                 <g fill="currentColor"><g>
                     <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
                     <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
@@ -340,7 +340,7 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>If you are using the <code v-pre>Dutch auction - Exponential Price Decrease</code> (with or without settlement) or <code v-pre>Dutch auction - Linear Price Decrease</code>, your project will be unpaused prior to your auction’s start time, and the minter will automatically open for minting at the start time. Once your project page is public, your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects the morning of your release. Once unpaused, your project will be marked as “Upcoming” and the dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free.</p>
+            <h5>If you are using the <code v-pre>Dutch auction - Exponential Price Decrease</code> (with or without settlement) or <code v-pre>Dutch auction - Linear Price Decrease,</code> you will need to unpause your project before your auction&#x27;s start time. Your project can be unpaused under the Danger tab any time prior to the starting time of your auction.  We recommend unpausing projects on the morning of your release. Once unpaused, your project will be marked as “Upcoming,” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free. !!!</h5>
 <doc-anchor-target id="scheduling">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#scheduling">#</doc-anchor-trigger>
@@ -388,11 +388,11 @@
     </h2>
 </doc-anchor-target>
 <ol>
+<li>If you are using Settlement in your auction, after the auction has completed, you must go to <code v-pre>Payout Tab</code> and <code v-pre>claim revenue</code>.</li>
 <li>Once your project is completely sold out, you may reset the Additional Payee Percentage to 0% for any charitable giving that was conducted during minting. If removing, you will need to edit the secondary payee info to your wallet or set the percentage to 0. In order to successfully complete this change, you will need to input information in all fields in the Payout tab.</li>
-<li>You may also remove any language from your Project Description that was specifically included to describe sales mechanics.</li>
 <li>Report final charity donation totals in your Mainnet DM</li>
 <li>Please fill out the appropriate form to add bot-support to your Discord channel for your completed project: <a href="https://github.com/ArtBlocks/artbot/issues/new/choose">https://github.com/ArtBlocks/artbot/issues/new/choose</a>.</li>
-<li>Personalize your OpenSea Collection. Learn more about doing so (here)[https://docs.artblocks.io/creator-docs/creator-onboarding/readme/opensea-personalization/].</li>
+<li>Personalize your OpenSea Collection. Learn more about doing so <a href="https://docs.artblocks.io/creator-docs/creator-onboarding/readme/opensea-personalization/">here</a>.</li>
 <li>Last, please feel free to hang out as much or as little as you&#x27;d like in your channel going forward. If you plan to take an extended amount of time away from the community in the next month, we&#x27;d appreciate it if you would communicate that you are disconnecting to your collectors in case they have any questions in the interim.</li>
 </ol>
         </div>
