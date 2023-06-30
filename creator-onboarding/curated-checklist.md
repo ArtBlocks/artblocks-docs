@@ -47,7 +47,7 @@ Include the wallet addresses for primary and secondary sales to be distributed. 
 
 ## Mint #0
 
-1. **Note**: Mint #0 will be completed with the Set Price minter. Set the minter to Set Price ETH with the set price as your Dutch Auction’s base price for Mint #0
+1. **Note**: Mint #0 will be completed with the Set Price minter. Set the minter to Set Price ETH with the set price as your Dutch Auction’s base price for Mint #0. Mint #0 must be left up to chance, artists cannot use tokenId to control the features of the output.
 2. **Before** minting Mint #0, ensure that your "additional payee wallet" has been set for the same configuration that you will use it for in your project release. E.g., if you are using the "additional payee wallet" field to donate to charity at the time of mint, you must set this before minting your #0. This is done to ensure that this full functionality is tested end-to-end as part of the mint #0 process, and that there are no issues with the wallet selected for the additional payee. **Please note: Art Blocks does not currently support sending primary sales payments into a multi-sig contract and there are known issues when attempting to do so. While we plan to update our minting smart contracts in the near future to resolve this, multi-sig wallets should not be used for this purpose at this time.**
 3. Once your project information has been uploaded, **please confirm in your artist DM that you're ready for mint #0**. The Art Blocks Team will look over your project shell and then give you the go-ahead to mint #0.
 4. Mint #0 must occur before your release can be scheduled.
