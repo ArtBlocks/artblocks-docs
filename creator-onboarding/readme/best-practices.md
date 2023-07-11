@@ -3,7 +3,6 @@ order: 900
 description: Best Practices for Applying Artists, Non-Selection Policy 
 ---
 
-## Best Practices 
 Art Blocks is a highly selective platform, and submitting a project for consideration is a multi-step process.  With careful preparation and a keen focus on specific criteria, however, you can reduce the potential intensity of the process and significantly enhance the likelihood of a successful application. Remember, the process demands an investment of your time and effort that matches the high standard of projects Art Blocks looks to release. Even if your project is not selected, a strong application can provide inroads to other opportunities in our community such as the opportunity to connect with the Art Blocks Engine, an invitation to participate in artist-specific programming, or being identified as a potential future candidate for project release and mentorship. Numerous generative artists have gotten their start with an Art Blocks release, and we maintain a steadfast commitment to discovering and promoting a diverse range of unique talents.
 
 **First, let’s review the basics:**
@@ -36,7 +35,7 @@ Remember, applying to release a project on Art Blocks is a multi-step process th
 ## Non-Selection Policy 
 At Art Blocks, we highly value the creative contributions of artists and creators who submit their work for consideration. However, due to the volume of submissions we receive, and limited release slots available, we do not provide specific feedback for rejected projects.
 
-- Reasons for Non-selection:
+**Reasons for Non-selection:**
     
     While the specific reasons for non-selection may vary depending on the nature of the submissions and the objectives of the screening committee, some common reasons  may include:
     
@@ -46,6 +45,5 @@ At Art Blocks, we highly value the creative contributions of artists and creator
     4. Insufficient development: Projects that appear to be in early stages of development or require additional iteration and refinement to reach their full potential may not be selected.
     5. Repetitiveness or lack of variety: Projects that lack variation, both within the collection itself and in comparison to other works in the same genre or style, may not be selected.
     6. Failure to meet technical or quality standards: Projects that do not meet our technical or quality standards, such as issues with resolution agosticism, integration of randomness or clarity of concept or execution may not be selected.
-- Please note that these reasons are not exhaustive, and our screening committees carefully assess each submission based on a range of factors. While we understand that receiving specific feedback can be helpful, we are unable to provide feedback for individual cases of non-selection
+Please note that these reasons are not exhaustive, and our screening committees carefully assess each submission based on a range of factors. While we understand that receiving specific feedback can be helpful, we are unable to provide feedback for individual cases of non-selection
     
-    We appreciate your understanding and encourage you to continue pursuing your artistic endeavors. We wish you the best of luck in your future artistic pursuits.
