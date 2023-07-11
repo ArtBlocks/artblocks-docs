@@ -17,7 +17,7 @@ To learn more about the application process please visit [artblocks.io/apply](ar
 
 You'll be asked to upload your project to the artist staging site on the Goerli test network. Here you can mint test outputs of your project and work out any kinks in your script before the Art Blocks selection committee reviews it. 
 
-Ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 40-60 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. To confirm you’ve included everything in your staging shell, refer to the [Testnet Checklist] (testnet-checklist.md). Required fields are marked in testnet with a “📄: fields required for artist screening” indication. As you are uploading to testnet, you only need to fill in fields with this indication. 
+Ensure the work has a project description that explains the work's technical, aesthetic, and conceptual approaches. Prototypes should have 20-40 mints, as well as feature traits. Also include an artist profile and links to any ancillary material about the work on the project page. To confirm you’ve included everything in your staging shell, refer to the [Testnet Checklist] (testnet-checklist.md). Required fields are marked in testnet with a “📄: fields required for artist screening” indication. As you are uploading to testnet, you only need to fill in fields with this indication. 
 
 Please note that all Art Blocks team members are working within US time zones, which means that there may be a delay in processing requests. 
 
@@ -26,7 +26,7 @@ Please note that all Art Blocks team members are working within US time zones, w
 
 ## 3. Script test runs and project review
 
-Before Art Blocks considers projects for release, the project must be completely finished and uploaded to artist-staging.artblocks.io. All staging shells must have 40-60 mints, a project description, an artist bio, and features traits that follow the conceptual and formal logic of the collection. We are superseding the chronological queue of applications. **When your project is ready for review, you must email apply@artblocks.io indicating you are ready to be considered for release.** 
+Before Art Blocks considers projects for release, the project must be completely finished and uploaded to artist-staging.artblocks.io. All staging shells must have 20-40 mints, a project description, an artist bio, and features traits that follow the conceptual and formal logic of the collection. We are superseding the chronological queue of applications. **When your project is ready for review, you must email apply@artblocks.io indicating you are ready to be considered for release.** 
 
 All prototypes should be completely finished before review. The team will let you know when the work will be screened and give you a timeline for the acceptance decision. 
 
