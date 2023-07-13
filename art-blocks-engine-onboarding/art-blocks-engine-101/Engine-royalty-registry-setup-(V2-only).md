@@ -24,7 +24,7 @@ For Engine contracts, the following addresses may receive royalties:
 | ---------------------------- | -------------------------------------------------------------- |
 | Platform (Engine Partner)    | default 2.5%                                                   |
 | Render Provider (Art Blocks) | default 2.5%                                                   |
-| Artist                       | typically 5%, but configureable by artist                      |
+| Artist                       | typically 5%, but configurable by artist                      |
 | Additional Payee             | split between Artist & Additional Payee varies across projects |
 
 ## Configuring Royalties

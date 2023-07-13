@@ -76,7 +76,7 @@ Contact your account manager for an invite link to the private Discord server.
 
 ## How long will the process take from start to public launch?
 
-The process typically takes 10 weeks from initial conversation to public launch, but is **highly** dependant on partner's resource allocation. To reduce delays, have a front-end developer, artist, go-to-market strategy, and sufficient onboarding time ready. 
+The process typically takes 10 weeks from initial conversation to public launch, but is **highly** dependent on partner's resource allocation. To reduce delays, have a front-end developer, artist, go-to-market strategy, and sufficient onboarding time ready. 
 
 ## What information do we need to provide to deploy our smart contracts?
 
@@ -142,12 +142,12 @@ Secondary marketplaces will automatically detect and display projects on your co
 
 ## Flex: What are the limitations around file size and file type for external assets? How many external assets can a project have?
 
-There are no explicit limitations on the contract side, neither for file size or type or how many external assets a project can have. Ultimately, this is at the discretion of the artist, but Art Blocks recommends paying close attention to ensure that artworks are as acessible as possible for as many different types of users as possible. Generally speaking, the above factors should be influenced by trying to achieve the best user experience for the artwork in terms of performance and load time.
+There are no explicit limitations on the contract side, neither for file size or type or how many external assets a project can have. Ultimately, this is at the discretion of the artist, but Art Blocks recommends paying close attention to ensure that artworks are as accessible as possible for as many different types of users as possible. Generally speaking, the above factors should be influenced by trying to achieve the best user experience for the artwork in terms of performance and load time.
 
 Some additional recommendations:
 
 - Try to keep the overall download size for users viewing the work to be under ~10mb OR ensure the artwork description mentions the heavier load/longer loading time. Additionally, consider whether or not it may make sense to have a loading indicator as part of the artwork itself.
-- When working with less common file types, remember to test on various platforms/browsers, to ensure the best cross-platform compatability possible.
+- When working with less common file types, remember to test on various platforms/browsers, to ensure the best cross-platform compatibility possible.
 
 ## Flex: Can JS external asset dependencies make external calls to other APIs/assets?
 
@@ -176,7 +176,7 @@ On the other hand, the **minterFilter contract** allows you to set max invocatio
 
 When `true`, `aproveArtistSplitProposals` is a feature thatallows artists to automatically change their royalty split payout address and the split percentage without requiring approval from the contract admin. This makes the process faster and more convenient for artists but may increase the risk of unauthorized changes to royalty wallets, which could complicate accounting or OFAC compliance. 
 
-If set to `alse` the contract admin will need to approve any changes to the artist's royalty wallet, adding a layer of security and control.
+If set to `else` the contract admin will need to approve any changes to the artist's royalty wallet, adding a layer of security and control.
 
 ## When should I enable GPU rendering?
 
