@@ -216,7 +216,7 @@ Artists are able to claim revenue after either:
 
 We ask that artists promptly collect revenue when it becomes available. To collect revenue:
 
-- Click the `Claim Revenue` button that becomes available in your artist dashboard, wich will prompt you to send a transaction
+- Click the `Claim Revenue` button that becomes available in your artist dashboard, which will prompt you to send a transaction
   - If the button is selected after the project has sold out, all revenue from the project will be distributed at the time of claim
   - If the button is selected after the auction reaches resting price, but before all tokens have been sold, revenue from previous purchases will be transferred. Revenue from subsequent purchases at resting price will be distributed immediately at the time of of each purchse.
 
