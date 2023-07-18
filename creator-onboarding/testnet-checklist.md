@@ -38,9 +38,9 @@ Note: For your Art Blocks application, please connect with a hot wallet. Hardwar
 
 2. After you `submit` the minter to `Set Price - ETH (V2)` and entered the `base price`, go back to your project page and scroll down. 
 
-<img width="1902" alt="02_minting" src="https://user-images.githubusercontent.com/103667291/214971934-1c738de5-a208-40c0-9698-8a811d45e155.png">
+<img width="1416" alt="Screenshot 2023-07-18 at 2 51 24 PM" src="https://github.com/ArtBlocks/artblocks-docs/assets/103667291/d9186cd6-ef93-49fa-8e77-9e0bbc919d42">
 
-3. Above `Additional details` you will find the button that says `UPCOMING`. By pressing this button, you can mint outputs without unpausing your project. 
+3. You will find the button that says `Artist Mint.` By pressing this button, you can mint outputs without unpausing your project. 
 
 <img width="1866" alt="03_minting" src="https://user-images.githubusercontent.com/103667291/214972116-80a024f0-257c-4c37-a99b-597e732b7bf0.png">
 
