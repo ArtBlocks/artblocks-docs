@@ -8,18 +8,17 @@ title: Subgraph Entities
 - [`Project`](#project)
 - [`ProjectScript`](#projectscript)
 - [`ProposedArtistAddressesAndSplit`](#proposedartistaddressesandsplit)
-- [`EngineRegistry`](#engineregistry)
+- [`CoreRegistry`](#coreregistry)
 - [`Contract`](#contract)
 - [`Whitelisting`](#whitelisting)
 - [`Account`](#account)
 - [`AccountProject`](#accountproject)
 - [`Token`](#token)
 - [`MinterFilter`](#minterfilter)
+- [`MinterFilterContractAllowlist`](#minterfiltercontractallowlist)
 - [`Minter`](#minter)
 - [`ProjectMinterConfiguration`](#projectminterconfiguration)
-- [`Payment`](#payment)
-- [`Sale`](#sale)
-- [`SaleLookupTable`](#salelookuptable)
+- [`Receipt`](#receipt)
 - [`Transfer`](#transfer)
 - [`ProjectExternalAssetDependency`](#projectexternalassetdependency)
 - [`Dependency`](#dependency)
@@ -111,13 +110,14 @@ Description: get specific details on the pay flow for a specified artist
 | project                                 | Project! | Project associated with this proposed artist addresses and splits |
 | createdAt                               | BigInt!  | When address initiated                                            |
 
-# EngineRegistry
+# CoreRegistry
 
-Description: Get specific details on the Art Blocks Engine registry. At this time, this is used largely for indexing purposes of V3_Engine\* contracts only.
-| Field | Type | Description |
-| ----------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| id | ID! | Unique identifier made up of the Engine Registry's contract address |
-| registeredContracts | [Contract!] | Core contracts that are registered on this Engine Registry, when this is most recent Engine Registry to add the contract |
+Description: Get specific details on the Art Blocks Core registry. At this time, this is used for indexing purposes of V3 contracts, as well as acting as an allowlist of core contracts that may mint on a shared minter filter.
+
+| Field               | Type        | Description                                                                                                                                                                                               |
+| ------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                  | ID!         | Unique identifier made up of the Core Registry's contract address. note: for legacy MinterFilters, this is a dummy ID, equal to the address of the single core contract associated with the minter filter |
+| registeredContracts | [Contract!] | All core contracts that are registered on this CoreRegistry, when this is most recent Core Registry to add the contract                                                                                   |
 
 # Contract
 
@@ -210,87 +210,71 @@ Description: get various token information
 
 Description: get details about minters on a project
 
-| Field             | Type               | Description                                          |
-| ----------------- | ------------------ | ---------------------------------------------------- |
-| id                | ID!                | Unique identifier made up of minter contract address |
-| coreContract      | Contract!          | Associated core contract                             |
-| minterAllowlist   | [Minter!]!         | Minters allowlisted on MinterFilter                  |
-| associatedMinters | [Minter!](#minter) | Minters associated with MinterFilter                 |
-| updatedAt         | BigInt!            | When minter updated                                  |
+| Field                          | Type                              | Description                                                                                                      |
+| ------------------------------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| id                             | ID!                               | Unique identifier made up of minter contract address                                                             |
+| minterGlobalAllowlist          | [Minter!]!                        | Minters allowlisted globally on this MinterFilter                                                                |
+| minterFilterContractAllowlists | [MinterFilterContractAllowlist!]! | Minters allowlisted at a contract-level on this MinterFilter                                                     |
+| knownMinters                   | [Minter!](#minter)                | Known minters that are tied to this MinterFilter, but are not necessarily approved on this MinterFilter          |
+| coreRegistry                   | [CoreRegistry!](#coreregistry)    | Core contract registry used by this MinterFilter. Note: For MinterFilter V0 and V1, a dummy CoreRegistry is used |
+| updatedAt                      | BigInt!                           | When minter updated                                                                                              |
+
+# MinterFilterContractAllowlist
+
+Description: Defines a contract-specific allowlist of minters specifically approved on a given shared minter filter. This is used to extend the set of allowlisted minters beyond a shared minter filter's set of globally allowlisted minters.
+
+| Field                   | Type          | Description                                                                                       |
+| ----------------------- | ------------- | ------------------------------------------------------------------------------------------------- |
+| id                      | ID!           | Unique identifier made up of {minter filter contract address}-{core contract address}             |
+| minterFilter            | MinterFilter! | MinterFilter contract                                                                             |
+| contract                | Contract!     | Core contract                                                                                     |
+| minterContractAllowlist | [Minter!]!    | Minter contract addresses allowed at the contract level (extending global MinterFilter allowlist) |
+| updatedAt               | BigInt!       | When last updated                                                                                 |
 
 # Minter
 
 Description: get details about mint on a project
 
-| Field              | Type          | Description                                                  |
-| ------------------ | ------------- | ------------------------------------------------------------ |
-| id                 | ID!           | Unique identifier made up of minter contract address         |
-| type               | MinterType!   | Minter type                                                  |
-| minterFilter       | MinterFilter! | Associated Minter Filter                                     |
-| extraMinterDetails | String!       | Configuration details used by specific minters (json string) |
-| coreContract       | Contract!     | Associated core contract                                     |
-| updatedAt          | BigInt!       | When the minter updated                                      |
+| Field                               | Type          | Description                                                                            |
+| ----------------------------------- | ------------- | -------------------------------------------------------------------------------------- |
+| id                                  | ID!           | Unique identifier made up of minter contract address                                   |
+| type                                | MinterType!   | Minter type                                                                            |
+| minterFilter                        | MinterFilter! | Associated Minter Filter                                                               |
+| isGloballyAllowlistedOnMinterFilter | Boolean!      | Boolean representing if the Minter is globally allowed on its associated minter filter |
+| extraMinterDetails                  | String!       | Configuration details used by specific minters (json string)                           |
+| receipts                            | [Receipt!]    | Receipts for this minter, only for minters with settlement                             |
+| updatedAt                           | BigInt!       | When the minter updated                                                                |
 
 # ProjectMinterConfiguration
 
 Description: get details of a specific mint
 
-| Field              | Type     | Description                                                                        |
-| ------------------ | -------- | ---------------------------------------------------------------------------------- |
-| id                 | ID!      | Unique identifier made up of minter contract address-projectId                     |
-| project            | Project! | The associated project                                                             |
-| minter             | Minter!  | The associated minter                                                              |
-| priceIsConfigured  | Boolean! | true if project's token price has been configured on minter                        |
-| currencySymbol     | String!  | currency symbol as defined on minter - ETH reserved for ether                      |
-| currencyAddress    | Bytes!   | currency address as defined on minter - address(0) reserved for ether              |
-| purchaseToDisabled | Boolean! | Defines if purchasing token to another is allowed                                  |
-| basePrice          | BigInt   | price of token or resting price of Duch auction, in wei                            |
-| extraMinterDetails | String!  | Configuration details used by specific minter project configurations (json string) |
+| Field              | Type     | Description                                                                                     |
+| ------------------ | -------- | ----------------------------------------------------------------------------------------------- |
+| id                 | ID!      | Unique identifier made up of {minter contract address}-{core contract address}-{project number} |
+| project            | Project! | The associated project                                                                          |
+| minter             | Minter!  | The associated minter                                                                           |
+| priceIsConfigured  | Boolean! | true if project's token price has been configured on minter                                     |
+| currencySymbol     | String!  | currency symbol as defined on minter - ETH reserved for ether                                   |
+| currencyAddress    | Bytes!   | currency address as defined on minter - address(0) reserved for ether                           |
+| purchaseToDisabled | Boolean! | Defines if purchasing token to another is allowed                                               |
+| basePrice          | BigInt   | price of token or resting price of Duch auction, in wei                                         |
+| extraMinterDetails | String!  | Configuration details used by specific minter project configurations (json string)              |
+| maxInvocations     | BigInt   | Maximum number of invocations allowed for the project (on the minter)                           |
 
-# Payment
+# Receipt
 
-Description: get details of payment for an NFT
+Description: get details about purchases on a minter with settlement
 
-| Field        | Type         | Description                                                                                       |
-| ------------ | ------------ | ------------------------------------------------------------------------------------------------- |
-| id           | ID!          | Payment id formatted: '{SaleId}-{paymentNumber}' (paymentNumber will be 0 for non-Seaport trades) |
-| paymentType  | PaymentType! | Type of token transferred in this payment                                                         |
-| paymentToken | Bytes!       | The address of the token used for the payment                                                     |
-| price        | BigInt!      | The price of the sale                                                                             |
-| sale         | Sale!        | The associated sale                                                                               |
-| recipient    | Bytes!       | The recipient address                                                                             |
-
-# Sale
-
-Description: get sale information
-
-| Field             | Type                                 | Description                                                                                                                                                   |
-| ----------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id                | ID!                                  | The sale id formatted: tokenId - token.nextSaleId (using first token sold for bundles) for Opensea V1/V2, orderHash from sale event for Looksrare and Seaport |
-| txHash            | Bytes!                               | The hash of the transaction                                                                                                                                   |
-| exchange          | Exchange!                            | The exchange used for this sale                                                                                                                               |
-| saleType          | SaleType!                            | The sale type (SingleBundle)                                                                                                                                  |
-| blockNumber       | BigInt!                              | The block number of the sale                                                                                                                                  |
-| blockTimestamp    | BigInt!                              | The timestamp of the sale                                                                                                                                     |
-| summaryTokensSold | String!                              | A raw formatted string of the token(s) sold (i.e TokenID1::TokenID2::TokenID3)                                                                                |
-| saleLookupTables  | [SaleLookupTable!](#salelookuptable) | Lookup table to get the list of Tokens sold in this sale                                                                                                      |
-| seller            | Bytes!                               | The seller address                                                                                                                                            |
-| buyer             | Bytes!                               | The buyer address                                                                                                                                             |
-| payments          | [Payment!](#payment)                 | List of Payment tokens involved in this sale                                                                                                                  |
-| isPrivate         | Boolean!                             | Private sales are flagged by this boolean                                                                                                                     |
-
-# SaleLookupTable
-
-Description:
-
-| Field       | Type     | Description                           |
-| ----------- | -------- | ------------------------------------- |
-| id          | ID!      | Set to `Project Id::Token Id::Sale Id |
-| blockNumber | BigInt!  | The block number of the sale          |
-| timestamp   | BigInt!  | Timestamp of the sale                 |
-| project     | Project! | The associated project                |
-| token       | Token!   | The token sold                        |
-| sale        | Sale!    | The associated sale                   |
+| Field        | Type     | Description                                                                                                       |
+| ------------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| id           | ID!      | Unique identifier made up of {minter contract address}-{core contract address}-{project number}-{account address} |
+| project      | Project! | The associated project                                                                                            |
+| minter       | Minter!  | The associated minter                                                                                             |
+| account      | Account! | The associated account                                                                                            |
+| netPosted    | BigInt!  | The total net amount posted (set to settlement contract) for tokens                                               |
+| numPurchased | BigInt!  | The total quantity of tokens purchased on the project                                                             |
+| updatedAt    | BigInt!  | Last updated timestamp                                                                                            |
 
 # Transfer
 
