@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745087674920">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745345172772">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.1.0.745087674920" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.1.0.745345172772" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.745087674920" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.745345172772" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.745087674920" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.745345172772" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -224,18 +224,17 @@
 <li><doc-anchor-trigger to="#project"><code v-pre>Project</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#projectscript"><code v-pre>ProjectScript</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#proposedartistaddressesandsplit"><code v-pre>ProposedArtistAddressesAndSplit</code></doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#engineregistry"><code v-pre>EngineRegistry</code></doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#coreregistry"><code v-pre>CoreRegistry</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#contract"><code v-pre>Contract</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#whitelisting"><code v-pre>Whitelisting</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#account"><code v-pre>Account</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#accountproject"><code v-pre>AccountProject</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#token"><code v-pre>Token</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#minterfilter"><code v-pre>MinterFilter</code></doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#minterfiltercontractallowlist"><code v-pre>MinterFilterContractAllowlist</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#minter"><code v-pre>Minter</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#projectminterconfiguration"><code v-pre>ProjectMinterConfiguration</code></doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#payment"><code v-pre>Payment</code></doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#sale"><code v-pre>Sale</code></doc-anchor-trigger></li>
-<li><doc-anchor-trigger to="#salelookuptable"><code v-pre>SaleLookupTable</code></doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#receipt"><code v-pre>Receipt</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#transfer"><code v-pre>Transfer</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#projectexternalassetdependency"><code v-pre>ProjectExternalAssetDependency</code></doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#dependency"><code v-pre>Dependency</code></doc-anchor-trigger></li>
@@ -614,17 +613,36 @@
 </tbody>
 </table>
 </div>
-<doc-anchor-target id="engineregistry">
+<doc-anchor-target id="coreregistry">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#engineregistry">#</doc-anchor-trigger>
-        <span>EngineRegistry</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#coreregistry">#</doc-anchor-trigger>
+        <span>CoreRegistry</span>
     </h1>
 </doc-anchor-target>
-<p>Description: Get specific details on the Art Blocks Engine registry. At this time, this is used largely for indexing purposes of V3_Engine* contracts only.
-| Field | Type | Description |
-| ----------------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| id | ID! | Unique identifier made up of the Engine Registry&#x27;s contract address |
-| registeredContracts | [Contract!] | Core contracts that are registered on this Engine Registry, when this is most recent Engine Registry to add the contract |</p>
+<p>Description: Get specific details on the Art Blocks Core registry. At this time, this is used for indexing purposes of V3 contracts, as well as acting as an allowlist of core contracts that may mint on a shared minter filter.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ID!</td>
+<td>Unique identifier made up of the Core Registry&#x27;s contract address. note: for legacy MinterFilters, this is a dummy ID, equal to the address of the single core contract associated with the minter filter</td>
+</tr>
+<tr>
+<td>registeredContracts</td>
+<td>[Contract!]</td>
+<td>All core contracts that are registered on this CoreRegistry, when this is most recent Core Registry to add the contract</td>
+</tr>
+</tbody>
+</table>
+</div>
 <doc-anchor-target id="contract">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#contract">#</doc-anchor-trigger>
@@ -1008,24 +1026,74 @@
 <td>Unique identifier made up of minter contract address</td>
 </tr>
 <tr>
-<td>coreContract</td>
-<td>Contract!</td>
-<td>Associated core contract</td>
-</tr>
-<tr>
-<td>minterAllowlist</td>
+<td>minterGlobalAllowlist</td>
 <td>[Minter!]!</td>
-<td>Minters allowlisted on MinterFilter</td>
+<td>Minters allowlisted globally on this MinterFilter</td>
 </tr>
 <tr>
-<td>associatedMinters</td>
+<td>minterFilterContractAllowlists</td>
+<td>[MinterFilterContractAllowlist!]!</td>
+<td>Minters allowlisted at a contract-level on this MinterFilter</td>
+</tr>
+<tr>
+<td>knownMinters</td>
 <td><doc-anchor-trigger to="#minter">Minter!</doc-anchor-trigger></td>
-<td>Minters associated with MinterFilter</td>
+<td>Known minters that are tied to this MinterFilter, but are not necessarily approved on this MinterFilter</td>
+</tr>
+<tr>
+<td>coreRegistry</td>
+<td><doc-anchor-trigger to="#coreregistry">CoreRegistry!</doc-anchor-trigger></td>
+<td>Core contract registry used by this MinterFilter. Note: For MinterFilter V0 and V1, a dummy CoreRegistry is used</td>
 </tr>
 <tr>
 <td>updatedAt</td>
 <td>BigInt!</td>
 <td>When minter updated</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="minterfiltercontractallowlist">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#minterfiltercontractallowlist">#</doc-anchor-trigger>
+        <span>MinterFilterContractAllowlist</span>
+    </h1>
+</doc-anchor-target>
+<p>Description: Defines a contract-specific allowlist of minters specifically approved on a given shared minter filter. This is used to extend the set of allowlisted minters beyond a shared minter filter&#x27;s set of globally allowlisted minters.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable" minter="" filter="" contract="" address="" core="">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ID!</td>
+<td>Unique identifier made up of -</td>
+</tr>
+<tr>
+<td>minterFilter</td>
+<td>MinterFilter!</td>
+<td>MinterFilter contract</td>
+</tr>
+<tr>
+<td>contract</td>
+<td>Contract!</td>
+<td>Core contract</td>
+</tr>
+<tr>
+<td>minterContractAllowlist</td>
+<td>[Minter!]!</td>
+<td>Minter contract addresses allowed at the contract level (extending global MinterFilter allowlist)</td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td>BigInt!</td>
+<td>When last updated</td>
 </tr>
 </tbody>
 </table>
@@ -1063,14 +1131,19 @@
 <td>Associated Minter Filter</td>
 </tr>
 <tr>
+<td>isGloballyAllowlistedOnMinterFilter</td>
+<td>Boolean!</td>
+<td>Boolean representing if the Minter is globally allowed on its associated minter filter</td>
+</tr>
+<tr>
 <td>extraMinterDetails</td>
 <td>String!</td>
 <td>Configuration details used by specific minters (json string)</td>
 </tr>
 <tr>
-<td>coreContract</td>
-<td>Contract!</td>
-<td>Associated core contract</td>
+<td>receipts</td>
+<td>[Receipt!]</td>
+<td>Receipts for this minter, only for minters with settlement</td>
 </tr>
 <tr>
 <td>updatedAt</td>
@@ -1088,7 +1161,7 @@
 </doc-anchor-target>
 <p>Description: get details of a specific mint</p>
 <div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
+<table class="comfortable" minter="" contract="" address="" core="" project="" number="">
 <thead>
 <tr>
 <th>Field</th>
@@ -1100,7 +1173,7 @@
 <tr>
 <td>id</td>
 <td>ID!</td>
-<td>Unique identifier made up of minter contract address-projectId</td>
+<td>Unique identifier made up of --</td>
 </tr>
 <tr>
 <td>project</td>
@@ -1142,18 +1215,23 @@
 <td>String!</td>
 <td>Configuration details used by specific minter project configurations (json string)</td>
 </tr>
+<tr>
+<td>maxInvocations</td>
+<td>BigInt</td>
+<td>Maximum number of invocations allowed for the project (on the minter)</td>
+</tr>
 </tbody>
 </table>
 </div>
-<doc-anchor-target id="payment">
+<doc-anchor-target id="receipt">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#payment">#</doc-anchor-trigger>
-        <span>Payment</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#receipt">#</doc-anchor-trigger>
+        <span>Receipt</span>
     </h1>
 </doc-anchor-target>
-<p>Description: get details of payment for an NFT</p>
+<p>Description: get details about purchases on a minter with settlement</p>
 <div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable" SaleId="" paymentNumber="">
+<table class="comfortable" minter="" contract="" address="" core="" project="" number="" account="">
 <thead>
 <tr>
 <th>Field</th>
@@ -1165,147 +1243,7 @@
 <tr>
 <td>id</td>
 <td>ID!</td>
-<td>Payment id formatted: &#x27;-&#x27; (paymentNumber will be 0 for non-Seaport trades)</td>
-</tr>
-<tr>
-<td>paymentType</td>
-<td>PaymentType!</td>
-<td>Type of token transferred in this payment</td>
-</tr>
-<tr>
-<td>paymentToken</td>
-<td>Bytes!</td>
-<td>The address of the token used for the payment</td>
-</tr>
-<tr>
-<td>price</td>
-<td>BigInt!</td>
-<td>The price of the sale</td>
-</tr>
-<tr>
-<td>sale</td>
-<td>Sale!</td>
-<td>The associated sale</td>
-</tr>
-<tr>
-<td>recipient</td>
-<td>Bytes!</td>
-<td>The recipient address</td>
-</tr>
-</tbody>
-</table>
-</div>
-<doc-anchor-target id="sale">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sale">#</doc-anchor-trigger>
-        <span>Sale</span>
-    </h1>
-</doc-anchor-target>
-<p>Description: get sale information</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>ID!</td>
-<td>The sale id formatted: tokenId - token.nextSaleId (using first token sold for bundles) for Opensea V1/V2, orderHash from sale event for Looksrare and Seaport</td>
-</tr>
-<tr>
-<td>txHash</td>
-<td>Bytes!</td>
-<td>The hash of the transaction</td>
-</tr>
-<tr>
-<td>exchange</td>
-<td>Exchange!</td>
-<td>The exchange used for this sale</td>
-</tr>
-<tr>
-<td>saleType</td>
-<td>SaleType!</td>
-<td>The sale type (SingleBundle)</td>
-</tr>
-<tr>
-<td>blockNumber</td>
-<td>BigInt!</td>
-<td>The block number of the sale</td>
-</tr>
-<tr>
-<td>blockTimestamp</td>
-<td>BigInt!</td>
-<td>The timestamp of the sale</td>
-</tr>
-<tr>
-<td>summaryTokensSold</td>
-<td>String!</td>
-<td>A raw formatted string of the token(s) sold (i.e TokenID1::TokenID2::TokenID3)</td>
-</tr>
-<tr>
-<td>saleLookupTables</td>
-<td><doc-anchor-trigger to="#salelookuptable">SaleLookupTable!</doc-anchor-trigger></td>
-<td>Lookup table to get the list of Tokens sold in this sale</td>
-</tr>
-<tr>
-<td>seller</td>
-<td>Bytes!</td>
-<td>The seller address</td>
-</tr>
-<tr>
-<td>buyer</td>
-<td>Bytes!</td>
-<td>The buyer address</td>
-</tr>
-<tr>
-<td>payments</td>
-<td><doc-anchor-trigger to="#payment">Payment!</doc-anchor-trigger></td>
-<td>List of Payment tokens involved in this sale</td>
-</tr>
-<tr>
-<td>isPrivate</td>
-<td>Boolean!</td>
-<td>Private sales are flagged by this boolean</td>
-</tr>
-</tbody>
-</table>
-</div>
-<doc-anchor-target id="salelookuptable">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#salelookuptable">#</doc-anchor-trigger>
-        <span>SaleLookupTable</span>
-    </h1>
-</doc-anchor-target>
-<p>Description:</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>ID!</td>
-<td>Set to &#x60;Project Id::Token Id::Sale Id</td>
-</tr>
-<tr>
-<td>blockNumber</td>
-<td>BigInt!</td>
-<td>The block number of the sale</td>
-</tr>
-<tr>
-<td>timestamp</td>
-<td>BigInt!</td>
-<td>Timestamp of the sale</td>
+<td>Unique identifier made up of ---</td>
 </tr>
 <tr>
 <td>project</td>
@@ -1313,14 +1251,29 @@
 <td>The associated project</td>
 </tr>
 <tr>
-<td>token</td>
-<td>Token!</td>
-<td>The token sold</td>
+<td>minter</td>
+<td>Minter!</td>
+<td>The associated minter</td>
 </tr>
 <tr>
-<td>sale</td>
-<td>Sale!</td>
-<td>The associated sale</td>
+<td>account</td>
+<td>Account!</td>
+<td>The associated account</td>
+</tr>
+<tr>
+<td>netPosted</td>
+<td>BigInt!</td>
+<td>The total net amount posted (set to settlement contract) for tokens</td>
+</tr>
+<tr>
+<td>numPurchased</td>
+<td>BigInt!</td>
+<td>The total quantity of tokens purchased on the project</td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td>BigInt!</td>
+<td>Last updated timestamp</td>
 </tr>
 </tbody>
 </table>
