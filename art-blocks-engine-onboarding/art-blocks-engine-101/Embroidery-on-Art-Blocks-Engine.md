@@ -1,4 +1,8 @@
-# Overview
+---
+order: 450
+---
+
+# Embroidery on Art Blocks Engine
 
 In addition to providing a browser-based live view and media files generated from your project script, Art Blocks Engine provides tools to embroider your generative artwork on garments and accessories.
 
@@ -107,12 +111,7 @@ There are three primary customer experiences enabled for embroidery on Art Block
 
 ## Option 1: Batched Production
 
-To facilitate automated testing and batched production, we provide a rate-limited API for converting Art Blocks Engine projects into DST and PES embroidery files.
-
-<aside>
-⚠️ The API endpoints provided for batched production are rate-limited, and cannot be linked from a public web site.
-
-</aside>
+To facilitate automated testing and batched production, we provide a rate-limited API for converting Art Blocks Engine projects into DST and PES embroidery files. **Note:** the API endpoints provided for batched production are rate-limited, and cannot be linked from a public web site.
 
 For example, the following commands illustrate how you can download individual embroidery files for tokens on an Art Blocks Engine project:
 
