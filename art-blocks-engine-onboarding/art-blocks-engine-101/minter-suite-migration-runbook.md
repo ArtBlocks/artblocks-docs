@@ -6,10 +6,10 @@ order: -5
 
 This page provides a step-by-step guide on how to migrate a V3 Art Blocks Engine core contract from the legacy non-shared minter suite to the new shared minter suite. This migration is required for all V3 Engine contracts that want to use the new shared minter suite, which has the following benefits:
 
-- All minter contracts are indexed by the Art Blocks subgraph, and can therefore be configured in the Artist Dashboard
+- All minter contracts are indexed by the Art Blocks subgraph, and can therefore be configured in the new Artist Dashboard website (coming soon)
 - All minter Art Blocks Flagship minting contracts become available for use by Engine projects
-- The new minting SDK can be used to simplify Engine partners frontend minting codebases
 - Collectors can purchase from the same trusted contract they interact with on Flagship.
+- Art Blocks will release an SDK to simplify the minting process for Engine projects (coming soon)
 
 Migration is not available for V2 Engine contracts; for Engine partners that wish to upgrade to a V3 Engine contract, please contact the Art Blocks team.
 
@@ -19,11 +19,28 @@ Migration is not required for V3 Engine contracts that wish to continue using th
 
 ### 1. Engine partner frontend updated to support new minter suite
 
-The Engine partner's frontend must be updated to support the new shared minter suite. To help with this transition, the Art Blocks team has created a new minting SDK that can be used to support the new shared minter suite. Documentation for the SDK will be referenced here when it becomes available.
+The Engine partner's frontend must be updated to support the new shared minter suite. In general, the new shared minter suite requires the following changes:
+
+- When specifying a project to configure or purchase from, an additional input arg of `coreContract` (address) must be specified. This is because one minter/minter filter contract is used for many core contracts.
+- View functions on the minter contracts may have changed slightly. This is due to some minor architectural changes to the minter contracts that we believe simplifies their codebase and make them more extensible.
+
+The source code of all new, shared minter contracts is available on the [Art Blocks smart contracts monrorepo](https://github.com/ArtBlocks/artblocks-contracts/tree/main/packages/contracts/contracts/minter-suite/Minters). The complete list of all new, shared minter contracts is:
+
+- MinterSetPriceV5
+- MinterSetPriceERC20V5
+- MinterSetPriceMerkleV5
+- MinterSetPriceHolderV5
+- MinterSetPricePolyptychV5
+- MinterSetPricePolyptychERC20V5
+- MinterDAExpV5
+- MinterDALinV5
+- MinterDAExpSettlementV2
+
+In the coming months, the Art Blocks team will be releasing a new minting SDK that can be used to support the new shared minter suite. Documentation for the SDK will be referenced here when it becomes available.
 
 ### 2. Schedule downtime for any live projects
 
-The migration process requires all artists with live projects configure a new minter. All live projects should be paused during the migration process. Switching to the new minter filter is simple, but after migrating to the new minter filter, the artist of every live project must configure their minter in the new minter suite. This is also only a few transactions, but it is fully reliant on coordinating with artists to be ready to re-configure their minters after switching to the new minter filter.
+The migration process requires all artists with live projects configure a new minter. All live projects should be paused during the migration process. Switching to the new minter filter is simple, but after migrating to the new minter filter, the artist of every live project must configure their minter in the new minter suite. This is also only a few transactions, but it is fully reliant on coordinating with artists to be ready to re-configure minters of open projects after switching to the new minter filter.
 
 ### 3. Core contract admin sends migration transactions (testnet before mainnet)
 
@@ -39,9 +56,9 @@ You are now using the new shared minter suite!
 
 **AFTER** step 3, artists must re-configure their minters for **all live projects**. This is a quick process, but requires coordination with artists to ensure they are ready to re-configure their minters after the switch.
 
-Artists can re-configure their minters via the Artist Dashboard. The Artist Dashboard is updated to support the new shared minter suite for Art Blocks Engine contracts. The process for _most_ open projects will likely be to switch to a fixed price minter. The steps to complete switching to a fixed price minter are:
+Artists can re-configure their minters via the (new) Artist Dashboard. The process for _most_ open projects will likely be to switch to a fixed price minter. The steps to complete switching to a fixed price minter are:
 
-1. Artist navigates to the Artist Dashboard via the `edit` button on their project page on the Art Blocks website (while connected with their artist wallet)
+1. Artist navigates to the new Artist Dashboard (while connected with their artist wallet)
 2. (recommended, but not required) Artist pauses their project
 3. Artist selects the "Minter" tab
 4. Artist selects the "Fixed Price ETH" minter and sends transaction to assign the minter to their project
@@ -109,7 +126,7 @@ If you do not migrate to the new shared minter suite, nothing will change, but y
 
 ### What happens if I migrate to the new shared minter suite, but I do not want to use the Artist Dashboard to configure my minters?
 
-If you migrate to the new shared minter suite, but you do not want to use the Artist Dashboard to configure your minters, you can continue to configure your minters via your frontend, etherscan, etc., but your process will be slightly updated to support the new shared minter suite. The Art Blocks team can assist with providing guidance on how to update your process during the migration process if needed.
+If you migrate to the new shared minter suite, but you do not want to use the Artist Dashboard to configure your minters, you can continue to configure your minters via your frontend, etherscan, etc., but your process will be slightly updated to support the new shared minter suite. Comparing the new minter contracts and the legacy minter contracts will help you understand the changes.
 
 ### What happens if I migrate to the new shared minter suite, but I do not want to use the new minting SDK?
 
