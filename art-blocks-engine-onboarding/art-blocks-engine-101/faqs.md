@@ -38,7 +38,7 @@ For a new partnership, the standard current Art Blocks Engine offerings include:
 1. Deployment of Engine smart contracts suite to testnet and mainnet (includes gas costs).
 2. Integration of deployed Core contract with decentralized Graph indexing architecture on testnet and mainnet, includes GRT costs incurred for subgraph update deployment.
 3. Integration of deployed contracts and subgraph with Art Blocks' project setup site and rendering/metadata infrastructure (APIs: Token, Generator, Rendered Image).
-4. Integration with the shared Art Blocks Minter Suite. These are the same minting contracts used by Art Blocks Flagship. Benefits include having the ability to configure minter settings in the Artist Dashboard, the ability to query minter state via subgraph or Hasura queries, and the ability to use the Art Blocks minting SDK to more easily mint tokens on your frontend.
+4. (in-migration) Integration with the shared Art Blocks Minter Suite. Art Blocks is rolling out a shared minter suite that will be available for Engine Partners to use to mint their projects. Previously deployed V3 Engine contracts will have the ability to migrate to the new shared minter suite. This means the same minting contracts used for Art Blocks Flagship will be available for Engine partners. In addition to the ability to query minter state via subgraph or Hasura queries, Art Blocks has future plans to expand our offering to include the ability to configure minter settings in an Artist Dashboard, and the ability to use a new Art Blocks minting SDK to more easily mint tokens on your frontend.
 
 ## What effect does ‘locking’ a project have?
 
@@ -88,6 +88,8 @@ To get started, you'll provide our team with:
 - The name you’ll use for tokens from your contract (e.g., for Art Blocks, it is "Art Blocks")
 - The ticker symbol you’ll use for tokens from your contract (e.g., for Art Blocks, it is "BLOCKS")
 - Deployment Type: V3 Onchain Engine or V3 Flex Engine
+- Minter Type: set price eth only, set price custom erc20, merkle tree allowlist holder-gated, linear DA, exponential DA, and exponential DA with settlement
+  - _note: minter selection will not be needed after migrating to shared minter suite_
 - Starting project ID # (>=0):
 - Set `autoApproveArtistSplitProposals` true or false\*\*
 

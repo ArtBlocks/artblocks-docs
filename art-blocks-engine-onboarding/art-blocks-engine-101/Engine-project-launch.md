@@ -32,11 +32,17 @@ There are slight variations between V2 and V3 contracts, which will be noted in 
 
 Minters are assigned on a per-project basis on V3 contracts, and minters must be assigned by the **artist's wallet**.
 
-When using the Art Blocks Shared Minter Suite, minter contracts are indexed by the Art Blocks subgraph, and can therefore be configured in the Artist Dashboard. For the artist wallet to assign and configure their minter, follow these steps:
+> note: for legacy minter suite directions, see the next section
 
-1. Assign the minter of your project in the artist dashboard.
-2. Configure the minter settings in the artist dashboard.
-3. If using more complex minters such as Polyptych minters, you may need to configure parameters on the shared randomizer contract via etherscan (outside of the artist dashboard). Please contact the Art Blocks team for assistance.
+!!!info
+Art Blocks is working on a new creator dashboard that will more easily facilitate the minter assignment process. This will only be possible using the new shared minter suite, because those minters are indexed by the subgraph. Until the new creator dashboard is released, please follow these instructions to assign a minter to your project.
+!!!
+
+1.  Assign the minter to your project by using the `MinterFilterV2` contract found in your deployment file. The artist's wallet should use function #9 `setMinterForProject`, entering the `_projectID`, `_coreContract` address, and `_minter` address. You can get the globally approved minter addresses via the `getAllGloballyApprovedMinters()` view function on the `MinterFilterV2` contract.
+
+2.  Once the minter is linked to your project, set the project details on the minter contract.
+
+    For example, if you are using a shared Dutch Auction minter, navigate to the contract on Etherscan. Then, use the function `setAuctionDetails` to enter details like `_projectId`, `_coreContract`, `_auctionTimestampStart`, `_priceDecayHalfLifeSeconds`, `_startPrice`, and `_basePrice`. This must be done using the artist's wallet.
 
 ## Assigning a Minter (V3 only, Legacy Non-Shared Minter Suite)
 
