@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745706916549">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.746138837891">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.1.0.745706916549" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.1.0.746138837891" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.1.0.745706916549" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.1.0.746138837891" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.1.0.745706916549" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.1.0.746138837891" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -255,7 +255,7 @@
 <ul>
 <li>Admin Access Control List (ACL) contract: Manages granting admin access to the core contract and related contracts. It is designed to be highly flexible, extensible, and upgradable.</li>
 <li>Randomizer contract: Generates pseudo-random numbers for the core contract when new tokens are minted. This architecture is designed to be highly flexible, enabling designs that may desire asynchronous random number generation or other hash generation methods.</li>
-<li>Engine Registry contract: Notifies the subgraph indexing service of new Art Blocks Engine tokens. When the Engine Registry emits an event, the subgraph indexing service is notified, and the Engine contract is indexed and made available for querying on the Art Blocks subgraph.</li>
+<li>Core Registry contract: Notifies the subgraph indexing service of new Art Blocks Engine tokens. When the Core Registry emits an event, the subgraph indexing service is notified, and the Engine contract is indexed and made available for querying on the Art Blocks subgraph. It also notifies a shared minter suite to allow the new Engine contract to be used by minters.</li>
 <li>Minter Suite contracts: A collection of contracts used to mint Art Blocks Engine tokens. The Minter Suite is designed to be highly flexible and can be used to mint tokens in various ways.</li>
 </ul>
 <p>Partners should choose between the V3 Engine core contract and the V3 Engine Flex core contract based on their project&#x27;s goals and technical capabilities. The smart contract architecture for Art Blocks Engine provides a robust and flexible system for managing and creating generative NFTs while integrating with various peripheral contracts to extend its capabilities.</p>
@@ -266,7 +266,8 @@
         <span>What is the &quot;minter suite&quot;?</span>
     </h2>
 </doc-anchor-target>
-<p>The Art Blocks minter suite is a collection of smart contracts that facilitate the secure and efficient minting of generative art tokens for Engine contracts in the V3 architecture.</p>
+<p>The Art Blocks minter suite is a collection of smart contracts that facilitate the secure and efficient minting of generative art tokens for all Art Blocks contracts in the V3 architecture. Originally, each contract had its own minter suite. The new shared minter suite enables Engine contracts use the same minting contracts as Art Blocks Flagship, which enables a seamless experience for collectors and artists.</p>
+<p><strong>Shared Minter Suite</strong></p>
 <p>A summary of the division of responsibilities between the MinterFilter and individual Minters can be summarized as:</p>
 <ul>
 <li><p>MinterFilter:</p>
@@ -274,19 +275,22 @@
 <li>Maintains a list of approved minters that can mint tokens for projects on the platform.</li>
 <li>Assigns a specific minter to each project, which can be updated by the project&#x27;s artist or the platform&#x27;s Admin ACL.</li>
 <li>Checks if the minter is the assigned minter for a project before allowing the token to be minted.</li>
+<li>Checks that a project is on a registered Art Blocks Engine contract before allowing a minter to be assigned.</li>
 </ul>
 </li>
 <li><p>Minters:</p>
 <ul>
-<li>Provides information about the minter type and associated core contract and MinterFilter addresses.</li>
 <li>Handles the token purchase process through the &quot;purchase&quot; and &quot;purchaseTo&quot; functions for specific projects.</li>
 <li>Managed the maximum number of invocations (for the given minter) for each project.</li>
-<li>Retrieves price information for tokens in a project, including token price in wei, currency symbol, and currency address.</li>
+<li>Defines price information for tokens in a project, including token price in wei, currency symbol, and currency address.</li>
+<li>Provides information about the minter type and associated core contract and MinterFilter addresses.</li>
 </ul>
 </li>
 </ul>
 <p>tl;dr: The MinterFilter serves as a control layer that ensures the correct minter is used for each project, while Minters handle token purchase processes and project-specific settings. This division of responsibilities enables a secure, efficient, and flexible set of contracts that we call the &quot;minter suite&quot;.</p>
 <p>For additional context, please check out <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/MINTER_SUITE.md" class="outbound" target="_blank"><span>this architecture overview (with accompanying diagrams)</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p><strong>Legacy Minter Suite</strong></p>
+<p>The legacy minter suite is very similar to the new, shared minter suite, except that each minter filter and minter contract is connected to a single core contract. The general roles and responsibilities of the Minter Filter and Minter contracts are the same, except that they limit minting to a single core contract instead of a set of allowlisted core contracts.</p>
 <doc-anchor-target id="what-is-generative-art">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#what-is-generative-art">#</doc-anchor-trigger>
