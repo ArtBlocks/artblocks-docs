@@ -205,7 +205,11 @@ The Art Blocks Arbitrum subgraphs can be queried at the URLs below:
 
 ### Getting Minter Details
 
-A few example queries are provided below to help you get started with querying the Art Blocks subgraph for data related to a project's minter. In addition to the examples below, the Art Blocks minting SDK can be used to obtain this information in a more convenient way.
+A few example queries are provided below to help you get started with querying the Art Blocks subgraph for data related to a project's minter. In addition to the subgraph, the fields are also able to be queried from our Hasura GraphQL API. In the future, Art Blocks will release an SDK that will interact with these data in an even more convenient way.
+
+!!!info
+Note that only Engine contracts that have migrated to the shared minter suite will have their minters indexed and available on the subgraph and Hasura GraphQL API. Only globally approved minters are indexed, so custom, one-off minters designed by Engine partners will not be indexed.
+!!!
 
 A project's active minter configuration (as configured in the artist dashboard) may be queried by pulling it from the `Project` entity:
 
@@ -230,6 +234,8 @@ query {
 }
 ```
 
+> note: if querying the Hasura GraphQL API, use `projects_metadata` instead of `project`
+
 The `extraMinterDetails` json field of `minterConfiguration` will contain a JSON string that can be parsed to obtain the project-minter-configuration details that may be specific to the minter type. For example, for a Dutch Auction minter, the `extraMinterDetails` field may contain the following JSON string:
 
 ```json
@@ -244,6 +250,8 @@ The `extraMinterDetails` json field of `minterConfiguration` will contain a JSON
 }
 ```
 
+> note: if querying the Hasura GraphQL API, the returned type will be a JSONB
+
 Additionally, the minter's `extraMinterDetails` will contain a JSON string that can be parsed to obtain any minter-specific configuration details. For example, for a Dutch Auction minter, the `extraMinterDetails` field may contain the following JSON string:
 
 ```json
@@ -253,7 +261,9 @@ Additionally, the minter's `extraMinterDetails` will contain a JSON string that 
 }
 ```
 
-All of these queries can help you to obtain information about a project's minter configuration, which can be used to display purchase information for the project on your website's. Additionally, the GraphQL API can be used to obtain this same information (as well as the Art Blocks minting SDK).
+> note: if querying the Hasura GraphQL API, use `minters_metadata` instead of `minters`, and the returned type will be a JSONB
+
+All of these queries can help you to obtain information about a project's minter configuration, which can be used to display purchase information for the project on your website's. The data are available on both the subgraph, and the Hasura GraphQL API.
 
 ## GraphQL API
 
