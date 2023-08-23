@@ -1,7 +1,9 @@
 ---
 order: 1000
 ---
+
 # What is Art Blocks Engine and Engine Flex?
+
 Art Blocks Engine and Engine Flex are custom branded solutions from Art Blocks. Our offerings allow the generative NFT minting technology used by artists at Art Blocks to be integrated with third-party sites.
 
 Engine allows partners to release generative outputs using our existing smart contracts and rendering infrastructure resulting in turnkey and branded generative projects. Engine partners own their smart contracts and can use them to release as many projects as they like as often as they like.
@@ -38,7 +40,7 @@ Both core contracts integrate with various peripheral contracts to provide flexi
 
 - Admin Access Control List (ACL) contract: Manages granting admin access to the core contract and related contracts. It is designed to be highly flexible, extensible, and upgradable.
 - Randomizer contract: Generates pseudo-random numbers for the core contract when new tokens are minted. This architecture is designed to be highly flexible, enabling designs that may desire asynchronous random number generation or other hash generation methods.
-- Engine Registry contract: Notifies the subgraph indexing service of new Art Blocks Engine tokens. When the Engine Registry emits an event, the subgraph indexing service is notified, and the Engine contract is indexed and made available for querying on the Art Blocks subgraph.
+- Core Registry contract: Notifies the subgraph indexing service of new Art Blocks Engine tokens. When the Core Registry emits an event, the subgraph indexing service is notified, and the Engine contract is indexed and made available for querying on the Art Blocks subgraph. It also notifies a shared minter suite to allow the new Engine contract to be used by minters.
 - Minter Suite contracts: A collection of contracts used to mint Art Blocks Engine tokens. The Minter Suite is designed to be highly flexible and can be used to mint tokens in various ways.
 
 Partners should choose between the V3 Engine core contract and the V3 Engine Flex core contract based on their project's goals and technical capabilities. The smart contract architecture for Art Blocks Engine provides a robust and flexible system for managing and creating generative NFTs while integrating with various peripheral contracts to extend its capabilities.
@@ -47,24 +49,32 @@ For additional context, please check out [this architecture overview (with accom
 
 ## What is the "minter suite"?
 
-The Art Blocks minter suite is a collection of smart contracts that facilitate the secure and efficient minting of generative art tokens for Engine contracts in the V3 architecture.
+The Art Blocks minter suite is a collection of smart contracts that facilitate the secure and efficient minting of generative art tokens for all Art Blocks contracts in the V3 architecture. Originally, each contract had its own minter suite. The new shared minter suite enables Engine contracts use the same minting contracts as Art Blocks Flagship, which enables a seamless experience for collectors and artists.
+
+**Shared Minter Suite**
 
 A summary of the division of responsibilities between the MinterFilter and individual Minters can be summarized as:
 
 - MinterFilter:
+
   - Maintains a list of approved minters that can mint tokens for projects on the platform.
   - Assigns a specific minter to each project, which can be updated by the project's artist or the platform's Admin ACL.
   - Checks if the minter is the assigned minter for a project before allowing the token to be minted.
+  - Checks that a project is on a registered Art Blocks Engine contract before allowing a minter to be assigned.
 
 - Minters:
-  - Provides information about the minter type and associated core contract and MinterFilter addresses.
   - Handles the token purchase process through the "purchase" and "purchaseTo" functions for specific projects.
   - Managed the maximum number of invocations (for the given minter) for each project.
-  - Retrieves price information for tokens in a project, including token price in wei, currency symbol, and currency address.
+  - Defines price information for tokens in a project, including token price in wei, currency symbol, and currency address.
+  - Provides information about the minter type and associated core contract and MinterFilter addresses.
 
 tl;dr: The MinterFilter serves as a control layer that ensures the correct minter is used for each project, while Minters handle token purchase processes and project-specific settings. This division of responsibilities enables a secure, efficient, and flexible set of contracts that we call the "minter suite".
 
 For additional context, please check out [this architecture overview (with accompanying diagrams)](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/MINTER_SUITE.md).
+
+**Legacy Minter Suite**
+
+The legacy minter suite is very similar to the new, shared minter suite, except that each minter filter and minter contract is connected to a single core contract. The general roles and responsibilities of the Minter Filter and Minter contracts are the same, except that they limit minting to a single core contract instead of a set of allowlisted core contracts.
 
 ## What is generative art?
 
@@ -75,9 +85,11 @@ Creative coders write scripts with specific parameters that introduce and explor
 The interesting part of modern generative art is that it involves working in series - often a large series. So instead of pursuing a single compelling work of art, a generative artist creates an algorithm capable of tens, hundreds, or thousands of compelling works of art. Which, when taken as a whole, expresses the range of possibilities contained in a single algorithm.
 
 ## What are NFTs?
+
 Nonfungible tokens (NFT) are unique digital assets stored on blockchain technology that can represent any digital or physical asset.
 
 ## On-chain vs. off-chain
+
 Art Blocks Engine enables creators to immutably store their generative NFT directly on the Ethereum blockchain (on-chain) or reference an external library or asset (off-chain). For an off-chain implimentation, partners can reference external off-chain assets using decentralized storage solutions like IPFS.
 
 Decentralized and fully on-chain content is the most durable digital asset available. Typically, a creative coder writes a generative script in JavaScript and stores it directly on the blockchain. As long as you have access to a computer, a web browser, and Ethereum’s public ledger, you’ll always be able to reproduce the NFT in its original form and track ownership since creation. An on-chain NFT inherits the provenance, security, and durability of Ethereum itself, making them the highest quality digital asset available.
@@ -93,9 +105,11 @@ For this reason, we only allow certain external libraries to be used in project 
 Art Blocks Engine offers on-chain and off-chain solutions with our generative NFT minting technology. Which one is right for you depends on your project’s goals and technical capabilities.
 
 ## Creating durable digital assets
+
 Creating on-chain generative NFTs ensures your collectors can expect their digital assets to stay the same forever. But if you choose to launch a generative project with off-chain assets, there are ways to mitigate the risk of going off-line using technology like IPFS or Arweave. We’re happy to chat about the right Art Blocks Engine implementation for your next project.
 
 ## Potential use-cases
+
 The landscape of on-demand generative content has plenty of room to experiment. Some of our current partners include artists, galleries, art houses, online publications, and game developers. If you’re exploring an interesting project, get in touch, and let’s build together.
 
 Current and upcoming use cases:
