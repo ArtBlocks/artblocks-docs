@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.746138837891">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.746145617339">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.1.0.746138837891" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.1.0.746145617339" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.1.0.746138837891" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.1.0.746145617339" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.1.0.746138837891" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.1.0.746145617339" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -256,12 +256,63 @@ example: <a href="https://www.artblocks.io/engine/fullyonchain/projects/0xa319C3
 <li><p>If you encounter issues finding or seeing your project on the Art Blocks site, disconnect and reconnect your wallet, ensuring you are connected with the previously specified artist wallet.</p>
 </li>
 </ol>
-<doc-anchor-target id="assigning-a-minter-v3-only">
+<doc-anchor-target id="assigning-a-minter-v3-only-new-shared-minter-suite">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#assigning-a-minter-v3-only">#</doc-anchor-trigger>
-        <span>Assigning a Minter (V3 only)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#assigning-a-minter-v3-only-new-shared-minter-suite">#</doc-anchor-trigger>
+        <span>Assigning a Minter (V3 only, New Shared Minter Suite)</span>
     </h2>
 </doc-anchor-target>
+<p>Minters are assigned on a per-project basis on V3 contracts, and minters must be assigned by the <strong>artist&#x27;s wallet</strong>.</p>
+<blockquote>
+<p>note: for legacy minter suite directions, see the next section</p>
+</blockquote>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Art Blocks is working on a new creator dashboard that will more easily facilitate the minter assignment process. This will only be possible using the new shared minter suite, because those minters are indexed by the subgraph. Until the new creator dashboard is released, please follow these instructions to assign a minter to your project.</p>
+        </div>
+    </div>
+</div>
+<ol>
+<li><p>Assign the minter to your project by using the <code v-pre>MinterFilterV2</code> contract found in your deployment file. The artist&#x27;s wallet should use function #9 <code v-pre>setMinterForProject</code>, entering the <code v-pre>_projectID</code>, <code v-pre>_coreContract</code> address, and <code v-pre>_minter</code> address. You can get the globally approved minter addresses via the <code v-pre>getAllGloballyApprovedMinters()</code> view function on the <code v-pre>MinterFilterV2</code> contract.</p>
+</li>
+<li><p>Once the minter is linked to your project, set the project details on the minter contract.</p>
+<p>For example, if you are using a shared Dutch Auction minter, navigate to the contract on Etherscan. Then, use the function <code v-pre>setAuctionDetails</code> to enter details like <code v-pre>_projectId</code>, <code v-pre>_coreContract</code>, <code v-pre>_auctionTimestampStart</code>, <code v-pre>_priceDecayHalfLifeSeconds</code>, <code v-pre>_startPrice</code>, and <code v-pre>_basePrice</code>. This must be done using the artist&#x27;s wallet.</p>
+</li>
+</ol>
+<doc-anchor-target id="assigning-a-minter-v3-only-legacy-non-shared-minter-suite">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#assigning-a-minter-v3-only-legacy-non-shared-minter-suite">#</doc-anchor-trigger>
+        <span>Assigning a Minter (V3 only, Legacy Non-Shared Minter Suite)</span>
+    </h2>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>We recommend using the new shared minter suite, which is easier to use and more flexible. If you are using the legacy non-shared minter suite, follow these instructions. For more information about migrating to the new shared minter suite, please see the <a href="../minter-suite-migration-runbook/">Minter Suite Migration Runbook</a>.</p>
+        </div>
+    </div>
+</div>
 <p>
 <figure>
     <div class="relative w-full mb-6 overflow-hidden pt-9/16">
@@ -274,7 +325,7 @@ example: <a href="https://www.artblocks.io/engine/fullyonchain/projects/0xa319C3
 <li><p>Assign the minter to your project by using the <code v-pre>MinterFilterV1</code> contract found in your deployment file. The artist&#x27;s wallet should use function #6 <code v-pre>setMinterForProject</code>, entering the <code v-pre>_projectID</code> and <code v-pre>_minterAddress</code>. You can find the minter address in your deployment log, which is pinned in your partner channel.</p>
 </li>
 <li><p>Once the minter is linked to your project, set the project details on the minter contract. The deployed minter addresses can be found in your deployment file.</p>
-<p>For example, if Art Blocks deployed a Dutch Auction minter for your core contract, navigate to the  <code v-pre>MinterDAExpV4</code>  contract on Etherscan (in your <code v-pre>DEPLOYMENT.md</code> log). Then, use the function <code v-pre>setAuctionDetails</code> to enter details like  <code v-pre>_projectId</code>,  <code v-pre>_auctionTimestampStart</code>,  <code v-pre>_priceDecayHalfLifeSeconds</code>,  <code v-pre>_startPrice</code>, and  <code v-pre>_basePrice</code>. Make sure this is done using the artist&#x27;s wallet.</p>
+<p>For example, if Art Blocks deployed a Dutch Auction minter for your core contract, navigate to the <code v-pre>MinterDAExpV4</code> contract on Etherscan (in your <code v-pre>DEPLOYMENT.md</code> log). Then, use the function <code v-pre>setAuctionDetails</code> to enter details like <code v-pre>_projectId</code>, <code v-pre>_auctionTimestampStart</code>, <code v-pre>_priceDecayHalfLifeSeconds</code>, <code v-pre>_startPrice</code>, and <code v-pre>_basePrice</code>. Make sure this is done using the artist&#x27;s wallet.</p>
 </li>
 </ol>
 <doc-anchor-target id="pre-mint-0-flight-check">
@@ -304,7 +355,7 @@ example: <a href="https://www.artblocks.io/engine/fullyonchain/projects/0xa319C3
 <p>For a project to be avaialble for public purchase, the project must be activated by the admin, and unpaused by the artist.</p>
 <p>tldr:
 inactive + paused (default state) = private project shell and unable to purchase
-active + paused = public project shell and <em><strong>only</strong></em> the artist wallet can purchase
+active + paused = public project shell and <strong><em>only</em></strong> the artist wallet can purchase
 active + unpaused = open to purchase</p>
 <p>Before launching your project for open minting, verify the following:</p>
 <ol>
