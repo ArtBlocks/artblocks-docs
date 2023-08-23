@@ -207,6 +207,10 @@ The Art Blocks Arbitrum subgraphs can be queried at the URLs below:
 
 A few example queries are provided below to help you get started with querying the Art Blocks subgraph for data related to a project's minter. In addition to the subgraph, the fields are also able to be queried from our Hasura GraphQL API. In the future, Art Blocks will release an SDK that will interact with these data in an even more convenient way.
 
+!!!info
+Note that only Engine contracts that have migrated to the shared minter suite will have their minters indexed and available on the subgraph and Hasura GraphQL API. Only globally approved minters are indexed, so custom, one-off minters designed by Engine partners will not be indexed.
+!!!
+
 A project's active minter configuration (as configured in the artist dashboard) may be queried by pulling it from the `Project` entity:
 
 ```graphql
