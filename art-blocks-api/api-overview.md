@@ -3,6 +3,7 @@
 An overview of the current Art Blocks APIs.
 
 Quick Links:
+
 - [Token API](#token-api)
 - [Generator API](#generator-api)
 - [Media API/Media Server](#media-apimedia-server)
@@ -21,37 +22,35 @@ Provides the token metadata for a given Art Blocks token.
 
 **Mainnet**
 
-* Note: Contract address is required for Engine
+- Note: Contract address is required for Engine
 
-| Contract Type | Pattern | Sample |
-| --- | --- | --- |
-| Flagship | `https:token.artblocks.io/{tokenID}` | https://token.artblocks.io/0 |
-| Engine |  `https:token.artblocks.io/{contractAddress}/{tokenID}` | https://token.artblocks.io/0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676/110000 |
-
+| Contract Type | Pattern                                                | Sample                                                                       |
+| ------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| Flagship      | `https:token.artblocks.io/{tokenID}`                   | https://token.artblocks.io/0                                                 |
+| Engine        | `https:token.artblocks.io/{contractAddress}/{tokenID}` | https://token.artblocks.io/0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676/110000 |
 
 **Testnet**
 
-| Contract Type | Pattern | Sample |
-| --- | --- | --- |
-| Flagship | `https:token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/103000000 |
-| Engine | `https:token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0x81236b5a105d3ad6b56ac41a03e1fd8893a08859/1000001 |
-
+| Contract Type | Pattern                                                        | Sample                                                                                  |
+| ------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Flagship      | `https:token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/103000000 |
+| Engine        | `https:token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0x81236b5a105d3ad6b56ac41a03e1fd8893a08859/1000001   |
 
 **Arbitrum One**
 
-* Note: Contract address is required
+- Note: Contract address is required
 
-| Contract Type | Pattern |
-| --- | --- |
-| Engine |  `https://token.arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
+| Contract Type | Pattern                                                           |
+| ------------- | ----------------------------------------------------------------- |
+| Engine        | `https://token.arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
 
 **Arbitrum Testnet**
 
-* Note: Contract address is required
+- Note: Contract address is required
 
-| Contract Type | Pattern |
-| --- | --- |
-| Engine |  `https://token.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
+| Contract Type | Pattern                                                                   |
+| ------------- | ------------------------------------------------------------------------- |
+| Engine        | `https://token.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
 
 <br>
 
@@ -61,35 +60,35 @@ Provides an i-frame-able live-view for the art associated with a given Art Block
 
 **Mainnet**
 
-* Note: Contract address is required for Engine
+- Note: Contract address is required for Engine
 
-| Contract Type | Pattern | Sample |
-| --- | --- | --- |
-| Flagship | `https://generator.artblocks.io/{tokenID}` | https://generator.artblocks.io/0 |
-| Engine | `https://generator.artblocks.io/{contractAddress}/{tokenID}` | https://generator.artblocks.io/0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676/11000083 |
+| Contract Type | Pattern                                                      | Sample                                                                             |
+| ------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| Flagship      | `https://generator.artblocks.io/{tokenID}`                   | https://generator.artblocks.io/0                                                   |
+| Engine        | `https://generator.artblocks.io/{contractAddress}/{tokenID}` | https://generator.artblocks.io/0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676/11000083 |
 
 **Testnet**
 
-| Contract Type | Pattern | Sample |
-| --- | --- | --- |
-| Flagship | `https://generator-staging-goerli.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/8000002 |
-| Engine | `https://generator-staging-goerli.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
+| Contract Type | Pattern                                                                     | Sample                                                                                           |
+| ------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Flagship      | `https://generator-staging-goerli.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/8000002 |
+| Engine        | `https://generator-staging-goerli.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
 
 **Arbitrum One**
 
-* Note: Contract address is required
+- Note: Contract address is required
 
-| Contract Type | Pattern |
-| --- | --- |
-| Engine |  `https://generator.arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
+| Contract Type | Pattern                                                               |
+| ------------- | --------------------------------------------------------------------- |
+| Engine        | `https://generator.arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
 
 **Arbitrum Testnet**
 
-* Note: Contract address is required
+- Note: Contract address is required
 
-| Contract Type | Pattern |
-| --- | --- |
-| Engine |  `https://generator.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
+| Contract Type | Pattern                                                                       |
+| ------------- | ----------------------------------------------------------------------------- |
+| Engine        | `https://generator.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
 
 <br>
 
@@ -99,40 +98,40 @@ Provides a static snapshot of the rendered live-view for a given Art Blocks toke
 
 **Mainnet**
 
-| Contract Type | Pattern | Sample |
-| --- | --- | --- |
-| Flagship | `https://media.artblocks.io/{tokenID}.png` | https://media.artblocks.io/0.png |
-| Engine | `https://media-proxy.artblocks.io/{contractAddress}/{tokenId}.png` | https://media-proxy.artblocks.io/0x145789247973c5d612bf121e9e4eef84b63eb707/782.png |
+| Contract Type | Pattern                                                            | Sample                                                                              |
+| ------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Flagship      | `https://media.artblocks.io/{tokenID}.png`                         | https://media.artblocks.io/0.png                                                    |
+| Engine        | `https://media-proxy.artblocks.io/{contractAddress}/{tokenId}.png` | https://media-proxy.artblocks.io/0x145789247973c5d612bf121e9e4eef84b63eb707/782.png |
 
 **Testnet**
 
-| Contract Type | Pattern | Sample |
-| --- | --- | --- |
-| Flagship | `https://media-proxy-staging.artblocks.io/{tokenID}.png` | https://media-proxy-staging.artblocks.io/0.png |
-| Engine | | `https://media-proxy-staging.artblocks.io/{contractAddress}/{tokenID}.png` | https://media-proxy-staging.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
+| Contract Type | Pattern                                                  | Sample                                                                     |
+| ------------- | -------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Flagship      | `https://media-proxy-staging.artblocks.io/{tokenID}.png` | https://media-proxy-staging.artblocks.io/0.png                             |
+| Engine        |                                                          | `https://media-proxy-staging.artblocks.io/{contractAddress}/{tokenID}.png` | https://media-proxy-staging.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
 
 **Arbitrum One**
 
-* Note: Contract address is required
+- Note: Contract address is required
 
-| Contract Type | Pattern |
-| --- | --- |
-| Engine |  `https://media-proxy-arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
+| Contract Type | Pattern                                                                 |
+| ------------- | ----------------------------------------------------------------------- |
+| Engine        | `https://media-proxy-arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
 
 **Arbitrum Testnet**
 
-* Note: Contract address is required
+- Note: Contract address is required
 
-| Contract Type | Pattern |
-| --- | --- |
-| Engine |  `https://media-proxy-arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
+| Contract Type | Pattern                                                                         |
+| ------------- | ------------------------------------------------------------------------------- |
+| Engine        | `https://media-proxy-arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
 
 ---
 
 In addition to the standard static renders provided for each token, there are two other static renders currently provided: "HD" and "thumbnail". These items can be found at:
 
-* HD Renders – `https://media.artblocks.io/hd/{tokenID}.png`
-* Thumbnail Renders – `https://media.artblocks.io/thumb/{tokenID}.png`
+- HD Renders – `https://media.artblocks.io/hd/{tokenID}.png`
+- Thumbnail Renders – `https://media.artblocks.io/thumb/{tokenID}.png`
 
 Please note that these additional static render formats are still currently being back-filled and may not yet be present for all tokens. Our current recommendation for those looking to depend on the "HD" or "thumbnail" responses is to a) first attempt the HD/thumb image resource that you would pefer, b) if this resource is not available, fall back to the standard sized image resource. For the current state of the ongoing backfill of HD and thumbnail assets, please refer to [this spreadsheet](https://docs.google.com/spreadsheets/d/1Li6TMieXL3MENtg5sq9omRVPsa8MWWb7eZU1uDwYxvU/edit?usp=drive_web&ouid=100711456886886984200).
 
@@ -142,43 +141,42 @@ Please also note that the Generator API and Media API links for a given token ar
 
 We are working on a media server for Engine partners. Currently, media is accessible through individual s3 buckets.
 
-| Render Type | Pattern | Sample |
-| --- | --- | --- |
-| Standard | `https://{enginePartner}-mainnet.s3.amazonaws.com/{tokenID}.png` | https://bright-moments-mainnet.s3.amazonaws.com/8000000.png |
-| Thumbnail | `https://{enginePartner}-mainnet.s3.amazonaws.com/thumb/{tokenID}.png` | https://bright-moments-mainnet.s3.amazonaws.com/thumb/8000000.png |
+| Render Type | Pattern                                                                | Sample                                                            |
+| ----------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Standard    | `https://{enginePartner}-mainnet.s3.amazonaws.com/{tokenID}.png`       | https://bright-moments-mainnet.s3.amazonaws.com/8000000.png       |
+| Thumbnail   | `https://{enginePartner}-mainnet.s3.amazonaws.com/thumb/{tokenID}.png` | https://bright-moments-mainnet.s3.amazonaws.com/thumb/8000000.png |
 
 **Testnet**
 
-| Contract Type | Render Type | Pattern | Sample |
-| --- | --- | --- | --- |
-| Flagship | Standard | `https://art-blocks-artist-staging-goerli.s3.us-west-1.amazonaws.com/{tokenID}.png` | https://art-blocks-artist-staging-goerli.s3.us-west-1.amazonaws.com/10000000.png |
-| Engine | Standard | `https://{enginePartner}-goerli.s3.amazonaws.com/{tokenID}.png` | https://bright-moments-goerli.s3.amazonaws.com/1000000.png |
-
-
+| Contract Type | Render Type | Pattern                                                                             | Sample                                                                           |
+| ------------- | ----------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Flagship      | Standard    | `https://art-blocks-artist-staging-goerli.s3.us-west-1.amazonaws.com/{tokenID}.png` | https://art-blocks-artist-staging-goerli.s3.us-west-1.amazonaws.com/10000000.png |
+| Engine        | Standard    | `https://{enginePartner}-goerli.s3.amazonaws.com/{tokenID}.png`                     | https://bright-moments-goerli.s3.amazonaws.com/1000000.png                       |
 
 ## Art Blocks Subgraph
 
 Art Blocks has a GraphQL API Endpoint hosted by [The Graph](https://thegraph.com/docs/about/introduction#what-the-graph-is) called a subgraph for indexing and organizing data from the Art Blocks smart contracts.
 
-This subgraph can be used to query for on-chain data related to the Art Blocks contracts.
+This subgraph can be used to query for on-chain data related to the Art Blocks contracts, including minter suite data, token data, and project data.
 
 Subgraph information is serviced by a decentralized group of server operators called Indexers.
 
-## Ethereum Mainnet
+### Ethereum Mainnet
 
 - [Explorer Page](https://thegraph.com/explorer/subgraph?id=5So3nipgHT3ks7pEPDQ6YgSFhfEmADrh481P9z1ZtcMA&view=Overview)
 - Graphql Endpoint: https://api.thegraph.com/subgraphs/name/yyd01245/artblocks
 - [Code Repo](https://github.com/ArtBlocks/artblocks-subgraph)
 
-## Helpful Resources
+### Helpful Resources
 
 - [Video Tutorial on creating an API Key](https://www.youtube.com/watch?v=UrfIpm-Vlgs)
 - [Managing your API Key & setting your indexer preferences](https://thegraph.com/docs/en/studio/managing-api-keys/)
 - [Querying from an application](https://thegraph.com/docs/en/developer/querying-from-your-app/)
 - [How to use the explorer and playground to query on-chain data](https://medium.com/@chidubem_/how-to-query-on-chain-data-with-the-graph-f8507488215)
 
+### Querying the Subgraph
 
-## The Art Blocks mainnet subgraph can currently be queried a few ways:
+The Art Blocks mainnet subgraph can currently be queried a few ways:
 
 | The Graph Service           | Art Blocks Data | Limited Secondary Sales Data | URL                                                                                    |
 | --------------------------- | --------------- | ---------------------------- | -------------------------------------------------------------------------------------- |
@@ -192,31 +190,91 @@ Subgraph information is serviced by a decentralized group of server operators ca
 
 The Art Blocks testnet subgraph can be queried at the URL below:
 
-| The Graph Service | Art Blocks Data | URL |
-| --- | --- | --- |
-| Hosted Service | Yes | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-artist-staging-goerli |
+| The Graph Service | Art Blocks Data | URL                                                                                     |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------- |
+| Hosted Service    | Yes             | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-artist-staging-goerli |
 
 The Art Blocks Arbitrum subgraphs can be queried at the URLs below:
 
-| The Graph Service | Art Blocks Data | Environment | URL |
-| --- | --- | --- | --- |
-| Hosted Service | Yes | Production | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-arbitrum |
-| Hosted Service | Yes | Staging | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-staging-arbitrum |
+| The Graph Service | Art Blocks Data | Environment | URL                                                                                |
+| ----------------- | --------------- | ----------- | ---------------------------------------------------------------------------------- |
+| Hosted Service    | Yes             | Production  | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-arbitrum         |
+| Hosted Service    | Yes             | Staging     | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-staging-arbitrum |
 
 **Recommendation:** Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.
 
-<br>
+### Getting Minter Details
 
-### GraphQL API
+A few example queries are provided below to help you get started with querying the Art Blocks subgraph for data related to a project's minter. In addition to the subgraph, the fields are also able to be queried from our Hasura GraphQL API. In the future, Art Blocks will release an SDK that will interact with these data in an even more convenient way.
+
+!!!info
+Note that only Engine contracts that have migrated to the shared minter suite will have their minters indexed and available on the subgraph and Hasura GraphQL API. Only globally approved minters are indexed, so custom, one-off minters designed by Engine partners will not be indexed.
+!!!
+
+A project's active minter configuration (as configured in the artist dashboard) may be queried by pulling it from the `Project` entity:
+
+```graphql
+query {
+  project(id: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-404") {
+    id
+    minterConfiguration {
+      id
+      priceIsConfigured
+      currencySymbol
+      currencyAddress
+      basePrice
+      maxInvocations
+      extraMinterDetails
+      minter {
+        id
+        extraMinterDetails
+      }
+    }
+  }
+}
+```
+
+> note: if querying the Hasura GraphQL API, use `projects_metadata` instead of `project`
+
+The `extraMinterDetails` json field of `minterConfiguration` will contain a JSON string that can be parsed to obtain the project-minter-configuration details that may be specific to the minter type. For example, for a Dutch Auction minter, the `extraMinterDetails` field may contain the following JSON string:
+
+```json
+{
+  "startTime": 1676052000,
+  "halfLifeSeconds": 315,
+  "approximateDAExpEndTime": 1676053820,
+  "startPrice": "11000000000000000000",
+  "currentSettledPrice": "557638888888888889",
+  "auctionRevenuesCollected": true,
+  "numSettleableInvocations": 172
+}
+```
+
+> note: if querying the Hasura GraphQL API, the returned type will be a JSONB
+
+Additionally, the minter's `extraMinterDetails` will contain a JSON string that can be parsed to obtain any minter-specific configuration details. For example, for a Dutch Auction minter, the `extraMinterDetails` field may contain the following JSON string:
+
+```json
+{
+  "minimumHalfLifeInSeconds": 45,
+  "maximumHalfLifeInSeconds": 3600
+}
+```
+
+> note: if querying the Hasura GraphQL API, use `minters_metadata` instead of `minters`, and the returned type will be a JSONB
+
+All of these queries can help you to obtain information about a project's minter configuration, which can be used to display purchase information for the project on your website's. The data are available on both the subgraph, and the Hasura GraphQL API.
+
+## GraphQL API
 
 Provides a broader set of the data that our front-end consumes — this includes both on-chain and off-chain data.
 
-| Chain | Environment | URL |
-| --- | --- | --- |
-| Ethereum | Production | `https://data.artblocks.io/v1/graphql` |
-| Ethereum | Staging | `https://ab-staging-goerli.hasura.app/v1/graphql` |
-| Arbitrum | Production | `https://ab-prod-arbitrum.hasura.app/v1/graphql` |
-| Arbitrum | Staging | `https://ab-staging-arbitrum.hasura.app/v1/graphql` |
+| Chain    | Environment | URL                                                 |
+| -------- | ----------- | --------------------------------------------------- |
+| Ethereum | Production  | `https://data.artblocks.io/v1/graphql`              |
+| Ethereum | Staging     | `https://ab-staging-goerli.hasura.app/v1/graphql`   |
+| Arbitrum | Production  | `https://ab-prod-arbitrum.hasura.app/v1/graphql`    |
+| Arbitrum | Staging     | `https://ab-staging-arbitrum.hasura.app/v1/graphql` |
 
 #### Authentication
 
@@ -365,9 +423,9 @@ const query = gql`
 
 const response = await fetch(AB_GRAPHQL_ENDPOINT, {
   method: "POST",
-  headers: { 
+  headers: {
     "Content-Type": "application/json",
-    "Authorization": `Bearer ${jwt}`
+    Authorization: `Bearer ${jwt}`,
   },
   body: JSON.stringify({ query }),
 });
