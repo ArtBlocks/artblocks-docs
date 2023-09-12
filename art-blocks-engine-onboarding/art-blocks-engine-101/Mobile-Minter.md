@@ -58,9 +58,9 @@ To prepare your mobile device:
 
 ### Step 3. Minting
 
-[![Youtube Thumbnail](https://img.youtube.com/vi/mBOdGxz9tdM/0.jpg)](https://youtu.be/mBOdGxz9tdM)
+[Mobile Minter iPad app](https://youtu.be/yblIBFckCeg)
 
-Click the image above to view a screen recording of the Mobile Minter app on iPad. This test demonstrates the steps to mint a project on the Goerli test network. To mint a new token, users follow these steps:
+Click the link above to view a screen recording of the Mobile Minter app on iPad. This test demonstrates the steps to mint a project on the Goerli test network. To mint a new token, users follow these steps:
 
 1. Open the Mobile Minter app on an iPhone or iPad device
 2. Sign in using FaceID
