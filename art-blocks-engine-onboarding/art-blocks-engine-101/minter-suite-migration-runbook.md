@@ -54,9 +54,23 @@ The migration process requires all artists with live projects configure a new mi
 
 The Engine partner's core contract admin should send 2 transactions to the core contract:
 
-1. Engine Admin calls `updateRandomizerAddress` on the core contract, passing in the address of the shared randomizer. The shared randomizer address will be populated here once the Art Blocks team deploys the shared randomizer contract to mainnet (as well as testnets).
+1. Engine Admin calls `updateRandomizerAddress` on the core contract, passing in the address of the shared randomizer
 
-2. Engine Admin calls `updateMinterContract` on the core contract, passing in the address of the shared minter filter. The shared minter filter address will be populated here once the Art Blocks team deploys the shared minter filter contract to mainnet (as well as testnets).
+| Network                        | Shared Randomizer Contract Address           |
+| ------------------------------ | -------------------------------------------- |
+| Mainnet (Ethereum)             | `TBD`                                        |
+| Artist Staging Goerli          | `0x88293a3eef2516855BE0F798630e141D14333423` |
+| Arbitrum One                   | `TBD`                                        |
+| Artist Staging Arbitrum-Goerli | `TBD`                                        |
+
+2. Engine Admin calls `updateMinterContract` on the core contract, passing in the address of the shared minter filter.
+
+| Network                        | Shared Minter Filter Contract Address        |
+| ------------------------------ | -------------------------------------------- |
+| Mainnet (Ethereum)             | `TBD`                                        |
+| Artist Staging Goerli          | `0xcF5FD12fec18D4A714Fe701345cefD3Aafb71559` |
+| Arbitrum One                   | `TBD`                                        |
+| Artist Staging Arbitrum-Goerli | `TBD`                                        |
 
 You are now using the new shared minter suite!
 
