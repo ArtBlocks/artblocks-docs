@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.4.1.748028378554">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.4.1.748038522829">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.4.1">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.4.1.748028378554" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.4.1.748038522829" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.4.1.748028378554" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.4.1.748038522829" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.4.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.4.1.748028378554" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.4.1.748038522829" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -341,11 +341,67 @@
 </doc-anchor-target>
 <p>The Engine partner&#x27;s core contract admin should send 2 transactions to the core contract:</p>
 <ol>
-<li><p>Engine Admin calls <code v-pre>updateRandomizerAddress</code> on the core contract, passing in the address of the shared randomizer. The shared randomizer address will be populated here once the Art Blocks team deploys the shared randomizer contract to mainnet (as well as testnets).</p>
-</li>
-<li><p>Engine Admin calls <code v-pre>updateMinterContract</code> on the core contract, passing in the address of the shared minter filter. The shared minter filter address will be populated here once the Art Blocks team deploys the shared minter filter contract to mainnet (as well as testnets).</p>
-</li>
+<li>Engine Admin calls <code v-pre>updateRandomizerAddress</code> on the core contract, passing in the address of the shared randomizer</li>
 </ol>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Network</th>
+<th>Shared Randomizer Contract Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mainnet (Ethereum)</td>
+<td><code v-pre>TBD</code></td>
+</tr>
+<tr>
+<td>Artist Staging Goerli</td>
+<td><code v-pre>0x88293a3eef2516855BE0F798630e141D14333423</code></td>
+</tr>
+<tr>
+<td>Arbitrum One</td>
+<td><code v-pre>TBD</code></td>
+</tr>
+<tr>
+<td>Artist Staging Arbitrum-Goerli</td>
+<td><code v-pre>TBD</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol start="2">
+<li>Engine Admin calls <code v-pre>updateMinterContract</code> on the core contract, passing in the address of the shared minter filter.</li>
+</ol>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Network</th>
+<th>Shared Minter Filter Contract Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mainnet (Ethereum)</td>
+<td><code v-pre>TBD</code></td>
+</tr>
+<tr>
+<td>Artist Staging Goerli</td>
+<td><code v-pre>0xcF5FD12fec18D4A714Fe701345cefD3Aafb71559</code></td>
+</tr>
+<tr>
+<td>Arbitrum One</td>
+<td><code v-pre>TBD</code></td>
+</tr>
+<tr>
+<td>Artist Staging Arbitrum-Goerli</td>
+<td><code v-pre>TBD</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>You are now using the new shared minter suite!</p>
 <doc-anchor-target id="4-artists-re-configure-minters-for-all-live-projects">
     <h3>
