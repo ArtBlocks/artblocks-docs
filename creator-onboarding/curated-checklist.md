@@ -4,7 +4,6 @@ description: A project checklist to walk through for Curated projects.
 ---
 
 # Checklist for Curated Projects
-
 !!!danger
 Before proceeding to mainnet upload, please verify that your script behaves as expected across all major web browsers (e.g. Chrome, Firefox, Safari, etc.). We recommend using [Browserstack](https://www.browserstack.com/) to test across devices. If you do not already have an account, select `Get started free` and set up a free account.
 !!!
