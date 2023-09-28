@@ -10,7 +10,6 @@ To suggest a question to be added, fill out this form: [Creator FAQs Suggestion 
 ## Application
 
 ### How can a generative artist be published in Art Blocks?
-
 Art Blocks has an application form that generative artists can submit. Please note that we are becoming increasingly selective, only accepting around 2% of projects submitted for release.
 
 You can find out an application here: [artblocks.io/apply](https://www.artblocks.io/apply)
