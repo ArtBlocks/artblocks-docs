@@ -237,10 +237,6 @@ If you're dropping in the Presents category and you'd like to mint more pieces o
 
 Once you near the finalization of your project, you'll be in close dialogue with our team about how to price your work. We have a [Project Pricing Model](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/project-pricing-model/) that guides the decision on the pricing of Art Blocks collections. 
 
-### How is project revenue shared?
-
-Art Blocks is allotted 10% of the total primary sales and 2.5% of secondary sales. Artists can donate a percentage of sales to a charity of their choice to be distributed on primary and/or secondary sales. Artists will also receive 5% of secondary sales in perpetuity. 
-
 ### What percent of secondary royalty sales do artists receive?
 
 As an artist, you should be aware of recent changes in royalty rate determination at OpenSea and Blur, which have resulted in a range of royalty payment percentages (from 0% to 5%). Due to this change, we've had to adjust our royalty payout calculations.
