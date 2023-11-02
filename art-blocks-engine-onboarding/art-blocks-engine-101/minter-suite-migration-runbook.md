@@ -59,7 +59,7 @@ The Engine partner's core contract admin should send 2 transactions to the core 
 | Network                        | Shared Randomizer Contract Address           |
 | ------------------------------ | -------------------------------------------- |
 | Mainnet (Ethereum)             | `TBD`                                        |
-| Artist Staging Goerli          | `0x88293a3eef2516855BE0F798630e141D14333423` |
+| Artist Staging Goerli          | `0xC91CFC2062D8B4Ff53A7c8836CAEf925a7C78c81` |
 | Arbitrum One                   | `TBD`                                        |
 | Artist Staging Arbitrum-Goerli | `TBD`                                        |
 
@@ -68,7 +68,7 @@ The Engine partner's core contract admin should send 2 transactions to the core 
 | Network                        | Shared Minter Filter Contract Address        |
 | ------------------------------ | -------------------------------------------- |
 | Mainnet (Ethereum)             | `TBD`                                        |
-| Artist Staging Goerli          | `0xcF5FD12fec18D4A714Fe701345cefD3Aafb71559` |
+| Artist Staging Goerli          | `0xD1d9aD8B1B520F19DFE43Cc975b9470840e8b824` |
 | Arbitrum One                   | `TBD`                                        |
 | Artist Staging Arbitrum-Goerli | `TBD`                                        |
 
