@@ -117,11 +117,13 @@ Below is a collection of lessons that we have learned from our experience with m
 
 ### One mint per wallet does not prevent bots (without an allowlist)
 
-In the past, we have implemented a "1 mint per wallet" rule, which was intended to prevent bots from minting a large number of generative art pieces. However, this rule was not effective, because bots are able to create a large number of wallets, and therefore are able to mint a large number of generative art pieces.
+In the past, we have implemented a "1 mint per wallet" rule, which was intended to prevent bots from minting a large number of generative art pieces. However, this rule was not effective, and actually gave an advantage to bots.
 
-The "1 mint per wallet" rule is also somewhat misleading because it may lead collectors to believe that a project's distribution is well-diversified, when in reality, it is not.
+For a botter, minting from 1 or 100 wallets is nearly the same difficulty. However, for a typical collector not using bots, minting from multiple wallets adds a lot of difficulty. Ultimately, the "1-per" restriction puts the average collector at a huge disadvantage relative to a botter.
 
-In the end, this rule was not effective, harmed collectors that wanted to mint multiple generative art pieces from their wallet, and was therefore abandoned.
+The "1 mint per wallet" rule is also somewhat misleading because it may lead collectors to believe that a project's distribution is well-diversified, when in reality, it might only be owned by a network of bots operating at many addresses.
+
+In the end, this rule was not effective, harmed less-technical collectors, and was therefore abandoned.
 
 > Note: Limiting the number of mints per wallet on an allowlist is a different paradigm, and is a valid way to limit the number of mints per wallet.
 
@@ -138,6 +140,8 @@ In the end, this rule was not effective, harmed collectors that wanted to mint f
 This is a rule that is implemented by some NFT projects, and is intended to prevent bots from minting a large number of generative art pieces. However, this rule is not effective, because bots are able to mint a large number of generative art pieces by submitting multiple transactions to the network's pending transaction pool.
 
 Additionally, most implementations of this rule prevent minting from smart contracts, which is harmful to collectors that want to mint from multi-sig wallets. Other solutions require collectors to pay for additional gas fees for on-chain storage to support the rule's logic, which is also harmful to collectors.
+
+In the end, this rule is not effective, harms less-technical and/or security-conscious collectors, and is therefore was abandoned.
 
 ### Low, fixed prices favor bots
 
