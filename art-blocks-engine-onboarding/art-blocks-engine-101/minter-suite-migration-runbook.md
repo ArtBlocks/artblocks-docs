@@ -108,7 +108,7 @@ The Engine partner will need to write the custom minter contract. The Art Blocks
 
 At a minimum, the custom minter contract will need to implement the `ISharedMinterRequired` interface, which is available in the [Art Blocks smart contracts monrorepo](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/interfaces/v0.8.x/ISharedMinterRequired.sol). This interface requires the custom minter contract to implement the following functions:
 
-```solidity
+```js
 interface ISharedMinterRequired {
     // Function returns the minter type, and is called by the MinterFilter for
     // metadata purposes.
@@ -120,7 +120,21 @@ interface ISharedMinterRequired {
 }
 ```
 
-Additionally, the custom minter contract will need to call the `mint_joo` function on the shared minter filter contract to mint tokens. This function is included in the `IMinterFilterV1` interface in the [Art Blocks smart contracts monrorepo](https://github.com/ArtBlocks/artblocks-contracts/blob/7f0af6773fdd2c85ee33bfa5c3eeb39b57839131/packages/contracts/contracts/interfaces/v0.8.x/IMinterFilterV1.sol#L107)
+Additionally, the custom minter contract will need to call the `mint_joo` function on the shared minter filter contract to mint tokens. This function is included in the `IMinterFilterV1` interface in the [Art Blocks smart contracts monrorepo](https://github.com/ArtBlocks/artblocks-contracts/blob/7f0af6773fdd2c85ee33bfa5c3eeb39b57839131/packages/contracts/contracts/interfaces/v0.8.x/IMinterFilterV1.sol#L107).
+
+```js
+interface IMinterFilterV1 {
+    ...
+    // @dev function name is optimized for gas
+    function mint_joo(
+        address to,
+        uint256 projectId,
+        address coreContract,
+        address sender
+    ) external returns (uint256);
+    ....
+}
+```
 
 ### 2. Deploy the custom minter contract
 
