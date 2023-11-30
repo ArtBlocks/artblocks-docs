@@ -4,11 +4,9 @@ order: -10
 
 # Minter Suite Supplemental Information
 
-This page provides supplemental information for the Art Blocks Minter Suite, which enables artists to choose how they distribute their artwork to collectors on a per-project basis.
+This page provides supplemental information for the Art Blocks Shared Minter Suite.
 
-!!!info
-V3 Engine core contracts are able to use the Art Blocks Minter Suite by default, however the Engine minter suite does not currently support indexing in the Art Blocks subgraph and api. Work is underway to add this functionality, but in the interim, additional information may be provided on this page to help partners successfully use the Art Blocks Minter Suite.
-!!!
+The information below is generally most relevant for Engine core contract admins.
 
 ---
 
@@ -57,14 +55,14 @@ Ensure your collectors are aware of the new auction parameters, and enjoy the ne
 
 ---
 
-## Allowlist Minter Details
+## Allowlist Minter Details (non-shared minter suite only)
 
 The Allowlist Minter uses a Merkle tree to gas-efficiently allow a set of addresses to mint tokens from a project.
 
 Merkle trees are a data structure that allow for efficient verification of whether a given element is contained in a set. In the case of the Allowlist Minter, the Merkle root is stored on-chain, and Merkle proofs are included with every purchase transaction to verify that a given address is allowed to mint a token.
 
 !!!info
-The information below is included to assist Engine partners in using the Allowlist minter with their projects. Eventually, the Art Blocks subgraph and api will be updated to index Engine minter suite data, at which point this information will be deprecated.
+The information below is included to assist Engine partners in using the Allowlist minter with their projects. However, if using the shared minter suite, the Art Blocks subgraph and api are available to index Engine minter suite data, and this information is not required.
 !!!
 
 **Fundamentals**
