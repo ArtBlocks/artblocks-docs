@@ -106,6 +106,22 @@ Some Engine partners may wish to implement custom, one-off minters to the shared
 
 The Engine partner will need to write the custom minter contract. The Art Blocks team can assist with providing guidance on how to translate a previously written, non-shared custom minter contract to be compatible with the new shared minter suite, if needed.
 
+At a minimum, the custom minter contract will need to implement the `ISharedMinterRequired` interface, which is available in the [Art Blocks smart contracts monrorepo](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/interfaces/v0.8.x/ISharedMinterRequired.sol). This interface requires the custom minter contract to implement the following functions:
+
+```solidity
+interface ISharedMinterRequired {
+    // Function returns the minter type, and is called by the MinterFilter for
+    // metadata purposes.
+    function minterType() external view returns (string memory);
+
+    // Function returns the minter's associated shared minter filter address,
+    // and is called by subgraph indexing service for entity relation purposes.
+    function minterFilterAddress() external returns (address);
+}
+```
+
+Additionally, the custom minter contract will need to call the `mint_joo` function on the shared minter filter contract to mint tokens. This function is included in the `IMinterFilterV1` interface in the [Art Blocks smart contracts monrorepo](https://github.com/ArtBlocks/artblocks-contracts/blob/7f0af6773fdd2c85ee33bfa5c3eeb39b57839131/packages/contracts/contracts/interfaces/v0.8.x/IMinterFilterV1.sol#L107)
+
 ### 2. Deploy the custom minter contract
 
 The Engine partner will need to deploy the custom minter contract to the desired network.
