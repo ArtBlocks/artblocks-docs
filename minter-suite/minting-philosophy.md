@@ -71,7 +71,7 @@ In another sense, there are many different ways to define fairness, and each def
 
 Capitalist fairness suggests that those who are willing to pay the most for a given drop should be the ones who are able to participate.
 
-An example of a drop paradignm that is capitalist fair is a Dutch auction. In a Dutch auction, the price of a generative art piece starts high, and decreases over time until a collector is willing to pay the price. This ensures that the collector who is willing to pay the most for a generative art piece is the one who is able to mint it.
+An example of a drop paradigm that is capitalist fair is a Dutch auction. In a Dutch auction, the price of a generative art piece starts high, and decreases over time until a collector is willing to pay the price. This ensures that the collector who is willing to pay the most for a generative art piece is the one who is able to mint it.
 
 #### 2. Insider Fairness
 
