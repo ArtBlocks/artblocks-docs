@@ -59,6 +59,7 @@ The Engine partner's core contract admin should send 2 transactions to the core 
 | Network                         | Shared Randomizer Contract Address           |
 | ------------------------------- | -------------------------------------------- |
 | Mainnet (Ethereum)              | `0x13178A7a8A1A9460dBE39f7eCcEbD91B31752b91` |
+| Artist Staging Sepolia          | `0x28f2D3805652FB5d359486dFfb7D08320D403240` |
 | Artist Staging Goerli           | `0xC91CFC2062D8B4Ff53A7c8836CAEf925a7C78c81` |
 | Arbitrum One                    | `0x6a5976391E708fBf918c3786cd1FcbB88732fbc1` |
 | Artist Staging Arbitrum-Sepolia | `0x28f2D3805652FB5d359486dFfb7D08320D403240` |
@@ -68,6 +69,7 @@ The Engine partner's core contract admin should send 2 transactions to the core 
 | Network                         | Shared Minter Filter Contract Address        |
 | ------------------------------- | -------------------------------------------- |
 | Mainnet (Ethereum)              | `0xa2ccfE293bc2CDD78D8166a82D1e18cD2148122b` |
+| Artist Staging Sepolia          | `0xa07f47c30C262adcC263A4D44595972c50e04db7` |
 | Artist Staging Goerli           | `0xD1d9aD8B1B520F19DFE43Cc975b9470840e8b824` |
 | Arbitrum One                    | `0x94560abECb897f359ee1A6Ed0E922315Da11752d` |
 | Artist Staging Arbitrum-Sepolia | `0xa07f47c30C262adcC263A4D44595972c50e04db7` |
@@ -105,6 +107,36 @@ Some Engine partners may wish to implement custom, one-off minters to the shared
 ### 1. Write the custom minter contract
 
 The Engine partner will need to write the custom minter contract. The Art Blocks team can assist with providing guidance on how to translate a previously written, non-shared custom minter contract to be compatible with the new shared minter suite, if needed.
+
+At a minimum, the custom minter contract will need to implement the `ISharedMinterRequired` interface, which is available in the [Art Blocks smart contracts monrorepo](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/interfaces/v0.8.x/ISharedMinterRequired.sol). This interface requires the custom minter contract to implement the following functions:
+
+```js
+interface ISharedMinterRequired {
+    // Function returns the minter type, and is called by the MinterFilter for
+    // metadata purposes.
+    function minterType() external view returns (string memory);
+
+    // Function returns the minter's associated shared minter filter address,
+    // and is called by subgraph indexing service for entity relation purposes.
+    function minterFilterAddress() external returns (address);
+}
+```
+
+Additionally, the custom minter contract will need to call the `mint_joo` function on the shared minter filter contract to mint tokens. This function is included in the `IMinterFilterV1` interface in the [Art Blocks smart contracts monrorepo](https://github.com/ArtBlocks/artblocks-contracts/blob/7f0af6773fdd2c85ee33bfa5c3eeb39b57839131/packages/contracts/contracts/interfaces/v0.8.x/IMinterFilterV1.sol#L107).
+
+```js
+interface IMinterFilterV1 {
+    ...
+    // @dev function name is optimized for gas
+    function mint_joo(
+        address to,
+        uint256 projectId,
+        address coreContract,
+        address sender
+    ) external returns (uint256);
+    ....
+}
+```
 
 ### 2. Deploy the custom minter contract
 
