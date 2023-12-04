@@ -141,7 +141,7 @@ This is a rule that is implemented by some NFT projects, and is intended to prev
 
 Additionally, most implementations of this rule prevent minting from smart contracts, which is harmful to collectors that want to mint from multi-sig wallets. Other solutions require collectors to pay for additional gas fees for on-chain storage to support the rule's logic, which is also harmful to collectors.
 
-In the end, this rule is not effective, harms less-technical and/or security-conscious collectors, and is therefore was abandoned.
+In the end, this rule is not effective, harms less-technical and/or security-conscious collectors, and was therefore abandoned.
 
 ### Low, fixed prices favor bots
 
