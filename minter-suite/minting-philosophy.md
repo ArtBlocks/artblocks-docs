@@ -33,7 +33,7 @@ We believe that minting should be transparent and easy to understand for collect
 
 We believe that minting should rely heavily on immutable smart contract code deployed to decentralized networks, and should be as trustless as possible. We aim to minimize the amount of trust in any centralized party when minting. This is important because collectors must feel safe when purchasing high-value generative art pieces, and trusting a centralized party to mint a generative art piece is often not an acceptable option.
 
-Of course Artists and Art Blocks will have some elevated privileges, such as configuring aucitons, but we aim to minimize those priviliges and implement only when necessary. Those privileges will be documented and transparent, and should align incentives.
+Of course Artists and Art Blocks will have some elevated privileges, such as configuring auctions, but we aim to minimize those privileges and implement only when necessary. Those privileges will be documented and transparent, and should align incentives.
 
 #### 3. Non-Custodial
 
