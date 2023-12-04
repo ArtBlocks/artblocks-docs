@@ -65,7 +65,8 @@ For an overview of all minters available for artists, please see the [Minter Sui
 For more detailed instructions on how to configure your selected minter, please see the [Minter section of the Project Form Fields Guide](readme/project-form-fields-guide.md#minter) .
 
 !!!info
-If you are using the `Dutch auction - Exponential Price Decrease` (with or without settlement) or `Dutch auction - Linear Price Decrease,` you will need to unpause your project before your auction's start time. Your project can be unpaused under the Danger tab any time prior to the starting time of your auction.  We recommend unpausing projects on the morning of your release. Once unpaused, your project will be marked as “Upcoming,” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free. !!!
+If you are using the `Dutch auction - Exponential Price Decrease` (with or without settlement) or `Dutch auction - Linear Price Decrease,` you will need to unpause your project before your auction's start time. Your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects on the morning of your release. Once unpaused, your project will be marked as “Upcoming,” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free.
+!!!
 
 ## Scheduling
 

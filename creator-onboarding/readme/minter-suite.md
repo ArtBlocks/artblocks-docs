@@ -4,6 +4,11 @@ order: 851
 
 # Minter Suite
 
+!!!info
+Before the end of 2023, Art Blocks will be transitioning to a new, shared minter suite. This new minter suite will be similar to the current minter suite, but will be more flexible and will enable artists to create more complex minter configurations. The new minter suite will be available for all projects, including Art Blocks Engine projects.
+Please see the [Shared Minter Suite](./../../minter-suite/shared-minter-suite.md) page for more details.
+!!!
+
 This page provides an overview of the Art Blocks Minter Suite, which enables artists to choose how they distribute their artwork to collectors. on a per-project basis.
 
 The current available Minter options are discussed below. We are continually expanding our minter suite over time.
@@ -22,23 +27,11 @@ When this minter is used, all collectors will pay the same net-price as the last
 
 Collectors who purchase above the lowest price will be able to claim a settlement after the auction. The settlement will be the difference between the price they purchased at and the last purchase price. All funds are held non-custodially by the smart contract until the auction ends and revenues are collected by the artist.
 
-!!!info
-We are currently rolling this minter out in production. For a period of time, we will continue to allow DAs without settlement, but we would like to move towards all DAs including settlement in the future. It is important to note that we do not expect the overall revenue that artists receive to decrease between this option and the exponential Dutch auction without settlement, due to how blockchain mechanics interact with the Dutch auction mechanics.
-!!!
-
 Note that the Dutch auction with settlement minter can be coupled with an allowlist minter. In this case, the allowlist portion of the auction must come before the dutch auction with settlement.
 
 !!!info
 For Art Blocks Flagship, please see the [Project Pricing: Dutch Auction Settings](project-pricing-model.md) section for more information on how to determine the appropriate pricing parameters for your auction.
 !!!
-
-## `Automated Exponential Dutch Auction`
-
-For exponential Dutch auctions, artists specify the starting price, ending price, and the half-life for price drops. Collectors will pay more for tokens purchased earlier in the auction, and less for tokens purchased later in the auction.
-
-## `Automated Linear Dutch Auction`
-
-For linear Dutch auctions, artists will specify the starting price, ending price, starting time, and ending time of the auction. The price will then gradually decrease each block over the total auction time. Collectors will pay more for tokens purchased earlier in the auction, and less for tokens purchased later in the auction.
 
 ## `Set price in Custom ERC20`
 
