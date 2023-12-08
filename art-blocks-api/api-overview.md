@@ -69,10 +69,10 @@ Provides an i-frame-able live-view for the art associated with a given Art Block
 
 **Testnet**
 
-| Contract Type | Pattern                                                                     | Sample                                                                                           |
-| ------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Flagship      | `https://generator-staging-goerli.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/8000002 |
-| Engine        | `https://generator-staging-goerli.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
+| Contract Type | Pattern                                                                      | Sample                                                                                           |
+| ------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Flagship      | `https://generator-staging-sepolia.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/8000002 |
+| Engine        | `https://generator-staging-sepolia.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
 
 **Arbitrum One**
 
@@ -148,10 +148,10 @@ We are working on a media server for Engine partners. Currently, media is access
 
 **Testnet**
 
-| Contract Type | Render Type | Pattern                                                                             | Sample                                                                           |
-| ------------- | ----------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Flagship      | Standard    | `https://art-blocks-artist-staging-goerli.s3.us-west-1.amazonaws.com/{tokenID}.png` | https://art-blocks-artist-staging-goerli.s3.us-west-1.amazonaws.com/10000000.png |
-| Engine        | Standard    | `https://{enginePartner}-goerli.s3.amazonaws.com/{tokenID}.png`                     | https://bright-moments-goerli.s3.amazonaws.com/1000000.png                       |
+| Contract Type | Render Type | Pattern                                                                              | Sample                                                                           |
+| ------------- | ----------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| Flagship      | Standard    | `https://art-blocks-artist-staging-sepolia.s3.us-west-1.amazonaws.com/{tokenID}.png` | https://art-blocks-artist-staging-goerli.s3.us-west-1.amazonaws.com/10000000.png |
+| Engine        | Standard    | `https://{enginePartner}-sepolia.s3.amazonaws.com/{tokenID}.png`                     | https://bright-moments-goerli.s3.amazonaws.com/1000000.png                       |
 
 ## Art Blocks Subgraph
 
@@ -163,8 +163,8 @@ Subgraph information is serviced by a decentralized group of server operators ca
 
 ### Ethereum Mainnet
 
-- [Explorer Page](https://thegraph.com/explorer/subgraph?id=5So3nipgHT3ks7pEPDQ6YgSFhfEmADrh481P9z1ZtcMA&view=Overview)
-- Graphql Endpoint: https://api.thegraph.com/subgraphs/name/yyd01245/artblocks
+- [Explorer Page](https://thegraph.com/explorer/subgraphs/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB?view=Overview&chain=arbitrum-one)
+- Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB`
 - [Code Repo](https://github.com/ArtBlocks/artblocks-subgraph)
 
 ### Helpful Resources
@@ -178,21 +178,18 @@ Subgraph information is serviced by a decentralized group of server operators ca
 
 The Art Blocks mainnet subgraph can currently be queried a few ways:
 
-| The Graph Service           | Art Blocks Data | Limited Secondary Sales Data | URL                                                                                    |
-| --------------------------- | --------------- | ---------------------------- | -------------------------------------------------------------------------------------- |
-| Hosted Service              | Yes             | No                           | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks                      |
-| Hosted Service              | Yes             | Yes^[1]                      | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-with-secondary       |
-| Decentralized Graph Network | Yes             | No                           | https://thegraph.com/explorer/subgraph?id=0x3c3cab03c83e48e2e773ef5fc86f52ad2b15a5b0-0 |
-
-> [1] Currently limited to OpenSea & LooksRare
+| The Graph Service           | Art Blocks Data | Limited Secondary Sales Data | URL                                                                                  |
+| --------------------------- | --------------- | ---------------------------- | ------------------------------------------------------------------------------------ |
+| Hosted Service              | Yes             | No                           | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks                    |
+| Decentralized Graph Network | Yes             | No                           | https://thegraph.com/explorer/subgraphs/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB |
 
 <br>
 
 The Art Blocks testnet subgraph can be queried at the URL below:
 
-| The Graph Service | Art Blocks Data | URL                                                                                     |
-| ----------------- | --------------- | --------------------------------------------------------------------------------------- |
-| Hosted Service    | Yes             | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-artist-staging-goerli |
+| The Graph Service | Art Blocks Data | URL                                                                                      |
+| ----------------- | --------------- | ---------------------------------------------------------------------------------------- |
+| Hosted Service    | Yes             | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-artist-staging-sepolia |
 
 The Art Blocks Arbitrum subgraphs can be queried at the URLs below:
 
@@ -269,12 +266,13 @@ All of these queries can help you to obtain information about a project's minter
 
 Provides a broader set of the data that our front-end consumes — this includes both on-chain and off-chain data.
 
-| Chain    | Environment | URL                                                 |
-| -------- | ----------- | --------------------------------------------------- |
-| Ethereum | Production  | `https://data.artblocks.io/v1/graphql`              |
-| Ethereum | Staging     | `https://ab-staging-goerli.hasura.app/v1/graphql`   |
-| Arbitrum | Production  | `https://ab-prod-arbitrum.hasura.app/v1/graphql`    |
-| Arbitrum | Staging     | `https://ab-staging-arbitrum.hasura.app/v1/graphql` |
+| Chain    | Environment          | URL                                                 |
+| -------- | -------------------- | --------------------------------------------------- |
+| Ethereum | Production           | `https://data.artblocks.io/v1/graphql`              |
+| Ethereum | Staging              | `https://ab-staging-sepolia.hasura.app/v1/graphql`  |
+| Ethereum | Staging (deprecated) | `https://ab-staging-goerli.hasura.app/v1/graphql`   |
+| Arbitrum | Production           | `https://ab-prod-arbitrum.hasura.app/v1/graphql`    |
+| Arbitrum | Staging              | `https://ab-staging-arbitrum.hasura.app/v1/graphql` |
 
 #### Authentication
 

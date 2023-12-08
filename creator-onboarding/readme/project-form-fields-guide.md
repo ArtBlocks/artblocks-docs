@@ -159,7 +159,7 @@ For many artists, the process for writing your features script will likely entai
 ## Minter:
 
 !!!info
-For an overview of all minters available on Art Blocks, please see the [Minter Suite](minter-suite.md) page.
+For an overview of all minters available on Art Blocks, please see the [Shared Minter Suite](./../../minter-suite/shared-minter-suite.md) page.
 !!!
 
 ### Configuring Your Minter ⛽📄

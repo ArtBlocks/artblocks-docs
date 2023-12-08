@@ -60,7 +60,7 @@ Be sure that you've input information in all field forms. If you do not have an 
 
 We have a variaty of minters available for you to choose from to best suit your project.
 
-For an overview of all minters available for artists, please see the [Minter Suite](readme/minter-suite.md) page.
+For an overview of all minters available for artists, please see the [Shared Minter Suite](./../minter-suite/shared-minter-suite.md) page.
 
 For more detailed instructions on how to configure your selected minter, please see the [Minter section of the Project Form Fields Guide](readme/project-form-fields-guide.md#minter) .
 
