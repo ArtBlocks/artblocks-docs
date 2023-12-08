@@ -60,12 +60,12 @@ Be sure that you've input information in all field forms. If you do not have an 
 
 We have a variaty of minters available for you to choose from to best suit your project.
 
-For an overview of all minters available for artists, please see the [Minter Suite](readme/minter-suite.md) page.
+For an overview of all minters available for artists, please see the [Shared Minter Suite](./../minter-suite/shared-minter-suite.md) page.
 
 For more detailed instructions on how to configure your selected minter, please see the [Minter section of the Project Form Fields Guide](readme/project-form-fields-guide.md#minter) .
 
 !!!info
-If you are using the `Dutch auction - Exponential Price Decrease` (with or without settlement) or `Dutch auction - Linear Price Decrease,` you will need to unpause your project before your auction's start time. Your project can be unpaused under the Danger tab any time prior to the starting time of your auction.  We recommend unpausing projects on the morning of your release. Once unpaused, your project will be marked as “Upcoming,” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free.
+If you are using the `Dutch auction - Exponential Price Decrease` (with or without settlement) or `Dutch auction - Linear Price Decrease,` you will need to unpause your project before your auction's start time. Your project can be unpaused under the Danger tab any time prior to the starting time of your auction. We recommend unpausing projects on the morning of your release. Once unpaused, your project will be marked as “Upcoming,” and the Dutch auction will automatically begin at your start time, leaving the beginning of the auction hands-free.
 !!!
 
 ## Scheduling
@@ -82,7 +82,7 @@ Pre-Drop Talks happen on Twitter Spaces 15 minutes prior to the release of your 
 
 - When it's time, you'll click the Unpause button under the Danger tab.
 - You may unpause your Dutch auction release up to 24 hours in advance.
-- For  unpausing fixed price releases, please send in the tx 30 seconds prior to the top of the hour. To unpause the project, please send high gas (2-3x what is suggested as high gas on https://etherscan.io/gastracker). If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.
+- For unpausing fixed price releases, please send in the tx 30 seconds prior to the top of the hour. To unpause the project, please send high gas (2-3x what is suggested as high gas on https://etherscan.io/gastracker). If you have questions about what you should set your gas to, please ask in your project DM and the Art Blocks Team can advise.
 - Once the transaction clears, your project will be live for minting.
 
 ## Rarities
