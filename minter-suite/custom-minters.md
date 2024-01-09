@@ -6,7 +6,9 @@ order: 850
 
 Some Engine partners may wish to add custom, one-off minters to the shared minter suite. This is able to be done by the admin of an Engine partner's core contract.
 
-Note that due to the high flexibility available to custom minters, they are not indexed by the Art Blocks subgraph, and therefore are not able to be configured by artists via the Art Blocks frontend. Instead, the custom minter will need to be configured via the Engine partner's frontend, etherscan, etc.
+!!!info
+Due to the high flexibility available to custom minters, they are not indexed by the Art Blocks subgraph, and therefore are not able to be configured by artists via the Art Blocks frontend. Instead, the custom minter will need to be configured via the Engine partner's frontend, etherscan, etc.
+!!!
 
 The steps to add a custom, one-off minter to the shared minter suite are as follows:
 
