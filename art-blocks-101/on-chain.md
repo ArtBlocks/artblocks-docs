@@ -44,7 +44,7 @@ The metadata are stored on a decentralized storage network, such as IPFS or Arwe
 
 ### Fully On-Chain
 
-The metadata are stored on the blockchain. This is the most expensive option, but it has many advantages. The metadata are always accessible and available, as long as the NFT exists. Collectors and artists never have to worry about a token's outputs disappearing, or a server being discontinued.
+The metadata are stored on the blockchain. This is the most expensive option, but it has many advantages. The metadata are always accessible and available, as long as the NFT exists. Collectors and artists never have to worry about a token's outputs disappearing.
 
 ### Software Registries
 
