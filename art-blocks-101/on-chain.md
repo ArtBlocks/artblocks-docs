@@ -66,11 +66,9 @@ Art Blocks Engine Flex NFTs provide an additional option for storing metadata. F
 
 ## On-Chain Script Example
 
-Let's review an example of an Art Blocks NFT that stores its metadata fully on-chain!
+Let's review an example of how to retrieve the token and script metadata for the first Art Blocks Token, token zero of project 0, [Chromie Squiggle by Snowfro](https://www.artblocks.io/collections/curated/projects/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a/0).
 
-Let's review an example of how to retrieve the metadata for the first Art Blocks Token, token zero of project 0, [Chromie Squiggle by Snowfro](https://www.artblocks.io/collections/curated/projects/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a/0).
-
-> Note: Newer versions of Art Blocks core contracts have different function names than the V0 Art Blocks core contract, but the same data are available and stored in the same way.
+> Note: Newer versions of Art Blocks core contracts have different function names than the V0 Art Blocks core contract shown in this example.
 
 While we could query the Art Blocks Subgraph or API to retrieve the metadata, we will retrieve the metadata directly from the blockchain.
 
