@@ -38,7 +38,9 @@ Projects such as CryptoPunks originally stored the hash of the metadata on-chain
 
 ### Decentralized Storage Network
 
-The metadata are stored on a decentralized storage network, such as IPFS or Arweave. This is a popular option, and enables the NFT to be immutable. Drawbacks include: - The metadata must remain pinned by at least one party in order to be accessible.
+The metadata are stored on a decentralized storage network, such as IPFS or Arweave. This is a popular option, and enables the NFT to be immutable. Drawbacks include:
+
+- The metadata must remain pinned by at least one party in order to be accessible.
 
 ### Fully On-Chain
 
