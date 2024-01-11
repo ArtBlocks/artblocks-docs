@@ -75,7 +75,7 @@ The metadata are stored on the blockchain. This is the most expensive option, bu
 
 ### Software Registries
 
-Some NFTs (like some Art Blocks project tokens) may rely on published software libraries when generating outputs. In these cases, the NFT metadata may include information about dependencies and where to find them (e.g. "p5js, v1.0.0 on the npm software registry"). Software registries are a special form of decentralized storage, because of the distributed nature of the software repositories and many downloads on developers' computers worldwide.
+Some NFTs (like some Art Blocks project tokens) may rely on published software libraries when generating outputs. In these cases, the NFT metadata may include information about dependencies and where to find them (e.g. "p5js, v1.0.0 on the cdnjs software registry"). Software registries are a special form of decentralized storage, because of the distributed nature of the software repositories and many downloads on developers' computers worldwide.
 
 ## Art Blocks Storage Solutions
 
@@ -83,7 +83,7 @@ Some NFTs (like some Art Blocks project tokens) may rely on published software l
 
 Art Blocks Flagship and Art Blocks Engine NFTs only rely on fully on-chain storage solutions, plus allowing a single dependency to be housed on a software registry. This provides an extremely high level of confidence that the NFTs will remain fully accessible and immutable for the foreseeable future.
 
-While Art Blocks originally relied on the npm software registry to house dependencies, the Art Blocks team has since created a **fully on-chain software registry called the [Art Blocks Dependency Registry](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/README.md#dependencyregistry)**. The registry is fully decentralized and is used by all Art Blocks Flagship NFTs. The registry enables dependencies to be stored fully on-chain, when the gas costs are justified. Art Blocks uploaded their first dependency, p5js v1.0.0, to the registry in January 2024, retiring any doubt that projects relying on p5js@1.0.0 would ever be unable to generate their outputs in the future.
+While Art Blocks originally relied on widly used software registries to house dependencies, the Art Blocks team has since created a **fully on-chain software registry called the [Art Blocks Dependency Registry](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/README.md#dependencyregistry)**. The registry is fully decentralized and is used by all Art Blocks Flagship NFTs. The registry enables dependencies to be stored fully on-chain, when the gas costs are justified. Art Blocks uploaded their first dependency, p5js v1.0.0, to the registry in January 2024, retiring any doubt that projects relying on p5js@1.0.0 would ever be unable to generate their outputs in the future.
 
 ### Engine Flex
 
