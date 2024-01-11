@@ -41,10 +41,11 @@ While all NFTs track token ownership on a blockchain, the metadata for the NFT (
 | [Hash On-Chain](#hash-on-chain)                                 | Yes       | No            | No                                 | Low    |
 | [Decentralized Storage Network](#decentralized-storage-network) | Yes       | Yes           | No [^2]                            | Medium |
 | [Fully On-Chain](#fully-on-chain)                               | Yes       | Yes           | Yes                                | High   |
-| [Software Registry](#software-registries)                       | ~No       | ~Yes          | No, Very Low Risk                  | Low    |
+| [Software Registry](#software-registries)                       | ~Yes [^3] | ~Yes          | No, Very Low Risk                  | Low    |
 
 [^1]: As long as the blockchain network continues to exist.
 [^2]: Requires ≥1 interested party
+[^2]: Typically hash of release is published to prevent tampering/changes
 
 ### Servers/Hosting
 
