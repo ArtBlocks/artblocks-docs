@@ -43,6 +43,8 @@ While all NFTs track token ownership on a blockchain, the metadata for the NFT (
 | On-Chain                                     | Yes       | Yes           | Yes                             | High   |
 | Software Registry                            | ~No       | ~Yes          | No, Very Low Risk               | Low    |
 
+\*_As long as the blockchain network continues to exist._
+
 ### Servers/Hosting
 
 The metadata are stored on a server or cloud hosting service, such as AWS. This is a convenient and cheap option, but it has a few drawbacks:
