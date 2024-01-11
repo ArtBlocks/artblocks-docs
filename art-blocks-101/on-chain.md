@@ -23,12 +23,12 @@ erDiagram
     ArtBlocks-Project ||--|| Other-Project-Metadata: on-chain
     ArtBlocks-Project }|--|| ArtBlocks-Dependency-Registry: references
     ArtBlocks-Dependency-Registry ||--o{ Dependency: list-of
-    Dependency }|--o| On-Chain-Dependency-Code: on-chain
+    Dependency }|--o| On-Chain-Dependency-Code: optionally-on-chain
     Dependency }|--|| On-Chain-License: on-chain
     Dependency ||--|{ Preferred-Software-Registries: points-to
     ArtBlocks-Project }|..o{ Flex-Dependencies: engine-flex-only
-    Flex-Dependencies }|--|{ IPFS-Arweave-Assets: optionally-includes
-    Flex-Dependencies ||--|{ On-Chain-Assets: optionally-includes
+    Flex-Dependencies }|--o{ IPFS-Arweave-Assets: may-include
+    Flex-Dependencies ||--o{ On-Chain-Assets: may-include
 ```
 
 ## Overview of NFT Metadata Storage Options
