@@ -15,6 +15,22 @@ For projects that require dependencies (e.g. p5js), Art Blocks provides the [Art
 
 Art Blocks Engine Flex NFTs also provide the option to store metadata on decentralized storage networks, such as IPFS or Arweave, to enable larger sized assets to be used when generating outputs.
 
+```mermaid
+erDiagram
+    ArtBlocks-Smart-Contract ||--|| Token-Ownership :on-chain
+    ArtBlocks-Smart-Contract ||--o{ ArtBlocks-Project: contains
+    ArtBlocks-Project ||--|| Artist-Script: on-chain
+    ArtBlocks-Project ||--|| Other-Project-Metadata: on-chain
+    ArtBlocks-Project }|--|| ArtBlocks-Dependency-Registry: references
+    ArtBlocks-Dependency-Registry ||--o{ Dependency: list-of
+    Dependency }|--o| On-Chain-Dependency-Code: on-chain
+    Dependency }|--|| On-Chain-License: on-chain
+    Dependency ||--|{ Preferred-Software-Registries: points-to
+    ArtBlocks-Project }|..o{ Flex-Dependencies: engine-flex-only
+    Flex-Dependencies }|--|{ IPFS-Arweave-Assets: optionally-includes
+    Flex-Dependencies ||--|{ On-Chain-Assets: optionally-includes
+```
+
 ## Overview of NFT Metadata Storage Options
 
 While all NFTs track token ownership on a blockchain, the metadata for the NFT (image or audio information, artist information, etc.) may be stored in a variety of ways. Common options include:
