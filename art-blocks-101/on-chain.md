@@ -35,6 +35,14 @@ erDiagram
 
 While all NFTs track token ownership on a blockchain, the metadata for the NFT (image or audio information, artist information, etc.) may be stored in a variety of ways. Common options include:
 
+| Storage Type                                 | Immutable | Decentralized | Guaranteed to Persist Forever\* | Cost   |
+| -------------------------------------------- | --------- | ------------- | ------------------------------- | ------ |
+| On-Chain                                     | Yes       | Yes           | Yes                             | High   |
+| Decentralized Storage Network (IPFS/Arweave) | Yes       | Yes           | No                              | Medium |
+| Hash On-Chain                                | Yes       | No            | Yes                             | Low    |
+| Server/Hosting                               | No        | No            | No                              | Low    |
+| Software Registry                            | ~No       | ~Yes          | No, Very Low Risk               | Low    |
+
 ### Servers/Hosting
 
 The metadata are stored on a server or cloud hosting service, such as AWS. This is a convenient and cheap option, but it has a few drawbacks:
