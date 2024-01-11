@@ -39,11 +39,12 @@ While all NFTs track token ownership on a blockchain, the metadata for the NFT (
 | -------------------------------------------- | --------- | ------------- | ---------------------------------- | ------ |
 | Server/Hosting                               | No        | No            | No                                 | Low    |
 | Hash On-Chain                                | Yes       | No            | Yes                                | Low    |
-| Decentralized Storage Network (IPFS/Arweave) | Yes       | Yes           | No                                 | Medium |
+| Decentralized Storage Network (IPFS/Arweave) | Yes       | Yes           | No [^2]                            | Medium |
 | On-Chain                                     | Yes       | Yes           | Yes                                | High   |
 | Software Registry                            | ~No       | ~Yes          | No, Very Low Risk                  | Low    |
 
-[^1]: _As long as the blockchain network continues to exist._
+[^1]: As long as the blockchain network continues to exist.
+[^2]: Requires ≥1 interested party
 
 ### Servers/Hosting
 
