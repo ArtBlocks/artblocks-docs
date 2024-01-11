@@ -35,15 +35,15 @@ erDiagram
 
 While all NFTs track token ownership on a blockchain, the metadata for the NFT (image or audio information, artist information, etc.) may be stored in a variety of ways. Common options include:
 
-| Storage Type                                 | Immutable | Decentralized | Guaranteed to Persist Forever\* | Cost   |
-| -------------------------------------------- | --------- | ------------- | ------------------------------- | ------ |
-| Server/Hosting                               | No        | No            | No                              | Low    |
-| Hash On-Chain                                | Yes       | No            | Yes                             | Low    |
-| Decentralized Storage Network (IPFS/Arweave) | Yes       | Yes           | No                              | Medium |
-| On-Chain                                     | Yes       | Yes           | Yes                             | High   |
-| Software Registry                            | ~No       | ~Yes          | No, Very Low Risk               | Low    |
+| Storage Type                                 | Immutable | Decentralized | Guaranteed to Persist Forever [^1] | Cost   |
+| -------------------------------------------- | --------- | ------------- | ---------------------------------- | ------ |
+| Server/Hosting                               | No        | No            | No                                 | Low    |
+| Hash On-Chain                                | Yes       | No            | Yes                                | Low    |
+| Decentralized Storage Network (IPFS/Arweave) | Yes       | Yes           | No                                 | Medium |
+| On-Chain                                     | Yes       | Yes           | Yes                                | High   |
+| Software Registry                            | ~No       | ~Yes          | No, Very Low Risk                  | Low    |
 
-\*_As long as the blockchain network continues to exist._
+[^1]: _As long as the blockchain network continues to exist._
 
 ### Servers/Hosting
 
