@@ -38,7 +38,7 @@ While all NFTs track token ownership on a blockchain, the metadata for the NFT (
 | Storage Type                                                    | Immutable | Decentralized | Guaranteed to Persist Forever [^1] | Cost   |
 | --------------------------------------------------------------- | --------- | ------------- | ---------------------------------- | ------ |
 | [Servers/Hosting](#servershosting)                              | No        | No            | No                                 | Low    |
-| [Hash On-Chain](#hash-on-chain)                                 | Yes       | No            | Yes                                | Low    |
+| [Hash On-Chain](#hash-on-chain)                                 | Yes       | No            | No                                 | Low    |
 | [Decentralized Storage Network](#decentralized-storage-network) | Yes       | Yes           | No [^2]                            | Medium |
 | [Fully On-Chain](#fully-on-chain)                               | Yes       | Yes           | Yes                                | High   |
 | [Software Registry](#software-registries)                       | ~No       | ~Yes          | No, Very Low Risk                  | Low    |
