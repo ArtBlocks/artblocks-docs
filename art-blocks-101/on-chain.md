@@ -45,7 +45,7 @@ While all NFTs track token ownership on a blockchain, the metadata for the NFT (
 
 [^1]: As long as the blockchain network continues to exist.
 [^2]: Requires ≥1 interested party
-[^2]: Typically hash of release is published to prevent tampering/changes
+[^3]: Typically hash of release is published to prevent tampering/changes
 
 ### Servers/Hosting
 
