@@ -35,13 +35,13 @@ erDiagram
 
 While all NFTs track token ownership on a blockchain, the metadata for the NFT (image or audio information, artist information, etc.) may be stored in a variety of ways. Common options include:
 
-| Storage Type                                 | Immutable | Decentralized | Guaranteed to Persist Forever [^1] | Cost   |
-| -------------------------------------------- | --------- | ------------- | ---------------------------------- | ------ |
-| Server/Hosting                               | No        | No            | No                                 | Low    |
-| Hash On-Chain                                | Yes       | No            | Yes                                | Low    |
-| Decentralized Storage Network (IPFS/Arweave) | Yes       | Yes           | No [^2]                            | Medium |
-| On-Chain                                     | Yes       | Yes           | Yes                                | High   |
-| Software Registry                            | ~No       | ~Yes          | No, Very Low Risk                  | Low    |
+| Storage Type                                                    | Immutable | Decentralized | Guaranteed to Persist Forever [^1] | Cost   |
+| --------------------------------------------------------------- | --------- | ------------- | ---------------------------------- | ------ |
+| [Servers/Hosting](#servershosting)                              | No        | No            | No                                 | Low    |
+| [Hash On-Chain](#hash-on-chain)                                 | Yes       | No            | Yes                                | Low    |
+| [Decentralized Storage Network](#decentralized-storage-network) | Yes       | Yes           | No [^2]                            | Medium |
+| [Fully On-Chain](#fully-on-chain)                               | Yes       | Yes           | Yes                                | High   |
+| [Software Registry](#software-registries)                       | ~No       | ~Yes          | No, Very Low Risk                  | Low    |
 
 [^1]: As long as the blockchain network continues to exist.
 [^2]: Requires ≥1 interested party
