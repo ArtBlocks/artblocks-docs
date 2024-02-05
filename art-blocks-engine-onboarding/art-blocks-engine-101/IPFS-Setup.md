@@ -8,7 +8,7 @@ Pinata is an excellent IPFS resource built with creators and non-technical users
 
 ## Signing Up
 
-You can sign up for a free account which will allow up to 100 files and 1GB of storage! To get started visit [pinata.cloud](https://bit.ly/3DtEmhN) and click the “Sign Up” button in the top right. It will ask you for a name, email, and password. 
+You can sign up for a free account which will allow up to 100 files and 1GB of storage! To get started visit [pinata.cloud](https://www.pinata.cloud/) and click the “Sign Up” button in the top right. It will ask you for a name, email, and password. 
 
 ## Uploading Content
 Once you’re signed in you will see the Files Page which looks something like this: ![setup](/static/Pinata_setup_1.png)
