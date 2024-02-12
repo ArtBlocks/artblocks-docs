@@ -88,6 +88,20 @@ Artists may use the artist dashboard to pre-select a list of allowlisted Art Blo
 Note that vault delegation via [Delegate Cash](https://delegate.cash/) is available for the Token Holders Only minter. Only V1 of the delegation registry is supported at this time. For more details please visit this [video walkthrough](https://www.youtube.com/watch?v=2-AgG--zcaw&list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&index=5).
 !!!
 
+### `Serial English Auction (SEA)`
+
+The Serial English Auction (SEA) minter allows for a series of English auctions for individual tokens to be run in sequence. The minter was originally inspired by the popular [nouns.wtf](https://nouns.wtf/) project, and was implemented with minor adjustments to provide a seamless experience for Art Blocks artists and collectors.
+
+Artists may configure future token auction parameters, such as starting auction price and minimum auction length. Collectors may then kick off token auctions by submitting a bid for a pre-minted token. Once an auction begins, any wallet may submit a higher bid for the token up for sale. Losing bids are refunded automatically when outbid. If a bid is submitted near the end of an auction, the auction is extended such that a human is able to submit a higher bid, ensuring a human can fairly compete against a bot.
+
+Once an auction is complete, another token auction may be started by any collector submitting a bid for the next token, while also sending the previous auction winner their token.
+
+The minter pre-mints tokens before their auction, so bids are placed on an already-existing token, not on hypothetical tokens.
+
+The minter may be used for any project, and is certainly ideal for projects that have a series of tokens that are released in a sequence. It may also be used to auction off a 1:1 token. The minter is also ideal for projects that have a strong community, as it allows for community members to participate in the auction process over a long period of time, carefully considering each generative output.
+
+Bids and auction parameters are stored on-chain, and the Art Blocks subgraph and API index all historical bids in [`bids_metadata`](https://docs.artblocks.io/public-api-docs/#definition-bids_metadata) as well as auction parameters in [`project_minter_configurations`](https://docs.artblocks.io/public-api-docs/#definition-project_minter_configurations).
+
 ### `Set Price, Polyptych`
 
 This minter enables the artist to mint tokens with identical token hashes. This is useful for projects that are intended to be displayed as a polyptych.
