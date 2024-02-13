@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.760136004381">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761158765800">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.760136004381" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.761158765800" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.760136004381" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.761158765800" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.760136004381" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.761158765800" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -447,6 +447,18 @@
         </div>
     </div>
 </div>
+<doc-anchor-target id="serial-english-auction-sea">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#serial-english-auction-sea">#</doc-anchor-trigger>
+        <span><code v-pre>Serial English Auction (SEA)</code></span>
+    </h3>
+</doc-anchor-target>
+<p>The Serial English Auction (SEA) minter allows for a series of English auctions for individual tokens to be run in sequence. The minter was originally inspired by the popular <a href="https://nouns.wtf/" class="outbound" target="_blank"><span>nouns.wtf</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> project, and was implemented with minor adjustments to provide a seamless experience for Art Blocks artists and collectors.</p>
+<p>Artists may configure future token auction parameters, such as starting auction price and minimum auction length. Collectors may then kick off token auctions by submitting a bid for a pre-minted token. Once an auction begins, any wallet may submit a higher bid for the token up for sale. Losing bids are refunded automatically when outbid. If a bid is submitted near the end of an auction, the auction is extended such that a human is able to submit a higher bid, ensuring a human can fairly compete against a bot.</p>
+<p>Once an auction is complete, another token auction may be started by any collector submitting a bid for the next token, while also sending the previous auction winner their token.</p>
+<p>The minter pre-mints tokens before their auction, so bids are placed on an already-existing token, not on hypothetical tokens.</p>
+<p>The minter may be used for any project, and is certainly ideal for projects that have a series of tokens that are released in a sequence. It may also be used to auction off a 1:1 token. The minter is also ideal for projects that have a strong community, as it allows for community members to participate in the auction process over a long period of time, carefully considering each generative output.</p>
+<p>Bids and auction parameters are stored on-chain, and the Art Blocks subgraph and API index all historical bids in <a href="https://docs.artblocks.io/public-api-docs/#definition-bids_metadata" class="outbound" target="_blank"><span><code v-pre>bids_metadata</code></span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> as well as auction parameters in <a href="https://docs.artblocks.io/public-api-docs/#definition-project_minter_configurations" class="outbound" target="_blank"><span><code v-pre>project_minter_configurations</code></span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <doc-anchor-target id="set-price-polyptych">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#set-price-polyptych">#</doc-anchor-trigger>
