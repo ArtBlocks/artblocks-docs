@@ -109,7 +109,7 @@ The minter suite is a collection of smart contracts that aim to provide differen
 
 The shared minter suite is used by Art Blocks, and is also available for use with Art Blocks Engine contracts (V3 only).
 
-More details will be added regarding the shared minter suite in the future, but for now, please see the [Minter Suite](https://docs.artblocks.io/creator-docs/creator-onboarding/readme/minter-suite/) page for an overview of all available flagship minters at this time.
+More details will be added regarding the shared minter suite in the future, but for now, please see the [Shared Minter Suite](./shared-minter-suite) page for an overview of all available flagship minters at this time.
 
 ## Lessons Learned
 
