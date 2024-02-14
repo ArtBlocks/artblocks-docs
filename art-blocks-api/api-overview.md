@@ -34,7 +34,7 @@ Provides the token metadata for a given Art Blocks token.
 | Contract Type | Pattern                                                        | Sample                                                                                  |
 | ------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | Flagship      | `https:token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/103000000 |
-| Engine        | `https:token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0x81236b5a105d3ad6b56ac41a03e1fd8893a08859/1000001   |
+| Engine        | `https:token.sepolia.artblocks.io/{contractAddress}/{tokenID}` | https://token.sepolia.artblocks.io/0x81236b5a105d3ad6b56ac41a03e1fd8893a08859/1000001   |
 
 **Arbitrum One**
 
@@ -50,7 +50,7 @@ Provides the token metadata for a given Art Blocks token.
 
 | Contract Type | Pattern                                                                   |
 | ------------- | ------------------------------------------------------------------------- |
-| Engine        | `https://token.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
+| Engine        | `https://token.arbitrum-sepolia.artblocks.io/{contractAddress}/{tokenID}` |
 
 <br>
 
@@ -88,7 +88,7 @@ Provides an i-frame-able live-view for the art associated with a given Art Block
 
 | Contract Type | Pattern                                                                       |
 | ------------- | ----------------------------------------------------------------------------- |
-| Engine        | `https://generator.arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
+| Engine        | `https://generator.arbitrum-sepolia.artblocks.io/{contractAddress}/{tokenID}` |
 
 <br>
 
