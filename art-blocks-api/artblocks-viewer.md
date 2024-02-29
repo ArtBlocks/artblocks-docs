@@ -64,7 +64,7 @@ You can create a customizable display for any route on artblocks-viewer. This is
 
 All of the customization that can be done and the default values are as follows:
 
-- **useCusomtomViewParams**: this is to specify you are using the custom view display and all other params require this to be true. `default: false`
+- **useCustomViewParams**: this is to specify you are using the custom view display and all other params require this to be true. `default: false`
 - **width**: this can be any valid html size and is the width of the token being displayed `default: 90vw`
 - **height**: this can be any valid html size and is the height of the token being displayed `default: 90vh`
 - **backgroundColor**: this can be any six digit hex color and is the background color of the page `default: ffffff`
