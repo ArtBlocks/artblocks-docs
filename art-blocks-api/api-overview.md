@@ -163,7 +163,7 @@ Subgraph information is serviced by a decentralized group of server operators ca
 
 ### Ethereum Mainnet
 
-- [Explorer Page](https://thegraph.com/explorer/subgraphs/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB?view=Overview&chain=arbitrum-one)
+- [Explorer Page](https://thegraph.com/explorer/subgraphs/9Adb6tGrHueFmfvYw7XXvC7VF6L55a2eWrULAWeyb7jd?view=Curators&chain=arbitrum-one)
 - Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB`
 - [Code Repo](https://github.com/ArtBlocks/artblocks-subgraph)
 
@@ -181,7 +181,7 @@ The Art Blocks mainnet subgraph can currently be queried a few ways:
 | The Graph Service           | Art Blocks Data | Limited Secondary Sales Data | URL                                                                                  |
 | --------------------------- | --------------- | ---------------------------- | ------------------------------------------------------------------------------------ |
 | Hosted Service              | Yes             | No                           | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks                    |
-| Decentralized Graph Network | Yes             | No                           | https://thegraph.com/explorer/subgraphs/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB |
+| Decentralized Graph Network | Yes             | No                           | https://thegraph.com/explorer/subgraphs/9Adb6tGrHueFmfvYw7XXvC7VF6L55a2eWrULAWeyb7jd |
 
 <br>
 
