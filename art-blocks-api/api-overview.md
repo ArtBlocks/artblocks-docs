@@ -24,17 +24,17 @@ Provides the token metadata for a given Art Blocks token.
 
 - Note: Contract address is required for Engine
 
-| Contract Type | Pattern                                                | Sample                                                                       |
-| ------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| Flagship      | `https:token.artblocks.io/{tokenID}`                   | https://token.artblocks.io/0                                                 |
-| Engine        | `https:token.artblocks.io/{contractAddress}/{tokenID}` | https://token.artblocks.io/0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676/110000 |
+| Contract Type | Pattern                                                  | Sample                                                                       |
+| ------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Flagship      | `https://token.artblocks.io/{tokenID}`                   | https://token.artblocks.io/0                                                 |
+| Engine        | `https://token.artblocks.io/{contractAddress}/{tokenID}` | https://token.artblocks.io/0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676/110000 |
 
 **Testnet**
 
-| Contract Type | Pattern                                                        | Sample                                                                                  |
-| ------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Flagship      | `https:token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/103000000 |
-| Engine        | `https:token.sepolia.artblocks.io/{contractAddress}/{tokenID}` | https://token.sepolia.artblocks.io/0x6ceab51fc8ee931df84d3db66e747b617eb7de21/12   |
+| Contract Type | Pattern                                                          | Sample                                                                                  |
+| ------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Flagship      | `https://token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/103000000 |
+| Engine        | `https://token.sepolia.artblocks.io/{contractAddress}/{tokenID}` | https://token.sepolia.artblocks.io/0x6ceab51fc8ee931df84d3db66e747b617eb7de21/12        |
 
 **Arbitrum One**
 
