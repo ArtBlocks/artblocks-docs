@@ -155,17 +155,35 @@ We are working on a media server for Engine partners. Currently, media is access
 
 ## Art Blocks Subgraph
 
-Art Blocks has a GraphQL API Endpoint hosted by [The Graph](https://thegraph.com/docs/about/introduction#what-the-graph-is) called a subgraph for indexing and organizing data from the Art Blocks smart contracts.
+Art Blocks has subgraphs deployed to [The Graph Network](https://thegraph.com/docs/en/network/overview/) for every supported network.
 
-This subgraph can be used to query for on-chain data related to the Art Blocks contracts, including minter suite data, token data, and project data.
+These subgraphs can be used to query for on-chain data related to the Art Blocks contracts, including minter suite data, token data, and project data. They provide a way to access on-chain data in a more efficient and user-friendly way than directly querying the blockchain, while keeping infrastructure decentralized, transparent, and reliable.
 
-Subgraph information is serviced by a decentralized group of server operators called Indexers.
+!!!info
+As of June 12, 2024, Hosted Service subgraphs are deprecated. Please use the Decentralized Graph Network subgraphs listed below for all networks, or use the Art Blocks' Hasura GraphQL API as an alternative.
+!!!
+
+The Art Blocks subgraph is developed in public, and all source code and development activity can be found in the [Art Blocks subgraph repository](https://github.com/ArtBlocks/artblocks-subgraph).
 
 ### Ethereum Mainnet
 
 - [Explorer Page](https://thegraph.com/explorer/subgraphs/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB?view=Overview&chain=arbitrum-one)
 - Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB`
-- [Code Repo](https://github.com/ArtBlocks/artblocks-subgraph)
+
+### Arbitrum One
+
+- [Explorer Page](https://thegraph.com/explorer/subgraphs/5WwGsBwJ2hVBpc3DphX4VHVMsoPnRkVkuZF4HTArZjCm?view=Overview&chain=arbitrum-one)
+- Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/5WwGsBwJ2hVBpc3DphX4VHVMsoPnRkVkuZF4HTArZjCm`
+
+## Artist Staging - Sepolia Testnet
+
+- [Explorer Page](https://thegraph.com/explorer/subgraphs/9G5q5avz4X8GZ8UEGdu197433nSWSCsFa2eo6vHNBooc?view=Overview&chain=arbitrum-one)
+- Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/9G5q5avz4X8GZ8UEGdu197433nSWSCsFa2eo6vHNBooc`
+
+## Artist Staging - Arbitrum-Sepolia Testnet
+
+- [Explorer Page](https://thegraph.com/explorer/subgraphs/33E6obKFpWGUhnWD5eja74Gt6oTXktiHMZVFrshg9xGe?view=Overview&chain=arbitrum-one)
+- Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/33E6obKFpWGUhnWD5eja74Gt6oTXktiHMZVFrshg9xGe`
 
 ### Helpful Resources
 
@@ -174,31 +192,9 @@ Subgraph information is serviced by a decentralized group of server operators ca
 - [Querying from an application](https://thegraph.com/docs/en/developer/querying-from-your-app/)
 - [How to use the explorer and playground to query on-chain data](https://medium.com/@chidubem_/how-to-query-on-chain-data-with-the-graph-f8507488215)
 
-### Querying the Subgraph
+## Querying the Subgraph
 
-The Art Blocks mainnet subgraph can currently be queried a few ways:
-
-| The Graph Service           | Art Blocks Data | Limited Secondary Sales Data | URL                                                                                  |
-| --------------------------- | --------------- | ---------------------------- | ------------------------------------------------------------------------------------ |
-| Hosted Service              | Yes             | No                           | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks                    |
-| Decentralized Graph Network | Yes             | No                           | https://thegraph.com/explorer/subgraphs/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB |
-
-<br>
-
-The Art Blocks testnet subgraph can be queried at the URL below:
-
-| The Graph Service | Art Blocks Data | URL                                                                                      |
-| ----------------- | --------------- | ---------------------------------------------------------------------------------------- |
-| Hosted Service    | Yes             | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-artist-staging-sepolia |
-
-The Art Blocks Arbitrum subgraphs can be queried at the URLs below:
-
-| The Graph Service | Art Blocks Data | Environment | URL                                                                                |
-| ----------------- | --------------- | ----------- | ---------------------------------------------------------------------------------- |
-| Hosted Service    | Yes             | Production  | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-arbitrum         |
-| Hosted Service    | Yes             | Staging     | https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-staging-arbitrum |
-
-**Recommendation:** Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.
+The Art Blocks subgraphs can be queried at any of the graphql endpoints listed in the previous section.
 
 ### Getting Minter Details
 
