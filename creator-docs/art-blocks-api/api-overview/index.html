@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.770761949052">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.770933239114">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.770761949052" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.770933239114" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.770761949052" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.770933239114" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.770761949052" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.770761949052" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.770933239114" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.770933239114" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -625,9 +625,26 @@
         <span>Art Blocks Subgraph</span>
     </h2>
 </doc-anchor-target>
-<p>Art Blocks has a GraphQL API Endpoint hosted by <a href="https://thegraph.com/docs/about/introduction#what-the-graph-is" class="outbound" target="_blank"><span>The Graph</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> called a subgraph for indexing and organizing data from the Art Blocks smart contracts.</p>
-<p>This subgraph can be used to query for on-chain data related to the Art Blocks contracts, including minter suite data, token data, and project data.</p>
-<p>Subgraph information is serviced by a decentralized group of server operators called Indexers.</p>
+<p>Art Blocks has subgraphs deployed to <a href="https://thegraph.com/docs/en/network/overview/" class="outbound" target="_blank"><span>The Graph Network</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> for every supported network.</p>
+<p>These subgraphs can be used to query for on-chain data related to the Art Blocks contracts, including minter suite data, token data, and project data. They provide a way to access on-chain data in a more efficient and user-friendly way than directly querying the blockchain, while keeping infrastructure decentralized, transparent, and reliable.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-300"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>As of June 12, 2024, Hosted Service subgraphs are deprecated. Please use the Decentralized Graph Network subgraphs listed below for all networks, or use the Art Blocks&#x27; Hasura GraphQL API as an alternative.</p>
+        </div>
+    </div>
+</div>
+<p>The Art Blocks subgraph is developed in public, and all source code and development activity can be found in the <a href="https://github.com/ArtBlocks/artblocks-subgraph" class="outbound" target="_blank"><span>Art Blocks subgraph repository</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <doc-anchor-target id="ethereum-mainnet">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ethereum-mainnet">#</doc-anchor-trigger>
@@ -637,7 +654,36 @@
 <ul>
 <li><a href="https://thegraph.com/explorer/subgraphs/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB?view=Overview&amp;chain=arbitrum-one" class="outbound" target="_blank"><span>Explorer Page</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 <li>Graphql Endpoint: <code v-pre>https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB</code></li>
-<li><a href="https://github.com/ArtBlocks/artblocks-subgraph" class="outbound" target="_blank"><span>Code Repo</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+</ul>
+<doc-anchor-target id="arbitrum-one">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#arbitrum-one">#</doc-anchor-trigger>
+        <span>Arbitrum One</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><a href="https://thegraph.com/explorer/subgraphs/5WwGsBwJ2hVBpc3DphX4VHVMsoPnRkVkuZF4HTArZjCm?view=Overview&amp;chain=arbitrum-one" class="outbound" target="_blank"><span>Explorer Page</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li>Graphql Endpoint: <code v-pre>https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/5WwGsBwJ2hVBpc3DphX4VHVMsoPnRkVkuZF4HTArZjCm</code></li>
+</ul>
+<doc-anchor-target id="artist-staging---sepolia-testnet">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#artist-staging---sepolia-testnet">#</doc-anchor-trigger>
+        <span>Artist Staging - Sepolia Testnet</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li><a href="https://thegraph.com/explorer/subgraphs/9G5q5avz4X8GZ8UEGdu197433nSWSCsFa2eo6vHNBooc?view=Overview&amp;chain=arbitrum-one" class="outbound" target="_blank"><span>Explorer Page</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li>Graphql Endpoint: <code v-pre>https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/9G5q5avz4X8GZ8UEGdu197433nSWSCsFa2eo6vHNBooc</code></li>
+</ul>
+<doc-anchor-target id="artist-staging---arbitrum-sepolia-testnet">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#artist-staging---arbitrum-sepolia-testnet">#</doc-anchor-trigger>
+        <span>Artist Staging - Arbitrum-Sepolia Testnet</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li><a href="https://thegraph.com/explorer/subgraphs/33E6obKFpWGUhnWD5eja74Gt6oTXktiHMZVFrshg9xGe?view=Overview&amp;chain=arbitrum-one" class="outbound" target="_blank"><span>Explorer Page</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li>Graphql Endpoint: <code v-pre>https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/33E6obKFpWGUhnWD5eja74Gt6oTXktiHMZVFrshg9xGe</code></li>
 </ul>
 <doc-anchor-target id="helpful-resources">
     <h3>
@@ -652,86 +698,12 @@
 <li><a href="https://medium.com/@chidubem_/how-to-query-on-chain-data-with-the-graph-f8507488215" class="outbound" target="_blank"><span>How to use the explorer and playground to query on-chain data</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ul>
 <doc-anchor-target id="querying-the-subgraph">
-    <h3>
+    <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#querying-the-subgraph">#</doc-anchor-trigger>
         <span>Querying the Subgraph</span>
-    </h3>
+    </h2>
 </doc-anchor-target>
-<p>The Art Blocks mainnet subgraph can currently be queried a few ways:</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>The Graph Service</th>
-<th>Art Blocks Data</th>
-<th>Limited Secondary Sales Data</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hosted Service</td>
-<td>Yes</td>
-<td>No</td>
-<td><a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks" class="outbound" target="_blank"><span>https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
-</tr>
-<tr>
-<td>Decentralized Graph Network</td>
-<td>Yes</td>
-<td>No</td>
-<td><a href="https://thegraph.com/explorer/subgraphs/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB" class="outbound" target="_blank"><span>https://thegraph.com/explorer/subgraphs/6bR1oVsRUUs6czNiB6W7NNenTXtVfNd5iSiwvS4QbRPB</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<br>
-<p>The Art Blocks testnet subgraph can be queried at the URL below:</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>The Graph Service</th>
-<th>Art Blocks Data</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hosted Service</td>
-<td>Yes</td>
-<td><a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-artist-staging-sepolia" class="outbound" target="_blank"><span>https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-artist-staging-sepolia</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The Art Blocks Arbitrum subgraphs can be queried at the URLs below:</p>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>The Graph Service</th>
-<th>Art Blocks Data</th>
-<th>Environment</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Hosted Service</td>
-<td>Yes</td>
-<td>Production</td>
-<td><a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-arbitrum" class="outbound" target="_blank"><span>https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-arbitrum</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
-</tr>
-<tr>
-<td>Hosted Service</td>
-<td>Yes</td>
-<td>Staging</td>
-<td><a href="https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-staging-arbitrum" class="outbound" target="_blank"><span>https://thegraph.com/hosted-service/subgraph/artblocks/art-blocks-staging-arbitrum</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Recommendation:</strong> Using the above links, familiarize yourself with the subgraph’s schema, via the GraphQL playground.</p>
+<p>The Art Blocks subgraphs can be queried at any of the graphql endpoints listed in the previous section.</p>
 <doc-anchor-target id="getting-minter-details">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#getting-minter-details">#</doc-anchor-trigger>
