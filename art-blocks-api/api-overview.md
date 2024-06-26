@@ -52,6 +52,14 @@ Provides the token metadata for a given Art Blocks token.
 | ------------- | ------------------------------------------------------------------------- |
 | Engine        | `https://token.arbitrum-sepolia.artblocks.io/{contractAddress}/{tokenID}` |
 
+**Base Mainnet**
+
+- Note: Contract address is required
+
+| Contract Type | Pattern                                                           |
+| ------------- | ----------------------------------------------------------------- |
+| Engine        | `https://token.base.artblocks.io/{contractAddress}/{tokenID}` |
+
 <br>
 
 ### Generator API
@@ -90,6 +98,14 @@ Provides an i-frame-able live-view for the art associated with a given Art Block
 | ------------- | ----------------------------------------------------------------------------- |
 | Engine        | `https://generator.arbitrum-sepolia.artblocks.io/{contractAddress}/{tokenID}` |
 
+**Base Mainnet**
+
+- Note: Contract address is required
+
+| Contract Type | Pattern                                                               |
+| ------------- | --------------------------------------------------------------------- |
+| Engine        | `https://generator.base.artblocks.io/{contractAddress}/{tokenID}` |
+
 <br>
 
 ### Media API/Media server
@@ -126,6 +142,14 @@ Provides a static snapshot of the rendered live-view for a given Art Blocks toke
 | ------------- | ------------------------------------------------------------------------------- |
 | Engine        | `https://media-proxy-arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
 
+**Base Mainnet**
+
+- Note: Contract address is required
+
+| Contract Type | Pattern                                                                 |
+| ------------- | ----------------------------------------------------------------------- |
+| Engine        | `https://media-proxy-base.artblocks.io/{contractAddress}/{tokenID}` |
+
 ---
 
 In addition to the standard static renders provided for each token, there are two other static renders currently provided: "HD" and "thumbnail". These items can be found at:
@@ -136,22 +160,6 @@ In addition to the standard static renders provided for each token, there are tw
 Please note that these additional static render formats are still currently being back-filled and may not yet be present for all tokens. Our current recommendation for those looking to depend on the "HD" or "thumbnail" responses is to a) first attempt the HD/thumb image resource that you would pefer, b) if this resource is not available, fall back to the standard sized image resource. For the current state of the ongoing backfill of HD and thumbnail assets, please refer to [this spreadsheet](https://docs.google.com/spreadsheets/d/1Li6TMieXL3MENtg5sq9omRVPsa8MWWb7eZU1uDwYxvU/edit?usp=drive_web&ouid=100711456886886984200).
 
 Please also note that the Generator API and Media API links for a given token are included in the token response for that token from the Token API.
-
-**Mainnet (Engine)**
-
-We are working on a media server for Engine partners. Currently, media is accessible through individual s3 buckets.
-
-| Render Type | Pattern                                                                | Sample                                                            |
-| ----------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| Standard    | `https://{enginePartner}-mainnet.s3.amazonaws.com/{tokenID}.png`       | https://bright-moments-mainnet.s3.amazonaws.com/8000000.png       |
-| Thumbnail   | `https://{enginePartner}-mainnet.s3.amazonaws.com/thumb/{tokenID}.png` | https://bright-moments-mainnet.s3.amazonaws.com/thumb/8000000.png |
-
-**Testnet**
-
-| Contract Type | Render Type | Pattern                                                                              | Sample                                                                           |
-| ------------- | ----------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| Flagship      | Standard    | `https://art-blocks-artist-staging-sepolia.s3.us-west-1.amazonaws.com/{tokenID}.png` | https://art-blocks-artist-staging-goerli.s3.us-west-1.amazonaws.com/10000000.png |
-| Engine        | Standard    | `https://{enginePartner}-sepolia.s3.amazonaws.com/{tokenID}.png`                     | https://bright-moments-goerli.s3.amazonaws.com/1000000.png                       |
 
 ## Art Blocks Subgraph
 
@@ -269,6 +277,7 @@ Provides a broader set of the data that our front-end consumes — this includes
 | Ethereum | Staging (deprecated) | `https://ab-staging-goerli.hasura.app/v1/graphql`   |
 | Arbitrum | Production           | `https://ab-prod-arbitrum.hasura.app/v1/graphql`    |
 | Arbitrum | Staging              | `https://ab-staging-arbitrum.hasura.app/v1/graphql` |
+| Base | Mainnet              | `https://ab-prod-base.hasura.app/v1/graphql` |
 
 #### Authentication
 
