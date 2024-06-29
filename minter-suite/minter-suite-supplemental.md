@@ -139,3 +139,53 @@ console.log(
   merkleProof
 );
 ```
+
+---
+
+## Pre-Assigning Token Hash Seeds
+
+!!!info
+The shared randomizer `SharedRandomizerV0` enables an artist to pre-assign token hash seeds for tokens on a project. This allows an artist to assign a specific hash seed to a token before it is minted, and then mint the token with that hash seed at a later time.
+!!!
+
+The process for pre-assigning token hash seeds is as follows:
+
+1. Identify and confirm that your contract is using a `SharedRandomizerV0` contract. Visit your core contract on etherscan (or appropriate L2 explorer, e.g. basescan) and inspect the read-only function `randomizerContract()` to confirm that the randomizer contract is a `SharedRandomizerV0`.
+
+1. Navigate to the `SharedRandomizerV0` contract on etherscan (or appropriate L2 explorer, e.g. basescan), and connect your artist wallet. Alternatively, if your artist wallet is a multisig, interact with the `sharedRandomizerV0` in something like Gnosis Safe's Transaction Builder (this is more efficient and convenient when assigning hash seeds for many tokens).
+
+1. On `SharedRandomizerV0`, call the `toggleProjectUseAssignedHashSeed()` function with the artist wallet the following parameters:
+
+   - `coreContract`: The address of the core contract for the project
+   - `ProjectId`: The ID of the project to toggle the use of assigned hash seeds for
+
+1. Confirm on `SharedRandomizerV0`'s read function `projectUsesHashSeedSetter()` that the project is now configured to use pre-assigned hash seeds (should return `true`).
+
+1. On `SharedRandomizerV0`, from the artist wallet, call to the `setHashSeedSetterContract` function with the following parameters:
+
+   - `coreContract`: The address of the core contract for the project
+   - `ProjectId`: The ID of the project to toggle the use of assigned hash seeds for
+   - `hashSeedSetterContract`: The address that will assign hash seeds to tokens - recommend in this use-case to set this to the artist wallet
+
+1. Confirm on `SharedRandomizerV0`'s read function `hashSeedSetterContracts()` that the hash seed setter contract is now set to the artist wallet for the project.
+
+1. On `SharedRandomizerV0`, from the artist wallet, call `preSetHashSeed()` for each token that you want to assign a hash seed to (Multicall using something like a gnosis safe is very helpful if assigning many tokens here). This function takes the following parameters:
+
+   - `coreContract`: The address of the core contract for the project
+   - `tokenId`: The token ID to assign the hash seed for
+   - `hashSeed`: The hash seed to assign to the token
+
+1. You may confirm that token hash seeds have been properly assigned by calling the `preAssignedHashSeed()` read-only function on `SharedRandomizerV0` with the following parameters:
+
+   - `coreContract`: The address of the core contract for the project
+   - `tokenId`: The token ID to check the hash seed for
+
+1. MINT! Ordering may be critical if minting specific tokens to specific addresses, so the artist may need to keep the project paused and call purchaseTo in a specific order. No other changes to the minting process are required. Confirming token hashes are as expected along the way is highly recommended.
+
+1. After minting is complete, the artist should call `toggleProjectUseAssignedHashSeed()` to disable the use of assigned hash seeds for the project, and allow the randomizer to pseudorandomly assign hash seeds to tokens as normal.
+
+1. Set the hash seed setter contract back to the zero address by calling `setHashSeedSetterContract` from the artist wallet.
+
+!!!info
+The steps above follow the pattern implemented in the following test case: [shared-randomizer-v0/configure.test.ts:assigns_expected_token_when_polyptych"](https://github.com/ArtBlocks/artblocks-contracts/blob/1d2a6ad5915cb225c6b0d31710568a439b0e212b/packages/contracts/test/randomizer/shared-randomizer-v0/configure.test.ts#L269)
+!!!
