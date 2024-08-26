@@ -4,7 +4,7 @@ order: -20
 
 # SeaDrop Integration
 
-This page provides an overview of an integration solution for the Art Blocks Shared Minter Suite with SeaDrop. This is a special integration that allows Art Blocks projects to be minted and sold on OpenSea via SeaDrop, and is not a standard integration with the Shared Minter Suite.
+This page provides an overview of an integration solution for the Art Blocks Shared Minter Suite with OpenSea's SeaDrop system. This is a special integration that allows Art Blocks projects to be minted and sold on OpenSea via SeaDrop, and is not a standard integration with the Shared Minter Suite.
 
 The integration requires a few non-standard steps to ensure that the SeaDrop contract can interact with the minter suite. The steps below outline the process for integrating SeaDrop with the Art Blocks Shared Minter Suite.
 
@@ -16,7 +16,7 @@ The integration process follows the custom, one-off minter steps, and supports m
 
 ### 1. Artist configures their project
 
-The artist configures their project as they normally would, using the Art Blocks Creator Dashboard.
+The artist configures their project as they normally would, using the [Art Blocks Creator Dashboard](https://create.artblocks.io).
 
 The only exception is that the artist does not need to configure the minter for their project, as the minter will be configured separately as described in the following steps.
 
