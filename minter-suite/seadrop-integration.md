@@ -51,6 +51,8 @@ Following the custom, one-off minter steps, the artist will need to configure th
 
 The artist will need to configure their drop on OpenSea's Studio.
 
+A general guide for configuring a drop on OpenSea Studio is published by OpenSea here: https://docs.opensea.io/docs/part-2-edit-collection-settings
+
 In OpenSea Studio, the artist should see a new contract available to edit, which will be the `SeaDropXArtBlocksShim` contract. The artist should configure the drop as they normally would, using the OpenSea Studio interface.
 
 A few options that don't make sense for Art Blocks projects, such as IPFS metadata (Art Blocks projects are on-chain), should be left blank.
