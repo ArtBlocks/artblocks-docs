@@ -83,13 +83,13 @@ window.generateEmbroiderySVG = function(width, height) {
 In order to correctly generate files for embroidery, you must:
 
 - [ ]  Implement a `generateEmbroiderySVG` global function that returns the full markup of an `<svg>` element as a string
-- [ ]  *Optional:* accept a `width` and `height` parameter (millimeters) used to resize the contents of the SVG to accomodate different garment sizes
+- [ ]  *Optional:* accept a `width` and `height` parameter (millimeters) used to resize the contents of the SVG to accommodate different garment sizes
 - [ ]  Render a digital-only version of the art using a separate `<svg>` or `<canvas>` that is displayed to the user and thumbnailed in token metadata (similar to any digital-only Art Blocks project)
 - [ ]  Inline all libraries and code used in your project that are not configured as an on-chain dependency
 
 ## Known Limitations
 
-- [ ]  Avoid using SVG fills - instead, to create the visual appearance of a fill, the SVG should contains the exact paths the embroidery needle should follow
+- [ ]  Avoid using SVG fills - instead, to create the visual appearance of a fill, the SVG should contain the exact paths the embroidery needle should follow
 - [ ]  Avoid using asynchronous code or promises inside of the `generateEmbroiderySVG` function - the function should return valid SVG markup immediately
 - [ ]  Provide margins (bleed) matching the precision of the embroidery machine to improve manufacturing yield
 - [ ]  Match all colors used in your design to the colors of thread available to you for embroidering
