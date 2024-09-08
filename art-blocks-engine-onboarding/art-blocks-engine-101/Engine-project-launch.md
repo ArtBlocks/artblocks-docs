@@ -18,7 +18,7 @@ There are slight variations between V2 and V3 contracts, which will be noted in 
     - (V2 only) Price-per-mint specified in WEI (e.g., 350000000000000000, or 0.35 ETH)
 2.  Navigate to your Engine Core Contract on Etherscan and connect your wallet. You can find this link in your `DEPLOYMENTS.md` log. [https://goerli.etherscan.io/address/0xd2363Acbf8CdF01A5FdfcB8f0295e0a5dF94518D#code](https://goerli.etherscan.io/address/0xd2363Acbf8CdF01A5FdfcB8f0295e0a5dF94518D#code))
 3.  Click the "Write contract" tab and use the `addProject` method to create a new project shell, specifying the information collected in step 1.
-4.  Connect to the Art Blocks website with the artist wallet used in in Step 3. Your artist should be able to begin entering project details.
+4.  Connect to the Art Blocks website with the artist wallet used in Step 3. Your artist should be able to begin entering project details.
 
     Testnet URL: `https://artist-staging.artblocks.io/engine/[flex OR fullyonchain]/projects/[coreContractAddress]/[projectID]`
     example: https://artist-staging.artblocks.io/engine/flex/projects/0x28b82AA5bb6d00363ae0FBC5ecaD689Ae49BC82B/0
@@ -73,7 +73,7 @@ Before minting your first token (#0) on your new project shell, verify the follo
 
 ## Pre-launch (pre-open-minting) Flight Check
 
-For a project to be avaialble for public purchase, the project must be activated by the admin, and unpaused by the artist.
+For a project to be available for public purchase, the project must be activated by the admin, and unpaused by the artist.
 
 tldr:
 inactive + paused (default state) = private project shell and unable to purchase
