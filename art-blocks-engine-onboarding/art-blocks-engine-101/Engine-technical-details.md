@@ -100,7 +100,7 @@ Note that for IPFS/Arweave external asset dependencies if your CID is pointing t
 
 ## Loading JS Libraries As External Asset Dependencies
 
-If you are specifically looking to utilize an IPFS/ARWEAVE type external asset dependency as a JavaScript library in your project script, you cannot simply add it as a script element onto the page. You must load it in a blocking manner so that the browser does not attempt to run your project script code before the lib is  fully loaded. Here is an example of how to do this with ES6 dynamic imports (supported by most modern browsers: https://caniuse.com/es6-module-dynamic-import):
+If you are specifically looking to utilize an IPFS/ARWEAVE type external asset dependency as a JavaScript library in your project script, you cannot simply add it as a script element onto the page. You must load it in a blocking manner so that the browser does not attempt to run your project script code before the lib is fully loaded. Here is an example of how to do this with ES6 dynamic imports (supported by most modern browsers: https://caniuse.com/es6-module-dynamic-import):
 
 ```js
 (async () => {
