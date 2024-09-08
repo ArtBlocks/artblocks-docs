@@ -44,7 +44,7 @@ Tips:
 
 When using a Dutch auction, the auction will need to be reset and reconfigured.
 
-This is a 2-step provess, and requires admin-intervention for security:
+This is a 2-step process, and requires admin-intervention for security:
 
 1. ADMIN - Call `resetAuctionDetails` on the minter contract
 2. ARTIST - Configure the auction parameters via your typical process (e.g. artist dashboard)
