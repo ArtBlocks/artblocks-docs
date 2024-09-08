@@ -29,7 +29,7 @@ For Engine contracts, the following addresses may receive royalties:
 
 ## Configuring Royalties
 
-V3 and V2 Engine contracts are configured differently. V3 Engine contracts are the latest version of the Art Blocks Engine contracts. Since they were designed after the Royalty Registry was released, they automatically integrate with with the Royalty Registry. V2 Engine contracts also integrate with the Royalty Registry, but have a shim-layer that must also be configured. This is because V2 Engine contracts were designed before the Royalty Registry was released.
+V3 and V2 Engine contracts are configured differently. V3 Engine contracts are the latest version of the Art Blocks Engine contracts. Since they were designed after the Royalty Registry was released, they automatically integrate with the Royalty Registry. V2 Engine contracts also integrate with the Royalty Registry, but have a shim-layer that must also be configured. This is because V2 Engine contracts were designed before the Royalty Registry was released.
 
 ## Configuring V3 Engine Contracts
 
