@@ -20,13 +20,13 @@ With Art Blocks Engine Flex artists are able to include off-chain assets, stored
 
 ## How does Art Blocks Engine Flex work?
 
-With Art Blocks Engine Flex contracts, a per-project (as opposed to per-contract) field is available on all projects that allows an artist to set a single off-chain dependency or set of multiple off-chain dependencies based on the content ID locations where these dependencies are stored on IPFS or Arweave.
+With Art Blocks Engine Flex contracts, a per-project (as opposed to per-contract) field is available on all projects that allow an artist to set a single off-chain dependency or set of multiple off-chain dependencies based on the content ID locations where these dependencies are stored on IPFS or Arweave.
 
-Currently, we do not yet support the turnkey ability to programically upload/pin these dependencies to IPFS/Arweave within the Engine experience directly; however, our team is more than happy to assist partners in the process of uploading/pinning assets on IPFS/Arweave using existing third party solutions for doing so (e.g. Pinata in the case of IPFS).
+Currently, we do not yet support the turnkey ability to programmatically upload/pin these dependencies to IPFS/Arweave within the Engine experience directly; however, our team is more than happy to assist partners in the process of uploading/pinning assets on IPFS/Arweave using existing third party solutions for doing so (e.g. Pinata in the case of IPFS).
 
 Note that for a single project, it is possible to have a single off-chain dependency (e.g. a single image file) or a set of off-chain dependencies (e.g. a series of images from a set). This means that is possible, for example, to have a project that creates 1of1ofX generative variants of a single base image asset, or one in which for a given token a random image is selected from the base image asset set, and then a generative process is applied to it.
 
-It is also important to note that images are not the only supported external asset dependency type. It is possible to reference any file type that can be pinned/uploaded to IPFS or Arweave and intelligbly incorporated into a generative algorithm to create interesting artistic outputs. For example, a project could use `tensorflow.js` as its single-depedency, have its generative script be a tensorflow based creative coding algorithm, and store the model file for the machine learning model on IPFS or Arweave to support a ML/AI based project.
+It is also important to note that images are not the only supported external asset dependency type. It is possible to reference any file type that can be pinned/uploaded to IPFS or Arweave and intelligibly incorporated into a generative algorithm to create interesting artistic outputs. For example, a project could use `tensorflow.js` as its single-dependency, have its generative script be a tensorflow based creative coding algorithm, and store the model file for the machine learning model on IPFS or Arweave to support a ML/AI based project.
 
 ## What is the smart contract architecture for Art Blocks Engine?
 
@@ -90,7 +90,7 @@ Nonfungible tokens (NFT) are unique digital assets stored on blockchain technolo
 
 ## On-chain vs. off-chain
 
-Art Blocks Engine enables creators to immutably store their generative NFT directly on the Ethereum blockchain (on-chain) or reference an external library or asset (off-chain). For an off-chain implimentation, partners can reference external off-chain assets using decentralized storage solutions like IPFS.
+Art Blocks Engine enables creators to immutably store their generative NFT directly on the Ethereum blockchain (on-chain) or reference an external library or asset (off-chain). For an off-chain implementation, partners can reference external off-chain assets using decentralized storage solutions like IPFS.
 
 Decentralized and fully on-chain content is the most durable digital asset available. Typically, a creative coder writes a generative script in JavaScript and stores it directly on the blockchain. As long as you have access to a computer, a web browser, and Ethereum’s public ledger, you’ll always be able to reproduce the NFT in its original form and track ownership since creation. An on-chain NFT inherits the provenance, security, and durability of Ethereum itself, making them the highest quality digital asset available.
 

@@ -32,11 +32,11 @@ Then, select your bucket from the Buckets menu and select 'Upload'. You can choo
 
 You will be prompted to select a file from your computer. Once uploaded, it'll be displayed in the Filebase web console and it will be given an IPFS CID value. ![cid](/static/Filebase_setup6.png)
 
-When a file is uploaded to IPFS, the file’s contents are used to generate a cryptographic hash value. Then, this hash value is used to generate another value, which is used as the file’s content identifier (CID). CIDs are used to access files stored on IPFS, but instead of locating the file on the network based on it's name, the CID is based on the file's contents. Any changes to the file's contents or metadata will result in a new, unique CID.
+When a file is uploaded to IPFS, the file’s contents are used to generate a cryptographic hash value. Then, this hash value is used to generate another value, which is used as the file’s content identifier (CID). CIDs are used to access files stored on IPFS, but instead of locating the file on the network based on its name, the CID is based on the file's contents. Any changes to the file's contents or metadata will result in a new, unique CID.
 
 The CID value is what is used within an Art Blocks generative script, under the 'CID' field. 
 
-To preview your file using it's IPFS CID and the Filebase public gateway, you can use the following URL format in any web browser:
+To preview your file using its IPFS CID and the Filebase public gateway, you can use the following URL format in any web browser:
 
 https://ipfs.filebase.io/ipfs/[CID]
 

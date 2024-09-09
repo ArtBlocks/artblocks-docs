@@ -18,7 +18,7 @@ For all V3 contracts, the contract admin can update the provider secondary royal
 - `function updateProviderPrimarySalesPercentages`
 - `function updateProviderSecondarySalesBPS` or `function updateProviderDefaultSecondarySalesBPS` (depending on minor version)
 
-For v3.2+ contracts (deployed after May 2024), the contract admin must also propogate the contract-level changes to every project in the contract by calling the following function on the contract for each project:
+For v3.2+ contracts (deployed after May 2024), the contract admin must also propagate the contract-level changes to every project in the contract by calling the following function on the contract for each project:
 
 - `syncProviderSecondaryForProjectToDefaults(uint256 projectId)`
 

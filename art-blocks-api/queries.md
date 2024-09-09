@@ -12,7 +12,7 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 
 ## Subgraph Querying Walkthrough
 
-The following provides some examples on how to use the Art Blocks subgraph to perform a handful of common queries.
+The following provides some examples of how to use the Art Blocks subgraph to perform a handful of common queries.
 
 #### Important Notes
 

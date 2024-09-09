@@ -91,7 +91,7 @@ In practice, it is difficult to achieve any of the above definitions of fairness
 
 Art Blocks aims to provide a variety of minting options for artists to choose from, each with their own set of tradeoffs. We believe that artists should be able to choose the minting paradigm that best fits their project's goals.
 
-The minters provided by Art Blocks are intended to follow our design principles while also achieving some kind of fairness. However, each minter's amount of fairness and suceptibility to bots will vary based on:
+The minters provided by Art Blocks are intended to follow our design principles while also achieving some kind of fairness. However, each minter's amount of fairness and susceptibility to bots will vary based on:
 
 - project demand/hype
 - project price

@@ -103,7 +103,7 @@ We cannot deploy your contract until you provide the above information. **The na
 
 No, partners are responsible for creating and designing their customer-facing experience.
 
-However, we do have a [front-end React template](https://github.com/ArtBlocks/artblocks-engine-react) with web3 functionality you need to launch a minting site. You will still be responsible for designing the user exerpeicne, but this significantly reduces the time needed to complete a front-end.
+However, we do have a [front-end React template](https://github.com/ArtBlocks/artblocks-engine-react) with web3 functionality you need to launch a minting site. You will still be responsible for designing the user experience, but this significantly reduces the time needed to complete a front-end.
 
 ## How long will each stage of the process take?
 
@@ -176,7 +176,7 @@ On the other hand, each **Minter contract** allows you to set max invocations fo
 
 ## How does `autoApproveArtistSplitProposals` work?
 
-When `true`, `aproveArtistSplitProposals` is a feature thatallows artists to automatically change their royalty split payout address and the split percentage without requiring approval from the contract admin. This makes the process faster and more convenient for artists but may increase the risk of unauthorized changes to royalty wallets, which could complicate accounting or OFAC compliance.
+When `true`, `aproveArtistSplitProposals` is a feature that allows artists to automatically change their royalty split payout address and the split percentage without requiring approval from the contract admin. This makes the process faster and more convenient for artists but may increase the risk of unauthorized changes to royalty wallets, which could complicate accounting or OFAC compliance.
 
 If set to `else` the contract admin will need to approve any changes to the artist's royalty wallet, adding a layer of security and control.
 

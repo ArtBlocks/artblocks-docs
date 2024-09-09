@@ -60,7 +60,7 @@ This is a running list of contract addresses for various Art Blocks and Engine
 
 ## Customizable Display
 
-You can create a customizable display for any route on artblocks-viewer. This is done through query params added to the end of the url. In order to activate this ability you must first add `?useCustomViewParams=true` to the end of the whatever route you are using. [Here](https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71?useCustomViewParams=true) is the most basic customized url of Chromie Squiggle mint #71 with just the squiggle centered in the middle of the page.
+You can create a customizable display for any route on artblocks-viewer. This is done through query params added to the end of the url. In order to activate this ability you must first add `?useCustomViewParams=true` to the end of whatever route you are using. [Here](https://live.artblocks.io/token/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-71?useCustomViewParams=true) is the most basic customized url of Chromie Squiggle mint #71 with just the squiggle centered in the middle of the page.
 
 All of the customization that can be done and the default values are as follows:
 

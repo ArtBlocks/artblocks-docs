@@ -105,7 +105,7 @@ OpenSea - https://docs.opensea.io/docs/10-setting-fees-on-secondary-sales
 LooksRare - https://docs.looksrare.org/guides/collection-management/set-or-edit-collection-royalties
 x2y2 - https://docs.x2y2.io/guides/collection-management/manage-your-collection
 
-Note: The vast majority of secondary activity takes place on OpenSea. Currently, OpenSea does not recognize on-chain roylaties and needs to be set through their interface. However, they plan to recognize [Roylaty Registry](https://royaltyregistry.xyz/lookup) in the near-ish future. We highly encourage you to sign up for the Royalty Registry to avoid missed secondary roylaties.
+Note: The vast majority of secondary activity takes place on OpenSea. Currently, OpenSea does not recognize on-chain royalties and needs to be set through their interface. However, they plan to recognize [Roylaty Registry](https://royaltyregistry.xyz/lookup) in the near-ish future. We highly encourage you to sign up for the Royalty Registry to avoid missed secondary royalties.
 
 Instructions on setting up Royalty Registry - https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-royalty-registry-setup/
 
