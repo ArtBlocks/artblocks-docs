@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.778865230791">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.779212961456">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,11 +33,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.5.0.778865230791" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.779212961456" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.778865230791" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.779212961456" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.778865230791" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.779212961456" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -271,10 +271,10 @@
         <span>How does Art Blocks Engine Flex work?</span>
     </h2>
 </doc-anchor-target>
-<p>With Art Blocks Engine Flex contracts, a per-project (as opposed to per-contract) field is available on all projects that allows an artist to set a single off-chain dependency or set of multiple off-chain dependencies based on the content ID locations where these dependencies are stored on IPFS or Arweave.</p>
-<p>Currently, we do not yet support the turnkey ability to programically upload/pin these dependencies to IPFS/Arweave within the Engine experience directly; however, our team is more than happy to assist partners in the process of uploading/pinning assets on IPFS/Arweave using existing third party solutions for doing so (e.g. Pinata in the case of IPFS).</p>
+<p>With Art Blocks Engine Flex contracts, a per-project (as opposed to per-contract) field is available on all projects that allow an artist to set a single off-chain dependency or set of multiple off-chain dependencies based on the content ID locations where these dependencies are stored on IPFS or Arweave.</p>
+<p>Currently, we do not yet support the turnkey ability to programmatically upload/pin these dependencies to IPFS/Arweave within the Engine experience directly; however, our team is more than happy to assist partners in the process of uploading/pinning assets on IPFS/Arweave using existing third party solutions for doing so (e.g. Pinata in the case of IPFS).</p>
 <p>Note that for a single project, it is possible to have a single off-chain dependency (e.g. a single image file) or a set of off-chain dependencies (e.g. a series of images from a set). This means that is possible, for example, to have a project that creates 1of1ofX generative variants of a single base image asset, or one in which for a given token a random image is selected from the base image asset set, and then a generative process is applied to it.</p>
-<p>It is also important to note that images are not the only supported external asset dependency type. It is possible to reference any file type that can be pinned/uploaded to IPFS or Arweave and intelligbly incorporated into a generative algorithm to create interesting artistic outputs. For example, a project could use <code v-pre>tensorflow.js</code> as its single-depedency, have its generative script be a tensorflow based creative coding algorithm, and store the model file for the machine learning model on IPFS or Arweave to support a ML/AI based project.</p>
+<p>It is also important to note that images are not the only supported external asset dependency type. It is possible to reference any file type that can be pinned/uploaded to IPFS or Arweave and intelligibly incorporated into a generative algorithm to create interesting artistic outputs. For example, a project could use <code v-pre>tensorflow.js</code> as its single-dependency, have its generative script be a tensorflow based creative coding algorithm, and store the model file for the machine learning model on IPFS or Arweave to support a ML/AI based project.</p>
 <doc-anchor-target id="what-is-the-smart-contract-architecture-for-art-blocks-engine">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#what-is-the-smart-contract-architecture-for-art-blocks-engine">#</doc-anchor-trigger>
@@ -346,7 +346,7 @@
         <span>On-chain vs. off-chain</span>
     </h2>
 </doc-anchor-target>
-<p>Art Blocks Engine enables creators to immutably store their generative NFT directly on the Ethereum blockchain (on-chain) or reference an external library or asset (off-chain). For an off-chain implimentation, partners can reference external off-chain assets using decentralized storage solutions like IPFS.</p>
+<p>Art Blocks Engine enables creators to immutably store their generative NFT directly on the Ethereum blockchain (on-chain) or reference an external library or asset (off-chain). For an off-chain implementation, partners can reference external off-chain assets using decentralized storage solutions like IPFS.</p>
 <p>Decentralized and fully on-chain content is the most durable digital asset available. Typically, a creative coder writes a generative script in JavaScript and stores it directly on the blockchain. As long as you have access to a computer, a web browser, and Ethereum’s public ledger, you’ll always be able to reproduce the NFT in its original form and track ownership since creation. An on-chain NFT inherits the provenance, security, and durability of Ethereum itself, making them the highest quality digital asset available.</p>
 <p>So, if Art Blocks ever shut down, all on-chain work would still be accessible since it&#x27;s stored on the decentralized Ethereum blockchain and able to be viewed, bought, sold, and transferred without involving Art Blocks at all.</p>
 <p>In contrast, if we store generative algorithms on an Art Blocks-owned database, the NFTs would rely on Art Blocks to return the assets - and if we go offline, the assets would not be retrievable. Similarly, if a script is stored on-chain but uses data from off-chain sources, it&#x27;s vulnerable to the host of that off-chain data going offline.</p>

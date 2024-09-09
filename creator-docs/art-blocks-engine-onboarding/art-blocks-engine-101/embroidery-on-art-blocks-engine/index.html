@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.778865230791">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.779212961456">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.5.0.778865230791" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.5.0.779212961456" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.778865230791" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.5.0.779212961456" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.778865230791" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.5.0.778865230791" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.5.0.779212961456" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.5.0.779212961456" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -348,7 +348,7 @@ Refer to <a href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboa
 <p>In order to correctly generate files for embroidery, you must:</p>
 <ul class="contains-task-list">
 <li class="task-list-item"><input disabled="disabled" type="checkbox" />  Implement a <code v-pre>generateEmbroiderySVG</code> global function that returns the full markup of an <code v-pre>&lt;svg&gt;</code> element as a string</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" />  <em>Optional:</em> accept a <code v-pre>width</code> and <code v-pre>height</code> parameter (millimeters) used to resize the contents of the SVG to accomodate different garment sizes</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" />  <em>Optional:</em> accept a <code v-pre>width</code> and <code v-pre>height</code> parameter (millimeters) used to resize the contents of the SVG to accommodate different garment sizes</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" />  Render a digital-only version of the art using a separate <code v-pre>&lt;svg&gt;</code> or <code v-pre>&lt;canvas&gt;</code> that is displayed to the user and thumbnailed in token metadata (similar to any digital-only Art Blocks project)</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" />  Inline all libraries and code used in your project that are not configured as an on-chain dependency</li>
 </ul>
@@ -359,7 +359,7 @@ Refer to <a href="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboa
     </h2>
 </doc-anchor-target>
 <ul class="contains-task-list">
-<li class="task-list-item"><input disabled="disabled" type="checkbox" />  Avoid using SVG fills - instead, to create the visual appearance of a fill, the SVG should contains the exact paths the embroidery needle should follow</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" />  Avoid using SVG fills - instead, to create the visual appearance of a fill, the SVG should contain the exact paths the embroidery needle should follow</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" />  Avoid using asynchronous code or promises inside of the <code v-pre>generateEmbroiderySVG</code> function - the function should return valid SVG markup immediately</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" />  Provide margins (bleed) matching the precision of the embroidery machine to improve manufacturing yield</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" />  Match all colors used in your design to the colors of thread available to you for embroidering</li>
