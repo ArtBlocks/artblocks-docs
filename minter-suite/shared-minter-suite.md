@@ -9,7 +9,7 @@ This page provides an overview of the Art Blocks Shared Minter Suite, which enab
 The Shared Minter Suite is available for all projects, including Art Blocks Engine projects.
 
 !!!info
-Only projects on contracts that have been migrated to the Shared Minter Suite will be able to use the new minter options. Engine core contract admins can view the [Minter Migration Runbok](./../art-blocks-engine-onboarding/art-blocks-engine-101/minter-suite-migration-runbook.md) for more details.
+For legacy contracts, core contract admins can view the [Minter Migration Runbok](./../art-blocks-engine-onboarding/art-blocks-engine-101/minter-suite-migration-runbook.md) for details about how to migrate to the shared minter suite.
 !!!
 
 ## Mix-and-Match
@@ -22,21 +22,31 @@ Each minter supports limiting to a certain number of project invocations. For ex
 
 The current available Minter options are discussed below. We are continually expanding our shared minter suite over time.
 
-### `Set Price, ETH`
+### `Set price - ETH`
 
 The set price minter is used for fixed price releases. It is the simplest minter and prices all tokens at the same price, in ETH.
 
-### `Set Price, ERC20`
+### `Set price - ETH, allowlisted users only`
 
-Set price in ERC20 is a fixed price minter that allows accepting any ERC20 token as payment for your sale of tokens. In addition to specifying a fixed price, artists will specify the ERC20 token address for the custom token sale.
+Extends the functionality of the `Set price, ETH` minter to allow only wallets on an allowlist to mint. The allowlist can be configured to limit minting to a predetermined list of wallet addresses, and artists can specify the number of mints allowed per wallet.
+
+### `Set price - ETH, token holders only`
+
+Extends the functionality of the `Set price, ETH` minter to allow only holders of a specific ERC-721 token to mint.
+
+### `Set Price - custom ERC20`
+
+Set price in ERC20 is a fixed price minter that allows accepting any ERC20 token as payment for your sale of tokens.
 
 Custom ERC20 tokens can be used for a variety of purposes, including for a "mint pass" style experience.
 
-### `Dutch Auction with Settlement - Exponential Price Decrease`
+### `Dutch auction (w/settlement) - exponential price decrease`
 
 When this minter is used, all collectors will pay the same net-price as the final purchaser. This is typically the most fair and equitable Dutch auction type for buyers because all buyers pay the same price, making it a great auction type for many projects.
 
 Collectors who purchase above the lowest price will be able to claim a settlement after the auction. The settlement will be the difference between the price they purchased at and the final purchase price. All funds are held non-custodially by the smart contract until the auction ends and revenues are collected by the artist or admin.
+
+Exponential price curves approximate a constant percent decrease over time, making them a popular choice for Dutch auctions.
 
 !!!info
 If an artist reduces the max supply of their project mid-auction, and the project sells out above auction base price, revenues must be withdrawn by core contract admin. This was implemented to protect collectors from an artist unilaterally potentially inflating sellout price during an action, and immediately withdrawing revenues. Admin concurrence is required to withdraw revenues in this case.
@@ -46,49 +56,45 @@ If an artist reduces the max supply of their project mid-auction, and the projec
 For supplemental information about the auction reset process, please see the [Auction Reset Process](./minter-suite-supplemental.md#auction-reset-process) section.
 !!!
 
-!!!info
-For Art Blocks Flagship, please see the [Project Pricing: Dutch Auction Settings](./../creator-onboarding/readme/project-pricing-model.md) section for more information on how to determine the appropriate pricing parameters for your auction.
-!!!
-
-### `Dutch Auction without Settlement`
+### `Dutch auction - exponential price decrease`
 
 For Dutch auctions without settlement, artists specify the starting price, ending price, and the half-life for price drops. Collectors will pay more for tokens purchased earlier in the auction, and less for tokens purchased later in the auction.
 
-Two price curves are available for Dutch auctions without settlement: exponential and linear. Exponential price curves approximate a constant percent decrease over time, while linear price curves provide a constant price decrease over time.
-
-Variants of this minter are also provided that support limiting purchasing to wallets that hold a token from a specified list of allowlisted Art Blocks or Art Blocks Engine projects.
+Exponential price curves approximate a constant percent decrease over time, making them a popular choice for Dutch auctions.
 
 !!!info
 For supplemental information about the auction reset process, please see the [Auction Reset Process](./minter-suite-supplemental.md#auction-reset-process) section.
 !!!
 
-### `Set Price, Allowlisted Users Only`
+### `Dutch auction - linear price decrease`
 
-This minter enables the artist to limit minting of their project's tokens to a predetermined list of wallet addresses. Artists upload a list of allowlisted wallet addresses, and may also specify the number of mints allowed per wallet. Mints per wallet can be set to a value, or may be set to unlimited (limited only by project maximum invocations).
+For Dutch auctions without settlement, artists specify the starting price, ending price, and the duration of the auction. Collectors will pay more for tokens purchased earlier in the auction, and less for tokens purchased later in the auction.
 
-Artists are responsible for crafting their allowlist and uploading a comma-separated list of ETH addresses in a .txt or .CSV file to the creator dashboard. These wallet addresses cannot be ENS names, but list the full address of the wallet. [Premint](https://www.premint.xyz/) is a super helpful tool for creating an allowlist by using social channels to reach collectors, friends, family, etc. In addition, Art Blocks hosts a [Python script](https://github.com/ArtBlocks/artblocks-community-tooling/tree/main/SnapshotABHolders) for retrieving & snapshotting either a list of all Art Blocks token holders or the token-holders of a specific project.
+Linear price curves provide a constant price decrease over time.
 
-Variants of this minter are provided that support purchasing in ETH, or in a custom ERC20 token.
-
-!!!info
-Allowlists use Merkle trees, which enables them to be verified on-chain and to be decentralized. It also is efficient, enabling very large allowlists. For example, ~40,000 wallet addresses were used for the Friendship Bracelet project's allowlist.
-!!!
+Two price curves are available for Dutch auctions without settlement: exponential and linear. Exponential price curves approximate a constant percent decrease over time, while linear price curves provide a constant price decrease over time.
 
 !!!info
-Note that vault delegation via [Delegate Cash](https://delegate.cash/) is available for the Allowlisted Users minter. Only V1 of the delegation registry is supported at this time. For more details please visit this [video walkthrough](https://www.youtube.com/watch?v=2-AgG--zcaw&list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&index=5).
+For supplemental information about the auction reset process, please see the [Auction Reset Process](./minter-suite-supplemental.md#auction-reset-process) section.
 !!!
 
-### `Set Price, Token Holders Only`
+### `Dutch auction - exponential price decrease, token holders only`
 
-This minter allows tokens to be minted with ETH when the purchaser owns a token from one or more allowlisted Art Blocks or Art Blocks Engine project. This contract does not track if a purchaser has/has not minted already (ie. a "mint limit" is not available) -- it simply restricts purchasing to anybody that holds one or more of a specified list of ERC-721 NFTs.
+This minter extends the functionality of the Dutch auction minter to allow only holders of a specific ERC-721 token to mint.
 
-Artists may use the artist dashboard to pre-select a list of allowlisted Art Blocks or Art Blocks Engine projects, of which any valid token holders will be able to purchase for the upcoming project. Note that a "snapshot" won't apply to this minter -- after the project has been made public, users can purchase a token from any allowlisted project and mint freely.
+### `Dutch auction - linear price decrease, token holders only`
 
-!!!info
-Note that vault delegation via [Delegate Cash](https://delegate.cash/) is available for the Token Holders Only minter. Only V1 of the delegation registry is supported at this time. For more details please visit this [video walkthrough](https://www.youtube.com/watch?v=2-AgG--zcaw&list=PLSNTJAzmISeZcLm19EhafsGjJXwwgzBbU&index=5).
-!!!
+This minter extends the functionality of the Dutch auction minter to allow only holders of a specific ERC-721 token to mint.
 
-### `Serial English Auction (SEA)`
+### `Ranked auction`
+
+The Ranked Auction minter allows for a ranked auction process where collectors can submit bids for a limited number of tokens. The highest bidders will receive tokens, while losing bidders will receive a refund.
+
+All winning bids pay the same price, which is the lowest winning bid.
+
+The ranked auction process happens non-custodially on-chain, and is scalable to arbitrarily large projects. Artists may incur gas costs associated with minting tokens for winning bidders.
+
+### `Serial English auction`
 
 The Serial English Auction (SEA) minter allows for a series of English auctions for individual tokens to be run in sequence. The minter was originally inspired by the popular [nouns.wtf](https://nouns.wtf/) project, and was implemented with minor adjustments to provide a seamless experience for Art Blocks artists and collectors.
 
@@ -102,7 +108,7 @@ The minter may be used for any project, and is certainly ideal for projects that
 
 Bids and auction parameters are stored on-chain, and the Art Blocks subgraph and API index all historical bids in [`bids_metadata`](https://docs.artblocks.io/public-api-docs/#definition-bids_metadata) as well as auction parameters in [`project_minter_configurations`](https://docs.artblocks.io/public-api-docs/#definition-project_minter_configurations).
 
-### `Set Price, Polyptych`
+### `polyptych (copy-hash) minter`
 
 This minter enables the artist to mint tokens with identical token hashes. This is useful for projects that are intended to be displayed as a polyptych.
 
@@ -116,8 +122,12 @@ Limited creator dashboard support is available for this minter at this time, so 
 
 Despite the complexity of this minter, the resulting outputs can be very powerful and rewarding for artists and collectors!
 
+### `polyptych (copy-hash) minter, custom ERC20`
+
+This minter extends the functionality of the polyptych minter to allow accepting any ERC20 token as payment for your sale of tokens.
+
 ## Custom, One-Off Minters
 
 Engine partners can also create custom, one-off minters for their projects. These minters are only available to projects on the Engine contract that approves them, extending the globally set of available minters for their contract.
 
-For more information about adding custom minters to your Engine contract, please see the [Minter Migration Runbok](./../art-blocks-engine-onboarding/art-blocks-engine-101/minter-suite-migration-runbook.md#adding-a-custom-one-off-minter-to-the-shared-minter-suite).
+For more information about adding custom minters to your Engine contract, please see the [custom minters page](./custom-minters).
