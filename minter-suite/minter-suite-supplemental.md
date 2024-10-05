@@ -12,7 +12,7 @@ The information below is generally most relevant for Engine core contract admins
 
 ## Auction Reset Process
 
-A subset of minters utilize automated, scheduled auctions to distribute artwork to collectors. The auction reset process is a mechanism that allows artists to pause and reschedule their auction, within certain limitations, if an issue arises during a live project release. Example situations may be:
+A subset of minters utilizes automated, scheduled auctions to distribute artwork to collectors. The auction reset process is a mechanism that allows artists to pause and reschedule their auction, within certain limitations, if an issue arises during a live project release. Example situations may be:
 
 - Unexpected website downtime
 - Artist unintentionally left project in a paused state
@@ -59,7 +59,7 @@ Ensure your collectors are aware of the new auction parameters, and enjoy the ne
 
 The Allowlist Minter uses a Merkle tree to gas-efficiently allow a set of addresses to mint tokens from a project.
 
-Merkle trees are a data structure that allow for efficient verification of whether a given element is contained in a set. In the case of the Allowlist Minter, the Merkle root is stored on-chain, and Merkle proofs are included with every purchase transaction to verify that a given address is allowed to mint a token.
+Merkle trees are a data structure that allows for efficient verification of whether a given element is contained in a set. In the case of the Allowlist Minter, the Merkle root is stored on-chain, and Merkle proofs are included with every purchase transaction to verify that a given address is allowed to mint a token.
 
 !!!info
 The information below is included to assist Engine partners in using the Allowlist minter with their projects. However, if using the shared minter suite, the Art Blocks subgraph and api are available to index Engine minter suite data, and this information is not required.
