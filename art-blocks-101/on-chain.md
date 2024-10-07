@@ -57,12 +57,12 @@ The metadata are stored on a server or cloud hosting service, such as AWS. This 
 
 ### Hash On-Chain
 
-The hash of the metadata is stored on-chain, and the metadata are stored on a server. Storing the hash of the metadata makes the NFT immutable, while keeping it much cheaper than storing all of the metadata on-chain. However, it has a few drawbacks:
+The hash of the metadata is stored on-chain, and the metadata is stored on a server. Storing the hash of the metadata makes the NFT immutable, while keeping it much cheaper than storing all of the metadata on-chain. However, it has a few drawbacks:
 
 - The metadata can be lost if the server goes down or an admin decides not to discontinue paying for the service.
 - The metadata can be censored by the server owner.
 
-Projects such as CryptoPunks originally stored the hash of the metadata on-chain, but the metadata were stored on a server. They have since upgraded to a fully on-chain solution.
+Projects such as CryptoPunks originally stored the hash of the metadata on-chain, but the metadata was stored on a server. They have since upgraded to a fully on-chain solution.
 
 ### Decentralized Storage Network
 

@@ -101,7 +101,7 @@ The minters provided by Art Blocks are intended to follow our design principles 
 
 For example, if a highly-anticipated project is sold at a low fixed-price, it is likely that bots will be able to mint a large number of generative art pieces. However, if a less-anticipated project is sold at a fixed-price, it is likely that bots will not mint a large number of generative art pieces because the speculative value of the generative art piece is not high enough to flip for a short-term profit.
 
-The minters provided by Art Blocks are not inherently fair or unfair in nature, but that when used carefully, they can provide a minting experience that stays true to our principles while also providing some amount of fairness. We believe that it is important for artists to understand the tradeoffs of each minter, and to choose the minter(s) that best fits their project's goals.
+The minters provided by Art Blocks are not inherently fair or unfair in nature, but when used carefully, they can provide a minting experience that stays true to our principles while also providing some amount of fairness. We believe that it is important for artists to understand the tradeoffs of each minter, and to choose the minter(s) that best fits their project's goals.
 
 ## Minter Suite
 
