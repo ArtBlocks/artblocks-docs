@@ -108,7 +108,19 @@ The minter may be used for any project, and is certainly ideal for projects that
 
 Bids and auction parameters are stored on-chain, and the Art Blocks subgraph and API index all historical bids in [`bids_metadata`](https://docs.artblocks.io/public-api-docs/#definition-bids_metadata) as well as auction parameters in [`project_minter_configurations`](https://docs.artblocks.io/public-api-docs/#definition-project_minter_configurations).
 
-### `polyptych (copy-hash) minter`
+### `Minimum price minter`
+
+This minter enables artists to distribute tokens at a minimal price to collectors.
+
+A small mint fee is sent to the render provider to help with the costs of rendering and indexing tokens.
+
+## `Minimum price minter, allowlisted users only`
+
+This minter enables artists to distribute tokens at a minimal price to an allowlisted set of collectors. The allowlist can be configured to limit minting to a predetermined list of wallet addresses, and artists can specify the number of mints allowed per wallet.
+
+A small mint fee is sent to the render provider to help with the costs of rendering and indexing tokens.
+
+### `Polyptych (copy-hash) minter`
 
 This minter enables the artist to mint tokens with identical token hashes. This is useful for projects that are intended to be displayed as a polyptych.
 
@@ -122,7 +134,7 @@ Limited creator dashboard support is available for this minter at this time, so 
 
 Despite the complexity of this minter, the resulting outputs can be very powerful and rewarding for artists and collectors!
 
-### `polyptych (copy-hash) minter, custom ERC20`
+### `Polyptych (copy-hash) minter, custom ERC20`
 
 This minter extends the functionality of the polyptych minter to allow accepting any ERC20 token as payment for your sale of tokens.
 
