@@ -117,7 +117,7 @@ Description: Get specific details on the Art Blocks Core registry. At this time,
 | Field               | Type        | Description                                                                                                                                                                                               |
 | ------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id                  | ID!         | Unique identifier made up of the Core Registry's contract address. note: for legacy MinterFilters, this is a dummy ID, equal to the address of the single core contract associated with the minter filter |
-| registeredContracts | [Contract!] | All core contracts that are registered on this CoreRegistry, when this is most recent Core Registry to add the contract                                                                                   |
+| registeredContracts | [Contract!] | All core contracts that are registered on this CoreRegistry, when this is the most recent Core Registry to add the contract                                                                                   |
 
 # Contract
 

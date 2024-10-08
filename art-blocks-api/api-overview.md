@@ -264,7 +264,7 @@ Additionally, the minter's `extraMinterDetails` will contain a JSON string that 
 
 > note: if querying the Hasura GraphQL API, use `minters_metadata` instead of `minters`, and the returned type will be a JSONB
 
-All of these queries can help you to obtain information about a project's minter configuration, which can be used to display purchase information for the project on your website's. The data are available on both the subgraph, and the Hasura GraphQL API.
+All of these queries can help you to obtain information about a project's minter configuration, which can be used to display purchase information for the project on your website. The data are available on both the subgraph, and the Hasura GraphQL API.
 
 ## GraphQL API
 
