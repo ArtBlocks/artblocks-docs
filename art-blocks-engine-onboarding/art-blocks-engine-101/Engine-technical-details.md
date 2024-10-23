@@ -100,7 +100,7 @@ Note that for IPFS/Arweave external asset dependencies if your CID is pointing t
 
 ## Leveraging the Art Blocks Dependency Registry
 
-If you want to include additional libraries (e.g., p5.js, three.js) supported by the Art Blocks Dependency Registry, you can add them to your project's external asset dependencies. Libraries that are fully on-chain will be clearly labeled in the drop-down as <script_type_and_version> (fully on-chain).
+If you want to include additional libraries (e.g., Tone.js) supported by the Art Blocks Dependency Registry, you can add them to your project's external asset dependencies. Libraries that are fully on-chain will be clearly labeled in the drop-down as <script_type_and_version> (fully on-chain).
 
 ![The drop-down label for the flex asset.](/static/screenshot4.png)
 
