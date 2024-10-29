@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.783110110059">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.783525977999">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -24,21 +24,23 @@
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-technical-details/">
     <meta property="og:title" content="Art Blocks Engine Flex Technical Details">
     <meta property="og:description" content="This page goes deeper into some technical considerations when working with the most current version of Artblocks Engine Flex.">
+    <meta property="og:image" content="https://docs.artblocks.io/static/screenshot4.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/art-blocks-engine-onboarding/art-blocks-engine-101/engine-technical-details/">
     <meta property="twitter:title" content="Art Blocks Engine Flex Technical Details">
     <meta property="twitter:description" content="This page goes deeper into some technical considerations when working with the most current version of Artblocks Engine Flex.">
+    <meta property="twitter:image" content="https://docs.artblocks.io/static/screenshot4.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=3.6.0.783110110059" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=3.6.0.783525977999" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.6.0.783110110059" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=3.6.0.783525977999" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.6.0.783110110059" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.6.0.783110110059" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=3.6.0.783525977999" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=3.6.0.783525977999" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -361,6 +363,18 @@ string public preferredArweaveGateway;</code></pre>
 </doc-codeblock></div>
 <p>Your project script can then easily make use of these dependencies by combining the CID of the asset with the appropriate gateway, if you are dealing with IPFS/Arweave dependencies. As a simple example: If you have an external asset dependency with a CID <code v-pre>QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code> and a dependencyType of <code v-pre>IPFS</code>, you can construct the full url of your external asset dependency by combining the <code v-pre>preferredIPFSGateway</code>, which let&#x27;s assume is <code v-pre>https://ipfs.io/ipfs/</code>, with the asset CID. This gives you the full url of the asset, <code v-pre>https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code>, and allows your project script to download it with <code v-pre>fetch</code> and use it as it sees fit. For fully onchain external asset dependencies, the full data string that is stored on the blockchain will be injected.</p>
 <p>Note that for IPFS/Arweave external asset dependencies if your CID is pointing to a directory of assets, rather than a single asset, your project script will need to be aware of the file naming structure of this directory to fetch the assets individually. Using the previous example, imagine that CID <code v-pre>QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code> was pointing to a directory of 10 PNG images, with filenames corresponding to the numbers 1-10. Your project script would generate the same full url with the information provided, <code v-pre>https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg</code>, but also append the specific file you want to fetch by being aware of the naming conventions, ie <code v-pre>https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg/1.png</code>.</p>
+<doc-anchor-target id="leveraging-the-art-blocks-dependency-registry">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#leveraging-the-art-blocks-dependency-registry">#</doc-anchor-trigger>
+        <span>Leveraging the Art Blocks Dependency Registry</span>
+    </h2>
+</doc-anchor-target>
+<p>If you want to include additional libraries (e.g., Tone.js) supported by the Art Blocks Dependency Registry, you can add them to your project&#x27;s external asset dependencies. Libraries that are fully on-chain will be clearly labeled in the drop-down as &lt;script_type_and_version&gt; (fully on-chain).</p>
+<p><figure class="content-center">
+    <img src="../../../../static/screenshot4.png" alt="The drop-down label for the flex asset.">
+    <figcaption class="caption">The drop-down label for the flex asset.</figcaption>
+</figure>
+</p>
 <doc-anchor-target id="loading-js-libraries-as-external-asset-dependencies">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#loading-js-libraries-as-external-asset-dependencies">#</doc-anchor-trigger>
