@@ -14,6 +14,7 @@ The Art Blocks Generator builds an html document that includes:
 - A `tokenData` object that contains on-chain metadata for the NFT, including the token's hash and ID.
 - The artist's on-chain project script
 - (optional) A dependency used by the script. p5js, for example, is a common dependency.
+- (optional) For flex projects, external asset dependencies from the Art Blocks Dependency Registry.
 
 The HTML document created by the Generator may look something like the following:
 
@@ -21,6 +22,9 @@ The HTML document created by the Generator may look something like the following
 <html>
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script>
+      // Dependencies from the Art Blocks Dependency Registry injected here if populated in the Flex project
+    </script>
     <script>
       let tokenData = {
         hash: "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",

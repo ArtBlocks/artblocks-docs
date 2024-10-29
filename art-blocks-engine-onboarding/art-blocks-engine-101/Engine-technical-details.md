@@ -98,6 +98,12 @@ Your project script can then easily make use of these dependencies by combining 
 
 Note that for IPFS/Arweave external asset dependencies if your CID is pointing to a directory of assets, rather than a single asset, your project script will need to be aware of the file naming structure of this directory to fetch the assets individually. Using the previous example, imagine that CID `QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg` was pointing to a directory of 10 PNG images, with filenames corresponding to the numbers 1-10. Your project script would generate the same full url with the information provided, `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg`, but also append the specific file you want to fetch by being aware of the naming conventions, ie `https://ipfs.io/ipfs/QmXxgX5Qyhqz1t9wDFkvJtjVKYe1f8Uj714RV2n1LS76Pg/1.png`.
 
+## Leveraging the Art Blocks Dependency Registry
+
+If you want to include additional libraries (e.g., Tone.js) supported by the Art Blocks Dependency Registry, you can add them to your project's external asset dependencies. Libraries that are fully on-chain will be clearly labeled in the drop-down as <script_type_and_version> (fully on-chain).
+
+![The drop-down label for the flex asset.](/static/screenshot4.png)
+
 ## Loading JS Libraries As External Asset Dependencies
 
 If you are specifically looking to utilize an IPFS/ARWEAVE type external asset dependency as a JavaScript library in your project script, you cannot simply add it as a script element onto the page. You must load it in a blocking manner so that the browser does not attempt to run your project script code before the lib is fully loaded. Here is an example of how to do this with ES6 dynamic imports (supported by most modern browsers: https://caniuse.com/es6-module-dynamic-import):
