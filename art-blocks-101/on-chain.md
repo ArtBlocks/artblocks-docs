@@ -11,6 +11,8 @@ An overview of NFT metadata storage philosophy and implementations at Art Blocks
 
 Art Blocks tokens store their metadata fully on-chain, ensuring collectors that their NFTs will always remain accessible and immutable.
 
+Token outputs are assembled on-chain by the Art Blocks On-Chain Generator, which retrieves the token's script and dependencies from the blockchain and assembles them into an HTML document that can be viewed in a web browser.
+
 For projects that require dependencies (e.g. p5js), Art Blocks provides the [Art Blocks Dependency Registry](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/README.md#dependencyregistry), a fully on-chain software registry that can be used to optionally store dependency releases on-chain, as well as reference preferred software storage networks.
 
 Art Blocks Engine Flex NFTs also provide the option to store metadata on decentralized storage networks, such as IPFS or Arweave, to enable larger sized assets to be used when generating outputs.
@@ -29,6 +31,11 @@ erDiagram
     ArtBlocks-Project }|..o{ Flex-Dependencies: engine-flex-only
     Flex-Dependencies }|--o{ IPFS-Arweave-Assets: may-include
     Flex-Dependencies ||--o{ On-Chain-Assets: may-include
+    On-Chain-Generator ||--o{ ArtBlocks-Project: retrieves-on-chain-data
+    On-Chain-Generator ||..o{ Flex-Dependencies: engine-flex-only
+    On-Chain-Generator ||--o{ ArtBlocks-Dependency-Registry: retrieves-on-chain-data
+    Web-Browser }|--|| On-Chain-Generator: assembles-html-and-displays-token
+    Flex-Dependencies }|--|{ ArtBlocks-Dependency-Registry: may-include-assets-on
 ```
 
 ## Overview of NFT Metadata Storage Options
@@ -91,6 +98,22 @@ While Art Blocks originally relied on widely used software registries to house d
 Art Blocks Engine Flex NFTs provide an additional option for storing metadata. Flex NFTs can store metadata on-chain, or they can store the metadata immutably on the IPFS or Arweave decentralized storage networks. This allows Flex NFTs to utilize larger sized assets when generating outputs, while still providing the option for fully on-chain metadata where possible.
 
 ## Examples
+
+## On-Chain Generator Example
+
+Let's review an example of how to retrieve the html that allows your browser to view the output of the first Art Blocks Token, token zero of project 0, [Chromie Squiggle by Snowfro](https://www.artblocks.io/marketplace/asset/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a/0).
+
+1. Visit the Art Blocks On-Chain Generator on Etherscan: [0x953D288708bB771F969FCfD9BA0819eF506Ac718](https://etherscan.io/address/0x953D288708bB771F969FCfD9BA0819eF506Ac718#readProxyContract)
+
+2. Get the html for token 0 by calling the `getTokenHtml` function with the core contract address `0x059edd72cd353df5106d2b9cc5ab83a52287ac3a` and token ID `0` as the input parameters:
+
+![onChainHtml](/static/onChainHtml.png)
+
+3. The returned text is the html that is used to generate the token's output. You can also copy and paste a base64-encoded version of this html in your browser to view the token's output! Use the function `getTokenHtmlBase64EncodedDataUri` to get the base64-encoded version of the html, and paste it into your browser's address bar to view the token's output.
+
+![onChainHtmlBase64](/static/onChainSquig.png)
+
+This process of retrieving and viewing tokens is streamlined in our open source [on-chain generator viewer](https://github.com/ArtBlocks/on-chain-generator-viewer)
 
 ## On-Chain Script Example
 
