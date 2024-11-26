@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.785957240110">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.785975788470">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -24,22 +24,22 @@
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/art-blocks-101/on-chain/">
     <meta property="og:title" content="NFT Metadata Storage at Art Blocks">
     <meta property="og:description" content="An overview of different NFT metadata storage mechanisms used by Art Blocks NFTs.">
-    <meta property="og:image" content="https://docs.artblocks.io/static/projectdetails.png">
+    <meta property="og:image" content="https://docs.artblocks.io/static/onchainhtml.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/art-blocks-101/on-chain/">
     <meta property="twitter:title" content="NFT Metadata Storage at Art Blocks">
     <meta property="twitter:description" content="An overview of different NFT metadata storage mechanisms used by Art Blocks NFTs.">
-    <meta property="twitter:image" content="https://docs.artblocks.io/static/projectdetails.png">
+    <meta property="twitter:image" content="https://docs.artblocks.io/static/onchainhtml.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.6.0.785957240110" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.785975788470" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.785957240110" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.785975788470" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.785957240110" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.785975788470" data-turbo-eval="false" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../../resources/js/mermaid.js?v=3.6.0" defer></script>
 </head>
 <body>
@@ -256,6 +256,7 @@
     </h2>
 </doc-anchor-target>
 <p>Art Blocks tokens store their metadata fully on-chain, ensuring collectors that their NFTs will always remain accessible and immutable.</p>
+<p>Token outputs are assembled on-chain by the Art Blocks On-Chain Generator, which retrieves the token&#x27;s script and dependencies from the blockchain and assembles them into an HTML document that can be viewed in a web browser.</p>
 <p>For projects that require dependencies (e.g. p5js), Art Blocks provides the <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/README.md#dependencyregistry" class="outbound" target="_blank"><span>Art Blocks Dependency Registry</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, a fully on-chain software registry that can be used to optionally store dependency releases on-chain, as well as reference preferred software storage networks.</p>
 <p>Art Blocks Engine Flex NFTs also provide the option to store metadata on decentralized storage networks, such as IPFS or Arweave, to enable larger sized assets to be used when generating outputs.</p>
 <div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">erDiagram
@@ -270,7 +271,12 @@
     Dependency ||--|{ Preferred-Software-Registries: points-to
     ArtBlocks-Project }|..o{ Flex-Dependencies: engine-flex-only
     Flex-Dependencies }|--o{ IPFS-Arweave-Assets: may-include
-    Flex-Dependencies ||--o{ On-Chain-Assets: may-include</pre></div>
+    Flex-Dependencies ||--o{ On-Chain-Assets: may-include
+    On-Chain-Generator ||--o{ ArtBlocks-Project: retrieves-on-chain-data
+    On-Chain-Generator ||..o{ Flex-Dependencies: engine-flex-only
+    On-Chain-Generator ||--o{ ArtBlocks-Dependency-Registry: retrieves-on-chain-data
+    Web-Browser }|--|| On-Chain-Generator: assembles-html-and-displays-token
+    Flex-Dependencies }|--|{ ArtBlocks-Dependency-Registry: may-include-assets-on</pre></div>
 <doc-anchor-target id="overview-of-nft-metadata-storage-options">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#overview-of-nft-metadata-storage-options">#</doc-anchor-trigger>
@@ -403,6 +409,33 @@
         <span>Examples</span>
     </h2>
 </doc-anchor-target>
+<doc-anchor-target id="on-chain-generator-example">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#on-chain-generator-example">#</doc-anchor-trigger>
+        <span>On-Chain Generator Example</span>
+    </h2>
+</doc-anchor-target>
+<p>Let&#x27;s review an example of how to retrieve the html that allows your browser to view the output of the first Art Blocks Token, token zero of project 0, <a href="https://www.artblocks.io/marketplace/asset/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a/0" class="outbound" target="_blank"><span>Chromie Squiggle by Snowfro</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<ol>
+<li><p>Visit the Art Blocks On-Chain Generator on Etherscan: <a href="https://etherscan.io/address/0x953D288708bB771F969FCfD9BA0819eF506Ac718#readProxyContract" class="outbound" target="_blank"><span>0x953D288708bB771F969FCfD9BA0819eF506Ac718</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+</li>
+<li><p>Get the html for token 0 by calling the <code v-pre>getTokenHtml</code> function with the core contract address <code v-pre>0x059edd72cd353df5106d2b9cc5ab83a52287ac3a</code> and token ID <code v-pre>0</code> as the input parameters:</p>
+</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../../static/onchainhtml.png" alt="onChainHtml">
+    <figcaption class="caption">onChainHtml</figcaption>
+</figure>
+</p>
+<ol start="3">
+<li>The returned text is the html that is used to generate the token&#x27;s output. You can also copy and paste a base64-encoded version of this html in your browser to view the token&#x27;s output! Use the function <code v-pre>getTokenHtmlBase64EncodedDataUri</code> to get the base64-encoded version of the html, and paste it into your browser&#x27;s address bar to view the token&#x27;s output.</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../../static/onchainsquig.png" alt="onChainHtmlBase64">
+    <figcaption class="caption">onChainHtmlBase64</figcaption>
+</figure>
+</p>
+<p>This process of retrieving and viewing tokens is streamlined in our open source <a href="https://github.com/ArtBlocks/on-chain-generator-viewer" class="outbound" target="_blank"><span>on-chain generator viewer</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <doc-anchor-target id="on-chain-script-example">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#on-chain-script-example">#</doc-anchor-trigger>

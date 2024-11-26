@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.785957240110">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.785975788470">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.6.0.785957240110" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.785975788470" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.785957240110" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.785975788470" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.785957240110" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.785957240110" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.785975788470" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.785975788470" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -342,6 +342,14 @@
 <li><code v-pre>&quot;ART_BLOCKS_DEPENDENCY_REGISTRY&quot;</code></li>
 </ul>
 <p>Note that project scripts are responsible for fetching any IPFS or Arweave assets.</p>
+<p>For &quot;ART_BLOCKS_DEPENDENCY_REGISTRY&quot; dependencies, the <code v-pre>cid</code> field will be the dependency&#x27;s registry key, the data field will remain null, and additional script tag(s) will be injected into the html document to load the dependency.</p>
+<p>For example, the following script tag would be injected into the html document for a dependency with the key <code v-pre>p5js@1.9.0</code>:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>If a dependency has been uploaded to the Art Blocks Dependency Registry, the on-chain generator will automatically inject the appropriate script tag(s) into the html document.</p>
+</blockquote>
 <doc-anchor-target id="learning-more">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#learning-more">#</doc-anchor-trigger>
