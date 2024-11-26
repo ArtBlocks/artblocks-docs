@@ -1,3 +1,8 @@
+---
+order: 1100
+description: A technical overview of the on-chain generator and introduction to the ecosystem of preservation projects at Art Blocks.
+---
+
 # Introducing the On-Chain Generator
 
 *by Ben Yoshiwara*
