@@ -5,7 +5,7 @@ description: A technical overview of the on-chain generator and introduction to 
 
 # Introducing the On-Chain Generator
 
-_by Ben Yoshiwara_
+*by Ben Yoshiwara*
 
 Art Blocks is excited to announce a new advancement in our commitment to preserving the unique digital artworks created on our platform: the deployment of our on-chain generator contract. This represents a step forward in ensuring the perpetual availability and accessibility of Art Blocks pieces.
 
