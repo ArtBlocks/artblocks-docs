@@ -88,6 +88,16 @@ The `dependency_type` field will be one of the following values:
 
 Note that project scripts are responsible for fetching any IPFS or Arweave assets.
 
+For "ART_BLOCKS_DEPENDENCY_REGISTRY" dependencies, the `cid` field will be the dependency's registry key, the data field will remain null, and additional script tag(s) will be injected into the html document to load the dependency.
+
+For example, the following script tag would be injected into the html document for a dependency with the key `p5js@1.9.0`:
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+```
+
+> If a dependency has been uploaded to the Art Blocks Dependency Registry, the on-chain generator will automatically inject the appropriate script tag(s) into the html document.
+
 ## Learning More
 
 For additional technical resources and documentation, please refer to the Technical Requirements described in the [help.artblocks.io documentation](https://help.artblocks.io/Technical-Requirements-7f9a9aaf39ea4f20b2d5b948cf08d5aa).
