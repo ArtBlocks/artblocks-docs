@@ -12,10 +12,6 @@ In the past, viewing an Art Blocks piece relied on a centralized [generator](htt
 
 This new on-chain generator removes the need for that backend entirely, allowing anyone to retrieve any Art Blocks artwork entirely using just a single call to our smart contract.
 
-![Diagram of old system with 3 inputs (p5js, HTML template, artwork js), processing (a cloud icon), and output (a pretty artwork)](#)
-
-![Diagram of new system with one contract call and pretty artwork, showing simplified/purified backend](#)
-
 We’ve ensured that the complete process of generating viewable Art Blocks pieces is now preserved on-chain. This means that even in the distant future, these artworks can be reconstructed and displayed using only the information stored on the Ethereum blockchain, aligning with Art Blocks’ broader efforts in digital art preservation. While our conventional web server-based generator will remain the primary way to view Art Blocks pieces, this on-chain preservation secures their longevity and accessibility for generations to come.
 
 ## Why This Matters
