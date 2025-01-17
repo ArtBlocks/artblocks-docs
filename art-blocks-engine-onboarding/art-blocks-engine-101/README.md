@@ -57,7 +57,7 @@ A high-level process map for Art Blocks Engine onboarding.
     // Check that the user has the required amount of ERC-20
     const balance = await erc20.balanceOf(userAddress)
     if (balance.lt(pricePerTokenInWei)) {
-      // Show insufficent funds error
+      // Show insufficient funds error
       return
     }
     
