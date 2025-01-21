@@ -27,7 +27,7 @@ The following principles, when used together, are important ideals that we belie
 
 #### 1. Transparency
 
-We believe that minting should be transparent and easy to understand for collectors. Verified source code is provided for all minter smart contracts, and we develop our minters publically in our open source [GitHub repository](https://github.com/ArtBlocks/artblocks-contracts).
+We believe that minting should be transparent and easy to understand for collectors. Verified source code is provided for all minter smart contracts, and we develop our minters publicly in our open source [GitHub repository](https://github.com/ArtBlocks/artblocks-contracts).
 
 #### 2. Decentralized & Trust-Minimized
 

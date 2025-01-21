@@ -15,6 +15,6 @@ The V3 Core Contract comes in two variants:
 
 Both of these implementations are available for use by Art Blocks Studio artists and Engine partners.
 
-The V3 Engine contract offers the same functionality as the original Art Blocks contract, with an artist's script being fully defined only on the blockchain. The V3 Engine Flex extends the ways artists may store additional metadata, with options of using re-usable on-chain assets, using decentralized storage networks such as IPFS or Arweave, or pointing to assets defined on the Art Blocks Dependency Registry (some of which are fully defined on-chain, some of which are defined on preferred CDN services).
+The V3 Engine contract offers the same functionality as the original Art Blocks contract, with an artist's script being fully defined only on the blockchain. The V3 Engine Flex extends the ways artists may store additional metadata, with options of using reusable on-chain assets, using decentralized storage networks such as IPFS or Arweave, or pointing to assets defined on the Art Blocks Dependency Registry (some of which are fully defined on-chain, some of which are defined on preferred CDN services).
 
 For more discussion about different NFT metadata storage mechanisms, see the [NFT Metadata Storage at Art Blocks](/art-blocks-101/on-chain.md) page.
