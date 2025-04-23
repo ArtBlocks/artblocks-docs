@@ -188,3 +188,5 @@ The Art Blocks team has published a few examples of live data hooks in the [Art 
 - injecting Chromie Squiggle's floor price
 - injecting block parameters such as gas price
 - injecting the result of a chainlink oracle
+
+Configuring hooks is not currently available in the creator dashboard, but can be easily configured with tools like etherscan. Please reach out to the Art Blocks team if you would like to explore this.
