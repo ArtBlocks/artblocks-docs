@@ -83,6 +83,9 @@ The following is a simple example of how to access an integer parameter in your 
 
 ```javascript
 // Typically, the first external asset dependency is the PMP.
+// You can check your project configuration on Art Blocks Creator Dashboard
+// under Scripts => Flex Assets, and the PMP asset will show up as the
+// external asset dependency with text "#web3call-contract#"
 const pmp = tokenData.externalAssetDependencies[0];
 
 // helper function to parse PMP integer values, or fallback
