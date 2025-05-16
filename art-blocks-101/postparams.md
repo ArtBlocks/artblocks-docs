@@ -168,13 +168,19 @@ const name = pp?.data?.["Name"] ?? null;
 // --- END ACCESSING PostParams ---
 ```
 
-## Linking PostParams to features
+## PostParams as token features
 
-If a parameter has the same name as a feature, it will override the feature. For example, if you have a feature named `Color` and a parameter named `Color`, the parameter will override the feature after it is configured. Upon each re-configuration, the token's features will be updated to match the configured parameter value.
+Token features, for example `type: bold` on the Chromie Squiggle, are a way to enrich your tokens with artist-specified metadata.
+
+PostParams may be used as token features, and will override the feature if a PostParam with the same name exists.
+
+For example, if you have a feature named `Color` and a PostParam named `Color`, the PostParam will override the feature's value after it is configured. Upon each re-configuration, the token's features will be updated to match the configured PostParam value.
+
+Additionally, PostParams will be injected into a project's features script, allowing the features script to translate from a PostParam to whatever feature is desired. This enables more complex parsing and translation of PostParams to features that the more simple by-name override method cannot. The `tokenData` object in the features script contains external asset dependencies in the same format as the `tokenData` object in the project script.
 
 ## Updating PostParams
 
-PostParams may be updated at any time, provided the connected wallet has authority to change PostParams for the token, or is a valid delegate for the token on delegate.xyz v2. The parameter must also not be locked.
+PostParams may be updated at any time, provided the connected wallet has authority to change PostParams for the token, or is a valid delegate for the token on delegate.xyz v2. The parameter must also not be locked (see next section).
 
 ## Locking PostParams
 
