@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.800382882881">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.800989469330">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.8.1">
@@ -33,12 +33,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.8.1.800382882881" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.8.1.800989469330" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.8.1.800382882881" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.8.1.800989469330" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.8.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.8.1.800382882881" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.8.1.800382882881" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.8.1.800989469330" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.8.1.800989469330" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -443,20 +443,23 @@ const name = pp?.data?.[&quot;Name&quot;] ?? null;
 
 // --- END ACCESSING PostParams ---</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="linking-postparams-to-features">
+<doc-anchor-target id="postparams-as-token-features">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#linking-postparams-to-features">#</doc-anchor-trigger>
-        <span>Linking PostParams to features</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#postparams-as-token-features">#</doc-anchor-trigger>
+        <span>PostParams as token features</span>
     </h2>
 </doc-anchor-target>
-<p>If a parameter has the same name as a feature, it will override the feature. For example, if you have a feature named <code v-pre>Color</code> and a parameter named <code v-pre>Color</code>, the parameter will override the feature after it is configured. Upon each re-configuration, the token&#x27;s features will be updated to match the configured parameter value.</p>
+<p>Token features, for example <code v-pre>type: bold</code> on the Chromie Squiggle, are a way to enrich your tokens with artist-specified metadata.</p>
+<p>PostParams may be used as token features, and will override the feature if a PostParam with the same name exists.</p>
+<p>For example, if you have a feature named <code v-pre>Color</code> and a PostParam named <code v-pre>Color</code>, the PostParam will override the feature&#x27;s value after it is configured. Upon each re-configuration, the token&#x27;s features will be updated to match the configured PostParam value.</p>
+<p>Additionally, PostParams will be injected into a project&#x27;s features script, allowing the features script to translate from a PostParam to whatever feature is desired. This enables more complex parsing and translation of PostParams to features that the more simple by-name override method cannot. The <code v-pre>tokenData</code> object in the features script contains external asset dependencies in the same format as the <code v-pre>tokenData</code> object in the project script.</p>
 <doc-anchor-target id="updating-postparams">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#updating-postparams">#</doc-anchor-trigger>
         <span>Updating PostParams</span>
     </h2>
 </doc-anchor-target>
-<p>PostParams may be updated at any time, provided the connected wallet has authority to change PostParams for the token, or is a valid delegate for the token on delegate.xyz v2. The parameter must also not be locked.</p>
+<p>PostParams may be updated at any time, provided the connected wallet has authority to change PostParams for the token, or is a valid delegate for the token on delegate.xyz v2. The parameter must also not be locked (see next section).</p>
 <doc-anchor-target id="locking-postparams">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#locking-postparams">#</doc-anchor-trigger>
