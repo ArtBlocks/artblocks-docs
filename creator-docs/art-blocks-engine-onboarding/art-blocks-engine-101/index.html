@@ -6,10 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.801173606308">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.9.0.802368754781">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.8.1">
+    <meta name="generator" content="Retype 3.9.0">
 
     <!-- Primary Meta Tags -->
     <title>Art Blocks Engine 101</title>
@@ -31,13 +31,14 @@
     <meta property="twitter:title" content="Art Blocks Engine 101">
     <meta property="twitter:description" content="Interested in learning about an Art Blocks Engine partnership? Email engine@artblocks.io to get the conversation started!">
 
-    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.8.1.801173606308" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.9.0.802368754781" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.8.1.801173606308" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.8.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.8.1.801173606308" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.9.0.802368754781" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.9.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.9.0.802368754781" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.9.0.802368754781" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -58,7 +59,7 @@
                                 <img class="max-h-10 hidden dark:inline-block" src="../../../static/squiglogo.png">
                             </span>
                             <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Art Blocks</span>
-                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
+                        </a><span class="hidden mt-1 px-2 py-1 ml-4 text-xs font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-md md:inline-block">Docs</span>
                     </div>
         
                     <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -271,16 +272,15 @@
 </li>
 <li>Your team will integrate a custom web frontend with your deployed Engine smart contracts (e.g., implementing their own purchase + display flow) and with the Art Blocks API as needed. An example of frontend purchase flow logic is provided here as a reference for integrating partners:</li>
 </ol>
-<details>
-  <summary>Example frontend purchase flow logic in JavaScript</summary>
-  
-  ```js
-  /** CONNECTION **/
+<doc-panel id="example-frontend-purchase-flow-logic-in-javascript" collapsed>
+    <template #title>Example frontend purchase flow logic in JavaScript</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">  /** CONNECTION **/
   // A Web3Provider wraps a standard Web3 provider, which is
   // what Metamask injects as window.ethereum into each page
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   // Connect to Dapp. This should happen in response to a user interaction
-  await provider.send("eth_requestAccounts", []);
+  await provider.send(&quot;eth_requestAccounts&quot;, []);
   // A signer is required to make any write transactions
   const signer = provider.getSigner();
   const userAddress = await signer.getAddress()
@@ -289,20 +289,20 @@
   // Check that the project is unpaused, active, and
   // has not yet reached its maxInvocations. Also get
   // price per token.
-  const genArt = new ethers.Contract('<CORE CONTRACT ADDRESS>', GEN_ART_ABI, provider)
-  const { paused } = await genArt.projectScriptInfo('<PROJECT ID>')
-  const { invocations, maxInvocations, pricePerTokenInWei, active, currencyAddress } = await genArt.projectTokenInfo('<PROJECT ID>')
-  if (Number(invocations) >= Number(maxInvocations) || paused || !active) {
+  const genArt = new ethers.Contract('&lt;CORE CONTRACT ADDRESS&gt;', GEN_ART_ABI, provider)
+  const { paused } = await genArt.projectScriptInfo('&lt;PROJECT ID&gt;')
+  const { invocations, maxInvocations, pricePerTokenInWei, active, currencyAddress } = await genArt.projectTokenInfo('&lt;PROJECT ID&gt;')
+  if (Number(invocations) &gt;= Number(maxInvocations) || paused || !active) {
     // Disable purchase
     return
   }
   
   /** PRE PURCHASE (ERC-20) **/
   const NULL_ADDRESS = '0x0000000000000000000000000000000000000000'
-  const projectUsesErc20 = currencyAddress && currencyAddress !== NULL_ADDRESS
+  const projectUsesErc20 = currencyAddress &amp;&amp; currencyAddress !== NULL_ADDRESS
   if (projectUsesErc20) {
     // Set up ERC-20 contract
-    const erc20 = new ethers.Contract('<ERC-20 CONTRACT ADDRESS>', ERC20_ABI, signer)
+    const erc20 = new ethers.Contract('&lt;ERC-20 CONTRACT ADDRESS&gt;', ERC20_ABI, signer)
     
     // Check that the user has the required amount of ERC-20
     const balance = await erc20.balanceOf(userAddress)
@@ -314,14 +314,14 @@
     // Check allowance for minterAddress allowed by user
     const allowance = await erc20.allowance(
       userAddress,
-      '<MINTER CONTRACT ADDRESS>'
+      '&lt;MINTER CONTRACT ADDRESS&gt;'
     )
     
     // If the user has not yet allowed enough of their ERC-20 to be used
     // by the minter, have them approve enough.
     if (allowance.lt(pricePerTokenInWei)) {
       // Trigger user wallet dialogue. This should be done in response to user interaction.
-      const approveTransaction = await erc20.approve('<MINTER CONTRACT ADDRESS>', pricePerTokenInWei)
+      const approveTransaction = await erc20.approve('&lt;MINTER CONTRACT ADDRESS&gt;', pricePerTokenInWei)
       // Wait for approve transaction confirmation
       await approveTransaction.wait(1)
     }
@@ -329,10 +329,10 @@
   
   /** PURCHASE **/
   // Set up minter contract connected to users wallet
-  const minter = new ethers.Contract('<MINTER CONTRACT ADDRESS>', MINTER_ABI, signer);
+  const minter = new ethers.Contract('&lt;MINTER CONTRACT ADDRESS&gt;', MINTER_ABI, signer);
   // Initiate purchase transaction (user must confirm through metamask).
   // If paying in ether, we must include a payable value otherwise payable value will be 0.
-  const transaction = await minter.purchase('<PROJECT ID>', { value: projectUsesErc20 ? '0' : pricePerTokenInWei})
+  const transaction = await minter.purchase('&lt;PROJECT ID&gt;', { value: projectUsesErc20 ? '0' : pricePerTokenInWei})
   // Wait for the transaction to be confirmed. The number passed to the wait function specifies the
   // number of block confirmations to wait for.  You may want to wait longer than a single
   // block to prevent showing the wrong output in case of a chain reorg. The Art Blocks site
@@ -340,11 +340,11 @@
   const receipt = await transaction.wait(3)
   // Iterate through events to find mint event
   const mintEvent = (receipt.events || []).find(
-    (receiptEvent) => {
+    (receiptEvent) =&gt; {
       const event = genArt.interface.getEvent(
         receiptEvent.topics[0]
       )
-      return event && event.name === 'Mint'
+      return event &amp;&amp; event.name === 'Mint'
     }
   )
   
@@ -358,10 +358,9 @@
   const tokenIdBigNum = mintEventDecoded['_tokenId']
   // Token ID as string
   const tokenId = tokenIdBigNum.toString()
-  // Use the token id to display the newly minted token with the iframe'd generator
-  ```
-</details>
-   
+  // Use the token id to display the newly minted token with the iframe'd generator</code></pre>
+</doc-codeblock></div>
+</doc-panel>
 <ol start="5">
 <li>Your team will use <a href="https://artist-staging.artblocks.io" class="outbound" target="_blank"><span>https://artist-staging.artblocks.io</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> site to upload your project script source code and configure all project metadata details:</li>
 </ol>
@@ -432,7 +431,7 @@
                                     </a>
                                 </div>
                             
-                                <nav class="flex mt-14">
+                                <nav class="print:hidden flex mt-14">
                                     <div class="w-1/2">
                                         <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../creator-docs/art-blocks-101/postparams/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
@@ -456,13 +455,13 @@
                             </footer>
                         </main>
                 
-                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
-                            <footer class="flex flex-wrap items-center justify-between">
-                                <div>
+                        <div class="print:border-none border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div class="print:hidden">
                                     <ul class="flex flex-wrap items-center text-sm">
                                     </ul>
                                 </div>
-                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2025. All rights reserved.</p></div>
+                                <div class="print:justify-center docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2025. All rights reserved.</p></div>
                             </footer>
                         </div>
                     </div>
@@ -491,6 +490,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Art Blocks Engine 101", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Art Blocks Engine 101", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
