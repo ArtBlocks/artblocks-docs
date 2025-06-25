@@ -29,7 +29,14 @@ _Note: Please reach out to the Art Blocks team if you would like to explore reac
 
 ## Video Tutorial
 
-TBD...
+https://www.youtube.com/embed/4-_KgVZRVJs
+
+Video Notes and References:
+
+- PostParams Example in video: [https://github.com/ryley-o/post-param-example](https://github.com/ryley-o/post-param-example)
+- Creator Dashboard: [https://create.artblocks.io/](https://create.artblocks.io/)
+- Artist Staging Token Link Example: [https://artist-staging.artblocks.io/token/0x12f976648178b0c37e7b7ab218059b12b29dc78d/21000000](https://artist-staging.artblocks.io/token/0x12f976648178b0c37e7b7ab218059b12b29dc78d/21000000)
+  - Note: Artists may directly navigate to their tokens' links by modifying the contract address and/or token id in the example url above. This allows the artist to preview their token's PostParam editing experience without requiring project activation.
 
 ## Configuring project as artist
 
