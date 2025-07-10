@@ -2,6 +2,24 @@ input: .
 output: .retype
 url: docs.artblocks.io
 
+start:
+  # Start locally in Pro mode
+  pro: true
+
+nav:
+  mode: stack
+  icons:
+    mode: none
+
+theme:
+  base:
+    base-color: "#9B19EF"
+    base-bg: "#F9F9F9"
+    base-text: "#1E1E1E"
+    base-link-weight: 500
+  dark:
+    base-color: "#D41FD6"
+
 branding:
   title: Art Blocks
   label: Docs
