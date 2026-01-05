@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.820965711084">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.820966744550">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -24,21 +24,23 @@
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/art-blocks-101/postparams/">
     <meta property="og:title" content="PostParams">
     <meta property="og:description" content="PostParams">
+    <meta property="og:image" content="https://docs.artblocks.io/static/colorswatch.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.artblocks.io/creator-docs/art-blocks-101/postparams/">
     <meta property="twitter:title" content="PostParams">
     <meta property="twitter:description" content="PostParams">
+    <meta property="twitter:image" content="https://docs.artblocks.io/static/colorswatch.png">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.11.0.820965711084" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.11.0.820966744550" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.11.0.820965711084" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.11.0.820966744550" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.11.0.820965711084" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.11.0.820965711084" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.11.0.820966744550" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.11.0.820966744550" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -536,6 +538,7 @@ const palette =
 <li>Augmentation hooks (standard and custom)</li>
 </ul>
 <p>The dashboard provides real-time integration snippets as you add parameters, making it easy to copy the exact code needed for your project script.</p>
+<p>PostParams support download/upload from a json file, making migration from testnet to mainnet straightforward.</p>
 <doc-anchor-target id="testing-on-artist-staging">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#testing-on-artist-staging">#</doc-anchor-trigger>
@@ -599,6 +602,44 @@ const palette =
 <li><strong>Real-World Data</strong>: Art that reacts to on-chain data via augmentation hooks</li>
 </ul>
 <p>Have an idea? Reach out to the Art Blocks team with questions! We are still figuring out what is possible with PostParams!</p>
+<doc-anchor-target id="supplemental-information">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#supplemental-information">#</doc-anchor-trigger>
+        <span>Supplemental Information</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="color-swatch-on-frontend-edit-forms">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#color-swatch-on-frontend-edit-forms">#</doc-anchor-trigger>
+        <span>Color Swatch on Frontend Edit Forms</span>
+    </h3>
+</doc-anchor-target>
+<p>If your project has an enum PostParam that you would like to represent with color swatches on the edit form, please reach out in the Art Blocks Discord channels and provide us with the following json data:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">{
+    &quot;type&quot;: &quot;color-swatch&quot;,
+    &quot;data&quot;: {
+        &quot;Sunrise&quot;: [
+            &quot;#FFF0D5&quot;,
+            &quot;#2e3333&quot;,
+            &quot;#3e9198&quot;
+        ],
+        &quot;Sunset&quot;: [
+            &quot;#faf8eb&quot;,
+            &quot;#30282d&quot;,
+            &quot;#437742&quot;,
+            &quot;#836c48&quot;
+        ],
+        ...
+    }
+}</code></pre>
+</doc-codeblock></div>
+<p>This results in the following styling on the Art Blocks website:</p>
+<p><figure class="content-center">
+    <img src="../../../static/colorswatch.png" alt="All projects in one collection." class="rounded-image-rounded border-image-border border-image-border-width" />
+    <figcaption class="caption">All projects in one collection.</figcaption>
+</figure>
+</p>
 
                                 
                                 <!-- Required only on API pages -->
