@@ -191,6 +191,8 @@ The [Creator Dashboard](https://create.artblocks.io/) is the primary interface f
 
 The dashboard provides real-time integration snippets as you add parameters, making it easy to copy the exact code needed for your project script.
 
+PostParams support download/upload from a json file, making migration from testnet to mainnet straightforward.
+
 ## Testing on Artist Staging
 
 For a full end-to-end test of PostParams on artist-staging:
@@ -235,3 +237,33 @@ PostParams enable a wide range of creative directions:
 - **Real-World Data**: Art that reacts to on-chain data via augmentation hooks
 
 Have an idea? Reach out to the Art Blocks team with questions! We are still figuring out what is possible with PostParams!
+
+## Supplemental Information
+
+### Color Swatch on Frontend Edit Forms
+
+If your project has an enum PostParam that you would like to represent with color swatches on the edit form, please reach out in the Art Blocks Discord channels and provide us with the following json data:
+
+```
+{
+    "type": "color-swatch",
+    "data": {
+        "Sunrise": [
+            "#FFF0D5",
+            "#2e3333",
+            "#3e9198"
+        ],
+        "Sunset": [
+            "#faf8eb",
+            "#30282d",
+            "#437742",
+            "#836c48"
+        ],
+        ...
+    }
+}
+```
+
+This results in the following styling on the Art Blocks website:
+
+![All projects in one collection.](/static/colorswatch.png)
