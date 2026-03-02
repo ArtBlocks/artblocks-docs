@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825542414511">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.825784516693">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.0.1">
+    <meta name="generator" content="Retype 4.1.0">
 
     <!-- Primary Meta Tags -->
     <title>PostParams</title>
@@ -35,12 +35,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.0.1.825542414511" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.1.0.825784516693" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.0.1.825542414511" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.1.0.825784516693" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -256,7 +256,7 @@
     </h3>
 </doc-anchor-target>
 <p>PostParams are injected into your script via the <code translate="no" v-pre>tokenData</code> object. Based on your project configuration, the PostParam dependency is typically at index 0:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="accessing-postparams-data-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-javascript"><code v-pre class="language-javascript">// Access the PostParam dependency (external asset dependency index: 0)
 const postParams = tokenData.externalAssetDependencies[0];</code></pre>
 </doc-codeblock></div>
@@ -268,7 +268,7 @@ const postParams = tokenData.externalAssetDependencies[0];</code></pre>
     </h3>
 </doc-anchor-target>
 <p>Each parameter is accessible via the <code translate="no" v-pre>data</code> object. All values are returned as strings or <code translate="no" v-pre>undefined</code> if not yet configured for a token:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="accessing-individual-parameters-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-javascript"><code v-pre class="language-javascript">// uint - value will be between '0' and '9999', or undefined
 const featuredSquiggle = postParams?.data?.[&quot;featuredSquiggle&quot;];
 
@@ -297,7 +297,7 @@ const name = postParams?.data?.[&quot;name&quot;];</code></pre>
     </h3>
 </doc-anchor-target>
 <p>Since PostParams may be undefined (not yet configured by the collector), you should provide hash-based fallback values to ensure deterministic behavior:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="handling-undefined-values-with-fallbacks-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-javascript"><code v-pre class="language-javascript">const postParams = tokenData.externalAssetDependencies[0];
 
 // Helper: parse integer PostParam with hash-based fallback
@@ -328,7 +328,7 @@ const backgroundColor = postParams?.data?.[&quot;BackgroundColor&quot;] ?? &quot
     </h3>
 </doc-anchor-target>
 <p>When using enum PostParams (like color palettes), always call the PRNG before the conditional to ensure deterministic behavior regardless of PostParam state:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="enum-example-color-palettes-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-javascript"><code v-pre class="language-javascript">// Define palettes in script (matching enum values in PostParam configuration)
 let palettes = [
   {
@@ -591,7 +591,7 @@ const palette =
     </h3>
 </doc-anchor-target>
 <p>If your project has an enum PostParam that you would like to represent with color swatches on the edit form, please reach out in the Art Blocks Discord channels and provide us with the following json data:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="color-swatch-on-frontend-edit-forms-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">{
     &quot;type&quot;: &quot;color-swatch&quot;,
     &quot;data&quot;: {

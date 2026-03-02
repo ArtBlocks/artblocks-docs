@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825542414511">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.825784516693">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.0.1">
+    <meta name="generator" content="Retype 4.1.0">
 
     <!-- Primary Meta Tags -->
     <title>SeaDrop Integration</title>
@@ -31,13 +31,13 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.0.1.825542414511" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.1.0.825784516693" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.0.1.825542414511" defer></script>
-    <script id="mermaid-js" data-cfasync="false" src="../../../resources/js/mermaid.js?v=4.0.1" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.1.0.825784516693" defer></script>
+    <script id="mermaid-js" data-cfasync="false" src="../../../resources/js/mermaid.js?v=4.1.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -246,7 +246,7 @@
 </doc-anchor-target>
 <p>The <code translate="no" v-pre>SeaDropXArtBlocksShim</code> contract is a custom contract that allows the SeaDrop contract to interact with the Shared Minter Suite. This contract must be deployed for each project that will be integrated with SeaDrop, in order to satisfy a 1:1 mapping between the shim contract and the project.</p>
 <p>Deployment of the <code translate="no" v-pre>SeaDropXArtBlocksShim</code> contract is a one-time process for each project, and may be deployed by anyone. Deployment of the shim contract requires the following parameters:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="2-deploy-seadropxartblocksshim-contract-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-solidity"><code v-pre class="language-solidity">constructor(
         IMinterFilterV1 minterFilter_,
         ISeaDrop allowedSeaDrop_,

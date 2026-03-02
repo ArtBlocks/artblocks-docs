@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825542414511">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.825784516693">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.0.1">
+    <meta name="generator" content="Retype 4.1.0">
 
     <!-- Primary Meta Tags -->
     <title>Querying and API Overview</title>
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.0.1.825542414511" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.1.0.825784516693" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.0.1.825542414511" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.1.0.825784516693" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -256,7 +256,7 @@
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(where: {projectId: &quot;0&quot;, contract_in: [&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;,&quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;]
   }) {
@@ -272,7 +272,7 @@
 <tr>
 <td> Mainnet </td> <td> Engine </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(where: {projectId: &quot;1&quot;, contract_in: [&quot;0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676&quot;]}) {
     id
@@ -287,7 +287,7 @@
 <tr>
 <td> Testnet </td> <td> Flagship </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(where: {projectId: &quot;100&quot;, contract_in: [&quot;0xda62f67be7194775a75be91cbf9feedcc5776d4b&quot;]}) {
     id
@@ -302,7 +302,7 @@
 <tr>
 <td> Testnet </td> <td> Engine </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(where: {projectId: &quot;1&quot;, contract_in: [&quot;0x5503a3b96d845f33f135429ab18c03c79477b14f&quot;]}) {
     id
@@ -323,7 +323,7 @@
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-5" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   project(id:&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
     id
@@ -338,7 +338,7 @@
 <tr>
 <td> Mainnet </td> <td> Engine </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-6" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   project(id:&quot;0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676-1&quot;) {
     id
@@ -353,7 +353,7 @@
 <tr>
 <td> Testnet </td> <td> Flagship </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-7" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   project(id:&quot;0xda62f67be7194775a75be91cbf9feedcc5776d4b-100&quot;) {
     id
@@ -368,7 +368,7 @@
 <tr>
 <td> Testnet </td> <td> Engine </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-8" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   project(id:&quot;0x5503a3b96d845f33f135429ab18c03c79477b14f-1&quot;) {
     id
@@ -393,7 +393,7 @@
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-9" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   tokens(where: {tokenId: &quot;0&quot;, contract_in: [&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;, &quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;]}) {
     id
@@ -412,7 +412,7 @@ Requires full ID (includes contract)
 <tr>
 <td> Testnet </td> <td> Flagship </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-10" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   tokens(where: {tokenId: &quot;10000000&quot;, contract_in: [&quot;0xda62f67be7194775a75be91cbf9feedcc5776d4b&quot;]}) {
     id
@@ -441,7 +441,7 @@ Requires full ID (includes contract)
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-11" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   token(id: &quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
     id
@@ -454,7 +454,7 @@ Requires full ID (includes contract)
 <tr>
 <td> Mainnet </td> <td> Engine </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-12" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   token(id: &quot;0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676-1000000&quot;) {
     id
@@ -467,7 +467,7 @@ Requires full ID (includes contract)
 <tr>
 <td> Testnet </td> <td> Flagship </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-13" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   token(id: &quot;0xda62f67be7194775a75be91cbf9feedcc5776d4b-10000000&quot;) {
     id
@@ -480,7 +480,7 @@ Requires full ID (includes contract)
 <tr>
 <td> Testnet </td> <td> Engine </td>
 <td>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-14" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   token(id: &quot;0x5503a3b96d845f33f135429ab18c03c79477b14f-1000000&quot;) {
     id
@@ -502,7 +502,7 @@ Requires full ID (includes contract)
     </h1>
 </doc-anchor-target>
 <p>Retrieve the last 5 most recently created projects across Art Blocks and Powered by Art Blocks (remember that you can use a <code translate="no" v-pre>contract_in</code> filter to restrict this to only specific contracts):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="beyond-the-basics-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(first: 5, orderBy: createdAt, orderDirection: desc) {
     id
@@ -514,7 +514,7 @@ Requires full ID (includes contract)
 }</code></pre>
 </doc-codeblock></div>
 <p>Retrieve the top 10 projects across Art Blocks and Powered by Art Blocks, based on # of invocations:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="beyond-the-basics-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(first: 10, orderBy: invocations, orderDirection: desc) {
     id
@@ -526,7 +526,7 @@ Requires full ID (includes contract)
 }</code></pre>
 </doc-codeblock></div>
 <p>Retrieve the most recently minted Art Blocks token:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="beyond-the-basics-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   tokens(
     first: 1
@@ -552,7 +552,7 @@ Requires full ID (includes contract)
 }</code></pre>
 </doc-codeblock></div>
 <p>Retrieve all tokens owned by a specific address, across Art Blocks and Powered by Art Blocks:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="beyond-the-basics-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   tokens(where: { owner: &quot;&lt;owner address&gt;&quot; }) {
     id
@@ -560,7 +560,7 @@ Requires full ID (includes contract)
 }</code></pre>
 </doc-codeblock></div>
 <p>Retrieve the general metadata/status for the Art Blocks subgraph (useful for debugging):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="beyond-the-basics-code-5" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   _meta {
     hasIndexingErrors
@@ -572,7 +572,7 @@ Requires full ID (includes contract)
 }</code></pre>
 </doc-codeblock></div>
 <p>Retrieve the project script for a given project id</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="beyond-the-basics-code-6" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   project(id: &quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
     script
@@ -589,7 +589,7 @@ Requires full ID (includes contract)
 <ul>
 <li>Pull all projects and return their name, as well as lots of additional data:</li>
 </ul>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="project-info-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(
     where: {
@@ -610,7 +610,7 @@ Requires full ID (includes contract)
 <ul>
 <li>Get all the wallet owners of a project (Replace PROJECT with the project name you are looking for)</li>
 </ul>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="project-info-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(where: { name: &quot;PROJECT&quot; }) {
     id
@@ -622,7 +622,7 @@ Requires full ID (includes contract)
 <ul>
 <li>If you&#x27;re looking for the addresses of anyone that owns a mint from a project</li>
 </ul>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="project-info-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(where: { name: &quot;PROJECT&quot; }) {
     owners {
@@ -635,7 +635,7 @@ Requires full ID (includes contract)
 <ul>
 <li>Get that txnhash for squiggle 0, you could run the following query on the AB subgraph playground</li>
 </ul>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="project-info-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   tokens(
     where: {

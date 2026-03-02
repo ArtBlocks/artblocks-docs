@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825542414511">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.825784516693">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.0.1">
+    <meta name="generator" content="Retype 4.1.0">
 
     <!-- Primary Meta Tags -->
     <title>Common Custom Dashboard Mutations</title>
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../favicon.ico" />
-    <link href="../../../../resources/css/retype.css?v=4.0.1.825542414511" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.1.0.825784516693" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -260,7 +260,7 @@
 </doc-anchor-target>
 <p>Tags and projects share a many-to-many relationship, managed through the <code translate="no" v-pre>entity_tags</code> table. Tags serve as non-functional descriptors that can be used to categorize projects. To associate a tag with a project, the <code translate="no" v-pre>insert_entity_tags</code> mutation is used.</p>
 <p>In the context of an Engine dashboard, you&#x27;re likely most interested in presentation tags, which can be fetched with the following query:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="tags-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">query {
   tags(where: {grouping_name: {_eq: presentation}}) {
     name
@@ -268,7 +268,7 @@
 }</code></pre>
 </doc-codeblock></div>
 <p>Both the artist and contract admin roles have the permissions to execute the <code translate="no" v-pre>insert_entity_tags</code> mutation. Here&#x27;s an example of how to use this mutation:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="tags-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">mutation {
   insert_entity_tags(objects: [{ project_id: &quot;0x...&quot;, tag_name: &quot;animated&quot;}])
 }</code></pre>

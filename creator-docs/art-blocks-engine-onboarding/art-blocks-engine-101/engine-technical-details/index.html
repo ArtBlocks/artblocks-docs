@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825542414511">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.825784516693">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.0.1">
+    <meta name="generator" content="Retype 4.1.0">
 
     <!-- Primary Meta Tags -->
     <title>Art Blocks Engine Flex Technical Details</title>
@@ -35,12 +35,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../../favicon.ico" />
-    <link href="../../../../resources/css/retype.css?v=4.0.1.825542414511" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.1.0.825784516693" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.0.1.825542414511" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=4.0.1.825542414511" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.1.0.825784516693" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../../resources/js/prism.js?v=4.1.0.825784516693" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -243,7 +243,7 @@ The latest version of the Engine Flex contract (v3) and interface can be found h
         <span>Introduction To External Asset Dependencies</span>
     </h2>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="introduction-to-external-asset-dependencies-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-solidity"><code v-pre class="language-solidity">struct ExternalAssetDependency {
         string cid;
         ExternalAssetDependencyType dependencyType;
@@ -264,18 +264,18 @@ The latest version of the Engine Flex contract (v3) and interface can be found h
     </h2>
 </doc-anchor-target>
 <p>When working with and manipulating a project&#x27;s external asset dependencies, you&#x27;ll be relying on the following functions:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="adding-updating--removing-external-asset-dependencies-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-solidity"><code v-pre class="language-solidity">function addProjectExternalAssetDependency(uint256 _projectId, string memory _cidOrData, ExternalAssetDependencyType _dependencyType)
 function updateProjectExternalAssetDependency(uint256 _projectId, uint256 _index, string memory _cidOrData, ExternalAssetDependencyType _dependencyType)
 function removeProjectExternalAssetDependency(uint256 _projectId, uint256 _index)</code></pre>
 </doc-codeblock></div>
 <p>Note the parameter <code translate="no" v-pre>_cidOrData</code>, which allows you to either pass in a CID if you are working with the IPFS/Arweave dependencyTypes or a data string if you are working with the onchain dependencyType.</p>
 <p>For convenience and utility, the contract also provides the following function, allowing you to easily grab a project&#x27;s external asset dependency at a specific index:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="adding-updating--removing-external-asset-dependencies-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-solidity"><code v-pre class="language-solidity">function projectExternalAssetDependencyByIndex(uint256 _projectId, uint256 _index)</code></pre>
 </doc-codeblock></div>
 <p>This convenience function returns data in the form of the following format:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="adding-updating--removing-external-asset-dependencies-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-solidity"><code v-pre class="language-solidity">/**
 * @notice An external asset dependency with data. This is a convenience struct that contains the CID of the dependency,
 * the type of the dependency, the address of the bytecode for this dependency, and the data retrieved from this bytecode address.
@@ -307,7 +307,7 @@ struct ExternalAssetDependencyWithData {
         <span>Preferred Gateways</span>
     </h2>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="preferred-gateways-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-solidity"><code v-pre class="language-solidity">string public preferredIPFSGateway;
 string public preferredArweaveGateway;</code></pre>
 </doc-codeblock></div>
@@ -320,7 +320,7 @@ string public preferredArweaveGateway;</code></pre>
     </h2>
 </doc-anchor-target>
 <p>When you request the live view for a given token of a project, the <code translate="no" v-pre>hash</code> and <code translate="no" v-pre>tokenId</code> of the token are provided in the <code translate="no" v-pre>tokenData</code> object and the Art Blocks Generator injects this into the served HTML live view. This <code translate="no" v-pre>tokenData</code> object has now been extended with the following external asset dependency related data, if it is available:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="working-with-external-asset-dependencies-in-your-project-script-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-javascript"><code v-pre class="language-javascript">let tokenData = {
   hash: &quot;&quot;,
   tokenId:&quot;&quot;,
@@ -357,7 +357,7 @@ string public preferredArweaveGateway;</code></pre>
     </h2>
 </doc-anchor-target>
 <p>If you are specifically looking to utilize an IPFS/ARWEAVE type external asset dependency as a JavaScript library in your project script, you cannot simply add it as a script element onto the page. You must load it in a blocking manner so that the browser does not attempt to run your project script code before the lib is fully loaded. Here is an example of how to do this with ES6 dynamic imports (supported by most modern browsers: <a href="https://caniuse.com/es6-module-dynamic-import" class="outbound" target="_blank"><span>https://caniuse.com/es6-module-dynamic-import</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="loading-js-libraries-as-external-asset-dependencies-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-javascript"><code v-pre class="language-javascript">(async () =&gt; {
         await import('JS_EXTERNAL_ASSET_DEPENDENCY_FULL_URL_GOES_HERE');
 
@@ -365,7 +365,7 @@ string public preferredArweaveGateway;</code></pre>
 })()</code></pre>
 </doc-codeblock></div>
 <p>Here&#x27;s another method without using ES6 dynamic imports, instead relying on using a callback that gets fired after the JS external asset dependency is injected into the html via a script tag:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="loading-js-libraries-as-external-asset-dependencies-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-javascript"><code v-pre class="language-javascript">function loadScript(url, callback)
 {
     // adding the script element to the head
@@ -394,7 +394,7 @@ loadScript('JS_EXTERNAL_ASSET_DEPENDENCY_FULL_URL_GOES_HERE', myProjectScriptCod
     </h2>
 </doc-anchor-target>
 <p>Artists and allowlisted addresses also have the ability to lock a project&#x27;s external asset dependencies:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="locking-a-projects-external-asset-dependencies-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-solidity"><code v-pre class="language-solidity">function lockProjectExternalAssetDependencies(uint256 _projectId)</code></pre>
 </doc-codeblock></div>
 <p>This irreversible action removes the ability to add, update or remove from a project&#x27;s external asset dependencies.</p>
