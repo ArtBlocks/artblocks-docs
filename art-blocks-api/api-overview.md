@@ -6,13 +6,23 @@ Quick Links:
 
 - [Token API](#token-api)
 - [Generator API](#generator-api)
-- [Media API/Media Server](#media-apimedia-server)
+- [Media Proxy API](#media-proxy-api)
 - [Art Blocks Subgraph](#art-blocks-subgraph)
 - [GraphQL API](#graphql-api)
 
-## Hosted APIs
+## Supported Networks
 
-As a quick overview, the main APIs that exist currently are:
+Art Blocks is currently deployed on the following networks:
+
+| Network      | Chain ID |
+| ------------ | -------- |
+| Ethereum     | `1`      |
+| Arbitrum One | `42161`  |
+| Base         | `8453`   |
+
+All hosted APIs below follow a **multichain URL pattern** using the chain ID to specify the target network.
+
+## Hosted APIs
 
 <br>
 
@@ -20,45 +30,23 @@ As a quick overview, the main APIs that exist currently are:
 
 Provides the token metadata for a given Art Blocks token.
 
-**Mainnet**
+**Production**
 
-- Note: Contract address is required for Engine
+| Pattern                                                            | Example                                                                           |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| `https://token.artblocks.io/{chainID}/{contractAddress}/{tokenID}` | https://token.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000 |
 
-| Contract Type | Pattern                                                  | Sample                                                                       |
-| ------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| Flagship      | `https://token.artblocks.io/{tokenID}`                   | https://token.artblocks.io/0                                                 |
-| Engine        | `https://token.artblocks.io/{contractAddress}/{tokenID}` | https://token.artblocks.io/0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676/110000 |
+**Staging**
 
-**Testnet**
+| Pattern                                                                    |
+| -------------------------------------------------------------------------- |
+| `https://token.staging.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |
 
-| Contract Type | Pattern                                                          | Sample                                                                                  |
-| ------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Flagship      | `https://token.staging.artblocks.io/{contractAddress}/{tokenID}` | https://token.staging.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/103000000 |
-| Engine        | `https://token.sepolia.artblocks.io/{contractAddress}/{tokenID}` | https://token.sepolia.artblocks.io/0x6ceab51fc8ee931df84d3db66e747b617eb7de21/12        |
+**Dev**
 
-**Arbitrum One**
-
-- Note: Contract address is required
-
-| Contract Type | Pattern                                                           |
-| ------------- | ----------------------------------------------------------------- |
-| Engine        | `https://token.arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
-
-**Arbitrum Testnet**
-
-- Note: Contract address is required
-
-| Contract Type | Pattern                                                                   |
-| ------------- | ------------------------------------------------------------------------- |
-| Engine        | `https://token.arbitrum-sepolia.artblocks.io/{contractAddress}/{tokenID}` |
-
-**Base Mainnet**
-
-- Note: Contract address is required
-
-| Contract Type | Pattern                                                           |
-| ------------- | ----------------------------------------------------------------- |
-| Engine        | `https://token.base.artblocks.io/{contractAddress}/{tokenID}` |
+| Pattern                                                                |
+| ---------------------------------------------------------------------- |
+| `https://token.dev.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |
 
 <br>
 
@@ -66,110 +54,57 @@ Provides the token metadata for a given Art Blocks token.
 
 Provides an i-frame-able live-view for the art associated with a given Art Blocks token.
 
-**Mainnet**
+**Production**
 
-- Note: Contract address is required for Engine
+| Pattern                                                                | Example                                                                               |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `https://generator.artblocks.io/{chainID}/{contractAddress}/{tokenID}` | https://generator.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000 |
 
-| Contract Type | Pattern                                                      | Sample                                                                             |
-| ------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| Flagship      | `https://generator.artblocks.io/{tokenID}`                   | https://generator.artblocks.io/0                                                   |
-| Engine        | `https://generator.artblocks.io/{contractAddress}/{tokenID}` | https://generator.artblocks.io/0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676/11000083 |
+**Staging**
 
-**Testnet**
+| Pattern                                                                        |
+| ------------------------------------------------------------------------------ |
+| `https://generator.staging.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |
 
-| Contract Type | Pattern                                                                      | Sample                                                                                           |
-| ------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Flagship      | `https://generator-staging-sepolia.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xda62f67be7194775a75be91cbf9feedcc5776d4b/8000002 |
-| Engine        | `https://generator-staging-sepolia.artblocks.io/{contractAddress}/{tokenID}` | https://generator-staging-goerli.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
+**Dev**
 
-**Arbitrum One**
-
-- Note: Contract address is required
-
-| Contract Type | Pattern                                                               |
-| ------------- | --------------------------------------------------------------------- |
-| Engine        | `https://generator.arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
-
-**Arbitrum Testnet**
-
-- Note: Contract address is required
-
-| Contract Type | Pattern                                                                       |
-| ------------- | ----------------------------------------------------------------------------- |
-| Engine        | `https://generator.arbitrum-sepolia.artblocks.io/{contractAddress}/{tokenID}` |
-
-**Base Mainnet**
-
-- Note: Contract address is required
-
-| Contract Type | Pattern                                                               |
-| ------------- | --------------------------------------------------------------------- |
-| Engine        | `https://generator.base.artblocks.io/{contractAddress}/{tokenID}` |
+| Pattern                                                                    |
+| -------------------------------------------------------------------------- |
+| `https://generator.dev.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |
 
 <br>
 
-### Media API/Media server
+### Media Proxy API
 
 Provides a static snapshot of the rendered live-view for a given Art Blocks token.
 
-**Mainnet**
+**Production**
 
-| Contract Type | Pattern                                                            | Sample                                                                              |
-| ------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
-| Flagship      | `https://media.artblocks.io/{tokenID}.png`                         | https://media.artblocks.io/0.png                                                    |
-| Engine        | `https://media-proxy.artblocks.io/{contractAddress}/{tokenId}.png` | https://media-proxy.artblocks.io/0x145789247973c5d612bf121e9e4eef84b63eb707/782.png |
+| Pattern                                                                      | Example                                                                                     |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `https://media-proxy.artblocks.io/{chainID}/{contractAddress}/{tokenID}.png` | https://media-proxy.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000.png |
 
-**Testnet**
+**Staging**
 
-| Contract Type | Pattern                                                  | Sample                                                                     |
-| ------------- | -------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Flagship      | `https://media-proxy-staging.artblocks.io/{tokenID}.png` | https://media-proxy-staging.artblocks.io/0.png                             |
-| Engine        |                                                          | `https://media-proxy-staging.artblocks.io/{contractAddress}/{tokenID}.png` | https://media-proxy-staging.artblocks.io/0xe745243b82ebc46e5c23d9b1b968612c65d45f3d/1000001 |
+| Pattern                                                                              |
+| ------------------------------------------------------------------------------------ |
+| `https://media-proxy.staging.artblocks.io/{chainID}/{contractAddress}/{tokenID}.png` |
 
-**Arbitrum One**
+**Dev**
 
-- Note: Contract address is required
+| Pattern                                                                          |
+| -------------------------------------------------------------------------------- |
+| `https://media-proxy.dev.artblocks.io/{chainID}/{contractAddress}/{tokenID}.png` |
 
-| Contract Type | Pattern                                                                 |
-| ------------- | ----------------------------------------------------------------------- |
-| Engine        | `https://media-proxy-arbitrum.artblocks.io/{contractAddress}/{tokenID}` |
-
-**Arbitrum Testnet**
-
-- Note: Contract address is required
-
-| Contract Type | Pattern                                                                         |
-| ------------- | ------------------------------------------------------------------------------- |
-| Engine        | `https://media-proxy-arbitrum-staging.artblocks.io/{contractAddress}/{tokenID}` |
-
-**Base Mainnet**
-
-- Note: Contract address is required
-
-| Contract Type | Pattern                                                                 |
-| ------------- | ----------------------------------------------------------------------- |
-| Engine        | `https://media-proxy-base.artblocks.io/{contractAddress}/{tokenID}` |
+Please note that the Generator API and Media Proxy API links for a given token are included in the token response for that token from the Token API.
 
 ---
 
-In addition to the standard static renders provided for each token, there are two other static renders currently provided: "HD" and "thumbnail". These items can be found at:
-
-- HD Renders – `https://media.artblocks.io/hd/{tokenID}.png`
-- Thumbnail Renders – `https://media.artblocks.io/thumb/{tokenID}.png`
-
-Please note that these additional static render formats are still currently being back-filled and may not yet be present for all tokens. Our current recommendation for those looking to depend on the "HD" or "thumbnail" responses is to a) first attempt the HD/thumb image resource that you would prefer, b) if this resource is not available, fall back to the standard sized image resource. For the current state of the ongoing backfill of HD and thumbnail assets, please refer to [this spreadsheet](https://docs.google.com/spreadsheets/d/1Li6TMieXL3MENtg5sq9omRVPsa8MWWb7eZU1uDwYxvU/edit?usp=drive_web&ouid=100711456886886984200).
-
-Please also note that the Generator API and Media API links for a given token are included in the token response for that token from the Token API.
-
 ## Art Blocks Subgraph
 
-Art Blocks has subgraphs deployed to [The Graph Network](https://thegraph.com/docs/en/network/overview/) for every supported network.
+Art Blocks has subgraphs deployed to [The Graph Network](https://thegraph.com/docs/en/network/overview/) for every supported production network.
 
-These subgraphs can be used to query for on-chain data related to the Art Blocks contracts, including minter suite data, token data, and project data. They provide a way to access on-chain data in a more efficient and user-friendly way than directly querying the blockchain, while keeping infrastructure decentralized, transparent, and reliable.
-
-!!!info
-As of June 12, 2024, Hosted Service subgraphs are deprecated. Please use the Decentralized Graph Network subgraphs listed below for all networks, or use the Art Blocks' Hasura GraphQL API as an alternative.
-!!!
+These subgraphs can be used to query for on-chain data related to the Art Blocks contracts, including token data and project data. They provide a way to access on-chain data in a more efficient and user-friendly way than directly querying the blockchain, while keeping infrastructure decentralized, transparent, and reliable.
 
 The Art Blocks subgraph is developed in public, and all source code and development activity can be found in the [Art Blocks subgraph repository](https://github.com/ArtBlocks/artblocks-subgraph).
 
@@ -183,15 +118,10 @@ The Art Blocks subgraph is developed in public, and all source code and developm
 - [Explorer Page](https://thegraph.com/explorer/subgraphs/5WwGsBwJ2hVBpc3DphX4VHVMsoPnRkVkuZF4HTArZjCm?view=Overview&chain=arbitrum-one)
 - Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/5WwGsBwJ2hVBpc3DphX4VHVMsoPnRkVkuZF4HTArZjCm`
 
-## Artist Staging - Sepolia Testnet
+### Base
 
-- [Explorer Page](https://thegraph.com/explorer/subgraphs/9G5q5avz4X8GZ8UEGdu197433nSWSCsFa2eo6vHNBooc?view=Overview&chain=arbitrum-one)
-- Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/9G5q5avz4X8GZ8UEGdu197433nSWSCsFa2eo6vHNBooc`
-
-## Artist Staging - Arbitrum-Sepolia Testnet
-
-- [Explorer Page](https://thegraph.com/explorer/subgraphs/33E6obKFpWGUhnWD5eja74Gt6oTXktiHMZVFrshg9xGe?view=Overview&chain=arbitrum-one)
-- Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/33E6obKFpWGUhnWD5eja74Gt6oTXktiHMZVFrshg9xGe`
+- [Explorer Page](https://thegraph.com/explorer/subgraphs/5gKxDMnBjv3ffBJ4r3zWD6VrpaYHiq9aUth39YCQXWEt?view=Overview&chain=arbitrum-one)
+- Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/QmNMohwC881f9KTiVWtQx2eQ5pNSsnMaSYQqwypX9x5fFZ`
 
 ### Helpful Resources
 
@@ -202,237 +132,18 @@ The Art Blocks subgraph is developed in public, and all source code and developm
 
 ## Querying the Subgraph
 
-The Art Blocks subgraphs can be queried at any of the graphql endpoints listed in the previous section.
-
-### Getting Minter Details
-
-A few example queries are provided below to help you get started with querying the Art Blocks subgraph for data related to a project's minter. In addition to the subgraph, the fields are also able to be queried from our Hasura GraphQL API. In the future, Art Blocks will release an SDK that will interact with these data in an even more convenient way.
-
-!!!info
-Note that only Engine contracts that have migrated to the shared minter suite will have their minters indexed and available on the subgraph and Hasura GraphQL API. Only globally approved minters are indexed, so custom, one-off minters designed by Engine partners will not be indexed.
-!!!
-
-A project's active minter configuration (as configured in the artist dashboard) may be queried by pulling it from the `Project` entity:
-
-```graphql
-query {
-  project(id: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-404") {
-    id
-    minterConfiguration {
-      id
-      priceIsConfigured
-      currencySymbol
-      currencyAddress
-      basePrice
-      maxInvocations
-      extraMinterDetails
-      minter {
-        id
-        extraMinterDetails
-      }
-    }
-  }
-}
-```
-
-> note: if querying the Hasura GraphQL API, use `projects_metadata` instead of `project`
-
-The `extraMinterDetails` json field of `minterConfiguration` will contain a JSON string that can be parsed to obtain the project-minter-configuration details that may be specific to the minter type. For example, for a Dutch Auction minter, the `extraMinterDetails` field may contain the following JSON string:
-
-```json
-{
-  "startTime": 1676052000,
-  "halfLifeSeconds": 315,
-  "approximateDAExpEndTime": 1676053820,
-  "startPrice": "11000000000000000000",
-  "currentSettledPrice": "557638888888888889",
-  "auctionRevenuesCollected": true,
-  "numSettleableInvocations": 172
-}
-```
-
-> note: if querying the Hasura GraphQL API, the returned type will be a JSONB
-
-Additionally, the minter's `extraMinterDetails` will contain a JSON string that can be parsed to obtain any minter-specific configuration details. For example, for a Dutch Auction minter, the `extraMinterDetails` field may contain the following JSON string:
-
-```json
-{
-  "minimumHalfLifeInSeconds": 45,
-  "maximumHalfLifeInSeconds": 3600
-}
-```
-
-> note: if querying the Hasura GraphQL API, use `minters_metadata` instead of `minters`, and the returned type will be a JSONB
-
-All of these queries can help you to obtain information about a project's minter configuration, which can be used to display purchase information for the project on your website. The data are available on both the subgraph, and the Hasura GraphQL API.
+The Art Blocks subgraphs can be queried at any of the graphql endpoints listed in the previous section. For richer context — including off-chain data and minter configuration details — we recommend using the [Art Blocks GraphQL API](#graphql-api).
 
 ## GraphQL API
 
-Provides a broader set of the data that our front-end consumes — this includes both on-chain and off-chain data.
+Provides a broader set of data than the subgraph alone — this includes both on-chain and off-chain data. We recommend using this API for most integrations, as it provides a more complete picture of projects, tokens, and minting configurations.
 
-| Chain    | Environment          | URL                                                 |
-| -------- | -------------------- | --------------------------------------------------- |
-| Ethereum | Production           | `https://data.artblocks.io/v1/graphql`              |
-| Ethereum | Staging              | `https://ab-staging-sepolia.hasura.app/v1/graphql`  |
-| Ethereum | Staging (deprecated) | `https://ab-staging-goerli.hasura.app/v1/graphql`   |
-| Arbitrum | Production           | `https://ab-prod-arbitrum.hasura.app/v1/graphql`    |
-| Arbitrum | Staging              | `https://ab-staging-arbitrum.hasura.app/v1/graphql` |
-| Base | Mainnet              | `https://ab-prod-base.hasura.app/v1/graphql` |
+| Environment | URL                                                |
+| ----------- | -------------------------------------------------- |
+| Production  | `https://data.artblocks.io/v1/graphql`             |
+| Staging     | `https://ab-staging-sepolia.hasura.app/v1/graphql` |
 
-#### Authentication
-
-The following documentation explains how to authenticate with the Art Blocks API to retrieve a JSON Web Token (JWT). This JWT can then be used to gain authenticated access to our GraphQL API. The methods explained here are intended for a client-side environment where a signer is available to sign messages. The procedures are explained using two approaches: Direct API endpoints and GraphQL.
-
-We recommend using the GraphQL-based approach as we have more control over it and can ensure its stability even if underlying API endpoints change. Note that the domain for authentication may change in the future for the Direct API-based approach, while the GraphQL endpoint will remain the same.
-
-##### GraphQL-based Authentication Flow (Recommended)
-
-The GraphQL-based approach leverages the GraphQL schema provided by Art Blocks. This is the recommended approach for stability and future-proofing your implementation.
-
-Here are the functions used in this flow:
-
-```javascript
-async function fetchMessageFromApiGql(userAddress) {
-  const query = gql`
-    query GetAuthMessage($publicAddress: String!, $domain: String!, $uri: String!) {
-      getAuthMessage(publicAddress: $publicAddress, domain: $domain, uri: $uri) {
-        authMessage
-      }
-    }
-  `;
-
-  const variables = {
-    publicAddress: userAddress,
-    domain: window.location.host,
-    uri: window.location.origin,
-  };
-
-  const result = await request(AB_GRAPHQL_ENDPOINT, query, variables);
-
-  if (!result || !result.getAuthMessage) {
-    throw new Error("Failed to fetch auth message");
-  }
-
-  return result.getAuthMessage.authMessage;
-}
-
-async function getJwtGql(userAddress) {
-  const message = await fetchMessageFromApiGql(userAddress);
-
-  // Sign message here using the client-side signer
-  const signature = /* code to sign message goes here */
-
-  const mutation = gql`
-    mutation Authenticate($input: AuthenticateInput!) {
-      authenticate(input: $input) {
-        jwt
-        expiration
-      }
-    }
-  `;
-
-  const variables = {
-    input: {
-      publicAddress: userAddress,
-      message,
-      signature
-    }
-  };
-
-  const result = await request(AB_GRAPHQL_ENDPOINT, mutation, variables);
-
-  if (!result || !result.authenticate) {
-    return null;
-  }
-
-  return {
-    jwt: result.authenticate.jwt,
-    expiration: result.authenticate.expiration,
-  };
-}
-```
-
-##### Direct API-based Authentication Flow
-
-The Direct API-based approach involves interacting with the `https://artblocks.io/api/get-auth-message` and `https://artblocks.io/api/authenticate` endpoints. We recommend using the GraphQL-based flow instead because of its improved stability and future-proofing, but we're providing the Direct API-based method for those who prefer it.
-
-> ⚠️ Warning: The domain for authentication may change in the future for the Direct API-based approach. Using the GraphQL-based approach is recommended to avoid future disruptions.
-
-Here are the functions used in this flow:
-
-```javascript
-async function fetchMessageFromApi(userAddress) {
-  const response = await fetch(AB_MESSAGE_API_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      publicAddress: userAddress,
-      domain: window.location.host,
-      uri: window.location.origin,
-    }),
-  });
-
-  const result = await response.json();
-
-  if (!result.ok) {
-    throw new Error(result.error);
-  }
-
-  return result.data.message;
-}
-
-async function getJwtApi(userAddress) {
-  const message = await fetchMessageFromApi(userAddress);
-
-  // Sign message here using the client-side signer
-  const signature = /* code to sign message goes here */
-
-  const response = await fetch(`${AB_WEBSITE_BASE_URL}/api/authenticate`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      publicAddress: userAddress,
-      signature,
-      message
-    }),
-  });
-
-  const result = await response.json();
-
-  if (!result.ok) {
-    return null;
-  }
-
-  return result.data.jwt;
-}
-```
-
-In both methods, you will find a placeholder `/* code to sign message goes here */` where you should implement your code to sign the message using your client-side signer.
-
-##### Using the JWT for Authenticated Access
-
-Once the JWT has been obtained using either of the above methods, it can be used to make authenticated requests to the Art Blocks GraphQL API. The JWT should be included in the `Authorization` header of the request. Here's an example:
-
-```javascript
-// Assume jwt contains the JWT you received from the previous steps
-const jwt = "your-jwt-token";
-
-// An example of a GraphQL request using the JWT
-const query = gql`
-  query {
-    // Your query here
-  }
-`;
-
-const response = await fetch(AB_GRAPHQL_ENDPOINT, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${jwt}`,
-  },
-  body: JSON.stringify({ query }),
-});
-```
+The GraphQL API uses `_metadata` table suffixes (e.g. `projects_metadata`, `tokens_metadata`, `contracts_metadata`, `minters_metadata`) and provides fields such as `chain_id`, `contract_address`, minter configuration details, and more. See the [Entities](/creator-docs/art-blocks-api/entities/) page for a full reference.
 
 For a full detailed overview of this GraphQL API, please reference: https://docs.artblocks.io/public-api-docs/
 

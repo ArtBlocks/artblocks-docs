@@ -1,0 +1,23 @@
+# Regenerate the public API docs with:
+#   npx spectaql spectaql-config.yml --target-dir public-api-docs --one-file
+spectaql:
+  displayAllServers: true
+
+introspection:
+  url: https://data.artblocks.io/v1/graphql
+  queryNameStrategy: capitalizeFirst
+  fieldExpansionDepth: 2
+
+info:
+  title: Art Blocks GraphQL API Docs
+  description: >
+    The Art Blocks GraphQL API provides access to both on-chain and off-chain data
+    for Art Blocks projects, tokens, contracts, and more across Ethereum, Arbitrum,
+    and Base networks.
+
+servers:
+  - url: https://data.artblocks.io/v1/graphql
+    description: Production
+    production: true
+  - url: https://ab-staging-sepolia.hasura.app/v1/graphql
+    description: Staging
