@@ -103,7 +103,7 @@ The Art Blocks subgraph is developed in public, and all source code and developm
 ### Base
 
 - [Explorer Page](https://thegraph.com/explorer/subgraphs/5gKxDMnBjv3ffBJ4r3zWD6VrpaYHiq9aUth39YCQXWEt?view=Overview&chain=arbitrum-one)
-- Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/QmNMohwC881f9KTiVWtQx2eQ5pNSsnMaSYQqwypX9x5fFZ`
+- Graphql Endpoint: `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/5gKxDMnBjv3ffBJ4r3zWD6VrpaYHiq9aUth39YCQXWEt`
 
 ### Helpful Resources
 
@@ -120,8 +120,8 @@ The Art Blocks subgraphs can be queried at any of the graphql endpoints listed i
 
 Provides a broader set of data than the subgraph alone — this includes both on-chain and off-chain data. We recommend using this API for most integrations, as it provides a more complete picture of projects, tokens, and minting configurations.
 
-| Environment | URL                                            |
-| ----------- | ---------------------------------------------- |
+| Environment               | URL                                                |
+| ------------------------- | -------------------------------------------------- |
 | Production                | `https://data.artblocks.io/v1/graphql`             |
 | Staging (Sepolia testnet) | `https://ab-staging-sepolia.hasura.app/v1/graphql` |
 
