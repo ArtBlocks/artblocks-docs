@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.825975495276">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.826130151739">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Querying and API Overview</title>
-    <meta name="title" content="Querying and API Overview">
+    <title>Querying</title>
+    <meta name="title" content="Querying">
     <meta name="description" content="Below are some sample queries you can use to gather information from the Art Blocks contracts.">
 
     <!-- Canonical -->
@@ -23,7 +23,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.artblocks.io/creator-docs/art-blocks-api/queries/">
-    <meta property="og:title" content="Querying and API Overview">
+    <meta property="og:title" content="Querying">
     <meta property="og:description" content="Below are some sample queries you can use to gather information from the Art Blocks contracts.">
     <meta property="og:site_name" content="Art Blocks">
     <meta property="og:locale" content="en_US">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.1.0.825975495276" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.1.0.826130151739" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.1.0.825975495276" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.1.0.826130151739" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.1.0.825975495276" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.1.0.825975495276" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.1.0.826130151739" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.1.0.826130151739" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -227,7 +227,7 @@
         <span>Subgraph Querying Walkthrough</span>
     </h2>
 </doc-anchor-target>
-<p>The following provides some examples of how to use the Art Blocks subgraph to perform a handful of common queries.</p>
+<p>The following provides some examples of how to use the Art Blocks subgraph to perform common queries.</p>
 <doc-anchor-target id="important-notes">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#important-notes">#</doc-anchor-trigger>
@@ -235,12 +235,8 @@
     </h4>
 </doc-anchor-target>
 <ul>
-<li>Performance/indexing on the hosted subgraph service is oftentimes slower compared to the decentralized subgraph. That being said, the hosted subgraph is free while the decentralized one requires pay-per-query in GRT.</li>
-<li>The Art Blocks subgraphs currently also index any PBAB (Powered by Artblocks) contracts, in addition to the core Art Blocks contracts. Please keep that in mind and make use of the <code translate="no" v-pre>contract_in</code> filter to ensure you are working with Art Blocks data only, if that is your intention.</li>
-</ul>
-<ul>
-<li>While querying against the mainnet subgraph if using the <code translate="no" v-pre>contract_in</code> filter the Art Blocks contracts to restrict for are <code translate="no" v-pre>0x059edd72cd353df5106d2b9cc5ab83a52287ac3a</code> (for the V0 contract that supports projects 0-3) and <code translate="no" v-pre>0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270</code> (for the V1 contract that supports projects 4-current).</li>
-<li>The Art Blocks contract to restrict for is <code translate="no" v-pre>0xda62f67be7194775a75be91cbf9feedcc5776d4b</code> on testnet.</li>
+<li>The Art Blocks subgraphs index Art Blocks contracts as well as Engine contracts. Use the <code translate="no" v-pre>contract_in</code> filter to ensure you are working with Art Blocks data only, if that is your intention.</li>
+<li>On Ethereum mainnet, the Art Blocks core contracts are <code translate="no" v-pre>0x059edd72cd353df5106d2b9cc5ab83a52287ac3a</code> (V0 contract, projects 0-3) and <code translate="no" v-pre>0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270</code> (V1 contract, projects 4+).</li>
 </ul>
 <doc-anchor-target id="the-basics">
     <h1>
@@ -284,36 +280,6 @@
 </doc-codeblock></div>
 </td>
 </tr>
-<tr>
-<td> Testnet </td> <td> Flagship </td>
-<td>
-<div id="the-basics-code-3" class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  projects(where: {projectId: &quot;100&quot;, contract_in: [&quot;0xda62f67be7194775a75be91cbf9feedcc5776d4b&quot;]}) {
-    id
-    invocations
-    artistName
-    name
-  }
-}</code></pre>
-</doc-codeblock></div>
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Engine </td>
-<td>
-<div id="the-basics-code-4" class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  projects(where: {projectId: &quot;1&quot;, contract_in: [&quot;0x5503a3b96d845f33f135429ab18c03c79477b14f&quot;]}) {
-    id
-    invocations
-    artistName
-    name
-  }
-}</code></pre>
-</doc-codeblock></div>
-</td>
-</tr>
 </table>
 <p>Retrieving a specific Art Blocks project by full ID (includes contract):</p>
 <table>
@@ -323,7 +289,7 @@
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
 <td>
-<div id="the-basics-code-5" class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   project(id:&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
     id
@@ -338,39 +304,9 @@
 <tr>
 <td> Mainnet </td> <td> Engine </td>
 <td>
-<div id="the-basics-code-6" class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   project(id:&quot;0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676-1&quot;) {
-    id
-    invocations
-    artistName
-    name
-  }
-}</code></pre>
-</doc-codeblock></div>
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Flagship </td>
-<td>
-<div id="the-basics-code-7" class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  project(id:&quot;0xda62f67be7194775a75be91cbf9feedcc5776d4b-100&quot;) {
-    id
-    invocations
-    artistName
-    name
-  }
-}</code></pre>
-</doc-codeblock></div>
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Engine </td>
-<td>
-<div id="the-basics-code-8" class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  project(id:&quot;0x5503a3b96d845f33f135429ab18c03c79477b14f-1&quot;) {
     id
     invocations
     artistName
@@ -393,7 +329,7 @@
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
 <td>
-<div id="the-basics-code-9" class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-5" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   tokens(where: {tokenId: &quot;0&quot;, contract_in: [&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;, &quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;]}) {
     id
@@ -405,25 +341,6 @@
 </tr>
 <tr>
 <td> Mainnet </td> <td> Engine </td>
-<td>
-Requires full ID (includes contract)
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Flagship </td>
-<td>
-<div id="the-basics-code-10" class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  tokens(where: {tokenId: &quot;10000000&quot;, contract_in: [&quot;0xda62f67be7194775a75be91cbf9feedcc5776d4b&quot;]}) {
-    id
-    tokenId
-  }
-}</code></pre>
-</doc-codeblock></div>
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Engine </td>
 <td>
 Requires full ID (includes contract)
 </td>
@@ -441,7 +358,7 @@ Requires full ID (includes contract)
 <tr>
 <td> Mainnet </td> <td> Flagship </td>
 <td>
-<div id="the-basics-code-11" class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-6" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   token(id: &quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
     id
@@ -454,35 +371,9 @@ Requires full ID (includes contract)
 <tr>
 <td> Mainnet </td> <td> Engine </td>
 <td>
-<div id="the-basics-code-12" class="codeblock-wrapper"><doc-codeblock>
+<div id="the-basics-code-7" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   token(id: &quot;0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676-1000000&quot;) {
-    id
-    tokenId
-  }
-}</code></pre>
-</doc-codeblock></div>
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Flagship </td>
-<td>
-<div id="the-basics-code-13" class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  token(id: &quot;0xda62f67be7194775a75be91cbf9feedcc5776d4b-10000000&quot;) {
-    id
-    tokenId
-  }
-}</code></pre>
-</doc-codeblock></div>
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Engine </td>
-<td>
-<div id="the-basics-code-14" class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  token(id: &quot;0x5503a3b96d845f33f135429ab18c03c79477b14f-1000000&quot;) {
     id
     tokenId
   }
@@ -501,7 +392,7 @@ Requires full ID (includes contract)
         <span>Beyond The Basics</span>
     </h1>
 </doc-anchor-target>
-<p>Retrieve the last 5 most recently created projects across Art Blocks and Powered by Art Blocks (remember that you can use a <code translate="no" v-pre>contract_in</code> filter to restrict this to only specific contracts):</p>
+<p>Retrieve the last 5 most recently created projects across Art Blocks and Engine (use a <code translate="no" v-pre>contract_in</code> filter to restrict to specific contracts):</p>
 <div id="beyond-the-basics-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(first: 5, orderBy: createdAt, orderDirection: desc) {
@@ -513,7 +404,7 @@ Requires full ID (includes contract)
   }
 }</code></pre>
 </doc-codeblock></div>
-<p>Retrieve the top 10 projects across Art Blocks and Powered by Art Blocks, based on # of invocations:</p>
+<p>Retrieve the top 10 projects across Art Blocks and Engine, based on # of invocations:</p>
 <div id="beyond-the-basics-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(first: 10, orderBy: invocations, orderDirection: desc) {
@@ -551,7 +442,7 @@ Requires full ID (includes contract)
   }
 }</code></pre>
 </doc-codeblock></div>
-<p>Retrieve all tokens owned by a specific address, across Art Blocks and Powered by Art Blocks:</p>
+<p>Retrieve all tokens owned by a specific address:</p>
 <div id="beyond-the-basics-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   tokens(where: { owner: &quot;&lt;owner address&gt;&quot; }) {
@@ -571,7 +462,7 @@ Requires full ID (includes contract)
   }
 }</code></pre>
 </doc-codeblock></div>
-<p>Retrieve the project script for a given project id</p>
+<p>Retrieve the project script for a given project id:</p>
 <div id="beyond-the-basics-code-6" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   project(id: &quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
@@ -579,16 +470,14 @@ Requires full ID (includes contract)
   }
 }</code></pre>
 </doc-codeblock></div>
-<p>Pagination should be used for large queries. The Graph enforces upper limits on <code translate="no" v-pre>first</code> and <code translate="no" v-pre>skip</code> parameters since they generally perform poorly when set to large values (limits as of 01/2022 are <code translate="no" v-pre>first&lt;=1000</code> and <code translate="no" v-pre>skip&lt;=5000</code>). It is much better to page through entities based on an attribute such as token ID, block number, or some other parameter. For more information, see <a href="https://thegraph.com/docs/en/developer/graphql-api/#pagination" class="outbound" target="_blank"><span>The Graph documentation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+<p>Pagination should be used for large queries. The Graph enforces upper limits on <code translate="no" v-pre>first</code> and <code translate="no" v-pre>skip</code> parameters since they generally perform poorly when set to large values (limits as of 01/2022 are <code translate="no" v-pre>first&lt;=1000</code> and <code translate="no" v-pre>skip&lt;=5000</code>). It is much better to page through entities based on an attribute such as token ID, block number, or some other parameter. For more information, see <a href="https://thegraph.com/docs/en/developer/graphql-api/#pagination" class="outbound" target="_blank"><span>The Graph documentation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <doc-anchor-target id="project-info">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#project-info">#</doc-anchor-trigger>
-        <span>Project info</span>
+        <span>Project Info</span>
     </h1>
 </doc-anchor-target>
-<ul>
-<li>Pull all projects and return their name, as well as lots of additional data:</li>
-</ul>
+<p>Pull all projects and return their name, as well as additional data:</p>
 <div id="project-info-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(
@@ -607,9 +496,7 @@ Requires full ID (includes contract)
   }
 }</code></pre>
 </doc-codeblock></div>
-<ul>
-<li>Get all the wallet owners of a project (Replace PROJECT with the project name you are looking for)</li>
-</ul>
+<p>Get all the wallet owners of a project (replace PROJECT with the project name):</p>
 <div id="project-info-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(where: { name: &quot;PROJECT&quot; }) {
@@ -619,9 +506,7 @@ Requires full ID (includes contract)
   }
 }</code></pre>
 </doc-codeblock></div>
-<ul>
-<li>If you&#x27;re looking for the addresses of anyone that owns a mint from a project</li>
-</ul>
+<p>Get the addresses of anyone that owns a mint from a project:</p>
 <div id="project-info-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects(where: { name: &quot;PROJECT&quot; }) {
@@ -632,9 +517,7 @@ Requires full ID (includes contract)
   }
 }</code></pre>
 </doc-codeblock></div>
-<ul>
-<li>Get that txnhash for squiggle 0, you could run the following query on the AB subgraph playground</li>
-</ul>
+<p>Get the transaction hash for Chromie Squiggle #0:</p>
 <div id="project-info-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   tokens(
@@ -650,6 +533,112 @@ Requires full ID (includes contract)
       name
     }
   }
+}</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="graphql-api-queries">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#graphql-api-queries">#</doc-anchor-trigger>
+        <span>GraphQL API Queries</span>
+    </h1>
+</doc-anchor-target>
+<p>The Art Blocks GraphQL API (Hasura) uses <code translate="no" v-pre>_metadata</code> table suffixes and a slightly different naming convention (snake_case) compared to the subgraph (camelCase). Below are equivalent examples using the GraphQL API.</p>
+<p>Since the GraphQL API is multichain, we recommend always including <code translate="no" v-pre>chain_id</code> in your <code translate="no" v-pre>where</code> clauses to scope queries to a specific network. Supported chain IDs: <code translate="no" v-pre>1</code> (Ethereum), <code translate="no" v-pre>42161</code> (Arbitrum), <code translate="no" v-pre>8453</code> (Base).</p>
+<p>Retrieve a project by its full ID on Ethereum mainnet:</p>
+<div id="graphql-api-queries-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
+  projects_metadata(where: {
+    id: {_eq: &quot;0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385&quot;},
+    chain_id: {_eq: 1}
+  }) {
+    id
+    name
+    artist_name
+    invocations
+    max_invocations
+    chain_id
+    contract_address
+  }
+}</code></pre>
+</doc-codeblock></div>
+<p>Retrieve a token with its project info on Ethereum mainnet:</p>
+<div id="graphql-api-queries-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
+  tokens_metadata(where: {
+    id: {_eq: &quot;0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385000000&quot;},
+    chain_id: {_eq: 1}
+  }) {
+    id
+    token_id
+    chain_id
+    hash
+    owner_address
+    live_view_url
+    media_url
+    project {
+      name
+      artist_name
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+<p>Retrieve the most recent Art Blocks flagship projects on Ethereum mainnet:</p>
+<div id="graphql-api-queries-code-3" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
+  projects_metadata(
+    where: {
+      is_artblocks: {_eq: true},
+      chain_id: {_eq: 1}
+    }
+    order_by: {activated_at: desc}
+    limit: 5
+  ) {
+    id
+    name
+    artist_name
+    invocations
+    max_invocations
+    chain_id
+  }
+}</code></pre>
+</doc-codeblock></div>
+<p>Retrieve minter configuration for a project on Ethereum mainnet (useful for displaying purchase information):</p>
+<div id="graphql-api-queries-code-4" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
+  projects_metadata(where: {
+    id: {_eq: &quot;0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385&quot;},
+    chain_id: {_eq: 1}
+  }) {
+    id
+    name
+    minter_configuration {
+      price_is_configured
+      currency_symbol
+      currency_address
+      base_price
+      max_invocations
+      extra_minter_details
+      minter {
+        address
+        extra_minter_details
+        type {
+          label
+        }
+      }
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+<p>The <code translate="no" v-pre>extra_minter_details</code> field contains a JSONB object with minter-specific configuration. For example, a Dutch Auction minter may include:</p>
+<div id="graphql-api-queries-code-5" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-json"><code v-pre class="language-json">{
+  &quot;startTime&quot;: 1676052000,
+  &quot;halfLifeSeconds&quot;: 315,
+  &quot;approximateDAExpEndTime&quot;: 1676053820,
+  &quot;startPrice&quot;: &quot;11000000000000000000&quot;,
+  &quot;currentSettledPrice&quot;: &quot;557638888888888889&quot;,
+  &quot;auctionRevenuesCollected&quot;: true,
+  &quot;numSettleableInvocations&quot;: 172
 }</code></pre>
 </doc-codeblock></div>
 
