@@ -1,7 +1,6 @@
 ---
 sidebar_position: 3
-title: Querying and API Overview
-
+title: Querying
 ---
 
 # Querying
@@ -12,14 +11,12 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 
 ## Subgraph Querying Walkthrough
 
-The following provides some examples of how to use the Art Blocks subgraph to perform a handful of common queries.
+The following provides some examples of how to use the Art Blocks subgraph to perform common queries.
 
 #### Important Notes
 
-- Performance/indexing on the hosted subgraph service is oftentimes slower compared to the decentralized subgraph. That being said, the hosted subgraph is free while the decentralized one requires pay-per-query in GRT.
-- The Art Blocks subgraphs currently also index any PBAB (Powered by Artblocks) contracts, in addition to the core Art Blocks contracts. Please keep that in mind and make use of the `contract_in` filter to ensure you are working with Art Blocks data only, if that is your intention.
-* While querying against the mainnet subgraph if using the `contract_in` filter the Art Blocks contracts to restrict for are `0x059edd72cd353df5106d2b9cc5ab83a52287ac3a` (for the V0 contract that supports projects 0-3) and `0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270` (for the V1 contract that supports projects 4-current). 
-* The Art Blocks contract to restrict for is `0xda62f67be7194775a75be91cbf9feedcc5776d4b` on testnet.
+- The Art Blocks subgraphs index Art Blocks contracts as well as Engine contracts. Use the `contract_in` filter to ensure you are working with Art Blocks data only, if that is your intention.
+- On Ethereum mainnet, the Art Blocks core contracts are `0x059edd72cd353df5106d2b9cc5ab83a52287ac3a` (V0 contract, projects 0-3) and `0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270` (V1 contract, projects 4+).
 
 # The Basics
 
@@ -54,40 +51,6 @@ Retrieving a specific Art Blocks project by short ID (no contract):
 ```graphql
 {
   projects(where: {projectId: "1", contract_in: ["0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676"]}) {
-    id
-    invocations
-    artistName
-    name
-  }
-}
-```
-
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Flagship </td>
-<td>
-
-```graphql
-{
-  projects(where: {projectId: "100", contract_in: ["0xda62f67be7194775a75be91cbf9feedcc5776d4b"]}) {
-    id
-    invocations
-    artistName
-    name
-  }
-}
-```
-
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Engine </td>
-<td>
-
-```graphql
-{
-  projects(where: {projectId: "1", contract_in: ["0x5503a3b96d845f33f135429ab18c03c79477b14f"]}) {
     id
     invocations
     artistName
@@ -140,40 +103,6 @@ Retrieving a specific Art Blocks project by full ID (includes contract):
 
 </td>
 </tr>
-<tr>
-<td> Testnet </td> <td> Flagship </td>
-<td>
-
-```graphql
-{
-  project(id:"0xda62f67be7194775a75be91cbf9feedcc5776d4b-100") {
-    id
-    invocations
-    artistName
-    name
-  }
-}
-```
-
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Engine </td>
-<td>
-
-```graphql
-{
-  project(id:"0x5503a3b96d845f33f135429ab18c03c79477b14f-1") {
-    id
-    invocations
-    artistName
-    name
-  }
-}
-```
-
-</td>
-</tr>
 </table>
 
 ---
@@ -205,27 +134,6 @@ Retrieving a specific Art Blocks token by short ID (no contract):
 </tr>
 <tr>
 <td> Mainnet </td> <td> Engine </td>
-<td>
-Requires full ID (includes contract)
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Flagship </td>
-<td>
-
-```graphql
-{
-  tokens(where: {tokenId: "10000000", contract_in: ["0xda62f67be7194775a75be91cbf9feedcc5776d4b"]}) {
-    id
-    tokenId
-  }
-}
-```
-
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Engine </td>
 <td>
 Requires full ID (includes contract)
 </td>
@@ -273,36 +181,6 @@ Retrieving a specific Art Blocks token by full ID (includes contract):
 
 </td>
 </tr>
-<tr>
-<td> Testnet </td> <td> Flagship </td>
-<td>
-
-```graphql
-{
-  token(id: "0xda62f67be7194775a75be91cbf9feedcc5776d4b-10000000") {
-    id
-    tokenId
-  }
-}
-```
-
-</td>
-</tr>
-<tr>
-<td> Testnet </td> <td> Engine </td>
-<td>
-
-```graphql
-{
-  token(id: "0x5503a3b96d845f33f135429ab18c03c79477b14f-1000000") {
-    id
-    tokenId
-  }
-}
-```
-
-</td>
-</tr>
 </table>
 
 ---
@@ -312,7 +190,7 @@ Retrieving a specific Art Blocks token by full ID (includes contract):
 
 # Beyond The Basics
 
-Retrieve the last 5 most recently created projects across Art Blocks and Powered by Art Blocks (remember that you can use a `contract_in` filter to restrict this to only specific contracts):
+Retrieve the last 5 most recently created projects across Art Blocks and Engine (use a `contract_in` filter to restrict to specific contracts):
 
 ```graphql
 {
@@ -326,7 +204,7 @@ Retrieve the last 5 most recently created projects across Art Blocks and Powered
 }
 ```
 
-Retrieve the top 10 projects across Art Blocks and Powered by Art Blocks, based on # of invocations:
+Retrieve the top 10 projects across Art Blocks and Engine, based on # of invocations:
 
 ```graphql
 {
@@ -368,7 +246,7 @@ Retrieve the most recently minted Art Blocks token:
 }
 ```
 
-Retrieve all tokens owned by a specific address, across Art Blocks and Powered by Art Blocks:
+Retrieve all tokens owned by a specific address:
 
 ```graphql
 {
@@ -392,7 +270,7 @@ Retrieve the general metadata/status for the Art Blocks subgraph (useful for deb
 }
 ```
 
-Retrieve the project script for a given project id
+Retrieve the project script for a given project id:
 
 ```graphql
 {
@@ -402,11 +280,11 @@ Retrieve the project script for a given project id
 }
 ```
 
-Pagination should be used for large queries. The Graph enforces upper limits on `first` and `skip` parameters since they generally perform poorly when set to large values (limits as of 01/2022 are `first<=1000` and `skip<=5000`). It is much better to page through entities based on an attribute such as token ID, block number, or some other parameter. For more information, see [The Graph documentation](https://thegraph.com/docs/en/developer/graphql-api/#pagination)
+Pagination should be used for large queries. The Graph enforces upper limits on `first` and `skip` parameters since they generally perform poorly when set to large values (limits as of 01/2022 are `first<=1000` and `skip<=5000`). It is much better to page through entities based on an attribute such as token ID, block number, or some other parameter. For more information, see [The Graph documentation](https://thegraph.com/docs/en/developer/graphql-api/#pagination).
 
-# Project info
+# Project Info
 
-- Pull all projects and return their name, as well as lots of additional data:
+Pull all projects and return their name, as well as additional data:
 
 ```graphql
 {
@@ -427,7 +305,7 @@ Pagination should be used for large queries. The Graph enforces upper limits on 
 }
 ```
 
-- Get all the wallet owners of a project (Replace PROJECT with the project name you are looking for)
+Get all the wallet owners of a project (replace PROJECT with the project name):
 
 ```graphql
 {
@@ -439,7 +317,7 @@ Pagination should be used for large queries. The Graph enforces upper limits on 
 }
 ```
 
-- If you're looking for the addresses of anyone that owns a mint from a project
+Get the addresses of anyone that owns a mint from a project:
 
 ```graphql
 {
@@ -452,7 +330,7 @@ Pagination should be used for large queries. The Graph enforces upper limits on 
 }
 ```
 
-- Get that txnhash for squiggle 0, you could run the following query on the AB subgraph playground
+Get the transaction hash for Chromie Squiggle #0:
 
 ```graphql
 {
@@ -469,5 +347,120 @@ Pagination should be used for large queries. The Graph enforces upper limits on 
       name
     }
   }
+}
+```
+
+---
+
+# GraphQL API Queries
+
+The Art Blocks GraphQL API (Hasura) uses `_metadata` table suffixes and a slightly different naming convention (snake_case) compared to the subgraph (camelCase). Below are equivalent examples using the GraphQL API.
+
+Since the GraphQL API is multichain, we recommend always including `chain_id` in your `where` clauses to scope queries to a specific network. Supported chain IDs: `1` (Ethereum), `42161` (Arbitrum), `8453` (Base).
+
+Retrieve a project by its full ID on Ethereum mainnet:
+
+```graphql
+{
+  projects_metadata(where: {
+    id: {_eq: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385"},
+    chain_id: {_eq: 1}
+  }) {
+    id
+    name
+    artist_name
+    invocations
+    max_invocations
+    chain_id
+    contract_address
+  }
+}
+```
+
+Retrieve a token with its project info on Ethereum mainnet:
+
+```graphql
+{
+  tokens_metadata(where: {
+    id: {_eq: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385000000"},
+    chain_id: {_eq: 1}
+  }) {
+    id
+    token_id
+    chain_id
+    hash
+    owner_address
+    live_view_url
+    media_url
+    project {
+      name
+      artist_name
+    }
+  }
+}
+```
+
+Retrieve the most recent Art Blocks flagship projects on Ethereum mainnet:
+
+```graphql
+{
+  projects_metadata(
+    where: {
+      is_artblocks: {_eq: true},
+      chain_id: {_eq: 1}
+    }
+    order_by: {activated_at: desc}
+    limit: 5
+  ) {
+    id
+    name
+    artist_name
+    invocations
+    max_invocations
+    chain_id
+  }
+}
+```
+
+Retrieve minter configuration for a project on Ethereum mainnet (useful for displaying purchase information):
+
+```graphql
+{
+  projects_metadata(where: {
+    id: {_eq: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385"},
+    chain_id: {_eq: 1}
+  }) {
+    id
+    name
+    minter_configuration {
+      price_is_configured
+      currency_symbol
+      currency_address
+      base_price
+      max_invocations
+      extra_minter_details
+      minter {
+        address
+        extra_minter_details
+        type {
+          label
+        }
+      }
+    }
+  }
+}
+```
+
+The `extra_minter_details` field contains a JSONB object with minter-specific configuration. For example, a Dutch Auction minter may include:
+
+```json
+{
+  "startTime": 1676052000,
+  "halfLifeSeconds": 315,
+  "approximateDAExpEndTime": 1676053820,
+  "startPrice": "11000000000000000000",
+  "currentSettledPrice": "557638888888888889",
+  "auctionRevenuesCollected": true,
+  "numSettleableInvocations": 172
 }
 ```

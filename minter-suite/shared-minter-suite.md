@@ -106,7 +106,7 @@ The minter pre-mints tokens before their auction, so bids are placed on an alrea
 
 The minter may be used for any project, and is certainly ideal for projects that have a series of tokens that are released in a sequence. It may also be used to auction off a 1:1 token. The minter is also ideal for projects that have a strong community, as it allows for community members to participate in the auction process over a long period of time, carefully considering each generative output.
 
-Bids and auction parameters are stored on-chain, and the Art Blocks subgraph and API index all historical bids in [`bids_metadata`](https://docs.artblocks.io/public-api-docs/#definition-bids_metadata) as well as auction parameters in [`project_minter_configurations`](https://docs.artblocks.io/public-api-docs/#definition-project_minter_configurations).
+Bids and auction parameters are stored on-chain, and the Art Blocks subgraph and API index all historical bids in `bids_metadata` as well as auction parameters in `project_minter_configurations`.
 
 ### `Minimum price minter`
 
