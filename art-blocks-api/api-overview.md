@@ -36,17 +36,11 @@ Provides the token metadata for a given Art Blocks token.
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
 | `https://token.artblocks.io/{chainID}/{contractAddress}/{tokenID}` | https://token.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000 |
 
-**Staging**
+**Staging (Sepolia testnet)**
 
 | Pattern                                                                    |
 | -------------------------------------------------------------------------- |
 | `https://token.staging.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |
-
-**Dev**
-
-| Pattern                                                                |
-| ---------------------------------------------------------------------- |
-| `https://token.dev.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |
 
 <br>
 
@@ -60,17 +54,11 @@ Provides an i-frame-able live-view for the art associated with a given Art Block
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | `https://generator.artblocks.io/{chainID}/{contractAddress}/{tokenID}` | https://generator.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000 |
 
-**Staging**
+**Staging (Sepolia testnet)**
 
 | Pattern                                                                        |
 | ------------------------------------------------------------------------------ |
 | `https://generator.staging.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |
-
-**Dev**
-
-| Pattern                                                                    |
-| -------------------------------------------------------------------------- |
-| `https://generator.dev.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |
 
 <br>
 
@@ -84,17 +72,11 @@ Provides a static snapshot of the rendered live-view for a given Art Blocks toke
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `https://media-proxy.artblocks.io/{chainID}/{contractAddress}/{tokenID}.png` | https://media-proxy.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000.png |
 
-**Staging**
+**Staging (Sepolia testnet)**
 
 | Pattern                                                                              |
 | ------------------------------------------------------------------------------------ |
 | `https://media-proxy.staging.artblocks.io/{chainID}/{contractAddress}/{tokenID}.png` |
-
-**Dev**
-
-| Pattern                                                                          |
-| -------------------------------------------------------------------------------- |
-| `https://media-proxy.dev.artblocks.io/{chainID}/{contractAddress}/{tokenID}.png` |
 
 Please note that the Generator API and Media Proxy API links for a given token are included in the token response for that token from the Token API.
 
@@ -138,13 +120,11 @@ The Art Blocks subgraphs can be queried at any of the graphql endpoints listed i
 
 Provides a broader set of data than the subgraph alone — this includes both on-chain and off-chain data. We recommend using this API for most integrations, as it provides a more complete picture of projects, tokens, and minting configurations.
 
-| Environment | URL                                                |
-| ----------- | -------------------------------------------------- |
-| Production  | `https://data.artblocks.io/v1/graphql`             |
-| Staging     | `https://ab-staging-sepolia.hasura.app/v1/graphql` |
+| Environment | URL                                            |
+| ----------- | ---------------------------------------------- |
+| Production                | `https://data.artblocks.io/v1/graphql`             |
+| Staging (Sepolia testnet) | `https://ab-staging-sepolia.hasura.app/v1/graphql` |
 
 The GraphQL API uses `_metadata` table suffixes (e.g. `projects_metadata`, `tokens_metadata`, `contracts_metadata`, `minters_metadata`) and provides fields such as `chain_id`, `contract_address`, minter configuration details, and more. See the [Entities](/creator-docs/art-blocks-api/entities/) page for a full reference.
 
-For a full detailed overview of this GraphQL API, please reference: https://docs.artblocks.io/public-api-docs/
-
-Additionally, you can use this interactive Hasura playground to test out queries: https://cloud.hasura.io/public/graphiql?endpoint=https://data.artblocks.io/v1/graphql
+You can use this interactive Hasura playground to explore the full schema and test out queries: https://cloud.hasura.io/public/graphiql?endpoint=https://data.artblocks.io/v1/graphql
