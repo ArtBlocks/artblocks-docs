@@ -13,11 +13,6 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 
 The following provides some examples of how to use the Art Blocks subgraph to perform common queries.
 
-#### Important Notes
-
-- The Art Blocks subgraphs index Art Blocks contracts as well as Engine contracts. Use the `contract_in` filter to ensure you are working with Art Blocks data only, if that is your intention.
-- On Ethereum mainnet, the Art Blocks core contracts are `0x059edd72cd353df5106d2b9cc5ab83a52287ac3a` (V0 contract, projects 0-3) and `0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270` (V1 contract, projects 4+).
-
 # The Basics
 
 Retrieving a specific Art Blocks project by short ID (no contract):
@@ -32,8 +27,15 @@ Retrieving a specific Art Blocks project by short ID (no contract):
 
 ```graphql
 {
-  projects(where: {projectId: "0", contract_in: ["0x059edd72cd353df5106d2b9cc5ab83a52287ac3a","0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270"]
-  }) {
+  projects(
+    where: {
+      projectId: "0"
+      contract_in: [
+        "0x059edd72cd353df5106d2b9cc5ab83a52287ac3a"
+        "0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270"
+      ]
+    }
+  ) {
     id
     invocations
     artistName
@@ -50,7 +52,12 @@ Retrieving a specific Art Blocks project by short ID (no contract):
 
 ```graphql
 {
-  projects(where: {projectId: "1", contract_in: ["0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676"]}) {
+  projects(
+    where: {
+      projectId: "1"
+      contract_in: ["0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676"]
+    }
+  ) {
     id
     invocations
     artistName
@@ -75,7 +82,7 @@ Retrieving a specific Art Blocks project by full ID (includes contract):
 
 ```graphql
 {
-  project(id:"0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0") {
+  project(id: "0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0") {
     id
     invocations
     artistName
@@ -92,7 +99,7 @@ Retrieving a specific Art Blocks project by full ID (includes contract):
 
 ```graphql
 {
-  project(id:"0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676-1") {
+  project(id: "0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676-1") {
     id
     invocations
     artistName
@@ -123,7 +130,15 @@ Retrieving a specific Art Blocks token by short ID (no contract):
 
 ```graphql
 {
-  tokens(where: {tokenId: "0", contract_in: ["0x059edd72cd353df5106d2b9cc5ab83a52287ac3a", "0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270"]}) {
+  tokens(
+    where: {
+      tokenId: "0"
+      contract_in: [
+        "0x059edd72cd353df5106d2b9cc5ab83a52287ac3a"
+        "0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270"
+      ]
+    }
+  ) {
     id
     tokenId
   }
@@ -141,6 +156,7 @@ Requires full ID (includes contract)
 </table>
 
 ---
+
 <br>
 <br>
 <br>
@@ -184,6 +200,7 @@ Retrieving a specific Art Blocks token by full ID (includes contract):
 </table>
 
 ---
+
 <br>
 <br>
 <br>
@@ -362,10 +379,12 @@ Retrieve a project by its full ID on Ethereum mainnet:
 
 ```graphql
 {
-  projects_metadata(where: {
-    id: {_eq: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385"},
-    chain_id: {_eq: 1}
-  }) {
+  projects_metadata(
+    where: {
+      id: { _eq: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385" }
+      chain_id: { _eq: 1 }
+    }
+  ) {
     id
     name
     artist_name
@@ -381,10 +400,12 @@ Retrieve a token with its project info on Ethereum mainnet:
 
 ```graphql
 {
-  tokens_metadata(where: {
-    id: {_eq: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385000000"},
-    chain_id: {_eq: 1}
-  }) {
+  tokens_metadata(
+    where: {
+      id: { _eq: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385000000" }
+      chain_id: { _eq: 1 }
+    }
+  ) {
     id
     token_id
     chain_id
@@ -405,11 +426,8 @@ Retrieve the most recent Art Blocks flagship projects on Ethereum mainnet:
 ```graphql
 {
   projects_metadata(
-    where: {
-      is_artblocks: {_eq: true},
-      chain_id: {_eq: 1}
-    }
-    order_by: {activated_at: desc}
+    where: { is_artblocks: { _eq: true }, chain_id: { _eq: 1 } }
+    order_by: { activated_at: desc }
     limit: 5
   ) {
     id
@@ -426,10 +444,12 @@ Retrieve minter configuration for a project on Ethereum mainnet (useful for disp
 
 ```graphql
 {
-  projects_metadata(where: {
-    id: {_eq: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385"},
-    chain_id: {_eq: 1}
-  }) {
+  projects_metadata(
+    where: {
+      id: { _eq: "0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385" }
+      chain_id: { _eq: 1 }
+    }
+  ) {
     id
     name
     minter_configuration {

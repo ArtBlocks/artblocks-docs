@@ -164,6 +164,7 @@ The following standard augmentation hooks are available (this list is regularly 
 | `InjectTokenHashSeed`                        | Injects the token's hash seed                             |
 | `InjectTokenOwnerEthBalance`                 | Injects the token owner's ETH balance                     |
 | `InjectBlockHeightAndArtistProjectOverrides` | Injects block height with artist project override support |
+| `InjectBlockTimestamp`                       | Injects the current block timestamp                       |
 
 ### Custom Hooks
 
