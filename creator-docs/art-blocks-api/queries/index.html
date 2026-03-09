@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.826130151739">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.826401682329">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.1.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.1.0.826130151739" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.1.0.826401682329" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.1.0.826130151739" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.1.0.826401682329" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.1.0.826130151739" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.1.0.826130151739" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.1.0.826401682329" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.1.0.826401682329" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -228,16 +228,6 @@
     </h2>
 </doc-anchor-target>
 <p>The following provides some examples of how to use the Art Blocks subgraph to perform common queries.</p>
-<doc-anchor-target id="important-notes">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#important-notes">#</doc-anchor-trigger>
-        <span>Important Notes</span>
-    </h4>
-</doc-anchor-target>
-<ul>
-<li>The Art Blocks subgraphs index Art Blocks contracts as well as Engine contracts. Use the <code translate="no" v-pre>contract_in</code> filter to ensure you are working with Art Blocks data only, if that is your intention.</li>
-<li>On Ethereum mainnet, the Art Blocks core contracts are <code translate="no" v-pre>0x059edd72cd353df5106d2b9cc5ab83a52287ac3a</code> (V0 contract, projects 0-3) and <code translate="no" v-pre>0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270</code> (V1 contract, projects 4+).</li>
-</ul>
 <doc-anchor-target id="the-basics">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#the-basics">#</doc-anchor-trigger>
@@ -254,8 +244,15 @@
 <td>
 <div id="the-basics-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  projects(where: {projectId: &quot;0&quot;, contract_in: [&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;,&quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;]
-  }) {
+  projects(
+    where: {
+      projectId: &quot;0&quot;
+      contract_in: [
+        &quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;
+        &quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;
+      ]
+    }
+  ) {
     id
     invocations
     artistName
@@ -270,7 +267,12 @@
 <td>
 <div id="the-basics-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  projects(where: {projectId: &quot;1&quot;, contract_in: [&quot;0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676&quot;]}) {
+  projects(
+    where: {
+      projectId: &quot;1&quot;
+      contract_in: [&quot;0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676&quot;]
+    }
+  ) {
     id
     invocations
     artistName
@@ -291,7 +293,7 @@
 <td>
 <div id="the-basics-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  project(id:&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
+  project(id: &quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a-0&quot;) {
     id
     invocations
     artistName
@@ -306,7 +308,7 @@
 <td>
 <div id="the-basics-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  project(id:&quot;0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676-1&quot;) {
+  project(id: &quot;0x0a1bbd57033f57e7b6743621b79fcb9eb2ce3676-1&quot;) {
     id
     invocations
     artistName
@@ -331,7 +333,15 @@
 <td>
 <div id="the-basics-code-5" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  tokens(where: {tokenId: &quot;0&quot;, contract_in: [&quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;, &quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;]}) {
+  tokens(
+    where: {
+      tokenId: &quot;0&quot;
+      contract_in: [
+        &quot;0x059edd72cd353df5106d2b9cc5ab83a52287ac3a&quot;
+        &quot;0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270&quot;
+      ]
+    }
+  ) {
     id
     tokenId
   }
@@ -547,10 +557,12 @@ Requires full ID (includes contract)
 <p>Retrieve a project by its full ID on Ethereum mainnet:</p>
 <div id="graphql-api-queries-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  projects_metadata(where: {
-    id: {_eq: &quot;0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385&quot;},
-    chain_id: {_eq: 1}
-  }) {
+  projects_metadata(
+    where: {
+      id: { _eq: &quot;0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385&quot; }
+      chain_id: { _eq: 1 }
+    }
+  ) {
     id
     name
     artist_name
@@ -564,10 +576,12 @@ Requires full ID (includes contract)
 <p>Retrieve a token with its project info on Ethereum mainnet:</p>
 <div id="graphql-api-queries-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  tokens_metadata(where: {
-    id: {_eq: &quot;0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385000000&quot;},
-    chain_id: {_eq: 1}
-  }) {
+  tokens_metadata(
+    where: {
+      id: { _eq: &quot;0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385000000&quot; }
+      chain_id: { _eq: 1 }
+    }
+  ) {
     id
     token_id
     chain_id
@@ -586,11 +600,8 @@ Requires full ID (includes contract)
 <div id="graphql-api-queries-code-3" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
   projects_metadata(
-    where: {
-      is_artblocks: {_eq: true},
-      chain_id: {_eq: 1}
-    }
-    order_by: {activated_at: desc}
+    where: { is_artblocks: { _eq: true }, chain_id: { _eq: 1 } }
+    order_by: { activated_at: desc }
     limit: 5
   ) {
     id
@@ -605,10 +616,12 @@ Requires full ID (includes contract)
 <p>Retrieve minter configuration for a project on Ethereum mainnet (useful for displaying purchase information):</p>
 <div id="graphql-api-queries-code-4" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-graphql"><code v-pre class="language-graphql">{
-  projects_metadata(where: {
-    id: {_eq: &quot;0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385&quot;},
-    chain_id: {_eq: 1}
-  }) {
+  projects_metadata(
+    where: {
+      id: { _eq: &quot;0x99a9b7c1116f9ceeb1652de04d5969cce509b069-385&quot; }
+      chain_id: { _eq: 1 }
+    }
+  ) {
     id
     name
     minter_configuration {
