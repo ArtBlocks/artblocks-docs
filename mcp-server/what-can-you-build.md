@@ -15,7 +15,7 @@ An agent that monitors live mints and acts on configurable criteria.
 
 Poll `discover_live_mints` on a schedule, filter by price or scarcity, evaluate trait distributions and secondary floor via `get_project`, then build a ready-to-sign transaction.
 
-> "Alert me when a curated project drops below 0.05 ETH with more than 50% supply remaining. If the secondary floor is above mint price, auto-build the transaction."
+> "Alert me when an Art Blocks Studio project drops below 0.05 ETH with more than 50% supply remaining. If the secondary floor is above mint price, auto-build the transaction."
 
 ---
 
