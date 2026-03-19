@@ -93,9 +93,7 @@ Use `get_artist` to expand into full catalogs: "Fidenza is sold out (floor: 18.8
 ## Catalog Research
 
 ```
-"Tell me about Chromie Squiggle"
+"Tell me about all projects by Snowfro and Aaron Penne"
 ```
 
-`discover_projects` searches the full catalog by name, artist, or tags. For sold-out projects (`complete: true`), an agent knows to skip the mint flow and surface secondary market data instead.
-
-Combine with `get_artist` to build full artist profiles across their entire Art Blocks catalog.
+`discover_projects` searches the full catalog by name, artist, or tags. `get_artist` expands into full catalogs per artist. An agent can compare bodies of work, check which projects are sold out vs. still mintable, and surface secondary floor prices across an artist's entire output.
