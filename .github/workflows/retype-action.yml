@@ -18,10 +18,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: retypeapp/action-build@v4
-        with:
-          key: ${{ secrets.RETYPE_SECRET }}
-          output: .retype
+      - name: Build Retype site
+        run: |
+          dotnet tool install retypeapp --global
+          retype build --output .retype --key "${{ secrets.RETYPE_SECRET }}"
 
       - uses: JamesIves/github-pages-deploy-action@v4
         with:

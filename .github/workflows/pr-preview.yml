@@ -22,11 +22,11 @@ jobs:
         run: |
           sed -i "s|^url:.*|url: docs.artblocks.io/pr-preview/pr-${{ github.event.number }}|" retype.yml
 
-      - uses: retypeapp/action-build@v4
+      - name: Build Retype site
         if: github.event.action != 'closed'
-        with:
-          key: ${{ secrets.RETYPE_SECRET }}
-          output: .retype
+        run: |
+          dotnet tool install retypeapp --global
+          retype build --output .retype --key "${{ secrets.RETYPE_SECRET }}"
 
       - uses: rossjrw/pr-preview-action@v1
         with:
