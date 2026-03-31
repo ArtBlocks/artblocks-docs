@@ -20,7 +20,8 @@ jobs:
 
       - uses: retypeapp/action-build@v4
         with:
-          license: ${{ secrets.RETYPE_SECRET }}
+          key: ${{ secrets.RETYPE_SECRET }}
+          output: .retype
 
       - uses: JamesIves/github-pages-deploy-action@v4
         with:

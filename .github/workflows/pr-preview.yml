@@ -25,9 +25,10 @@ jobs:
       - uses: retypeapp/action-build@v4
         if: github.event.action != 'closed'
         with:
-          license: ${{ secrets.RETYPE_SECRET }}
+          key: ${{ secrets.RETYPE_SECRET }}
+          output: .retype
 
       - uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: .retype
-          pages-branch: retype
+          preview-branch: retype
