@@ -1,0 +1,5 @@
+order: -9999
+icon: archive
+label: Legacy Reference
+visibility: hidden
+route: /legacy/

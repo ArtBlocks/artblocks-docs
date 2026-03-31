@@ -1,0 +1,5 @@
+order: 200
+icon: coins
+label: Minter Suite
+expanded: false
+route: /developer/minter-suite/

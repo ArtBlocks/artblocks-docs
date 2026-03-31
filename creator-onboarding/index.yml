@@ -1,3 +1,5 @@
-icon: book
-label: Creator Onboarding
-route: /creator-docs/creator-onboarding/
+order: 100
+icon: people
+label: Creator & Engine Onboarding
+expanded: false
+route: /creator-onboarding/
