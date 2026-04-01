@@ -63,7 +63,9 @@ On the Scripts sub-page, click **Preview** after uploading your script. A new wi
 Yes. The Creator Dashboard includes an **Import from Testnet** feature. Import Details, Scripts, Renders, Payments, and Minters — but skip Admin settings.
 
 **What's the difference between Canvas Mode being on or off?**
-Canvas Mode is required for the Art Blocks static image renderer to capture your canvas correctly. Enable it if your project draws to a `<canvas>` element (most p5.js and vanilla JS projects).
+If checked, data is directly pulled from the `Canvas` element using `.toDataURL()` when producing static image renders. This additional rendering mode can be leveraged for projects with varying aspect ratios across different tokens.
+
+Please note that scripts containing multiple `Canvas` elements may not render as intended.
 
 **I set up my payment splits wrong. Can I change them?**
 You can update payment configuration up until the project is locked. After locking, the royalty splitter is immutable — contact Art Blocks to request a splitter replacement.
