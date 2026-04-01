@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pr-preview/pr-339">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.828308210536">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.828370245017">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.4.0">
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.4.0.828308210536" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.4.0.828370245017" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.4.0.828308210536" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.4.0.828370245017" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.4.0.828308210536" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.4.0.828370245017" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -237,7 +237,8 @@ On the Scripts sub-page, click <strong>Preview</strong> after uploading your scr
 <p><strong>Can I import my testnet configuration to mainnet?</strong>
 Yes. The Creator Dashboard includes an <strong>Import from Testnet</strong> feature. Import Details, Scripts, Renders, Payments, and Minters — but skip Admin settings.</p>
 <p><strong>What&#x27;s the difference between Canvas Mode being on or off?</strong>
-Canvas Mode is required for the Art Blocks static image renderer to capture your canvas correctly. Enable it if your project draws to a <code translate="no" v-pre>&lt;canvas&gt;</code> element (most p5.js and vanilla JS projects).</p>
+If checked, data is directly pulled from the <code translate="no" v-pre>Canvas</code> element using <code translate="no" v-pre>.toDataURL()</code> when producing static image renders. This additional rendering mode can be leveraged for projects with varying aspect ratios across different tokens.</p>
+<p>Please note that scripts containing multiple <code translate="no" v-pre>Canvas</code> elements may not render as intended.</p>
 <p><strong>I set up my payment splits wrong. Can I change them?</strong>
 You can update payment configuration up until the project is locked. After locking, the royalty splitter is immutable — contact Art Blocks to request a splitter replacement.</p>
 <hr>
