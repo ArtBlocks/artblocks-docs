@@ -1,9 +1,13 @@
 name: Publish Retype powered website to GitHub Pages
+
 on:
   workflow_dispatch:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   publish:
@@ -12,12 +16,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: retypeapp/action-build@latest
-        with:
-          license: ${{ secrets.RETYPE_SECRET }}
+      - name: Build Retype site
+        run: |
+          dotnet tool install retypeapp --global
+          retype build --output .retype --key "${{ secrets.RETYPE_SECRET }}"
 
-      - uses: retypeapp/action-github-pages@latest
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          update-branch: true
+          branch: retype
+          folder: .retype
+          clean-exclude: pr-preview

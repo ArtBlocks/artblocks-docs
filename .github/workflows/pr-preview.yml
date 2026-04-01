@@ -1,0 +1,34 @@
+name: Deploy PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+concurrency: preview-${{ github.ref }}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        if: github.event.action != 'closed'
+
+      - name: Set preview base URL
+        if: github.event.action != 'closed'
+        run: |
+          sed -i "s|^url:.*|url: docs.artblocks.io/pr-preview/pr-${{ github.event.number }}|" retype.yml
+
+      - name: Build Retype site
+        if: github.event.action != 'closed'
+        run: |
+          dotnet tool install retypeapp --global
+          retype build --output .retype --key "${{ secrets.RETYPE_SECRET }}"
+
+      - uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: .retype
+          preview-branch: retype

@@ -1,5 +1,5 @@
 ---
 route: /mcp
-redirect: /mcp-server/quick-start/
+redirect: /developer/mcp-server/quick-start/
 visibility: hidden
 ---
