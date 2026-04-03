@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGMHL6GNM0"></script>
+    <script data-cfasync="false">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-NGMHL6GNM0');</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/pr-preview/pr-340">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.828555212606">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.4.0">
+
+    <!-- Primary Meta Tags -->
+    <title>What is Art Blocks Engine?</title>
+    <meta name="title" content="What is Art Blocks Engine?">
+    <meta name="description" content="What is Art Blocks Engine and Engine Flex — platform overview, use cases, and contract architecture.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/engine-partners/what-is-engine/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/engine-partners/what-is-engine/">
+    <meta property="og:title" content="What is Art Blocks Engine?">
+    <meta property="og:description" content="What is Art Blocks Engine and Engine Flex — platform overview, use cases, and contract architecture.">
+    <meta property="og:site_name" content="Art Blocks">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/engine-partners/what-is-engine/">
+    <meta name="twitter:title" content="What is Art Blocks Engine?">
+    <meta name="twitter:description" content="What is Art Blocks Engine and Engine Flex — platform overview, use cases, and contract architecture.">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
+    <link href="../../../resources/css/retype.css?v=4.4.0.828555212606" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.4.0.828555212606" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.4.0.828555212606" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://docs.artblocks.io/pr-preview/pr-340/" class="flex items-center leading-snug text-2xl">
+                        <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
+                            <img class="max-h-10 md:inline-block" src="../../../static/squiglogo.png" alt="" width="41" height="40">
+                        </span>
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Art Blocks</span>
+                    </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Docs</span>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://artblocks.io/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="block shrink-0 mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                </svg>
+                                <span>Art Blocks</span>
+                            </a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="block shrink-0 mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm2-.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h14a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4Zm10 0v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/>
+                                </svg>
+                                <span>Docs</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://artblocks.io/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="block shrink-0 mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                            <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                        </svg>
+                                        <span>Art Blocks</span>
+                                    </a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="block shrink-0 mr-1.5" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                            <path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm2-.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h14a.5.5 0 0 0 .5-.5V8.5h-4a2 2 0 0 1-2-2v-4Zm10 0v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 0-.146-.336l-4.018-4.018A.5.5 0 0 0 15 2.5Z"/>
+                                        </svg>
+                                        <span>Docs</span>
+                                    </a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                    <ol role="list">
+                        <li class="pr-4">
+                            <a href="../../../" class="pr-4">
+                                Welcome
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <span class="pr-4">
+                                Creator & Engine Onboarding
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <span class="pr-4">
+                                Engine Partners
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../../../creator-onboarding/engine-partners/what-is-engine/" class="pr-4">
+                                What is Art Blocks Engine?
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- Page content  -->
+<h1 id="what-is-art-blocks-engine">What is Art Blocks Engine?</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">What is Art Blocks Engine and Engine Flex — platform overview, use cases, and contract architecture.</div>
+<p>Art Blocks Engine and Engine Flex are white-label solutions that bring Art Blocks&#x27; generative NFT minting technology to third-party platforms. Engine partners own their smart contracts and can release as many generative projects as they want, using the same infrastructure, rendering, and minting tools as Art Blocks flagship.</p>
+<hr>
+<h2 id="what-generative-art-is">What Generative Art Is</h2>
+<p>If you&#x27;re new to generative art: generative art is created by defining a system (a set of rules) and introducing randomness. Artists write computer algorithms that explore a range of possibilities — each output is unique, but all outputs belong to the same coherent project.</p>
+<p>With Art Blocks&#x27; on-chain approach:</p>
+<ul>
+<li>The algorithm lives permanently on the blockchain</li>
+<li>Each mint generates a unique token hash</li>
+<li>The hash seeds the algorithm, producing a one-of-a-kind output</li>
+<li>No one — not even the artist — knows exactly what a piece will look like before it&#x27;s minted</li>
+</ul>
+<p>The interesting part is that generative art works in series. Instead of a single artwork, the artist creates a system capable of hundreds or thousands of compelling outputs. Taken as a whole, the project expresses the full range of possibilities within that algorithm.</p>
+<hr>
+<h2 id="engine-vs-engine-flex">Engine vs. Engine Flex</h2>
+<p>Engine Flex is the more capable of the two contract variants — and the one most new Engine deployments use. It supports everything the standard Engine contract supports, plus additional features including PostParams, multiple dependencies, and decentralized storage. A Flex contract can run a completely traditional on-chain generative art project just as well as one using advanced features.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th> </th>
+<th>Art Blocks Engine</th>
+<th>Art Blocks Engine Flex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Script storage</strong></td>
+<td>Fully on-chain</td>
+<td>Fully on-chain</td>
+</tr>
+<tr>
+<td><strong>Dependencies</strong></td>
+<td>Single library from the Dependency Registry</td>
+<td>Multiple Dependency Registry entries, IPFS, Arweave, or BytecodeStorage</td>
+</tr>
+<tr>
+<td><strong>PostParams</strong></td>
+<td>Not supported</td>
+<td>Supported — on-chain configurable parameters collectors can adjust post-mint</td>
+</tr>
+<tr>
+<td><strong>Token output</strong></td>
+<td>Deterministic from script + hash</td>
+<td>Deterministic from script + hash + any external dependencies + PostParam settings</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Simple, single-dependency projects</td>
+<td>Any project — traditional on-chain, PostParams-enabled, multi-dependency, or decentralized storage</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Both variants use the V3 Engine core contract, are ERC-721 compliant, integrate with the Art Blocks Minter Suite, and are indexed by the Art Blocks subgraph.</p>
+<hr>
+<h2 id="how-it-works">How It Works</h2>
+<p>Each Art Blocks Engine deployment consists of:</p>
+<ul>
+<li><strong>A V3 Engine or V3 Engine Flex core contract</strong> — stores project scripts, token hashes, and royalty data</li>
+<li><strong>A shared Minter Suite</strong> — the same minting contracts used by Art Blocks flagship (Dutch Auctions, allowlists, RAM, and more)</li>
+<li><strong>Integration with Art Blocks rendering infrastructure</strong> — tokens are accessible via the Token API, Generator API, and Media Proxy</li>
+</ul>
+<p>When a collector mints:</p>
+<ol>
+<li>A unique 32-byte hash is generated from the transaction</li>
+<li>That hash seeds the artist&#x27;s algorithm, stored on-chain</li>
+<li>The artwork is rendered deterministically — same hash, same output, always</li>
+<li>Token ownership is recorded on the ERC-721 contract</li>
+</ol>
+<p>The partner owns and controls their contract. Art Blocks provides the infrastructure.</p>
+<hr>
+<h2 id="engine-flex-capabilities">Engine Flex Capabilities</h2>
+<p>The Flex contract unlocks a range of capabilities beyond the standard Engine contract. A Flex project can use any combination of these — or none at all (a fully on-chain project with a single dependency is equally valid on a Flex contract):</p>
+<ul>
+<li><strong>PostParams</strong> — On-chain configurable parameters that collectors (or artists) can adjust after minting. Enums, booleans, integers, colors, timestamps, and more. Entirely on-chain — no external storage required. See <a href="../../../protocol/postparams/">PostParams</a> for details.</li>
+<li><strong>Multiple Dependency Registry entries</strong> — Reference more than one library from the Art Blocks Dependency Registry in a single project.</li>
+<li><strong>IPFS</strong> — Content-addressed files (images, audio, data) pinned on IPFS. Reference using the CID.</li>
+<li><strong>Arweave</strong> — Permanent decentralized storage. Reference using the Arweave transaction ID.</li>
+<li><strong>BytecodeStorage</strong> — On-chain byte array storage. Large assets stored directly on Ethereum.</li>
+</ul>
+<p>External dependencies (IPFS, Arweave, BytecodeStorage, Dependency Registry) are accessed via the <code translate="no" v-pre>tokenData.externalAssetDependencies</code> array in the artist&#x27;s script. See the <a href="../../../protocol/on-chain-generator/">On-Chain Generator</a> page for how FLEX dependencies are structured.</p>
+<hr>
+<h2 id="smart-contract-architecture">Smart Contract Architecture</h2>
+<p>Both V3 Engine variants integrate with the following peripheral contracts:</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Admin ACL</strong></td>
+<td>Manages admin access. Flexible, extensible, upgradable.</td>
+</tr>
+<tr>
+<td><strong>Randomizer</strong></td>
+<td>Generates token hashes at mint time. Supports async hash generation.</td>
+</tr>
+<tr>
+<td><strong>Core Registry</strong></td>
+<td>Notifies the indexing service when new Engine contracts are deployed. Also registers contracts with the shared minter suite.</td>
+</tr>
+<tr>
+<td><strong>MinterFilter</strong></td>
+<td>Coordinates minter assignment. Partners can approve custom minters for their contracts.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For the full architecture overview with diagrams, see <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/V3_ARCHITECTURE.md" class="outbound" target="_blank"><span>V3_ARCHITECTURE.md</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<hr>
+<h2 id="use-cases">Use Cases</h2>
+<p>Engine is used across a wide range of industries:</p>
+<ul>
+<li><strong>Art galleries and art houses</strong> — launching branded generative collections</li>
+<li><strong>Media and technology companies</strong> — generative content experiences for audiences</li>
+<li><strong>Fashion brands</strong> — limited-edition digital collectibles</li>
+<li><strong>Gaming</strong> — procedural item generation</li>
+<li><strong>Sports</strong> — fan engagement collectibles</li>
+<li><strong>Independent platforms</strong> — BYOP (&quot;Build Your Own Platform&quot;) generative art infrastructure</li>
+</ul>
+<p>Interested? Contact <a href="mailto:info@artblocks.io">info@artblocks.io</a> to discuss your project.</p>
+<div id="retype-backlinks">
+    <h2>See also</h2>
+<div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/pr-preview/pr-340/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-icon inline-flex shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><!--icon--><path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/></svg></span>
+                <span class="card-compact-title">Art Blocks Docs</span>
+            </div>
+            <p class="card-compact-description">Art Blocks is the leading platform for on-chain generative art. Artists write algorithms stored permanently on the Ethereum blockchain. When a collector</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/pr-preview/pr-340/protocol/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-icon inline-flex shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><!--icon--><path d="M.408 15.13a2 2 0 0 1 .59-2.642L17.038 1.33a1.999 1.999 0 0 1 2.85.602l2.828 4.644a2 2 0 0 1-.851 2.847l-17.762 8.43a2 2 0 0 1-2.59-.807Zm5.263-4.066 1.987 3.44 8.712-4.135-2.857-4.76Zm12.06-1.34.001-.001 3.49-1.656a.498.498 0 0 0 .212-.712l-2.826-4.644a.503.503 0 0 0-.713-.151l-3.148 2.19Zm-13.295 2.2L1.854 13.72a.5.5 0 0 0-.147.66l1.105 1.915a.5.5 0 0 0 .648.201l2.838-1.347ZM17.155 22.87a.75.75 0 0 0 .226-1.036l-4-6.239a.75.75 0 0 0-.941-.278l-2.75 1.25a.75.75 0 0 0-.318.274l-3.25 4.989a.75.75 0 0 0 1.256.819l3.131-4.806.51-.232v5.64a.75.75 0 1 0 1.5 0v-6.22l3.6 5.613a.75.75 0 0 0 1.036.226Z"/></svg></span>
+                <span class="card-compact-title">Art Blocks Protocol Overview</span>
+            </div>
+            <p class="card-compact-description">Art Blocks is built on a simple but radical premise: the algorithm is the artwork. Every generative art project on Art Blocks stores its creative code</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/pr-preview/pr-340/creator-onboarding/offerings/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Creative Offerings</span>
+            </div>
+            <p class="card-compact-description">What Art Blocks offers artists and creators — Studio, how to apply, and who to contact.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/pr-preview/pr-340/creator-onboarding/engine-partners/flex-assets/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Decentralized Storage Assets</span>
+            </div>
+            <p class="card-compact-description">Setting up IPFS and Arweave external assets for Art Blocks Engine Flex projects.</p>
+        </div>
+    </a>
+</div>
+</div>
+</div>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-14">
+                    <a id="retype-edit-this-page" class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-body-link font-body-link hover:text-body-link-hover hover:underline" href="https://github.com/ArtBlocks/artblocks-docs/blob/main/creator-onboarding/engine-partners/what-is-engine.md" target="_blank" rel="noopener">
+                        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        <span>Edit this page</span>
+                    </a>
+                </div>
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../creator-onboarding/artists/faq/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Artist FAQ</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../creator-onboarding/engine-partners/getting-started/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Getting Started as an Engine Partner</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026. All rights reserved.</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "What is Art Blocks Engine?", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>
