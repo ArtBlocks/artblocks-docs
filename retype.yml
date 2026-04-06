@@ -28,5 +28,14 @@ links:
 
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
+  links:
+    - text: Privacy Policy
+      link: https://www.artblocks.io/privacy-policy.pdf
+      target: blank
+      title: Art Blocks privacy policy (PDF)
+    - text: User Terms
+      link: https://www.artblocks.io/user-terms.pdf
+      target: blank
+      title: Art Blocks user terms (PDF)
 
 poweredByRetype: false
