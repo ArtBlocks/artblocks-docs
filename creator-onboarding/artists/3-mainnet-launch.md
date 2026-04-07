@@ -45,9 +45,7 @@ Do **not** import the **Admin** settings from testnet. Admin settings contain te
 The artist address used when creating your mainnet project shell must match the one used on your testnet shell — this is what enables the Import Fields function to work. If your testnet and mainnet shells use different wallets, grant your mainnet wallet management access via the **Admin** tab of your testnet shell before importing.
 !!!
 
-!!!info
-**For Engine Partners only:** Unlike Studio projects (where the baseURI is set automatically at the contract level), Partners should ensure the `baseURI` field is set correctly on their mainnet shell. Leave it blank on testnet. If you're unsure of the correct value, check with the Art Blocks team.
-!!!
+
 
 After importing each section, verify the values are correct before saving.
 
@@ -80,7 +78,7 @@ Use the **"View project page"** button in the top navigation of your mainnet pro
 Token #0 is traditionally the artist's token — the first mint of a project.
 
 !!!warning
-Before minting, confirm your **max invocations** (edition size) is set correctly. Once you mint token #0, you can only **decrease** this number — you can never increase it. This is set on-chain and is irreversible. If left at the default of 1,000,000, your project will display as an open edition on the Art Blocks website.
+Before minting, confirm your **max invocations** (edition size) is set correctly. Once you mint token #0, you can only ever **decrease** this number. This is set on-chain and is irreversible. If left at the default of 1,000,000, your project will display as an open edition on the Art Blocks website.
 !!!
 
 1. In the Outputs tab, click **Mint token**
