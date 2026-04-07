@@ -13,7 +13,7 @@ Once your testnet project has been approved by the Art Blocks team, you're ready
 
 - Your testnet project has been reviewed and approved by Art Blocks
 - You have your artist wallet ready with some ETH for gas
-- You have the mainnet [Creator Dashboard](https://create.artblocks.io/) access
+- You have access to the [Creator Dashboard](https://create.artblocks.io/) on mainnet
 
 ---
 
@@ -29,77 +29,94 @@ Your mainnet project shell is now created with a project ID.
 
 ## Step 2: Import from Testnet
 
-Rather than re-entering all your configuration, the Creator Dashboard supports importing from your testnet project. In your mainnet project, use the **Import from Testnet** feature:
+Rather than re-entering all your configuration, the Creator Dashboard supports importing from your testnet project. In your mainnet project, use the **Import from Testnet** feature to bring over:
 
-- **Details** — Import project name, description, license, website, edition size
-- **Scripts** — Import your script file and dependency configuration
-- **Renders** — Import aspect ratio, render delay, Canvas Mode settings
-- **Payments** — Import payment splits (a new royalty splitter will be deployed on mainnet)
-- **Minters** — Import minter configuration (auction parameters, etc.)
+- **Details** — project name, description, license, website, edition size
+- **Scripts** — your script file and dependency configuration
+- **Renders** — aspect ratio, render delay, Canvas Mode settings
+- **Payments** — payment splits (a new royalty splitter will be deployed on mainnet)
+- **Minters** — minter configuration (auction parameters, etc.)
 
 !!!warning
 Do **not** import the **Admin** settings from testnet. Admin settings contain testnet-specific configuration that should not be applied to mainnet.
 !!!
 
+!!!info
+The artist address used when creating your mainnet project shell must match the one used on your testnet shell — this is what enables the Import Fields function to work. If your testnet and mainnet shells use different wallets, grant your mainnet wallet management access via the **Admin** tab of your testnet shell before importing.
+!!!
+
+
+
 After importing each section, verify the values are correct before saving.
 
 ---
 
-## Step 3: Verify and Preview
+## Step 3: Request a Script Review
 
-Before minting token #0:
+Before moving to mainnet, you can request a script review from the Art Blocks team. The review verifies that your project meets Art Blocks' standards for resolution agnosticism and cross-browser/device compatibility.
 
-- [ ] All Details fields are correct (project name, description, edition size)
-- [ ] Script is uploaded and the correct version is selected
-- [ ] Renders settings match your testnet configuration
-- [ ] Payment splits are configured correctly — verify the splitter address in the dashboard
-- [ ] Minter is configured (for fixed price) or will open automatically (for auction minters)
-- [ ] Click **Preview** on the Scripts page to view a test render on mainnet
+To request a review, reach out via your artist Discord DM or post in `#artist-tech`. Please allow **3–5 business days** for completion once requested.
 
 ---
 
-## Step 4: Mint Token #0
+## Step 4: Verify and Preview
+
+Before minting token #0, do a final check:
+
+- [ ] All Details fields are correct (project name, description, edition size)
+- [ ] Script is uploaded and the correct version/dependency is selected
+- [ ] Renders settings match your testnet configuration
+- [ ] Payment splits are configured correctly — verify the splitter address in the dashboard
+- [ ] Minter is configured correctly
+
+Use the **"View project page"** button in the top navigation of your mainnet project shell to preview how your project page will appear on Art Blocks. Your project is not yet visible to the public at this stage — this is a private preview for you as the artist. Use it to confirm that your project details, artwork renders, and metadata all look correct before proceeding.
+
+---
+
+## Step 5: Mint Token #0
 
 Token #0 is traditionally the artist's token — the first mint of a project.
 
-1. In the Outputs tab, click **Mint Token #0**
+!!!warning
+Before minting, confirm your **max invocations** (edition size) is set correctly. Once you mint token #0, you can only ever **decrease** this number. This is set on-chain and is irreversible. If left at the default of 1,000,000, your project will display as an open edition on the Art Blocks website.
+!!!
+
+1. In the Outputs tab, click **Mint token**
 2. Confirm the transaction in your wallet
 3. Wait for the transaction to confirm
 
-After minting, your token will appear on [artblocks.io](https://artblocks.io) once it's indexed (typically within a few minutes).
+---
 
-Art Blocks will then **activate** your project, making it visible to the public on artblocks.io. You'll be notified when activation is complete.
+## Step 6: Publish Your Project
+
+Once token #0 is minted, click **"Publish project"** in the publishing panel on the right side of the Creator Dashboard. You'll be prompted to enter a **Start Date**.
+
+Publishing makes your project page visible on Art Blocks and immediately adds it to the [Art Blocks Calendar](https://www.artblocks.io/calendar). Only published projects are visible on the Art Blocks website.
 
 ---
 
-## Step 5: Open Minting
+## Step 7: Open Minting
 
-Once your project is activated, you control when minting opens to the public.
+Once your project is published, you control when minting opens to collectors via the **"Open Minting"** button in the Creator Dashboard. For more detail on each minter type, see the [Minter Guide](/creator-onboarding/artists/minters/).
+
+### Auction Minters (Dutch Auction, RAM)
+Auction minters open automatically at the configured start date and time. No manual action is required — set your start time and the auction opens itself.
 
 ### Fixed Price Minters
+For Set Price minters, you'll need to manually click **"Open Minting"** at your scheduled release time.
 
-For Set Price minters: the project opens when you **unpause** it in the Creator Dashboard. 
-
-State transitions:
-- `inactive + paused` — private shell, no purchases possible (default)
-- `active + paused` — publicly visible, but only the artist wallet can mint
-- `active + unpaused` — **open to the public**
-
-Unpause in the Creator Dashboard when you're ready to go live. Gas recommendations: mint during off-peak hours (weekends, late evenings US time) to avoid high gas prices that can reduce collector participation.
-
-### Auction Minters
-
-Dutch Auction and RAM minters open automatically at the configured start time. No manual unpause required — set your start time and the auction opens itself.
+- Send the transaction **at least 30 seconds before** your intended release time
+- Use **high gas (~2x** the suggested high gas on [etherscan.io/gastracker](https://etherscan.io/gastracker)**)** to ensure the transaction confirms in time
 
 ---
 
-## Step 6: Communicate Your Launch
+## Step 8: Communicate Your Launch
 
 Let collectors know when minting opens. See the [Community guide](/creator-onboarding/artists/community/) for Art Blocks' communication guidelines around project announcements.
 
 **Key timing guidelines:**
 - Do not publicly announce specific launch details (price, date, time) until Art Blocks gives the green light
-- Coordinate with your Art Blocks account manager on announcement timing
+- Coordinate with your Art Blocks contact on announcement timing
 - Art Blocks will promote your project via official channels on launch day
 
 ---
@@ -123,7 +140,7 @@ After launch, you can add animated thumbnails (MP4) to your project. Contact Art
 
 ### Returning for Future Projects
 
-Once your first project is complete, you're welcome to apply for future projects. Many Studio artists release multiple projects over time. The same Creator Dashboard account and artist wallet can be used for subsequent projects.
+Many Studio artists release multiple projects. The same Creator Dashboard account and artist wallet can be used for subsequent projects. For projects that require screening, submit via your testnet shell and notify the team through your Discord artist DM.
 
 ### Feedback and Support
 
