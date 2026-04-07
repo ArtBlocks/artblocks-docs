@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.828811652541">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.2.828908632780">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.4.0">
+    <meta name="generator" content="Retype 4.5.2">
 
     <!-- Primary Meta Tags -->
     <title>NFT Metadata Storage at Art Blocks</title>
@@ -19,6 +19,7 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.artblocks.io/protocol/on-chain-storage/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.artblocks.io/sitemap.xml">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -40,15 +41,18 @@
     <meta name="twitter:image" content="https://docs.artblocks.io/static/onchainhtml.png">
     <meta name="twitter:image:alt" content="NFT Metadata Storage at Art Blocks">
 
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.artblocks.io/protocol/on-chain-storage.md">
+
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.4.0.828811652541" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.5.2.828908632780" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.4.0.828811652541" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.4.0.828811652541" data-turbo-eval="false" defer></script>
-    <script id="mermaid-js" data-cfasync="false" src="../../resources/js/mermaid.js?v=4.4.0" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.2.828908632780" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.2" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.2.828908632780" data-turbo-eval="false" defer></script>
+    <script id="mermaid-js" data-cfasync="false" src="../../resources/js/mermaid.js?v=4.5.2" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -166,7 +170,7 @@
 <div class="flex">
     <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
         <main class="relative pb-12 lg:pt-2">
-            <div class="retype-markdown" id="retype-content">
+            <div class="relative retype-markdown" id="retype-content">
                 <!-- Rendered if sidebar right is enabled -->
                 <div id="retype-sidebar-right-toggle"></div>
                 <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
@@ -194,6 +198,8 @@
                         </li>
                     </ol>
                 </nav>
+
+                <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
 <h1 id="nft-metadata-storage-at-art-blocks">NFT Metadata Storage at Art Blocks</h1>
@@ -307,9 +313,11 @@
 <h2 id="on-chain-generator-example">On-Chain Generator Example</h2>
 <p>Let&#x27;s review an example of how to retrieve the html that allows your browser to view the output of the first Art Blocks Token, token zero of project 0, <a href="https://www.artblocks.io/marketplace/asset/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a/0" class="outbound" target="_blank"><span>Chromie Squiggle by Snowfro</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <ol>
-<li><p>Visit the Art Blocks On-Chain Generator on Etherscan: <a href="https://etherscan.io/address/0x953D288708bB771F969FCfD9BA0819eF506Ac718#readProxyContract" class="outbound" target="_blank"><span>0x953D288708bB771F969FCfD9BA0819eF506Ac718</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+<li>
+<p>Visit the Art Blocks On-Chain Generator on Etherscan: <a href="https://etherscan.io/address/0x953D288708bB771F969FCfD9BA0819eF506Ac718#readProxyContract" class="outbound" target="_blank"><span>0x953D288708bB771F969FCfD9BA0819eF506Ac718</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 </li>
-<li><p>Get the html for token 0 by calling the <code translate="no" v-pre>getTokenHtml</code> function with the core contract address <code translate="no" v-pre>0x059edd72cd353df5106d2b9cc5ab83a52287ac3a</code> and token ID <code translate="no" v-pre>0</code> as the input parameters:</p>
+<li>
+<p>Get the html for token 0 by calling the <code translate="no" v-pre>getTokenHtml</code> function with the core contract address <code translate="no" v-pre>0x059edd72cd353df5106d2b9cc5ab83a52287ac3a</code> and token ID <code translate="no" v-pre>0</code> as the input parameters:</p>
 </li>
 </ol>
 <figure class="content-center">
@@ -363,9 +371,11 @@
 <p>Let&#x27;s review an example of how to retrieve the dependency metadata for the first Art Blocks Token, token zero of project 0, <a href="https://www.artblocks.io/collections/curated/projects/0x059edd72cd353df5106d2b9cc5ab83a52287ac3a/0" class="outbound" target="_blank"><span>Chromie Squiggle by Snowfro</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <p>In this case, the project uses the p5js v1.0.0 dependency, which is stored fully on-chain via the Art Blocks Dependency Registry. While we could query the Art Blocks Subgraph or API to retrieve the metadata, we will retrieve the metadata directly from the blockchain.</p>
 <ol>
-<li><p>Visit the Art Blocks Dependency Registry on Etherscan: <a href="https://etherscan.io/address/0x37861f95882ACDba2cCD84F5bFc4598e2ECDDdAF#readProxyContract" class="outbound" target="_blank"><span>0x37861f95882ACDba2cCD84F5bFc4598e2ECDDdAF</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+<li>
+<p>Visit the Art Blocks Dependency Registry on Etherscan: <a href="https://etherscan.io/address/0x37861f95882ACDba2cCD84F5bFc4598e2ECDDdAF#readProxyContract" class="outbound" target="_blank"><span>0x37861f95882ACDba2cCD84F5bFc4598e2ECDDdAF</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 </li>
-<li><p>Get the dependency details by calling the <code translate="no" v-pre>getDependencyDetails</code> function with the dependency name and version as the input parameters. At this time, we translate from the string <code translate="no" v-pre>p5@1.0.0</code> to its bytes representation <code translate="no" v-pre>0x703540312e302e30</code>:</p>
+<li>
+<p>Get the dependency details by calling the <code translate="no" v-pre>getDependencyDetails</code> function with the dependency name and version as the input parameters. At this time, we translate from the string <code translate="no" v-pre>p5@1.0.0</code> to its bytes representation <code translate="no" v-pre>0x703540312e302e30</code>:</p>
 </li>
 </ol>
 <figure class="content-center">
@@ -407,7 +417,7 @@
                 <span class="card-compact-icon inline-flex shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><!--icon--><path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/></svg></span>
                 <span class="card-compact-title">Art Blocks Docs</span>
             </div>
-            <p class="card-compact-description">Art Blocks is the leading platform for on-chain generative art. Artists write algorithms stored permanently on the Ethereum blockchain. When a collector</p>
+            <p class="card-compact-description">Art Blocks is the leading platform for on-chain generative art. Artists write algorithms stored permanently on the Ethereum blockchain. When a collector mints, a unique hash is generated on-chain and fed into the artist's script — producing a one-of-a-kind, deterministic artwork.</p>
         </div>
     </a>
 </div>
@@ -502,6 +512,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "NFT Metadata Storage at Art Blocks", level: 2, icon: "file", hasPrism: false, hasMermaid: true, hasMath: false, tocDepth: 23 }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "NFT Metadata Storage at Art Blocks", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: true, hasMath: false, tocDepth: 23, "md": "/protocol/on-chain-storage.md" }</script>
 </body>
 </html>

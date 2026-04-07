@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.828811652541">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.2.828908632780">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.4.0">
+    <meta name="generator" content="Retype 4.5.2">
 
     <!-- Primary Meta Tags -->
     <title>Artist Overview</title>
@@ -19,6 +19,7 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.artblocks.io/creator-onboarding/artists/overview/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://docs.artblocks.io/sitemap.xml">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -34,14 +35,17 @@
     <meta name="twitter:title" content="Artist Overview">
     <meta name="twitter:description" content="Overview of the Art Blocks artist journey — from script to mainnet launch.">
 
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://docs.artblocks.io/creator-onboarding/artists/overview.md">
+
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.4.0.828811652541" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.5.2.828908632780" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.4.0.828811652541" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.4.0.828811652541" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.2.828908632780" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.2" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.2.828908632780" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -159,7 +163,7 @@
 <div class="flex">
     <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
         <main class="relative pb-12 lg:pt-2">
-            <div class="retype-markdown" id="retype-content">
+            <div class="relative retype-markdown" id="retype-content">
                 <!-- Rendered if sidebar right is enabled -->
                 <div id="retype-sidebar-right-toggle"></div>
                 <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
@@ -174,7 +178,7 @@
                         </li>
                         <li class="pr-4">
                             <span class="pr-4">
-                                Creator & Engine Onboarding
+                                Creator &amp; Engine Onboarding
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
@@ -195,6 +199,8 @@
                         </li>
                     </ol>
                 </nav>
+
+                <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
 <h1 id="artist-overview">Artist Overview</h1>
@@ -223,13 +229,17 @@
 <pre translate="no" class="language-none"><code v-pre class="language-none">Build → Stage → Review → Launch</code></pre>
 </doc-codeblock></div>
 <ol>
-<li><p><strong><a href="../1-building-your-project/">Build your project</a></strong> — Write a script that uses <code translate="no" v-pre>tokenData.hash</code> as its randomness source. Define token traits with <code translate="no" v-pre>window.$features</code>. Test for determinism and cross-browser compatibility.</p>
+<li>
+<p><strong><a href="../1-building-your-project/">Build your project</a></strong> — Write a script that uses <code translate="no" v-pre>tokenData.hash</code> as its randomness source. Define token traits with <code translate="no" v-pre>window.$features</code>. Test for determinism and cross-browser compatibility.</p>
 </li>
-<li><p><strong><a href="../2-staging-and-testing/">Stage and test</a></strong> — Create a testnet project on Sepolia using the Creator Dashboard. Upload your script, configure details and payments, mint 20–40 test outputs, and submit for Art Blocks review.</p>
+<li>
+<p><strong><a href="../2-staging-and-testing/">Stage and test</a></strong> — Create a testnet project on Sepolia using the Creator Dashboard. Upload your script, configure details and payments, mint 20–40 test outputs, and submit for Art Blocks review.</p>
 </li>
-<li><p><strong>Review</strong> — The Art Blocks team reviews your testnet project and provides feedback. Revisions may be requested before mainnet approval.</p>
+<li>
+<p><strong>Review</strong> — The Art Blocks team reviews your testnet project and provides feedback. Revisions may be requested before mainnet approval.</p>
 </li>
-<li><p><strong><a href="../3-mainnet-launch/">Launch on mainnet</a></strong> — Create your mainnet project shell, import configuration from testnet, mint token #0, and open minting to the public.</p>
+<li>
+<p><strong><a href="../3-mainnet-launch/">Launch on mainnet</a></strong> — Create your mainnet project shell, import configuration from testnet, mint token #0, and open minting to the public.</p>
 </li>
 </ol>
 <hr>
@@ -318,6 +328,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Artist Overview", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Artist Overview", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/creator-onboarding/artists/overview.md" }</script>
 </body>
 </html>
