@@ -94,9 +94,9 @@ The project description is an important opportunity to highlight your intentions
 
 This is the core of your project setup.
 
-1. **Script type & version** — Select your library (p5js, threejs, regl, etc.) and version. This determines which library the generator will load.
+1. **Script type & version** — Select your library (p5js, threejs, regl, etc.) and the version. This determines which library CDN the generator will load.
 2. **Upload script** — Upload your `.js` file. The dashboard will show the script content for verification.
-3. **PostParams** (Engine Flex only, optional) — If your project uses [Post-Mint Parameters](/protocol/postparams/), configure the parameters and standard hooks here.
+3. **PostParams** (Engine Flex only, optional) — If your project uses [Post-Mint Parameters](/protocol/postparams/), configure the parameters and standard hooks you want to use here. Artists may define on-chain configurable parameters (enums, booleans, colors, etc.) that collectors can adjust after minting.
 4. **Decentralized Storage Assets** (Engine Flex only, optional) — If your project uses IPFS/Arweave external assets, configure them here. See [Decentralized Storage Assets](/creator-onboarding/engine-partners/flex-assets/) for details.
 
 !!!info
@@ -118,7 +118,7 @@ Configure how the Art Blocks rendering infrastructure captures your artwork:
 | Setting | Notes |
 |---|---|
 | **Aspect Ratio** | Width:height ratio of your artwork (e.g. `1` for square, `1.5` for landscape). Used for canvas sizing and thumbnail display. |
-| **Render Delay** | Seconds the renderer waits before capturing the static image. Set this long enough for any animations to complete their initial state. |
+| **Render Delay** | Seconds the renderer waits before capturing the static image. Set this long enough for any animations to complete their initial state (e.g. `0` for immediately deterministic art, `5` for animated pieces). |
 | **Canvas Mode** | Enable if your script uses a `<canvas>` element directly (most p5.js and vanilla JS projects). Required for static capture to work correctly. |
 | **MP4 Settings** | Optional. Configure if you want animated MP4 thumbnails generated for your project. |
 
@@ -170,7 +170,7 @@ A great option for testing is to select the **Minimum fee minter**. This will re
 With your project configured, mint test outputs:
 
 1. **Mint at least 20–40 test tokens** — enough to see meaningful variety across your trait space
-2. **Use "Explore Possibilities"** in the Outputs tab — this previews many different hashes rapidly without spending gas
+2. **Use "Explore Possibilities"** in the Outputs tab — this previews many different hashes rapidly without spending gas on minting transactions
 3. **Review outputs carefully** — look for visual errors, edge cases, extreme outputs
 4. **Preview at** [artist-staging.artblocks.io](https://artist-staging.artblocks.io/) — this mirrors how your project will appear on artblocks.io
 
@@ -189,6 +189,7 @@ With your project configured, mint test outputs:
 When your testnet project is ready:
 
 1. **Email [apply@artblocks.io](mailto:apply@artblocks.io)** with a link to your testnet project shell
+   - Format: `https://artist-staging.artblocks.io/engine/[flex OR fullyonchain]/projects/[contractAddress]/[projectId]`
 2. **Share your testnet project in `#artist-tech`** on Discord if you have technical questions
 3. **Wait for feedback** — the Art Blocks team will review and may request changes before approving the mainnet deployment
 
