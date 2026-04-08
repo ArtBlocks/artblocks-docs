@@ -56,43 +56,7 @@ const invocation = parseInt(tokenData.tokenId) % 1_000_000
 
 **Never use `Math.random()` or `Date.now()` as a randomness source.** These are non-deterministic — the same token would produce different outputs on different loads, which breaks the fundamental guarantee of generative art on Art Blocks.
 
-Instead, seed a pseudo-random number generator (PRNG) from `tokenData.hash`. The recommended implementation is the **sfc32** algorithm:
-
-```javascript
-// Seeded PRNG from tokenData.hash
-function sfc32(a, b, c, d) {
-  return function () {
-    a |= 0; b |= 0; c |= 0; d |= 0;
-    let t = (((a + b) | 0) + d) | 0;
-    d = (d + 1) | 0;
-    a = b ^ (b >>> 9);
-    b = (c + (c << 3)) | 0;
-    c = (c << 21) | (c >>> 11);
-    c = (c + t) | 0;
-    return (t >>> 0) / 4294967296;
-  };
-}
-
-function hashToSeeds(hash) {
-  const hex = hash.slice(2); // remove "0x"
-  return [
-    parseInt(hex.slice(0, 8), 16),
-    parseInt(hex.slice(8, 16), 16),
-    parseInt(hex.slice(16, 24), 16),
-    parseInt(hex.slice(24, 32), 16),
-  ];
-}
-
-const [s1, s2, s3, s4] = hashToSeeds(tokenData.hash);
-const rand = sfc32(s1, s2, s3, s4);
-
-// Usage:
-// rand()           → float in [0, 1)
-// rand() * (b - a) + a  → float in [a, b)
-// Math.floor(rand() * n) → integer in [0, n)
-```
-
-Alternatively, use the full `Random` class that ships in the MCP scaffold, which adds convenient helper methods:
+Instead, seed a pseudo-random number generator (PRNG) from `tokenData.hash`:
 
 ```javascript
 class Random {
@@ -255,7 +219,7 @@ Test with specific hashes by appending `?hash=0x...` to the URL. Test with many 
 
 If you have an existing p5.js or vanilla JS sketch that you want to convert to Art Blocks format:
 
-1. **Replace `Math.random()`** with calls to your sfc32 PRNG seeded from `tokenData.hash`
+1. **Replace `Math.random()`** with calls to your `Random` class PRNG seeded from `tokenData.hash`
 2. **Remove CDN `<script>` tags** — the generator loads your library automatically
 3. **Remove canvas creation code** — for p5.js, remove `createCanvas()` calls or use `windowWidth`/`windowHeight`; for vanilla JS, select the existing `<canvas>` instead of creating one
 4. **Make dimensions relative** — replace hardcoded pixel values with percentages of `width`/`height`
