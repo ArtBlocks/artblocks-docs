@@ -13,7 +13,7 @@ Launched in November 2020 with [Chromie Squiggle by Snowfro](https://www.artbloc
 
 ## Find Your Docs
 
-==- :icon-cpu: Protocol Overview
+==- 📚 Protocol Overview
 
 Understand the Art Blocks on-chain architecture.
 
@@ -22,7 +22,7 @@ Understand the Art Blocks on-chain architecture.
 - [On-Chain Generator](/protocol/on-chain-generator/) — How the generator assembles artwork from blockchain data
 - [PostParams](/protocol/postparams/) — Evolving artwork through on-chain configurable parameters
 
-==- :icon-terminal: Developers & Integrators
+==- 💻 Developers & Integrators
 
 Building on top of Art Blocks?
 
@@ -32,7 +32,7 @@ Building on top of Art Blocks?
 - [GraphQL Reference](/developer/graphql/) — Subgraph and Hasura API with example queries
 - [Minter Suite](/developer/minter-suite/overview/) — Minting architecture and available minters
 
-==- :icon-paintbrush: Artists & Creators
+==- 🎨 Artists & Creators
 
 Launching a project on Art Blocks Studio?
 
@@ -43,7 +43,7 @@ Launching a project on Art Blocks Studio?
 - [Minter guide](/creator-onboarding/artists/minters/) — Dutch auctions, RAM, allowlists, and more
 - [Artist FAQ](/creator-onboarding/artists/faq/)
 
-==- :icon-gear: Engine Partners
+==- ⚙️ Engine Partners
 
 Launching your own generative art platform with Art Blocks Engine?
 
