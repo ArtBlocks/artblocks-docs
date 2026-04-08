@@ -177,6 +177,16 @@ All libraries must be from the Art Blocks Dependency Registry. Current supported
 - **A-Frame** — v1.2.0, v1.5.0
 - **Vanilla JS** — no dependency (canvas, WebGL, SVG)
 
+For the full list including all versions and notes, see [Supported Script Types & Dependency Versions](/protocol/on-chain-generator/#supported-script-types--dependency-versions).
+
+---
+
+## Rendering Environment
+
+Static images are rendered for all projects (used as thumbnails, on OpenSea, etc.). Art Blocks uses compute instances running headless Chromium with [Puppeteer](https://github.com/puppeteer/puppeteer). Headless Chromium requires the use of [SwiftShader](https://swiftshader.googlesource.com/SwiftShader/+/HEAD/docs/Index.md), a CPU implementation of the GPU API. This means GPU-intensive projects will render slower and may require optimization.
+
+To closely replicate this environment while developing, use Chrome and turn **off** "Use Hardware Acceleration" in Settings.
+
 ---
 
 ## Local Development
@@ -212,6 +222,26 @@ Set up a local `index.html` that mirrors the generator environment:
 ```
 
 Test with specific hashes by appending `?hash=0x...` to the URL. Test with many different hashes to ensure variety and that no hash causes errors.
+
+For a code template to start from, see the [Art Blocks Starter Template](https://github.com/ArtBlocks/artblocks-starter-template).
+
+---
+
+## Script Upload Cost
+
+Uploading your script to Ethereum costs gas. To estimate the cost:
+
+```
+Cost (ETH) = 235 × bytes × gwei_price × (1 / 1,000,000,000)
+```
+
+For example, a 10 KB script at 10 gwei:
+
+```
+235 × 10,000 × 10 × (1 / 1,000,000,000) = 0.0235 ETH
+```
+
+Artists typically target 5–20 KB for their scripts (excluding the library). To reduce size: maximize code reuse with functions, remove comments, and minify finished code. Check [etherscan.io/gastracker](https://etherscan.io/gastracker) for current gas prices before uploading as prices can vary significantly.
 
 ---
 
