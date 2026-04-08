@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.2.828980465376">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.2.828980476429">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.2">
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.5.2.828980465376" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.5.2.828980476429" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.2.828980465376" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.2.828980476429" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.2" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.2.828980465376" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.2.828980465376" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.2.828980476429" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.2.828980476429" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -232,40 +232,8 @@ function calculateFeatures(tokenData) {
 <li>The function signature was required to be exactly <code translate="no" v-pre>calculateFeatures(tokenData)</code></li>
 </ul>
 <hr>
-<h2 id="the-random-class-legacy">The Random Class (Legacy)</h2>
-<p>The following <code translate="no" v-pre>Random</code> class was commonly used with <code translate="no" v-pre>calculateFeatures()</code>. It uses the sfc32 PRNG seeded from the token hash:</p>
-<div id="the-random-class-legacy-code-1" class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">class Random {
-  constructor(hash) {
-    const hex = hash.slice(2);
-    this.prng = this._sfc32(
-      parseInt(hex.slice(0, 8), 16),
-      parseInt(hex.slice(8, 16), 16),
-      parseInt(hex.slice(16, 24), 16),
-      parseInt(hex.slice(24, 32), 16)
-    );
-  }
-
-  _sfc32(a, b, c, d) {
-    return function () {
-      a |= 0; b |= 0; c |= 0; d |= 0;
-      let t = (((a + b) | 0) + d) | 0;
-      d = (d + 1) | 0;
-      a = b ^ (b &gt;&gt;&gt; 9);
-      b = (c + (c &lt;&lt; 3)) | 0;
-      c = (c &lt;&lt; 21) | (c &gt;&gt;&gt; 11);
-      c = (c + t) | 0;
-      return (t &gt;&gt;&gt; 0) / 4294967296;
-    };
-  }
-
-  random_dec()       { return this.prng(); }
-  random_num(a, b)   { return a + this.prng() * (b - a); }
-  random_int(a, b)   { return Math.floor(a + this.prng() * (b - a + 1)); }
-  random_bool(p)     { return this.prng() &lt; p; }
-  random_choice(arr) { return arr[Math.floor(this.prng() * arr.length)]; }
-}</code></pre>
-</doc-codeblock></div>
+<h2 id="prng-in-the-features-script">PRNG in the Features Script</h2>
+<p>The <code translate="no" v-pre>calculateFeatures()</code> function must use the same pseudo-random number generator (PRNG) as the art script, seeded from <code translate="no" v-pre>tokenData.hash</code> in the same way and called in the same order. This ensures that the features returned by <code translate="no" v-pre>calculateFeatures()</code> are consistent with the actual visual output of the project.</p>
 <hr>
 <h2 id="feature-field-configuration">Feature Field Configuration</h2>
 <p>In the old system, artists also configured &quot;Feature Fields&quot; in the Creator Dashboard — metadata describing each feature key (display name, type, options). This configuration was separate from the script.</p>

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.2.828980465376">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.2.828980476429">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.2">
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.5.2.828980465376" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.5.2.828980476429" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.2.828980465376" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.2.828980476429" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.2" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.2.828980465376" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.5.2.828980465376" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.2.828980476429" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.5.2.828980476429" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -240,42 +240,8 @@ const invocation = parseInt(tokenData.tokenId) % 1_000_000</code></pre>
 <hr>
 <h2 id="deterministic-randomness-prng">Deterministic Randomness (PRNG)</h2>
 <p><strong>Never use <code translate="no" v-pre>Math.random()</code> or <code translate="no" v-pre>Date.now()</code> as a randomness source.</strong> These are non-deterministic — the same token would produce different outputs on different loads, which breaks the fundamental guarantee of generative art on Art Blocks.</p>
-<p>Instead, seed a pseudo-random number generator (PRNG) from <code translate="no" v-pre>tokenData.hash</code>. The recommended implementation is the <strong>sfc32</strong> algorithm:</p>
+<p>Instead, seed a pseudo-random number generator (PRNG) from <code translate="no" v-pre>tokenData.hash</code>:</p>
 <div id="deterministic-randomness-prng-code-1" class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">// Seeded PRNG from tokenData.hash
-function sfc32(a, b, c, d) {
-  return function () {
-    a |= 0; b |= 0; c |= 0; d |= 0;
-    let t = (((a + b) | 0) + d) | 0;
-    d = (d + 1) | 0;
-    a = b ^ (b &gt;&gt;&gt; 9);
-    b = (c + (c &lt;&lt; 3)) | 0;
-    c = (c &lt;&lt; 21) | (c &gt;&gt;&gt; 11);
-    c = (c + t) | 0;
-    return (t &gt;&gt;&gt; 0) / 4294967296;
-  };
-}
-
-function hashToSeeds(hash) {
-  const hex = hash.slice(2); // remove &quot;0x&quot;
-  return [
-    parseInt(hex.slice(0, 8), 16),
-    parseInt(hex.slice(8, 16), 16),
-    parseInt(hex.slice(16, 24), 16),
-    parseInt(hex.slice(24, 32), 16),
-  ];
-}
-
-const [s1, s2, s3, s4] = hashToSeeds(tokenData.hash);
-const rand = sfc32(s1, s2, s3, s4);
-
-// Usage:
-// rand()           → float in [0, 1)
-// rand() * (b - a) + a  → float in [a, b)
-// Math.floor(rand() * n) → integer in [0, n)</code></pre>
-</doc-codeblock></div>
-<p>Alternatively, use the full <code translate="no" v-pre>Random</code> class that ships in the MCP scaffold, which adds convenient helper methods:</p>
-<div id="deterministic-randomness-prng-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-javascript"><code v-pre class="language-javascript">class Random {
   constructor() {
     const hex = tokenData.hash.slice(2);
@@ -443,7 +409,7 @@ resize();</code></pre>
 <h2 id="conversion-guide-adapting-an-existing-sketch">Conversion Guide: Adapting an Existing Sketch</h2>
 <p>If you have an existing p5.js or vanilla JS sketch that you want to convert to Art Blocks format:</p>
 <ol>
-<li><strong>Replace <code translate="no" v-pre>Math.random()</code></strong> with calls to your sfc32 PRNG seeded from <code translate="no" v-pre>tokenData.hash</code></li>
+<li><strong>Replace <code translate="no" v-pre>Math.random()</code></strong> with calls to your <code translate="no" v-pre>Random</code> class PRNG seeded from <code translate="no" v-pre>tokenData.hash</code></li>
 <li><strong>Remove CDN <code translate="no" v-pre>&lt;script&gt;</code> tags</strong> — the generator loads your library automatically</li>
 <li><strong>Remove canvas creation code</strong> — for p5.js, remove <code translate="no" v-pre>createCanvas()</code> calls or use <code translate="no" v-pre>windowWidth</code>/<code translate="no" v-pre>windowHeight</code>; for vanilla JS, select the existing <code translate="no" v-pre>&lt;canvas&gt;</code> instead of creating one</li>
 <li><strong>Make dimensions relative</strong> — replace hardcoded pixel values with percentages of <code translate="no" v-pre>width</code>/<code translate="no" v-pre>height</code></li>

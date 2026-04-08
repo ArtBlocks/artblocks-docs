@@ -35,42 +35,9 @@ function calculateFeatures(tokenData) {
 
 ---
 
-## The Random Class (Legacy)
+## PRNG in the Features Script
 
-The following `Random` class was commonly used with `calculateFeatures()`. It uses the sfc32 PRNG seeded from the token hash:
-
-```javascript
-class Random {
-  constructor(hash) {
-    const hex = hash.slice(2);
-    this.prng = this._sfc32(
-      parseInt(hex.slice(0, 8), 16),
-      parseInt(hex.slice(8, 16), 16),
-      parseInt(hex.slice(16, 24), 16),
-      parseInt(hex.slice(24, 32), 16)
-    );
-  }
-
-  _sfc32(a, b, c, d) {
-    return function () {
-      a |= 0; b |= 0; c |= 0; d |= 0;
-      let t = (((a + b) | 0) + d) | 0;
-      d = (d + 1) | 0;
-      a = b ^ (b >>> 9);
-      b = (c + (c << 3)) | 0;
-      c = (c << 21) | (c >>> 11);
-      c = (c + t) | 0;
-      return (t >>> 0) / 4294967296;
-    };
-  }
-
-  random_dec()       { return this.prng(); }
-  random_num(a, b)   { return a + this.prng() * (b - a); }
-  random_int(a, b)   { return Math.floor(a + this.prng() * (b - a + 1)); }
-  random_bool(p)     { return this.prng() < p; }
-  random_choice(arr) { return arr[Math.floor(this.prng() * arr.length)]; }
-}
-```
+The `calculateFeatures()` function must use the same pseudo-random number generator (PRNG) as the art script, seeded from `tokenData.hash` in the same way and called in the same order. This ensures that the features returned by `calculateFeatures()` are consistent with the actual visual output of the project.
 
 ---
 
