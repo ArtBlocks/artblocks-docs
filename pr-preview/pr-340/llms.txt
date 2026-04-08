@@ -1,0 +1,55 @@
+﻿# Art Blocks Docs
+
+> Art Blocks is the leading platform for on-chain generative art. Artists write algorithms stored permanently on the Ethereum blockchain. When a collector mints, a unique hash is generated on-chain and fed into the artist's script — producing a one-of-a-kind, deterministic artwork.
+
+- [Art Blocks Docs](https://docs.artblocks.io/pr-preview/pr-340/readme.md): Art Blocks Docs
+
+## Art Blocks Protocol
+
+- [Art Blocks Protocol Overview](https://docs.artblocks.io/pr-preview/pr-340/protocol/overview.md): Art Blocks is built on a simple but radical premise: the algorithm is the artwork. Every generative art project on Art Blocks stores its creative code
+- [NFT Metadata Storage at Art Blocks](https://docs.artblocks.io/pr-preview/pr-340/protocol/on-chain-storage.md): An overview of different NFT metadata storage mechanisms used by Art Blocks NFTs.
+- [The Art Blocks Generator](https://docs.artblocks.io/pr-preview/pr-340/protocol/on-chain-generator.md): How the Art Blocks Generator assembles generative art from on-chain data.
+- [PostParams](https://docs.artblocks.io/pr-preview/pr-340/protocol/postparams.md): PostParams — on-chain configurable parameters that let artworks evolve after minting.
+
+## Developer Reference
+
+### MCP Server
+
+- [Quick Start](https://docs.artblocks.io/pr-preview/pr-340/developer/mcp-server/quick-start.md): Connect your AI agent to the Art Blocks MCP Server in under 5 minutes.
+- [Capabilities](https://docs.artblocks.io/pr-preview/pr-340/developer/mcp-server/capabilities.md): Tools, resources, and example questions for the Art Blocks MCP Server.
+- [Agent Skills](https://docs.artblocks.io/pr-preview/pr-340/developer/mcp-server/skills.md): Agent Skills that teach your AI assistant Art Blocks domain expertise.
+- [Advanced GraphQL](https://docs.artblocks.io/pr-preview/pr-340/developer/mcp-server/advanced-graphql.md): Advanced GraphQL tools for custom queries against the Art Blocks data layer.
+- [Workflows](https://docs.artblocks.io/pr-preview/pr-340/developer/mcp-server/workflows.md): End-to-end workflow examples showing how MCP tools chain together.
+- [What Can You Build](https://docs.artblocks.io/pr-preview/pr-340/developer/mcp-server/what-can-you-build.md): Agent archetypes and use cases for the Art Blocks MCP server.
+- [Core Contract (V3)](https://docs.artblocks.io/pr-preview/pr-340/developer/core-contract.md): Art Blocks V3 Core Contract — architecture, variants, royalties, and open-source resources.
+- [Token & Generator APIs](https://docs.artblocks.io/pr-preview/pr-340/developer/token-and-generator-apis.md): Art Blocks hosted APIs — token metadata, live generator views, and media proxy.
+- [GraphQL Reference](https://docs.artblocks.io/pr-preview/pr-340/developer/graphql.md): Art Blocks GraphQL API and Subgraph — entities, relationships, and example queries.
+
+### Minter Suite
+
+- [Minter Suite Overview](https://docs.artblocks.io/pr-preview/pr-340/developer/minter-suite/overview.md): Art Blocks Minter Suite overview — design principles, architecture, and fairness framework.
+- [Minters](https://docs.artblocks.io/pr-preview/pr-340/developer/minter-suite/minters.md): Complete catalog of Art Blocks minter types with configuration parameters.
+- [Custom, One-Off Minters](https://docs.artblocks.io/pr-preview/pr-340/developer/minter-suite/custom-minters.md): Engine partner custom minter development for the Art Blocks Shared Minter Suite.
+- [SeaDrop Integration](https://docs.artblocks.io/pr-preview/pr-340/developer/minter-suite/seadrop-integration.md): Integration guide for the Art Blocks Shared Minter Suite with OpenSea's SeaDrop system.
+
+## Creator & Engine Onboarding
+
+- [Creative Offerings](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/offerings.md): What Art Blocks offers artists and creators — Studio, how to apply, and who to contact.
+
+### For Artists
+
+- [Artist Overview](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/artists/overview.md): Overview of the Art Blocks artist journey — from script to mainnet launch.
+- [1. Building Your Project](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/artists/1-building-your-project.md): Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, and conversion guide.
+- [2. Staging & Testing](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/artists/2-staging-and-testing.md): Creator Dashboard walkthrough — staging your Art Blocks project on Sepolia testnet.
+- [3. Mainnet Launch](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/artists/3-mainnet-launch.md): Launching your Art Blocks project on Ethereum mainnet — import, publish, and open minting.
+- [Minters for Artists](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/artists/minters.md): Artist guide to Art Blocks minting mechanics — choosing and configuring a minter for your drop.
+- [Community](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/artists/community.md): Art Blocks community — Discord, communication guidelines, community agreements, and charitable giving.
+- [Artist FAQ](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/artists/faq.md): Frequently asked questions for Art Blocks artists — application, technical requirements, Creator Dashboard, staging, and more.
+
+### Engine Partners
+
+- [What is Art Blocks Engine?](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/engine-partners/what-is-engine.md): What is Art Blocks Engine and Engine Flex — platform overview, use cases, and contract architecture.
+- [Getting Started as an Engine Partner](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/engine-partners/getting-started.md): Art Blocks Engine partner onboarding — step-by-step from initial outreach to mainnet launch.
+- [Decentralized Storage Assets](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/engine-partners/flex-assets.md): Setting up IPFS and Arweave external assets for Art Blocks Engine Flex projects.
+- [Marketing & Launch Prep](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/engine-partners/marketing-and-launch.md): Marketing, community building, and launch preparation for Art Blocks Engine partners.
+- [Engine Partner FAQ](https://docs.artblocks.io/pr-preview/pr-340/creator-onboarding/engine-partners/faq.md): Frequently asked questions for Art Blocks Engine partners.
