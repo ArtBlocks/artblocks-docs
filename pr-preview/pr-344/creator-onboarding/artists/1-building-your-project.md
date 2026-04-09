@@ -218,7 +218,7 @@ Set up a local `index.html` that mirrors the generator environment:
 
 Test with specific hashes by appending `?hash=0x...` to the URL. Test with many different hashes to ensure variety and that no hash causes errors.
 
-For a code template to start from, see the [Art Blocks Starter Template](https://github.com/ArtBlocks/artblocks-starter-template).
+For a code template to start from, see the [Art Blocks Starter Template](https://github.com/ArtBlocks/artblocks-starter-template) or the [scaffold art script skill](/developer/mcp-server/skills/#available-skills).
 
 ---
 
@@ -230,10 +230,10 @@ Uploading your script to Ethereum costs gas. To estimate the cost:
 Cost (ETH) = 235 × bytes × gwei_price × (1 / 1,000,000,000)
 ```
 
-For example, a 10 KB script at 10 gwei:
+For example, a 10 KB script at 1 gwei:
 
 ```
-235 × 10,000 × 10 × (1 / 1,000,000,000) = 0.0235 ETH
+235 × 10,000 × 1 × (1 / 1,000,000,000) = 0.00235 ETH
 ```
 
 Artists typically target 5–20 KB for their scripts (excluding the library). To reduce size: maximize code reuse with functions, remove comments, and minify finished code. Check [etherscan.io/gastracker](https://etherscan.io/gastracker) for current gas prices before uploading as prices can vary significantly.
