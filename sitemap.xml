@@ -2,126 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://docs.artblocks.io/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/protocol/overview/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/protocol/on-chain-generator/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/protocol/postparams/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/developer/core-contract/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/protocol/on-chain-storage/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/developer/graphql/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/developer/token-and-generator-apis/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/developer/mcp-server/quick-start/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/offerings/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
-  </url>
-  <url>
-    <loc>https://docs.artblocks.io/developer/mcp-server/advanced-graphql/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
-  </url>
-  <url>
-    <loc>https://docs.artblocks.io/developer/mcp-server/capabilities/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
-  </url>
-  <url>
-    <loc>https://docs.artblocks.io/developer/minter-suite/overview/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/developer/mcp-server/skills/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
-    <loc>https://docs.artblocks.io/developer/mcp-server/workflows/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <loc>https://docs.artblocks.io/developer/mcp-server/advanced-graphql/</loc>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
+  </url>
+  <url>
+    <loc>https://docs.artblocks.io/developer/mcp-server/capabilities/</loc>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
+  </url>
+  <url>
+    <loc>https://docs.artblocks.io/developer/minter-suite/overview/</loc>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/artists/1-building-your-project/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
+  </url>
+  <url>
+    <loc>https://docs.artblocks.io/developer/mcp-server/workflows/</loc>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/artists/2-staging-and-testing/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/developer/mcp-server/what-can-you-build/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/developer/minter-suite/minters/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/engine-partners/what-is-engine/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/developer/minter-suite/custom-minters/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/artists/overview/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/artists/3-mainnet-launch/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/artists/minters/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/developer/minter-suite/seadrop-integration/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/artists/faq/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/engine-partners/getting-started/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/artists/community/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/engine-partners/flex-assets/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/engine-partners/faq/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
   <url>
     <loc>https://docs.artblocks.io/creator-onboarding/engine-partners/marketing-and-launch/</loc>
-    <lastmod>2026-04-08T09:20:58Z</lastmod>
+    <lastmod>2026-04-09T10:23:04Z</lastmod>
   </url>
 </urlset>

@@ -22,9 +22,12 @@ Discord is where the Art Blocks community lives. Key channels for artists:
 
 | Channel | Purpose |
 |---|---|
-| `#artist-tech` | Technical questions about scripts, the Creator Dashboard, and integrations |
-| `#artist-general` | General artist questions, sharing work in progress, community discussion |
-| `#announcements` | Official Art Blocks announcements |
+| `#artist-announcements` | Share announcements about upcoming releases, physical mints, exhibits, external sites, or changes to your project |
+| `#artist-general` (private) | General discussion for Art Blocks artists. Most private updates from the team are shared here |
+| `#artist-tech` (private) | Technical discussion for artists |
+| `#artist-project-feedback` (private) | Feedback from other artists on works in progress |
+| `#ab-only-project-share` | Share works in progress with the community |
+| `#block-talk` | The most popular channel for generative art discussion. Users can use ArtBot to request information on any Art Blocks project |
 
 ### Getting the Artist Role
 
@@ -52,18 +55,20 @@ Art Blocks has guidelines to protect artists and collectors around project relea
 
 ## Community Agreements
 
-Art Blocks asks all community members — artists and collectors alike — to uphold the following principles:
+The Art Blocks community is intended to be a welcoming, inspiring, and beneficial place for everyone. Art Blocks asks all community members, both artists and collectors alike, to uphold the following principles:
 
-1. **Be kind and respectful.** Treat everyone in the community with dignity.
+1. **Be excellent to each other.** Treat everyone in the community with dignity. This includes behavior when interacting with Art Blocks Staff and Moderators.
 2. **No hate speech.** Discrimination, slurs, or targeted harassment are not tolerated.
 3. **No spam or self-promotion** in channels where it's not appropriate.
-4. **Respect creative authorship.** Do not copy or misrepresent others' work.
-5. **Engage honestly.** No market manipulation, wash trading, or deceptive practices.
-6. **Protect privacy.** Don't share others' personal information without consent.
-7. **No financial advice.** Don't present your opinions as investment recommendations.
-8. **Follow platform rules.** Comply with Art Blocks' terms of service and community guidelines.
-9. **Report problems.** If you see violations, report them to the moderation team rather than escalating publicly.
-10. **Assume good faith.** Approach disagreements with the assumption that others are acting in good faith.
+4. **No NSFW (not safe for work) content.** This includes text, images, and links with graphically disturbing content.
+5. **Respect creative authorship.** Do not copy or misrepresent others' work.
+6. **Engage honestly.** No market manipulation, wash trading, or deceptive practices.
+7. **Protect privacy.** Don't share others' personal information without consent.
+8. **No financial advice.** Don't present your opinions as investment recommendations.
+9. **Follow platform rules.** Comply with Art Blocks' terms of service and community guidelines.
+10. **Beware of scams.** Never send any ETH/tokens to anyone that reaches out to you by DM. Never share your private key or seed phrase. Do not click on unfamiliar links and always be cautious when interacting over DM.
+11. **Report problems.** If you see violations, report them to the moderation team rather than escalating publicly.
+12. **Assume good faith.** Approach disagreements with the assumption that others are acting in good faith.
 
 Violations may result in removal from community channels. The Art Blocks team has final say on community conduct matters.
 
@@ -71,12 +76,41 @@ Violations may result in removal from community channels. The Art Blocks team ha
 
 ## Sharing Your Work
 
-Art Blocks encourages artists to share their work and process. Some suggestions:
+Building an audience around your digital art practice is a long game, and one that artists in this community take seriously. Crypto markets are volatile and sales are never guaranteed, but artists who build a genuine, engaged following over time often find the experience more rewarding and their work more widely seen. Art Blocks has an enthusiastic community across several social media channels, and new artists consistently find that showing up authentically in that community goes a long way.
 
-- **Work in progress** — Share generative outputs and process images as you develop your script
-- **Behind the scenes** — Talk about your artistic approach, inspirations, and technical choices
-- **Community engagement** — Respond to collectors who share your work, engage with other artists
-- **Long-form writing** — Consider writing about your project for the [Art Blocks Journal](https://www.artblocks.io/editorial) — reach out to your account manager
+### Art Blocks Channels
+
+Art Blocks maintains an active presence across the following platforms. These are the spaces where the community gathers, and where awareness of new work naturally spreads.
+
+- [**X (Twitter)**](https://x.com/artblocks_io) — the most active channel for announcements, project highlights, and community conversation. Releases are shared here, and the community regularly discusses and shares new work.
+- [**Instagram**](https://www.instagram.com/artblocks_io) — Art Blocks shares project highlights and artist features on Instagram. It has become an increasingly important channel for reaching both crypto collectors and the broader art world.
+- [**Newsletter**](https://www.artblocks.io/newsletter) — Art Blocks sends a regular community email newsletter covering upcoming releases, artist spotlights, and news from across the generative art space.
+- [**The Journal**](https://www.artblocks.io/articles) — The Art Blocks Journal is home for editorials, artist interviews, project write-ups, and longer essays on generative art. Articles from the Journal are also shared across social channels.
+- [**Discord**](https://discord.gg/artblocks) — The Art Blocks Discord server is the heart of the community where collectors, artists, and generative art enthusiasts connect, and where upcoming releases are announced.
+- [**YouTube**](https://www.youtube.com/@ArtBlocksOfficial) — Art Blocks publishes video content including artist features and project documentation on YouTube.
+
+### Tips for Artists
+
+Here are some practices artists in this community have found genuinely useful for building an audience and connecting with others around their work.
+
+#### **Get active on [X (Twitter)](https://x.com/artblocks_io).**
+X is one of the primary social platforms for the generative art and crypto community. Sharing your creative process, posting works in progress, tagging [@artblocks_io](https://x.com/artblocks_io) in posts related to your project, and engaging with other artists and collectors can open up conversations you may not find elsewhere.
+
+#### **Build a presence on [Instagram](https://www.instagram.com/artblocks_io).**
+Instagram has grown into an important channel for reaching both crypto-native collectors and a wider art audience. Sharing outputs, process shots, and project previews there can introduce your work to people who might never encounter it on X. Tagging [@artblocks_io](https://www.instagram.com/artblocks_io) where relevant is always welcome.
+
+#### **Show up over time, not just release time.**
+Some of the most meaningful aspects of releasing on Art Blocks have nothing to do with sell-outs. Artists who share their process openly, engage honestly with other creators, and participate in conversations over time build real connections in this space. That kind of presence is its own reward, and it tends to make the whole experience of releasing more enjoyable.
+
+#### **Marfa Weekend**
+[Art Blocks Marfa Weekend](https://www.artblocks.io/articles/art-blocks-marfa-weekend-2025) is an annual gathering in Marfa, Texas, bringing together artists, collectors, and the wider generative art community. For those who are able to make the trip, it is a genuinely special experience and a wonderful way to foster relationships with like-minded individuals. The conversations and connections that happen in Marfa often have a lasting impact on how artists feel about and within this community.
+
+There is also the [Art Blocks x OpenSea Artist Residency Program](https://www.artblocks.io/apply/residency) for those interested in a longer, more immersive experience. The residency places individual artists in Marfa for four to six weeks, with accommodations, a stipend for travel and art supplies, access to the Art Blocks Gallery, and dedicated time to develop a new generative project. Artists conclude the residency with a presentation to the local community and the option to release their work through Art Blocks Studio. Applications are open, and you can learn more and apply at [artblocks.io/apply/residency](http://artblocks.io/apply/residency).
+
+We know Marfa is not accessible to everyone, and that is completely understandable. The Art Blocks community is a genuinely global one, and there are plenty of ways to build meaningful connections without being in the same room.
+
+#### **Think beyond social media.**
+Collaborating with a gallery or institution, writing about your work, building a project website, or making a video about your process all help people understand and connect with what you are making. The generative art audience is curious and genuinely appreciates context.
 
 ---
 
