@@ -131,6 +131,15 @@ You can distribute at any time — there's no requirement to wait for the projec
 
 After launch, you can add animated thumbnails (MP4) to your project. Contact Art Blocks in `#artist-tech` if you'd like to add or update your animation settings.
 
+### Get Your OpenSea Collection Badged
+
+Copymint and scam collections frequently impersonate real Art Blocks projects on OpenSea and can outrank the real collection in search. When that happens, collectors land on a fake page and sometimes assume the artwork is broken because the scam page renders nothing. Getting your real collection **badged** pushes it to the top of OpenSea search and demotes the copycats.
+
+OpenSea badges a collection once it has both a **banner image** and a **linked social account**. As the collection owner, you can set both in [OpenSea Studio](https://studio.opensea.io/):
+
+- **Banner:** `Studio` > `Overview` > `Select pencil icon on banner` > `upload` (recommended ratio **4:1**)
+- **Socials:** `Studio` > `Overview` > `+ Add links` > `Connect X` or `Connect Discord` (complete the OAuth flow)
+
 ### Returning for Future Projects
 
 Many Studio artists release multiple projects. The same Creator Dashboard account and artist wallet can be used for subsequent projects. For projects that require screening, submit via your testnet shell and notify the team through your Discord artist DM.
