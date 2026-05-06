@@ -70,6 +70,19 @@ Please note that scripts containing multiple `Canvas` elements may not render as
 **I set up my payment splits wrong. Can I change them?**
 You can update payment configuration up until the project is locked. After locking, the royalty splitter is immutable — contact Art Blocks to request a splitter replacement.
 
+**How do I format my project description? My line breaks aren't working.**
+The description field renders standard Markdown: `**bold**`, `*italics*`, `#`/`##` headers, and links all work. Markdown collapses whitespace by design, so `<br>` tags and trailing double-spaces don't reliably create paragraph breaks. To force a visible blank line between paragraphs, put `&nbsp;` (a non-breaking space) on its own line:
+
+```
+First paragraph.
+
+&nbsp;
+
+Second paragraph.
+```
+
+The Creator Dashboard preview can render slightly differently than the live collection page, so check the live page after publishing to confirm formatting looks right.
+
 ---
 
 ## Staging and Testing
