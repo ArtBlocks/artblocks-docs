@@ -83,6 +83,8 @@ The project description is an important opportunity to highlight your intentions
 - Be sure to describe any interactivity features, if applicable.
 - End by summarizing how the medium, outputs, and algorithm achieve your initial inquiry or concept.
 
+For Markdown formatting tips (bold, italics, headers, line breaks), see the [Artist FAQ](/creator-onboarding/artists/faq/#creator-dashboard).
+
 ---
 
 ## Step 3: Scripts
