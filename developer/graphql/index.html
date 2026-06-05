@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>GraphQL Reference</title>
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.831403976744" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.833988068846" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -225,6 +225,34 @@
 <h2 id="primary-entities">Primary Entities</h2>
 <h3 id="projects_metadata"><code translate="no" v-pre>projects_metadata</code></h3>
 <p>Detailed information about Art Blocks projects, including on-chain and off-chain data.</p>
+<retype-table copy-text="| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `id` | String! | `&lt;contract_address&gt;-&lt;project_id&gt;` |
+| `project_id` | String | Project ID on the contract |
+| `chain_id` | Int | Chain ID |
+| `contract_address` | String | Core contract address |
+| `name` | String | Project name |
+| `artist_name` | String | Artist name |
+| `artist_address` | String | Artist wallet address |
+| `description` | String | Project description |
+| `active` | Boolean! | Whether the project is publicly visible |
+| `paused` | Boolean! | Whether purchases are paused |
+| `complete` | Boolean! | Whether the project has reached max invocations |
+| `completed_at` | timestamptz | When the project sold out |
+| `activated_at` | timestamptz | When the project was activated |
+| `invocations` | bigint! | Number of tokens minted |
+| `max_invocations` | Int! | Maximum supply |
+| `script` | String | Full project script |
+| `script_type_and_version` | String | E.g. `p5js@1.0.0` |
+| `aspect_ratio` | numeric | Artwork aspect ratio |
+| `locked` | Boolean | Whether the script is permanently locked |
+| `website` | String | Artist or project website |
+| `license` | String | Project license |
+| `lowest_listing` | float8 | Current lowest secondary listing price |
+| `vertical_name` | String | Category (curated, presents, studio, etc.) |
+| `is_artblocks` | Boolean | Whether it's an Art Blocks flagship project |
+| `slug` | String | URL slug |
+| `render_delay` | Int | Seconds before static capture |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -368,10 +396,27 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p><strong>Key relationships:</strong> <code translate="no" v-pre>contract</code>, <code translate="no" v-pre>tokens</code>, <code translate="no" v-pre>artist</code>, <code translate="no" v-pre>minter_configuration</code>, <code translate="no" v-pre>features</code>, <code translate="no" v-pre>tags</code>, <code translate="no" v-pre>vertical</code></p>
 <hr>
 <h3 id="tokens_metadata"><code translate="no" v-pre>tokens_metadata</code></h3>
 <p>Information about individual tokens.</p>
+<retype-table copy-text="| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `id` | String! | `&lt;contract_address&gt;-&lt;token_id&gt;` |
+| `token_id` | String | Token ID |
+| `chain_id` | Int | Chain ID |
+| `contract_address` | String | Core contract address |
+| `project_id` | String | Associated project ID |
+| `invocation` | Int | Invocation number within the project |
+| `hash` | String | Token hash (used as PRNG seed) |
+| `owner_address` | String | Current owner |
+| `minted_at` | timestamptz | Mint timestamp |
+| `features` | jsonb | Computed trait data |
+| `live_view_url` | String | Generator URL for live artwork |
+| `media_url` | String | Media proxy URL for static image |
+| `primary_asset_url` | String | Primary asset URL |
+| `preview_asset_url` | String | Thumbnail URL |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -455,10 +500,22 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p><strong>Key relationships:</strong> <code translate="no" v-pre>contract</code>, <code translate="no" v-pre>project</code>, <code translate="no" v-pre>owner</code>, <code translate="no" v-pre>image</code></p>
 <hr>
 <h3 id="contracts_metadata"><code translate="no" v-pre>contracts_metadata</code></h3>
 <p>Information about Art Blocks core contracts.</p>
+<retype-table copy-text="| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `address` | String! | Contract address |
+| `chain_id` | Int | Chain ID |
+| `name` | String | Contract name |
+| `core_version` | String | Core contract version |
+| `admin` | String | Admin address |
+| `minter_filter_address` | String | Associated minter filter |
+| `dependency_registry_address` | String | Dependency registry address |
+| `preferred_ipfs_gateway` | String | Preferred IPFS gateway (Flex) |
+| `preferred_arweave_gateway` | String | Preferred Arweave gateway (Flex) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -517,9 +574,19 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h3 id="project_minter_configurations"><code translate="no" v-pre>project_minter_configurations</code></h3>
 <p>Minting configuration for a project.</p>
+<retype-table copy-text="| Field | Type | Description |
+| ----- | ---- | ----------- |
+| `price_is_configured` | Boolean! | Whether price has been set |
+| `currency_symbol` | String | Currency (ETH or ERC-20 symbol) |
+| `base_price` | String | Price in wei |
+| `max_invocations` | Int | Minter-level max invocations |
+| `auction_start_time` | timestamptz | Auction start (for auction minters) |
+| `auction_end_time` | timestamptz | Auction end (for auction minters) |
+| `extra_minter_details` | jsonb | Minter-specific config (see below) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -568,6 +635,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>The <code translate="no" v-pre>extra_minter_details</code> field is a JSONB object with minter-specific fields. For a Dutch Auction minter:</p>
 <div id="project_minter_configurations-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-json"><code v-pre class="language-json">{
@@ -732,6 +800,14 @@
 <hr>
 <h2 id="advanced-graphql-mcp-tools">Advanced GraphQL (MCP Tools)</h2>
 <p>The <a href="../mcp-server/advanced-graphql/">Art Blocks MCP Server</a> includes six GraphQL tools for custom queries:</p>
+<retype-table copy-text="| Tool | Purpose |
+|---|---|
+| `explore_table` | Inspect a table's fields, types, and relationships |
+| `validate_fields` | Check whether specific fields exist on a table |
+| `build_query` | Build a validated GraphQL query with WHERE filters |
+| `query_optimizer` | Rewrite queries to use `*_metadata` tables |
+| `graphql_query` | Execute a raw GraphQL query |
+| `graphql_introspection` | Full schema introspection |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -768,6 +844,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="pagination">Pagination</h2>
 <p>The Graph enforces limits: <code translate="no" v-pre>first &lt;= 1000</code> and <code translate="no" v-pre>skip &lt;= 5000</code>. For large result sets, paginate using a cursor-style approach based on an attribute like token ID or block number rather than high <code translate="no" v-pre>skip</code> values. See the <a href="https://thegraph.com/docs/en/developer/graphql-api/#pagination" class="outbound" target="_blank"><span>Graph documentation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> for guidance.</p>

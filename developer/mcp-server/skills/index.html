@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Agent Skills</title>
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.5.3.831403976744" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.833988068846" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -235,6 +235,16 @@ npx skills add ArtBlocks/skills -a claude-code</code></pre>
 <p>After installing, reload Cursor (<code translate="no" v-pre>Cmd+Shift+P</code> → &quot;Reload Window&quot;) for skills to take effect.</p>
 <hr>
 <h2 id="available-skills">Available Skills</h2>
+<retype-table copy-text="| Skill | Use when... |
+|-------|-------------|
+| [**discover-artblocks-projects**](https://github.com/ArtBlocks/skills/blob/main/skills/discover-artblocks-projects/SKILL.md) | Browsing, searching, or filtering projects — what's live, dropping soon, in a wallet, or matching a tag/price range |
+| [**get-artist**](https://github.com/ArtBlocks/skills/blob/main/skills/get-artist/SKILL.md) | Looking up an artist and exploring their body of work across Art Blocks |
+| [**get-token-metadata**](https://github.com/ArtBlocks/skills/blob/main/skills/get-token-metadata/SKILL.md) | Looking up a specific token's traits, media URLs, listing info, owner, hash, and project context |
+| [**mint-artblocks-token**](https://github.com/ArtBlocks/skills/blob/main/skills/mint-artblocks-token/SKILL.md) | Minting a token — pricing, minter types, allowlists, multi-wallet eligibility, building transactions |
+| [**scaffold-art-script**](https://github.com/ArtBlocks/skills/blob/main/skills/scaffold-art-script/SKILL.md) | Creating or converting a generative art script for Art Blocks (p5.js, Three.js, vanilla JS) |
+| [**configure-postparams**](https://github.com/ArtBlocks/skills/blob/main/skills/configure-postparams/SKILL.md) | Setting on-chain PostParam values on a minted token |
+| [**develop-postparam-hooks**](https://github.com/ArtBlocks/skills/blob/main/skills/develop-postparam-hooks/SKILL.md) | Writing, testing, deploying, and registering custom PostParam hook contracts (augment and/or configure hooks) in Solidity |
+| [**query-artblocks-data**](https://github.com/ArtBlocks/skills/blob/main/skills/query-artblocks-data/SKILL.md) | Custom GraphQL queries for data not covered by domain-specific tools (sales history, aggregations, complex joins) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -269,16 +279,27 @@ npx skills add ArtBlocks/skills -a claude-code</code></pre>
 <td>Setting on-chain PostParam values on a minted token</td>
 </tr>
 <tr>
+<td><a href="https://github.com/ArtBlocks/skills/blob/main/skills/develop-postparam-hooks/SKILL.md" class="outbound" target="_blank"><span><strong>develop-postparam-hooks</strong></span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
+<td>Writing, testing, deploying, and registering custom PostParam hook contracts (augment and/or configure hooks) in Solidity</td>
+</tr>
+<tr>
 <td><a href="https://github.com/ArtBlocks/skills/blob/main/skills/query-artblocks-data/SKILL.md" class="outbound" target="_blank"><span><strong>query-artblocks-data</strong></span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
 <td>Custom GraphQL queries for data not covered by domain-specific tools (sales history, aggregations, complex joins)</td>
 </tr>
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>Each skill is a standalone markdown file — click any skill name above to read the full source.</p>
 <hr>
 <h2 id="supported-agents">Supported Agents</h2>
 <p>Skills work with any agent that supports the <a href="https://skills.sh" class="outbound" target="_blank"><span>open agent skills spec</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. The Art Blocks MCP server can be connected to any agent that supports MCP over HTTP.</p>
+<retype-table copy-text="| Agent | MCP | Skills |
+|-------|-----|--------|
+| Cursor | ✅ | ✅ |
+| Claude Code | ✅ | ✅ |
+| Claude Desktop | ✅ | — |
+| Codex | ✅ | ✅ |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -312,6 +333,7 @@ npx skills add ArtBlocks/skills -a claude-code</code></pre>
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="manual-installation">Manual Installation</h2>
 <p>If your agent doesn&#x27;t support <code translate="no" v-pre>npx skills</code>, you can copy skill directories directly:</p>

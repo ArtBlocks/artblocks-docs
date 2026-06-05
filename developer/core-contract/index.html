@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Core Contract (V3)</title>
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.831403976744" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.833988068846" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -219,6 +219,12 @@
 <hr>
 <h2 id="contract-architecture">Contract Architecture</h2>
 <p>Each V3 Engine deployment integrates with the following peripheral contracts:</p>
+<retype-table copy-text="| Contract | Role |
+|---|---|
+| **Admin Access Control List (ACL)** | Manages admin access grants to the core contract and related contracts. Highly flexible and upgradable. |
+| **Randomizer** | Generates pseudo-random hashes when tokens are minted. Architecture supports async or custom hash generation. |
+| **Core Registry** | Notifies the subgraph indexing service when a new Engine contract is deployed, making it queryable. Also registers the contract with the shared minter suite. |
+| **Minter Suite** | Collection of minting contracts. See [Minter Suite](/developer/minter-suite/overview/) for details. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -247,6 +253,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>The <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/V3_ARCHITECTURE.md" class="outbound" target="_blank"><span>V3 Architecture Overview</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> in the contracts repository includes architecture diagrams.</p>
 <hr>
 <h2 id="erc-2981-royalties">ERC-2981 Royalties</h2>
@@ -294,6 +301,14 @@
 <hr>
 <h2 id="key-contract-functions">Key Contract Functions</h2>
 <p>The following functions are commonly referenced by integrators and dashboard tools:</p>
+<retype-table copy-text="| Function | Description |
+|---|---|
+| `projectDetails(projectId)` | Returns project name, artist, description, website, license |
+| `projectScriptInfo(projectId)` | Returns script type, count, and dependency info |
+| `projectScriptByIndex(projectId, index)` | Returns a script segment (scripts &gt;24KB are split into segments) |
+| `showTokenHashes(tokenId)` | Returns the hash for a given token ID |
+| `addProject(...)` | Creates a new project shell (admin only) |
+| `updateProjectSecondaryMarketRoyaltyPercentage(...)` | Sets artist royalty percentage (artist only) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -330,6 +345,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>For a full function reference, see the contract source on <a href="https://etherscan.io/" class="outbound" target="_blank"><span>Etherscan</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> or in the <a href="https://github.com/ArtBlocks/artblocks-contracts" class="outbound" target="_blank"><span>GitHub repository</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <hr>
 <h2 id="token-id-structure">Token ID Structure</h2>

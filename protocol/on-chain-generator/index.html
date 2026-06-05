@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>The Art Blocks Generator</title>
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.831403976744" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.833988068846" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -271,6 +271,12 @@
 }</code></pre>
 </doc-codeblock></div>
 <h3 id="dependency-types">Dependency Types</h3>
+<retype-table copy-text="| `dependency_type` | Description |
+|---|---|
+| `&quot;IPFS&quot;` | Content on IPFS. Script fetches using `preferredIPFSGateway + cid`. |
+| `&quot;ARWEAVE&quot;` | Content on Arweave. Script fetches using `preferredArweaveGateway + cid`. |
+| `&quot;ONCHAIN&quot;` | On-chain data. For PostParams, `data` contains a resolved key/value object. For BytecodeStorage, `data` contains the on-chain content string. |
+| `&quot;ART_BLOCKS_DEPENDENCY_REGISTRY&quot;` | A library registered in the Dependency Registry. Injected as a `&lt;script&gt;` tag automatically — `data` is null; no manual fetch required. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -299,6 +305,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <h3 id="module-based-libraries-threejs-v0161">Module-Based Libraries (Three.js v0.161+)</h3>
 <p>For module-based dependencies like Three.js v0.167.0, the generator injects an import map instead of a script tag, and wraps the art script in <code translate="no" v-pre>&lt;script type=&quot;module&quot;&gt;</code>:</p>
 <div id="module-based-libraries-threejs-v0161-code-1" class="codeblock-wrapper"><doc-codeblock>
@@ -339,6 +346,20 @@
 <hr>
 <h2 id="supported-script-types--dependency-versions">Supported Script Types &amp; Dependency Versions</h2>
 <p>The project&#x27;s script type and dependency version are set in the Art Blocks Creator Dashboard and determine which library the generator loads. All available libraries are registered in the Art Blocks Dependency Registry.</p>
+<retype-table copy-text="| Script Type | Library | Versions | Notes |
+|---|---|---|---|
+| `js` | None (vanilla) | — | Canvas API, raw WebGL, SVG |
+| `p5js` | p5.js | 1.0.0, 1.9.0, 1.11.11 | `setup()` and `draw()` called automatically |
+| `threejs` | Three.js | 0.124.0, 0.160.0, 0.167.0 | v0.161+ uses ES module import maps |
+| `regl` | regl | 2.1.0 | WebGL wrapper |
+| `tonejs` | Tone.js | 14.8.15 | Audio synthesis |
+| `svg` | None | — | SVG-based output |
+| `paperjs` | Paper.js | 0.12.15 | Vector graphics |
+| `zdog` | Zdog | 1.1.2 | Pseudo-3D illustration |
+| `babylonjs` | Babylon.js | 5.0.0, 6.36.0 | 3D engine |
+| `aframe` | A-Frame | 1.2.0, 1.5.0 | WebVR/WebXR |
+| `processing` | Processing.js | 1.4.6 | Processing port |
+| `custom` | User-defined | — | No wrapper template, full control |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -425,6 +446,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="local-development">Local Development</h2>
 <p>For local development, create an <code translate="no" v-pre>index.html</code> that mirrors the generator structure, with a mock <code translate="no" v-pre>tokenData</code>:</p>

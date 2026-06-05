@@ -52,6 +52,7 @@ After installing, reload Cursor (`Cmd+Shift+P` → "Reload Window") for skills t
 | [**mint-artblocks-token**](https://github.com/ArtBlocks/skills/blob/main/skills/mint-artblocks-token/SKILL.md) | Minting a token — pricing, minter types, allowlists, multi-wallet eligibility, building transactions |
 | [**scaffold-art-script**](https://github.com/ArtBlocks/skills/blob/main/skills/scaffold-art-script/SKILL.md) | Creating or converting a generative art script for Art Blocks (p5.js, Three.js, vanilla JS) |
 | [**configure-postparams**](https://github.com/ArtBlocks/skills/blob/main/skills/configure-postparams/SKILL.md) | Setting on-chain PostParam values on a minted token |
+| [**develop-postparam-hooks**](https://github.com/ArtBlocks/skills/blob/main/skills/develop-postparam-hooks/SKILL.md) | Writing, testing, deploying, and registering custom PostParam hook contracts (augment and/or configure hooks) in Solidity |
 | [**query-artblocks-data**](https://github.com/ArtBlocks/skills/blob/main/skills/query-artblocks-data/SKILL.md) | Custom GraphQL queries for data not covered by domain-specific tools (sales history, aggregations, complex joins) |
 
 Each skill is a standalone markdown file — click any skill name above to read the full source.

@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>2. Staging &amp; Testing</title>
@@ -41,11 +41,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -264,6 +264,14 @@
 <hr>
 <h2 id="step-2-details">Step 2: Details</h2>
 <p>Fill in your project metadata:</p>
+<retype-table copy-text="| Field | Notes |
+|---|---|
+| **Artist Name** | Your public artist name as it will appear on Art Blocks |
+| **Project Name** | The title of the project |
+| **Edition Size** | Total number of tokens (max invocations). Cannot be increased once locked. |
+| **Description** | Artist statement / project description — visible on artblocks.io |
+| **License** | NFT License, Creative Commons, or your custom license |
+| **Website** | Artist website or project-specific URL (optional) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -300,6 +308,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-info"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -361,6 +370,12 @@
 <hr>
 <h2 id="step-4-renders">Step 4: Renders</h2>
 <p>Configure how the Art Blocks rendering infrastructure captures your artwork:</p>
+<retype-table copy-text="| Setting | Notes |
+|---|---|
+| **Aspect Ratio** | Width:height ratio of your artwork (e.g. `1` for square, `1.5` for landscape). Used for canvas sizing and thumbnail display. |
+| **Render Delay** | Seconds the renderer waits before capturing the static image. Set this long enough for any animations to complete their initial state (e.g. `0` for immediately deterministic art, `5` for animated pieces). |
+| **Canvas Mode** | Enable if your script uses a `&lt;canvas&gt;` element directly (most p5.js and vanilla JS projects). Required for static capture to work correctly. |
+| **MP4 Settings** | Optional. Configure if you want animated MP4 thumbnails generated for your project. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -389,6 +404,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="step-5-payments">Step 5: Payments</h2>
 <p>Configure how primary and secondary revenues are split.</p>
@@ -466,6 +482,11 @@
 <p>Revisions may be requested before approval. Common feedback includes: output quality, trait distribution, edge-case handling, and script performance.</p>
 <hr>
 <h2 id="common-issues">Common Issues</h2>
+<retype-table copy-text="| Issue | Fix |
+|---|---|
+| Script renders correctly locally but not in dashboard preview | Remove any CDN `&lt;script&gt;` tags from your script; check for DOM setup code that creates elements the generator already provides |
+| Different outputs on reload with same hash | Remove `Math.random()` and `Date.now()` — seed all randomness from `tokenData.hash` |
+| Static capture shows blank or mid-animation frame | Increase render delay in Renders settings |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -490,6 +511,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">

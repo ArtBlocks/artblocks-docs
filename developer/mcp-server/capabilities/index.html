@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Capabilities</title>
@@ -41,11 +41,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -208,6 +208,19 @@
 <p>The Art Blocks MCP Server exposes <strong>21 tools</strong> and <strong>2 resources</strong> organized into the categories below. Tools are callable by any connected AI agent; resources provide background context that agents can read automatically.</p>
 <hr>
 <h2 id="quick-reference">Quick Reference</h2>
+<retype-table copy-text="| I want to... | Use |
+|---|---|
+| Browse or search projects | `discover_projects` |
+| See what's minting now | `discover_live_mints` |
+| See what's launching soon | `discover_upcoming_releases` |
+| Get full details on a project | `get_project` |
+| Look up an artist | `get_artist` |
+| Inspect a specific token | `get_token_metadata` |
+| View a collector's portfolio | `get_wallet_summary` → `get_wallet_tokens` |
+| Mint a token | `get_project_minter_config` → `check_allowlist_eligibility` → `build_purchase_transaction` |
+| Update post-mint parameters | `discover_postparams` → `build_configure_postparams_transaction` |
+| Scaffold a new art project | `scaffold_artblocks_project` |
+| Run a custom data query | `explore_table` → `build_query` → `graphql_query` |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -264,9 +277,18 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="discovery">Discovery</h2>
 <p>Browse, search, and filter Art Blocks projects across all supported chains.</p>
+<retype-table copy-text="| Tool | What it does | Example question |
+|------|-------------|-----------------|
+| `discover_projects` | Search and browse the project catalog with filters for text, artist, vertical, chain, tag, floor price, and mintability | &quot;Show me animated Curated projects under 1 ETH&quot; |
+| `discover_live_mints` | Find projects currently open for minting (active, unpaused, supply remaining) | &quot;What can I mint right now?&quot; |
+| `discover_upcoming_releases` | See projects scheduled to launch in the future | &quot;What Art Blocks projects are dropping this week?&quot; |
+| `get_project` | Full details on a specific project — description, trait distribution with rarity percentages, minting config, tags, and artblocks.io link | &quot;Tell me about Fidenza&quot; |
+| `get_artist` | Look up an artist by name, profile slug, or wallet address and see all their projects | &quot;What has Tyler Hobbs released?&quot; |
+| `list_tags` | List all available tags for filtering (ab500, animated, interactive, curated series, etc.) | &quot;What tags can I filter by?&quot; |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -310,9 +332,15 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="tokens-and-portfolios">Tokens and Portfolios</h2>
 <p>Explore individual tokens and collector portfolios. All portfolio tools accept wallet addresses, ENS names, or Art Blocks usernames — and automatically aggregate across all wallets linked to a profile.</p>
+<retype-table copy-text="| Tool | What it does | Example question |
+|------|-------------|-----------------|
+| `get_token_metadata` | Rich metadata for a single token — hash, traits, media URLs, live view URL, listing info, owner, and project context | &quot;Show me token #42 from Chromie Squiggle&quot; |
+| `get_wallet_summary` | Portfolio overview — total tokens, unique projects, chain distribution, and per-project breakdown | &quot;What does vitalik.eth collect on Art Blocks?&quot; |
+| `get_wallet_tokens` | List individual tokens owned by a collector with traits, media, and listing info | &quot;Show me all Art Blocks tokens owned by snowfro&quot; |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -341,9 +369,15 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="minting-and-eligibility">Minting and Eligibility</h2>
 <p>Check pricing, verify eligibility for gated mints, and build unsigned mint transactions.</p>
+<retype-table copy-text="| Tool | What it does | Example question |
+|------|-------------|-----------------|
+| `get_project_minter_config` | Minter type, current price, currency, auction timing, remaining supply, and allowlist details | &quot;How much does it cost to mint this project?&quot; |
+| `check_allowlist_eligibility` | Check if a wallet/ENS/username is eligible for Merkle allowlist or holder-gated mints — checks all linked wallets when a profile exists | &quot;Am I eligible to mint this project?&quot; |
+| `build_purchase_transaction` | Build an unsigned ETH transaction for set-price mints (MinterSetPriceV5). Supports `purchaseTo` for gifting. | &quot;Build a transaction to mint from project X&quot; |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -372,9 +406,14 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="post-mint-parameters-postparams">Post-Mint Parameters (PostParams)</h2>
 <p>Some Art Blocks projects have on-chain configurable parameters that token owners or artists can update after minting.</p>
+<retype-table copy-text="| Tool | What it does | Example question |
+|------|-------------|-----------------|
+| `discover_postparams` | Discover available PostParam keys, types, value constraints, authorization rules, and current values for a token | &quot;What parameters can I change on my token?&quot; |
+| `build_configure_postparams_transaction` | Build an unsigned transaction to update PostParam values on a token | &quot;Set my token's color to #FF0000&quot; |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -398,9 +437,13 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="creator-tools">Creator Tools</h2>
 <p>Tools for artists building generative art projects on Art Blocks.</p>
+<retype-table copy-text="| Tool | What it does | Example question |
+|------|-------------|-----------------|
+| `scaffold_artblocks_project` | Generate a ready-to-run project scaffold (index.html + art script) for vanilla JS, p5.js, or Three.js with optional FLEX dependencies, PostParams, and `window.$features` stubs | &quot;Scaffold a p5.js Art Blocks project with traits&quot; |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -419,9 +462,18 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="advanced-graphql">Advanced GraphQL</h2>
 <p>Six tools for custom queries against the Art Blocks Hasura GraphQL API. Most users will never need these — the tools above cover common use cases. See the <a href="../advanced-graphql/">Advanced GraphQL</a> page for details.</p>
+<retype-table copy-text="| Tool | What it does |
+|------|-------------|
+| `explore_table` | Inspect a table's fields, types, and relationships (curated shortlist or full schema) |
+| `validate_fields` | Check whether specific fields exist on a table before writing a query |
+| `build_query` | Build a validated GraphQL query with field checks, WHERE filters, and suggestions |
+| `query_optimizer` | Rewrite a query to use preferred `*_metadata` tables |
+| `graphql_query` | Execute a raw GraphQL query against the Art Blocks Hasura endpoint |
+| `graphql_introspection` | Full GraphQL schema introspection |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -458,9 +510,14 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="resources">Resources</h2>
 <p>Resources provide background context that agents can read automatically to understand the Art Blocks platform.</p>
+<retype-table copy-text="| Resource URI | Name | Description |
+|-------------|------|-------------|
+| `artblocks://about` | About Art Blocks | Platform overview, vocabulary (projects, tokens, invocations, hashes), verticals, supported chains, tags, and a guide to which tool handles what. Agents should read this first. |
+| `artblocks://generator-spec` | Generator Specification | Authoritative reference for building Art Blocks projects: `tokenData` structure, hash-based PRNG, FLEX dependency types, PostParams, HTML structure, `window.$features`, and a step-by-step script conversion guide. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -484,8 +541,14 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="supported-chains">Supported Chains</h2>
+<retype-table copy-text="| Chain | Chain ID | Notes |
+|-------|----------|-------|
+| Ethereum | `1` | Primary chain. Most historical projects live here. |
+| Arbitrum One | `42161` | L2 with lower gas fees. Active for newer releases. |
+| Base | `8453` | L2 chain. Growing catalog. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -514,6 +577,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>All discovery, metadata, and minting tools support filtering by chain. The default is Ethereum (<code translate="no" v-pre>1</code>) when no chain is specified.</p>
 <hr>
 <h2 id="example-conversations">Example Conversations</h2>

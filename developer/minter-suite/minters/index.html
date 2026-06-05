@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Minters</title>
@@ -41,11 +41,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -207,6 +207,21 @@
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Complete catalog of Art Blocks minter types with configuration parameters.</div>
 <p>A complete reference of all available minter types in the Art Blocks Shared Minter Suite.</p>
 <h2 id="quick-reference">Quick Reference</h2>
+<retype-table copy-text="| Minter | Use Case | Price Discovery | Bot Resistance |
+|--------|----------|-----------------|----------------|
+| Set Price – ETH | Simple fixed-price sale | None | Low |
+| Set Price – Allowlist | Fixed price, curated audience | None | High (allowlisted only) |
+| Set Price – Token Holder | Fixed price, holder-gated | None | Medium |
+| Set Price – ERC20 | Custom token payment | None | Low |
+| Dutch Auction (w/ Settlement) | Fair price discovery, equalized price | High | High |
+| Dutch Auction (exponential) | Price discovery, variable final price | Medium | Medium |
+| Dutch Auction (linear) | Price discovery, variable final price | Medium | Medium |
+| Dutch Auction + Token Holder | Holder-gated dutch auction | Medium | High |
+| Ranked Auction (RAM) | Bid-based, all pay lowest winning bid | High | High |
+| Serial English Auction (SEA) | Sequential per-token auctions | High | High |
+| Minimum Price | Near-free distribution with small fee | None | Low |
+| Minimum Price – Allowlist | Near-free, allowlisted | None | High |
+| Polyptych | Identical-hash multi-piece sets | N/A | N/A |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -299,6 +314,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="set-price-minters">Set Price Minters</h2>
 <h3 id="set-price--eth"><code translate="no" v-pre>Set Price – ETH</code></h3>

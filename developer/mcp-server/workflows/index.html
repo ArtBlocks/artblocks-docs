@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Workflows</title>
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.5.3.831403976744" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.833988068846" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -215,6 +215,11 @@
 <pre translate="no" class="language-none"><code v-pre class="language-none">&quot;What Art Blocks projects are minting right now?&quot;</code></pre>
 </doc-codeblock></div>
 <p><code translate="no" v-pre>discover_live_mints</code> returns active projects with pricing, supply, and minter type:</p>
+<retype-table copy-text="| Project | Artist | Price | Remaining |
+|---|---|---|---|
+| Logoria | Srđan Šarović, Una Popović | 0.018 ETH | 129/144 |
+| pool party | BASEMENT x Ryley-O | 0.05 ETH | 759/777 |
+| Signal Boards | Stina Jones | 0.015 ETH | 210/500 |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -247,6 +252,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>Each result includes <code translate="no" v-pre>lowestListing</code> (secondary floor), so an agent can compare mint price vs. floor before recommending a purchase.</p>
 <h3 id="evaluate">Evaluate</h3>
 <div id="evaluate-code-1" class="codeblock-wrapper"><doc-codeblock>

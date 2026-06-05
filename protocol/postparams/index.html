@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>PostParams</title>
@@ -47,12 +47,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.831403976744" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.833988068846" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -304,6 +304,15 @@ const palette =
   hashBasedPalette;</code></pre>
 </doc-codeblock></div>
 <h2 id="supported-parameter-types">Supported Parameter Types</h2>
+<retype-table copy-text="| Type      | Description                         | Example Value         |
+| --------- | ----------------------------------- | --------------------- |
+| Enum      | Selection from predefined options   | `&quot;Midnight Citrus&quot;`   |
+| Boolean   | True or false                       | `&quot;true&quot;` or `&quot;false&quot;` |
+| Integer   | Whole number within range           | `&quot;42&quot;`                |
+| Decimal   | Floating-point number within range  | `&quot;3.14&quot;`              |
+| Color     | Hex color value                     | `&quot;#ff5733&quot;`           |
+| Timestamp | Unix timestamp (seconds since 1970) | `&quot;1703257200&quot;`        |
+| String    | Free-form text                      | `&quot;My Token Name&quot;`     |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -352,6 +361,7 @@ const palette =
 </tbody>
 </table>
 </div>
+</retype-table>
 <h2 id="authorization-methods">Authorization Methods</h2>
 <p>Artists configure who can modify each parameter:</p>
 <ul>
@@ -368,6 +378,16 @@ const palette =
 <p>PostParams support augmentation hooks that inject live on-chain data into your project script. The Creator Dashboard provides configuration for both standard and custom hooks.</p>
 <h3 id="standard-hooks">Standard Hooks</h3>
 <p>The following standard augmentation hooks are available (this list is regularly updated):</p>
+<retype-table copy-text="| Hook                                         | Description                                               |
+| -------------------------------------------- | --------------------------------------------------------- |
+| `InjectTokenOwner`                           | Injects the current token owner's address                 |
+| `InjectBlockHeight`                          | Injects the current block height                          |
+| `InjectBaseGasFee`                           | Injects the current base gas fee                          |
+| `InjectIsProjectFullyMinted`                 | Injects whether the project is fully minted               |
+| `InjectTokenHashSeed`                        | Injects the token's hash seed                             |
+| `InjectTokenOwnerEthBalance`                 | Injects the token owner's ETH balance                     |
+| `InjectBlockHeightAndArtistProjectOverrides` | Injects block height with artist project override support |
+| `InjectBlockTimestamp`                       | Injects the current block timestamp                       |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -412,6 +432,7 @@ const palette =
 </tbody>
 </table>
 </div>
+</retype-table>
 <h3 id="custom-hooks">Custom Hooks</h3>
 <p>Both read augmentation hooks and post-config hooks support assigning custom hook contracts. This enables injecting any live on-chain data into your project script.</p>
 <p>The Art Blocks team has published example hook contracts in the <a href="https://github.com/ArtBlocks/artblocks-contracts/tree/main/packages/contracts/contracts/web3call/augment-hooks" class="outbound" target="_blank"><span>Art Blocks Contracts GitHub repository</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. Examples include:</p>

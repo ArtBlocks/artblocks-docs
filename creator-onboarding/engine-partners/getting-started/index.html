@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Getting Started as an Engine Partner</title>
@@ -41,11 +41,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -237,6 +237,15 @@
     <span>Timeline: 1–2 days</span>
 </span></p>
 <p>To deploy your contract, provide the Art Blocks team with:</p>
+<retype-table copy-text="| Field | Notes |
+|---|---|
+| **Admin wallet address** | The Ethereum wallet you'll use to manage your Engine contracts |
+| **Token name** | Name for tokens from your contract (e.g., &quot;Art Blocks&quot; for AB tokens) |
+| **Token symbol** | Ticker symbol (e.g., &quot;BLOCKS&quot;) |
+| **Deployment type** | V3 Engine or V3 Engine Flex |
+| **Minter types** | Which minters you need (Set Price ETH, Dutch Auction, Allowlist, etc.) |
+| **Starting project ID** | Typically `0` |
+| **autoApproveArtistSplitProposals** | `true`: artist royalty changes are auto-approved. `false`: admin must approve each change. Cannot be changed after deployment. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -277,6 +286,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -378,6 +388,11 @@
 <hr>
 <h2 id="project-activation-and-launch-state">Project Activation and Launch State</h2>
 <p>Project visibility is controlled by two flags:</p>
+<retype-table copy-text="| State | Visibility | Purchasable By |
+|---|---|---|
+| `inactive + paused` (default) | Not visible publicly | No one |
+| `active + paused` | Publicly visible | Artist wallet only |
+| `active + unpaused` | Open to purchase | Anyone |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -406,6 +421,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p><strong>Activation</strong> is typically done by the contract admin. <strong>Unpausing</strong> is done by the artist. For Dutch Auctions, the auction opens automatically at the configured start time once unpaused.</p>
 <hr>
 <h2 id="key-resources">Key Resources</h2>

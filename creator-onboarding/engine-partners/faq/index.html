@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Engine Partner FAQ</title>
@@ -41,11 +41,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -222,6 +222,11 @@ The contract admin calls <code translate="no" v-pre>addProject</code> on your En
 <p><strong>When does a project lock?</strong>
 Project scripts lock permanently when the admin or artist triggers the lock. Once locked, the script cannot be changed. On V3 contracts, the project size (max invocations) cannot be increased after any tokens are minted.</p>
 <p><strong>What is the difference between <code translate="no" v-pre>paused</code> and <code translate="no" v-pre>active</code>?</strong></p>
+<retype-table copy-text="| State | Visible Publicly | Purchasable |
+|---|---|---|
+| Inactive + paused (default) | No | No |
+| Active + paused | Yes | Artist wallet only |
+| Active + unpaused | Yes | Anyone |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -250,6 +255,7 @@ Project scripts lock permanently when the admin or artist triggers the lock. Onc
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>Activation is done by the contract admin. Unpausing is done by the artist.</p>
 <p><strong>How long does it take for a newly created project to appear on the Art Blocks indexer?</strong>
 The Art Blocks subgraph and API typically index new projects within a few minutes of contract activity. If your project isn&#x27;t appearing after 10–15 minutes, contact Art Blocks support.</p>

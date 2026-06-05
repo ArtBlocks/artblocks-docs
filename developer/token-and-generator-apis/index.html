@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Token &amp; Generator APIs</title>
@@ -41,11 +41,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -200,6 +200,11 @@
 <p>Art Blocks hosts three production APIs for integrating with token metadata, live artwork views, and static rendered images. All APIs follow a multichain URL pattern and are available on production and staging (Sepolia testnet) environments.</p>
 <hr>
 <h2 id="supported-networks">Supported Networks</h2>
+<retype-table copy-text="| Network      | Chain ID |
+| ------------ | -------- |
+| Ethereum     | `1`      |
+| Arbitrum One | `42161`  |
+| Base         | `8453`   |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -224,10 +229,14 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="token-api">Token API</h2>
 <p>Returns the ERC-721 token metadata for a given Art Blocks token, conforming to the OpenSea metadata standard.</p>
 <p><strong>Production</strong></p>
+<retype-table copy-text="| Pattern | Example |
+| ------- | ------- |
+| `https://token.artblocks.io/{chainID}/{contractAddress}/{tokenID}` | [https://token.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000](https://token.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -244,7 +253,11 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p><strong>Staging (Sepolia testnet)</strong></p>
+<retype-table copy-text="| Pattern |
+| ------- |
+| `https://token.staging.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -259,11 +272,15 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>The token metadata response includes the live view URL and media proxy URL for the token, so integrators can retrieve all necessary links from a single API call.</p>
 <hr>
 <h2 id="generator-api">Generator API</h2>
 <p>Returns an iframe-able live view of the generative artwork associated with a given token. The live view runs the artist&#x27;s script in the browser using the token&#x27;s hash.</p>
 <p><strong>Production</strong></p>
+<retype-table copy-text="| Pattern | Example |
+| ------- | ------- |
+| `https://generator.artblocks.io/{chainID}/{contractAddress}/{tokenID}` | [https://generator.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000](https://generator.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -280,7 +297,11 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p><strong>Staging (Sepolia testnet)</strong></p>
+<retype-table copy-text="| Pattern |
+| ------- |
+| `https://generator.staging.artblocks.io/{chainID}/{contractAddress}/{tokenID}` |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -295,11 +316,15 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>The generator URL is also included in the token metadata response from the Token API.</p>
 <hr>
 <h2 id="media-proxy-api">Media Proxy API</h2>
 <p>Returns a static rendered image (PNG) of the token&#x27;s artwork, captured by a headless browser. This is the canonical static image used on Art Blocks and marketplaces.</p>
 <p><strong>Production</strong></p>
+<retype-table copy-text="| Pattern | Example |
+| ------- | ------- |
+| `https://media-proxy.artblocks.io/{chainID}/{contractAddress}/{tokenID}.png` | [https://media-proxy.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000.png](https://media-proxy.artblocks.io/1/0x99a9b7c1116f9ceeb1652de04d5969cce509b069/385000000.png) |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -316,7 +341,11 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p><strong>Staging (Sepolia testnet)</strong></p>
+<retype-table copy-text="| Pattern |
+| ------- |
+| `https://media-proxy.staging.artblocks.io/{chainID}/{contractAddress}/{tokenID}.png` |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -331,6 +360,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="art-blocks-subgraph">Art Blocks Subgraph</h2>
 <p>Art Blocks maintains subgraphs on <a href="https://thegraph.com/" class="outbound" target="_blank"><span>The Graph Network</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> for each supported production network. Subgraphs provide efficient access to on-chain data (token ownership, project metadata, minting history) without querying the blockchain directly.</p>
@@ -360,6 +390,10 @@
 <hr>
 <h2 id="graphql-api-hasura">GraphQL API (Hasura)</h2>
 <p>For most integrations, the Art Blocks GraphQL API (Hasura) is the recommended data source. It provides both on-chain and off-chain data — including minter configuration details, media URLs, project descriptions, and more — that are not available from the subgraph alone.</p>
+<retype-table copy-text="| Environment               | URL                                                |
+| ------------------------- | -------------------------------------------------- |
+| Production                | `https://data.artblocks.io/v1/graphql`             |
+| Staging (Sepolia testnet) | `https://ab-staging-sepolia.hasura.app/v1/graphql` |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -380,6 +414,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>The API uses <code translate="no" v-pre>_metadata</code> table suffixes (e.g. <code translate="no" v-pre>projects_metadata</code>, <code translate="no" v-pre>tokens_metadata</code>) and supports filtering by <code translate="no" v-pre>chain_id</code>. An interactive playground is available at:</p>
 <p><a href="https://cloud.hasura.io/public/graphiql?endpoint=https://data.artblocks.io/v1/graphql" class="outbound" target="_blank"><span>https://cloud.hasura.io/public/graphiql?endpoint=https://data.artblocks.io/v1/graphql</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <p>For full schema reference and example queries, see the <a href="../graphql/">GraphQL Reference</a>.</p>

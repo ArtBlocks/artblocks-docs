@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>NFT Metadata Storage at Art Blocks</title>
@@ -47,12 +47,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script id="mermaid-js" data-cfasync="false" src="../../resources/js/mermaid.js?v=4.5.3" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script id="mermaid-js" data-cfasync="false" src="../../resources/js/mermaid.js?v=4.6.0" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -230,6 +230,13 @@
     Flex-Dependencies }|--|{ ArtBlocks-Dependency-Registry: may-include-assets-on</pre></div>
 <h2 id="overview-of-nft-metadata-storage-options">Overview of NFT Metadata Storage Options</h2>
 <p>While all NFTs track token ownership on a blockchain, the metadata for the NFT (image or audio information, artist information, etc.) may be stored in a variety of ways. Common options include:</p>
+<retype-table copy-text="| Storage Type                                                    | Immutable | Decentralized | Guaranteed to Persist Forever [^1] | Cost   |
+| --------------------------------------------------------------- | --------- | ------------- | ---------------------------------- | ------ |
+| [Servers/Hosting](#servershosting)                              | No        | No            | No                                 | Low    |
+| [Hash On-Chain](#hash-on-chain)                                 | Yes       | No            | No                                 | Low    |
+| [Decentralized Storage Network](#decentralized-storage-network) | Yes       | Yes           | No [^2]                            | Medium |
+| [Fully On-Chain](#fully-on-chain)                               | Yes       | Yes           | Yes                                | High   |
+| [Software Registry](#software-registries)                       | ~Yes [^3] | ~Yes          | No, Very Low Risk                  | Low    |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -280,6 +287,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <h3 id="servershosting">Servers/Hosting</h3>
 <p>The metadata are stored on a server or cloud hosting service, such as AWS. This is a convenient and cheap option, but it has a few drawbacks:</p>
 <ul>

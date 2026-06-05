@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831403976744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.833988068846">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Advanced GraphQL</title>
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.5.3.831403976744" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.833988068846" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.831403976744" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.5.3.831403976744" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.833988068846" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.833988068846" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -209,6 +209,14 @@
 <p>The MCP server includes 6 GraphQL tools for direct access to the Art Blocks Hasura API. Most users will never need these — the <a href="../capabilities/">domain-specific tools</a> cover common use cases. Use GraphQL for custom aggregations, sales history, cross-table joins, or any query not handled by the higher-level tools.</p>
 <hr>
 <h2 id="tools">Tools</h2>
+<retype-table copy-text="| Tool | Purpose |
+|------|---------|
+| `explore_table` | Inspect a table's fields, types, and relationships. Returns a curated shortlist for well-known tables (`projects_metadata`, `tokens_metadata`) or the full schema dump. |
+| `validate_fields` | Check whether specific fields exist on a table before writing a query. Faster than full introspection. |
+| `build_query` | Build a validated GraphQL query with field validation, WHERE filters, and suggestions. The safest way to start. |
+| `query_optimizer` | Rewrite a query to use preferred `*_metadata` tables (e.g., `projects_metadata` instead of `projects`). |
+| `graphql_query` | Execute a raw GraphQL query against the Art Blocks Hasura endpoint. Pass `chainId` to make `$chainId` available as a variable. |
+| `graphql_introspection` | Full GraphQL schema introspection. Returns all types, fields, and relationships. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -245,6 +253,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <hr>
 <h2 id="recommended-workflow">Recommended Workflow</h2>
 <div id="recommended-workflow-code-1" class="codeblock-wrapper"><doc-codeblock>
@@ -265,6 +274,11 @@
 <hr>
 <h2 id="key-tables">Key Tables</h2>
 <p>Always use the <code translate="no" v-pre>_metadata</code> table variants — they include richer joined data and are optimized for read access.</p>
+<retype-table copy-text="| Use this | Not this |
+|----------|----------|
+| `projects_metadata` | `projects` |
+| `tokens_metadata` | `tokens` |
+| `contracts_metadata` | `contracts` |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -289,8 +303,16 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p><code translate="no" v-pre>query_optimizer</code> automatically rewrites queries that reference the non-metadata variants.</p>
 <h3 id="projects_metadata--common-fields">projects_metadata — Common Fields</h3>
+<retype-table copy-text="| Category | Fields |
+|----------|--------|
+| **Identity** | `id`, `project_id`, `chain_id`, `contract_address`, `slug`, `name`, `artist_name`, `artist_address`, `description`, `website`, `license` |
+| **Status and Supply** | `active`, `paused`, `complete`, `completed_at`, `locked`, `start_datetime`, `invocations`, `max_invocations` |
+| **Classification** | `vertical_name`, `heritage_curation_status`, `is_artblocks` |
+| **Media** | `aspect_ratio`, `preview_render_type`, `script_type_and_version` |
+| **Market** | `lowest_listing` |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -323,8 +345,16 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>Key relationships: <code translate="no" v-pre>vertical</code>, <code translate="no" v-pre>minter_configuration</code>, <code translate="no" v-pre>featured_token</code>, <code translate="no" v-pre>contract</code>, <code translate="no" v-pre>artist_profiles</code>, <code translate="no" v-pre>tags</code></p>
 <h3 id="tokens_metadata--common-fields">tokens_metadata — Common Fields</h3>
+<retype-table copy-text="| Category | Fields |
+|----------|--------|
+| **Identity** | `id`, `token_id`, `chain_id`, `contract_address`, `project_id`, `invocation`, `hash` |
+| **Ownership** | `owner_address`, `minted_at`, `last_transferred_at` |
+| **Media** | `media_url`, `primary_asset_url`, `preview_asset_url` |
+| **Features** | `features` (JSON object of token traits) |
+| **Listing** | `list_price`, `list_currency_symbol`, `list_platform` |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -357,9 +387,15 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>Key relationships: <code translate="no" v-pre>project</code>, <code translate="no" v-pre>image</code></p>
 <hr>
 <h2 id="chain-ids">Chain IDs</h2>
+<retype-table copy-text="| Chain | ID |
+|-------|----|
+| Ethereum mainnet | `1` (default) |
+| Arbitrum | `42161` |
+| Base | `8453` |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -384,6 +420,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>Pass <code translate="no" v-pre>chainId</code> to <code translate="no" v-pre>graphql_query</code> to make <code translate="no" v-pre>$chainId</code> available as a variable in your query. Always filter by chain when querying multi-chain data to avoid cross-chain noise.</p>
 <hr>
 <h2 id="example-queries">Example Queries</h2>
