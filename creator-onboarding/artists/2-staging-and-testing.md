@@ -94,7 +94,7 @@ This is the core of your project setup.
 1. **Script type & version** — Select your library (p5js, threejs, regl, etc.) and the version. This determines which library CDN the generator will load.
 2. **Upload script** — Upload your `.js` file. The dashboard will show the script content for verification.
 3. **PostParams** (Engine Flex only, optional) — If your project uses [Post-Mint Parameters](/protocol/postparams/), configure the parameters and standard hooks you want to use here. Artists may define on-chain configurable parameters (enums, booleans, colors, etc.) that collectors can adjust after minting.
-4. **Decentralized Storage Assets** (Engine Flex only, optional) — If your project uses IPFS/Arweave external assets, configure them here. See [Decentralized Storage Assets](/creator-onboarding/engine-partners/flex-assets/) for details.
+4. **Decentralized Storage Assets** (Engine Flex only, optional) — If your project uses IPFS/Arweave external assets, configure them here. See [Decentralized Storage Assets](/creator-onboarding/artists/flex-assets/) for details, including concrete CID and gateway URL examples.
 
 !!!info
 Once your project is locked (after final review), the script cannot be modified. Test thoroughly before requesting a lock.

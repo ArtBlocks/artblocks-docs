@@ -67,7 +67,7 @@ Yes. The Art Blocks rendering infrastructure (media proxy, generator API) handle
 There is no hard cap, but performance considerations apply. Fetching many external assets at render time increases load time. Test with your specific configuration.
 
 **How do I update my contract's preferred IPFS or Arweave gateway?**
-Contact the Art Blocks team. Gateway updates are applied at the contract level by Art Blocks.
+Contact the Art Blocks team. Gateway updates are applied at the contract level by Art Blocks, and apply to every project on that contract. For concrete examples of how CIDs and gateway URLs combine into a final asset URL, see [Decentralized Storage Assets](/creator-onboarding/artists/flex-assets/#cids-and-gateways-in-practice).
 
 **Can artists update their royalty configuration after launch?**
 Yes, royalty configuration (artist splits, additional payees) can be updated up until the project is locked. On V3.2+ contracts using 0xSplits, changing splits requires deploying a new splitter contract. Contact Art Blocks if the artist royalty wallet needs to be updated post-launch.
