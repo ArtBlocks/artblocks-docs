@@ -67,7 +67,7 @@ The Flex contract unlocks a range of capabilities beyond the standard Engine con
 - **Arweave** — Permanent decentralized storage. Reference using the Arweave transaction ID.
 - **BytecodeStorage** — On-chain byte array storage. Large assets stored directly on Ethereum.
 
-External dependencies (IPFS, Arweave, BytecodeStorage, Dependency Registry) are accessed via the `tokenData.externalAssetDependencies` array in the artist's script. See the [On-Chain Generator](/protocol/on-chain-generator/) page for how FLEX dependencies are structured.
+External dependencies (IPFS, Arweave, BytecodeStorage, Dependency Registry) are accessed via the `tokenData.externalAssetDependencies` array in the artist's script. See the [On-Chain Generator](/protocol/on-chain-generator/) page for how FLEX dependencies are structured, and see [Decentralized Storage Assets](/creator-onboarding/artists/flex-assets/) for concrete examples of defining CIDs and preferred gateway URLs, plus artist-facing upload walkthroughs for Pinata, Filebase, and Arweave.
 
 ---
 

@@ -99,6 +99,8 @@ let tokenData = {
 | `"ONCHAIN"` | On-chain data. For PostParams, `data` contains a resolved key/value object. For BytecodeStorage, `data` contains the on-chain content string. |
 | `"ART_BLOCKS_DEPENDENCY_REGISTRY"` | A library registered in the Dependency Registry. Injected as a `<script>` tag automatically — `data` is null; no manual fetch required. |
 
+For a practical, artist-facing walkthrough of defining IPFS/Arweave CIDs, configuring preferred gateway URLs, and uploading assets, see [Decentralized Storage Assets](/creator-onboarding/artists/flex-assets/).
+
 ### Module-Based Libraries (Three.js v0.161+)
 
 For module-based dependencies like Three.js v0.167.0, the generator injects an import map instead of a script tag, and wraps the art script in `<script type="module">`:
