@@ -38,6 +38,7 @@ Launching a project on Art Blocks Studio?
 
 - [What Art Blocks offers](/creator-onboarding/offerings/) — Studio, how to apply, and contact info
 - [Building your project](/creator-onboarding/artists/1-building-your-project/) — tokenData, PRNG, `window.$features`, MCP scaffold
+- [Decentralized storage assets](/creator-onboarding/artists/flex-assets/) — IPFS and Arweave CIDs and gateway URLs for Engine Flex, with concrete examples
 - [Staging & testing](/creator-onboarding/artists/2-staging-and-testing/) — Creator Dashboard walkthrough on Sepolia
 - [Mainnet launch](/creator-onboarding/artists/3-mainnet-launch/) — Import, publish, and open minting
 - [Minter guide](/creator-onboarding/artists/minters/) — Dutch auctions, RAM, allowlists, and more
@@ -49,7 +50,7 @@ Launching your own generative art platform with Art Blocks Engine?
 
 - [What is Art Blocks Engine?](/creator-onboarding/engine-partners/what-is-engine/)
 - [Getting started](/creator-onboarding/engine-partners/getting-started/) — Onboarding steps from initial outreach to mainnet
-- [Decentralized storage assets](/creator-onboarding/engine-partners/flex-assets/) — IPFS and Arweave setup for Engine Flex
+- [Engine Partner FAQ](/creator-onboarding/engine-partners/faq/) — includes IPFS/Arweave preferred gateway configuration
 
 ===
 
