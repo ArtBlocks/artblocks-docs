@@ -83,7 +83,7 @@ Optionally limit the number of mints per allowlisted address.
 **Tip:** The [Art Blocks MCP Server](/developer/mcp-server/quick-start/) can help you collect wallet addresses when crafting an allowlist, for example by pulling all holder addresses from one of your previous collections. Connect it to your AI agent and ask it to gather the addresses you need.
 
 !!!warning
-Pause the project before updating an allowlist, then unpause once the update is complete. Updating an allowlist while minting is open will not take effect.
+Pause the project before updating an allowlist, then unpause once the update is complete.
 !!!
 
 **When to use:** Rewarding early supporters, private sales, token-holder gating, community-exclusive drops.
