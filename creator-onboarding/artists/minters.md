@@ -81,8 +81,15 @@ Optionally limit the number of mints per allowlisted address.
 
 **How to create an allowlist:**
 1. Collect wallet addresses of eligible collectors
-2. In the Creator Dashboard, upload your list
-3. The dashboard generates a Merkle root and configures the minter automatically
+2. Format them as a CSV file, with one wallet address per line
+3. In the Creator Dashboard, upload your CSV
+4. The dashboard generates a Merkle root and configures the minter automatically
+
+**Tip:** The [Art Blocks MCP Server](/developer/mcp-server/quick-start/) can help you collect wallet addresses when crafting an allowlist, for example by pulling all holder addresses from one of your previous collections. Connect it to your AI agent and ask it to gather the addresses you need.
+
+!!!warning
+Pause the project before updating an allowlist, then unpause once the update is complete. Updating an allowlist while minting is open will not take effect.
+!!!
 
 **When to use:** Rewarding early supporters, private sales, token-holder gating, community-exclusive drops.
 
@@ -118,6 +125,10 @@ You can use different minters for different phases. For example:
 2. **Phase 2**: Dutch Auction with Settlement starting at 0.5 ETH for the remaining tokens
 
 Configure phases by setting per-minter max invocations and switching minters at the appropriate time.
+
+!!!warning
+Switching minters between phases is a manual action. It does not happen automatically when a phase's time window ends. Pause the project before switching to the next minter, configure it, then unpause.
+!!!
 
 ---
 

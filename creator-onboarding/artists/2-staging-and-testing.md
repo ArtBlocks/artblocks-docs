@@ -101,6 +101,10 @@ This is the core of your project setup.
 3. **PostParams** (Engine Flex only, optional) — If your project uses [Post-Mint Parameters](/protocol/postparams/), configure the parameters and standard hooks you want to use here. Artists may define on-chain configurable parameters (enums, booleans, colors, etc.) that collectors can adjust after minting.
 4. **Decentralized Storage Assets** (Engine Flex only, optional) — If your project uses IPFS/Arweave external assets, configure them here. See [Decentralized Storage Assets](/creator-onboarding/artists/flex-assets/) for details, including concrete CID and gateway URL examples.
 
+!!!warning
+Script Type and Version must be submitted as an on-chain transaction, not just selected in the dashboard. Until that transaction confirms, your outputs will not render.
+!!!
+
 !!!info
 Once your project is locked (after final review), the script cannot be modified. Test thoroughly before requesting a lock.
 !!!
