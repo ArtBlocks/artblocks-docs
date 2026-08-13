@@ -80,6 +80,22 @@ The Creator Dashboard preview can render slightly differently than the live coll
 
 ---
 
+## Artist Profile
+
+**How do I update my artist name, profile picture, bio, or links?**
+Sign into the [Creator Dashboard](https://create.artblocks.io/) with your artist wallet and click **Artists** in the top navigation. This opens an editor for your Display Name, Bio, Twitter/X, Instagram, Website URL, and Profile Picture, separate from any individual project's Details. Changes apply across the whole site, including past projects where you're listed as the creator.
+
+**Can I change my artist page's URL slug myself?**
+No. The slug isn't editable from the Creator Dashboard. Contact Art Blocks in `#artist-tech` or `#help` to request a slug change.
+
+**I updated my profile but the changes aren't showing on the site yet.**
+Profile updates can take a few minutes to propagate across the site due to caching. If it's been longer than that, contact Art Blocks in `#artist-tech` or `#help`.
+
+**I'm the credited artist on a project, but I can't edit the artist profile. Why?**
+This usually happens on collaboration or partner releases where the on-chain creator wallet isn't the one registered to you. Contact Art Blocks in `#artist-tech` or `#help` with your details and the team can update the profile manually.
+
+---
+
 ## Staging and Testing
 
 **How do I get Sepolia testnet ETH?**
