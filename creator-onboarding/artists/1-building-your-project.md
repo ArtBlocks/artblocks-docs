@@ -187,6 +187,8 @@ Static images are rendered for all projects (used as thumbnails, on OpenSea, etc
 
 To closely replicate this environment while developing, use Chrome and turn **off** "Use Hardware Acceleration" in Settings.
 
+Thumbnail images are either created using the static delay timer or with the `renderPreview` feature. To use `renderPreview`, add `window.$useRenderPreview = true;` to the script outside of any functions, and add `window.$renderPreview();` when the thumbnail should be taken.
+
 ---
 
 ## Local Development
