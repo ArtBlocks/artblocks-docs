@@ -182,6 +182,35 @@ Static images are rendered for all projects (used as thumbnails, on OpenSea, etc
 
 To closely replicate this environment while developing, use Chrome and turn **off** "Use Hardware Acceleration" in Settings.
 
+### Thumbnail Capture with `renderPreview`
+
+Thumbnail images can be captured in two ways:
+
+1. **Render Delay** — the renderer waits a fixed number of seconds (configured in the dashboard Renders settings) and then captures the current frame
+2. **`renderPreview`** — your script tells the renderer exactly when to capture, which is useful for animations, multi-step composition, or any piece whose intended thumbnail is not the first settled frame
+
+To use `renderPreview`, set `window.$useRenderPreview = true` at the top level of the script (outside of any functions), then call `window.$renderPreview()` at the moment the thumbnail should be taken:
+
+```javascript
+// Enable explicit thumbnail capture — must be set at the top level
+window.$useRenderPreview = true;
+
+function draw() {
+  background(0);
+  // ... your drawing / animation logic ...
+
+  // Call once when the frame you want as the thumbnail is on screen
+  if (frameCount === 120) {
+    window.$renderPreview();
+  }
+}
+```
+
+**Rules:**
+- `window.$useRenderPreview = true` must be assigned at the top level, not inside `setup()` / `draw()` / other functions
+- Call `window.$renderPreview()` once, when the intended thumbnail frame is visible
+- If `$useRenderPreview` is not set, the renderer falls back to the Render Delay timer
+
 ---
 
 ## Local Development
@@ -249,7 +278,8 @@ If you have an existing p5.js or vanilla JS sketch that you want to convert to A
 3. **Remove canvas creation code** — for p5.js, remove `createCanvas()` calls or use `windowWidth`/`windowHeight`; for vanilla JS, select the existing `<canvas>` instead of creating one
 4. **Make dimensions relative** — replace hardcoded pixel values with percentages of `width`/`height`
 5. **Add `window.$features`** — compute and assign your token traits synchronously
-6. **Verify determinism** — reload the same `?hash=` URL multiple times and confirm identical output
+6. **Add `window.$renderPreview` if needed** — for animated or multi-step pieces, set `window.$useRenderPreview = true` at the top level and call `window.$renderPreview()` when the thumbnail frame is ready; otherwise rely on Render Delay
+7. **Verify determinism** — reload the same `?hash=` URL multiple times and confirm identical output
 
 For a full step-by-step conversion walkthrough, use the MCP's `scaffold_artblocks_project` tool or read the [Generator Specification](artblocks://generator-spec) resource available via the MCP server.
 
@@ -265,6 +295,7 @@ Before submitting for review:
 - [ ] No hardcoded pixel dimensions — scales at all viewport sizes
 - [ ] No use of `Math.random()` or `Date.now()` for randomness
 - [ ] `window.$features` is assigned synchronously with correct values
+- [ ] Thumbnails look correct — either Render Delay is long enough, or `window.$useRenderPreview` is set at the top level and `$renderPreview()` is called at the right moment
 - [ ] Script is a single file with a single dependency (or no dependency)
 - [ ] No CDN `<script>` tags in the script
 - [ ] Tested across at least 20–40 different hashes

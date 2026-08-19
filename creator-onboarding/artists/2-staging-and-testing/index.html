@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.839958925276">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.840482262986">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -41,11 +41,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.839958925276" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.840482262986" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.839958925276" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.840482262986" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.839958925276" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.840482262986" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -389,7 +389,7 @@
 <retype-table copy-text="| Setting | Notes |
 |---|---|
 | **Aspect Ratio** | Width:height ratio of your artwork (e.g. `1` for square, `1.5` for landscape). Used for canvas sizing and thumbnail display. |
-| **Render Delay** | Seconds the renderer waits before capturing the static image. Set this long enough for any animations to complete their initial state (e.g. `0` for immediately deterministic art, `5` for animated pieces). |
+| **Render Delay** | Seconds the renderer waits before capturing the static image. Set this long enough for any animations to complete their initial state (e.g. `0` for immediately deterministic art, `5` for animated pieces). Ignored when your script uses `renderPreview` (see below). |
 | **Canvas Mode** | Enable if your script uses a `&lt;canvas&gt;` element directly (most p5.js and vanilla JS projects). Required for static capture to work correctly. |
 | **MP4 Settings** | Optional. Configure if you want animated MP4 thumbnails generated for your project. |">
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -407,7 +407,7 @@
 </tr>
 <tr>
 <td><strong>Render Delay</strong></td>
-<td>Seconds the renderer waits before capturing the static image. Set this long enough for any animations to complete their initial state (e.g. <code translate="no" v-pre>0</code> for immediately deterministic art, <code translate="no" v-pre>5</code> for animated pieces).</td>
+<td>Seconds the renderer waits before capturing the static image. Set this long enough for any animations to complete their initial state (e.g. <code translate="no" v-pre>0</code> for immediately deterministic art, <code translate="no" v-pre>5</code> for animated pieces). Ignored when your script uses <code translate="no" v-pre>renderPreview</code> (see below).</td>
 </tr>
 <tr>
 <td><strong>Canvas Mode</strong></td>
@@ -421,6 +421,7 @@
 </table>
 </div>
 </retype-table>
+<p>Thumbnails are captured either by the <strong>Render Delay</strong> timer or by an explicit <code translate="no" v-pre>renderPreview</code> call in your script. If the intended still is a specific frame (for example after an animation settles, or after a multi-step composition finishes), set <code translate="no" v-pre>window.$useRenderPreview = true</code> at the top level of your script and call <code translate="no" v-pre>window.$renderPreview()</code> at that moment. See <a href="../1-building-your-project/#thumbnail-capture-with-renderpreview">Thumbnail Capture with <code translate="no" v-pre>renderPreview</code></a> for a code example.</p>
 <hr>
 <h2 id="step-5-payments">Step 5: Payments</h2>
 <p>Configure how primary and secondary revenues are split.</p>
@@ -481,7 +482,7 @@
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> Trait distribution is what you expect (check <code translate="no" v-pre>window.$features</code> values)</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> No hash produces a broken or undesirable output</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> Artwork looks correct at different viewport sizes</li>
-<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Render delay is long enough for animated pieces to settle</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Static thumbnails show the intended frame — not a blank or mid-render still. If you rely on the timer, Render Delay is long enough for the piece to settle; if you use <code translate="no" v-pre>renderPreview</code>, <code translate="no" v-pre>$renderPreview()</code> is called when that frame is on screen</li>
 </ul>
 <hr>
 <h2 id="step-8-submit-for-review">Step 8: Submit for Review</h2>
@@ -502,7 +503,7 @@
 |---|---|
 | Script renders correctly locally but not in dashboard preview | Remove any CDN `&lt;script&gt;` tags from your script; check for DOM setup code that creates elements the generator already provides |
 | Different outputs on reload with same hash | Remove `Math.random()` and `Date.now()` — seed all randomness from `tokenData.hash` |
-| Static capture shows blank or mid-animation frame | Increase render delay in Renders settings |">
+| Static capture shows blank or mid-animation frame | Increase Render Delay in Renders settings, or use `renderPreview` so the script captures the intended frame |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -522,7 +523,7 @@
 </tr>
 <tr>
 <td>Static capture shows blank or mid-animation frame</td>
-<td>Increase render delay in Renders settings</td>
+<td>Increase Render Delay in Renders settings, or use <code translate="no" v-pre>renderPreview</code> so the script captures the intended frame</td>
 </tr>
 </tbody>
 </table>

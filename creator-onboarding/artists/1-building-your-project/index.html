@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.839958925276">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.840482262986">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -15,7 +15,7 @@
     <!-- Primary Meta Tags -->
     <title>1. Building Your Project</title>
     <meta name="title" content="1. Building Your Project">
-    <meta name="description" content="Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, and conversion guide.">
+    <meta name="description" content="Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.artblocks.io/creator-onboarding/artists/1-building-your-project/">
@@ -25,7 +25,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.artblocks.io/creator-onboarding/artists/1-building-your-project/">
     <meta property="og:title" content="1. Building Your Project">
-    <meta property="og:description" content="Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, and conversion guide.">
+    <meta property="og:description" content="Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.">
     <meta property="og:site_name" content="Art Blocks">
     <meta property="og:locale" content="en_US">
 
@@ -33,7 +33,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.artblocks.io/creator-onboarding/artists/1-building-your-project/">
     <meta name="twitter:title" content="1. Building Your Project">
-    <meta name="twitter:description" content="Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, and conversion guide.">
+    <meta name="twitter:description" content="Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://docs.artblocks.io/creator-onboarding/artists/1-building-your-project.md">
@@ -41,12 +41,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.839958925276" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.840482262986" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.839958925276" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.840482262986" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.839958925276" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.839958925276" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.840482262986" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.840482262986" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -205,7 +205,7 @@
 
                 <!-- Page content  -->
 <h1 id="1-building-your-project">1. Building Your Project</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, and conversion guide.</div>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.</div>
 <p>This page covers the technical requirements for building a generative art script for Art Blocks. Your script will be stored on-chain and run in the Art Blocks Generator — a browser-based environment that injects <code translate="no" v-pre>tokenData</code> and loads your dependency library.</p>
 <hr>
 <h2 id="quick-start-mcp-scaffold">Quick Start: MCP Scaffold</h2>
@@ -389,6 +389,33 @@ resize();</code></pre>
 <h2 id="rendering-environment">Rendering Environment</h2>
 <p>Static images are rendered for all projects (used as thumbnails, on OpenSea, etc.). Art Blocks uses compute instances running headless Chromium with <a href="https://github.com/puppeteer/puppeteer" class="outbound" target="_blank"><span>Puppeteer</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. Headless Chromium requires the use of <a href="https://swiftshader.googlesource.com/SwiftShader/+/HEAD/docs/Index.md" class="outbound" target="_blank"><span>SwiftShader</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, a CPU implementation of the GPU API. This means GPU-intensive projects will render slower and may require optimization.</p>
 <p>To closely replicate this environment while developing, use Chrome and turn <strong>off</strong> &quot;Use Hardware Acceleration&quot; in Settings.</p>
+<h3 id="thumbnail-capture-with-renderpreview">Thumbnail Capture with <code translate="no" v-pre>renderPreview</code></h3>
+<p>Thumbnail images can be captured in two ways:</p>
+<ol>
+<li><strong>Render Delay</strong> — the renderer waits a fixed number of seconds (configured in the dashboard Renders settings) and then captures the current frame</li>
+<li><strong><code translate="no" v-pre>renderPreview</code></strong> — your script tells the renderer exactly when to capture, which is useful for animations, multi-step composition, or any piece whose intended thumbnail is not the first settled frame</li>
+</ol>
+<p>To use <code translate="no" v-pre>renderPreview</code>, set <code translate="no" v-pre>window.$useRenderPreview = true</code> at the top level of the script (outside of any functions), then call <code translate="no" v-pre>window.$renderPreview()</code> at the moment the thumbnail should be taken:</p>
+<div id="thumbnail-capture-with-renderpreview-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-javascript"><code v-pre class="language-javascript">// Enable explicit thumbnail capture — must be set at the top level
+window.$useRenderPreview = true;
+
+function draw() {
+  background(0);
+  // ... your drawing / animation logic ...
+
+  // Call once when the frame you want as the thumbnail is on screen
+  if (frameCount === 120) {
+    window.$renderPreview();
+  }
+}</code></pre>
+</doc-codeblock></div>
+<p><strong>Rules:</strong></p>
+<ul>
+<li><code translate="no" v-pre>window.$useRenderPreview = true</code> must be assigned at the top level, not inside <code translate="no" v-pre>setup()</code> / <code translate="no" v-pre>draw()</code> / other functions</li>
+<li>Call <code translate="no" v-pre>window.$renderPreview()</code> once, when the intended thumbnail frame is visible</li>
+<li>If <code translate="no" v-pre>$useRenderPreview</code> is not set, the renderer falls back to the Render Delay timer</li>
+</ul>
 <hr>
 <h2 id="local-development">Local Development</h2>
 <p>Set up a local <code translate="no" v-pre>index.html</code> that mirrors the generator environment:</p>
@@ -441,6 +468,7 @@ resize();</code></pre>
 <li><strong>Remove canvas creation code</strong> — for p5.js, remove <code translate="no" v-pre>createCanvas()</code> calls or use <code translate="no" v-pre>windowWidth</code>/<code translate="no" v-pre>windowHeight</code>; for vanilla JS, select the existing <code translate="no" v-pre>&lt;canvas&gt;</code> instead of creating one</li>
 <li><strong>Make dimensions relative</strong> — replace hardcoded pixel values with percentages of <code translate="no" v-pre>width</code>/<code translate="no" v-pre>height</code></li>
 <li><strong>Add <code translate="no" v-pre>window.$features</code></strong> — compute and assign your token traits synchronously</li>
+<li><strong>Add <code translate="no" v-pre>window.$renderPreview</code> if needed</strong> — for animated or multi-step pieces, set <code translate="no" v-pre>window.$useRenderPreview = true</code> at the top level and call <code translate="no" v-pre>window.$renderPreview()</code> when the thumbnail frame is ready; otherwise rely on Render Delay</li>
 <li><strong>Verify determinism</strong> — reload the same <code translate="no" v-pre>?hash=</code> URL multiple times and confirm identical output</li>
 </ol>
 <p>For a full step-by-step conversion walkthrough, use the MCP&#x27;s <code translate="no" v-pre>scaffold_artblocks_project</code> tool or read the <a href="artblocks://generator-spec" class="outbound" target="_blank"><span>Generator Specification</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> resource available via the MCP server.</p>
@@ -454,6 +482,7 @@ resize();</code></pre>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> No hardcoded pixel dimensions — scales at all viewport sizes</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> No use of <code translate="no" v-pre>Math.random()</code> or <code translate="no" v-pre>Date.now()</code> for randomness</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> <code translate="no" v-pre>window.$features</code> is assigned synchronously with correct values</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Thumbnails look correct — either Render Delay is long enough, or <code translate="no" v-pre>window.$useRenderPreview</code> is set at the top level and <code translate="no" v-pre>$renderPreview()</code> is called at the right moment</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> Script is a single file with a single dependency (or no dependency)</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> No CDN <code translate="no" v-pre>&lt;script&gt;</code> tags in the script</li>
 <li class="task-list-item"><input disabled="disabled" type="checkbox" /> Tested across at least 20–40 different hashes</li>
@@ -462,6 +491,16 @@ resize();</code></pre>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/creator-onboarding/artists/2-staging-and-testing/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">2. Staging & Testing</span>
+            </div>
+            <p class="card-compact-description">Creator Dashboard walkthrough — staging your Art Blocks project on Sepolia testnet.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/" class="group card-compact no-link">
         <div class="card-compact-body">

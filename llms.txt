@@ -39,7 +39,7 @@
 ### For Artists
 
 - [Artist Overview](https://docs.artblocks.io/creator-onboarding/artists/overview.md): Overview of the Art Blocks artist journey — from script to mainnet launch.
-- [1. Building Your Project](https://docs.artblocks.io/creator-onboarding/artists/1-building-your-project.md): Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, and conversion guide.
+- [1. Building Your Project](https://docs.artblocks.io/creator-onboarding/artists/1-building-your-project.md): Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.
 - [Decentralized Storage Assets (IPFS & Arweave)](https://docs.artblocks.io/creator-onboarding/artists/flex-assets.md): How to define IPFS and Arweave CIDs and preferred gateway URLs for Art Blocks Engine Flex projects, with concrete examples.
 - [2. Staging & Testing](https://docs.artblocks.io/creator-onboarding/artists/2-staging-and-testing.md): Creator Dashboard walkthrough — staging your Art Blocks project on Sepolia testnet.
 - [3. Mainnet Launch](https://docs.artblocks.io/creator-onboarding/artists/3-mainnet-launch.md): Launching your Art Blocks project on Ethereum mainnet — import, publish, and open minting.
