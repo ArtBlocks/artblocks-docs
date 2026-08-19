@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pr-preview/pr-353">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.840399862744">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.840472960962">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -42,11 +42,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.840399862744" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.840472960962" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.840399862744" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.840472960962" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.840399862744" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.840472960962" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -276,7 +276,7 @@ Mint at least 20–40 test tokens and use &quot;Explore Possibilities&quot; to p
 <p><strong>My script renders correctly locally but not in the dashboard preview. Why?</strong>
 Common causes: CDN <code translate="no" v-pre>&lt;script&gt;</code> tags in your script (the generator injects the library — don&#x27;t add your own), DOM setup code (e.g. creating a <code translate="no" v-pre>&lt;canvas&gt;</code> element that already exists), or references to external resources.</p>
 <p><strong>My static thumbnail shows a blank or mid-render frame. How do I fix this?</strong>
-Increase the Render Delay in your Renders settings. For animated pieces, set it long enough for the initial state to stabilize.</p>
+If you are using the delay timer, increase the Render Delay in your Renders settings so the initial state has time to stabilize. If a specific frame is the intended thumbnail (common for animated or multi-step pieces), set <code translate="no" v-pre>window.$useRenderPreview = true</code> at the top level of your script and call <code translate="no" v-pre>window.$renderPreview()</code> when that frame is on screen. See <a href="../1-building-your-project/#thumbnail-capture-with-renderpreview">Thumbnail Capture with <code translate="no" v-pre>renderPreview</code></a>.</p>
 <p><strong>Can I test PostParams on staging?</strong>
 Yes. Navigate to your token on artist-staging.artblocks.io and use the PostParam editing interface while logged in with your artist wallet.</p>
 <hr>

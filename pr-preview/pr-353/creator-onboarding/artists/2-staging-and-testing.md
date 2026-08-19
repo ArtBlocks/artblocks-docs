@@ -119,9 +119,11 @@ Configure how the Art Blocks rendering infrastructure captures your artwork:
 | Setting | Notes |
 |---|---|
 | **Aspect Ratio** | Width:height ratio of your artwork (e.g. `1` for square, `1.5` for landscape). Used for canvas sizing and thumbnail display. |
-| **Render Delay** | Seconds the renderer waits before capturing the static image. Set this long enough for any animations to complete their initial state (e.g. `0` for immediately deterministic art, `5` for animated pieces). |
+| **Render Delay** | Seconds the renderer waits before capturing the static image. Set this long enough for any animations to complete their initial state (e.g. `0` for immediately deterministic art, `5` for animated pieces). Ignored when your script uses `renderPreview` (see below). |
 | **Canvas Mode** | Enable if your script uses a `<canvas>` element directly (most p5.js and vanilla JS projects). Required for static capture to work correctly. |
 | **MP4 Settings** | Optional. Configure if you want animated MP4 thumbnails generated for your project. |
+
+Thumbnails are captured either by the **Render Delay** timer or by an explicit `renderPreview` call in your script. If the intended still is a specific frame (for example after an animation settles, or after a multi-step composition finishes), set `window.$useRenderPreview = true` at the top level of your script and call `window.$renderPreview()` at that moment. See [Thumbnail Capture with `renderPreview`](/creator-onboarding/artists/1-building-your-project/#thumbnail-capture-with-renderpreview) for a code example.
 
 ---
 
@@ -181,7 +183,7 @@ With your project configured, mint test outputs:
 - [ ] Trait distribution is what you expect (check `window.$features` values)
 - [ ] No hash produces a broken or undesirable output
 - [ ] Artwork looks correct at different viewport sizes
-- [ ] Render delay is long enough for animated pieces to settle
+- [ ] Static thumbnails show the intended frame — not a blank or mid-render still. If you rely on the timer, Render Delay is long enough for the piece to settle; if you use `renderPreview`, `$renderPreview()` is called when that frame is on screen
 
 ---
 
@@ -204,4 +206,4 @@ Revisions may be requested before approval. Common feedback includes: output qua
 |---|---|
 | Script renders correctly locally but not in dashboard preview | Remove any CDN `<script>` tags from your script; check for DOM setup code that creates elements the generator already provides |
 | Different outputs on reload with same hash | Remove `Math.random()` and `Date.now()` — seed all randomness from `tokenData.hash` |
-| Static capture shows blank or mid-animation frame | Increase render delay in Renders settings |
+| Static capture shows blank or mid-animation frame | Increase Render Delay in Renders settings, or use `renderPreview` so the script captures the intended frame |
