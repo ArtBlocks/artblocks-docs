@@ -97,7 +97,7 @@ Mint at least 20–40 test tokens and use "Explore Possibilities" to preview man
 Common causes: CDN `<script>` tags in your script (the generator injects the library — don't add your own), DOM setup code (e.g. creating a `<canvas>` element that already exists), or references to external resources.
 
 **My static thumbnail shows a blank or mid-render frame. How do I fix this?**
-Increase the Render Delay in your Renders settings. For animated pieces, set it long enough for the initial state to stabilize.
+If you are using the delay timer, increase the Render Delay in your Renders settings so the initial state has time to stabilize. If a specific frame is the intended thumbnail (common for animated or multi-step pieces), set `window.$useRenderPreview = true` at the top level of your script and call `window.$renderPreview()` when that frame is on screen. See [Thumbnail Capture with `renderPreview`](/creator-onboarding/artists/1-building-your-project/#thumbnail-capture-with-renderpreview).
 
 **Can I test PostParams on staging?**
 Yes. Navigate to your token on artist-staging.artblocks.io and use the PostParam editing interface while logged in with your artist wallet.
