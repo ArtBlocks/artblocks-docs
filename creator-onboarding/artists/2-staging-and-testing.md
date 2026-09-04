@@ -1,9 +1,16 @@
 ---
-order: 800
-description: Creator Dashboard walkthrough — staging your Art Blocks project on Sepolia testnet.
+order: 100
+label: "Legacy: Staging & Testing"
+description: Legacy Creator Dashboard walkthrough for staging an Art Blocks project on Sepolia.
 ---
 
-# 2. Staging & Testing
+# Legacy Creator Dashboard: Staging & Testing
+
+!!!warning
+This page is for artists whom Art Blocks has directed to the [legacy staging dashboard](https://legacy.staging.create.artblocks.io/). It documents the previous Creator Dashboard.
+
+For the current workflow, use the [Creator Dashboard guide](/creator-onboarding/artists/creator-dashboard/).
+!!!
 
 Once your script is working locally, you'll create a testnet project using the Art Blocks Creator Dashboard and prepare it for review. This step covers the full staging process on Sepolia testnet.
 
@@ -14,7 +21,7 @@ Once your script is working locally, you'll create a testnet project using the A
 - Your script is complete and tested locally with many different hashes
 - You have your artist wallet ready (the one registered with Art Blocks)
 - You have some Sepolia ETH for test minting
-- You have access to the [Creator Dashboard](https://create.artblocks.io/)
+- You have access to the legacy Creator Dashboard
 
 !!!warning
 For your Art Blocks application, please connect with a hot wallet. Hardware wallets are not currently compatible with Art Blocks staging.
@@ -35,7 +42,7 @@ Sepolia ETH is free and has no real value. You can request it from any of the fo
 
 ## Creator Dashboard Overview
 
-The [Art Blocks Creator Dashboard](https://create.artblocks.io/) is the primary interface for setting up and managing your project. Connect your artist wallet to get started.
+The legacy Art Blocks Creator Dashboard is the interface this walkthrough documents. Connect your artist wallet to get started.
 
 The dashboard is organized into sub-pages for your project:
 
@@ -50,7 +57,7 @@ The dashboard is organized into sub-pages for your project:
 
 ## Step 1: Create a Testnet Project
 
-1. Connect your artist wallet to [create.artblocks.io](https://create.artblocks.io/)
+1. Connect your artist wallet to the [legacy staging dashboard](https://legacy.staging.create.artblocks.io/)
 2. Ensure you're on the **Sepolia** network
 3. Click **Create New Project**
 4. Your testnet project shell is now created

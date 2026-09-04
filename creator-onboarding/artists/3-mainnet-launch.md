@@ -1,9 +1,16 @@
 ---
-order: 700
-description: Launching your Art Blocks project on Ethereum mainnet — import, publish, and open minting.
+order: 90
+label: "Legacy: Mainnet Launch"
+description: Legacy Creator Dashboard walkthrough for importing and launching a mainnet project.
 ---
 
-# 3. Mainnet Launch
+# Legacy Creator Dashboard: Mainnet Launch
+
+!!!warning
+This page is for artists whom Art Blocks has directed to the [legacy production dashboard](https://legacy.create.artblocks.io/). It documents the previous Creator Dashboard.
+
+For the current workflow, use the [Creator Dashboard guide](/creator-onboarding/artists/creator-dashboard/).
+!!!
 
 Once your testnet project has been approved by the Art Blocks team, you're ready to create your mainnet project and go live. This page covers the steps from mainnet deployment through opening minting to the public.
 
@@ -13,13 +20,13 @@ Once your testnet project has been approved by the Art Blocks team, you're ready
 
 - Your testnet project has been reviewed and approved by Art Blocks
 - You have your artist wallet ready with some ETH for gas
-- You have access to the [Creator Dashboard](https://create.artblocks.io/) on mainnet
+- You have access to the legacy Creator Dashboard on mainnet
 
 ---
 
 ## Step 1: Create Your Mainnet Project Shell
 
-1. Connect your artist wallet to [create.artblocks.io](https://create.artblocks.io/)
+1. Connect your artist wallet to the [legacy production dashboard](https://legacy.create.artblocks.io/)
 2. Switch to **Ethereum Mainnet** (or Arbitrum/Base if specified by your agreement)
 3. Click **Create New Project**
 

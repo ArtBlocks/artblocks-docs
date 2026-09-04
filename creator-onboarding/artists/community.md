@@ -136,7 +136,7 @@ Art Blocks supports artists who want to direct a portion of their revenue to cha
 You may also simply route a portion of revenues to any wallet you control and donate manually through the channel of your choice. Be transparent with your community about how funds are directed.
 
 To configure charitable giving:
-1. In the Creator Dashboard, go to **Payments**
+1. In the Creator Dashboard, open **Payment**
 2. Add the charity's wallet address as an additional payee
 3. Set the percentage of your artist share to direct to that address
 

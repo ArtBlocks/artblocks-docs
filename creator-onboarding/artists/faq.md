@@ -54,13 +54,19 @@ Scripts can be updated until the project is **locked**. Locking is permanent —
 ## Creator Dashboard
 
 **My project shell disappeared from the dashboard. What happened?**
-Try disconnecting and reconnecting your wallet. Make sure you're connected with your registered artist wallet.
+Confirm the dashboard environment and chain, then reconnect with the registered artist wallet or a wallet with contract access.
+
+See [Creator Dashboard Help](/creator-onboarding/artists/creator-dashboard-help/#access-and-project-visibility).
 
 **How do I preview my script in the Creator Dashboard?**
-On the Scripts sub-page, click **Preview** after uploading your script. A new window will open with a live render.
+Open the project and select **View outputs**. From there you can mint preview tokens, inspect live generator views, and refresh token renders after a script change.
 
 **Can I import my testnet configuration to mainnet?**
-Yes. The Creator Dashboard includes an **Import from Testnet** feature. Import Details, Scripts, Renders, Payments, and Minters — but skip Admin settings.
+Yes. Open the production project and select **Import project**. Review and select the supported metadata, render, script, Flex asset, and PostParams changes before starting.
+
+Edition size, artist address, payment settings, minter configuration, project status, outputs, and contract history are not imported.
+
+See [Move to Production](/creator-onboarding/artists/creator-dashboard/#move-to-production).
 
 **What's the difference between Canvas Mode being on or off?**
 If checked, data is directly pulled from the `Canvas` element using `.toDataURL()` when producing static image renders. This additional rendering mode can be leveraged for projects with varying aspect ratios across different tokens.
@@ -71,7 +77,9 @@ Please note that scripts containing multiple `Canvas` elements may not render as
 You can update payment configuration up until the project is locked. After locking, the royalty splitter is immutable — contact Art Blocks to request a splitter replacement.
 
 **How do I format my project description? My line breaks aren't working.**
-The description field renders standard Markdown: `**bold**`, `*italics*`, `#`/`##` headers, and links all work. Markdown collapses whitespace by design, so `<br>` tags and trailing double-spaces don't reliably create paragraph breaks. To force a visible blank line between paragraphs, put `&nbsp;` (a non-breaking space) on its own line:
+The description field renders standard Markdown: `**bold**`, `*italics*`, `#`/`##` headers, and links all work.
+
+Markdown collapses whitespace, so `<br>` tags and trailing double-spaces do not reliably create paragraph breaks. To force a blank line, put `&nbsp;` on its own line:
 
 ```
 First paragraph.
@@ -88,7 +96,7 @@ The Creator Dashboard preview can render slightly differently than the live coll
 ## Artist Profile
 
 **How do I update my artist name, profile picture, bio, or links?**
-Sign into the [Creator Dashboard](https://create.artblocks.io/) with your artist wallet and click **Artists** in the top navigation. This opens an editor for your Display Name, Bio, Twitter/X, Instagram, Website URL, and Profile Picture, separate from any individual project's Details. Changes apply across the whole site, including past projects where you're listed as the creator.
+Sign in to the Creator Dashboard, open the account menu, and select **Profile**. This editor is separate from an individual project's **Details**. Changes apply anywhere the profile is used, including past projects.
 
 **Can I change my artist page's URL slug myself?**
 No. The slug isn't editable from the Creator Dashboard. Contact Art Blocks in `#artist-tech` or `#help` to request a slug change.
@@ -107,13 +115,17 @@ This usually happens on collaboration or partner releases where the on-chain cre
 Use the [Alchemy Sepolia faucet](https://www.alchemy.com/faucets/ethereum-sepolia) or ask in `#artist-tech` on Discord — community members often share faucet access.
 
 **How many test mints should I do before submitting for review?**
-Mint at least 20–40 test tokens and use "Explore Possibilities" to preview many more hashes without spending gas.
+Mint at least 20–40 test tokens and review them under **View outputs**. Inspect the live generator view, static captures, and feature distribution.
 
 **My script renders correctly locally but not in the dashboard preview. Why?**
 Common causes: CDN `<script>` tags in your script (the generator injects the library — don't add your own), DOM setup code (e.g. creating a `<canvas>` element that already exists), or references to external resources.
 
 **My static thumbnail shows a blank or mid-render frame. How do I fix this?**
-If you are using the delay timer, increase the Render Delay in your Renders settings so the initial state has time to stabilize. If a specific frame is the intended thumbnail (common for animated or multi-step pieces), set `window.$useRenderPreview = true` at the top level of your script and call `window.$renderPreview()` when that frame is on screen. See [Thumbnail Capture with `renderPreview`](/creator-onboarding/artists/1-building-your-project/#thumbnail-capture-with-renderpreview).
+If you are using the delay timer, increase the Render Delay under **Render settings** so the initial state has time to stabilize.
+
+If a specific frame is the intended thumbnail, set `window.$useRenderPreview = true` at the top level of your script and call `window.$renderPreview()` when that frame is on screen.
+
+See [Thumbnail Capture with `renderPreview`](/creator-onboarding/artists/1-building-your-project/#thumbnail-capture-with-renderpreview).
 
 **Can I test PostParams on staging?**
 Yes. Navigate to your token on artist-staging.artblocks.io and use the PostParam editing interface while logged in with your artist wallet.
@@ -129,7 +141,7 @@ Typically 1–3 weeks. The Art Blocks team reviews each project carefully and ma
 Output quality, trait distribution, edge-case handling, script performance, and artistic considerations. Address all feedback before requesting re-review.
 
 **What happens between testnet approval and mainnet launch?**
-Art Blocks coordinates a mainnet deployment slot. You'll be notified, create your mainnet project, import from testnet, mint token #0, and then Art Blocks activates the project on the platform.
+Art Blocks coordinates a production deployment slot. You'll open the production project, import supported settings, verify the remaining release values, mint token #0 when cleared, then publish and open minting.
 
 **Can I change the edition size after launch?**
 Edition size can only be **decreased** on V3 contracts, never increased. Once tokens are minted past a reduced size, the size is fixed.

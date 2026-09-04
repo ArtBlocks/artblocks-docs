@@ -34,7 +34,7 @@ PostParams are injected into your script via the `tokenData` object. Based on yo
 const postParams = tokenData.externalAssetDependencies[0];
 ```
 
-You can verify the correct index in the Creator Dashboard under **Scripts => Flex Assets**. The PostParam asset will appear as an external asset dependency with text `#web3call-contract#`.
+You can verify the index in the Creator Dashboard under **Scripts**, in the project's Flex assets. The PostParam asset appears as an external asset dependency with the text `#web3call-contract#`.
 
 ### Accessing Individual Parameters
 
@@ -198,10 +198,10 @@ PostParams support download/upload from a json file, making migration from testn
 
 For a full end-to-end test of PostParams on artist-staging:
 
-1. Navigate to your project in the Creator Dashboard
-2. Go to the **Outputs** tab
+1. Open your project in the Creator Dashboard
+2. Select **View outputs**
 3. Select a token
-4. Click the **"Token page preview"** link
+4. Open the output externally
 
 Even if your staging project is not set to active, you will be able to view and edit your tokens when logged in with your artist wallet on the artist-staging website. This allows you to preview the full PostParam editing experience before activation.
 
