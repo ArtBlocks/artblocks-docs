@@ -200,11 +200,9 @@ For a full end-to-end test of PostParams on artist-staging:
 
 In Creator Dashboard V2:
 
-1. Open your project on [Artist Staging](https://artist-staging.artblocks.io/)
-2. Select a minted token to open its token page
+1. Open **View outputs** and select a minted token
+2. Select **Token page preview**
 3. Connect the artist wallet if the project is not active
-
-The **Open output externally** action in V2 opens the generator, not the token page or PostParams editor.
 
 In the legacy Creator Dashboard:
 
