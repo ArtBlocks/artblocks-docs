@@ -1,4 +1,4 @@
-# Legacy Creator Dashboard: Mainnet Launch
+# Mainnet Launch (Legacy)
 
 !!!warning
 This page is for artists whom Art Blocks has directed to the [legacy production dashboard](https://legacy.create.artblocks.io/). It documents the previous Creator Dashboard.

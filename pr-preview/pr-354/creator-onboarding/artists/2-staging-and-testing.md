@@ -1,4 +1,4 @@
-# Legacy Creator Dashboard: Staging & Testing
+# Staging & Testing (Legacy)
 
 !!!warning
 This page is for artists whom Art Blocks has directed to the [legacy staging dashboard](https://legacy.staging.create.artblocks.io/). It documents the previous Creator Dashboard.

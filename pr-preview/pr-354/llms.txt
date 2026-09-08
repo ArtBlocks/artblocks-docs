@@ -46,8 +46,8 @@
 - [Minters for Artists](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/minters.md): Artist guide to Art Blocks minting mechanics — choosing and configuring a minter for your drop.
 - [Community](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/community.md): Art Blocks community — Discord, communication guidelines, community agreements, and charitable giving.
 - [Artist FAQ](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/faq.md): Frequently asked questions for Art Blocks artists — application, technical requirements, Creator Dashboard, staging, and more.
-- [Legacy Creator Dashboard: Staging & Testing](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/2-staging-and-testing.md): Legacy Creator Dashboard walkthrough for staging an Art Blocks project on Sepolia.
-- [Legacy Creator Dashboard: Mainnet Launch](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/3-mainnet-launch.md): Legacy Creator Dashboard walkthrough for importing and launching a mainnet project.
+- [Staging & Testing (Legacy)](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/2-staging-and-testing.md): Legacy Creator Dashboard walkthrough for staging an Art Blocks project on Sepolia.
+- [Mainnet Launch (Legacy)](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/3-mainnet-launch.md): Legacy Creator Dashboard walkthrough for importing and launching a mainnet project.
 
 ### Engine Partners
 
