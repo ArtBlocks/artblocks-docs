@@ -1,5 +1,6 @@
 ---
 order: 900
+label: "1. Building Your Project"
 description: Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.
 ---
 

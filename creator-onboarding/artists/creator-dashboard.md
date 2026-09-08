@@ -1,5 +1,6 @@
 ---
 order: 880
+label: "2/3. Creator Dashboard"
 description: Set up, test, import, and launch an Art Blocks project with the Creator Dashboard.
 ---
 
