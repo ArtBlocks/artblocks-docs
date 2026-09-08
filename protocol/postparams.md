@@ -198,12 +198,21 @@ PostParams support download/upload from a json file, making migration from testn
 
 For a full end-to-end test of PostParams on artist-staging:
 
-1. Open your project in the Creator Dashboard
-2. Select **View outputs**
-3. Select a token
-4. Open the output externally
+In Creator Dashboard V2:
 
-Even if your staging project is not set to active, you will be able to view and edit your tokens when logged in with your artist wallet on the artist-staging website. This allows you to preview the full PostParam editing experience before activation.
+1. Open your project on [Artist Staging](https://artist-staging.artblocks.io/)
+2. Select a minted token to open its token page
+3. Connect the artist wallet if the project is not active
+
+The **Open output externally** action in V2 opens the generator, not the token page or PostParams editor.
+
+In the legacy Creator Dashboard:
+
+1. Open **Outputs** and select a minted token
+2. Select **Token page preview**
+3. Connect the artist wallet if the project is not active
+
+On the token page, preview and edit PostParams before activation. Submit a test transaction only after confirming the connected wallet, network, and parameter values.
 
 ## Collector Configuration
 
