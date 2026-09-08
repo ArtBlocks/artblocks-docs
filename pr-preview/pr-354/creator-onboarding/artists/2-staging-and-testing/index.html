@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pr-preview/pr-354">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842201676139">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842204007799">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -42,11 +42,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.842201676139" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.842204007799" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.842201676139" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.842204007799" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.842201676139" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.842204007799" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -490,7 +490,7 @@
 <p>With your project configured, mint test outputs:</p>
 <ol>
 <li><strong>Mint at least 20–40 test tokens</strong> — enough to see meaningful variety across your trait space</li>
-<li><strong>Use &quot;Explore Possibilities&quot;</strong> in the Outputs tab — this previews many different hashes rapidly without spending gas on minting transactions</li>
+<li><strong>Use &quot;Show Possibilities&quot;</strong> in the Outputs tab — this previews many different hashes rapidly without spending gas on minting transactions</li>
 <li><strong>Review outputs carefully</strong> — look for visual errors, edge cases, extreme outputs</li>
 <li><strong>Preview at</strong> <a href="https://artist-staging.artblocks.io/" class="outbound" target="_blank"><span>artist-staging.artblocks.io</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> — this mirrors how your project will appear on artblocks.io</li>
 </ol>
@@ -521,7 +521,9 @@
 |---|---|
 | Script renders correctly locally but not in dashboard preview | Remove any CDN `&lt;script&gt;` tags from your script; check for DOM setup code that creates elements the generator already provides |
 | Different outputs on reload with same hash | Remove `Math.random()` and `Date.now()` — seed all randomness from `tokenData.hash` |
-| Static capture shows blank or mid-animation frame | Increase Render Delay in Renders settings, or use `renderPreview` so the script captures the intended frame |">
+| Static capture shows blank or mid-animation frame | Increase Render Delay in Renders settings, or use `renderPreview` so the script captures the intended frame |
+| Project is missing | Confirm the legacy environment and network, then reconnect the registered artist wallet or a wallet with project access |
+| Cannot find artist profile settings | Select **My Artist Profile** in the top navigation. Art Blocks staff see **Artists** instead |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -542,6 +544,14 @@
 <tr>
 <td>Static capture shows blank or mid-animation frame</td>
 <td>Increase Render Delay in Renders settings, or use <code translate="no" v-pre>renderPreview</code> so the script captures the intended frame</td>
+</tr>
+<tr>
+<td>Project is missing</td>
+<td>Confirm the legacy environment and network, then reconnect the registered artist wallet or a wallet with project access</td>
+</tr>
+<tr>
+<td>Cannot find artist profile settings</td>
+<td>Select <strong>My Artist Profile</strong> in the top navigation. Art Blocks staff see <strong>Artists</strong> instead</td>
 </tr>
 </tbody>
 </table>

@@ -179,7 +179,7 @@ A great option for testing is to select the **Minimum fee minter**. This will re
 With your project configured, mint test outputs:
 
 1. **Mint at least 20–40 test tokens** — enough to see meaningful variety across your trait space
-2. **Use "Explore Possibilities"** in the Outputs tab — this previews many different hashes rapidly without spending gas on minting transactions
+2. **Use "Show Possibilities"** in the Outputs tab — this previews many different hashes rapidly without spending gas on minting transactions
 3. **Review outputs carefully** — look for visual errors, edge cases, extreme outputs
 4. **Preview at** [artist-staging.artblocks.io](https://artist-staging.artblocks.io/) — this mirrors how your project will appear on artblocks.io
 
@@ -213,3 +213,5 @@ Revisions may be requested before approval. Common feedback includes: output qua
 | Script renders correctly locally but not in dashboard preview | Remove any CDN `<script>` tags from your script; check for DOM setup code that creates elements the generator already provides |
 | Different outputs on reload with same hash | Remove `Math.random()` and `Date.now()` — seed all randomness from `tokenData.hash` |
 | Static capture shows blank or mid-animation frame | Increase Render Delay in Renders settings, or use `renderPreview` so the script captures the intended frame |
+| Project is missing | Confirm the legacy environment and network, then reconnect the registered artist wallet or a wallet with project access |
+| Cannot find artist profile settings | Select **My Artist Profile** in the top navigation. Art Blocks staff see **Artists** instead |
