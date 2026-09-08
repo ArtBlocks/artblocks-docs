@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pr-preview/pr-354">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842200789173">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842201676139">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -48,12 +48,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.6.0.842200789173" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.842201676139" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.842200789173" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.842201676139" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.842200789173" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.842200789173" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.842201676139" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.842201676139" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -458,13 +458,20 @@ const palette =
 <p>PostParams support download/upload from a json file, making migration from testnet to mainnet straightforward.</p>
 <h2 id="testing-on-artist-staging">Testing on Artist Staging</h2>
 <p>For a full end-to-end test of PostParams on artist-staging:</p>
+<p>In Creator Dashboard V2:</p>
 <ol>
-<li>Open your project in the Creator Dashboard</li>
-<li>Select <strong>View outputs</strong></li>
-<li>Select a token</li>
-<li>Open the output externally</li>
+<li>Open your project on <a href="https://artist-staging.artblocks.io/" class="outbound" target="_blank"><span>Artist Staging</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li>Select a minted token to open its token page</li>
+<li>Connect the artist wallet if the project is not active</li>
 </ol>
-<p>Even if your staging project is not set to active, you will be able to view and edit your tokens when logged in with your artist wallet on the artist-staging website. This allows you to preview the full PostParam editing experience before activation.</p>
+<p>The <strong>Open output externally</strong> action in V2 opens the generator, not the token page or PostParams editor.</p>
+<p>In the legacy Creator Dashboard:</p>
+<ol>
+<li>Open <strong>Outputs</strong> and select a minted token</li>
+<li>Select <strong>Token page preview</strong></li>
+<li>Connect the artist wallet if the project is not active</li>
+</ol>
+<p>On the token page, preview and edit PostParams before activation. Submit a test transaction only after confirming the connected wallet, network, and parameter values.</p>
 <h2 id="collector-configuration">Collector Configuration</h2>
 <p>Token owners can configure PostParams for their tokens on <a href="https://artblocks.io" class="outbound" target="_blank"><span>artblocks.io</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>:</p>
 <ol>
@@ -551,9 +558,9 @@ const palette =
     <a href="/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
-                <span class="card-compact-title">Creator Dashboard</span>
+                <span class="card-compact-title">Creator Dashboard V2</span>
             </div>
-            <p class="card-compact-description">Set up, test, import, and launch an Art Blocks project with the Creator Dashboard.</p>
+            <p class="card-compact-description">Set up, test, import, and launch an Art Blocks project with Creator Dashboard V2.</p>
         </div>
     </a>
 </div>

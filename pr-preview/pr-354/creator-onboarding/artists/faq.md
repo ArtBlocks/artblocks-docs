@@ -1,5 +1,9 @@
 # Artist FAQ
 
+Creator Dashboard instructions on this page describe V2.
+
+If you use the legacy dashboard, follow [Staging & Testing (Legacy)](/creator-onboarding/artists/2-staging-and-testing/) and [Mainnet Launch (Legacy)](/creator-onboarding/artists/3-mainnet-launch/).
+
 ---
 
 ## Application
@@ -46,7 +50,7 @@ Scripts can be updated until the project is **locked**. Locking is permanent —
 
 ---
 
-## Creator Dashboard
+## Creator Dashboard V2
 
 **My project shell disappeared from the dashboard. What happened?**
 Confirm the dashboard environment and chain, then reconnect with the registered artist wallet or a wallet with contract access.
@@ -54,7 +58,9 @@ Confirm the dashboard environment and chain, then reconnect with the registered 
 See [Creator Dashboard Help](/creator-onboarding/artists/creator-dashboard-help/#access-and-project-visibility).
 
 **How do I preview my script in the Creator Dashboard?**
-Open the project and select **View outputs**. From there you can mint preview tokens, inspect live generator views, and refresh token renders after a script change.
+Open the project and select **View outputs**. **Samples** shows unminted renders. **Tokens** shows minted outputs and lets you refresh their renders after a script change.
+
+To mint an output, configure a fixed-price minter and price, then select **Mint**. Pause the project before switching to a different final minter.
 
 **Can I import my testnet configuration to mainnet?**
 Yes. Open the production project and select **Import project**. Review and select the supported metadata, render, script, Flex asset, and PostParams changes before starting.

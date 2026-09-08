@@ -1,8 +1,8 @@
-# Creator Dashboard Help
+# Creator Dashboard V2 Help
 
 Start by checking the environment, chain, wallet, contract, and project ID shown in the dashboard. Most access and stale-data problems come from one of those values not matching the project you intended to edit.
 
-For the end-to-end workflow, see the [Creator Dashboard guide](/creator-onboarding/artists/creator-dashboard/).
+For the end-to-end workflow, see the [Creator Dashboard V2 guide](/creator-onboarding/artists/creator-dashboard/).
 
 ---
 

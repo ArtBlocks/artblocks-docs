@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pr-preview/pr-354">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842200789173">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842201676139">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Creator Dashboard</title>
-    <meta name="title" content="Creator Dashboard">
-    <meta name="description" content="Set up, test, import, and launch an Art Blocks project with the Creator Dashboard.">
+    <title>Creator Dashboard V2</title>
+    <meta name="title" content="Creator Dashboard V2">
+    <meta name="description" content="Set up, test, import, and launch an Art Blocks project with Creator Dashboard V2.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard/">
@@ -25,16 +25,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard/">
-    <meta property="og:title" content="Creator Dashboard">
-    <meta property="og:description" content="Set up, test, import, and launch an Art Blocks project with the Creator Dashboard.">
+    <meta property="og:title" content="Creator Dashboard V2">
+    <meta property="og:description" content="Set up, test, import, and launch an Art Blocks project with Creator Dashboard V2.">
     <meta property="og:site_name" content="Art Blocks">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard/">
-    <meta name="twitter:title" content="Creator Dashboard">
-    <meta name="twitter:description" content="Set up, test, import, and launch an Art Blocks project with the Creator Dashboard.">
+    <meta name="twitter:title" content="Creator Dashboard V2">
+    <meta name="twitter:description" content="Set up, test, import, and launch an Art Blocks project with Creator Dashboard V2.">
 
     <!-- Alternate Markdown -->
     <link rel="alternate" type="text/markdown" href="https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard.md">
@@ -42,11 +42,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.842200789173" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.842201676139" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.842200789173" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.842201676139" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.842200789173" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.842201676139" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -195,7 +195,7 @@
                         </li>
                         <li class="pr-4">
                             <a href="../../../creator-onboarding/artists/creator-dashboard/" class="pr-4">
-                                2/3. Creator Dashboard
+                                2/3. Stage, Test &amp; Launch (V​2)
                             </a>
                         </li>
                     </ol>
@@ -204,19 +204,20 @@
                 <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
-<h1 id="creator-dashboard">Creator Dashboard</h1>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Set up, test, import, and launch an Art Blocks project with the Creator Dashboard.</div>
-<p>Use the Creator Dashboard to take a project from a test environment to its production release. The dashboard keeps the workflow focused with a release checklist, searchable settings, and clear transaction status.</p>
-<p>This guide covers the journey. For specific failures and status messages, see <a href="../creator-dashboard-help/">Creator Dashboard Help</a>.</p>
+<h1 id="creator-dashboard-v2">Creator Dashboard V2</h1>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Set up, test, import, and launch an Art Blocks project with Creator Dashboard V2.</div>
+<p>Use Creator Dashboard V2 to take a project from a test environment to its production release. The dashboard keeps the workflow focused with a release checklist, searchable settings, and clear transaction status.</p>
+<p>This guide covers the journey. For specific failures and status messages, see <a href="../creator-dashboard-help/">Creator Dashboard V2 Help</a>.</p>
 <hr>
 <h2 id="before-you-start">Before You Start</h2>
 <p>Have these ready:</p>
 <ul>
-<li>An Art Blocks sign-in and a wallet allowed to sign for the project contract</li>
+<li>An Art Blocks sign-in with a linked wallet</li>
 <li>A script tested locally across many hashes and viewport sizes</li>
 <li>Test-network ETH for transactions and preview mints</li>
 <li>Production-network ETH before launch</li>
 </ul>
+<p>Anyone with an Art Blocks sign-in can create a staging project on the shared testnet contract. Production project access still follows Art Blocks approval.</p>
 <p>Use the <a href="https://staging.create.artblocks.io/" class="outbound" target="_blank"><span>staging Creator Dashboard</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> for test projects and the <a href="https://create.artblocks.io/" class="outbound" target="_blank"><span>production Creator Dashboard</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> for mainnet projects.</p>
 <p>Select the network before connecting your wallet, then confirm the network shown in the dashboard before changing a project.</p>
 <p>Signing in and being ready to transact are separate. Your profile may show a project even when the active wallet cannot sign for it.</p>
@@ -283,6 +284,8 @@
 </ul>
 <h3 id="3-review-outputs">3. Review Outputs</h3>
 <p>Select <strong>View outputs</strong> from the project page. <strong>Samples</strong> previews unminted renders across more hashes, while <strong>Tokens</strong> shows minted outputs.</p>
+<p>To create a minted output, configure a fixed-price minter and price, then select <strong>Mint</strong>. Output minting only supports the fixed-price minter.</p>
+<p>If your release uses another minter, use fixed price for test mints. Pause the project before switching to the final minter, then check its settings again.</p>
 <p>Use both views to inspect the range of the algorithm. Art Blocks generally recommends at least 20–40 test mints before review.</p>
 <p>Check that:</p>
 <ul>
@@ -332,10 +335,11 @@
 <li>Max invocations</li>
 <li>Render settings</li>
 <li>Primary and secondary payment addresses</li>
-<li>Minter type, price, limits, and timing</li>
+<li>Fixed-price minter and price for token #0</li>
 <li>Project status</li>
 </ul>
 <p>Mint and inspect token #0 only after the irreversible values are correct and Art Blocks has cleared the project for that step.</p>
+<p>If your release uses another minter, pause the project after token #0, configure the final minter, then reopen the checklist and verify its price, limits, and timing.</p>
 <p>Payment changes may create a proposal that an allowlisted account must approve. Confirm the final on-chain addresses and percentages before launch.</p>
 <h3 id="4-publish-and-open-minting">4. Publish and Open Minting</h3>
 <p>Use <strong>Publish project</strong> to make the project visible when Art Blocks approves publication. Publishing and opening minting are separate actions.</p>
@@ -389,9 +393,9 @@
     <a href="/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard-help/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
-                <span class="card-compact-title">Creator Dashboard Help</span>
+                <span class="card-compact-title">Creator Dashboard V2 Help</span>
             </div>
-            <p class="card-compact-description">Creator Dashboard transaction, access, import, and output troubleshooting.</p>
+            <p class="card-compact-description">Creator Dashboard V2 transaction, access, import, and output troubleshooting.</p>
         </div>
     </a>
 </div>
@@ -455,7 +459,7 @@
                         <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../creator-onboarding/artists/creator-dashboard-help/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Creator Dashboard Help</span>
+                                <span class="block mt-1">Creator Dashboard V​2 Help</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -505,6 +509,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "2/3. Creator Dashboard", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/creator-onboarding/artists/creator-dashboard.md" }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "2/3. Stage, Test & Launch (V2)", level: 3, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/creator-onboarding/artists/creator-dashboard.md" }</script>
 </body>
 </html>

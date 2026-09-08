@@ -1,8 +1,8 @@
-# Creator Dashboard
+# Creator Dashboard V2
 
-Use the Creator Dashboard to take a project from a test environment to its production release. The dashboard keeps the workflow focused with a release checklist, searchable settings, and clear transaction status.
+Use Creator Dashboard V2 to take a project from a test environment to its production release. The dashboard keeps the workflow focused with a release checklist, searchable settings, and clear transaction status.
 
-This guide covers the journey. For specific failures and status messages, see [Creator Dashboard Help](/creator-onboarding/artists/creator-dashboard-help/).
+This guide covers the journey. For specific failures and status messages, see [Creator Dashboard V2 Help](/creator-onboarding/artists/creator-dashboard-help/).
 
 ---
 
@@ -10,10 +10,12 @@ This guide covers the journey. For specific failures and status messages, see [C
 
 Have these ready:
 
-- An Art Blocks sign-in and a wallet allowed to sign for the project contract
+- An Art Blocks sign-in with a linked wallet
 - A script tested locally across many hashes and viewport sizes
 - Test-network ETH for transactions and preview mints
 - Production-network ETH before launch
+
+Anyone with an Art Blocks sign-in can create a staging project on the shared testnet contract. Production project access still follows Art Blocks approval.
 
 Use the [staging Creator Dashboard](https://staging.create.artblocks.io/) for test projects and the [production Creator Dashboard](https://create.artblocks.io/) for mainnet projects.
 
@@ -75,6 +77,10 @@ Use the focused references when you need them:
 
 Select **View outputs** from the project page. **Samples** previews unminted renders across more hashes, while **Tokens** shows minted outputs.
 
+To create a minted output, configure a fixed-price minter and price, then select **Mint**. Output minting only supports the fixed-price minter.
+
+If your release uses another minter, use fixed price for test mints. Pause the project before switching to the final minter, then check its settings again.
+
 Use both views to inspect the range of the algorithm. Art Blocks generally recommends at least 20–40 test mints before review.
 
 Check that:
@@ -131,10 +137,12 @@ Confirm these values directly in production:
 - Max invocations
 - Render settings
 - Primary and secondary payment addresses
-- Minter type, price, limits, and timing
+- Fixed-price minter and price for token #0
 - Project status
 
 Mint and inspect token #0 only after the irreversible values are correct and Art Blocks has cleared the project for that step.
+
+If your release uses another minter, pause the project after token #0, configure the final minter, then reopen the checklist and verify its price, limits, and timing.
 
 Payment changes may create a proposal that an allowlisted account must approve. Confirm the final on-chain addresses and percentages before launch.
 

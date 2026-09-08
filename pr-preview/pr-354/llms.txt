@@ -40,8 +40,8 @@
 
 - [Artist Overview](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/overview.md): Overview of the Art Blocks artist journey — from script to mainnet launch.
 - [Building Your Project](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/1-building-your-project.md): Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.
-- [Creator Dashboard](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard.md): Set up, test, import, and launch an Art Blocks project with the Creator Dashboard.
-- [Creator Dashboard Help](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard-help.md): Creator Dashboard transaction, access, import, and output troubleshooting.
+- [Creator Dashboard V2](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard.md): Set up, test, import, and launch an Art Blocks project with Creator Dashboard V2.
+- [Creator Dashboard V2 Help](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/creator-dashboard-help.md): Creator Dashboard V2 transaction, access, import, and output troubleshooting.
 - [Decentralized Storage Assets (IPFS & Arweave)](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/flex-assets.md): How to define IPFS and Arweave CIDs and preferred gateway URLs for Art Blocks Engine Flex projects, with concrete examples.
 - [Minters for Artists](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/minters.md): Artist guide to Art Blocks minting mechanics — choosing and configuring a minter for your drop.
 - [Community](https://docs.artblocks.io/pr-preview/pr-354/creator-onboarding/artists/community.md): Art Blocks community — Discord, communication guidelines, community agreements, and charitable giving.

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pr-preview/pr-354">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842200789173">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842201676139">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -42,11 +42,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../../favicon.ico" />
-    <link href="../../../resources/css/retype.css?v=4.6.0.842200789173" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.842201676139" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.842200789173" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.842201676139" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.842200789173" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.842201676139" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -206,6 +206,8 @@
                 <!-- Page content  -->
 <h1 id="artist-faq">Artist FAQ</h1>
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Frequently asked questions for Art Blocks artists — application, technical requirements, Creator Dashboard, staging, and more.</div>
+<p>Creator Dashboard instructions on this page describe V2.</p>
+<p>If you use the legacy dashboard, follow <a href="../2-staging-and-testing/">Staging &amp; Testing (Legacy)</a> and <a href="../3-mainnet-launch/">Mainnet Launch (Legacy)</a>.</p>
 <hr>
 <h2 id="application">Application</h2>
 <p><strong>How do I apply to Art Blocks?</strong>
@@ -235,12 +237,13 @@ Scripts are stored on-chain in segments of ~24KB. There&#x27;s no hard limit, bu
 <p><strong>Can I update my script after it&#x27;s live?</strong>
 Scripts can be updated until the project is <strong>locked</strong>. Locking is permanent — after the lock, the script cannot be changed. Locking is required before a project sells out.</p>
 <hr>
-<h2 id="creator-dashboard">Creator Dashboard</h2>
+<h2 id="creator-dashboard-v2">Creator Dashboard V2</h2>
 <p><strong>My project shell disappeared from the dashboard. What happened?</strong>
 Confirm the dashboard environment and chain, then reconnect with the registered artist wallet or a wallet with contract access.</p>
 <p>See <a href="../creator-dashboard-help/#access-and-project-visibility">Creator Dashboard Help</a>.</p>
 <p><strong>How do I preview my script in the Creator Dashboard?</strong>
-Open the project and select <strong>View outputs</strong>. From there you can mint preview tokens, inspect live generator views, and refresh token renders after a script change.</p>
+Open the project and select <strong>View outputs</strong>. <strong>Samples</strong> shows unminted renders. <strong>Tokens</strong> shows minted outputs and lets you refresh their renders after a script change.</p>
+<p>To mint an output, configure a fixed-price minter and price, then select <strong>Mint</strong>. Pause the project before switching to a different final minter.</p>
 <p><strong>Can I import my testnet configuration to mainnet?</strong>
 Yes. Open the production project and select <strong>Import project</strong>. Review and select the supported metadata, render, script, Flex asset, and PostParams changes before starting.</p>
 <p>Edition size, artist address, payment settings, minter configuration, project status, outputs, and contract history are not imported.</p>
@@ -253,7 +256,7 @@ You can update payment configuration up until the project is locked. After locki
 <p><strong>How do I format my project description? My line breaks aren&#x27;t working.</strong>
 The description field renders standard Markdown: <code translate="no" v-pre>**bold**</code>, <code translate="no" v-pre>*italics*</code>, <code translate="no" v-pre>#</code>/<code translate="no" v-pre>##</code> headers, and links all work.</p>
 <p>Markdown collapses whitespace, so <code translate="no" v-pre>&lt;br&gt;</code> tags and trailing double-spaces do not reliably create paragraph breaks. To force a blank line, put <code translate="no" v-pre>&amp;nbsp;</code> on its own line:</p>
-<div id="creator-dashboard-code-1" class="codeblock-wrapper"><doc-codeblock>
+<div id="creator-dashboard-v2-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">First paragraph.
 
 &amp;nbsp;
@@ -334,16 +337,6 @@ Contact Art Blocks in <code translate="no" v-pre>#artist-tech</code> with your a
                 <span class="card-compact-title">Art Blocks Docs</span>
             </div>
             <p class="card-compact-description">Art Blocks is the leading platform for on-chain generative art. Artists write algorithms stored permanently on the Ethereum blockchain. When a collector mints, a unique hash is generated on-chain and fed into the artist's script — producing a one-of-a-kind, deterministic artwork.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/pr-preview/pr-354/creator-onboarding/artists/2-staging-and-testing/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Staging & Testing (Legacy)</span>
-            </div>
-            <p class="card-compact-description">Legacy Creator Dashboard walkthrough for staging an Art Blocks project on Sepolia.</p>
         </div>
     </a>
 </div>
