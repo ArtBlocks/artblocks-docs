@@ -34,8 +34,8 @@ Launching a project on Art Blocks Studio?
 - [What Art Blocks offers](/creator-onboarding/offerings/) — Studio, how to apply, and contact info
 - [Building your project](/creator-onboarding/artists/1-building-your-project/) — tokenData, PRNG, `window.$features`, MCP scaffold
 - [Decentralized storage assets](/creator-onboarding/artists/flex-assets/) — IPFS and Arweave CIDs and gateway URLs for Engine Flex, with concrete examples
-- [Staging & testing](/creator-onboarding/artists/2-staging-and-testing/) — Creator Dashboard walkthrough on Sepolia
-- [Mainnet launch](/creator-onboarding/artists/3-mainnet-launch/) — Import, publish, and open minting
+- [Creator Dashboard](/creator-onboarding/artists/creator-dashboard/) — Stage, test, import, and launch a project
+- [Creator Dashboard help](/creator-onboarding/artists/creator-dashboard-help/) — Access, transaction, import, and output troubleshooting
 - [Minter guide](/creator-onboarding/artists/minters/) — Dutch auctions, RAM, allowlists, and more
 - [Artist FAQ](/creator-onboarding/artists/faq/)
 

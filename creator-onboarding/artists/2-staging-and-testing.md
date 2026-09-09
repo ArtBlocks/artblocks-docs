@@ -1,4 +1,10 @@
-# 2. Staging & Testing
+# Staging & Testing (Legacy)
+
+!!!warning
+This page is for artists whom Art Blocks has directed to the [legacy staging dashboard](https://legacy.staging.create.artblocks.io/). It documents the previous Creator Dashboard.
+
+For the current workflow, use the [Creator Dashboard guide](/creator-onboarding/artists/creator-dashboard/).
+!!!
 
 Once your script is working locally, you'll create a testnet project using the Art Blocks Creator Dashboard and prepare it for review. This step covers the full staging process on Sepolia testnet.
 
@@ -9,7 +15,7 @@ Once your script is working locally, you'll create a testnet project using the A
 - Your script is complete and tested locally with many different hashes
 - You have your artist wallet ready (the one registered with Art Blocks)
 - You have some Sepolia ETH for test minting
-- You have access to the [Creator Dashboard](https://create.artblocks.io/)
+- You have access to the legacy Creator Dashboard
 
 !!!warning
 For your Art Blocks application, please connect with a hot wallet. Hardware wallets are not currently compatible with Art Blocks staging.
@@ -30,7 +36,7 @@ Sepolia ETH is free and has no real value. You can request it from any of the fo
 
 ## Creator Dashboard Overview
 
-The [Art Blocks Creator Dashboard](https://create.artblocks.io/) is the primary interface for setting up and managing your project. Connect your artist wallet to get started.
+The legacy Art Blocks Creator Dashboard is the interface this walkthrough documents. Connect your artist wallet to get started.
 
 The dashboard is organized into sub-pages for your project:
 
@@ -45,7 +51,7 @@ The dashboard is organized into sub-pages for your project:
 
 ## Step 1: Create a Testnet Project
 
-1. Connect your artist wallet to [create.artblocks.io](https://create.artblocks.io/)
+1. Connect your artist wallet to the [legacy staging dashboard](https://legacy.staging.create.artblocks.io/)
 2. Ensure you're on the **Sepolia** network
 3. Click **Create New Project**
 4. Your testnet project shell is now created
@@ -83,7 +89,7 @@ The project description is an important opportunity to highlight your intentions
 - Be sure to describe any interactivity features, if applicable.
 - End by summarizing how the medium, outputs, and algorithm achieve your initial inquiry or concept.
 
-For Markdown formatting tips (bold, italics, headers, line breaks), see the [Artist FAQ](/creator-onboarding/artists/faq/#creator-dashboard).
+Descriptions support standard Markdown for bold text, italics, headings, and links. If you need a visible blank line, put `&nbsp;` on its own line between paragraphs.
 
 ---
 
@@ -173,7 +179,7 @@ A great option for testing is to select the **Minimum fee minter**. This will re
 With your project configured, mint test outputs:
 
 1. **Mint at least 20–40 test tokens** — enough to see meaningful variety across your trait space
-2. **Use "Explore Possibilities"** in the Outputs tab — this previews many different hashes rapidly without spending gas on minting transactions
+2. **Use "Show Possibilities"** in the Outputs tab — this previews many different hashes rapidly without spending gas on minting transactions
 3. **Review outputs carefully** — look for visual errors, edge cases, extreme outputs
 4. **Preview at** [artist-staging.artblocks.io](https://artist-staging.artblocks.io/) — this mirrors how your project will appear on artblocks.io
 
@@ -207,3 +213,5 @@ Revisions may be requested before approval. Common feedback includes: output qua
 | Script renders correctly locally but not in dashboard preview | Remove any CDN `<script>` tags from your script; check for DOM setup code that creates elements the generator already provides |
 | Different outputs on reload with same hash | Remove `Math.random()` and `Date.now()` — seed all randomness from `tokenData.hash` |
 | Static capture shows blank or mid-animation frame | Increase Render Delay in Renders settings, or use `renderPreview` so the script captures the intended frame |
+| Project is missing | Confirm the legacy environment and network, then reconnect the registered artist wallet or a wallet with project access |
+| Cannot find artist profile settings | Select **My Artist Profile** in the top navigation. Art Blocks staff see **Artists** instead |

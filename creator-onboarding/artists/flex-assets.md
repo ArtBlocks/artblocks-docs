@@ -165,8 +165,8 @@ Each service's dashboard shows the resulting CID (or transaction ID) directly af
 
 Once you have your CIDs, configure your external asset dependencies in the Art Blocks Creator Dashboard:
 
-1. Navigate to your project → **Scripts**
-2. In the **Flex Assets** section, add your dependencies
+1. Open your project and select **Scripts**
+2. In the **Flex assets** section, add your dependencies
 3. For each dependency, specify a **Dependency Type** (IPFS, ARWEAVE, or ONCHAIN) and its **CID**
 4. The order of dependencies corresponds to indices in `tokenData.externalAssetDependencies`
 

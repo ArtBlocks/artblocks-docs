@@ -39,13 +39,15 @@
 ### For Artists
 
 - [Artist Overview](https://docs.artblocks.io/creator-onboarding/artists/overview.md): Overview of the Art Blocks artist journey — from script to mainnet launch.
-- [1. Building Your Project](https://docs.artblocks.io/creator-onboarding/artists/1-building-your-project.md): Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.
+- [Building Your Project](https://docs.artblocks.io/creator-onboarding/artists/1-building-your-project.md): Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.
+- [Creator Dashboard V2](https://docs.artblocks.io/creator-onboarding/artists/creator-dashboard.md): Set up, test, import, and launch an Art Blocks project with Creator Dashboard V2.
+- [Creator Dashboard V2 Help](https://docs.artblocks.io/creator-onboarding/artists/creator-dashboard-help.md): Creator Dashboard V2 transaction, access, import, and output troubleshooting.
 - [Decentralized Storage Assets (IPFS & Arweave)](https://docs.artblocks.io/creator-onboarding/artists/flex-assets.md): How to define IPFS and Arweave CIDs and preferred gateway URLs for Art Blocks Engine Flex projects, with concrete examples.
-- [2. Staging & Testing](https://docs.artblocks.io/creator-onboarding/artists/2-staging-and-testing.md): Creator Dashboard walkthrough — staging your Art Blocks project on Sepolia testnet.
-- [3. Mainnet Launch](https://docs.artblocks.io/creator-onboarding/artists/3-mainnet-launch.md): Launching your Art Blocks project on Ethereum mainnet — import, publish, and open minting.
 - [Minters for Artists](https://docs.artblocks.io/creator-onboarding/artists/minters.md): Artist guide to Art Blocks minting mechanics — choosing and configuring a minter for your drop.
 - [Community](https://docs.artblocks.io/creator-onboarding/artists/community.md): Art Blocks community — Discord, communication guidelines, community agreements, and charitable giving.
 - [Artist FAQ](https://docs.artblocks.io/creator-onboarding/artists/faq.md): Frequently asked questions for Art Blocks artists — application, technical requirements, Creator Dashboard, staging, and more.
+- [Staging & Testing (Legacy)](https://docs.artblocks.io/creator-onboarding/artists/2-staging-and-testing.md): Legacy Creator Dashboard walkthrough for staging an Art Blocks project on Sepolia.
+- [Mainnet Launch (Legacy)](https://docs.artblocks.io/creator-onboarding/artists/3-mainnet-launch.md): Legacy Creator Dashboard walkthrough for importing and launching a mainnet project.
 
 ### Engine Partners
 

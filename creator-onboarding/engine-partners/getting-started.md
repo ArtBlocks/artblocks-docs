@@ -143,7 +143,12 @@ You choose your launch date. Allow at least one week between a successful token 
 
 ## Setting Up Projects
 
-Once your contract is deployed and infrastructure is integrated, you can create project shells and set up artist projects via the Art Blocks Creator Dashboard at [create.artblocks.io](https://create.artblocks.io/).
+Once your contract is deployed and infrastructure is integrated, set up artist projects in the Creator Dashboard:
+
+- [Staging Creator Dashboard](https://staging.create.artblocks.io/) for test projects
+- [Production Creator Dashboard](https://create.artblocks.io/) for mainnet projects
+
+Use the [Creator Dashboard guide](/creator-onboarding/artists/creator-dashboard/) for the current setup, import, and launch workflow.
 
 The Creator Dashboard supports:
 - Project shell creation
@@ -172,7 +177,8 @@ Project visibility is controlled by two flags:
 
 ## Key Resources
 
-- [Art Blocks Creator Dashboard](https://create.artblocks.io/) — project setup and management
+- [Staging Creator Dashboard](https://staging.create.artblocks.io/) — test project setup and management
+- [Production Creator Dashboard](https://create.artblocks.io/) — mainnet project setup and management
 - [Art Blocks Contracts GitHub](https://github.com/ArtBlocks/artblocks-contracts) — full contract source
 - [V3 Architecture Overview](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/V3_ARCHITECTURE.md) — architecture diagrams
 - [Minter Suite Documentation](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/MINTER_SUITE.md)

@@ -72,7 +72,7 @@ For Art Blocks Studio projects:
 - **Primary sales**: 90% to artist, 10% to Art Blocks
 - **Secondary royalties**: Up to 5% total (honored by major marketplaces). By default, split 2/3 to artist and 1/3 to Art Blocks.
 
-Artists set their preferred royalty percentage and any additional payee splits in the Payments section of the Creator Dashboard.
+Artists set their preferred royalty percentage and any additional payee splits under **Payment** in the Creator Dashboard.
 
 ### Updating Splits
 
