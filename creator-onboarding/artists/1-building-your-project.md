@@ -1,9 +1,10 @@
 ---
 order: 900
+label: "1. Building Your Project"
 description: Technical requirements for Art Blocks generative art scripts — tokenData, PRNG, window.$features, renderPreview, and conversion guide.
 ---
 
-# 1. Building Your Project
+# Building Your Project
 
 This page covers the technical requirements for building a generative art script for Art Blocks. Your script will be stored on-chain and run in the Art Blocks Generator — a browser-based environment that injects `tokenData` and loads your dependency library.
 
@@ -191,7 +192,7 @@ To closely replicate this environment while developing, use Chrome and turn **of
 
 Thumbnail images can be captured in two ways:
 
-1. **Render Delay** — the renderer waits a fixed number of seconds (configured in the dashboard Renders settings) and then captures the current frame
+1. **Render Delay** — the renderer waits a fixed number of seconds (configured in **Render settings**) and then captures the current frame
 2. **`renderPreview`** — your script tells the renderer exactly when to capture, which is useful for animations, multi-step composition, or any piece whose intended thumbnail is not the first settled frame
 
 To use `renderPreview`, set `window.$useRenderPreview = true` at the top level of the script (outside of any functions), then call `window.$renderPreview()` at the moment the thumbnail should be taken:
