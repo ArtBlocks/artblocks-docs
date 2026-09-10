@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pr-preview/pr-355">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842392124779">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842395564791">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -42,12 +42,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.6.0.842392124779" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.842395564791" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.842392124779" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.842395564791" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.842392124779" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.842392124779" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.842395564791" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.842395564791" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -328,6 +328,9 @@ event ProjectTransferHookLocked(uint256 indexed _projectId, address indexed _hoo
 <p>Art Blocks deploys <a href="https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/transfer-hooks/OwnerHistoryTransferHook.sol" class="outbound" target="_blank"><span><code translate="no" v-pre>OwnerHistoryTransferHook</code></span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> at <code translate="no" v-pre>0x00000000cb60788043f4F779bfC192F1c5bd09FA</code> on every supported network. It records each token&#x27;s chain of owners on chain and exposes it through <code translate="no" v-pre>ownerHistory</code>, <code translate="no" v-pre>previousOwners</code>, <code translate="no" v-pre>lastRecordedOwner</code>, and <code translate="no" v-pre>ownerHistoryLength</code>.</p>
 <p>It is inert until a project opts in: it verifies with the calling core that it is the hook configured for that project, and reverts otherwise. It never blocks a transfer. Because it is already deployed and verified, a project wanting on-chain provenance can configure it directly without writing or deploying anything.</p>
 <h2 id="gotchas">Gotchas</h2>
+<p><strong>A hook does not re-render the token.</strong> Running a hook is not a signal to the rendering pipeline, so a token&#x27;s stored image and features stay as they were. This matters most for the projects most likely to want a hook: if the artwork reacts to its owner — say through the <code translate="no" v-pre>InjectTokenOwner</code> augment hook — the live generator reflects the new owner immediately, while the thumbnail on artblocks.io and in marketplaces still shows the previous owner&#x27;s output.</p>
+<p>Writing a <a href="../postparams/">PostParam</a> is the signal that does trigger a re-render, along with a recompute of the token&#x27;s features. So a hook that needs the image to follow the transfer should write one from inside <code translate="no" v-pre>onTokenTransfer</code>. That works because a PostParam can be authorized to a specific address rather than to the artist or the collector: configure the parameter with the <code translate="no" v-pre>Address</code> authorization option, set its authorized address to the hook contract, and the hook can then call <code translate="no" v-pre>configureTokenParams</code> on the PMP contract as the transfer happens.</p>
+<p>Two things to keep in mind if you do this. The core blocks reentrant mints and transfers for the duration of the hook, but not calls to other contracts, so writing to the PMP contract is allowed. And it is a storage write on top of a storage write — every transfer of every token in the project pays for both, forever.</p>
 <p><strong>A hook affects mints, not just secondary transfers.</strong> A hook that reverts under some condition will also block minting under that condition. Test the mint path.</p>
 <p><strong>Setting a hook does not backfill.</strong> A hook only sees transfers that happen after it is configured. Any history from before is not available to it.</p>
 <p><strong>Clearing a hook does not undo its effects.</strong> State a hook has already written stays written, and remains readable from the hook contract.</p>
