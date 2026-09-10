@@ -119,6 +119,12 @@ It is inert until a project opts in: it verifies with the calling core that it i
 
 ## Gotchas
 
+**A hook does not re-render the token.** Running a hook is not a signal to the rendering pipeline, so a token's stored image and features stay as they were. This matters most for the projects most likely to want a hook: if the artwork reacts to its owner — say through the `InjectTokenOwner` augment hook — the live generator reflects the new owner immediately, while the thumbnail on artblocks.io and in marketplaces still shows the previous owner's output.
+
+Writing a [PostParam](/protocol/postparams/) is the signal that does trigger a re-render, along with a recompute of the token's features. So a hook that needs the image to follow the transfer should write one from inside `onTokenTransfer`. That works because a PostParam can be authorized to a specific address rather than to the artist or the collector: configure the parameter with the `Address` authorization option, set its authorized address to the hook contract, and the hook can then call `configureTokenParams` on the PMP contract as the transfer happens.
+
+Two things to keep in mind if you do this. The core blocks reentrant mints and transfers for the duration of the hook, but not calls to other contracts, so writing to the PMP contract is allowed. And it is a storage write on top of a storage write — every transfer of every token in the project pays for both, forever.
+
 **A hook affects mints, not just secondary transfers.** A hook that reverts under some condition will also block minting under that condition. Test the mint path.
 
 **Setting a hook does not backfill.** A hook only sees transfers that happen after it is configured. Any history from before is not available to it.
