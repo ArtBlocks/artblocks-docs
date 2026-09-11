@@ -106,17 +106,42 @@ Two more constraints worth designing around:
 - **No reentrancy into the core.** For the duration of the hook call the core blocks mints and transfers across *every* project on that core. A hook that tries to mint or transfer on the calling core will revert the transaction that triggered it.
 - **Gas is charged to the transferrer.** Every mint and every secondary transfer pays for the hook's work. Storage writes on each transfer are the usual cost driver, and an expensive hook makes the token more expensive to move for its whole life.
 
-## Reference implementation
+## Reference implementations
+
+Art Blocks deploys two first-party hooks. Both are already deployed and verified, so a project can configure either without writing or deploying anything.
+
+### OwnerHistoryTransferHook
 
 Art Blocks deploys [`OwnerHistoryTransferHook`](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/transfer-hooks/OwnerHistoryTransferHook.sol) at `0x00000000cb60788043f4F779bfC192F1c5bd09FA` on every supported network. It records each token's chain of owners on chain and exposes it through `ownerHistory`, `previousOwners`, `lastRecordedOwner`, and `ownerHistoryLength`.
 
 It is inert until a project opts in: it verifies with the calling core that it is the hook configured for that project, and reverts otherwise. It never blocks a transfer. Because it is already deployed and verified, a project wanting on-chain provenance can configure it directly without writing or deploying anything.
 
+### MintTimeAndTransferCountHooks
+
+[`MintTimeAndTransferCountHooks`](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/web3call/combined-hooks/MintTimeAndTransferCountHooks.sol) is a combined hook — a transfer hook *and* a [PostParams](/protocol/postparams/) read-augment hook in one contract. It records each token's mint timestamp and its count of ownership-changing transfers, and injects three values into the token's params on every read:
+
+| Key | Value |
+|---|---|
+| `mintTimestamp` | Unix seconds of the mint block, or `"0"` if the hook was not configured before the mint |
+| `secondsSinceMint` | Computed at read time, so it changes every block |
+| `transferCount` | Ownership-changing transfers after the mint, excluding the mint itself |
+
+Configure it as the project's transfer hook to record, and as its read-augment hook to inject. A project can do one without the other.
+
+It also answers the re-render gotcha below. If the project configures a `transferCount` param with `Address` authorization pointing at this hook, the hook writes that value to the PMP contract on each counted transfer, which is what triggers an off-chain re-render. That write is `try`/`catch`'d and emits `TransferCountPMPSyncFailed` on failure, so a misconfigured param costs a stale image rather than a frozen collection.
+
+| Network | Address |
+|---|---|
+| Mainnet, Arbitrum, Base, Shape, Sepolia (artist staging) | `0x000000002099d6BB23Ebd24aDCbee931ad461a39` |
+| Sepolia (dev) | `0x2B530627ed72e3F77EAC0d1c8b3904E6d8f67c25` |
+
+The two differ because the hook is constructor-bound to a PMP contract, and Sepolia dev runs its own PMP instance.
+
 ## Gotchas
 
 **A hook does not re-render the token.** Running a hook is not a signal to the rendering pipeline, so a token's stored image and features stay as they were. This matters most for the projects most likely to want a hook: if the artwork reacts to its owner — say through the `InjectTokenOwner` augment hook — the live generator reflects the new owner immediately, while the thumbnail on artblocks.io and in marketplaces still shows the previous owner's output.
 
-Writing a [PostParam](/protocol/postparams/) is the signal that does trigger a re-render, along with a recompute of the token's features. So a hook that needs the image to follow the transfer should write one from inside `onTokenTransfer`. That works because a PostParam can be authorized to a specific address rather than to the artist or the collector: configure the parameter with the `Address` authorization option, set its authorized address to the hook contract, and the hook can then call `configureTokenParams` on the PMP contract as the transfer happens.
+Writing a [PostParam](/protocol/postparams/) is the signal that does trigger a re-render, along with a recompute of the token's features. So a hook that needs the image to follow the transfer should write one from inside `onTokenTransfer` — which is exactly what [`MintTimeAndTransferCountHooks`](#minttimeandtransfercounthooks) does, if you would rather configure a deployed hook than write one. That works because a PostParam can be authorized to a specific address rather than to the artist or the collector: configure the parameter with the `Address` authorization option, set its authorized address to the hook contract, and the hook can then call `configureTokenParams` on the PMP contract as the transfer happens.
 
 Two things to keep in mind if you do this. The core blocks reentrant mints and transfers for the duration of the hook, but not calls to other contracts, so writing to the PMP contract is allowed. And it is a storage write on top of a storage write — every transfer of every token in the project pays for both, forever.
 
@@ -133,6 +158,7 @@ Two things to keep in mind if you do this. The core blocks reentrant mints and t
 - [`ITransferHook`](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/interfaces/v0.8.x/ITransferHook.sol) — the interface
 - [`AbstractTransferHook`](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/transfer-hooks/AbstractTransferHook.sol) — recommended base contract
 - [`OwnerHistoryTransferHook`](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/engine/V3/transfer-hooks/OwnerHistoryTransferHook.sol) — deployed reference hook
+- [`MintTimeAndTransferCountHooks`](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/contracts/web3call/combined-hooks/MintTimeAndTransferCountHooks.sol) — deployed combined transfer + PostParams hook
 - [PostParams](/protocol/postparams/) — the other major per-project extension point
 
 Have an idea for a hook, or questions about whether one fits your project? Reach out to the Art Blocks team.
