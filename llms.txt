@@ -10,6 +10,7 @@
 - [NFT Metadata Storage at Art Blocks](https://docs.artblocks.io/protocol/on-chain-storage.md): An overview of different NFT metadata storage mechanisms used by Art Blocks NFTs.
 - [The Art Blocks Generator](https://docs.artblocks.io/protocol/on-chain-generator.md): How the Art Blocks Generator assembles generative art from on-chain data.
 - [PostParams](https://docs.artblocks.io/protocol/postparams.md): PostParams — on-chain configurable parameters that let artworks evolve after minting.
+- [Transfer Hooks](https://docs.artblocks.io/protocol/transfer-hooks.md): Transfer hooks — per-project contracts that Art Blocks Engine cores call on every mint and transfer.
 
 ## Developer Reference
 

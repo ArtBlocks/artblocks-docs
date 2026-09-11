@@ -54,6 +54,10 @@ For projects using other approved library versions, the registry records a prefe
 
 [PostParams](/protocol/postparams/) (Post-Mint Parameters) allow token owners and artists to set configurable on-chain values after minting — changing color palettes, animation parameters, or any other dimension the artist exposes. Parameters can be locked at artist-configured dates to cement values permanently. PostParams make it possible to create artworks that evolve, respond to their collectors, or bridge the digital and physical worlds.
 
+### Transfer Hooks
+
+[Transfer hooks](/protocol/transfer-hooks/) let a project attach a contract that the core calls on every mint and transfer of its tokens. A hook can record provenance on chain, emit richer events, or impose conditions on when a token may move — and because a reverting hook aborts the transfer, it is a real extension point rather than a passive observer. Hooks are configured per project and can be locked permanently, including locked to "never". They require a core contract of v3.3 or later.
+
 ---
 
 ## The Core Contract
@@ -74,4 +78,5 @@ For technical implementation details, see:
 - [On-Chain Storage](/protocol/on-chain-storage/) — NFT metadata storage comparison and Art Blocks' approach
 - [On-Chain Generator](/protocol/on-chain-generator/) — How the generator assembles tokens from blockchain data
 - [PostParams](/protocol/postparams/) — Configurable on-chain parameters for evolving artworks
+- [Transfer Hooks](/protocol/transfer-hooks/) — Per-project contracts called on every mint and transfer
 - [Developer Reference](/developer/) — Core contract, APIs, GraphQL, MCP Server, and Minter Suite

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842237206537">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.842452316050">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -41,11 +41,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.6.0.842237206537" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.842452316050" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.842237206537" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.842452316050" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.842237206537" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.842452316050" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -229,6 +229,8 @@
 <p><a href="../../creator-onboarding/engine-partners/what-is-engine/">Art Blocks Engine Flex</a> is the more capable Engine contract variant. It supports everything a standard Engine contract does, and additionally enables PostParams, multiple Dependency Registry entries, IPFS/Arweave decentralized storage, and on-chain BytecodeStorage — in any combination. A Flex contract can run a fully on-chain traditional project or a project using any of these advanced features. Most new Engine deployments use Flex.</p>
 <h3 id="postparams">PostParams</h3>
 <p><a href="../postparams/">PostParams</a> (Post-Mint Parameters) allow token owners and artists to set configurable on-chain values after minting — changing color palettes, animation parameters, or any other dimension the artist exposes. Parameters can be locked at artist-configured dates to cement values permanently. PostParams make it possible to create artworks that evolve, respond to their collectors, or bridge the digital and physical worlds.</p>
+<h3 id="transfer-hooks">Transfer Hooks</h3>
+<p><a href="../transfer-hooks/">Transfer hooks</a> let a project attach a contract that the core calls on every mint and transfer of its tokens. A hook can record provenance on chain, emit richer events, or impose conditions on when a token may move — and because a reverting hook aborts the transfer, it is a real extension point rather than a passive observer. Hooks are configured per project and can be locked permanently, including locked to &quot;never&quot;. They require a core contract of v3.3 or later.</p>
 <hr>
 <h2 id="the-core-contract">The Core Contract</h2>
 <p>All of this runs on the <a href="../../developer/core-contract/">Art Blocks V3 Core Contract</a> — an open-source ERC-721 contract available in two variants:</p>
@@ -244,6 +246,7 @@
 <li><a href="../on-chain-storage/">On-Chain Storage</a> — NFT metadata storage comparison and Art Blocks&#x27; approach</li>
 <li><a href="../on-chain-generator/">On-Chain Generator</a> — How the generator assembles tokens from blockchain data</li>
 <li><a href="../postparams/">PostParams</a> — Configurable on-chain parameters for evolving artworks</li>
+<li><a href="../transfer-hooks/">Transfer Hooks</a> — Per-project contracts called on every mint and transfer</li>
 <li><a href="/developer/">Developer Reference</a> — Core contract, APIs, GraphQL, MCP Server, and Minter Suite</li>
 </ul>
 <div id="retype-backlinks">
