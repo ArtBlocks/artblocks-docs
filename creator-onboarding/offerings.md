@@ -37,7 +37,7 @@ Applications are reviewed on a rolling basis. You'll receive feedback regardless
 ### Contact
 
 - Applications: [apply@artblocks.io](mailto:apply@artblocks.io)
-- Technical questions: `#artist-tech` channel on the [Art Blocks Discord](https://discord.gg/artblocks)
+- Technical questions: `#artist-tech` channel on the [Art Blocks Discord](https://artblocks.io/discord)
 - General questions: `#artist-general` channel on Discord
 
 ---

@@ -1,6 +1,6 @@
 # Agent Skills
 
-[Agent Skills](https://github.com/ArtBlocks/skills) are markdown instruction files that teach AI agents domain-specific workflows and best practices for Art Blocks. They tell the agent *how* to use MCP tools effectively — which tool to pick for a given question, what parameters matter, what order to call tools in, and how to interpret results.
+[Agent Skills](https://github.com/ArtBlocks/skills) are markdown instruction files that teach AI agents domain-specific workflows and best practices for Art Blocks. They tell the agent _how_ to use MCP tools effectively — which tool to pick for a given question, what parameters matter, what order to call tools in, and how to interpret results.
 
 Skills activate automatically based on what you ask. No special syntax needed — just prompt naturally.
 
@@ -44,16 +44,16 @@ After installing, reload Cursor (`Cmd+Shift+P` → "Reload Window") for skills t
 
 ## Available Skills
 
-| Skill | Use when... |
-|-------|-------------|
-| [**discover-artblocks-projects**](https://github.com/ArtBlocks/skills/blob/main/skills/discover-artblocks-projects/SKILL.md) | Browsing, searching, or filtering projects — what's live, dropping soon, in a wallet, or matching a tag/price range |
-| [**get-artist**](https://github.com/ArtBlocks/skills/blob/main/skills/get-artist/SKILL.md) | Looking up an artist and exploring their body of work across Art Blocks |
-| [**get-token-metadata**](https://github.com/ArtBlocks/skills/blob/main/skills/get-token-metadata/SKILL.md) | Looking up a specific token's traits, media URLs, listing info, owner, hash, and project context |
-| [**mint-artblocks-token**](https://github.com/ArtBlocks/skills/blob/main/skills/mint-artblocks-token/SKILL.md) | Minting a token — pricing, minter types, allowlists, multi-wallet eligibility, building transactions |
-| [**scaffold-art-script**](https://github.com/ArtBlocks/skills/blob/main/skills/scaffold-art-script/SKILL.md) | Creating or converting a generative art script for Art Blocks (p5.js, Three.js, vanilla JS) |
-| [**configure-postparams**](https://github.com/ArtBlocks/skills/blob/main/skills/configure-postparams/SKILL.md) | Setting on-chain PostParam values on a minted token |
-| [**develop-postparam-hooks**](https://github.com/ArtBlocks/skills/blob/main/skills/develop-postparam-hooks/SKILL.md) | Writing, testing, deploying, and registering custom PostParam hook contracts (augment and/or configure hooks) in Solidity |
-| [**query-artblocks-data**](https://github.com/ArtBlocks/skills/blob/main/skills/query-artblocks-data/SKILL.md) | Custom GraphQL queries for data not covered by domain-specific tools (sales history, aggregations, complex joins) |
+| Skill                                                                                                                        | Use when...                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [**discover-artblocks-projects**](https://github.com/ArtBlocks/skills/blob/main/skills/discover-artblocks-projects/SKILL.md) | Browsing, searching, or filtering projects — what's live, dropping soon, in a wallet, or matching a tag/price range       |
+| [**get-artist**](https://github.com/ArtBlocks/skills/blob/main/skills/get-artist/SKILL.md)                                   | Looking up an artist and exploring their body of work across Art Blocks                                                   |
+| [**get-token-metadata**](https://github.com/ArtBlocks/skills/blob/main/skills/get-token-metadata/SKILL.md)                   | Looking up a specific token's traits, media URLs, listing info, owner, hash, and project context                          |
+| [**mint-artblocks-token**](https://github.com/ArtBlocks/skills/blob/main/skills/mint-artblocks-token/SKILL.md)               | Minting a token — pricing, minter types, allowlists, multi-wallet eligibility, building transactions                      |
+| [**scaffold-art-script**](https://github.com/ArtBlocks/skills/blob/main/skills/scaffold-art-script/SKILL.md)                 | Creating or converting a generative art script for Art Blocks (p5.js, Three.js, vanilla JS)                               |
+| [**configure-postparams**](https://github.com/ArtBlocks/skills/blob/main/skills/configure-postparams/SKILL.md)               | Setting on-chain PostParam values on a minted token                                                                       |
+| [**develop-postparam-hooks**](https://github.com/ArtBlocks/skills/blob/main/skills/develop-postparam-hooks/SKILL.md)         | Writing, testing, deploying, and registering custom PostParam hook contracts (augment and/or configure hooks) in Solidity |
+| [**query-artblocks-data**](https://github.com/ArtBlocks/skills/blob/main/skills/query-artblocks-data/SKILL.md)               | Custom GraphQL queries for data not covered by domain-specific tools (sales history, aggregations, complex joins)         |
 
 Each skill is a standalone markdown file — click any skill name above to read the full source.
 
@@ -63,12 +63,12 @@ Each skill is a standalone markdown file — click any skill name above to read 
 
 Skills work with any agent that supports the [open agent skills spec](https://skills.sh). The Art Blocks MCP server can be connected to any agent that supports MCP over HTTP.
 
-| Agent | MCP | Skills |
-|-------|-----|--------|
-| Cursor | ✅ | ✅ |
-| Claude Code | ✅ | ✅ |
-| Claude Desktop | ✅ | — |
-| Codex | ✅ | ✅ |
+| Agent          | MCP | Skills |
+| -------------- | --- | ------ |
+| Cursor         | ✅  | ✅     |
+| Claude Code    | ✅  | ✅     |
+| Claude Desktop | ✅  | —      |
+| Codex          | ✅  | ✅     |
 
 ---
 
@@ -96,4 +96,4 @@ For personal/global use, copy into `~/.cursor/skills/` instead of a project dire
 Found a bug, missing a skill, or have a suggestion?
 
 - **GitHub Issues** — [open an issue](https://github.com/ArtBlocks/skills/issues)
-- **Discord** — reach out in the [Art Blocks Discord](https://discord.gg/artblocks)
+- **Discord** — reach out in the [Art Blocks Discord](https://artblocks.io/discord)
