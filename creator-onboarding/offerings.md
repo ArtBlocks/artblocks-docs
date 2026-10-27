@@ -42,7 +42,7 @@ Applications are reviewed on a rolling basis. You'll receive feedback regardless
 ### Contact
 
 - Applications: [apply@artblocks.io](mailto:apply@artblocks.io)
-- Technical questions: `#artist-tech` channel on the [Art Blocks Discord](https://discord.gg/artblocks)
+- Technical questions: `#artist-tech` channel on the [Art Blocks Discord](https://artblocks.io/discord)
 - General questions: `#artist-general` channel on Discord
 
 ---
@@ -56,4 +56,3 @@ Engine partners own their contracts and release as many projects as they like. E
 **Interested in Engine?** Contact [info@artblocks.io](mailto:info@artblocks.io).
 
 See the [Engine Partners section](/creator-onboarding/engine-partners/what-is-engine/) for more details.
-
