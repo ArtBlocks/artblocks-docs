@@ -1,0 +1,193 @@
+# Artist FAQ
+
+Creator Dashboard instructions on this page describe V2.
+
+If you use the legacy dashboard, follow [Staging & Testing (Legacy)](/creator-onboarding/artists/2-staging-and-testing/) and [Mainnet Launch (Legacy)](/creator-onboarding/artists/3-mainnet-launch/).
+
+---
+
+## Application
+
+**How do I apply to Art Blocks?**
+Apply at [artblocks.io/apply](https://artblocks.io/apply). Applications are reviewed on a rolling basis. The acceptance rate is approximately 10%.
+
+**What does Art Blocks look for?**
+Innovation in how generative code expresses artistic ideas, technical proficiency, and conceptual depth. Art Blocks is interested in work that pushes the boundaries of what the medium can do — not just technically polished, but genuinely interesting.
+
+**I applied and haven't heard back. What should I do?**
+Art Blocks reviews applications as a team and may take several weeks. If it's been more than a month, feel free to follow up at [apply@artblocks.io](mailto:apply@artblocks.io).
+
+**Can I submit multiple projects for consideration at once?**
+Generally, start with your strongest project. Once accepted and your first project launches, you're welcome to discuss future projects.
+
+---
+
+## Technical Requirements
+
+**What programming languages are supported?**
+JavaScript. Generative scripts must be written in JS and run in a standard browser environment.
+
+**Can I use TypeScript?**
+You must upload compiled JavaScript. Develop in TypeScript if you prefer, but compile to plain JS before uploading.
+
+**Can I use multiple libraries?**
+No — one library (one dependency) per project. Scripts are limited to a single external library from the Art Blocks Dependency Registry.
+
+**What if my preferred library version isn't in the registry?**
+Contact Art Blocks in `#artist-tech`. The team can evaluate adding new versions to the registry.
+
+**Can I use ES modules or import statements?**
+Only for libraries that use module-based delivery (e.g. Three.js v0.161+). The generator handles import map setup for registered module-based libraries. For standard UMD/IIFE libraries, the library is injected as a global.
+
+**My script uses `Math.random()` — is that a problem?**
+Yes. `Math.random()` is non-deterministic. Seed a PRNG from `tokenData.hash` instead. See [Building Your Project](/creator-onboarding/artists/1-building-your-project/) for the recommended sfc32 implementation.
+
+**How large can my script be?**
+Scripts are stored on-chain in segments of ~24KB. There's no hard limit, but scripts larger than ~200KB may incur significant gas costs. Optimize and minify where possible.
+
+**Can I update my script after it's live?**
+Scripts can be updated until the project is **locked**. Locking is permanent — after the lock, the script cannot be changed. Locking is required before a project sells out.
+
+---
+
+## Creator Dashboard V2
+
+**My project shell disappeared from the dashboard. What happened?**
+Confirm the dashboard environment and chain, then reconnect with the registered artist wallet or a wallet with contract access.
+
+See [Creator Dashboard Help](/creator-onboarding/artists/creator-dashboard-help/#access-and-project-visibility).
+
+**How do I preview my script in the Creator Dashboard?**
+Open the project and select **View outputs**. **Samples** shows unminted renders. **Tokens** shows minted outputs and lets you refresh their renders after a script change.
+
+To mint an output, configure a fixed-price minter and price, then select **Mint**. Pause the project before switching to a different final minter.
+
+**Can I import my testnet configuration to mainnet?**
+Yes. Open the production project and select **Import project**. Review and select the supported metadata, render, script, Flex asset, and PostParams changes before starting.
+
+Edition size, artist address, payment settings, minter configuration, project status, outputs, and contract history are not imported.
+
+See [Move to Production](/creator-onboarding/artists/creator-dashboard/#move-to-production).
+
+**What's the difference between Canvas Mode being on or off?**
+If checked, data is directly pulled from the `Canvas` element using `.toDataURL()` when producing static image renders. This additional rendering mode can be leveraged for projects with varying aspect ratios across different tokens.
+
+Please note that scripts containing multiple `Canvas` elements may not render as intended.
+
+**I set up my payment splits wrong. Can I change them?**
+You can update payment configuration up until the project is locked. After locking, the royalty splitter is immutable — contact Art Blocks to request a splitter replacement.
+
+**How do I format my project description? My line breaks aren't working.**
+The description field renders standard Markdown: `**bold**`, `*italics*`, `#`/`##` headers, and links all work.
+
+Markdown collapses whitespace, so `<br>` tags and trailing double-spaces do not reliably create paragraph breaks. To force a blank line, put `&nbsp;` on its own line:
+
+```
+First paragraph.
+
+&nbsp;
+
+Second paragraph.
+```
+
+The Creator Dashboard preview can render slightly differently than the live collection page, so check the live page after publishing to confirm formatting looks right.
+
+---
+
+## Artist Profile
+
+**How do I update my artist name, profile picture, bio, or links?**
+Sign in to the Creator Dashboard, open the account menu, and select **Profile**. This editor is separate from an individual project's **Details**. Changes apply anywhere the profile is used, including past projects.
+
+**Can I change my artist page's URL slug myself?**
+No. The slug isn't editable from the Creator Dashboard. Contact Art Blocks in `#artist-tech` or `#help` to request a slug change.
+
+**I updated my profile but the changes aren't showing on the site yet.**
+Profile updates can take a few minutes to propagate across the site due to caching. If it's been longer than that, contact Art Blocks in `#artist-tech` or `#help`.
+
+**I'm the credited artist on a project, but I can't edit the artist profile. Why?**
+This usually happens on collaboration or partner releases where the on-chain creator wallet isn't the one registered to you. Contact Art Blocks in `#artist-tech` or `#help` with your details and the team can update the profile manually.
+
+---
+
+## Staging and Testing
+
+**How do I get Sepolia testnet ETH?**
+Use the [Alchemy Sepolia faucet](https://www.alchemy.com/faucets/ethereum-sepolia) or ask in `#artist-tech` on Discord — community members often share faucet access.
+
+**How many test mints should I do before submitting for review?**
+Mint at least 20–40 test tokens and review them under **View outputs**. Inspect the live generator view, static captures, and feature distribution.
+
+**My script renders correctly locally but not in the dashboard preview. Why?**
+Common causes: CDN `<script>` tags in your script (the generator injects the library — don't add your own), DOM setup code (e.g. creating a `<canvas>` element that already exists), or references to external resources.
+
+**My static thumbnail shows a blank or mid-render frame. How do I fix this?**
+If you are using the delay timer, increase the Render Delay under **Render settings** so the initial state has time to stabilize.
+
+If a specific frame is the intended thumbnail, set `window.$useRenderPreview = true` at the top level of your script and call `window.$renderPreview()` when that frame is on screen.
+
+See [Thumbnail Capture with `renderPreview`](/creator-onboarding/artists/1-building-your-project/#thumbnail-capture-with-renderpreview).
+
+**Can I test PostParams on staging?**
+Yes. Navigate to your token on artist-staging.artblocks.io and use the PostParam editing interface while logged in with your artist wallet.
+
+---
+
+## Artist Pipeline
+
+**How long does review take?**
+Typically 1–3 weeks. The Art Blocks team reviews each project carefully and may request revisions.
+
+**What kind of feedback might I receive?**
+Output quality, trait distribution, edge-case handling, script performance, and artistic considerations. Address all feedback before requesting re-review.
+
+**What happens between testnet approval and mainnet launch?**
+Art Blocks coordinates a production deployment slot. You'll open the production project, import supported settings, verify the remaining release values, mint token #0 when cleared, then publish and open minting.
+
+**Can I change the edition size after launch?**
+Edition size can only be **decreased** on V3 contracts, never increased. Once tokens are minted past a reduced size, the size is fixed.
+
+---
+
+## Pricing and Revenue
+
+**What percentage do I keep from primary sales?**
+90% of primary sales go to the artist; 10% to Art Blocks.
+
+**What are typical secondary royalties?**
+Up to 5% total on secondary sales. By default, roughly 2/3 goes to the artist and 1/3 to Art Blocks. Artists configure the exact percentage in the Creator Dashboard.
+
+**When can I withdraw royalties?**
+Secondary royalties accumulate in your 0xSplits splitter contract. Distribute at any time by visiting [app.splits.org](https://app.splits.org) and triggering a distribution.
+
+**Can I accept an ERC-20 token as payment?**
+Yes, with the Set Price – ERC20 minter. Contact Art Blocks to confirm the token is supported.
+
+---
+
+## Security
+
+**Should I use a hardware wallet?**
+Yes, strongly recommended for your artist wallet, especially after project launch.
+
+**My wallet was compromised. What do I do?**
+Contact Art Blocks immediately at [apply@artblocks.io](mailto:apply@artblocks.io) and in `#artist-tech` on Discord. Artist address updates require a proposal/approval process.
+
+**Can someone copy my script?**
+Your script is stored on-chain and is publicly readable. To protect your work, ensure your project is locked before launch, so no modifications are possible.
+
+---
+
+## Post-Release
+
+**Can I release future projects?**
+Yes. Many Studio artists release multiple projects. Use the same Creator Dashboard account and artist wallet.
+
+**My project sold out. Can I add more tokens?**
+On V3 contracts, you cannot increase the edition size. You can release a follow-up project instead.
+
+**I see my art being used without permission. What can I do?**
+Art Blocks' standard license gives collectors the right to display their specific token, not to reproduce the project at scale. For licensing concerns, consult with a legal advisor familiar with NFT IP.
+
+**How do I add animated thumbnails to my project after launch?**
+Contact Art Blocks in `#artist-tech` with your animation settings (render delay, aspect ratio, MP4 specs).
