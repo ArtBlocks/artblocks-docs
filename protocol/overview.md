@@ -48,9 +48,9 @@ This means any Art Blocks token can be reproduced with a single call to a smart 
 
 ### The Dependency Registry
 
-The [Art Blocks Dependency Registry](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/README.md#dependencyregistry) is a fully on-chain software registry that stores JavaScript library releases on the blockchain. p5.js v1.0.0 and Three.js v0.124.0 — used by the vast majority of Art Blocks flagship projects — are fully on-chain, ensuring those projects can always generate their outputs without relying on any CDN.
+The [Art Blocks Dependency Registry](https://github.com/ArtBlocks/artblocks-contracts/blob/main/packages/contracts/README.md#dependencyregistry) is a fully on-chain software registry of the JavaScript library releases Art Blocks projects use. A library is on chain when the registry records its ABX FS file: the release, gzip-compressed and stored on [ABX FS](https://docs.fs.abx.io), Art Blocks' permissionless, immutable on-chain file system. Every library used by the first 500 Art Blocks Curated projects is on chain this way, so those projects can always generate their outputs without relying on any CDN.
 
-For projects using other approved library versions, the registry records a preferred CDN and the hash of the release, pointing to widely-distributed packages present on hundreds of thousands of developer machines worldwide.
+The registry also records a preferred CDN for every release, pointing to widely-distributed packages present on hundreds of thousands of developer machines worldwide.
 
 ### Engine Flex
 
