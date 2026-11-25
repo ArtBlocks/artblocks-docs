@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/pr-preview/pr-358">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848875850582">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848881939581">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -48,11 +48,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.6.0.848875850582" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.848881939581" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848875850582" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.848881939581" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848875850582" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.848881939581" data-turbo-eval="false" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../resources/js/mermaid.js?v=4.6.0" defer></script>
 </head>
 <body>
@@ -389,7 +389,7 @@
 <li>
 <p>Get the dependency code from ABX FS by its file CID. The file is the library gzip-compressed, which is exactly what the on-chain generator inlines into token HTML, where the page decompresses it before the project script runs. To read it:</p>
 <ul>
-<li><strong>On chain:</strong> call <code translate="no" v-pre>readFileData</code> on the ABX FS <code translate="no" v-pre>FileDataReader</code> (<a href="https://etherscan.io/address/0xb13D24967aB9B41787E2280D22d1d43a286c197a#readContract" class="outbound" target="_blank"><span>0xb13D24967aB9B41787E2280D22d1d43a286c197a</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>) with the CID and generous limits (for example <code translate="no" v-pre>maxBytes</code> <code translate="no" v-pre>10000000</code> and <code translate="no" v-pre>maxChunks</code> <code translate="no" v-pre>1000</code>). It returns the gzip bytes, labelled with their <code translate="no" v-pre>codec</code> (<code translate="no" v-pre>gzip</code>) and the <code translate="no" v-pre>outputHash</code> of the decompressed library.</li>
+<li><strong>On chain:</strong> call <code translate="no" v-pre>readFileData</code> on the ABX FS <code translate="no" v-pre>FileDataReader</code> (<a href="https://etherscan.io/address/0x7B724AbEA53398e71C06BE8560ac87cE5DC9c7DC#readContract" class="outbound" target="_blank"><span>0x7B724AbEA53398e71C06BE8560ac87cE5DC9c7DC</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>) with the CID and generous limits (for example <code translate="no" v-pre>maxBytes</code> <code translate="no" v-pre>10000000</code> and <code translate="no" v-pre>maxChunks</code> <code translate="no" v-pre>1000</code>). It returns the gzip bytes, labelled with their <code translate="no" v-pre>codec</code> (<code translate="no" v-pre>gzip</code>) and the <code translate="no" v-pre>outputHash</code> of the decompressed library.</li>
 <li><strong>In a browser:</strong> open <a href="https://fs.abx.io/g/cid/1/0xd51a97d197e052299e2ef11718c4185435ea3d14ec04ec3276c807dc5d1654d0" class="outbound" target="_blank"><span>fs.abx.io/g/cid/1/0xd51a97d1…</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, which reads the same file from Ethereum and serves the library.</li>
 </ul>
 </li>
