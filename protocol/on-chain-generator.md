@@ -130,7 +130,7 @@ The generator currently supports approximately 90% of all Art Blocks flagship pr
 The generator orchestrates three on-chain components:
 
 - **Core Contracts** — Store the project's creative code and per-token hash data.
-- **[Dependency Registry](https://etherscan.io/address/0x37861f95882ACDba2cCD84F5bFc4598e2ECDDdAF#readProxyContract)** — Manages JavaScript library dependencies; p5.js v1.0.0 and Three.js v0.124.0 are stored fully on-chain.
+- **[Dependency Registry](https://etherscan.io/address/0x37861f95882ACDba2cCD84F5bFc4598e2ECDDdAF#readProxyContract)** — Manages JavaScript library dependencies; a library is on chain when the registry records its [ABX FS](https://docs.fs.abx.io) file, which the generator reads and inlines.
 - **[scripty.sol](https://github.com/intartnft/scripty.sol)** — Gas-efficient on-chain HTML builder that stitches together large JS-based script tags.
 
 ### Retrieving a Token
